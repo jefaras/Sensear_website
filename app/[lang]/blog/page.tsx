@@ -28,16 +28,17 @@ export default async function Blog({
 
     return (
         <div className="bg-[#faebe3] min-h-screen pt-32 pb-24">
+            <style dangerouslySetInnerHTML={{ __html: `@keyframes slideUp{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:translateY(0)}}.slide-up-1{animation:slideUp .8s ease-out forwards;opacity:0}.slide-up-2{animation:slideUp .8s ease-out .2s forwards;opacity:0}.slide-up-4{animation:slideUp .8s ease-out .6s forwards;opacity:0}` }} />
             <div className="max-w-7xl mx-auto px-6">
                 {/* Hero Section */}
-                <div className="text-center max-w-4xl mx-auto mb-20">
-                    <h1 className="text-[2.2rem] sm:text-[3.2rem] md:text-[4rem] lg:text-[4.8rem] font-extrabold text-black mb-6">{content.hero.title}</h1>
-                    <p className="text-xl text-black/60 font-medium">{content.hero.subtitle}</p>
+                <div className="text-center max-w-4xl mx-auto mb-20 space-y-8">
+                    <h1 className="text-[2.2rem] sm:text-[3.2rem] md:text-[4rem] lg:text-[4.8rem] font-extrabold text-black leading-[1.1] tracking-tight slide-up-1">{content.hero.title}</h1>
+                    <p className="text-xl md:text-2xl text-black/60 leading-relaxed max-w-2xl text-center mx-auto slide-up-2">{content.hero.subtitle}</p>
                 </div>
 
                 {/* Featured Article */}
                 {featuredArticle && (
-                    <div className="mb-24">
+                    <div className="mb-24 slide-up-4">
                         <Link href={`/${lang}/blog/${featuredArticle.link}`} className="group block">
                             <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-[2/1]">
                                 <img

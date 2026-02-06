@@ -75,7 +75,7 @@ export default async function BlogPost({
                             </Link>
 
                             <h1 className="flex flex-col mb-8 font-jakarta">
-                                <span className="text-5xl md:text-7xl xl:text-8xl font-extrabold text-black leading-[1.05] tracking-tight mb-2 animate-in fade-in slide-in-from-bottom-4 duration-700">
+                                <span className="text-[2.2rem] sm:text-[3.2rem] md:text-[4rem] lg:text-[4.8rem] font-extrabold text-black leading-[1.1] tracking-tight mb-2 animate-in fade-in slide-in-from-bottom-4 duration-700">
                                     {titleParts[0]?.trim()}
                                 </span>
                                 {titleParts[1] && (

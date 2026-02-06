@@ -13,6 +13,7 @@ export default async function Home({ params }: { params: Promise<{ lang: Locale 
 
     return (
         <div className="bg-[#faebe3]">
+            <style dangerouslySetInnerHTML={{ __html: `@keyframes slideUp{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:translateY(0)}}.slide-up-1{animation:slideUp .8s ease-out forwards;opacity:0}.slide-up-2{animation:slideUp .8s ease-out .2s forwards;opacity:0}.slide-up-4{animation:slideUp .8s ease-out .6s forwards;opacity:0}` }} />
             {/* Hero Section */}
             <section className="relative pt-32 pb-32 min-h-[90vh] flex flex-col justify-center overflow-hidden"
                 style={{
@@ -26,11 +27,11 @@ export default async function Home({ params }: { params: Promise<{ lang: Locale 
                             {/* Text Content */}
                             <div className="space-y-6">
                                 <h1
-                                    className="text-[2.2rem] sm:text-[3.2rem] md:text-[4rem] lg:text-[4.8rem] font-bold text-black mb-6 leading-tight"
+                                    className="text-[2.2rem] sm:text-[3.2rem] md:text-[4rem] lg:text-[4.8rem] font-bold text-black mb-6 leading-tight slide-up-1"
                                     dangerouslySetInnerHTML={{ __html: dict.home.hero.title }}
                                 />
 
-                                <div className="mb-8">
+                                <div className="mb-8 slide-up-2">
                                     {dict.home.hero.subtitle.map((line: string, i: number) => (
                                         <p key={i} className="text-lg sm:text-xl md:text-2xl text-black/65 leading-relaxed">
                                             {line}
@@ -65,7 +66,7 @@ export default async function Home({ params }: { params: Promise<{ lang: Locale 
                             </div>
 
                             {/* Image Carousel */}
-                            <div className="w-full relative">
+                            <div className="w-full relative slide-up-4">
                                 <HeroCarousel />
                             </div>
                         </div>

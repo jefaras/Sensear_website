@@ -21,26 +21,34 @@ export default async function Contact({ params }: { params: Promise<{ lang: Loca
 
     return (
         <div className="bg-[#faebe3]">
-            <section className="relative pt-32 pb-32 min-h-[90vh] flex flex-col justify-center overflow-hidden"
-                style={{
-                    backgroundImage: `url('${dict.contact.hero.background_image}')`,
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center'
-                }}>
-                <div className="w-full px-6 md:px-12 lg:px-16 container mx-auto">
+            <style dangerouslySetInnerHTML={{ __html: `@keyframes slideUp{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:translateY(0)}}.slide-up-1{animation:slideUp .8s ease-out forwards;opacity:0}.slide-up-2{animation:slideUp .8s ease-out .2s forwards;opacity:0}.slide-up-4{animation:slideUp .8s ease-out .6s forwards;opacity:0}` }} />
+            <section className="relative pt-32 pb-32 min-h-[90vh] flex flex-col justify-center overflow-hidden">
+                {/* Background - using inline style for arbitrary external URL */}
+                <div
+                    className="absolute inset-0 z-0"
+                    style={{
+                        backgroundImage: `url('${dict.contact.hero.background_image}')`,
+                        backgroundSize: 'cover',
+                        backgroundPosition: 'center'
+                    }}
+                />
+
+                <div className="w-full px-6 md:px-12 lg:px-16 relative z-10">
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
+                        {/* Left Column: H1 */}
                         <div className="flex flex-col justify-center text-left">
-                            <h1 className="text-[2.2rem] sm:text-[3.2rem] md:text-[4rem] lg:text-[4.8rem] font-extrabold text-black mb-6 leading-[1.1]">
+                            <h1 className="text-[2.2rem] sm:text-[3.2rem] md:text-[4rem] lg:text-[4.8rem] font-extrabold text-black mb-6 leading-[1.1] slide-up-1">
                                 {dict.contact.hero.title}
                             </h1>
-                            <p className="text-xl md:text-2xl text-black/70 leading-relaxed">
+                            <p className="text-xl md:text-2xl text-black/70 leading-relaxed slide-up-2">
                                 {dict.contact.hero.subtitle}
                             </p>
                         </div>
 
-                        <div className="w-full flex justify-center lg:justify-end">
-                            <div className="w-full lg:w-[93.5%] overflow-hidden rounded-2xl shadow-2xl">
-                                <div className="relative aspect-square">
+                        {/* Right Column: Square Image */}
+                        <div className="w-full slide-up-4 flex justify-center lg:justify-end">
+                            <div className="w-full lg:w-[93.5%]">
+                                <div className="overflow-hidden rounded-2xl shadow-2xl bg-white aspect-square relative">
                                     <img
                                         src={dict.contact.hero.image}
                                         alt={dict.contact.hero.image_alt}

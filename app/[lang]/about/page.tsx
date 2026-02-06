@@ -6,6 +6,11 @@ import { ArrowRight } from "lucide-react";
 import { AnimatedButton } from "@/components/AnimatedButton";
 import { FinalCTA } from "@/components/sections/FinalCTA";
 
+// Simple markdown bold parser: converts **text** to <strong>text</strong>
+function parseMarkdownBold(text: string): string {
+    return text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+}
+
 export async function generateMetadata({ params }: { params: Promise<{ lang: Locale }> }): Promise<Metadata> {
     const { lang } = await params;
     const dict = await getDictionary(lang);
@@ -21,174 +26,190 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: Lo
     const content = dict.about_page;
 
     return (
-        <div className="bg-white min-h-screen relative overflow-x-hidden">
-            {/* Blue Glow Vignette - applied globally or as a fixed overlay */}
-            <div className="fixed inset-0 pointer-events-none z-50">
-                <div className="absolute inset-0 shadow-[inset_0_0_150px_rgba(37,99,235,0.15)] md:shadow-[inset_0_0_200px_rgba(37,99,235,0.2)]" />
-            </div>
+        <div className="bg-[#faebe3] min-h-screen relative overflow-x-hidden">
+            <style dangerouslySetInnerHTML={{
+                __html: `
+        @keyframes slideUp {
+          from { opacity: 0; transform: translateY(40px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+        .slide-up-1 { animation: slideUp 0.8s ease-out forwards; opacity: 0; }
+        .slide-up-2 { animation: slideUp 0.8s ease-out 0.2s forwards; opacity: 0; }
+        .slide-up-4 { animation: slideUp 0.8s ease-out 0.6s forwards; opacity: 0; }
+        
+        @keyframes gradient-shift {
+          0% { background-position: 0% 50%; }
+          50% { background-position: 100% 50%; }
+          100% { background-position: 0% 50%; }
+        }
+        .animated-gradient {
+            background-size: 400% 400%;
+            animation: gradient-shift 10s ease infinite;
+        }
+      `}} />
 
-            {/* Background Glows */}
-            <div className="fixed inset-0 pointer-events-none z-0">
-                <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-blue-100/20 blur-[120px] rounded-full" />
-                <div className="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-purple-100/10 blur-[120px] rounded-full" />
-            </div>
+            {/* Hero Section */}
+            <section className="relative pt-32 pb-32 min-h-[90vh] flex flex-col justify-center overflow-hidden">
+                {/* Background - using inline style for arbitrary external URL */}
+                <div
+                    className="absolute inset-0 z-0"
+                    style={{
+                        backgroundImage: "url('https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/178049824_warmsilverfoilsample-Picsart-AiImageEnhancer.jpg')",
+                        backgroundSize: 'cover',
+                        backgroundPosition: 'center'
+                    }}
+                />
 
-            {/* 1. Hero Section */}
-            <section className="relative pt-32 pb-20 overflow-hidden">
-                <div className="max-w-7xl mx-auto px-6 relative z-10 w-full">
-                    <div className={`flex flex-col ${lang === 'el' ? 'lg:flex-row' : ''} gap-12 lg:gap-20 items-start`}>
-                        <div className={`${lang === 'el' ? 'lg:w-1/2' : 'w-full'} space-y-8`}>
-                            <h1 className="text-[2.2rem] sm:text-[3.2rem] md:text-[4rem] lg:text-[4.8rem] font-extrabold text-black leading-[1.1] tracking-tight">
+                <div className="w-full px-6 md:px-12 lg:px-16 relative z-10">
+                    <div className="grid lg:grid-cols-2 gap-12 items-center">
+                        {/* Left Column: H1 */}
+                        <div className="flex flex-col justify-center text-left">
+                            <h1 className="text-[2.2rem] sm:text-[3.2rem] md:text-[4rem] lg:text-[4.8rem] font-extrabold text-black mb-6 leading-[1.1] tracking-tight slide-up-1">
                                 {content.hero.title}
                             </h1>
-                            <p className="text-xl md:text-2xl text-black/60 leading-relaxed max-w-2xl">
+                            <p className="text-xl md:text-2xl text-black/70 leading-relaxed slide-up-2">
                                 {content.hero.subtitle}
                             </p>
                         </div>
 
-                        <div className={`w-full ${lang === 'el' ? 'lg:w-1/2' : 'mt-12 group'}`}>
-                            <div className="relative aspect-[16/10] lg:aspect-auto">
-                                <img
-                                    src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/178049824_warmsilverfoilsample-Picsart-AiImageEnhancer.jpg"
-                                    alt={content.hero.image_alt}
-                                    className="w-full h-full object-cover rounded-[2rem] shadow-2xl relative z-10"
-                                />
-                                {/* Blue tint overlay for hero image if needed, live has a very blue team photo */}
-                                <div className="absolute inset-0 bg-blue-600/20 rounded-[2rem] z-20 mix-blend-overlay pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                        {/* Right Column: Square Image */}
+                        <div className="w-full slide-up-4 flex justify-center lg:justify-end">
+                            <div className="w-full lg:w-[93.5%]">
+                                <div className="overflow-hidden rounded-2xl shadow-2xl bg-white aspect-square relative">
+                                    <img
+                                        src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/738905847_gemini-image-2_Photography_of_a_candid_scene_with_a_blue_background_featuring_a_woman_s_figure_-0.jpg"
+                                        alt={content.hero.image_alt}
+                                        className="w-full h-full object-cover"
+                                    />
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+            </section>
 
-                {/* Scroll Mouse Icon */}
-                <div className="hidden lg:flex absolute bottom-8 left-1/2 -translate-x-1/2 opacity-30">
-                    <div className="w-5 h-8 border-2 border-black rounded-full flex justify-center p-1.5 pt-1">
-                        <div className="w-0.5 h-1.5 bg-black rounded-full animate-bounce" />
+            {/* 2. Vision Section */}
+            <section className="bg-black py-20">
+                <div className="max-w-7xl mx-auto px-6">
+                    <div className="flex flex-col items-center text-center max-w-5xl mx-auto">
+                        <h2 className="text-[2rem] md:text-[2.8rem] lg:text-[3.45rem] font-bold text-white leading-tight mb-12">
+                            {content.vision.heading}
+                        </h2>
+                        
+                        <div className="w-full text-center">
+                            <p className="text-2xl md:text-3xl lg:text-4xl text-white leading-relaxed mb-6">
+                                {lang === 'el' ? (
+                                    <>Να γίνουμε ο <strong>κορυφαίος συνεργάτης μουσικής</strong> για <strong>brands & εκδηλώσεις με χαρακτήρα</strong>, που θέλουν <strong>ταυτότητα, ατμόσφαιρα</strong> και <strong>ουσιαστική σύνδεση</strong> με τους επισκέπτες τους.</>
+                                ) : (
+                                    <span dangerouslySetInnerHTML={{ __html: parseMarkdownBold(content.vision.text) }} />
+                                )}
+                            </p>
+                            
+                            
+                        </div>
                     </div>
                 </div>
             </section>
 
-            {/* 2. Philosophy Section (Dark) */}
-            <section className="bg-[#000000] text-white py-32 px-6 relative z-10">
-                <div className="max-w-5xl mx-auto text-center space-y-16">
-                    <h2 className="text-sm font-bold uppercase tracking-[0.4em] text-white/40">
+            {/* 3. Philosophy Section (Animated Gradient) */}
+            <section className="animated-gradient py-32 px-6 relative z-10" style={{
+                backgroundImage: 'linear-gradient(135deg, #f5d4c1, #e8c3b0, #d4c4b0, #c0c0c0, #d3d3d3, #f0d5d0, #e8c3b0, #f5d4c1)'
+            }}>
+                <div className="max-w-5xl mx-auto text-center">
+                    <h2 className="text-[2rem] md:text-[2.8rem] lg:text-[3.45rem] font-bold text-black leading-tight mb-12">
                         {content.philosophy.heading}
                     </h2>
-                    <div className="space-y-10">
-                        <p
-                            className="text-2xl md:text-4xl lg:text-5xl font-medium leading-[1.3] text-white/90"
-                            dangerouslySetInnerHTML={{ __html: content.philosophy.text }}
-                        />
-                        <div className="pt-8 flex justify-center">
-                            <Link href={`/${lang}/${content.philosophy.link}`} className="inline-flex items-center text-white text-lg font-medium border-b border-white pb-1.5 hover:gap-4 transition-all group tracking-wide">
-                                {content.philosophy.link_text}
-                                <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-2 transition-transform" />
-                            </Link>
-                        </div>
-                    </div>
+                    <p className="text-xl md:text-2xl lg:text-3xl text-black leading-relaxed max-w-4xl mx-auto">
+                        <span dangerouslySetInnerHTML={{ __html: parseMarkdownBold(content.philosophy.text) }} />
+                    </p>
                 </div>
             </section>
 
-            {/* 3. Timeline Section (White) */}
-            <section className="bg-white py-32 px-6 relative z-10">
+            {/* 4. Journey Section (White) */}
+            <section className="bg-white py-20 px-6">
                 <div className="max-w-7xl mx-auto">
-                    <div className="max-w-2xl mb-24">
-                        <h2 className="text-sm font-bold uppercase tracking-[0.4em] text-black/40 mb-6">
+                    {/* Header */}
+                    <div className="text-center mb-12">
+                        <h2 className="text-5xl md:text-[3.45rem] font-bold text-black mb-4">
                             {content.journey.heading}
                         </h2>
-                        <h3 className="text-4xl md:text-5xl lg:text-6xl font-bold text-black leading-tight tracking-tight">
+                        <p className="text-xl text-black/60 font-medium">
                             {content.journey.subtitle}
-                        </h3>
+                        </p>
                     </div>
 
-                    <div className="relative">
-                        {/* Vertical line always on the left */}
-                        <div className="absolute left-6 top-0 bottom-0 w-[1px] bg-black/10" />
+                    {/* Content Grid */}
+                    <div className="lg:grid lg:grid-cols-2 lg:gap-12">
+                        {/* Left Column: Timeline */}
+                        <div className="relative">
+                            {/* Vertical line behind markers */}
+                            <div className="absolute left-[47px] top-0 bottom-0 w-[2px] bg-black/20" />
 
-                        <div className="space-y-24">
-                            {content.journey.timeline.map((item: any, idx: number) => (
-                                <div key={idx} className="relative pl-16 md:pl-24 group">
-                                    {/* Year Circle */}
-                                    <div className="absolute left-0 top-2 w-12 h-12 md:w-16 md:h-16 rounded-full bg-black text-white flex items-center justify-center font-bold text-sm md:text-base border-4 border-white shadow-lg z-10 transition-transform group-hover:scale-110">
-                                        {item.year}
-                                    </div>
+                            <div className="space-y-12">
+                                {content.journey.timeline.map((item: any, idx: number) => (
+                                    <div key={idx} className="relative flex items-start">
+                                        {/* Year Circle */}
+                                        <div className="w-24 h-24 rounded-full bg-black text-white font-bold text-xl flex items-center justify-center shrink-0 shadow-lg z-10">
+                                            {item.year}
+                                        </div>
 
-                                    <div className="space-y-3 pt-2">
-                                        <p className="text-xl md:text-2xl text-black/80 font-medium leading-relaxed max-w-4xl">
-                                            {item.text}
-                                        </p>
+                                        {/* Text */}
+                                        <div className="ml-6 pt-4">
+                                            <p className="text-xl text-black/60 leading-relaxed">
+                                                <span dangerouslySetInnerHTML={{ __html: parseMarkdownBold(item.text) }} />
+                                            </p>
+                                        </div>
                                     </div>
-                                </div>
-                            ))}
+                                ))}
+                            </div>
+                        </div>
+
+                        {/* Right Column: Image */}
+                        <div className="hidden lg:block">
+                            <img
+                                src={content.journey.image}
+                                alt="Journey"
+                                className="w-full rounded-2xl shadow-lg"
+                            />
                         </div>
                     </div>
                 </div>
             </section>
 
-            {/* 4. Vision Section (Dark) */}
-            <section className="bg-[#000000] text-white py-32 px-6 relative z-10">
-                <div className="max-w-5xl mx-auto text-center space-y-16">
-                    <h2 className="text-sm font-bold uppercase tracking-[0.4em] text-white/40">
-                        {content.vision.heading}
-                    </h2>
-                    <div className="space-y-10">
-                        <p
-                            className="text-2xl md:text-4xl lg:text-5xl font-medium leading-[1.3] text-white/90"
-                            dangerouslySetInnerHTML={{ __html: content.vision.text }}
-                        />
-                        <div className="pt-8 flex justify-center">
-                            <Link href={`/${lang}/${content.vision.link}`} className="inline-flex items-center text-white text-lg font-medium border-b border-white pb-1.5 hover:gap-4 transition-all group tracking-wide">
-                                {content.vision.link_text}
-                                <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-2 transition-transform" />
-                            </Link>
-                        </div>
-                    </div>
-                </div>
-            </section>
 
-            {/* 5. Team Section (Atmospheric) */}
-            <section className="relative py-40 overflow-hidden">
-                <div className="absolute inset-0 z-0">
-                    <img
-                        src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/178049824_warmsilverfoilsample-Picsart-AiImageEnhancer.jpg"
-                        alt="Background"
-                        className="w-full h-full object-cover"
-                    />
-                    <div className="absolute inset-0 bg-white/40 backdrop-blur-[3px]" />
-                </div>
 
-                <div className="relative z-10 max-w-7xl mx-auto px-6">
-                    <div className="text-center mb-32 space-y-6">
-                        <h2 className="text-sm font-bold uppercase tracking-[0.4em] text-black/40">
+            {/* 5. Team Section (Dark Background) */}
+            <section className="bg-black py-32 px-6 relative z-10">
+                <div className="relative z-10 max-w-7xl mx-auto">
+                    <div className="text-center mb-20">
+                        <h2 className="text-sm font-bold uppercase tracking-[0.4em] text-white/40 mb-6">
                             {content.team.subtitle}
                         </h2>
-                        <h3 className="text-4xl md:text-6xl font-bold text-black leading-tight tracking-tight">
+                        <h3 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight tracking-tight">
                             {content.team.heading}
                         </h3>
                     </div>
 
-                    <div className="grid md:grid-cols-3 gap-12 lg:gap-20">
+                    <div className="grid md:grid-cols-3 gap-8 lg:gap-16">
                         {content.team.members.map((member: any, idx: number) => (
-                            <div key={idx} className="space-y-8 group">
-                                <div className="aspect-[4/5] rounded-[2rem] overflow-hidden shadow-2xl relative">
+                            <div key={idx} className="space-y-6 group">
+                                <div className="aspect-[4/5] rounded-none overflow-hidden relative">
                                     <img
                                         src={member.image}
                                         alt={member.name}
-                                        className="w-full h-full object-cover grayscale transition-all duration-1000 group-hover:grayscale-0 group-hover:scale-105"
+                                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                                     />
-                                    {/* Subtle Overlay */}
-                                    <div className="absolute inset-0 bg-blue-500/0 group-hover:bg-blue-500/5 transition-all duration-700 pointer-events-none" />
                                 </div>
-                                <div className="space-y-6">
+                                <div className="space-y-4">
                                     <div className="space-y-2">
-                                        <h4 className="text-2xl font-bold text-black">{member.name}</h4>
-                                        <p className="text-xs font-bold uppercase tracking-[0.3em] text-black/50">
+                                        <h4 className="text-xl md:text-2xl font-bold text-white">{member.name}</h4>
+                                        <p className="text-xs font-bold uppercase tracking-[0.3em] text-white/50">
                                             {member.title}
                                         </p>
                                     </div>
-                                    <div className="space-y-4 pt-4 border-t border-black/10">
+                                    <div className="space-y-4 pt-2">
                                         {member.bio.map((para: string, pIdx: number) => (
-                                            <p key={pIdx} className="text-black/70 leading-relaxed font-medium text-base">
+                                            <p key={pIdx} className="text-white/70 leading-relaxed font-medium text-sm">
                                                 {para}
                                             </p>
                                         ))}

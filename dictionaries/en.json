@@ -353,11 +353,15 @@
             "image": "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/178049824_warmsilverfoilsample-Picsart-AiImageEnhancer.jpg",
             "image_alt": "The people behind your soundtrack"
         },
+        "vision": {
+            "heading": "Our vision",
+            "text": "To become the **leading music partner** for **eclectic hospitality brands & events** seeking to express **identity**, elevate **atmosphere** & create **lasting guest connections**.",
+            "cta": "Learn more about creating a unique Sonic Identity",
+            "cta_link": "sonic-strategy"
+        },
         "philosophy": {
             "heading": "Our philosophy",
-            "text": "<strong>SensEar</strong> treats music as a <strong>core part</strong> of the <strong>experience</strong>: Music is not background, but <strong>atmosphere</strong>, <strong>memory</strong> and <strong>emotion</strong> that can <strong>influence</strong> how guests <strong>feel & behave</strong>.",
-            "link_text": "Learn more about our curation journal",
-            "link": "blog"
+            "text": "SensEar treats music as a **core part of the experience**: Music is not background, but **atmosphere, memory and emotion** that can **influence how guests feel & behave**."
         },
         "journey": {
             "heading": "Our journey",
@@ -365,25 +369,26 @@
             "timeline": [
                 {
                     "year": "2010",
-                    "text": "George and Katerina meet while curating music for an upscale wedding. Their shared passion for discovering hidden grooves sparks a creative partnership."
+                    "text": "**George and Katerina** meet while curating music for an upscale wedding. Their shared passion for **discovering hidden grooves** sparks a creative partnership."
                 },
                 {
                     "year": "2011",
-                    "text": "As Midnight City, they host and DJ exclusive parties focusing in cross-genre discoveries from the '70s to today, building a devoted following."
+                    "text": "As **Midnight City**, they host and DJ **exclusive parties** focusing in cross-genre discoveries from the '70s to today, building a devoted following."
                 },
                 {
                     "year": "2018",
-                    "text": "JEF discovers M.C. at one of their signature events. The vibe and deep-track selections make him an instant devotee."
+                    "text": "JEF discovers M.C. at one of their signature events. The vibe and deep-track selections make him an instant **devotee**."
                 },
                 {
                     "year": "2023",
-                    "text": "JEF and George align on a vision: transformative music curation and DJ sets for venues that are mindful about their atmosphere."
+                    "text": "JEF and George align on a vision: **transformative music curation** and DJ sets for venues that are mindful about their atmosphere."
                 },
                 {
                     "year": "2025",
-                    "text": "SensEar launches. First clients confirm what we believed: venues deserve soundtracks designed with intention and expertise."
+                    "text": "**SensEar launches**. First clients confirm what we believed: venues deserve soundtracks designed with intention and expertise."
                 }
-            ]
+            ],
+            "image": "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/92f0d2705_16685b806_pexels-monstera-1408089.jpg"
         },
         "vision": {
             "heading": "Our vision",
@@ -500,7 +505,7 @@
         },
         "articles": [
             {
-                "title": "How top hospitality brands | design their sound on purpose",
+                "title": "How top hospitality brands design their sound on purpose",
                 "desc": "Learn how luxury hospitality brands use strategic music curation and sonic branding to create distinctive customer experiences.",
                 "tag": "Insights",
                 "category": "Insights",
@@ -655,7 +660,7 @@
                 ]
             },
             {
-                "title": "Three reasons to make music | part of your luxury hospitality strategy",
+                "title": "Three reasons to make music part of your luxury hospitality strategy",
                 "desc": "Why curated music is a practical way to shape how guests feel, what they remember, and how they spend.",
                 "tag": "Insights",
                 "category": "Insights",
@@ -717,7 +722,7 @@
                 ]
             },
             {
-                "title": "How brand-fit music | converts browsers into buyers",
+                "title": "How brand-fit music converts browsers into buyers",
                 "desc": "Evidence-based research showing how brand-aligned music increases sales by 9.1% in hospitality venues.",
                 "tag": "Research",
                 "category": "Research",
