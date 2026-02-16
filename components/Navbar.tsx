@@ -28,10 +28,23 @@ export function Navbar({ lang, navigation }: NavbarProps) {
     const pathname = usePathname();
 
     useEffect(() => {
+        let ticking = false;
+        
         const handleScroll = () => {
-            setScrolled(window.scrollY > 20);
+            if (!ticking) {
+                window.requestAnimationFrame(() => {
+                    setScrolled(window.scrollY > 20);
+                    ticking = false;
+                });
+                ticking = true;
+            }
         };
-        window.addEventListener("scroll", handleScroll);
+        
+        // Check initial scroll position on mount
+        setScrolled(window.scrollY > 20);
+        
+        // Use passive event listener for better scroll performance
+        window.addEventListener("scroll", handleScroll, { passive: true });
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
@@ -54,12 +67,12 @@ export function Navbar({ lang, navigation }: NavbarProps) {
         { href: `/${lang}/services`, label: navigation.services },
         { href: `/${lang}/industries`, label: navigation.industries },
         { href: `/${lang}/case-studies`, label: navigation.case_studies },
-        { href: `/${lang}/blog`, label: navigation.blog },
-        { href: `/${lang}/about`, label: navigation.about },
     ];
 
     return (
         <nav
+            role="navigation"
+            aria-label="Main navigation"
             suppressHydrationWarning
             className={cn(
                 "fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-1",
@@ -73,8 +86,8 @@ export function Navbar({ lang, navigation }: NavbarProps) {
                     <div className="relative w-16 h-16">
                         <Image
                             src={scrolled || isOpen
-                                ? "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/7a2f42e1a_sensear-logo-avatar-white-transparent1.png"
-                                : "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/a42606150_sensear-logo-avatar-color1.png"
+                                ? "/images/brand/sensear-logo-white.png"
+                                : "/images/brand/sensear-logo-color.png"
                             }
                             alt="SensEar"
                             fill
@@ -106,20 +119,45 @@ export function Navbar({ lang, navigation }: NavbarProps) {
                         </Link>
                     ))}
 
-                    <Button asChild variant="default" className={cn(
-                        "rounded-full px-6 border-transparent font-jakarta text-base font-bold tracking-wide transition-colors",
-                        scrolled || isOpen
-                            ? "bg-white text-black hover:bg-gray-100"
-                            : "bg-black text-white hover:bg-black/90"
-                    )}>
-                        <Link href={`/${lang}/contact`}>
-                            {navigation.contact}
-                        </Link>
-                    </Button>
+                    <Link
+                        href={`/${lang}/blog`}
+                        className={cn(
+                            "font-jakarta text-base font-bold tracking-wide transition-all hover:underline decoration-1 underline-offset-4",
+                            scrolled || isOpen ? "text-white/90 hover:text-white" : "text-black/80 hover:text-black",
+                            isActive(`/${lang}/blog`) && "underline"
+                        )}
+                    >
+                        {navigation.blog}
+                    </Link>
+
+                    <Link
+                        href={`/${lang}/about`}
+                        className={cn(
+                            "font-jakarta text-base font-bold tracking-wide transition-all hover:underline decoration-1 underline-offset-4",
+                            scrolled || isOpen ? "text-white/90 hover:text-white" : "text-black/80 hover:text-black",
+                            isActive(`/${lang}/about`) && "underline"
+                        )}
+                    >
+                        {navigation.about}
+                    </Link>
+
+                    <Link
+                        href={`/${lang}/contact`}
+                        className={cn(
+                            "rounded-full px-6 py-2 border font-jakarta text-base font-bold tracking-wide transition-all hover:underline decoration-1 underline-offset-4",
+                            scrolled || isOpen
+                                ? "border-white/30 text-white/90 hover:text-white hover:border-white/50"
+                                : "border-black/30 text-black/80 hover:text-black hover:border-black/50",
+                            isActive(`/${lang}/contact`) && "underline"
+                        )}
+                    >
+                        {navigation.contact}
+                    </Link>
 
                     {/* Lang Switcher */}
                     <Link
                         href={switchLang()}
+                        aria-label={`Switch to ${targetLangLabel === 'EN' ? 'English' : 'Ελληνικά'}`}
                         className={cn(
                             "flex items-center gap-1 text-sm font-medium px-3 py-1 border rounded-full transition-colors",
                             scrolled || isOpen
@@ -127,13 +165,15 @@ export function Navbar({ lang, navigation }: NavbarProps) {
                                 : "border-black/20 text-black hover:bg-black/5"
                         )}
                     >
-                        <Globe className="w-4 h-4" />
+                        <Globe className="w-4 h-4" aria-hidden="true" />
                         <span>{targetLangLabel}</span>
                     </Link>
                 </div>
 
                 {/* Mobile Toggle */}
                 <button
+                    aria-label={isOpen ? "Close menu" : "Open menu"}
+                    aria-expanded={isOpen}
                     className={cn(
                         "lg:hidden p-2 transition-colors",
                         scrolled || isOpen ? "text-white" : "text-black"
@@ -167,6 +207,28 @@ export function Navbar({ lang, navigation }: NavbarProps) {
                         className="text-lg font-jakarta font-bold py-3 border-b border-white/10 text-white/70"
                     >
                         {navigation.contact}
+                    </Link>
+
+                    <Link
+                        href={`/${lang}/blog`}
+                        onClick={() => setIsOpen(false)}
+                        className={cn(
+                            "text-lg font-jakarta font-bold py-3 border-b border-white/10",
+                            isActive(`/${lang}/blog`) ? "text-white" : "text-white/70"
+                        )}
+                    >
+                        {navigation.blog}
+                    </Link>
+
+                    <Link
+                        href={`/${lang}/about`}
+                        onClick={() => setIsOpen(false)}
+                        className={cn(
+                            "text-lg font-jakarta font-bold py-3 border-b border-white/10",
+                            isActive(`/${lang}/about`) ? "text-white" : "text-white/70"
+                        )}
+                    >
+                        {navigation.about}
                     </Link>
 
                     <Link

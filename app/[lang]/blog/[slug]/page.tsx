@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import { notFound } from "next/navigation";
+import { ArticleJsonLd } from "@/components/JsonLd";
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: Locale; slug: string }> }) {
     const { lang, slug } = await params;
@@ -16,6 +17,12 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: Loc
     return {
         title: `${article.title} - SensEar Music`,
         description: article.desc,
+        openGraph: {
+            title: article.title,
+            description: article.desc,
+            type: 'article',
+            ...(article.image && { images: [{ url: article.image }] }),
+        },
     };
 }
 
@@ -63,6 +70,15 @@ export default async function BlogPost({
 
     return (
         <div className="bg-[#faebe3] min-h-screen font-sans overflow-x-hidden selection:bg-orange-100">
+            {/* Article Schema for SEO */}
+            <ArticleJsonLd
+                title={article.title}
+                description={article.desc}
+                url={`/${lang}/blog/${article.link}`}
+                image={article.image}
+                author={article.author}
+            />
+            
             {/* Hero Section */}
             <section className="relative pt-32 pb-16 md:pt-48 md:pb-24">
                 <div className="container mx-auto px-6 max-w-7xl">
@@ -105,7 +121,7 @@ export default async function BlogPost({
                         <div className="lg:col-span-5 relative group animate-in fade-in zoom-in-95 duration-1000">
                             <div className="aspect-[3/4] rounded-[2.5rem] overflow-hidden shadow-[0_40px_80px_-15px_rgba(0,0,0,0.15)] bg-white border border-white/20">
                                 <img
-                                    src={article.image || "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/17b4a5b7d_seedream-40_high-resolution_professional_photography_image_with_precise_details_and_refined_-01-.jpg"}
+                                    src={article.image || "/images/blog/blog-faq-default.jpg"}
                                     alt={article.alt || article.title}
                                     className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
                                 />

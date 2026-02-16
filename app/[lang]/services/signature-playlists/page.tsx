@@ -1,7 +1,9 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { getDictionary } from "@/lib/dictionary";
 import type { Locale } from "@/lib/i18n";
+import { FinalCTA } from "@/components/sections/FinalCTA";
 
 export default async function SignaturePlaylistsPage({
     params,
@@ -10,6 +12,7 @@ export default async function SignaturePlaylistsPage({
 }) {
     const { lang } = await params;
     const dict = await getDictionary(lang);
+    const t = dict.signature_playlists;
 
     return (
         <div className="bg-[#faebe3]">
@@ -46,7 +49,7 @@ export default async function SignaturePlaylistsPage({
             <section
                 className="relative pt-32 pb-32 min-h-[90vh] flex flex-col justify-center overflow-hidden"
                 style={{
-                    backgroundImage: "url('https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/178049824_warmsilverfoilsample-Picsart-AiImageEnhancer.jpg')",
+                    backgroundImage: "url('/images/backgrounds/background-texture-warm-silver.jpg')",
                     backgroundSize: 'cover',
                     backgroundPosition: 'center'
                 }}
@@ -55,11 +58,11 @@ export default async function SignaturePlaylistsPage({
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
                         <div className="flex flex-col justify-center text-left">
                             <h1 className="font-extrabold text-black mb-6 leading-[1.1] slide-up-1">
-                                <span className="block text-[2.2rem] sm:text-[3.2rem] md:text-[4rem] lg:text-[4.8rem]">Signature Playlists:</span>
-                                <span className="block text-[1.6rem] sm:text-[2.4rem] md:text-[3rem] lg:text-[3.6rem] text-black/70 italic">Custom music for your space.</span>
+                                <span className="block mb-3 text-[2.2rem] sm:text-[3.2rem] md:text-[4rem] lg:text-[4.8rem]">{t.hero.title}</span>
+                                <span className="block text-[1.6rem] sm:text-[2.4rem] md:text-[3rem] lg:text-[3.6rem] text-black/70 italic">{t.hero.subtitle}</span>
                             </h1>
                             <p className="text-xl md:text-2xl text-black/70 leading-relaxed slide-up-2">
-                                Curated playlists that follow your brand, space & daily rhythm.
+                                {t.hero.description}
                             </p>
                         </div>
 
@@ -67,10 +70,13 @@ export default async function SignaturePlaylistsPage({
                             <div className="w-full lg:w-[93.5%]">
                                 <div className="overflow-hidden rounded-2xl shadow-2xl">
                                     <div className="relative aspect-square">
-                                        <img
-                                            src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/cb5c9be16_fe959a9eda0e3059a0b19f803958ba85-cropped.jpg"
+                                        <Image
+                                            src="/images/services/signature-playlists/signature-playlists-hero.jpg"
                                             alt="Bespoke music curation and playlist creation for unique venue atmosphere"
-                                            className="w-full h-full object-cover"
+                                            fill
+                                            className="object-cover"
+                                            sizes="(max-width: 768px) 100vw, 50vw"
+                                            priority
                                         />
                                     </div>
                                 </div>
@@ -85,15 +91,11 @@ export default async function SignaturePlaylistsPage({
                 <div className="max-w-7xl mx-auto px-6">
                     <div className="flex flex-col items-center text-center max-w-5xl mx-auto">
                         <h2 className="text-[2rem] md:text-[2.8rem] lg:text-[3.45rem] font-bold text-white leading-tight mb-12">
-                            Playlist creation for<br />unique venue atmosphere
+                            {t.intro.title}
                         </h2>
                         <div className="w-full">
-                            <p className="text-2xl md:text-3xl lg:text-4xl text-white leading-relaxed mb-6">
-                                We create <strong><em>playlists</em></strong> in tune with your brand's <strong><em>character</em></strong> and space's <strong><em>rhythm</em></strong>, to balance <strong><em>energy</em></strong> for both guests & staff.
-                            </p>
-                            <p className="text-xl md:text-2xl lg:text-3xl text-white/80 leading-relaxed">
-                                Your sound <strong><em>becomes intentional</em></strong> & <strong><em>felt</em></strong> in the atmosphere, not lost in the background.
-                            </p>
+                            <p className="text-2xl md:text-3xl lg:text-4xl text-white leading-relaxed mb-6" dangerouslySetInnerHTML={{ __html: t.intro.p1 }} />
+                            <p className="text-xl md:text-2xl lg:text-3xl text-white/80 leading-relaxed" dangerouslySetInnerHTML={{ __html: t.intro.p2 }} />
                         </div>
                     </div>
                 </div>
@@ -102,42 +104,26 @@ export default async function SignaturePlaylistsPage({
             {/* What we do */}
             <section className="py-20 bg-white">
                 <div className="max-w-7xl mx-auto px-6">
-                    <h2 className="text-[2.7rem] md:text-[3.45rem] font-bold mb-12 text-black text-center">What we do</h2>
+                    <h2 className="text-[2.7rem] md:text-[3.45rem] font-bold mb-12 text-black text-center leading-heading">{t.what_we_do.title}</h2>
 
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
                         <div className="hidden lg:block">
-                            <img
-                                src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/da61f346a_afb08a148_fe959a9eda0e3059a0b19f803958ba8511.jpg"
+                            <Image
+                                src="/images/services/signature-playlists/signature-playlists-curation.jpg"
                                 alt="Mindful music curation experience"
+                                width={600}
+                                height={400}
                                 className="w-full h-auto rounded-2xl shadow-lg"
                             />
                         </div>
 
                         <div className="space-y-8">
-                            <div>
-                                <h3 className="text-2xl font-bold text-black mb-3">Your own, unique sound</h3>
-                                <p className="text-lg text-black/70">Rare tracks you won't hear on generic playlists, chosen especially for you.</p>
-                            </div>
-
-                            <div>
-                                <h3 className="text-2xl font-bold text-black mb-3">Amplify your brand</h3>
-                                <p className="text-lg text-black/70">Music designed to echo your aesthetics & tell your brand story</p>
-                            </div>
-
-                            <div>
-                                <h3 className="text-2xl font-bold text-black mb-3">Match your space</h3>
-                                <p className="text-lg text-black/70">Tracks arranged to follow your venue's flow, concept & guest profiles.</p>
-                            </div>
-
-                            <div>
-                                <h3 className="text-2xl font-bold text-black mb-3">Keep your vibe fresh</h3>
-                                <p className="text-lg text-black/70">Regular updates that keep your sound exciting & recognizable.</p>
-                            </div>
-
-                            <div>
-                                <h3 className="text-2xl font-bold text-black mb-3">Total control & support</h3>
-                                <p className="text-lg text-black/70">Clear rules, central management & direct access to us when needed.</p>
-                            </div>
+                            {t.what_we_do.items.map((item, index) => (
+                                <div key={index}>
+                                    <h3 className="text-2xl font-bold text-black mb-3">{item.title}</h3>
+                                    <p className="text-lg text-black/70">{item.description}</p>
+                                </div>
+                            ))}
                         </div>
                     </div>
                 </div>
@@ -147,44 +133,32 @@ export default async function SignaturePlaylistsPage({
             <section
                 className="py-20"
                 style={{
-                    backgroundImage: "linear-gradient(to top, #ffffff 0%, rgba(255,255,255,0) 15%), url('https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/178049824_warmsilverfoilsample-Picsart-AiImageEnhancer.jpg')",
+                    backgroundImage: "linear-gradient(to top, #ffffff 0%, rgba(255,255,255,0) 15%), url('/images/backgrounds/background-texture-warm-silver.jpg')",
                     backgroundSize: 'cover',
                     backgroundPosition: 'center'
                 }}
             >
                 <div className="max-w-7xl mx-auto px-6">
-                    <h2 className="text-[2.7rem] md:text-[3.45rem] font-bold mb-12 text-black text-center">Perfect for</h2>
+                    <h2 className="text-[2.7rem] md:text-[3.45rem] font-bold mb-12 text-black text-center leading-heading">{t.perfect_for.title}</h2>
 
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
                         <div>
                             <ul className="space-y-8 text-lg text-black/70">
-                                <li className="block">
-                                    <Link href={`/${lang}/industries/hotels-resorts`} className="underline hover:text-black font-semibold text-2xl block mb-1">Hotels & Resorts</Link>
-                                    <span>that need smooth shifts throughout the day.</span>
-                                </li>
-                                <li className="block">
-                                    <Link href={`/${lang}/industries/restaurants-bars`} className="underline hover:text-black font-semibold text-2xl block mb-1">Restaurants & Bars</Link>
-                                    <span>where atmosphere is a core part of the experience.</span>
-                                </li>
-                                <li className="block">
-                                    <Link href={`/${lang}/industries/retail-stores`} className="underline hover:text-black font-semibold text-2xl block mb-1">Retail stores</Link>
-                                    <span>that want a soundtrack to fit their visual story.</span>
-                                </li>
-                                <li className="block">
-                                    <Link href={`/${lang}/industries/wellness-gyms`} className="underline hover:text-black font-semibold text-2xl block mb-1">Wellness spaces</Link>
-                                    <span>to support treatments or training sessions.</span>
-                                </li>
-                                <li className="block">
-                                    <Link href={`/${lang}/industries/art-museums-fashion`} className="underline hover:text-black font-semibold text-2xl block mb-1">Art & Culture spaces</Link>
-                                    <span>that need engaging but unobtrusive sound.</span>
-                                </li>
+                                {t.perfect_for.items.map((item, index) => (
+                                    <li key={index} className="block">
+                                        <Link href={`/${lang}/${item.link}`} className="underline hover:text-black font-semibold text-2xl block mb-1">{item.title}</Link>
+                                        <span>{item.description}</span>
+                                    </li>
+                                ))}
                             </ul>
                         </div>
 
                         <div className="hidden lg:block">
-                            <img
-                                src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/87dbd6b8d_ngirwbclf1ak7t0bbzyv.jpg"
+                            <Image
+                                src="/images/services/signature-playlists/signature-playlists-hotel-room.jpg"
                                 alt="Luxury hotel room with curated music atmosphere"
+                                width={600}
+                                height={400}
                                 className="w-full h-auto rounded-2xl shadow-lg"
                             />
                         </div>
@@ -195,56 +169,41 @@ export default async function SignaturePlaylistsPage({
             {/* Licensed for business use */}
             <section className="py-20 bg-white">
                 <div className="max-w-7xl mx-auto px-6">
-                    <h2 className="text-[2.7rem] md:text-[3.45rem] font-bold mb-12 text-black text-center">Licensed for business use</h2>
+                    <h2 className="text-[2.7rem] md:text-[3.45rem] font-bold mb-12 text-black text-center leading-heading">{t.licensed.title}</h2>
 
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
                         <div className="hidden lg:block">
-                            <img
-                                src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/16c07c365_cc313a1e26a1dd887202657b5dabf32c.jpg"
+                            <Image
+                                src="/images/services/signature-playlists/signature-playlists-vinyl-collection.jpg"
                                 alt="Vinyl records collection for curated playlists"
+                                width={600}
+                                height={400}
                                 className="w-full h-auto rounded-2xl shadow-lg"
                             />
                         </div>
 
                         <div className="space-y-8">
-                            <div>
-                                <h3 className="text-2xl font-bold text-black mb-3">On-brand, but also legal playlists</h3>
-                                <p className="text-lg text-black/70">We provide music cleared for professional use which offers you an extra ease of mind.</p>
-                            </div>
+                            {t.licensed.items.map((item, index) => (
+                                <div key={index}>
+                                    <h3 className="text-2xl font-bold text-black mb-3">{item.title}</h3>
+                                    <p className="text-lg text-black/70">{item.description}</p>
+                                </div>
+                            ))}
                         </div>
                     </div>
                 </div>
             </section>
 
             {/* Final CTA */}
-            <section
-                className="py-20"
-                style={{
-                    backgroundImage: "linear-gradient(to bottom, #faebe3 0%, rgba(250, 235, 227, 0) 15%), url('https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/178049824_warmsilverfoilsample-Picsart-AiImageEnhancer.jpg')",
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center'
-                }}
-            >
-                <div className="max-w-7xl mx-auto px-6 text-center">
-                    <h2 className="text-[2.7rem] md:text-[3.45rem] font-bold text-black mb-12">Let us craft your signature sound</h2>
-                    <p className="text-xl text-black/70 mb-8 max-w-3xl mx-auto">
-                        Need a perfect soundscape that reflects your brand and captivates your guests?
-                    </p>
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                        <Link href={`/${lang}/contact`}>
-                            <button className="group relative bg-transparent border-2 border-black text-black hover:bg-black hover:text-white px-14 py-6 text-lg font-semibold rounded-full transition-all duration-300 overflow-hidden flex items-center">
-                                <span className="transition-transform duration-300 group-hover:-translate-x-3 inline-block">
-                                    Create your signature sound
-                                </span>
-                                <ArrowRight className="absolute right-6 w-5 h-5 opacity-0 translate-x-4 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0" />
-                            </button>
-                        </Link>
-                    </div>
-                    <p className="text-black/70 mt-8">
-                        Explore how our <Link href={`/${lang}/services/sonic-strategy`} className="underline hover:text-black font-semibold">Sonic Strategy</Link> & <Link href={`/${lang}/services/audio-upgrades`} className="underline hover:text-black font-semibold">Audio Upgrades</Link> build on your playlists.
-                    </p>
-                </div>
-            </section>
+            <FinalCTA
+                heading={lang === 'el' ? 'Αφήστε μας να δημιουργήσουμε την υπογραφή ήχου σας' : 'Let us craft your signature sound'}
+                text={t.cta.description}
+                buttons={[
+                    { text: t.cta.button, link: 'contact' },
+                    { text: lang === 'el' ? 'Δείτε τις υπηρεσίες μας' : 'Explore our services', link: 'services' }
+                ]}
+                lang={lang}
+            />
         </div>
     );
 }

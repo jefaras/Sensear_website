@@ -5,6 +5,7 @@ import { ArrowRight, Check } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { Metadata } from "next";
+import { FinalCTA } from "@/components/sections/FinalCTA";
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: Locale }> }): Promise<Metadata> {
     const { lang } = await params;
@@ -53,7 +54,7 @@ export default async function Services({
                 <div
                     className="absolute inset-0 z-0"
                     style={{
-                        backgroundImage: "url('https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/178049824_warmsilverfoilsample-Picsart-AiImageEnhancer.jpg')",
+                        backgroundImage: "url('/images/backgrounds/background-texture-warm-silver.jpg')",
                         backgroundSize: 'cover',
                         backgroundPosition: 'center'
                     }}
@@ -77,10 +78,13 @@ export default async function Services({
                         <div className="w-full slide-up-4 flex justify-center lg:justify-end">
                             <div className="w-full lg:w-[93.5%]">
                                 <div className="overflow-hidden rounded-2xl shadow-2xl bg-white aspect-square relative">
-                                    <img
-                                        src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/25d5bd632_gemini-25-flash-image_Upscale_this_image_carefully_adding_some_1980s_accessories_to_the_woman_s_hand_o-0.jpg"
-                                        alt="Strategic music services"
-                                        className="w-full h-full object-cover"
+                                    <Image
+                                        src="/images/services/services-hero-strategic-music.jpg"
+                                        alt="Strategic music services for hospitality and retail venues"
+                                        fill
+                                        className="object-cover"
+                                        sizes="(max-width: 768px) 100vw, 50vw"
+                                        priority
                                     />
                                 </div>
                             </div>
@@ -117,7 +121,7 @@ export default async function Services({
                   rgba(255,255,255,0) 55%,
                   #FFF7F2 75%, 
                   #ffffff 100%
-                ), url('https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/178049824_warmsilverfoilsample-Picsart-AiImageEnhancer.jpg')`,
+                ), url('/images/backgrounds/background-texture-warm-silver.jpg')`,
                         backgroundSize: 'cover',
                         backgroundPosition: 'center',
                         backgroundRepeat: 'no-repeat',
@@ -127,7 +131,7 @@ export default async function Services({
 
                 <div className="max-w-7xl mx-auto px-6 relative z-10">
                     <div className="text-center max-w-4xl mx-auto mb-24">
-                        <h2 className="text-[2.7rem] md:text-[3.45rem] font-bold text-black mb-4">{content.starting_point.title}</h2>
+                        <h2 className="text-[2.7rem] md:text-[3.45rem] font-bold text-black mb-4 leading-heading">{content.starting_point.title}</h2>
                         <p className="text-xl text-black/60 font-medium max-w-3xl mx-auto">{content.starting_point.subtitle}</p>
                     </div>
 
@@ -148,22 +152,26 @@ export default async function Services({
                                         <p className="text-lg md:text-xl text-black/60 leading-relaxed" dangerouslySetInnerHTML={{ __html: content.services.playlists.ideal_for }} />
                                     </div>
 
-                                    <Link href={`/${lang}/contact?interest=signature-playlists`}>
-                                        <Button
-                                            variant="outline"
-                                            className="group w-full sm:w-auto bg-transparent border-2 border-black text-black hover:bg-black hover:text-white px-8 py-6 text-lg font-semibold rounded-full transition-all duration-300"
-                                        >
-                                            <span className="mr-2">{content.services.playlists.cta}</span>
-                                            <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
-                                        </Button>
+                                    <Link href={`/${lang}/services/signature-playlists`}>
+                                        <button className="group relative bg-transparent border-2 border-black text-black hover:bg-black hover:text-white px-8 py-6 text-lg font-semibold rounded-full transition-all duration-300 overflow-hidden flex items-center">
+                                            <span className="relative inline-flex items-center mr-2 align-middle">
+                                                <Image src="/images/brand/sensear-logo-color.png" width={32} height={32} className="w-8 h-8 object-contain opacity-100 scale-100 group-hover:opacity-0 group-hover:scale-0 transition-all duration-300" alt="" />
+                                            </span>
+                                            <span className="transition-transform duration-300 group-hover:-translate-x-10 inline-block">
+                                                {content.services.playlists.cta}
+                                            </span>
+                                            <ArrowRight className="absolute right-6 w-5 h-5 opacity-0 translate-x-4 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0" />
+                                        </button>
                                     </Link>
                                 </div>
                             </div>
 
                             <div className="order-2 lg:order-2">
-                                <img
-                                    src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/ad6308d11_402461766_1151218075859356_9152177816492568307_n.jpg"
-                                    alt="Signature Playlists"
+                                <Image
+                                    src="/images/services/service-signature-playlists.jpg"
+                                    alt="Signature Playlists service for curated music experiences"
+                                    width={800}
+                                    height={600}
                                     className="w-full h-auto object-cover rounded-xl shadow-lg"
                                 />
                             </div>
@@ -174,9 +182,11 @@ export default async function Services({
                     <div className="mb-24">
                         <div className="grid lg:grid-cols-2 gap-12 items-center">
                             <div className="order-2 lg:order-1">
-                                <img
-                                    src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/587b0ab41_IMG_20250801_204842.jpg"
-                                    alt="Event Soundtracks"
+                                <Image
+                                    src="/images/services/service-event-soundtracks.jpg"
+                                    alt="Event Soundtracks service for memorable experiences"
+                                    width={800}
+                                    height={1000}
                                     className="w-full aspect-[3/4] object-cover rounded-xl shadow-lg"
                                 />
                             </div>
@@ -195,96 +205,78 @@ export default async function Services({
                                         <p className="text-lg md:text-xl text-black/60 leading-relaxed" dangerouslySetInnerHTML={{ __html: content.services.events.ideal_for }} />
                                     </div>
 
-                                    <Link href={`/${lang}/contact?interest=event-soundtracks`}>
-                                        <Button
-                                            variant="outline"
-                                            className="group w-full sm:w-auto bg-transparent border-2 border-black text-black hover:bg-black hover:text-white px-8 py-6 text-lg font-semibold rounded-full transition-all duration-300"
-                                        >
-                                            <span className="mr-2">{content.services.events.cta}</span>
-                                            <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
-                                        </Button>
+                                    <Link href={`/${lang}/services/event-soundtracks`}>
+                                        <button className="group relative bg-transparent border-2 border-black text-black hover:bg-black hover:text-white px-8 py-6 text-lg font-semibold rounded-full transition-all duration-300 overflow-hidden flex items-center">
+                                            <span className="relative inline-flex items-center mr-2 align-middle">
+                                                <Image src="/images/brand/sensear-logo-color.png" width={32} height={32} className="w-8 h-8 object-contain opacity-100 scale-100 group-hover:opacity-0 group-hover:scale-0 transition-all duration-300" alt="" />
+                                            </span>
+                                            <span className="transition-transform duration-300 group-hover:-translate-x-10 inline-block">
+                                                {content.services.events.cta}
+                                            </span>
+                                            <ArrowRight className="absolute right-6 w-5 h-5 opacity-0 translate-x-4 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0" />
+                                        </button>
                                     </Link>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    {/* Combined Section: Sonic Strategy & Audio Upgrades */}
-                    <div className="grid md:grid-cols-2 gap-8 lg:gap-16 items-start">
-                        {/* Sonic Strategy */}
-                        <div className="flex flex-col h-full">
-                            <div className="flex flex-col sm:flex-row gap-6 mb-6 sm:items-center">
-                                <img
-                                    src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/d2c616905_fd3f4ff86f1dfed345baa64ee2908eda.jpg"
-                                    alt="Sonic Strategy"
-                                    className="w-full sm:w-[301px] sm:h-[401px] object-cover rounded-2xl shadow-lg flex-shrink-0 order-2 xl:order-1"
-                                />
-                                <div className="flex-1 flex flex-col order-1 xl:order-2">
-                                    <h3 className="text-3xl font-bold text-black leading-tight mb-2">
-                                        {content.services.strategy.title}
-                                    </h3>
-                                    <p className="text-lg font-medium text-black/60 mb-6">{content.services.strategy.subtitle}</p>
-
-                                    <div className="flex-1 flex flex-col">
-                                        <div className="mb-4">
-                                            <p className="text-lg text-black/60 leading-relaxed">{content.services.strategy.desc}</p>
-                                        </div>
-                                        <div className="mb-4">
-                                            <p className="text-base text-black/60 leading-relaxed" dangerouslySetInnerHTML={{ __html: content.services.strategy.ideal_for }} />
-                                        </div>
-
-                                        <div className="mt-6">
-                                            <Link href={`/${lang}/contact?interest=sonic-strategy`}>
-                                                <Button
-                                                    variant="outline"
-                                                    className="group w-full sm:w-auto bg-transparent border-2 border-black text-black hover:bg-black hover:text-white px-6 py-4 text-sm font-semibold rounded-full transition-all duration-300"
-                                                >
-                                                    <span className="mr-2">{content.services.strategy.cta}</span>
-                                                    <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
-                                                </Button>
-                                            </Link>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                    {/* Alternative 1: Compact Side-by-Side Cards */}
+                    <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
+                        {/* Sonic Strategy Card */}
+                        <div className="bg-white/50 border border-black/10 rounded-2xl p-6 lg:p-8">
+                            <Image
+                                src="/images/services/service-sonic-strategy.jpg"
+                                alt="Sonic Strategy service for brand identity"
+                                width={600}
+                                height={400}
+                                className="w-full h-48 lg:h-56 object-cover rounded-xl mb-6"
+                            />
+                            <h3 className="text-2xl md:text-3xl font-bold text-black leading-tight mb-1">
+                                {content.services.strategy.title}
+                            </h3>
+                            <p className="text-lg font-medium text-black/50 mb-4">{content.services.strategy.subtitle}</p>
+                            <p className="text-base text-black/60 leading-relaxed mb-4">{content.services.strategy.desc}</p>
+                            <p className="text-base text-black/50 leading-relaxed mb-6" dangerouslySetInnerHTML={{ __html: content.services.strategy.ideal_for }} />
+                            <Link href={`/${lang}/services/sonic-identity`}>
+                                <button className="group relative bg-transparent border-2 border-black text-black hover:bg-black hover:text-white px-6 py-4 text-base font-semibold rounded-full transition-all duration-300 overflow-hidden flex items-center">
+                                    <span className="relative inline-flex items-center mr-2 align-middle">
+                                        <Image src="/images/brand/sensear-logo-color.png" width={28} height={28} className="w-7 h-7 object-contain opacity-100 scale-100 group-hover:opacity-0 group-hover:scale-0 transition-all duration-300" alt="" />
+                                    </span>
+                                    <span className="transition-transform duration-300 group-hover:-translate-x-9 inline-block">
+                                        {content.services.strategy.cta}
+                                    </span>
+                                    <ArrowRight className="absolute right-5 w-5 h-5 opacity-0 translate-x-4 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0" />
+                                </button>
+                            </Link>
                         </div>
 
-                        {/* Audio Upgrades */}
-                        <div className="flex flex-col h-full">
-                            <div className="flex flex-col sm:flex-row gap-6 mb-6 sm:items-center">
-                                <img
-                                    src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/bbe747c8e_57b86e08a_b6e0a3f63_tech_hifi_1979_07-pxbee-cropped2.jpg"
-                                    alt="Audio Upgrades"
-                                    className="w-full sm:w-[301px] sm:h-[401px] object-cover rounded-2xl shadow-lg flex-shrink-0 order-2 xl:order-1"
-                                />
-                                <div className="flex-1 flex flex-col order-1 xl:order-2">
-                                    <h3 className="text-3xl font-bold text-black leading-tight mb-2">
-                                        {content.services.upgrades.title}
-                                    </h3>
-                                    <p className="text-lg font-medium text-black/60 mb-6">{content.services.upgrades.subtitle}</p>
-
-                                    <div className="flex-1 flex flex-col">
-                                        <div className="mb-4">
-                                            <p className="text-lg text-black/60 leading-relaxed">{content.services.upgrades.desc}</p>
-                                        </div>
-                                        <div className="mb-4">
-                                            <p className="text-base text-black/60 leading-relaxed" dangerouslySetInnerHTML={{ __html: content.services.upgrades.ideal_for }} />
-                                        </div>
-
-                                        <div className="mt-6">
-                                            <Link href={`/${lang}/contact?interest=audio-upgrades`}>
-                                                <Button
-                                                    variant="outline"
-                                                    className="group w-full sm:w-auto bg-transparent border-2 border-black text-black hover:bg-black hover:text-white px-6 py-4 text-sm font-semibold rounded-full transition-all duration-300"
-                                                >
-                                                    <span className="mr-2">{content.services.upgrades.cta}</span>
-                                                    <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
-                                                </Button>
-                                            </Link>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                        {/* Audio Upgrades Card */}
+                        <div className="bg-white/50 border border-black/10 rounded-2xl p-6 lg:p-8">
+                            <Image
+                                src="/images/services/service-audio-upgrades.jpg"
+                                alt="Audio Upgrades service for venue sound quality"
+                                width={600}
+                                height={400}
+                                className="w-full h-48 lg:h-56 object-cover rounded-xl mb-6"
+                            />
+                            <h3 className="text-2xl md:text-3xl font-bold text-black leading-tight mb-1">
+                                {content.services.upgrades.title}
+                            </h3>
+                            <p className="text-lg font-medium text-black/50 mb-4">{content.services.upgrades.subtitle}</p>
+                            <p className="text-base text-black/60 leading-relaxed mb-4">{content.services.upgrades.desc}</p>
+                            <p className="text-base text-black/50 leading-relaxed mb-6" dangerouslySetInnerHTML={{ __html: content.services.upgrades.ideal_for }} />
+                            <Link href={`/${lang}/services/audio-upgrades`}>
+                                <button className="group relative bg-transparent border-2 border-black text-black hover:bg-black hover:text-white px-6 py-4 text-base font-semibold rounded-full transition-all duration-300 overflow-hidden flex items-center">
+                                    <span className="relative inline-flex items-center mr-2 align-middle">
+                                        <Image src="/images/brand/sensear-logo-color.png" width={28} height={28} className="w-7 h-7 object-contain opacity-100 scale-100 group-hover:opacity-0 group-hover:scale-0 transition-all duration-300" alt="" />
+                                    </span>
+                                    <span className="transition-transform duration-300 group-hover:-translate-x-9 inline-block">
+                                        {content.services.upgrades.cta}
+                                    </span>
+                                    <ArrowRight className="absolute right-5 w-5 h-5 opacity-0 translate-x-4 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0" />
+                                </button>
+                            </Link>
                         </div>
                     </div>
                 </div>
@@ -294,15 +286,17 @@ export default async function Services({
             <section className="py-24 bg-[#faebe3]">
                 <div className="max-w-7xl mx-auto px-6">
                     <div className="text-center max-w-4xl mx-auto mb-12">
-                        <h2 className="text-[2.7rem] md:text-[3.45rem] font-bold text-black mb-4">{content.delivery.title}</h2>
+                        <h2 className="text-[2.7rem] md:text-[3.45rem] font-bold text-black mb-4 leading-heading">{content.delivery.title}</h2>
                         <p className="text-xl text-black/60 font-medium max-w-3xl mx-auto">{content.delivery.subtitle}</p>
                     </div>
 
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
                         <div className="order-2 lg:order-1">
-                            <img
-                                src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/706733b3c_f9c386a1d5dba0530f1176b031bff1a4-UPSC.jpg"
-                                alt="Services delivery"
+                            <Image
+                                src="/images/services/services-delivery-process.jpg"
+                                alt="Services delivery process for music curation"
+                                width={800}
+                                height={600}
                                 className="w-full h-auto rounded-2xl shadow-lg"
                             />
                         </div>
@@ -311,7 +305,7 @@ export default async function Services({
                                 {content.delivery.points.map((point, index) => (
                                     <div key={index} className="mb-6">
                                         <p className="text-lg md:text-xl text-black/60 leading-relaxed">
-                                            <Link href={`/${lang}/contact?interest=${point.link}`} className="font-bold underline decoration-2 underline-offset-4 hover:text-black/70 text-black">
+                                            <Link href={`/${lang}/services/${point.link}`} className="font-bold underline decoration-2 underline-offset-4 hover:text-black/70 text-black">
                                                 {point.link_text}
                                             </Link> <span>{point.text}</span>
                                         </p>
@@ -324,27 +318,15 @@ export default async function Services({
             </section>
 
             {/* Final CTA */}
-            <section className="py-20 bg-gradient-to-r from-[#f5d4c1] via-[#e8c3b0] to-[#f5d4c1] animated-gradient">
-                <div className="max-w-7xl mx-auto px-6 text-center">
-                    <h2 className="text-[2.7rem] md:text-[3.45rem] font-bold text-black mb-12">{content.cta.title}</h2>
-                    <p className="text-xl text-black/60 mb-12 max-w-3xl mx-auto">
-                        {content.cta.subtitle}
-                    </p>
-                    <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-                        <Link href={`/${lang}/contact`}>
-                            <Button className="w-full sm:w-auto h-14 rounded-full px-8 text-lg font-semibold bg-transparent border-2 border-black text-black hover:bg-black hover:text-white transition-all duration-300">
-                                {content.cta.contact_btn}
-                            </Button>
-                        </Link>
-                        <span className="text-black/60 font-medium">{lang === 'el' ? 'ή' : 'or'}</span>
-                        <Link href={`/${lang}/industries`}>
-                            <Button className="w-full sm:w-auto h-14 rounded-full px-8 text-lg font-semibold bg-transparent border-2 border-black text-black hover:bg-black hover:text-white transition-all duration-300">
-                                {content.cta.industries_btn}
-                            </Button>
-                        </Link>
-                    </div>
-                </div>
-            </section>
+            <FinalCTA
+                heading={content.cta.title}
+                text={content.cta.subtitle}
+                buttons={[
+                    { text: content.cta.contact_btn, link: "contact" },
+                    { text: content.cta.industries_btn, link: "industries" }
+                ]}
+                lang={lang}
+            />
         </div>
     );
 }

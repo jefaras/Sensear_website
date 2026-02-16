@@ -35,7 +35,7 @@ export default async function SitemapPage({
                 { name: dict.services_page.hero.title.split(',')[0], path: `/${lang}/services` }, // Intro
                 { name: dict.services_page.services.playlists.title, path: `/${lang}/services/signature-playlists` },
                 { name: dict.services_page.services.events.title, path: `/${lang}/services/event-soundtracks` },
-                { name: dict.services_page.services.strategy.title, path: `/${lang}/services/sonic-strategy` },
+                { name: dict.services_page.services.strategy.title, path: `/${lang}/services/sonic-identity` },
                 { name: dict.services_page.services.upgrades.title, path: `/${lang}/services/audio-upgrades` }
             ]
         },
@@ -73,7 +73,7 @@ export default async function SitemapPage({
             <section
                 className="relative pt-32 pb-32 min-h-[50vh] flex flex-col justify-center overflow-hidden"
                 style={{
-                    backgroundImage: "url('https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/178049824_warmsilverfoilsample-Picsart-AiImageEnhancer.jpg')",
+                    backgroundImage: "url('/images/backgrounds/background-texture-warm-silver.jpg')",
                     backgroundSize: 'cover',
                     backgroundPosition: 'center'
                 }}
@@ -94,7 +94,7 @@ export default async function SitemapPage({
                                 <div className="overflow-hidden rounded-2xl shadow-2xl">
                                     <div className="relative aspect-square">
                                         <img
-                                            src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/70c619556_handling-sensear-sitemap.jpg"
+                                            src="/images/sitemap-visual.jpg"
                                             alt="Sitemap"
                                             className="w-full h-full object-cover"
                                         />

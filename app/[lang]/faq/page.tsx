@@ -8,6 +8,7 @@ import {
     AccordionItem,
     AccordionTrigger,
 } from "@/components/ui/accordion";
+import { AnimatedButton } from "@/components/AnimatedButton";
 
 export default async function FAQPage({
     params,
@@ -26,7 +27,7 @@ export default async function FAQPage({
             <section
                 className="relative pt-32 pb-32 min-h-[90vh] flex flex-col justify-center overflow-hidden"
                 style={{
-                    backgroundImage: "url('https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/178049824_warmsilverfoilsample-Picsart-AiImageEnhancer.jpg')",
+                    backgroundImage: "url('/images/backgrounds/background-texture-warm-silver.jpg')",
                     backgroundSize: 'cover',
                     backgroundPosition: 'center'
                 }}
@@ -47,7 +48,7 @@ export default async function FAQPage({
                                 <div className="overflow-hidden rounded-2xl shadow-2xl">
                                     <div className="relative aspect-square">
                                         <img
-                                            src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/17b4a5b7d_seedream-40_high-resolution_professional_photography_image_with_precise_details_and_refined_-01-.jpg"
+                                            src="/images/blog/blog-faq-default.jpg"
                                             alt="FAQ"
                                             className="w-full h-full object-cover"
                                         />
@@ -63,7 +64,7 @@ export default async function FAQPage({
             <section
                 className="py-20"
                 style={{
-                    backgroundImage: "url('https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/178049824_warmsilverfoilsample-Picsart-AiImageEnhancer.jpg')",
+                    backgroundImage: "url('/images/backgrounds/background-texture-warm-silver.jpg')",
                     backgroundSize: 'cover',
                     backgroundPosition: 'center'
                 }}
@@ -93,14 +94,11 @@ export default async function FAQPage({
                     <div className="text-center mt-12 bg-white/50 p-8 rounded-lg">
                         <h3 className="text-2xl font-bold text-black mb-4">{content.cta.title}</h3>
                         <p className="text-black/80 mb-6">{content.cta.subtitle}</p>
-                        <Link href={`/${lang}/contact`}>
-                            <button className="group relative bg-transparent border-2 border-black text-black hover:bg-black hover:text-white px-14 py-6 text-lg font-semibold rounded-full transition-all duration-300 overflow-hidden flex items-center">
-                                <span className="transition-transform duration-300 group-hover:-translate-x-3 inline-block">
-                                    {content.cta.button}
-                                </span>
-                                <ArrowRight className="absolute right-6 w-5 h-5 opacity-0 translate-x-4 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0" />
-                            </button>
-                        </Link>
+                        <div className="flex justify-center">
+                            <AnimatedButton href="contact" lang={lang}>
+                                {content.cta.button}
+                            </AnimatedButton>
+                        </div>
                     </div>
                 </div>
             </section>

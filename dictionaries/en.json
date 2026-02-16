@@ -42,9 +42,9 @@
                     "link": "services/event-soundtracks"
                 },
                 {
-                    "title": "Sonic Strategy",
+                    "title": "Sonic Identity",
                     "desc": "Your music identity, unified across all locations & communication channels.",
-                    "link": "services/sonic-strategy"
+                    "link": "services/sonic-identity"
                 },
                 {
                     "title": "Audio Upgrades",
@@ -61,32 +61,32 @@
                 {
                     "title": "Hotels & Resorts",
                     "desc": "Music for every time of day and area.",
-                    "link": "industries/hotels-resorts"
+                    "link": "industries/music-for-hotels-and-resorts"
                 },
                 {
                     "title": "Restaurants & Bars",
                     "desc": "Match your service flow, keep guests longer.",
-                    "link": "industries/restaurants-bars"
+                    "link": "industries/music-for-restaurants-and-bars"
                 },
                 {
                     "title": "Events & Experiences",
                     "desc": "Impactful, time-based, natural track changes.",
-                    "link": "industries/events-experiences"
+                    "link": "industries/music-for-events-and-experiences"
                 },
                 {
                     "title": "Retail Stores",
                     "desc": "Promote browsing and brand identity.",
-                    "link": "industries/retail-stores"
+                    "link": "industries/music-for-retail-stores"
                 },
                 {
                     "title": "Wellness & Gyms",
                     "desc": "Calibrated for relaxation, focus or motivation.",
-                    "link": "industries/wellness-gyms"
+                    "link": "industries/music-for-wellness-and-gyms"
                 },
                 {
                     "title": "Art, Museums & Fashion",
                     "desc": "Smooth, precise, unobtrusive melodies.",
-                    "link": "industries/art-museums-fashion"
+                    "link": "industries/music-for-art-museums-and-fashion"
                 }
             ],
             "cta": "Find your industry"
@@ -357,7 +357,7 @@
             "heading": "Our vision",
             "text": "To become the **leading music partner** for **eclectic hospitality brands & events** seeking to express **identity**, elevate **atmosphere** & create **lasting guest connections**.",
             "cta": "Learn more about creating a unique Sonic Identity",
-            "cta_link": "sonic-strategy"
+            "cta_link": "sonic-identity"
         },
         "philosophy": {
             "heading": "Our philosophy",
@@ -393,8 +393,8 @@
         "vision": {
             "heading": "Our vision",
             "text": "To become the <strong>premier music partner</strong> for <strong>eclectic hospitality brands</strong> & <strong>events</strong> seeking to <strong>express identity</strong>, <strong>elevate atmosphere</strong> & <strong>create lasting guest connections</strong>.",
-            "link_text": "sonic strategy service",
-            "link": "services/sonic-strategy"
+            "link_text": "sonic identity service",
+            "link": "services/sonic-identity"
         },
         "team": {
             "heading": "Meet the team",
@@ -461,7 +461,7 @@
             "text": "Explore further our unique approach through playlists curation or discover what we do for your sector.",
             "buttons": [
                 {
-                    "text": "Curated playlists",
+                    "text": "Discover Curated playlists",
                     "link": "services/signature-playlists"
                 },
                 {
@@ -713,7 +713,7 @@
                     },
                     {
                         "type": "paragraph",
-                        "value": "[Music design](/sonic-strategy) belongs alongside visual and olfactory design in luxury hospitality. It enhances guest experience, can support sales and revenue outcomes, and contributes to higher employee morale and productivity. [Studies in retail and restaurants](https://academic.oup.com/jcr/article-abstract/13/2/286/1846377) show that getting tempo and style right changes pace, time perception, and spend, which translates well to luxury venues when applied with care."
+                        "value": "[Music design](/sonic-identity) belongs alongside visual and olfactory design in luxury hospitality. It enhances guest experience, can support sales and revenue outcomes, and contributes to higher employee morale and productivity. [Studies in retail and restaurants](https://academic.oup.com/jcr/article-abstract/13/2/286/1846377) show that getting tempo and style right changes pace, time perception, and spend, which translates well to luxury venues when applied with care."
                     },
                     {
                         "type": "paragraph",
@@ -930,7 +930,7 @@
                     },
                     {
                         "type": "paragraph",
-                        "value": "If you're designing a new space, refreshing an audio identity, or want measurable uplift from in-store music, SensEar can help; [strategy](https://sensear.music/sonic-strategy), [curation](https://sensear.music/signature-playlists), and governance included. Let's build a sound your customers remember and your team can run every day. Get your [free sonic audit](https://sensear.music/contact) today."
+                        "value": "If you're designing a new space, refreshing an audio identity, or want measurable uplift from in-store music, SensEar can help; [strategy](https://sensear.music/sonic-identity), [curation](https://sensear.music/signature-playlists), and governance included. Let's build a sound your customers remember and your team can run every day. Get your [free sonic audit](https://sensear.music/contact) today."
                     }
                 ]
             },
@@ -1122,7 +1122,7 @@
                     },
                     {
                         "type": "paragraph",
-                        "value": "If you want [playlists that perform](https://sensear.music/signature-playlists), a [sound logo people remember](https://sensear.music/sonic-strategy), and [audio guidelines](https://sensear.music/services) your teams can apply everywhere, SensEar can help. [Book a discovery session](https://sensear.music/contact) and we will map your [customer journey](https://sensear.music/industries), test what your audience responds to, and build a sonic branding system that lifts recognition, improves experience, and drives [measurable results](https://sensear.music/case-studies). Let's design the sound of your brand today."
+                        "value": "If you want [playlists that perform](https://sensear.music/signature-playlists), a [sound logo people remember](https://sensear.music/sonic-identity), and [audio guidelines](https://sensear.music/services) your teams can apply everywhere, SensEar can help. [Book a discovery session](https://sensear.music/contact) and we will map your [customer journey](https://sensear.music/industries), test what your audience responds to, and build a sonic branding system that lifts recognition, improves experience, and drives [measurable results](https://sensear.music/case-studies). Let's design the sound of your brand today."
                     }
                 ]
             },
@@ -1397,7 +1397,7 @@
                     "desc1": "Music that shapes the complete guest journey: from morning coffee to midnight cocktails.",
                     "desc2": "Result: The atmosphere reinforces what guests already love about your property.",
                     "cta": "Create your signature atmosphere",
-                    "link": "industries/hotels-resorts"
+                    "link": "industries/music-for-hotels-and-resorts"
                 },
                 {
                     "title": "Restaurants & Bars",
@@ -1405,7 +1405,7 @@
                     "desc1": "Sound that flows with your rhythms, encouraging conversation and longer visits.",
                     "desc2": "Result: Service flows more smoothly and guests settle in for the complete experience.",
                     "cta": "Upgrade your dining atmosphere",
-                    "link": "industries/restaurants-bars"
+                    "link": "industries/music-for-restaurants-and-bars"
                 },
                 {
                     "title": "Events & Experiences",
@@ -1413,7 +1413,7 @@
                     "desc1": "Precisely timed music that frames every phase, so your event sounds as good as it looks.",
                     "desc2": "Result: Smooth transitions that guests don't notice but organizers appreciate.",
                     "cta": "Perfect your next event",
-                    "link": "industries/events-experiences"
+                    "link": "industries/music-for-events-and-experiences"
                 },
                 {
                     "title": "Retail Stores",
@@ -1421,7 +1421,7 @@
                     "desc1": "Music that guides customer journeys and helps your space tell its story through sound.",
                     "desc2": "Result: Shoppers slow down, explore more corners & feel guided, not rushed.",
                     "cta": "Transform your retail experience",
-                    "link": "industries/retail-stores"
+                    "link": "industries/music-for-retail-stores"
                 },
                 {
                     "title": "Wellness Centers",
@@ -1429,7 +1429,7 @@
                     "desc1": "We calibrate music to support each activity, so each space has its optimal atmosphere.",
                     "desc2": "Result: Members consider the atmosphere as part of what makes their practice feel complete.",
                     "cta": "Optimize your wellness space",
-                    "link": "industries/wellness-gyms"
+                    "link": "industries/music-for-wellness-and-gyms"
                 },
                 {
                     "title": "Art, Museums & Fashion",
@@ -1437,7 +1437,7 @@
                     "desc1": "We create soundscapes that support without overwhelming and enrich the cultural experience.",
                     "desc2": "Result: Visitors slow down, absorb more and share their experience afterwards.",
                     "cta": "Frame your exhibitions",
-                    "link": "industries/art-museums-fashion"
+                    "link": "industries/music-for-art-museums-and-fashion"
                 }
             ]
         },
@@ -1454,7 +1454,7 @@
             "conclusion": "Different industries express these differently, but strategic sound solves them all."
         },
         "cta": {
-            "title": "Discover Your Sound Potential",
+            "title": "Discover your sound potential",
             "subtitle": "Every venue has untapped atmospheric potential. Let's explore how strategic sound can transform your specific space and objectives.",
             "contact": "Discover Your Sound Strategy",
             "services": "Explore our services"
@@ -1463,7 +1463,7 @@
     "services_page": {
         "meta": {
             "title": "Music Curation Services | SensEar",
-            "description": "Discover our services: Signature Playlists, Sonic Strategy, Event Soundtracks, and Audio Upgrades."
+            "description": "Discover our services: Signature Playlists, Sonic Identity, Event Soundtracks, and Audio Upgrades."
         },
         "hero": {
             "title": "Strategic sound,<br />four proven approaches",
@@ -1496,12 +1496,12 @@
                 "link": "services/event-soundtracks"
             },
             "strategy": {
-                "title": "Sonic Strategy",
+                "title": "Sonic Identity",
                 "subtitle": "Your audio DNA",
                 "desc": "Guidelines & roadmap for consistent sound.",
                 "ideal_for": "For brands with multiple locations or marketing channels.",
-                "cta": "Explore Sonic Strategy",
-                "link": "services/sonic-strategy"
+                "cta": "Explore Sonic Identity",
+                "link": "services/sonic-identity"
             },
             "upgrades": {
                 "title": "Audio Upgrades",
@@ -1523,8 +1523,8 @@
                 },
                 {
                     "text": "unifies your brand's sound.",
-                    "link_text": "Sonic Strategy",
-                    "link": "services/sonic-strategy"
+                    "link_text": "Sonic Identity",
+                    "link": "services/sonic-identity"
                 },
                 {
                     "text": "choreograph special moments.",
@@ -1567,8 +1567,8 @@
                         "link": "services/event-soundtracks"
                     },
                     {
-                        "label": "Sonic Strategy",
-                        "link": "services/sonic-strategy"
+                        "label": "Sonic Identity",
+                        "link": "services/sonic-identity"
                     },
                     {
                         "label": "Audio Upgrades",
@@ -1581,27 +1581,27 @@
                 "items": [
                     {
                         "label": "Hotels & Resorts",
-                        "link": "industries/hotels-resorts"
+                        "link": "industries/music-for-hotels-and-resorts"
                     },
                     {
                         "label": "Restaurants & Bars",
-                        "link": "industries/restaurants-bars"
+                        "link": "industries/music-for-restaurants-and-bars"
                     },
                     {
                         "label": "Retail Stores",
-                        "link": "industries/retail-stores"
+                        "link": "industries/music-for-retail-stores"
                     },
                     {
                         "label": "Wellness & Gyms",
-                        "link": "industries/wellness-gyms"
+                        "link": "industries/music-for-wellness-and-gyms"
                     },
                     {
                         "label": "Events & Experiences",
-                        "link": "industries/events-experiences"
+                        "link": "industries/music-for-events-and-experiences"
                     },
                     {
                         "label": "Art, Museums & Fashion",
-                        "link": "industries/art-museums-fashion"
+                        "link": "industries/music-for-art-museums-and-fashion"
                     }
                 ]
             },
@@ -1706,6 +1706,946 @@
             "title": "Still Have Questions? Let's Talk",
             "subtitle": "Let's talk about how we can elevate your brand's sound.",
             "button": "Contact us"
+        }
+    },
+    "signature_playlists": {
+        "meta": {
+            "title": "Signature Playlists | SensEar",
+            "description": "Expert music curation for venues that want to stand out. We create playlists that reflect your brand identity."
+        },
+        "hero": {
+            "title": "Signature Playlists:",
+            "subtitle": "Custom music for your space.",
+            "description": "Curated playlists that follow your brand, space & daily rhythm."
+        },
+        "intro": {
+            "title": "Playlist creation for unique venue atmosphere",
+            "p1": "We create <strong><em>playlists</em></strong> in tune with your brand's <strong><em>character</em></strong> and space's <strong><em>rhythm</em></strong>, to balance <strong><em>energy</em></strong> for both guests & staff.",
+            "p2": "Your sound <strong><em>becomes intentional</em></strong> & <strong><em>felt</em></strong> in the atmosphere, not lost in the background."
+        },
+        "what_we_do": {
+            "title": "What we do",
+            "items": [
+                {
+                    "title": "Your own, unique sound",
+                    "description": "Rare tracks you won't hear on generic playlists, chosen especially for you."
+                },
+                {
+                    "title": "Amplify your brand",
+                    "description": "Music designed to echo your aesthetics & tell your brand story"
+                },
+                {
+                    "title": "Match your space",
+                    "description": "Tracks arranged to follow your venue's flow, concept & guest profiles."
+                },
+                {
+                    "title": "Keep your vibe fresh",
+                    "description": "Regular updates that keep your sound exciting & recognizable."
+                },
+                {
+                    "title": "Total control & support",
+                    "description": "Clear rules, central management & direct access to us when needed."
+                }
+            ]
+        },
+        "perfect_for": {
+            "title": "Perfect for",
+            "items": [
+                {
+                    "title": "Hotels & Resorts",
+                    "description": "that need smooth shifts throughout the day.",
+                    "link": "industries/music-for-hotels-and-resorts"
+                },
+                {
+                    "title": "Restaurants & Bars",
+                    "description": "where atmosphere is a core part of the experience.",
+                    "link": "industries/music-for-restaurants-and-bars"
+                },
+                {
+                    "title": "Retail stores",
+                    "description": "that want a soundtrack to fit their visual story.",
+                    "link": "industries/music-for-retail-stores"
+                },
+                {
+                    "title": "Wellness spaces",
+                    "description": "to support treatments or training sessions.",
+                    "link": "industries/music-for-wellness-and-gyms"
+                },
+                {
+                    "title": "Art & Culture spaces",
+                    "description": "that need engaging but unobtrusive sound.",
+                    "link": "industries/music-for-art-museums-and-fashion"
+                }
+            ]
+        },
+        "licensed": {
+            "title": "Licensed for business use",
+            "items": [
+                {
+                    "title": "On-brand, but also legal playlists",
+                    "description": "We provide music cleared for professional use which offers you an extra ease of mind."
+                }
+            ]
+        },
+        "cta": {
+            "title": "Let us craft your signature sound",
+            "description": "Need a perfect soundscape that reflects your brand and captivates your guests?",
+            "button": "Create your signature sound",
+            "explore": "Explore how our",
+            "sonic_identity": "Sonic Identity",
+            "audio_upgrades": "Audio Upgrades",
+            "build_on": "build on your playlists."
+        }
+    },
+    "event_soundtracks": {
+        "meta": {
+            "title": "Event Soundtracks | SensEar",
+            "description": "Expert music curation for events. We create soundtracks that follow the flow of the event."
+        },
+        "hero": {
+            "title": "Event Soundtracks:",
+            "subtitle": "Music timed to your event's flow.",
+            "description": "Soundtracks designed to support each phase, from arrival to finale."
+        },
+        "intro": {
+            "title": "Music that moves<br />with your event's timeline",
+            "p1": "We design soundtracks to <strong><em>follow your event's plan</em></strong>, so energy always <strong><em>matches</em></strong> the moment.",
+            "p2": "Music <strong><em>carries the event forward</em></strong>, turning interactions into something guests <strong><em>enjoy & remember</em></strong>."
+        },
+        "what_we_do": {
+            "title": "What we do",
+            "items": [
+                {
+                    "title": "Follow your event timeline",
+                    "description": "Custom multi-part music themes that match your event's sequence & happenings."
+                },
+                {
+                    "title": "Playlists, DJ sets or both",
+                    "description": "Music that fits your concept and audience, delivered as you need it."
+                },
+                {
+                    "title": "Total sound confidence",
+                    "description": "AV direction, sound checks, and playback management so nothing is left to chance."
+                },
+                {
+                    "title": "Optional venue audit",
+                    "description": "Inspection of your space for coverage & clarity issues or upgrade needs."
+                }
+            ]
+        },
+        "perfect_for": {
+            "title": "Perfect for",
+            "items": [
+                {
+                    "title": "Hotels & Resorts",
+                    "description": "hosting launches, weddings, or signature dinners.",
+                    "link": "industries/music-for-hotels-and-resorts"
+                },
+                {
+                    "title": "Event Organisers & Agencies",
+                    "description": "creating immersive branded experiences.",
+                    "link": "industries/music-for-events-and-experiences"
+                },
+                {
+                    "title": "Private Chefs & Hosts",
+                    "description": "offering ceremonial or intimate dining.",
+                    "link": "industries/music-for-restaurants-and-bars"
+                },
+                {
+                    "title": "Cultural Venues & Galleries",
+                    "description": "staging talks, previews or exhibition openings.",
+                    "link": "industries/music-for-art-museums-and-fashion"
+                },
+                {
+                    "title": "Brands",
+                    "description": "that want music to shape how guests feel, share & remember.",
+                    "link": "blog"
+                }
+            ]
+        },
+        "staging": {
+            "title": "Professionally managed staging",
+            "items": [
+                {
+                    "title": "Creative, but also precise",
+                    "description": "We manage or supervise scheduling, sound checks and live adjustments so key moments land as planned and you focus on hosting."
+                }
+            ]
+        },
+        "cta": {
+            "title": "Let us design your event's sonic journey",
+            "description": "Need a soundtrack that feels as curated as everything else?",
+            "button": "Book your event consultation",
+            "explore": "Explore how our",
+            "signature_playlists": "Signature Playlists",
+            "audio_upgrades": "Audio Upgrades",
+            "support": "support event experiences."
+        }
+    },
+    "sonic_identity": {
+        "meta": {
+            "title": "Sonic Identity | SensEar",
+            "description": "Strategic sonic identity design for brands. We create consistent sound across all locations and communication channels."
+        },
+        "hero": {
+            "title": "Sonic Identity:",
+            "subtitle": "Defining how your brand sounds.",
+            "description": "A practical audio blueprint that keeps your label distinct & consistent."
+        },
+        "intro": {
+            "title": "Sonic action plan<br />for consistent brand identity",
+            "p1": "We translate your brand vision into a <strong><em>practical audio guide</em></strong> that works for <strong><em>every space & channel</em></strong>.",
+            "p2": "Your firm gains a <strong><em>clear sonic identity</em></strong>, consistent across <strong><em>spaces</em></strong>, <strong><em>social media</em></strong> & <strong><em>ads</em></strong>."
+        },
+        "what_we_do": {
+            "title": "What we do",
+            "subtitle": "Brand audio strategy and implementation",
+            "items": [
+                {
+                    "title": "Sonic DNA workshop",
+                    "description": "Guided session exploring brand values, guest profiles, and emotional targets through mood boards and reference tracks."
+                },
+                {
+                    "title": "Space and journey map",
+                    "description": "Clear plan for how each space and time of day should sound, supporting arrivals, service flow, and key touchpoints."
+                },
+                {
+                    "title": "Guidelines for teams",
+                    "description": "Concise sonic framework that keeps music choices on brand across internal teams, agencies, and partners."
+                },
+                {
+                    "title": "Implementation roadmap",
+                    "description": "Practical path from current sound to new identity, aligned with your brand calendar and rollout timeline."
+                }
+            ]
+        },
+        "perfect_for": {
+            "title": "Perfect for",
+            "items": [
+                {
+                    "title": "Hotel & Resort groups",
+                    "description": "needing one recognizable sound across properties.",
+                    "link": "industries/music-for-hotels-and-resorts"
+                },
+                {
+                    "title": "Restaurant, Bar & Retail brands",
+                    "description": "growing, rebranding, or opening new locations.",
+                    "link": "industries/music-for-restaurants-and-bars"
+                },
+                {
+                    "title": "Wellness & Cultural spaces",
+                    "description": "wanting a defined sonic personality.",
+                    "link": "industries/music-for-wellness-and-gyms"
+                },
+                {
+                    "title": "Fashion & Lifestyle brands",
+                    "description": "with strong visual identity but undefined sound.",
+                    "link": "industries/music-for-art-museums-and-fashion"
+                },
+                {
+                    "title": "Marketing agencies",
+                    "description": "with brand vision but no in-house audio expertise.",
+                    "link": ""
+                }
+            ]
+        },
+        "identity": {
+            "title": "Strategically defined identity",
+            "items": [
+                {
+                    "title": "Coherent, but also flexible",
+                    "description": "Your brand sounds recognizable at all locations & media while respecting what makes each space unique."
+                }
+            ]
+        },
+        "cta": {
+            "title": "Let us define your brand's sonic identity",
+            "description": "Require a sound strategy as considered as your design?",
+            "button": "Start your sonic identity",
+            "explore": "Explore how our",
+            "signature_playlists": "Signature Playlists",
+            "audio_upgrades": "Audio Upgrades",
+            "bring_to_life": "bring your strategy to life."
+        }
+    },
+    "audio_upgrades": {
+        "meta": {
+            "title": "Audio Upgrades | SensEar",
+            "description": "Expert acoustic solutions for venues. We optimize sound quality and clarity."
+        },
+        "hero": {
+            "title": "Audio Upgrades:",
+            "subtitle": "Clear, balanced sound for your space.",
+            "description": "Optimization designed to support atmosphere & conversations."
+        },
+        "intro": {
+            "title": "Audio optimization<br />for an inviting atmosphere",
+            "p1": "We <strong><em>refine</em></strong> your audio system, to achieve <strong><em>clear, balanced sound</em></strong> allover your space.",
+            "p2": "Optimised audio <strong><em>elevates your design</em></strong>, letting people <strong><em>enjoy</em></strong> their <strong><em>conversations</em></strong> & <strong><em>music</em></strong> comfortably."
+        },
+        "what_we_do": {
+            "title": "What we do",
+            "subtitle": "Professional audio assessment and implementation",
+            "items": [
+                {
+                    "title": "On-site acoustic assessment",
+                    "description": "We walk the space, listen from key seats and test your setup to identify gaps & issues."
+                },
+                {
+                    "title": "Tailored AV proposals",
+                    "description": "Clear plan for speakers, zones and control that fits your layout, budget & aesthetic."
+                },
+                {
+                    "title": "Coordinated installation",
+                    "description": "We manage equipment sourcing & installation with AV partners, so you avoid multiple suppliers."
+                },
+                {
+                    "title": "System tuning & training",
+                    "description": "Calibration under live conditions plus guidance, so your team runs it confidently day to day."
+                }
+            ]
+        },
+        "perfect_for": {
+            "title": "Perfect for",
+            "items": [
+                {
+                    "title": "Restaurants & Bars",
+                    "description": "where guests struggle to talk over music.",
+                    "link": "industries/music-for-restaurants-and-bars"
+                },
+                {
+                    "title": "Hotels & Resorts",
+                    "description": "with lobbies, pools or dining areas that sound uneven.",
+                    "link": "industries/music-for-hotels-and-resorts"
+                },
+                {
+                    "title": "Retail Stores",
+                    "description": "with dead corners & overpowering spots near speakers.",
+                    "link": "industries/music-for-retail-stores"
+                },
+                {
+                    "title": "Wellness Centers",
+                    "description": "needing clear sound for classes without harshness.",
+                    "link": "industries/music-for-wellness-and-gyms"
+                },
+                {
+                    "title": "Venues",
+                    "description": "that invested in interiors but feel sound lowers the experience.",
+                    "link": ""
+                }
+            ]
+        },
+        "clarity": {
+            "title": "Designed for clarity",
+            "items": [
+                {
+                    "title": "Balanced coverage, not just volume",
+                    "description": "Guests talk comfortably, move naturally through spaces & remember atmosphere instead of loudness."
+                }
+            ]
+        },
+        "cta": {
+            "title": "Let us upgrade your venue's sound",
+            "description": "Need audio that matches your design quality?",
+            "button": "Book your audio assessment",
+            "pair_with": "Pair with our",
+            "signature_playlists": "Signature Playlists",
+            "sonic_identity": "Sonic Identity",
+            "complete_identity": "for complete audio identity."
+        }
+    },
+    "hotels_resorts": {
+        "meta": {
+            "title": "Music for Hotels & Resorts | Sensear",
+            "description": "Music for Hotels & Resorts designed to build atmosphere across spaces and time of day, with soundscapes guests feel & remember."
+        },
+        "hero": {
+            "title": "Music for Hotels & Resorts:",
+            "subtitle": "Soundscapes for every hour and space",
+            "description": "Targeted sound that complements service, design, and the mood of the space.",
+            "image": "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/7aec5d264_seedream-40_professional_photo_of_upscale_the_image_but_make_sure_it_still_looks_realistic_p-1.jpg",
+            "image_alt": "Luxury hotel resort with curated music ambiance"
+        },
+        "intro": {
+            "title": "Music for<br />the entire guest journey",
+            "p1": "Your hotel's atmosphere becomes <strong><em>felt</em></strong> before the interior design does.",
+            "p2": "Our soundscapes <strong><em>enrich every moment</em></strong> of the day across all spaces and become an integral part of the <a href=\"/en/industries/music-for-hotels-and-resorts\">hospitality experience</a>."
+        },
+        "what_we_do": {
+            "title": "What we offer",
+            "subtitle": "Design and implementation of music for hotels",
+            "items": [
+                {
+                    "title": "24-hour sound design",
+                    "description": "Music that changes rhythm and energy throughout the day."
+                },
+                {
+                    "title": "Multi-zone coherence",
+                    "description": "Distinct musical themes for lobby, restaurants, bar, spa, and pool, tied together with <a href=\"/en/blog/how-top-hospitality-brands-design-sound\">one unified sonic identity</a>."
+                },
+                {
+                    "title": "Sound aligned with brand",
+                    "description": "Music selections exclusively for your hotel, with character and consistency."
+                },
+                {
+                    "title": "Central management",
+                    "description": "Your team focuses on hospitality, while we handle music, updates, and proper licensing."
+                }
+            ],
+            "image": "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/4bc198c23_BHA1.png"
+        },
+        "ideal_for": {
+            "title": "Ideal for",
+            "items": [
+                {
+                    "title": "Boutique hotels",
+                    "description": "Where atmosphere drives reputation and recommendations."
+                },
+                {
+                    "title": "Luxury resorts",
+                    "description": "With multiple spaces needing a unified experience."
+                },
+                {
+                    "title": "Business hotels",
+                    "description": "With transitions from focus to social."
+                },
+                {
+                    "title": "Hotel groups",
+                    "description": "Needing consistent sound across all properties."
+                },
+                {
+                    "title": "Event venues",
+                    "description": "For weddings, retreats, and conferences."
+                }
+            ],
+            "image": "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/b32503d17_wi-cltcw-westin-charlotte-dogwood-13256_Classic-Hor1.jpg"
+        },
+        "how_we_help": {
+            "title": "How we help",
+            "items": [
+                {
+                    "title": "Different energy for every hour & space",
+                    "description": "We design music that follows the hotel's rhythm throughout the day."
+                },
+                {
+                    "title": "Zones with character, one unified identity",
+                    "description": "We create distinct musical themes connected by a recognizable sonic identity, rather than random playlists."
+                },
+                {
+                    "title": "Music that fits the brand",
+                    "description": "We bring your brand to life with music selections that \"fit\" the space and service, sounding uniquely yours."
+                },
+                {
+                    "title": "Central control instead of ad-hoc DJing",
+                    "description": "We handle music playback and professional licensing, so your team focuses on guests, not volume or tracks."
+                }
+            ],
+            "image": "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/7ba13d3db_95c488ed9_silver-ear-ear-ring.jpg",
+            "cta_title": "Hear the industry in action",
+            "cta_description": "Read examples and hear samples from hospitality venues.",
+            "cta_button": "View Examples",
+            "cta_link": "case-studies"
+        },
+        "cta": {
+            "title": "Upgrade your hotel's atmosphere",
+            "description": "Let's see how music can support your guest experience and overall hotel image.",
+            "button": "Book a music assessment",
+            "see_also": "See also how",
+            "signature_playlists": "Signature Playlists",
+            "and": "and",
+            "sonic_strategy": "Sonic Identity Design",
+            "work_for": "work for hotels & resorts."
+        }
+    },
+    "restaurants_bars": {
+        "meta": {
+            "title": "Music for Restaurants & Bars | SensEar",
+            "description": "Music for Restaurants and Bars that blends naturally with food and service, supporting dining flow, conversation and the overall setting."
+        },
+        "hero": {
+            "title": "Music for Restaurants & Bars:",
+            "subtitle": "Designed to blend with food and service",
+            "description": "Music selections that complement flavor, timing, and environment.",
+            "image": "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/e18536343_seedream-40_professional_photo_of_upscale_the_image_but_make_sure_it_still_looks_realistic_1-1.jpg",
+            "image_alt": "Elegant restaurant interior with curated music atmosphere"
+        },
+        "intro": {
+            "title": "Curated atmosphere<br />for every service moment",
+            "p1": "Music <strong><em>shapes the dining experience</em></strong> as much as decor or lighting.",
+            "p2": "Our sound <strong><em>follows the menu and service rhythm</em></strong> and becomes <strong><em>part of the enjoyment</em></strong>, without distracting from food or conversation."
+        },
+        "what_we_do": {
+            "title": "What we do",
+            "subtitle": "Design and implementation of music for restaurants & bars",
+            "items": [
+                {
+                    "title": "Playlists based on service flow",
+                    "description": "Music designed from opening to closing, with energy that follows the kitchen and dining room rhythm."
+                },
+                {
+                    "title": "Tempo & volume adjustment",
+                    "description": "Sound levels that allow comfortable conversation, smooth staff movement, and steady, welcoming energy."
+                },
+                {
+                    "title": "Music selections aligned with brand",
+                    "description": "Playlists specifically for your concept, supporting the experience you want to be remembered for."
+                },
+                {
+                    "title": "Frequent updates",
+                    "description": "Regular changes that keep music fresh for regular customers and staff, maintaining your character."
+                }
+            ],
+            "image": "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/45c5bf8ee_0518d03f51766be5a36a8fa5df900697.jpg"
+        },
+        "ideal_for": {
+            "title": "Ideal for restaurant & bar music",
+            "items": [
+                {
+                    "title": "Casual & fine dining restaurants",
+                    "description": "That rely on atmosphere and repeat visitors."
+                },
+                {
+                    "title": "Cocktail & wine bars",
+                    "description": "That need the right mood from aperitivo to last order."
+                },
+                {
+                    "title": "Hotel restaurants",
+                    "description": "That serve their guests, locals, and private events."
+                },
+                {
+                    "title": "Groups with multiple venues",
+                    "description": "That want consistent sonic identity across all locations."
+                }
+            ],
+            "image": "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/74f06e87c_dbf1c8542_c383f86fd572aa6ee623a8fd6ab443df.jpg"
+        },
+        "how_we_help": {
+            "title": "How we help",
+            "items": [
+                {
+                    "title": "Build energy on quiet nights",
+                    "description": "We create atmosphere where energy comes from sound, not just guest count."
+                },
+                {
+                    "title": "Guide rhythm and orders naturally",
+                    "description": "We adjust sound so the next drink or dessert comes at the right moment."
+                },
+                {
+                    "title": "Match your concept perfectly",
+                    "description": "Music, space, and service tell the same story, so the restaurant sounds as authentic as its cuisine."
+                },
+                {
+                    "title": "Remove playlist friction",
+                    "description": "We provide the music, you set the rules, and staff focuses on guests, not track selection."
+                }
+            ],
+            "image": "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/bf81c0608_f73e72546f5644a803c4dd204f0d7de1.jpg",
+            "cta_title": "Hear the industry in action",
+            "cta_description": "Read client stories and hear samples from their playlists.",
+            "cta_button": "View Examples",
+            "cta_link": "case-studies"
+        },
+        "cta": {
+            "title": "Upgrade your restaurant's atmosphere",
+            "description": "Need better sound for stronger nights? We assess your current sound, service flow, and concept, and recommend a customized approach.",
+            "button": "Book a music consultation",
+            "see_also": "See how",
+            "signature_playlists": "Signature Playlists",
+            "and": "and",
+            "audio_upgrades": "Audio Upgrades",
+            "work_for": "work for restaurants & bars."
+        }
+    },
+    "retail_stores": {
+        "meta": {
+            "title": "Music for Retail Stores | SensEar",
+            "description": "Music for retail stores shaped to welcome customers, support browsing and reinforce brand image without distracting from the shopping experience."
+        },
+        "hero": {
+            "title": "Music for Retail Stores:",
+            "subtitle": "Designed to welcome and inspire discovery",
+            "description": "Curated rhythm to support store browsing and brand image.",
+            "image": "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/aa39fb29d_ignan-travel-thesquare-5-2048x1328-1-1.jpg",
+            "image_alt": "Modern retail store interior with curated music atmosphere"
+        },
+        "intro": {
+            "title": "Music that inspires<br />the shopping journey",
+            "p1": "Music in your store <strong><em>affects dwell time</em></strong>, what visitors notice, and whether they make a purchase.",
+            "p2": "Our music selections <strong><em>move elegantly</em></strong> with the store's rhythm and shape how customers <strong><em>perceive your brand</em></strong>."
+        },
+        "what_we_do": {
+            "title": "What we do",
+            "subtitle": "Strategy and implementation of music for retail stores",
+            "items": [
+                {
+                    "title": "Playlists based on customer journey",
+                    "description": "Music designed for each store area, supporting natural browsing and decision-making."
+                },
+                {
+                    "title": "Tempo and energy adjustment",
+                    "description": "Sound that relaxes and activates, allowing customers to explore without rush."
+                },
+                {
+                    "title": "Music selections aligned with brand",
+                    "description": "Sound that complements your market position, visuals, and audience profile."
+                },
+                {
+                    "title": "Seasonal updates",
+                    "description": "Playlists that evolve with collections, seasons, and promotional periods, maintaining your character."
+                }
+            ],
+            "image": "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/989688cc0_fea79f153_e416ab4395ea12d490e85d406ce8fcc3.jpg"
+        },
+        "ideal_for": {
+            "title": "Ideal for retail music",
+            "items": [
+                {
+                    "title": "Fashion & lifestyle boutiques",
+                    "description": "That rely on discovery and curation."
+                },
+                {
+                    "title": "Flagship stores",
+                    "description": "Needing distinctive atmosphere across multiple levels."
+                },
+                {
+                    "title": "Brands with multiple stores",
+                    "description": "That want consistent sound with local character."
+                },
+                {
+                    "title": "Concept & editorial spaces",
+                    "description": "That change themes, art, and installations frequently."
+                },
+                {
+                    "title": "Pop-up stores",
+                    "description": "That need to make a strong impression from day one."
+                }
+            ],
+            "image": "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/1eae8a545_9ce5db84dcf12ffe5ccf1513e7eabca6.jpg"
+        },
+        "how_we_help": {
+            "title": "How we help",
+            "items": [
+                {
+                    "title": "Encourage deeper browsing",
+                    "description": "We create calm, properly tuned atmosphere that extends dwell time and exploration."
+                },
+                {
+                    "title": "Enhance brand recognition",
+                    "description": "Sound, image, and service tell the same, consistent story across all touchpoints."
+                },
+                {
+                    "title": "Guide natural flow",
+                    "description": "Music adapts to time of day, helping movement without pressure."
+                },
+                {
+                    "title": "Remove playlist management",
+                    "description": "Licensed and centrally managed playlists allow the team to focus on customers, not songs."
+                }
+            ],
+            "image": "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/fb3de1cb6_bacc2ba6c_photo-1529480993802-d8e747bb1ecb.jpg"
+        },
+        "cta": {
+            "title": "Upgrade your store's atmosphere",
+            "description": "Want music to truly work for your space? We assess your current sound, map the customer journey, and recommend an approach specifically for your brand.",
+            "button": "Book a music consultation",
+            "see_also": "See how",
+            "signature_playlists": "Signature Playlists",
+            "and": "and",
+            "sonic_strategy": "Sonic Identity Design",
+            "work_for": "work for retail stores."
+        }
+    },
+    "wellness_gyms": {
+        "meta": {
+            "title": "Music for Spas & Gyms | SensEar",
+            "description": "Music for wellness and gyms curated around activity and intensity, supporting focus, calm and movement across treatments and training spaces."
+        },
+        "hero": {
+            "title": "Music for Spas & Gyms:",
+            "subtitle": "Designed around activity and intensity",
+            "description": "Targeted music that enhances focus across all spaces and practices.",
+            "image": "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/1328f3e9a_80sspa-1-1.jpg",
+            "image_alt": "Luxury wellness spa interior with curated ambient music"
+        },
+        "intro": {
+            "title": "Musical themes tuned<br />for body and mind",
+            "p1": "Music in wellness and exercise spaces <strong><em>guides focus, rhythm, and mental state</em></strong> during sessions.",
+            "p2": "Our mixes <strong><em>adapt to each zone and intensity level</em></strong>, helping visitors <strong><em>stay present and active</em></strong>."
+        },
+        "what_we_do": {
+            "title": "What we do",
+            "subtitle": "Strategy and implementation of music for Spas & gyms",
+            "items": [
+                {
+                    "title": "Soundscapes for treatment spaces",
+                    "description": "Ambient and therapeutic sound design that helps visitors relax and stay focused."
+                },
+                {
+                    "title": "Playlists for classes & training",
+                    "description": "Music adapted to energy for yoga, Pilates, strength, and cardio, supporting the natural flow of sessions."
+                },
+                {
+                    "title": "Schedule-based programming",
+                    "description": "Music that follows the daily rhythm: from calm mornings to more energetic afternoons, across all spaces."
+                },
+                {
+                    "title": "Zone-based adjustment",
+                    "description": "Reception, treatment rooms, and exercise spaces each get their own sound, maintaining a common, recognizable identity."
+                }
+            ],
+            "image": "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/f7415e860_MaxFine-Walk-On-Snow-collection-by-FMG-Fabbrica-Marmi-e-Graniti-4-4c.jpg"
+        },
+        "ideal_for": {
+            "title": "Ideal for wellness & gym music",
+            "items": [
+                {
+                    "title": "Spa & Wellness Centers",
+                    "description": "Where sound supports treatment and recovery."
+                },
+                {
+                    "title": "Yoga, Pilates & Meditation Studios",
+                    "description": "That need atmosphere that deepens practice."
+                },
+                {
+                    "title": "Boutique Gyms & Training Studios",
+                    "description": "With focus on experience and member retention."
+                },
+                {
+                    "title": "Wellness Brands with multiple locations",
+                    "description": "That want consistent sound across all properties."
+                },
+                {
+                    "title": "Hybrid spaces",
+                    "description": "That combine treatments and active exercise."
+                }
+            ],
+            "image": "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/1918a9569_73e713e59820cc7915a71ef35c9d5835.jpg"
+        },
+        "how_we_help": {
+            "title": "How we help",
+            "items": [
+                {
+                    "title": "Support deeper sessions",
+                    "description": "Sound design helps relaxation and focus, creating sessions that stay in memory."
+                },
+                {
+                    "title": "Match energy with activity",
+                    "description": "Music rises and falls with intensity, supporting each exercise."
+                },
+                {
+                    "title": "Create cohesive brand atmosphere",
+                    "description": "All spaces and locations sound intentional, from reception to final stretch."
+                },
+                {
+                    "title": "Remove playlist management",
+                    "description": "Staff focuses on clients and members, while we handle music selections, updates, and professional licensing."
+                }
+            ],
+            "image": "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/677b8f7ca_d3ccc7081_24ff3eb97d703e018840f54d6030eb58.jpg"
+        },
+        "cta": {
+            "title": "Upgrade your wellness atmosphere",
+            "description": "Ready to design sound for treatment and training? We assess your current setup, sessions, and member journey, and recommend a customized approach.",
+            "button": "Book a music consultation",
+            "see_also": "See how",
+            "signature_playlists": "Signature Playlists",
+            "and": "and",
+            "sonic_strategy": "Sonic Identity Design",
+            "work_for": "work for wellness & gyms."
+        }
+    },
+    "events_experiences": {
+        "meta": {
+            "title": "Music for Events | SensEar",
+            "description": "Music for events, occasions & experiences planned to fit timing & flow, supporting transitions, pacing & atmosphere from arrival to final moment."
+        },
+        "hero": {
+            "title": "Music for Events:",
+            "subtitle": "Sound that fits the moment",
+            "description": "Curated music aligned with event timing and flow.",
+            "image": "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/aa36ad57a_gemini-25-flash-image_fix_the_woman_s_uppoer_lip_s_right_side_as_it_appears_like_she_was_stung_by_a_be-0.jpg",
+            "image_alt": "Event music curation and entertainment production"
+        },
+        "intro": {
+            "title": "Music with right timing<br />for every event moment",
+            "p1": "At events, music <strong><em>connects every moment</em></strong>, from arrival to finale.",
+            "p2": "Our soundscapes <strong><em>build atmosphere</em></strong> and follow your event's schedule, creating moments guests <strong><em>feel and remember</em></strong>."
+        },
+        "what_we_do": {
+            "title": "What we do",
+            "subtitle": "Strategy and execution of music for events",
+            "items": [
+                {
+                    "title": "Run-of-show sound design",
+                    "description": "Multi-layered soundtracks that match the purpose and energy of each phase, from doors opening to final track."
+                },
+                {
+                    "title": "Narrative-based curation",
+                    "description": "Music that builds anticipation, focus, and emotional peaks, evolving with the event's story."
+                },
+                {
+                    "title": "Technical coordination",
+                    "description": "We handle direction, sound checks, and playback, ensuring proper levels and smooth transitions."
+                },
+                {
+                    "title": "Single point of contact",
+                    "description": "We coordinate with the venue for music and technical matters, reducing coordination pressure."
+                }
+            ],
+            "image": "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/9c0a5ab31_f202eaf0e_410494315_375848528274698_8398961206007741661_ncropped.jpg"
+        },
+        "ideal_for": {
+            "title": "Ideal for event music",
+            "items": [
+                {
+                    "title": "Hotels, Resorts & Restaurants",
+                    "description": "That host presentations, weddings, or signature experiences."
+                },
+                {
+                    "title": "Event Organizers & Agencies",
+                    "description": "That design immersive branded activations."
+                },
+                {
+                    "title": "Private Chefs & Experience Creators",
+                    "description": "That offer ritualistic or more intimate gatherings."
+                },
+                {
+                    "title": "Cultural Venues & Fashion Shows",
+                    "description": "For talks, previews, or runway presentations."
+                },
+                {
+                    "title": "Brands & Individuals",
+                    "description": "Who know that sound defines the experience."
+                }
+            ],
+            "image": "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/857dd2f02_604e3a452_2eb02f6aa00cbdc92f835b115166f9fb.jpg"
+        },
+        "how_we_help": {
+            "title": "How we help",
+            "items": [
+                {
+                    "title": "Guide guests on the journey",
+                    "description": "Music carefully frames each moment, so events are experienced as experiences, not programs."
+                },
+                {
+                    "title": "Maintain energy between parts",
+                    "description": "Transitions between talks, courses, or performances keep the audience engaged, not on their phones."
+                },
+                {
+                    "title": "Reduce stress",
+                    "description": "Our team handles music and technical execution with ready decisions, so you focus on hospitality."
+                }
+            ],
+            "image": "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/b7d509322_princepartyup4-5.jpg"
+        },
+        "cta": {
+            "title": "Upgrade your event's atmosphere",
+            "description": "Ready to design the sound for your next experience? We assess the concept, venue, and schedule, and recommend a customized soundtrack and technical approach.",
+            "button": "Book a music consultation",
+            "see_also": "See how",
+            "event_soundtracks": "Event Soundtracks",
+            "and": "and",
+            "signature_playlists": "Signature Playlists",
+            "support": "support events and experiences."
+        }
+    },
+    "art_museums_fashion": {
+        "meta": {
+            "title": "Music for Art, Museums & Fashion | SensEar",
+            "description": "Music for art galleries, museums & fashion spaces that respects the work, supports focus & complements exhibitions, shows & cultural settings."
+        },
+        "hero": {
+            "title": "Music for Art, Museums & Fashion:",
+            "subtitle": "Respect for the work, shaping the experience",
+            "description": "Subtle sound that complements your curatorial vision.",
+            "image": "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/49f04cdfd_seedream-40_professional_photo_of_Upscale_this_image_keeping_all_natural_contexts_and_detail-0.jpg",
+            "image_alt": "Art gallery with curated music atmosphere and fashion installation"
+        },
+        "intro": {
+            "title": "Subtle precision<br />for galleries & runways",
+            "p1": "In galleries and runways, sound must be <strong><em>present</em></strong> without <strong><em>competing</em></strong>.",
+            "p2": "We create soundscapes that <strong><em>respect each work</em></strong> and <strong><em>gently guide</em></strong> how visitors <strong><em>move and perceive</em></strong> the content."
+        },
+        "what_we_do": {
+            "title": "What we do",
+            "subtitle": "Strategy and implementation of music for cultural spaces",
+            "items": [
+                {
+                    "title": "Acoustically tuned sound",
+                    "description": "Volume levels and speaker placement adapted to space layout, so music sounds natural without echoes."
+                },
+                {
+                    "title": "Exhibition-based curation",
+                    "description": "Each exhibition or collection gets its own sonic identity, integrated into the overall brand framework."
+                },
+                {
+                    "title": "Timed runways",
+                    "description": "Pre-programmed music for fashion shows and presentations, adjusted on-site for steps, transitions, and finale."
+                },
+                {
+                    "title": "Living catalogs",
+                    "description": "Monthly updates that keep interest for visitors and staff, with full commercial licensing compliance."
+                }
+            ],
+            "image": "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/7952e2759_seedream-40_professional_photo_of_Upscale_this_image_keeping_physical_all_natural_contexts_a-1.jpg"
+        },
+        "ideal_for": {
+            "title": "Ideal for art & fashion music",
+            "items": [
+                {
+                    "title": "Galleries & Museums",
+                    "description": "With rotating exhibitions and permanent collections."
+                },
+                {
+                    "title": "Fashion Houses & Showrooms",
+                    "description": "For runways, previews, and presentations."
+                },
+                {
+                    "title": "Cultural Institutions",
+                    "description": "With installations and public programs."
+                },
+                {
+                    "title": "Concept & Editorial Retail",
+                    "description": "With alternating artistic and design interventions."
+                },
+                {
+                    "title": "Pop-ups & Launch Events",
+                    "description": "That need immediate sonic identity."
+                }
+            ],
+            "image": "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/a98f357a2_a_gem_of_a_museum_allows_us_to_enjoy_the_biggest_names_in_contemporary_art-cropped.jpg"
+        },
+        "how_we_help": {
+            "title": "How we help",
+            "items": [
+                {
+                    "title": "Support focus and observation",
+                    "description": "Subtle sound allows visitors to focus on the work without disrupting atmosphere."
+                },
+                {
+                    "title": "Enhance curatorial narrative",
+                    "description": "Music supports the story from exhibition entrance to final point."
+                },
+                {
+                    "title": "Simplify event implementation",
+                    "description": "Proper design and reliable playback allow teams to focus on visitors and creators, not volume or transitions."
+                }
+            ],
+            "image": "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/0460123b3_652b0f6467d21dea21815655a47b712d.jpg",
+            "cta_title": "Hear the industry sound in action",
+            "cta_description": "Read examples and listen to samples from art, museums, and fashion spaces.",
+            "cta_button": "View Examples",
+            "cta_link": "case-studies"
+        },
+        "cta": {
+            "title": "Upgrade your cultural atmosphere",
+            "description": "Ready to design the sound for your space? We assess the venue, program, and audience, and recommend a customized approach for exhibitions and events.",
+            "button": "Book a music consultation",
+            "see_also": "See how",
+            "sonic_strategy": "Sound Strategy",
+            "and": "and",
+            "event_soundtracks": "Event Music Curation",
+            "work_for": "work for art, museums, and fashion."
         }
     }
 }

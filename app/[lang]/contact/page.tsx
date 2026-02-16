@@ -3,8 +3,8 @@ import { ContactForm } from "@/components/ContactForm";
 import type { Locale } from "@/lib/i18n";
 import React from "react";
 import { Metadata } from "next";
-import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import Image from "next/image";
+import { AnimatedButton } from "@/components/AnimatedButton";
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: Locale }> }): Promise<Metadata> {
     const { lang } = await params;
@@ -21,7 +21,6 @@ export default async function Contact({ params }: { params: Promise<{ lang: Loca
 
     return (
         <div className="bg-[#faebe3]">
-            <style dangerouslySetInnerHTML={{ __html: `@keyframes slideUp{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:translateY(0)}}.slide-up-1{animation:slideUp .8s ease-out forwards;opacity:0}.slide-up-2{animation:slideUp .8s ease-out .2s forwards;opacity:0}.slide-up-4{animation:slideUp .8s ease-out .6s forwards;opacity:0}` }} />
             <section className="relative pt-32 pb-32 min-h-[90vh] flex flex-col justify-center overflow-hidden">
                 {/* Background - using inline style for arbitrary external URL */}
                 <div
@@ -49,10 +48,13 @@ export default async function Contact({ params }: { params: Promise<{ lang: Loca
                         <div className="w-full slide-up-4 flex justify-center lg:justify-end">
                             <div className="w-full lg:w-[93.5%]">
                                 <div className="overflow-hidden rounded-2xl shadow-2xl bg-white aspect-square relative">
-                                    <img
+                                    <Image
                                         src={dict.contact.hero.image}
                                         alt={dict.contact.hero.image_alt}
-                                        className="w-full h-full object-cover"
+                                        fill
+                                        sizes="(max-width: 1024px) 100vw, 50vw"
+                                        className="object-cover"
+                                        priority
                                     />
                                 </div>
                             </div>
@@ -64,7 +66,7 @@ export default async function Contact({ params }: { params: Promise<{ lang: Loca
             <section className="py-20 bg-[#faebe3]">
                 <div className="max-w-6xl mx-auto px-6">
                     <div className="text-center mb-12 max-w-4xl mx-auto">
-                        <h2 className="text-[2.7rem] md:text-[3.45rem] font-bold text-black mb-6">
+                        <h2 className="text-[2.7rem] md:text-[3.45rem] font-bold text-black mb-6 leading-heading">
                             {dict.contact.intro.title}
                         </h2>
                         <p className="text-xl text-black/60 font-medium mb-12">
@@ -100,7 +102,15 @@ export default async function Contact({ params }: { params: Promise<{ lang: Loca
                                 </svg>
                             </div>
                             <h3 className="text-xl font-bold text-white mb-2">{dict.contact.contact_info.phone.label}</h3>
-                            <p className="text-white text-lg mb-1">{dict.contact.contact_info.phone.value}</p>
+                            <div className="flex justify-center mb-1">
+                                <Image
+                                    src="/images/brand/contact-phone.png"
+                                    alt="+30 6976994212"
+                                    width={200}
+                                    height={20}
+                                    className="h-5 w-auto"
+                                />
+                            </div>
                             <p className="text-white/60 text-sm">{dict.contact.contact_info.phone.note}</p>
                         </div>
                         {/* Email */}
@@ -111,7 +121,15 @@ export default async function Contact({ params }: { params: Promise<{ lang: Loca
                                 </svg>
                             </div>
                             <h3 className="text-xl font-bold text-white mb-2">{dict.contact.contact_info.email.label}</h3>
-                            <p className="text-white text-lg mb-1">{dict.contact.contact_info.email.value}</p>
+                            <div className="flex justify-center mb-1">
+                                <Image
+                                    src="/images/brand/contact-email.png"
+                                    alt="hello@sensear.music"
+                                    width={200}
+                                    height={20}
+                                    className="h-5 w-auto"
+                                />
+                            </div>
                             <p className="text-white/60 text-sm">{dict.contact.contact_info.email.note}</p>
                         </div>
                         {/* Location */}
@@ -152,13 +170,10 @@ export default async function Contact({ params }: { params: Promise<{ lang: Loca
                             </details>
                         ))}
                     </div>
-                    <div className="text-center mt-10">
-                        <Link href={`/${lang}/faq`}>
-                            <button className="group relative bg-black text-white hover:bg-black/80 px-8 py-4 text-base font-semibold rounded-full transition-all duration-300 inline-flex items-center gap-2">
-                                {dict.contact.faq.read_all_cta}
-                                <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
-                            </button>
-                        </Link>
+                    <div className="flex justify-center mt-10">
+                        <AnimatedButton href="faq" lang={lang}>
+                            {dict.contact.faq.read_all_cta}
+                        </AnimatedButton>
                     </div>
                 </div>
             </section>

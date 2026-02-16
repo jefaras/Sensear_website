@@ -3,5 +3,12 @@
     "css.validate": false,
     "scss.validate": false,
     "less.validate": false,
-    "tailwindCSS.emmetCompletions": true
+    "tailwindCSS.emmetCompletions": true,
+    "terminal.integrated.defaultProfile.windows": "PowerShell",
+    "terminal.integrated.allowChords": false,
+    "npm.enableRunFromFolder": true,
+    "npm.enableScriptExplorer": true,
+    "files.associations": {
+        "*.css": "tailwindcss"
+    }
 }

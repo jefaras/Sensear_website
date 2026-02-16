@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { submitContactForm } from "@/app/actions";
-import { CheckCircle } from "lucide-react";
+import { CheckCircle, ArrowRight } from "lucide-react";
 
 interface ContactFormLabels {
     title: string;
@@ -128,9 +128,25 @@ export function ContactForm({ labels }: ContactFormProps) {
             <button
                 type="submit"
                 disabled={pending}
-                className="w-full bg-black text-white font-bold text-lg py-4 rounded-full hover:bg-black/90 transition-all disabled:opacity-50"
+                className="group relative w-full bg-black text-white font-bold text-lg py-7 rounded-full hover:bg-black/90 transition-all disabled:opacity-50 border-2 border-transparent overflow-hidden flex items-center justify-center"
             >
-                {pending ? labels.submitting : labels.submit}
+                {pending ? (
+                    labels.submitting
+                ) : (
+                    <>
+                        <span className="relative inline-flex items-center mr-2 align-middle">
+                            <img
+                                src="/images/brand/sensear-logo-color.png"
+                                className="w-8 h-8 object-contain opacity-100 scale-100 group-hover:opacity-0 group-hover:scale-0 transition-all duration-300" 
+                                alt="" 
+                            />
+                        </span>
+                        <span className="transition-transform duration-300 group-hover:-translate-x-10 inline-block">
+                            {labels.submit}
+                        </span>
+                        <ArrowRight className="absolute right-6 w-5 h-5 opacity-0 translate-x-4 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0" />
+                    </>
+                )}
             </button>
         </form>
     )

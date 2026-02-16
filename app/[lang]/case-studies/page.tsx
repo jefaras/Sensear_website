@@ -3,7 +3,9 @@ import { Locale } from "@/lib/i18n";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import { Metadata } from "next";
+import { FinalCTA } from "@/components/sections/FinalCTA";
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: Locale }> }): Promise<Metadata> {
     const { lang } = await params;
@@ -27,22 +29,22 @@ export default async function CaseStudies({
     // Order: Beach House, Pelicanos, Yam, Levantis
     const assetMap = [
         {
-            img: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/4246ff146_upscalemedia-transformed.png",
+            img: "/images/case-studies/case-study-beach-house.webp",
             scUrl: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2232613925&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true",
             scLink: "https://soundcloud.com/sensear_music/beach-house-antiparos-morning-playlist-sample"
         },
         {
-            img: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/5b48f2dce_pelicanos-2-5.png",
+            img: "/images/case-studies/case-study-pelicanos.webp",
             scUrl: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%3Atracks%3A2231292320%3Fsecret_token%3Ds-nZKQRmscC5Z&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true",
             scLink: "https://soundcloud.com/sensear_music/pelicanos-sifnos-jazzy-playlist-1/s-nZKQRmscC5Z"
         },
         {
-            img: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/2886fc06f_hyggelig-aftenstemningcropped-pxbee-minitools-enhance-20251212181718.jpg",
+            img: "/images/case-studies/case-study-yam.jpg",
             scUrl: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%3Atracks%3A2231292317%3Fsecret_token%3Ds-un8Lzx2ibpI&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true",
             scLink: "https://soundcloud.com/sensear_music/yam-antiparos-night-playlist-2/s-un8Lzx2ibpI"
         },
         {
-            img: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/d36a8c70d_2e5887651_Levantis1.png",
+            img: "/images/case-studies/case-study-levantis.webp",
             scUrl: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2231959406&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true",
             scLink: "https://soundcloud.com/sensear_music/levantis-sample"
         }
@@ -67,7 +69,7 @@ export default async function CaseStudies({
                 <div
                     className="absolute inset-0 z-0"
                     style={{
-                        backgroundImage: "url('https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/178049824_warmsilverfoilsample-Picsart-AiImageEnhancer.jpg')",
+                        backgroundImage: "url('/images/backgrounds/background-texture-warm-silver.jpg')",
                         backgroundSize: 'cover',
                         backgroundPosition: 'center'
                     }}
@@ -91,10 +93,13 @@ export default async function CaseStudies({
                         <div className="w-full slide-up-4 flex justify-center lg:justify-end">
                             <div className="w-full lg:w-[93.5%]">
                                 <div className="overflow-hidden rounded-2xl shadow-2xl bg-white aspect-square relative">
-                                    <img
-                                        src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/d7a77faed_flux-pro-20_photography_of_Upscale_this_image_candid_photography_style-0.jpg"
-                                        alt="Case Studies"
-                                        className="w-full h-full object-cover"
+                                    <Image
+                                        src="/images/case-studies/case-studies-hero.jpg"
+                                        alt="Case Studies showcasing music curation projects"
+                                        fill
+                                        className="object-cover"
+                                        sizes="(max-width: 768px) 100vw, 50vw"
+                                        priority
                                     />
                                 </div>
                             </div>
@@ -135,7 +140,7 @@ export default async function CaseStudies({
                   rgba(255,255,255,0) 55%,
                   #FFF7F2 75%, 
                   #ffffff 100%
-                ), url('https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/178049824_warmsilverfoilsample-Picsart-AiImageEnhancer.jpg')`,
+                ), url('/images/backgrounds/background-texture-warm-silver.jpg')`,
                         backgroundSize: 'cover',
                         backgroundPosition: 'center',
                         backgroundRepeat: 'no-repeat',
@@ -145,7 +150,7 @@ export default async function CaseStudies({
 
                 <div className="max-w-7xl mx-auto px-6 relative z-10">
                     <div className="text-center max-w-4xl mx-auto">
-                        <h2 className="text-[2.7rem] md:text-[3.45rem] font-bold text-black mb-4">
+                        <h2 className="text-[2.7rem] md:text-[3.45rem] font-bold text-black mb-4 leading-heading">
                             {lang === 'el' ? 'Τέσσερις χώροι, τέσσερις διαφορετικές διαδρομές' : 'Four venues, four journeys'}
                         </h2>
                         <p className="text-xl text-black/60 font-medium mb-12">
@@ -163,10 +168,12 @@ export default async function CaseStudies({
                                     {/* Image Column */}
                                     <div className={`${isEven ? 'order-2 lg:order-1' : 'order-2'}`}>
                                         <div className="overflow-hidden rounded-xl shadow-lg bg-white relative aspect-[3/4]">
-                                            <img
+                                            <Image
                                                 src={assets.img}
                                                 alt={item.title}
-                                                className="w-full h-full object-cover"
+                                                fill
+                                                className="object-cover"
+                                                sizes="(max-width: 768px) 100vw, 50vw"
                                             />
                                         </div>
                                     </div>
@@ -207,36 +214,15 @@ export default async function CaseStudies({
             </section>
 
             {/* Final CTA */}
-            <section className="py-20 bg-gradient-to-r from-[#f5d4c1] via-[#e8c3b0] to-[#f5d4c1] bg-[length:400%_400%] animate-gradient-shift">
-                <div className="w-full mx-auto px-6 text-center">
-                    <h2 className="text-[2.7rem] md:text-[3.45rem] font-bold text-black mb-12">{content.cta.title}</h2>
-                    <p className="text-xl text-black/60 mb-12 max-w-3xl mx-auto">
-                        {content.cta.subtitle}
-                    </p>
-
-                    <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-                        <Link href={`/${lang}/contact`}>
-                            <Button
-                                variant="outline"
-                                className="group w-full sm:w-auto h-14 bg-transparent border-2 border-black text-black hover:bg-black hover:text-white px-8 text-lg font-semibold rounded-full transition-all duration-300"
-                            >
-                                <span className="mr-2">{content.cta.contact}</span>
-                                <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
-                            </Button>
-                        </Link>
-                        <span className="text-black/60 font-medium">{lang === 'el' ? 'ή' : 'or'}</span>
-                        <Link href={`/${lang}/services`}>
-                            <Button
-                                variant="outline"
-                                className="group w-full sm:w-auto h-14 bg-transparent border-2 border-black text-black hover:bg-black hover:text-white px-8 text-lg font-semibold rounded-full transition-all duration-300"
-                            >
-                                <span className="mr-2">{content.cta.services}</span>
-                                <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
-                            </Button>
-                        </Link>
-                    </div>
-                </div>
-            </section>
+            <FinalCTA
+                heading={content.cta.title}
+                text={content.cta.subtitle}
+                buttons={[
+                    { text: content.cta.contact, link: "contact" },
+                    { text: content.cta.services, link: "services" }
+                ]}
+                lang={lang}
+            />
         </div>
     );
 }

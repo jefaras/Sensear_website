@@ -1,13 +1,21 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
-	darkMode: ["class"],
 	content: [
 		"./components/**/*.{js,ts,jsx,tsx,mdx}",
 		"./app/**/*.{js,ts,jsx,tsx,mdx}",
 	],
 	theme: {
 		extend: {
+			lineHeight: {
+				'heading': '1.125',
+				'body': '1.7',
+			},
+			spacing: {
+				'section-sm': '4rem',
+				'section-md': '6rem',
+				'section-lg': '8rem',
+			},
 			colors: {
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
@@ -41,19 +49,12 @@ const config: Config = {
 				},
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
-				ring: 'hsl(var(--ring))',
-				chart: {
-					'1': 'hsl(var(--chart-1))',
-					'2': 'hsl(var(--chart-2))',
-					'3': 'hsl(var(--chart-3))',
-					'4': 'hsl(var(--chart-4))',
-					'5': 'hsl(var(--chart-5))'
-				}
+				ring: 'hsl(var(--ring))'
 			},
 			fontFamily: {
-				sans: ['Satoshi', 'Manrope', 'system-ui', 'sans-serif'],
-				jakarta: ['Plus Jakarta Sans', 'Manrope', 'system-ui', 'sans-serif'],
-				syne: ['Syne', 'system-ui', 'sans-serif'],
+				sans: ['var(--font-outfit)', 'system-ui', 'sans-serif'],
+				heading: ['var(--font-space-grotesk)', 'var(--font-outfit)', 'system-ui', 'sans-serif'],
+				syne: ['var(--font-syne)', 'system-ui', 'sans-serif'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

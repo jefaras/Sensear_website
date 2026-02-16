@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next'
 
 // Base URL - In production this should be your actual domain
-const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000'
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://sensear.music'
 
 export default function sitemap(): MetadataRoute.Sitemap {
     // List of all static routes in the application
@@ -12,7 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         '/services',
         '/services/signature-playlists',
         '/services/event-soundtracks',
-        '/services/sonic-strategy',
+        '/services/sonic-identity',
         '/services/audio-upgrades',
         '/industries',
         '/industries/hotels-resorts',
@@ -24,6 +24,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
         '/case-studies',
         '/blog',
         '/contact',
+        '/privacy',
+        '/terms',
     ]
 
     const locales = ['en', 'el']

@@ -14,11 +14,11 @@ export const AnimatedButton = ({ children, href, lang, variant = "outline", clas
     <Link href={`/${lang}/${href}`}>
         <Button
             variant={variant === "dark" ? "outline" : variant}
-            className={`group/btn relative px-10 py-7 text-lg font-semibold rounded-full transition-all duration-500 overflow-hidden flex items-center ${variant === "outline"
-                ? "bg-transparent border-2 border-black text-black hover:bg-black hover:text-white"
+            className={`group/btn relative px-12 py-7 text-lg font-semibold rounded-full transition-all duration-500 overflow-hidden flex items-center border-2 ${variant === "outline"
+                ? "bg-transparent border-black text-black hover:bg-black hover:text-white"
                 : variant === "dark"
-                    ? "bg-transparent border-2 border-white text-white hover:bg-white hover:text-black"
-                    : "bg-black text-white hover:bg-black/90"
+                    ? "bg-transparent border-white text-white hover:bg-white hover:text-black"
+                    : "bg-black border-transparent text-white hover:bg-black/90"
                 } ${className || ""}`}
         >
             <span className="transition-transform duration-300 group-hover/btn:-translate-x-2 inline-block">

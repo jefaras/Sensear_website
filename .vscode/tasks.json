@@ -1,0 +1,86 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Start Dev Server",
+            "type": "shell",
+            "command": "node",
+            "args": ["scripts/vscode-workspace-handler.js", "start"],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            },
+            "isBackground": true,
+            "problemMatcher": {
+                "owner": "custom",
+                "pattern": {
+                    "regexp": "^$"
+                },
+                "background": {
+                    "activeOnStart": true,
+                    "beginsPattern": ".*",
+                    "endsPattern": "running successfully"
+                }
+            }
+        },
+        {
+            "label": "Stop Dev Server",
+            "type": "shell",
+            "command": "node",
+            "args": ["scripts/vscode-workspace-handler.js", "stop"],
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Dev Server Status",
+            "type": "shell",
+            "command": "node",
+            "args": ["scripts/vscode-workspace-handler.js", "status"],
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Kill All Node Processes",
+            "type": "shell",
+            "command": "taskkill",
+            "args": ["/F", "/IM", "node.exe"],
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Start Dev Server (Direct)",
+            "type": "shell",
+            "command": "npm",
+            "args": ["run", "dev"],
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            },
+            "isBackground": true,
+            "problemMatcher": {
+                "owner": "custom",
+                "pattern": {
+                    "regexp": "^$"
+                },
+                "background": {
+                    "activeOnStart": true,
+                    "beginsPattern": ".*",
+                    "endsPattern": "ready|started|listening"
+                }
+            }
+        }
+    ]
+}

@@ -1,10 +1,10 @@
 import { getDictionary } from "@/lib/dictionary";
 import { Locale } from "@/lib/i18n";
-import { Button } from "@/components/ui/button";
 import { ArrowRight, Check } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { Metadata } from "next";
+import { FinalCTA } from "@/components/sections/FinalCTA";
 
 // Placeholder images - replacing Supabase URLs with placeholders or local assets if available
 // For now, using placeholders or the original URLs if they are public
@@ -33,14 +33,13 @@ export default async function Industries({
 
     return (
         <div className="bg-[#faebe3]">
-            <style dangerouslySetInnerHTML={{ __html: `@keyframes slideUp{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:translateY(0)}}.slide-up-1{animation:slideUp .8s ease-out forwards;opacity:0}.slide-up-2{animation:slideUp .8s ease-out .2s forwards;opacity:0}.slide-up-4{animation:slideUp .8s ease-out .6s forwards;opacity:0}` }} />
             {/* Hero Section */}
             <section className="relative pt-32 pb-32 min-h-[90vh] flex flex-col justify-center overflow-hidden">
                 {/* Background Image Overlay - using inline style for arbitrary external URL from original site */}
                 <div
                     className="absolute inset-0 z-0"
                     style={{
-                        backgroundImage: "url('https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/178049824_warmsilverfoilsample-Picsart-AiImageEnhancer.jpg')",
+                        backgroundImage: "url('/images/backgrounds/background-texture-warm-silver.jpg')",
                         backgroundSize: 'cover',
                         backgroundPosition: 'center'
                     }}
@@ -64,10 +63,13 @@ export default async function Industries({
                         <div className="w-full flex justify-center lg:justify-end slide-up-4">
                             <div className="w-full lg:w-[93.5%]">
                                 <div className="overflow-hidden rounded-2xl shadow-2xl bg-white aspect-square relative">
-                                    <img
-                                        src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/652c5c5b3_a10ba3fc4_-cropped.jpg"
-                                        alt="Industries"
-                                        className="w-full h-full object-cover"
+                                    <Image
+                                        src="/images/industries/industries-hero.jpg"
+                                        alt="Industries we serve with music curation"
+                                        fill
+                                        className="object-cover"
+                                        sizes="(max-width: 768px) 100vw, 50vw"
+                                        priority
                                     />
                                 </div>
                             </div>
@@ -108,7 +110,7 @@ export default async function Industries({
                   rgba(255,255,255,0) 55%,
                   #FFF7F2 75%, 
                   #ffffff 100%
-                ), url('https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/178049824_warmsilverfoilsample-Picsart-AiImageEnhancer.jpg')`,
+                ), url('/images/backgrounds/background-texture-warm-silver.jpg')`,
                         backgroundSize: 'cover',
                         backgroundPosition: 'center',
                         backgroundRepeat: 'no-repeat',
@@ -118,7 +120,7 @@ export default async function Industries({
 
                 <div className="max-w-7xl mx-auto px-6 relative z-10">
                     <div className="text-center max-w-4xl mx-auto">
-                        <h2 className="text-[2.7rem] md:text-[3.45rem] font-bold text-black mb-4">{content.expertise.title}</h2>
+                        <h2 className="text-[2.7rem] md:text-[3.45rem] font-bold text-black mb-4 leading-heading">{content.expertise.title}</h2>
                         <p className="text-xl text-black/60 font-medium mb-12 max-w-3xl mx-auto">{content.expertise.subtitle}</p>
                     </div>
 
@@ -128,18 +130,13 @@ export default async function Industries({
                             <div key={index} className="grid lg:grid-cols-2 gap-12 items-center">
                                 {/* Alternating layout */}
                                 <div className={`order-2 ${index % 2 === 0 ? 'lg:order-1' : ''}`}>
-                                    {/* Placeholder images - logically mapping index to original images loosely or using a generic one for now if distinct URLs aren't easily mapped without an array. 
-                           However, I can map them manually based on the index since the JSON array order is fixed.
-                       */}
-                                    <div className="w-full h-auto rounded-xl shadow-lg overflow-hidden bg-gray-200 aspect-[4/3] relative">
-                                        {/* Manual mapping based on index for now to match original visuals */}
-                                        {index === 0 && <img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/b8b8c94c7_e0dd5f695_13e97d3def8d47a1efe25c37e0f29eb211.jpg" alt={item.title} className="object-cover w-full h-full" />}
-                                        {index === 1 && <img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/361d4fa4c_Marmelo-by-Mitchell-Eades-Issue-18-Feature-The-Local-Project-Image-2-cropped-.jpg" alt={item.title} className="object-cover w-full h-full" />}
-                                        {index === 2 && <img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/e61f3b993_efeae9e53_56bb71da7fa44cbf6f001204format-webpwidth-1440_wWzsf3qJ3dJMkxWN-11.jpg" alt={item.title} className="object-cover w-full h-full" />}
-                                        {index === 3 && <img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/edb073e85_upscalemedia-transformed.jpg" alt={item.title} className="object-cover w-full h-full" />}
-                                        {index === 4 && <img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/ace50e7b5_E_HryzeWYAUw8vR-2CROPPED.jpg" alt={item.title} className="object-cover w-full h-full" />}
-                                        {index === 5 && <img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/e8678d8d0_ec55631fd_204f0aeb3f27e1d66d7e764876f0fa4a11.jpg" alt={item.title} className="object-cover w-full h-full" />}
-                                    </div>
+                                    {/* Images with aspect-[3/4] like Event Soundtracks */}
+                                    {index === 0 && <Image src="/images/industries/industry-restaurants-bars.jpg" alt={item.title} width={600} height={800} className="w-full aspect-[3/4] object-cover rounded-xl shadow-lg" />}
+                                    {index === 1 && <Image src="/images/industries/industry-hotels-resorts.jpg" alt={item.title} width={600} height={800} className="w-full aspect-[3/4] object-cover rounded-xl shadow-lg" />}
+                                    {index === 2 && <Image src="/images/industries/industry-retail-stores.jpg" alt={item.title} width={600} height={800} className="w-full aspect-[3/4] object-cover rounded-xl shadow-lg" />}
+                                    {index === 3 && <Image src="/images/industries/industry-wellness-gyms.jpg" alt={item.title} width={600} height={800} className="w-full aspect-[3/4] object-cover rounded-xl shadow-lg" />}
+                                    {index === 4 && <Image src="/images/industries/industry-events-experiences.jpg" alt={item.title} width={600} height={800} className="w-full aspect-[3/4] object-cover rounded-xl shadow-lg" />}
+                                    {index === 5 && <Image src="/images/industries/industry-art-museums-fashion.jpg" alt={item.title} width={600} height={800} className="w-full aspect-[3/4] object-cover rounded-xl shadow-lg" />}
                                 </div>
                                 <div className={`order-1 ${index % 2 === 0 ? 'lg:order-2' : ''}`}>
                                     <h3 className="text-4xl md:text-[48px] font-bold text-black mb-4">{item.title}</h3>
@@ -153,26 +150,16 @@ export default async function Industries({
                                     </div>
 
                                     <div className="mt-8">
-                                        {/* Assuming the link in JSON corresponds to a page we might likely build or just point to contact/services for now if that page doesn't exist yet? 
-                            The JSON has specific links like 'music-for-hotels-and-resorts'. 
-                            If those pages don't exist yet, we can link to contact with a query param or just # for now. 
-                            But user objective mentioned migrating main pages. 
-                            Let's assume we link to /[lang]/services or similar if specific pages aren't migrated yet, OR keep the link structure.
-                            To be safe and avoid 404s if I haven't made those pages, I will link to this page or Services for now unless I make them.
-                            Wait, the user wants me to migrate pages. I am currently on Industries. 
-                            I'll leave the Link 'to' attribute pointing to the 'link' from JSON, but prepended with /{lang}/.
-                            The user will need to create those pages later or I will if requested.
-                        */}
                                         <Link href={`/${lang}/${item.link}`} aria-label={item.title}>
-                                            <Button
-                                                variant="outline"
-                                                className="group relative bg-transparent border-2 border-black text-black hover:bg-black hover:text-white px-12 py-6 text-lg font-semibold rounded-full transition-all duration-300 overflow-hidden flex items-center"
-                                            >
-                                                <span className="transition-transform duration-300 group-hover:-translate-x-3 inline-block">
+                                            <button className="group relative bg-transparent border-2 border-black text-black hover:bg-black hover:text-white px-8 py-6 text-lg font-semibold rounded-full transition-all duration-300 overflow-hidden flex items-center">
+                                                <span className="relative inline-flex items-center mr-2 align-middle">
+                                                    <Image src="/images/brand/sensear-logo-color.png" width={32} height={32} className="w-8 h-8 object-contain opacity-100 scale-100 group-hover:opacity-0 group-hover:scale-0 transition-all duration-300" alt="" />
+                                                </span>
+                                                <span className="transition-transform duration-300 group-hover:-translate-x-10 inline-block">
                                                     {item.cta}
                                                 </span>
                                                 <ArrowRight className="absolute right-6 w-5 h-5 opacity-0 translate-x-4 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0" />
-                                            </Button>
+                                            </button>
                                         </Link>
                                     </div>
                                 </div>
@@ -194,7 +181,7 @@ export default async function Industries({
                   rgba(255,255,255,0) 55%,
                   #FFF7F2 75%, 
                   #ffffff 100%
-                ), url('https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/178049824_warmsilverfoilsample-Picsart-AiImageEnhancer.jpg')`,
+                ), url('/images/backgrounds/background-texture-warm-silver.jpg')`,
                         backgroundSize: 'cover',
                         backgroundPosition: 'center',
                         backgroundRepeat: 'no-repeat',
@@ -203,16 +190,18 @@ export default async function Industries({
                 />
                 <div className="max-w-7xl mx-auto px-6 relative z-10">
                     <div className="text-center max-w-4xl mx-auto">
-                        <h2 className="text-[2.7rem] md:text-[3.45rem] font-bold text-black mb-4">{content.connect.title}</h2>
+                        <h2 className="text-[2.7rem] md:text-[3.45rem] font-bold text-black mb-4 leading-heading">{content.connect.title}</h2>
                         <p className="text-xl text-black/60 font-medium mb-12 max-w-3xl mx-auto">{content.connect.subtitle}</p>
                     </div>
 
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
                         <div className="order-2 lg:order-1">
                             <div className="overflow-hidden rounded-xl shadow-lg bg-white relative">
-                                <img
-                                    src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/c66f2842d_a6bc0a060_car-21.png"
-                                    alt="Connected worlds"
+                                <Image
+                                    src="/images/industries/industries-connected-worlds.png"
+                                    alt="Connected worlds across hospitality and retail industries"
+                                    width={800}
+                                    height={600}
                                     className="w-full h-auto object-cover"
                                 />
                             </div>
@@ -238,36 +227,15 @@ export default async function Industries({
             </section>
 
             {/* Discover Your Sound Potential */}
-            <section className="py-20 bg-gradient-to-r from-[#f5d4c1] via-[#e8c3b0] to-[#f5d4c1] bg-[length:400%_400%] animate-gradient-shift">
-                <div className="max-w-7xl mx-auto px-6 text-center">
-                    <h2 className="text-[2.7rem] md:text-[3.45rem] font-bold text-black mb-12">{content.cta.title}</h2>
-                    <p className="text-xl text-black/60 mb-12 max-w-3xl mx-auto">
-                        {content.cta.subtitle}
-                    </p>
-
-                    <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-                        <Link href={`/${lang}/contact`}>
-                            <Button
-                                variant="outline"
-                                className="group w-full sm:w-auto h-14 bg-transparent border-2 border-black text-black hover:bg-black hover:text-white px-8 text-lg font-semibold rounded-full transition-all duration-300"
-                            >
-                                <span className="mr-2">{content.cta.contact}</span>
-                                <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
-                            </Button>
-                        </Link>
-
-                        <Link href={`/${lang}/services`}>
-                            <Button
-                                variant="outline"
-                                className="group w-full sm:w-auto h-14 bg-transparent border-2 border-black text-black hover:bg-black hover:text-white px-8 text-lg font-semibold rounded-full transition-all duration-300"
-                            >
-                                <span className="mr-2">{content.cta.services}</span>
-                                <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
-                            </Button>
-                        </Link>
-                    </div>
-                </div>
-            </section>
+            <FinalCTA
+                heading={content.cta.title}
+                text={content.cta.subtitle}
+                buttons={[
+                    { text: content.cta.contact, link: "contact" },
+                    { text: content.cta.services, link: "services" }
+                ]}
+                lang={lang}
+            />
         </div>
     );
 }
