@@ -129,6 +129,47 @@ export default async function RootLayout({
                 {/* Preload critical images for LCP optimization */}
                 <link rel="preload" as="image" href="/images/backgrounds/background-texture-warm-silver.jpg" />
                 <link rel="preload" as="image" href="/images/carousel/carousel-home-interior.jpg" />
+                {/* Critical CSS for above-the-fold content - reduces render blocking */}
+                <style
+                    dangerouslySetInnerHTML={{
+                        __html: `
+                            /* Critical hero section styles */
+                            .bg-\\[\\#faebe3\\]{background-color:#faebe3}
+                            .min-h-\\[90vh\\]{min-height:90vh}
+                            .pt-32{padding-top:8rem}
+                            .pb-32{padding-bottom:8rem}
+                            .slide-up-1{opacity:0;animation:slideUp 0.8s ease-out forwards}
+                            .slide-up-2{opacity:0;animation:slideUp 0.8s ease-out 0.2s forwards}
+                            .slide-up-4{opacity:0;animation:slideUp 0.8s ease-out 0.6s forwards}
+                            @keyframes slideUp{0%{opacity:0;transform:translateY(40px)}to{opacity:1;transform:translateY(0)}}
+                            .text-\\[2\\.2rem\\]{font-size:2.2rem}
+                            .font-extrabold{font-weight:800}
+                            .leading-\\[1\\.1\\]{line-height:1.1}
+                            .text-black{--tw-text-opacity:1;color:rgb(0 0 0/var(--tw-text-opacity,1))}
+                            .mb-6{margin-bottom:1.5rem}
+                            .text-lg{font-size:1.125rem;line-height:1.75rem}
+                            .text-black\\/65{color:#000000a6}
+                            .leading-relaxed{line-height:1.625}
+                            .max-w-xl{max-width:36rem}
+                            .flex{display:flex}
+                            .flex-col{flex-direction:column}
+                            .gap-4{gap:1rem}
+                            .sm\\:flex-row{flex-direction:row}
+                            .w-full{width:100%}
+                            .sm\\:w-auto{width:auto}
+                            .px-10{padding-left:2.5rem;padding-right:2.5rem}
+                            .py-6{padding-top:1.5rem;padding-bottom:1.5rem}
+                            .text-xl{font-size:1.25rem;line-height:1.75rem}
+                            .md\\:text-2xl{font-size:1.5rem;line-height:2rem}
+                            .md\\:text-\\[4rem\\]{font-size:4rem}
+                            .lg\\:text-\\[4\\.8rem\\]{font-size:4.8rem}
+                            .sm\\:text-\\[3\\.2rem\\]{font-size:3.2rem}
+                            @media(min-width:640px){.sm\\:text-\\[3\\.2rem\\]{font-size:3.2rem}.sm\\:flex-row{flex-direction:row}.sm\\:w-auto{width:auto}}
+                            @media(min-width:768px){.md\\:text-2xl{font-size:1.5rem;line-height:2rem}.md\\:text-\\[4rem\\]{font-size:4rem}}
+                            @media(min-width:1024px){.lg\\:text-\\[4\\.8rem\\]{font-size:4.8rem}}
+                        `,
+                    }}
+                />
                 {/* Self-hosted fonts via next/font/google - no external requests needed */}
                 <OrganizationJsonLd />
                 <LocalBusinessJsonLd />

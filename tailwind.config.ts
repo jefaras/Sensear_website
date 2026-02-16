@@ -5,6 +5,10 @@ const config: Config = {
 		"./components/**/*.{js,ts,jsx,tsx,mdx}",
 		"./app/**/*.{js,ts,jsx,tsx,mdx}",
 	],
+	// Enable future optimizations for smaller bundle size
+	future: {
+		hoverOnlyWhenSupported: true, // Reduces CSS by removing hover styles on touch devices
+	},
 	theme: {
 		extend: {
 			lineHeight: {
