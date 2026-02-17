@@ -13,6 +13,16 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Greek locale: use Manrope as primary font since Outfit/Space Grotesk/Syne don't support Greek glyphs */
+html[lang="el"] {
+  font-family: var(--font-manrope), system-ui, sans-serif !important;
+}
+html[lang="el"] .font-heading,
+html[lang="el"] .font-syne,
+html[lang="el"] .font-sans {
+  font-family: var(--font-manrope), system-ui, sans-serif !important;
+}
+
 
 @layer base {
   :root {
