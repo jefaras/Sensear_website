@@ -14,19 +14,19 @@ if (!fs.existsSync(standaloneServerJs)) {
   process.exit(1);
 }
 
-// Copy public/ into standalone directory if it exists and hasn't been copied
+// Always sync public/ into standalone directory to ensure assets are up to date
 const publicSrc = path.join(__dirname, 'public');
 const publicDest = path.join(standaloneDir, 'public');
-if (fs.existsSync(publicSrc) && !fs.existsSync(publicDest)) {
-  console.log('Copying public/ to standalone directory...');
+if (fs.existsSync(publicSrc)) {
+  console.log('Syncing public/ to standalone directory...');
   fs.cpSync(publicSrc, publicDest, { recursive: true });
 }
 
-// Copy .next/static into standalone/.next/static if not already there
+// Always sync .next/static into standalone/.next/static to ensure all build assets (JS bundles, fonts, etc.) are present
 const staticSrc = path.join(__dirname, '.next', 'static');
 const staticDest = path.join(standaloneDir, '.next', 'static');
-if (fs.existsSync(staticSrc) && !fs.existsSync(staticDest)) {
-  console.log('Copying .next/static to standalone directory...');
+if (fs.existsSync(staticSrc)) {
+  console.log('Syncing .next/static to standalone directory...');
   fs.cpSync(staticSrc, staticDest, { recursive: true });
 }
 
