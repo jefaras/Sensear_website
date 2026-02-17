@@ -1,0 +1,17 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/[lang]/layout,_N_T_/[lang]/services/layout,_N_T_/[lang]/services/event-soundtracks/layout,_N_T_/[lang]/services/event-soundtracks/page,_N_T_/el/services/event-soundtracks"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/$d$lang/services/event-soundtracks/__PAGE__",
+    "/$d$lang/services/event-soundtracks",
+    "/$d$lang/services",
+    "/$d$lang",
+    "/_index",
+    "/_head"
+  ]
+}
