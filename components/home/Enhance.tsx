@@ -37,20 +37,17 @@ export default function Enhance({ lang, title, subtitle, items, cta }: EnhancePr
                         <h2 className="text-[2.7rem] md:text-[3.45rem] font-bold text-white mb-6 leading-heading">
                             {title}
                         </h2>
-                        <p className="text-xl text-white/60 font-medium mb-8 leading-relaxed">
+                        <p className="text-xl text-white/60 font-medium mb-12 leading-relaxed">
                             {subtitle}
                         </p>
 
                         {/* Items list */}
                         {items && items.length > 0 && (
-                            <ul className="space-y-4 mb-8">
+                            <ul className="space-y-8 mb-8">
                                 {items.map((item, index) => (
-                                    <li key={index} className="flex items-start gap-3">
-                                        <span className="text-white/80 mt-1">•</span>
-                                        <div>
-                                            <h4 className="text-white font-semibold text-lg">{item.title}</h4>
-                                            <p className="text-white/60 text-base">{item.desc}</p>
-                                        </div>
+                                    <li key={index}>
+                                        <h3 className="text-2xl font-bold text-white mb-1">{item.title}</h3>
+                                        <p className="text-lg text-white/70">{item.desc}</p>
                                     </li>
                                 ))}
                             </ul>

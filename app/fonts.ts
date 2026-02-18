@@ -1,4 +1,4 @@
-import { Outfit, Space_Grotesk, Syne, Manrope } from 'next/font/google';
+import { Outfit, Space_Grotesk, Syne, Manrope, Inter } from 'next/font/google';
 
 // Outfit - Primary font for body text and UI
 // Note: Weight 300 was causing 404 errors, removed from config
@@ -28,15 +28,24 @@ export const syne = Syne({
     preload: false, // Load on demand for special sections
 });
 
-// Manrope - Greek-supporting fallback font with similar geometric sans-serif aesthetic
-// Used as fallback for Greek characters since Outfit/Space Grotesk/Syne don't support Greek
+// Manrope - Greek-supporting fallback font (kept as secondary fallback)
 export const manrope = Manrope({
     subsets: ['latin', 'greek'],
     weight: ['400', '500', '600', '700', '800'],
     variable: '--font-manrope',
     display: 'swap',
+    preload: false,
+});
+
+// Inter - Primary Greek font with geometric sans-serif aesthetic similar to Syne
+// Supports both Latin and Greek with wide weight range, modern geometric letterforms
+export const inter = Inter({
+    subsets: ['latin', 'latin-ext', 'greek'],
+    weight: ['400', '500', '600', '700', '800', '900'],
+    variable: '--font-inter',
+    display: 'swap',
     preload: true,
 });
 
 // Combined font variables for easy application
-export const fontVariables = `${outfit.variable} ${spaceGrotesk.variable} ${syne.variable} ${manrope.variable}`;
+export const fontVariables = `${outfit.variable} ${spaceGrotesk.variable} ${syne.variable} ${manrope.variable} ${inter.variable}`;

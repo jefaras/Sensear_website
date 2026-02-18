@@ -285,11 +285,6 @@ export default async function Services({
             {/* How it works */}
             <section className="py-24 bg-[#faebe3]">
                 <div className="max-w-7xl mx-auto px-6">
-                    <div className="text-center max-w-4xl mx-auto mb-12">
-                        <h2 className="text-[2.7rem] md:text-[3.45rem] font-bold text-black mb-4 leading-heading">{content.delivery.title}</h2>
-                        <p className="text-xl text-black/60 font-medium max-w-3xl mx-auto">{content.delivery.subtitle}</p>
-                    </div>
-
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
                         <div className="order-2 lg:order-1">
                             <Image
@@ -300,15 +295,17 @@ export default async function Services({
                                 className="w-full h-auto rounded-2xl shadow-lg"
                             />
                         </div>
-                        <div className="order-1 lg:order-2">
+                        <div className="order-1 lg:order-2 md:pl-12">
+                            <h2 className="text-[2.7rem] md:text-[3.45rem] font-bold text-black mb-6 leading-heading">{content.delivery.title}</h2>
+                            <p className="text-xl text-black/60 font-medium mb-12 leading-relaxed">{content.delivery.subtitle}</p>
+                            
                             <div className="space-y-8">
                                 {content.delivery.points.map((point, index) => (
-                                    <div key={index} className="mb-6">
-                                        <p className="text-lg md:text-xl text-black/60 leading-relaxed">
-                                            <Link href={`/${lang}/services/${point.link}`} className="font-bold underline decoration-2 underline-offset-4 hover:text-black/70 text-black">
-                                                {point.link_text}
-                                            </Link> <span>{point.text}</span>
-                                        </p>
+                                    <div key={index}>
+                                        <Link href={`/${lang}/services/${point.link}`} className="text-2xl font-bold text-black block mb-1 group w-fit">
+                                            <span className="group-hover:translate-x-1 group-hover:underline transition-transform inline-block decoration-1 underline-offset-4">{point.link_text}</span> <ArrowRight className="inline ml-2 w-5 h-5 opacity-0 group-hover:opacity-100 transition-opacity" />
+                                        </Link>
+                                        <p className="text-lg text-black/70">{point.text}</p>
                                     </div>
                                 ))}
                             </div>

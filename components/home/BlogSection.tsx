@@ -23,7 +23,7 @@ interface BlogSectionProps {
 
 export default function BlogSection({ lang, title, subtitle, articles, read_more, cta }: BlogSectionProps) {
     return (
-        <section className="py-24 bg-white">
+        <section className="py-24" style={{ backgroundImage: "url('/images/backgrounds/background-texture-warm-silver.jpg')", backgroundSize: 'cover', backgroundPosition: 'center' }}>
             <div className="max-w-7xl mx-auto px-6">
                 <div className="text-center mb-12">
                     <h2 className="text-[2.7rem] md:text-[3.45rem] font-bold text-black mb-4 leading-heading">{title}</h2>

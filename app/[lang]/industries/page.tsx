@@ -189,11 +189,6 @@ export default async function Industries({
                     }}
                 />
                 <div className="max-w-7xl mx-auto px-6 relative z-10">
-                    <div className="text-center max-w-4xl mx-auto">
-                        <h2 className="text-[2.7rem] md:text-[3.45rem] font-bold text-black mb-4 leading-heading">{content.connect.title}</h2>
-                        <p className="text-xl text-black/60 font-medium mb-12 max-w-3xl mx-auto">{content.connect.subtitle}</p>
-                    </div>
-
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
                         <div className="order-2 lg:order-1">
                             <div className="overflow-hidden rounded-xl shadow-lg bg-white relative">
@@ -206,7 +201,10 @@ export default async function Industries({
                                 />
                             </div>
                         </div>
-                        <div className="order-1 lg:order-2">
+                        <div className="order-1 lg:order-2 md:pl-12">
+                            <h2 className="text-[2.7rem] md:text-[3.45rem] font-bold text-black mb-6 leading-heading">{content.connect.title}</h2>
+                            <p className="text-xl text-black/60 font-medium mb-12 leading-relaxed">{content.connect.subtitle}</p>
+                            
                             <div className="space-y-4 mb-8">
                                 {content.connect.points.map((point, i) => (
                                     <div key={i} className="flex items-start gap-3">

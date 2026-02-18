@@ -13,14 +13,71 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Greek locale: use Manrope as primary font since Outfit/Space Grotesk/Syne don't support Greek glyphs */
+/* Greek locale: use Inter as primary font — geometric sans-serif with full Greek support */
+/* Note: .font-syne is NOT overridden — "SENSEAR" brand text is Latin-only and should keep Syne */
 html[lang="el"] {
-  font-family: var(--font-manrope), system-ui, sans-serif !important;
+  font-family: var(--font-inter), var(--font-manrope), system-ui, sans-serif !important;
 }
 html[lang="el"] .font-heading,
-html[lang="el"] .font-syne,
 html[lang="el"] .font-sans {
-  font-family: var(--font-manrope), system-ui, sans-serif !important;
+  font-family: var(--font-inter), var(--font-manrope), system-ui, sans-serif !important;
+}
+
+/* Greek H1 styling - reduced font-size to match English appearance */
+/* Inter font appears ~12% larger than Space Grotesk at same font-size */
+html[lang="el"] h1 {
+  letter-spacing: 0;
+  font-size: 1.94rem;
+}
+
+@media (min-width: 640px) {
+  html[lang="el"] h1 {
+    font-size: 2.82rem;
+  }
+}
+
+@media (min-width: 768px) {
+  html[lang="el"] h1 {
+    font-size: 3.52rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  html[lang="el"] h1 {
+    font-size: 4.22rem;
+  }
+}
+
+/* Greek hero subtitle paragraphs - reduced font-size to match English appearance */
+/* Targets the paragraph text directly under H1 in the hero section */
+html[lang="el"] .slide-up-2 p {
+  font-size: 0.99rem;
+  font-weight: 500;
+}
+
+@media (min-width: 640px) {
+  html[lang="el"] .slide-up-2 p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (min-width: 768px) {
+  html[lang="el"] .slide-up-2 p {
+    font-size: 1.32rem;
+  }
+}
+
+/* Greek hero CTA button - reduced font-size to match English appearance */
+/* Inter font appears ~12% larger than Space Grotesk at same font-size */
+/* Also accounts for Greek text being ~48% longer than English */
+html[lang="el"] .slide-up-2 + div button {
+  font-size: 0.95rem;
+}
+
+@media (min-width: 640px) {
+  html[lang="el"] .slide-up-2 + div button {
+    font-size: 1rem;
+  }
 }
 
 
@@ -152,4 +209,191 @@ html[lang="el"] .font-sans {
   animation: scroll-left 30s linear infinite;
   white-space: nowrap;
   width: fit-content;
+}
+
+/* ============================================
+   Greek Language Typography Overrides
+   Inter font appears ~12% larger than Space Grotesk
+   ============================================ */
+
+/* Greek nav bar menu - reduced font-size to match English appearance */
+@layer utilities {
+  html[lang="el"] nav .font-jakarta {
+    font-size: 0.9125rem !important;  /* 14.6px instead of 16px (~9% reduction) */
+    letter-spacing: 0.02em !important;
+  }
+}
+
+/* Greek mobile nav links - reduced font-size for mobile menu */
+@media (max-width: 1023px) {
+  html[lang="el"] nav .font-jakarta {
+    font-size: 1rem !important;  /* 16px instead of 18px for mobile */
+  }
+}
+
+/* ============================================
+   Greek Homepage Typography (Scoped to Homepage)
+   Inter font appears ~12% larger than Space Grotesk
+   Uses CSS custom properties for easy fine-tuning
+   ============================================ */
+
+/* Greek typography scale factor - adjust this to fine-tune all sizes */
+html[lang="el"] {
+  --greek-scale: 0.88;
+}
+
+/* ============================================
+   WhoWeAre Section (bg-black section)
+   ============================================ */
+
+/* WhoWeAre H2: text-[2rem] md:text-[2.8rem] lg:text-[3.45rem] */
+html[lang="el"] .bg-\[\#faebe3\] .bg-black h2 {
+  font-size: calc(2rem * var(--greek-scale));
+  letter-spacing: 0;
+}
+
+@media (min-width: 768px) {
+  html[lang="el"] .bg-\[\#faebe3\] .bg-black h2 {
+    font-size: calc(2.8rem * var(--greek-scale));
+  }
+}
+
+@media (min-width: 1024px) {
+  html[lang="el"] .bg-\[\#faebe3\] .bg-black h2 {
+    font-size: calc(3.45rem * var(--greek-scale));
+  }
+}
+
+/* WhoWeAre main paragraph: text-2xl md:text-3xl lg:text-4xl */
+html[lang="el"] .bg-\[\#faebe3\] .bg-black .text-2xl:first-of-type {
+  font-size: calc(1.5rem * var(--greek-scale));
+}
+
+@media (min-width: 768px) {
+  html[lang="el"] .bg-\[\#faebe3\] .bg-black .text-2xl:first-of-type {
+    font-size: calc(1.875rem * var(--greek-scale));
+  }
+}
+
+@media (min-width: 1024px) {
+  html[lang="el"] .bg-\[\#faebe3\] .bg-black .text-2xl:first-of-type {
+    font-size: calc(2.25rem * var(--greek-scale));
+  }
+}
+
+/* WhoWeAre secondary paragraph: text-xl md:text-2xl lg:text-3xl */
+html[lang="el"] .bg-\[\#faebe3\] .bg-black .text-xl {
+  font-size: calc(1.25rem * var(--greek-scale));
+}
+
+@media (min-width: 768px) {
+  html[lang="el"] .bg-\[\#faebe3\] .bg-black .text-xl {
+    font-size: calc(1.5rem * var(--greek-scale));
+  }
+}
+
+@media (min-width: 1024px) {
+  html[lang="el"] .bg-\[\#faebe3\] .bg-black .text-xl {
+    font-size: calc(1.875rem * var(--greek-scale));
+  }
+}
+
+/* ============================================
+   Services, Expertise, Enhance, TrustedBy, Blog Sections
+   H2: text-[2.7rem] md:text-[3.45rem]
+   ============================================ */
+
+/* Section H2 titles (non-black backgrounds) */
+html[lang="el"] .bg-\[\#faebe3\] section:not(.bg-black) h2 {
+  font-size: calc(2.7rem * var(--greek-scale));
+  letter-spacing: 0;
+}
+
+@media (min-width: 768px) {
+  html[lang="el"] .bg-\[\#faebe3\] section:not(.bg-black) h2 {
+    font-size: calc(3.45rem * var(--greek-scale));
+  }
+}
+
+/* Section subtitles: text-xl */
+html[lang="el"] .bg-\[\#faebe3\] section:not(.bg-black) .text-xl {
+  font-size: calc(1.25rem * var(--greek-scale));
+}
+
+/* ============================================
+   Service/Industry Item Titles
+   text-2xl md:text-3xl (responsive pattern)
+   ============================================ */
+
+html[lang="el"] .bg-\[\#faebe3\] section .text-2xl {
+  font-size: calc(1.5rem * var(--greek-scale));
+}
+
+@media (min-width: 768px) {
+  html[lang="el"] .bg-\[\#faebe3\] section .text-2xl {
+    font-size: calc(1.875rem * var(--greek-scale));
+  }
+}
+
+/* ============================================
+   Service/Industry Item Descriptions
+   text-lg md:text-xl
+   ============================================ */
+
+html[lang="el"] .bg-\[\#faebe3\] section .text-lg {
+  font-size: calc(1.125rem * var(--greek-scale));
+}
+
+@media (min-width: 768px) {
+  html[lang="el"] .bg-\[\#faebe3\] section .text-lg {
+    font-size: calc(1.25rem * var(--greek-scale));
+  }
+}
+
+/* ============================================
+   CTA Buttons in Sections
+   text-lg
+   ============================================ */
+
+html[lang="el"] .bg-\[\#faebe3\] section button {
+  font-size: calc(1.125rem * var(--greek-scale));
+}
+
+/* ============================================
+   Enhance Section (dark background)
+   Item titles: text-lg, descriptions: text-base
+   ============================================ */
+
+html[lang="el"] .bg-\[\#faebe3\] .bg-black h4 {
+  font-size: calc(1.125rem * var(--greek-scale));
+}
+
+html[lang="el"] .bg-\[\#faebe3\] .bg-black .text-base {
+  font-size: calc(1rem * var(--greek-scale));
+}
+
+/* ============================================
+   TrustedBy Section
+   Client names: text-lg, locations: text-sm
+   ============================================ */
+
+html[lang="el"] .bg-\[\#faebe3\] .text-lg.font-semibold {
+  font-size: calc(1.125rem * var(--greek-scale));
+}
+
+html[lang="el"] .bg-\[\#faebe3\] .text-sm {
+  font-size: calc(0.875rem * var(--greek-scale));
+}
+
+/* ============================================
+   Blog Section
+   Article titles: text-xl, tags: text-xs
+   ============================================ */
+
+html[lang="el"] .bg-\[\#faebe3\] .bg-white h3 {
+  font-size: calc(1.25rem * var(--greek-scale));
+}
+
+html[lang="el"] .bg-\[\#faebe3\] .text-xs {
+  font-size: calc(0.75rem * var(--greek-scale));
 }

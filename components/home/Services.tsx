@@ -31,7 +31,7 @@ export default function Services({ lang, title, subtitle, items, cta }: Services
                     <div className="md:order-1 flex flex-col mb-12">
                         {items.map((item, idx) => (
                             <div key={idx} className="mb-8">
-                                <Link href={`/${lang}/${item.link}`} className="text-2xl md:text-3xl font-bold text-black block mb-3 group w-fit">
+                                <Link href={`/${lang}/${item.link}`} className="text-2xl md:text-3xl font-bold text-black block mb-1 group w-fit">
                                     <span className="group-hover:translate-x-1 group-hover:underline transition-transform inline-block decoration-1 underline-offset-4">{item.title}</span> <ArrowRight className="inline ml-2 w-5 h-5 opacity-0 group-hover:opacity-100 transition-opacity" />
                                 </Link>
                                 <p className="text-lg md:text-xl text-black/60 leading-relaxed">
