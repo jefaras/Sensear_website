@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { Metadata } from "next";
-import { FinalCTA } from "@/components/sections/FinalCTA";
+import { NewsletterCTA } from "@/components/sections/NewsletterCTA";
 import Image from "next/image";
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: Locale }> }): Promise<Metadata> {
@@ -112,16 +112,14 @@ export default async function Blog({
                 </div>
 
                 {/* Stay Updated Section */}
-                <FinalCTA
+                <NewsletterCTA
                     heading={lang === 'el' ? 'Μείνετε ενημερωμένοι' : 'Stay Updated'}
                     text={lang === 'el' 
                         ? 'Εγγραφείτε στο newsletter μας για τα τελευταία νέα και συμβουλές μουσικής επιμέλειας.'
                         : 'Subscribe to our newsletter for the latest news and music curation insights.'
                     }
-                    buttons={[
-                        { text: lang === 'el' ? 'Επικοινωνήστε μαζί μας' : 'Get in touch', link: 'contact' },
-                        { text: lang === 'el' ? 'Μάθετε περισσότερα' : 'Learn more', link: 'about' }
-                    ]}
+                    placeholder={lang === 'el' ? 'Το email σας' : 'Your email'}
+                    buttonText={lang === 'el' ? 'Εγγραφή' : 'Subscribe'}
                     lang={lang}
                 />
             </div>

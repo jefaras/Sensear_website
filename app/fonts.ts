@@ -1,4 +1,4 @@
-import { Outfit, Space_Grotesk, Syne, Manrope, Inter } from 'next/font/google';
+import { Outfit, Space_Grotesk, Syne, Manrope, Inter, Commissioner } from 'next/font/google';
 
 // Outfit - Primary font for body text and UI
 // Note: Weight 300 was causing 404 errors, removed from config
@@ -47,5 +47,16 @@ export const inter = Inter({
     preload: true,
 });
 
+// Commissioner - Unified font for both Latin and Greek
+// A versatile sans-serif with excellent Greek support and multiple optical sizes
+// Weights: 100-900 (thin to black), includes variable font
+export const commissioner = Commissioner({
+    subsets: ['latin', 'latin-ext', 'greek', 'cyrillic', 'cyrillic-ext'],
+    weight: ['300', '400', '500', '600', '700', '800'],
+    variable: '--font-commissioner',
+    display: 'swap',
+    preload: true,
+});
+
 // Combined font variables for easy application
-export const fontVariables = `${outfit.variable} ${spaceGrotesk.variable} ${syne.variable} ${manrope.variable} ${inter.variable}`;
+export const fontVariables = `${outfit.variable} ${spaceGrotesk.variable} ${syne.variable} ${manrope.variable} ${inter.variable} ${commissioner.variable}`;

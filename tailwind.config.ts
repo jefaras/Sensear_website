@@ -56,9 +56,10 @@ const config: Config = {
 				ring: 'hsl(var(--ring))'
 			},
 			fontFamily: {
-				sans: ['var(--font-outfit)', 'var(--font-inter)', 'var(--font-manrope)', 'system-ui', 'sans-serif'],
-				heading: ['var(--font-space-grotesk)', 'var(--font-inter)', 'var(--font-manrope)', 'var(--font-outfit)', 'system-ui', 'sans-serif'],
-				syne: ['var(--font-syne)', 'var(--font-inter)', 'var(--font-manrope)', 'system-ui', 'sans-serif'],
+				sans: ['var(--font-commissioner)', 'var(--font-inter)', 'var(--font-manrope)', 'system-ui', 'sans-serif'],
+				heading: ['var(--font-commissioner)', 'var(--font-inter)', 'var(--font-manrope)', 'system-ui', 'sans-serif'],
+				syne: ['var(--font-syne)', 'var(--font-commissioner)', 'var(--font-inter)', 'system-ui', 'sans-serif'],
+				jakarta: ['var(--font-commissioner)', 'var(--font-inter)', 'var(--font-manrope)', 'system-ui', 'sans-serif'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

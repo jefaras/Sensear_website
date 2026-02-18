@@ -5,6 +5,7 @@ import { getDictionary } from "@/lib/dictionary";
 import { i18n, type Locale } from "@/lib/i18n";
 import { OrganizationJsonLd, LocalBusinessJsonLd, WebSiteJsonLd } from "@/components/JsonLd";
 import { fontVariables } from "@/app/fonts";
+import { ScrollToTop } from "@/components/ScrollToTop";
 
 // Dynamic imports for heavy components to reduce initial bundle size
 // Navbar and Footer are loaded client-side after initial render
@@ -184,6 +185,7 @@ export default async function RootLayout({
                     {children}
                 </main>
                 <Footer lang={locale} dict={dict} />
+                <ScrollToTop />
             </body>
         </html>
     );

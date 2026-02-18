@@ -1,7 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Instagram, Facebook, ArrowRight, Mail, Phone } from "lucide-react";
+import { Instagram, Facebook, Mail, Phone } from "lucide-react";
 import { Locale } from "@/lib/i18n";
+import { NewsletterForm } from "@/components/NewsletterForm";
 
 export function Footer({ lang, dict }: { lang: Locale, dict: any }) {
     const footer = dict.footer;
@@ -77,25 +78,12 @@ export function Footer({ lang, dict }: { lang: Locale, dict: any }) {
                         {/* Newsletter */}
                         <div>
                             <h3 className="text-sm font-semibold text-[#faebe3] mb-3 font-jakarta">{footer.newsletter.title}</h3>
-                            <form className="flex gap-2">
-                                <input
-                                    type="email"
-                                    placeholder={footer.newsletter.placeholder}
-                                    className="bg-white/10 border border-white/20 text-white placeholder:text-white/50 flex-1 text-sm h-9 max-w-[180px] rounded-full px-4 focus:outline-none focus:border-white/50"
-                                />
-                                <button
-                                    type="submit"
-                                    className="group relative bg-transparent border-2 border-white text-white hover:bg-white hover:text-black px-8 py-2 text-xs font-semibold rounded-full transition-all duration-300 overflow-hidden h-9 flex items-center"
-                                >
-                                    <span className="relative inline-flex items-center mr-2 align-middle transition-transform duration-300 group-hover:-translate-x-2">
-                                        <Image src="/images/brand/sensear-logo-white.png" width={20} height={20} className="w-5 h-5 object-contain" alt="" />
-                                    </span>
-                                    <span className="transition-transform duration-300 group-hover:-translate-x-2 inline-block">
-                                        {footer.newsletter.button}
-                                    </span>
-                                    <ArrowRight className="absolute right-2 w-3 h-3 opacity-0 translate-x-3 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0 top-1/2 -translate-y-1/2" />
-                                </button>
-                            </form>
+                            <NewsletterForm
+                                placeholder={footer.newsletter.placeholder}
+                                buttonText={footer.newsletter.button}
+                                source="Footer"
+                                variant="footer"
+                            />
                         </div>
                     </div>
 
@@ -153,6 +141,18 @@ export function Footer({ lang, dict }: { lang: Locale, dict: any }) {
                 </div>
             </div>
 
+            {/* Copyright Bar - Above Legal Section */}
+            <div className="border-t border-white/10 relative z-10">
+                <div className="max-w-7xl mx-auto px-6 py-4 flex flex-col sm:flex-row justify-between items-center gap-2 text-xs text-white/40">
+                    <p>{footer.rights}</p>
+                    <div className="flex gap-4">
+                        <Link href={`/${lang}/privacy`} className="hover:text-white transition-colors">{nav.policy.privacy}</Link>
+                        <span className="text-white/20">|</span>
+                        <Link href={`/${lang}/terms`} className="hover:text-white transition-colors">{nav.policy.terms}</Link>
+                    </div>
+                </div>
+            </div>
+
             {/* Legal Section */}
             <div className="border-t border-white/20 relative z-10">
                 <div className="max-w-7xl mx-auto px-6 py-8">
@@ -167,17 +167,6 @@ export function Footer({ lang, dict }: { lang: Locale, dict: any }) {
                 <h2 className="text-[15vw] font-bold text-white text-center font-syne tracking-tight leading-[0.85]">
                     SENSEAR
                 </h2>
-            </div>
-
-            {/* Bottom Bar */}
-            <div className="border-t border-white/10 relative z-10">
-                <div className="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-white/40">
-                    <p>{footer.rights}</p>
-                    <div className="flex gap-6">
-                        <Link href={`/${lang}/privacy`} className="hover:text-white transition-colors">{nav.policy.privacy}</Link>
-                        <Link href={`/${lang}/terms`} className="hover:text-white transition-colors">{nav.policy.terms}</Link>
-                    </div>
-                </div>
             </div>
         </footer>
     );

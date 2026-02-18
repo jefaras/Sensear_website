@@ -124,3 +124,53 @@ export function generateContactEmailHTML(data: {
 </html>
     `.trim();
 }
+
+// Generate newsletter subscription email HTML template
+export function generateNewsletterEmailHTML(data: {
+    email: string;
+    source: string;
+}) {
+    return `
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <style>
+        body { font-family: 'Arial', sans-serif; line-height: 1.6; color: #333; }
+        .container { max-width: 600px; margin: 0 auto; padding: 20px; }
+        .header { background: #000; color: #fff; padding: 20px; text-align: center; }
+        .content { background: #f9f9f9; padding: 30px; border-radius: 8px; margin-top: 20px; }
+        .field { margin-bottom: 20px; }
+        .field-label { font-weight: bold; color: #000; margin-bottom: 5px; }
+        .field-value { color: #555; }
+        .footer { text-align: center; margin-top: 30px; color: #999; font-size: 12px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎵 SENSEAR</h1>
+            <p>New Newsletter Subscription</p>
+        </div>
+        
+        <div class="content">
+            <div class="field">
+                <div class="field-label">📧 Subscriber Email:</div>
+                <div class="field-value"><a href="mailto:${data.email}">${data.email}</a></div>
+            </div>
+            
+            <div class="field">
+                <div class="field-label">📍 Subscription Source:</div>
+                <div class="field-value">${data.source}</div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>This email was sent from the SensEar newsletter subscription form</p>
+            <p>Received at: ${new Date().toLocaleString('en-US', { timeZone: 'Europe/Athens' })} (Athens Time)</p>
+        </div>
+    </div>
+</body>
+</html>
+    `.trim();
+}
