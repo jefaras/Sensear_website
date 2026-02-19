@@ -7,10 +7,7 @@
 /coverage
 
 # next.js
-/.next/*
-# Keep only the standalone build and static assets for Plesk deployment
-!/.next/standalone/
-!/.next/static/
+/.next/
 /out/
 
 # production
@@ -37,3 +34,6 @@ next-env.d.ts
 
 # git-ignore inclusion rule
 .gitignore
+
+# deployment artifacts
+deploy-*.zip
