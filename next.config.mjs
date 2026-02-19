@@ -18,6 +18,7 @@ const nextConfig = {
     },
     
     // Turbopack configuration (Next.js 16 default bundler)
+    // Keep empty config for dev mode, but use --no-turbopack for production builds
     turbopack: {},
     
     // Caching headers for better performance
