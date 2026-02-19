@@ -49,6 +49,9 @@ const nextConfig = {
     experimental: {
         // Enable Lightning CSS for CSS optimization (reduces CSS size by 20-30%)
         optimizeCss: true,
+        // Limit worker threads to prevent process spawn issues on shared hosting
+        workerThreads: false,
+        cpus: 1,
         // Optimize imports from these packages to reduce bundle size
         optimizePackageImports: [
             'lucide-react',
