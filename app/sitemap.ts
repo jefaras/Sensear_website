@@ -5,7 +5,6 @@ const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://sensear.music'
 
 export default function sitemap(): MetadataRoute.Sitemap {
     // List of all static routes in the application
-    // Note: Dynamic routes (like specific blog posts or case studies) should be fetched from your database/source here
     const routes = [
         '', // Home
         '/about',
@@ -15,17 +14,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
         '/services/sonic-identity',
         '/services/audio-upgrades',
         '/industries',
-        '/industries/hotels-resorts',
-        '/industries/restaurants-bars',
-        '/industries/retail-stores',
-        '/industries/wellness-gyms',
-        '/industries/events-experiences',
-        '/industries/art-museums-fashion',
+        '/industries/music-for-hotels-and-resorts',
+        '/industries/music-for-restaurants-and-bars',
+        '/industries/music-for-retail-stores',
+        '/industries/music-for-wellness-and-gyms',
+        '/industries/music-for-events-and-experiences',
+        '/industries/music-for-art-museums-and-fashion',
         '/case-studies',
         '/blog',
         '/contact',
+        '/faq',
         '/privacy',
         '/terms',
+        '/sitemap-page',
     ]
 
     const locales = ['en', 'el']
@@ -37,8 +38,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
             sitemapEntries.push({
                 url: `${BASE_URL}/${locale}${route}`,
                 lastModified: new Date(),
-                changeFrequency: 'weekly',
-                priority: route === '' ? 1 : 0.8,
+                changeFrequency: route === '' ? 'daily' : 'weekly',
+                priority: route === '' ? 1 : route.includes('/services/') || route.includes('/industries/') ? 0.9 : 0.8,
             })
         })
     })
