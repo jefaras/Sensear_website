@@ -49,7 +49,7 @@ export default async function Services({
       `}} />
 
             {/* Hero Section */}
-            <section className="relative pt-32 pb-32 min-h-[90vh] flex flex-col justify-center overflow-hidden">
+            <section className="relative pt-20 sm:pt-24 md:pt-28 lg:pt-24 xl:pt-28 pb-8 min-h-[90vh] flex flex-col justify-center overflow-hidden">
                 {/* Background - using inline style for arbitrary external URL */}
                 <div
                     className="absolute inset-0 z-0"
@@ -76,7 +76,7 @@ export default async function Services({
 
                         {/* Right Column: Square Image */}
                         <div className="w-full slide-up-4 flex justify-center lg:justify-end">
-                            <div className="w-full lg:w-[93.5%]">
+                            <div className="w-full lg:w-[79.5%]">
                                 <div className="overflow-hidden rounded-2xl shadow-2xl bg-white aspect-square relative">
                                     <Image
                                         src="/images/services/services-hero-strategic-music.jpg"
@@ -138,7 +138,17 @@ export default async function Services({
                     {/* Signature Playlists */}
                     <div className="mb-24">
                         <div className="grid lg:grid-cols-2 gap-12 items-center">
-                            <div className="order-1 lg:order-1">
+                            <div className="order-2 lg:order-1">
+                                <Image
+                                    src="/images/services/service-signature-playlists.jpg"
+                                    alt="Signature Playlists service for curated music experiences"
+                                    width={800}
+                                    height={600}
+                                    className="w-full h-auto object-cover rounded-xl shadow-lg"
+                                />
+                            </div>
+
+                            <div className="order-1 lg:order-2">
                                 <h3 className="text-[2.7rem] md:text-[48px] font-bold text-black leading-tight mb-2">
                                     {content.services.playlists.title}
                                 </h3>
@@ -165,33 +175,13 @@ export default async function Services({
                                     </Link>
                                 </div>
                             </div>
-
-                            <div className="order-2 lg:order-2">
-                                <Image
-                                    src="/images/services/service-signature-playlists.jpg"
-                                    alt="Signature Playlists service for curated music experiences"
-                                    width={800}
-                                    height={600}
-                                    className="w-full h-auto object-cover rounded-xl shadow-lg"
-                                />
-                            </div>
                         </div>
                     </div>
 
                     {/* Event Soundtracks */}
                     <div className="mb-24">
                         <div className="grid lg:grid-cols-2 gap-12 items-center">
-                            <div className="order-2 lg:order-1">
-                                <Image
-                                    src="/images/services/service-event-soundtracks.jpg"
-                                    alt="Event Soundtracks service for memorable experiences"
-                                    width={800}
-                                    height={1000}
-                                    className="w-full aspect-[3/4] object-cover rounded-xl shadow-lg"
-                                />
-                            </div>
-
-                            <div className="order-1 lg:order-2">
+                            <div className="order-1 lg:order-1">
                                 <h3 className="text-[2.7rem] md:text-[48px] font-bold text-black leading-tight mb-2">
                                     {content.services.events.title}
                                 </h3>
@@ -217,6 +207,16 @@ export default async function Services({
                                         </button>
                                     </Link>
                                 </div>
+                            </div>
+
+                            <div className="order-2 lg:order-2">
+                                <Image
+                                    src="/images/services/service-event-soundtracks.jpg"
+                                    alt="Event Soundtracks service for memorable experiences"
+                                    width={800}
+                                    height={1000}
+                                    className="w-full aspect-[3/4] object-cover rounded-xl shadow-lg"
+                                />
                             </div>
                         </div>
                     </div>

@@ -27,8 +27,20 @@ export default function Services({ lang, title, subtitle, items, cta }: Services
                 <p className="text-xl text-black/60 font-medium mb-12 text-center max-w-5xl mx-auto">
                     {subtitle}
                 </p>
-                <div className="grid md:grid-cols-[1fr_1.2fr] gap-12 items-center">
-                    <div className="md:order-1 flex flex-col mb-12">
+                <div className="grid md:grid-cols-[1.2fr_1fr] gap-12 items-center">
+                    <div className="md:order-1 block">
+                        <Image
+                            src="/images/homepage/sensear-signature-playlist-service.jpg"
+                            alt="SensEar signature playlist service for hospitality venues"
+                            width={800}
+                            height={600}
+                            loading="lazy"
+                            placeholder="blur"
+                            blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBEQACEQA/ALUABo//2Q=="
+                            className="w-full h-auto object-cover rounded-xl shadow-lg" />
+                    </div>
+
+                    <div className="md:order-2 flex flex-col mb-12">
                         {items.map((item, idx) => (
                             <div key={idx} className="mb-8">
                                 <Link href={`/${lang}/${item.link}`} className="text-2xl md:text-3xl font-bold text-black block mb-1 group w-fit">
@@ -48,18 +60,6 @@ export default function Services({ lang, title, subtitle, items, cta }: Services
                                 <ArrowRight className="absolute right-6 w-5 h-5 opacity-0 translate-x-4 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0" />
                             </button>
                         </Link>
-                    </div>
-
-                    <div className="md:order-2 block">
-                        <Image
-                            src="/images/homepage/sensear-signature-playlist-service.jpg"
-                            alt="SensEar signature playlist service for hospitality venues"
-                            width={800}
-                            height={600}
-                            loading="lazy"
-                            placeholder="blur"
-                            blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBEQACEQA/ALUABo//2Q=="
-                            className="w-full h-auto object-cover rounded-xl shadow-lg" />
                     </div>
                 </div>
             </div>
