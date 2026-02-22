@@ -187,7 +187,9 @@
                 "playlists": "Playlists",
                 "events": "Events",
                 "strategy": "Strategy"
-            }
+            },
+            "temp_title": "We are here for you. Get in touch!",
+            "temp_message": "We would love to hear from you about your project and music needs! Send us an email or call us today. Please include your name, contact details, your venue type (hotel, restaurant, bar, or other) and how we can help you."
         },
         "contact_info": {
             "title": "Contact Information",

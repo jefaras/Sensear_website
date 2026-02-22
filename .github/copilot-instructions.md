@@ -7,6 +7,38 @@ Quick summary
 - Routes are localized under `app/[lang]/*` with locales defined in `lib/i18n.ts` (default `el`, locales `en`/`el`).
 - Translation dictionaries are loaded dynamically in `lib/dictionary.ts` via ESM imports.
 
+CRITICAL: Windows Command Compatibility
+---------------------------------------
+This project runs on **Windows 11** with **PowerShell 7**. NEVER use Unix/Linux commands.
+
+### Forbidden Unix Commands (will fail on Windows):
+- `rm -rf`, `rmdir` (use `rmdir /s /q` or `Remove-Item -Recurse -Force`)
+- `head`, `tail` (use `Get-Content -First N` or `Get-Content -Tail N`)
+- `grep` (use `Select-String` or `findstr`)
+- `cat` (use `Get-Content` or `type`)
+- `sed` (use PowerShell `-replace` operator)
+- `awk` (use PowerShell string manipulation)
+- `find` (use `Get-ChildItem -Recurse` or `dir /s`)
+- `touch` (use `New-Item -Type file` or `type nul >`)
+- `chmod` (use `icacls`)
+- `which` (use `Get-Command` or `where`)
+
+### Correct Windows Commands:
+| Unix | Windows CMD | PowerShell |
+|------|-------------|------------|
+| `rm -rf path` | `rmdir /s /q path` | `Remove-Item -Recurse -Force path` |
+| `cat file` | `type file` | `Get-Content file` |
+| `head -n 10 file` | N/A | `Get-Content file -First 10` |
+| `grep pattern file` | `findstr pattern file` | `Select-String pattern file` |
+| `ls -la` | `dir` | `Get-ChildItem -Force` |
+
+### Cross-platform Alternative (Node.js):
+When in doubt, use Node.js one-liners which work on all platforms:
+```bash
+node -e "require('fs').rmSync('.next', {recursive: true, force: true})"
+node -e "console.log(require('fs').readFileSync('file.txt', 'utf8').split('\\n').slice(0, 10).join('\\n'))"
+```
+
 Key patterns and architecture
 -----------------------------
 - App Router: pages are server components by default. Files that call client hooks include a "use client" pragma (see `components/Navbar.tsx`).

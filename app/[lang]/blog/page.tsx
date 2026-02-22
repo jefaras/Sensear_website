@@ -111,7 +111,8 @@ export default async function Blog({
                     </div>
                 </div>
 
-                {/* Stay Updated Section */}
+                {/* Stay Updated Section - temporarily disabled */}
+                {/*
                 <NewsletterCTA
                     heading={lang === 'el' ? 'Μείνετε ενημερωμένοι' : 'Stay Updated'}
                     text={lang === 'el' 
@@ -122,6 +123,7 @@ export default async function Blog({
                     buttonText={lang === 'el' ? 'Εγγραφή' : 'Subscribe'}
                     lang={lang}
                 />
+                */}
             </div>
         </div>
     );

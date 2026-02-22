@@ -75,7 +75,8 @@ export function Footer({ lang, dict }: { lang: Locale, dict: any }) {
                             </div>
                         </div>
 
-                        {/* Newsletter */}
+                        {/* Newsletter - temporarily disabled */}
+                        {/*
                         <div>
                             <h3 className="text-sm font-semibold text-[#faebe3] mb-3 font-jakarta">{footer.newsletter.title}</h3>
                             <NewsletterForm
@@ -85,6 +86,7 @@ export function Footer({ lang, dict }: { lang: Locale, dict: any }) {
                                 variant="footer"
                             />
                         </div>
+                        */}
                     </div>
 
                     {/* Services */}
