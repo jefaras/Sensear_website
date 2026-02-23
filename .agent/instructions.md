@@ -85,3 +85,39 @@ If unsure about a command, use Node.js one-liners which work cross-platform:
 node -e "require('fs').rmSync('.next', {recursive: true, force: true})"
 node -e "console.log(require('fs').readFileSync('file.txt', 'utf8').split('\n').slice(0, 10).join('\n'))"
 ```
+
+## CRITICAL: Scope Protection
+
+### Before Making ANY Code Changes
+
+1. **Read the plan file completely** - Understand exactly what needs to change
+2. **List files to modify** - Write down ONLY the files specified in the plan
+3. **Check SCOPE.md** - Verify files are not in a protected pattern
+4. **Confirm scope with user** - If any file is protected, ask before modifying
+
+### Protected File Patterns
+
+The following should NEVER be modified unless explicitly requested:
+- `app/[lang]/industries/music-for-*/` - Industry sub-pages
+- `app/[lang]/services/*/` - Service sub-pages
+- `components/home/*.tsx` - Home page components
+- `components/sections/*.tsx` - Shared sections
+
+### During Implementation
+
+- Modify ONLY files listed in the plan
+- Do NOT touch files outside the plan scope
+- Do NOT refactor or reformat unrelated code
+- Make MINIMAL changes - only what is necessary
+
+### After Implementation
+
+- Run `git status --short` to verify only planned files were modified
+- Report all modified files to the user
+- If unintended files were modified, revert immediately
+
+### Common Mistakes to Avoid
+
+1. **Scope creep** - Do not make "improvements" outside the plan
+2. **Pattern matching** - Just because files look similar doesn't mean they should all change
+3. **Assumption** - Never assume a change is needed if not explicitly stated

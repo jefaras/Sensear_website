@@ -48,7 +48,7 @@ export default async function ArtMuseumsFashionPage({ params }: { params: Promis
                     </div></div></div></div>
                 </div></div>
             </section>
-            <section className="bg-black py-20"><div className="max-w-7xl mx-auto px-6"><div className="flex flex-col items-center text-center max-w-5xl mx-auto">
+            <section className="bg-black py-20"><div className="max-w-7xl mx-auto px-6"><div className="flex flex-col items-center text-center">
                 <h2 className="text-[2.7rem] md:text-[3.45rem] font-bold text-white leading-heading mb-12" dangerouslySetInnerHTML={{ __html: t.intro.title }}></h2>
                 <div className="w-full">
                     <p className="text-2xl md:text-3xl lg:text-4xl text-white leading-relaxed mb-6" dangerouslySetInnerHTML={{ __html: t.intro.p1 }}></p>
@@ -63,7 +63,7 @@ export default async function ArtMuseumsFashionPage({ params }: { params: Promis
                             <div key={index}><h3 className="text-2xl font-bold text-black mb-3">{item.title}</h3><p className="text-lg text-black/70">{item.description}</p></div>
                         ))}
                     </div>
-                    <div className="hidden lg:block relative aspect-[4/3]"><Image src={t.what_we_do.image} alt="Fashion runway show" fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover rounded-2xl shadow-lg" /></div>
+                    <div className="hidden lg:block relative aspect-[3/4]"><Image src={t.what_we_do.image} alt="Fashion runway show" fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover rounded-2xl shadow-lg" /></div>
                 </div>
             </div></section>
             <section className="py-20" style={{ backgroundImage: "url('/images/backgrounds/background-texture-warm-silver.jpg')", backgroundSize: 'cover', backgroundPosition: 'center' }}><div className="max-w-7xl mx-auto px-6">
@@ -74,13 +74,13 @@ export default async function ArtMuseumsFashionPage({ params }: { params: Promis
                             <div key={index}><h3 className="text-2xl font-bold text-black mb-3">{item.title}</h3><p className="text-lg text-black/70">{item.description}</p></div>
                         ))}
                     </div>
-                    <div className="hidden lg:block relative aspect-[4/3]"><Image src={t.ideal_for.image} alt="Fashion portrait" fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover rounded-2xl shadow-lg" /></div>
+                    <div className="hidden lg:block relative aspect-[3/4]"><Image src={t.ideal_for.image} alt="Fashion portrait" fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover rounded-2xl shadow-lg" /></div>
                 </div>
             </div></section>
             <section className="py-20 bg-black"><div className="max-w-7xl mx-auto px-6">
                 <h2 className="text-[2.7rem] md:text-[3.45rem] font-bold mb-12 text-white text-center leading-heading">{t.how_we_help.title}</h2>
                 <div className="grid lg:grid-cols-2 gap-12 items-center">
-                    <div className="hidden lg:block relative aspect-[4/3]"><Image src={t.how_we_help.image} alt="Fashion editorial" fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover rounded-2xl shadow-lg" /></div>
+                    <div className="hidden lg:block relative aspect-[3/4]"><Image src={t.how_we_help.image} alt="Fashion editorial" fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover rounded-2xl shadow-lg" /></div>
                     <div className="space-y-6">
                         {t.how_we_help.items.map((item, index) => (
                             <div key={index}><h3 className="text-2xl font-bold text-white mb-3">{item.title}</h3><p className="text-lg text-white/80">{item.description}</p></div>

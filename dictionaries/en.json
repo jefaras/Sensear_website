@@ -158,8 +158,6 @@
             "subtitle": "We listen, ask the right questions and explore if, and how, sound can play a role."
         },
         "form": {
-            "title": "Share a few details",
-            "subtitle": "This is an initial conversation. No commitments, no assumptions.",
             "name": "Name *",
             "email": "Email *",
             "phone": "Phone",
@@ -1371,8 +1369,8 @@
         "cta": {
             "title": "Your venue's sound journey starts here",
             "subtitle": "Let's explore how music can work specifically for your space and goals.",
-            "contact": "Discover Your Sound Strategy",
-            "services": "Explore our services"
+            "contact": "Start your venue sound journey",
+            "services": "Browse our services"
         }
     },
     "industries_page": {
@@ -1458,7 +1456,7 @@
         "cta": {
             "title": "Discover your sound potential",
             "subtitle": "Every venue has untapped atmospheric potential. Let's explore how strategic sound can transform your specific space and objectives.",
-            "contact": "Discover Your Sound Strategy",
+            "contact": "Let's design your venue sound",
             "services": "Explore our services"
         }
     },
@@ -1472,7 +1470,7 @@
             "subtitle": "Practical sound services designed to complement the way spaces function and feel."
         },
         "intro": {
-            "title": "Music is already <br />shaping your business",
+            "title": "Music is already shaping your business",
             "p1": "Every venue <strong>has a soundtrack</strong>, whether you designed it or not. <strong><em>SensEar</em></strong> helps ensure it tells <strong><em>the right story</em></strong>.",
             "p2": "We shape sound for venues & events where <strong>atmosphere</strong> matters: guiding how guests <strong>feel</strong>, how long they <strong>stay</strong> and how they <strong>remember</strong> you."
         },
@@ -1543,7 +1541,7 @@
         "cta": {
             "title": "Let's explore your possibilities",
             "subtitle": "Which service aligns with your vision? We will assess your current atmosphere and recommend the ideal starting point.",
-            "contact_btn": "Discover your sound strategy",
+            "contact_btn": "Talk to us about your space",
             "industries_btn": "See Industries we serve"
         }
     },
@@ -1655,6 +1653,7 @@
         },
         "cta": {
             "title": "Can't find what you're looking for?",
+            "text": "Don't worry, we have the answer. You can either:",
             "or": "or check our",
             "contact_btn": "Contact us",
             "faq_btn": "FAQ page"
@@ -1792,7 +1791,7 @@
         "cta": {
             "title": "Let us craft your signature sound",
             "description": "Need a perfect soundscape that reflects your brand and captivates your guests?",
-            "button": "Create your signature sound",
+            "button": "Start with curated playlists",
             "explore": "Explore how our",
             "sonic_identity": "Sonic Identity",
             "audio_upgrades": "Audio Upgrades",
@@ -1810,7 +1809,7 @@
             "description": "Soundtracks designed to support each phase, from arrival to finale."
         },
         "intro": {
-            "title": "Music that moves<br />with your event's timeline",
+            "title": "Music that moves with your event's timeline",
             "p1": "We design soundtracks to <strong><em>follow your event's plan</em></strong>, so energy always <strong><em>matches</em></strong> the moment.",
             "p2": "Music <strong><em>carries the event forward</em></strong>, turning interactions into something guests <strong><em>enjoy & remember</em></strong>."
         },
@@ -1877,7 +1876,7 @@
         "cta": {
             "title": "Let us design your event's sonic journey",
             "description": "Need a soundtrack that feels as curated as everything else?",
-            "button": "Book your event consultation",
+            "button": "Book an event music briefing",
             "explore": "Explore how our",
             "signature_playlists": "Signature Playlists",
             "audio_upgrades": "Audio Upgrades",
@@ -1895,7 +1894,7 @@
             "description": "A practical audio blueprint that keeps your label distinct & consistent."
         },
         "intro": {
-            "title": "Sonic action plan<br />for consistent brand identity",
+            "title": "Sonic action plan for consistent brand identity",
             "p1": "We translate your brand vision into a <strong><em>practical audio guide</em></strong> that works for <strong><em>every space & channel</em></strong>.",
             "p2": "Your firm gains a <strong><em>clear sonic identity</em></strong>, consistent across <strong><em>spaces</em></strong>, <strong><em>social media</em></strong> & <strong><em>ads</em></strong>."
         },
@@ -1963,7 +1962,7 @@
         "cta": {
             "title": "Let us define your brand's sonic identity",
             "description": "Require a sound strategy as considered as your design?",
-            "button": "Start your sonic identity",
+            "button": "Define your brand's sonic DNA",
             "explore": "Explore how our",
             "signature_playlists": "Signature Playlists",
             "audio_upgrades": "Audio Upgrades",
@@ -2049,7 +2048,7 @@
         "cta": {
             "title": "Let us upgrade your venue's sound",
             "description": "Need audio that matches your design quality?",
-            "button": "Book your audio assessment",
+            "button": "Book an acoustic assessment",
             "pair_with": "Pair with our",
             "signature_playlists": "Signature Playlists",
             "sonic_identity": "Sonic Identity",
@@ -2069,7 +2068,7 @@
             "image_alt": "Luxury hotel resort with curated music ambiance"
         },
         "intro": {
-            "title": "Music for<br />the entire guest journey",
+            "title": "Music for the entire guest journey",
             "p1": "Your hotel's atmosphere becomes <strong><em>felt</em></strong> before the interior design does.",
             "p2": "Our soundscapes <strong><em>enrich every moment</em></strong> of the day across all spaces and become an integral part of the <a href=\"/en/industries/music-for-hotels-and-resorts\">hospitality experience</a>."
         },
@@ -2151,7 +2150,7 @@
         "cta": {
             "title": "Upgrade your hotel's atmosphere",
             "description": "Let's see how music can support your guest experience and overall hotel image.",
-            "button": "Book a music assessment",
+            "button": "Request a proposal for your hotel",
             "see_also": "See also how",
             "signature_playlists": "Signature Playlists",
             "and": "and",
@@ -2172,7 +2171,7 @@
             "image_alt": "Elegant restaurant interior with curated music atmosphere"
         },
         "intro": {
-            "title": "Curated atmosphere<br />for every service moment",
+            "title": "Curated atmosphere for every service moment",
             "p1": "Music <strong><em>shapes the dining experience</em></strong> as much as decor or lighting.",
             "p2": "Our sound <strong><em>follows the menu and service rhythm</em></strong> and becomes <strong><em>part of the enjoyment</em></strong>, without distracting from food or conversation."
         },
@@ -2250,7 +2249,7 @@
         "cta": {
             "title": "Upgrade your restaurant's atmosphere",
             "description": "Need better sound for stronger nights? We assess your current sound, service flow, and concept, and recommend a customized approach.",
-            "button": "Book a music consultation",
+            "button": "Request a concept-led music plan",
             "see_also": "See how",
             "signature_playlists": "Signature Playlists",
             "and": "and",
@@ -2271,7 +2270,7 @@
             "image_alt": "Modern retail store interior with curated music atmosphere"
         },
         "intro": {
-            "title": "Music that inspires<br />the shopping journey",
+            "title": "Music that inspires the shopping journey",
             "p1": "Music in your store <strong><em>affects dwell time</em></strong>, what visitors notice, and whether they make a purchase.",
             "p2": "Our music selections <strong><em>move elegantly</em></strong> with the store's rhythm and shape how customers <strong><em>perceive your brand</em></strong>."
         },
@@ -2349,7 +2348,7 @@
         "cta": {
             "title": "Upgrade your store's atmosphere",
             "description": "Want music to truly work for your space? We assess your current sound, map the customer journey, and recommend an approach specifically for your brand.",
-            "button": "Book a music consultation",
+            "button": "Design your store soundtrack",
             "see_also": "See how",
             "signature_playlists": "Signature Playlists",
             "and": "and",
@@ -2370,7 +2369,7 @@
             "image_alt": "Luxury wellness spa interior with curated ambient music"
         },
         "intro": {
-            "title": "Musical themes tuned<br />for body and mind",
+            "title": "Musical themes tuned for body and mind",
             "p1": "Music in wellness and exercise spaces <strong><em>guides focus, rhythm, and mental state</em></strong> during sessions.",
             "p2": "Our mixes <strong><em>adapt to each zone and intensity level</em></strong>, helping visitors <strong><em>stay present and active</em></strong>."
         },
@@ -2448,7 +2447,7 @@
         "cta": {
             "title": "Upgrade your wellness atmosphere",
             "description": "Ready to design sound for treatment and training? We assess your current setup, sessions, and member journey, and recommend a customized approach.",
-            "button": "Book a music consultation",
+            "button": "Design your wellness soundtrack",
             "see_also": "See how",
             "signature_playlists": "Signature Playlists",
             "and": "and",
@@ -2469,7 +2468,7 @@
             "image_alt": "Event music curation and entertainment production"
         },
         "intro": {
-            "title": "Music with right timing<br />for every event moment",
+            "title": "Music with right timing for every event moment",
             "p1": "At events, music <strong><em>connects every moment</em></strong>, from arrival to finale.",
             "p2": "Our soundscapes <strong><em>build atmosphere</em></strong> and follow your event's schedule, creating moments guests <strong><em>feel and remember</em></strong>."
         },
@@ -2543,7 +2542,7 @@
         "cta": {
             "title": "Upgrade your event's atmosphere",
             "description": "Ready to design the sound for your next experience? We assess the concept, venue, and schedule, and recommend a customized soundtrack and technical approach.",
-            "button": "Book a music consultation",
+            "button": "Shape the experience atmosphere",
             "see_also": "See how",
             "event_soundtracks": "Event Soundtracks",
             "and": "and",
@@ -2564,7 +2563,7 @@
             "image_alt": "Art gallery with curated music atmosphere and fashion installation"
         },
         "intro": {
-            "title": "Subtle precision<br />for galleries & runways",
+            "title": "Subtle precision for galleries & runways",
             "p1": "In galleries and runways, sound must be <strong><em>present</em></strong> without <strong><em>competing</em></strong>.",
             "p2": "We create soundscapes that <strong><em>respect each work</em></strong> and <strong><em>gently guide</em></strong> how visitors <strong><em>move and perceive</em></strong> the content."
         },
@@ -2642,7 +2641,7 @@
         "cta": {
             "title": "Upgrade your cultural atmosphere",
             "description": "Ready to design the sound for your space? We assess the venue, program, and audience, and recommend a customized approach for exhibitions and events.",
-            "button": "Book a music consultation",
+            "button": "Design a discreet soundscape",
             "see_also": "See how",
             "sonic_strategy": "Sound Strategy",
             "and": "and",

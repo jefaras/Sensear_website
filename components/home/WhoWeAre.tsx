@@ -11,7 +11,7 @@ export default function WhoWeAre({ lang, title }: WhoWeAreProps) {
     return (
         <section className="bg-black py-20">
             <div className="max-w-7xl mx-auto px-6">
-                <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
+                <div className="flex flex-col items-center text-center">
                     <h2 className="text-[2rem] md:text-[2.8rem] lg:text-[3.45rem] font-bold text-white leading-tight mb-12">
                         {title}
                     </h2>

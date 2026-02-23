@@ -9,6 +9,7 @@ import {
     AccordionTrigger,
 } from "@/components/ui/accordion";
 import { AnimatedButton } from "@/components/AnimatedButton";
+import { FinalCTA } from "@/components/sections/FinalCTA";
 
 export default async function FAQPage({
     params,
@@ -90,18 +91,18 @@ export default async function FAQPage({
                             </AccordionItem>
                         ))}
                     </Accordion>
-
-                    <div className="text-center mt-12 bg-white/50 p-8 rounded-lg">
-                        <h3 className="text-2xl font-bold text-black mb-4">{content.cta.title}</h3>
-                        <p className="text-black/80 mb-6">{content.cta.subtitle}</p>
-                        <div className="flex justify-center">
-                            <AnimatedButton href="contact" lang={lang}>
-                                {content.cta.button}
-                            </AnimatedButton>
-                        </div>
-                    </div>
                 </div>
             </section>
+
+            {/* Final CTA Section */}
+            <FinalCTA
+                heading={content.cta.title}
+                text={content.cta.subtitle}
+                buttons={[
+                    { text: content.cta.button, link: "contact" }
+                ]}
+                lang={lang}
+            />
         </div>
     );
 }

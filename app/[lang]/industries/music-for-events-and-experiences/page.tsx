@@ -82,7 +82,7 @@ export default async function EventsExperiencesPage({
             {/* Intro Section */}
             <section className="bg-black py-20">
                 <div className="max-w-7xl mx-auto px-6">
-                    <div className="flex flex-col items-center text-center max-w-5xl mx-auto">
+                    <div className="flex flex-col items-center text-center">
                         <h2 className="text-[2.7rem] md:text-[3.45rem] font-bold text-white leading-heading mb-12" dangerouslySetInnerHTML={{ __html: t.intro.title }}>
                         </h2>
                         <div className="w-full">
@@ -112,7 +112,7 @@ export default async function EventsExperiencesPage({
                                 </div>
                             ))}
                         </div>
-                        <div className="hidden lg:block relative aspect-[4/3]">
+                        <div className="hidden lg:block relative aspect-[3/4]">
                             <Image
                                 src={t.what_we_do.image}
                                 alt="Event experience with guests dancing"
@@ -146,7 +146,7 @@ export default async function EventsExperiencesPage({
                                 </div>
                             ))}
                         </div>
-                        <div className="hidden lg:block relative aspect-[4/3]">
+                        <div className="hidden lg:block relative aspect-[3/4]">
                             <Image
                                 src={t.ideal_for.image}
                                 alt="Event sound technical challenge"
@@ -165,7 +165,7 @@ export default async function EventsExperiencesPage({
                     <h2 className="text-[2.7rem] md:text-[3.45rem] font-bold mb-12 text-white text-center leading-heading">{t.how_we_help.title}</h2>
 
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
-                        <div className="hidden lg:block relative aspect-[4/3]">
+                        <div className="hidden lg:block relative aspect-[3/4]">
                             <Image
                                 src={t.how_we_help.image}
                                 alt="Event atmosphere with guests enjoying"

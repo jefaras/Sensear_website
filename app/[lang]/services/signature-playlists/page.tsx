@@ -89,7 +89,7 @@ export default async function SignaturePlaylistsPage({
             {/* Intro Section */}
             <section className="bg-black py-20">
                 <div className="max-w-7xl mx-auto px-6">
-                    <div className="flex flex-col items-center text-center max-w-5xl mx-auto">
+                    <div className="flex flex-col items-center text-center">
                         <h2 className="text-[2rem] md:text-[2.8rem] lg:text-[3.45rem] font-bold text-white leading-tight mb-12">
                             {t.intro.title}
                         </h2>
@@ -196,7 +196,7 @@ export default async function SignaturePlaylistsPage({
 
             {/* Final CTA */}
             <FinalCTA
-                heading={lang === 'el' ? 'Αφήστε μας να δημιουργήσουμε την υπογραφή ήχου σας' : 'Let us craft your signature sound'}
+                heading={lang === 'el' ? 'Θέλετε μια ξεχωριστή μουσική ατμόσφαιρα για τον χώρο σας;' : 'Let us craft your signature sound'}
                 text={t.cta.description}
                 buttons={[
                     { text: t.cta.button, link: 'contact' },

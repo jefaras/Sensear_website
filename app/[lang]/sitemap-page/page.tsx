@@ -1,8 +1,9 @@
 import Link from "next/link";
-import { Home, Briefcase, Building2, BookOpen, ArrowRight } from "lucide-react";
+import { Home, Briefcase, Building2, BookOpen } from "lucide-react";
 import { getDictionary } from "@/lib/dictionary";
 import type { Locale } from "@/lib/i18n";
 import { Card } from "@/components/ui/card";
+import { FinalCTA } from "@/components/sections/FinalCTA";
 
 export default async function SitemapPage({
     params,
@@ -133,36 +134,19 @@ export default async function SitemapPage({
                             </Card>
                         ))}
                     </div>
-
-                    <div className="mt-12 text-center flex flex-col items-center gap-6">
-                        <p className="text-black/70 text-lg">
-                            {content.cta.title}
-                        </p>
-
-                        <div className="flex flex-wrap items-center justify-center gap-4">
-                            <Link href={`/${lang}/contact`}>
-                                <button className="group relative bg-transparent border-2 border-black text-black hover:bg-black hover:text-white px-14 py-6 text-lg font-semibold rounded-full transition-all duration-300 overflow-hidden flex items-center">
-                                    <span className="transition-transform duration-300 group-hover:-translate-x-3 inline-block">
-                                        {content.cta.contact_btn}
-                                    </span>
-                                    <ArrowRight className="absolute right-6 w-5 h-5 opacity-0 translate-x-4 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0" />
-                                </button>
-                            </Link>
-
-                            <span className="text-black/70 font-medium">{content.cta.or}</span>
-
-                            <Link href={`/${lang}/faq`}>
-                                <button className="group relative bg-transparent border-2 border-black text-black hover:bg-black hover:text-white px-14 py-6 text-lg font-semibold rounded-full transition-all duration-300 overflow-hidden flex items-center">
-                                    <span className="transition-transform duration-300 group-hover:-translate-x-3 inline-block">
-                                        {content.cta.faq_btn}
-                                    </span>
-                                    <ArrowRight className="absolute right-6 w-5 h-5 opacity-0 translate-x-4 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0" />
-                                </button>
-                            </Link>
-                        </div>
-                    </div>
                 </div>
             </section>
+
+            {/* Can't find what you're looking for? */}
+            <FinalCTA
+                heading={content.cta.title}
+                text={content.cta.text}
+                buttons={[
+                    { text: content.cta.contact_btn, link: "contact" },
+                    { text: content.cta.faq_btn, link: "faq" }
+                ]}
+                lang={lang}
+            />
         </div>
     );
 }
