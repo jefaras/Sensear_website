@@ -6,9 +6,11 @@ import Image from "next/image";
 
 // Blur placeholders for carousel images (base64 encoded tiny images)
 const blurPlaceholders: Record<string, string> = {
-    "carousel-venue-atmosphere-1.jpg": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBEQACEQA/ALUABo//2Q==",
     "carousel-event-venue.jpg": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBEQACEQA/ALUABo//2Q==",
-    "carousel-sky-venue.png": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg=="
+    "case-study-beach-house.webp": "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAADQAQCdASoKAAoAAUAmJYgCdAEO9ACA/v9P9f96f1AAAA=",
+    "case-study-pelicanos.webp": "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAADQAQCdASoKAAoAAUAmJYgCdAEO9ACA/v9P9f96f1AAAA=",
+    "case-study-yam.jpg": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBEQACEQA/ALUABo//2Q==",
+    "case-study-levantis.webp": "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAADQAQCdASoKAAoAAUAmJYgCdAEO9ACA/v9P9f96f1AAAA="
 };
 
 export function HeroCarousel() {
@@ -24,21 +26,19 @@ export function HeroCarousel() {
     }, [emblaApi]);
 
     const images = [
-        // { src: "/images/carousel/carousel-home-interior.jpg", alt: "Elegant home interior with curated music atmosphere" },
-        { src: "/images/carousel/carousel-venue-atmosphere-1.jpg", alt: "Venue atmosphere with professional sound design" },
-        // { src: "/images/carousel/carousel-oneonly-aesthesis-hotel.png", alt: "OneOnly Aesthesis Hotel luxury hospitality music" },
-        // { src: "/images/carousel/carousel-venue-atmosphere-2.jpg", alt: "Event venue with ambient music experience" },
+        // Original carousel image (kept)
         { src: "/images/carousel/carousel-event-venue.jpg", alt: "Event venue professional audio solutions" },
-        { src: "/images/carousel/carousel-sky-venue.png", alt: "Sky venue with premium sound experience" },
-        // { src: "/images/carousel/carousel-hospitality-space.jpg", alt: "Hospitality space with signature playlist" },
-        // { src: "/images/carousel/carousel-lifestyle-event.jpg", alt: "Lifestyle event with custom soundtrack" },
-        // { src: "/images/carousel/carousel-venice-glass-week.jpg", alt: "Venice Glass Week event music curation" }
+        // Case study images from case-studies page
+        { src: "/images/case-studies/case-study-beach-house.webp", alt: "Beach House Antiparos - curated music experience" },
+        { src: "/images/case-studies/case-study-pelicanos.webp", alt: "Pelicanos Sifnos - jazzy playlist curation" },
+        { src: "/images/case-studies/case-study-yam.jpg", alt: "Yam Antiparos - night playlist design" },
+        { src: "/images/case-studies/case-study-levantis.webp", alt: "Levantis - signature sound identity" },
     ];
 
     // Get blur placeholder for an image
     const getBlurPlaceholder = (src: string): string => {
         const filename = src.split("/").pop() || "";
-        return blurPlaceholders[filename] || blurPlaceholders["carousel-venue-atmosphere-1.jpg"];
+        return blurPlaceholders[filename] || blurPlaceholders["carousel-event-venue.jpg"];
     };
 
     return (
