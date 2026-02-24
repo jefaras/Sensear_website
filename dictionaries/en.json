@@ -147,7 +147,7 @@
             "description": "Get in touch with SensEar. We're here to discuss your music curation and sonic branding needs."
         },
         "hero": {
-            "title": "Let's talk about your Space",
+            "title": "Let's talk about your needs",
             "subtitle": "Tell us a bit about your venue and the feeling you want to create.",
             "background_image": "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/178049824_warmsilverfoilsample-Picsart-AiImageEnhancer.jpg",
             "image": "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/f3cada14a_gemini-image-2_photography_of_a_scene_captured_in_a_candid_style_with_high-quality_details_show-0--.jpg",
@@ -186,8 +186,8 @@
                 "events": "Events",
                 "strategy": "Strategy"
             },
-            "temp_title": "We are here for you. Get in touch!",
-            "temp_message": "We would love to hear from you about your project and music needs! Send us an email or call us today. Please include your name, contact details, your venue type (hotel, restaurant, bar, or other) and how we can help you."
+            "temp_title": "",
+            "temp_message": "Send us an email with your contact details, your venue type (hotel, restaurant, bar, or other) and how we can help you, or call us today."
         },
         "contact_info": {
             "title": "Contact Information",
@@ -1715,9 +1715,9 @@
             "description": "Expert music curation for venues that want to stand out. We create playlists that reflect your brand identity."
         },
         "hero": {
-            "title": "Signature Playlists:",
-            "subtitle": "Custom music for your space.",
-            "description": "Curated playlists that follow your brand, space & daily rhythm."
+            "title": "Signature Playlists",
+            "subtitle": "A sound that's unmistakably yours.",
+            "description": "Rare, handpicked tracks curated around your concept, guests and your venue's rhythm."
         },
         "intro": {
             "title": "Playlist creation for unique venue atmosphere",

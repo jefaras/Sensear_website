@@ -32,7 +32,7 @@
             "subtitle": "Οι μουσικές μας υπηρεσίες διαμορφώνουν τον τρόπο που βιώνεται ο χώρος, δημιουργούν ατμόσφαιρα και καλλιεργούν σύνδεση με το brand σας, μέσα από τη μουσική και τον ήχο.",
             "items": [
                 {
-                    "title": "Επιμελημένες playlists",
+                    "title": "Signature Playlists",
                     "desc": "Η καθημερινή μουσική ταυτότητα του χώρου σας, προσαρμοσμένη στη ροή της ημέρας.",
                     "link": "services/signature-playlists"
                 },
@@ -147,7 +147,7 @@
             "description": "Επικοινωνήστε μαζί μας για να συζητήσουμε τις ανάγκες του χώρου σας και πώς η μουσική μπορεί να αναβαθμίσει την εμπειρία των επισκεπτών."
         },
         "hero": {
-            "title": "Ας μιλήσουμε για τον χώρο σας",
+            "title": "Ας μιλήσουμε για τις ανάγκες σας",
             "subtitle": "Πείτε μας λίγα λόγια για τον χώρο σας και το συναίσθημα που θέλετε να αφήνει.",
             "background_image": "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/178049824_warmsilverfoilsample-Picsart-AiImageEnhancer.jpg",
             "image": "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/f3cada14a_gemini-image-2_photography_of_a_scene_captured_in_a_candid_style_with_high-quality_details_show-0--.jpg",
@@ -186,8 +186,8 @@
                 "events": "Εκδηλώσεις",
                 "strategy": "Στρατηγική"
             },
-            "temp_title": "Είμαστε εδώ για σας. Ας μιλήσουμε!",
-            "temp_message": "Θα χαρούμε πολύ να μάθουμε για το project και τις ανάγκες σας σε μουσική! Στείλτε μας email ή καλέστε μας σήμερα κιόλας. Παρακαλούμε συμπεριλάβετε το όνομά σας, τα στοιχεία επικοινωνίας σας, τον τύπο του χώρου σας (ξενοδοχείο, εστιατόριο, bar ή άλλο) και πώς μπορούμε να σας βοηθήσουμε."
+            "temp_title": "",
+            "temp_message": "Στείλτε μας ένα email με τα στοιχεία σας, τον τύπο του χώρου σας (ξενοδοχείο, εστιατόριο, bar ή άλλο) και πώς μπορούμε να σας βοηθήσουμε ή καλέστε μας σήμερα κιόλας."
         },
         "contact_info": {
             "title": "Στοιχεία Επικοινωνίας",
@@ -337,8 +337,8 @@
         },
         "cta": {
             "title": "Ανακαλύψτε τη διαδρομή του ήχου σας",
-            "text": "Εξερευνήστε τη μοναδική μας προσέγγιση μέσα από τις Επιμελημένες playlists ή δείτε τι κάνουμε για τον κλάδο σας.",
-            "playlists": "Επιμελημένες playlists",
+            "text": "Εξερευνήστε τη μοναδική μας προσέγγιση μέσα από τα Signature Playlists ή δείτε τι κάνουμε για τον κλάδο σας.",
+            "playlists": "Signature Playlists",
             "industries": "Κλάδοι που εξυπηρετούμε"
         }
     },
@@ -461,7 +461,7 @@
             "text": "Εξερευνήστε περαιτέρω τη μοναδική μας προσέγγιση μέσα από την επιμέλεια playlists ή ανακαλύψτε τι κάνουμε για τον τομέα σας.",
             "buttons": [
                 {
-                    "text": "Ανακαλύψτε Επιμελημένες playlists",
+                    "text": "Ανακαλύψτε Signature Playlists",
                     "link": "services/signature-playlists"
                 },
                 {
@@ -1443,7 +1443,7 @@
     "services_page": {
         "meta": {
             "title": "Υπηρεσίες Μουσικής Επιμέλειας | SensEar",
-            "description": "Ανακαλύψτε τις υπηρεσίες μας: Επιμελημένες Playlists, Sonic Identity, Μουσική Εκδηλώσεων και Ακουστική Αναβάθμιση."
+            "description": "Ανακαλύψτε τις υπηρεσίες μας: Signature Playlists, Sonic Identity, Μουσική Εκδηλώσεων και Ακουστική Αναβάθμιση."
         },
         "hero": {
             "title": "Μουσικές λύσεις για κάθε χώρο & ανάγκη",
@@ -1460,11 +1460,11 @@
         },
         "services": {
             "playlists": {
-                "title": "Επιμελημένες playlists",
+                "title": "Signature Playlists",
                 "subtitle": "Η καθημερινή μουσική σας βάση",
                 "desc": "Playlists που εξελίσσονται μέσα στη μέρα, με τακτικές ενημερώσεις και απομακρυσμένη διαχείριση.",
                 "ideal_for": "Ιδανικό για: <br/>Χώρους που θέλουν να ξεφύγουν από τη γενική, απρόσωπη μουσική.",
-                "cta": "Ανακαλύψτε τις Επιμελημένες playlists",
+                "cta": "Ανακαλύψτε τα Signature Playlists",
                 "link": "services/signature-playlists"
             },
             "events": {
@@ -1498,7 +1498,7 @@
             "points": [
                 {
                     "text": "Διαμορφώνουν την καθημερινή ατμόσφαιρα του χώρου σας.",
-                    "link_text": "Επιμελημένες playlists",
+                    "link_text": "Signature Playlists",
                     "link": "services/signature-playlists"
                 },
                 {
@@ -1521,7 +1521,7 @@
         "cta": {
             "title": "Ας εξερευνήσουμε τις δυνατότητές σας",
             "subtitle": "Ποια υπηρεσία ευθυγραμμίζεται με το όραμά σας; Αξιολογούμε την υπάρχουσα ατμόσφαιρα και προτείνουμε το ιδανικό σημείο εκκίνησης.",
-            "contact_btn": "Ας μιλήσουμε για τον χώρο σας",
+            "contact_btn": "Ας μιλήσουμε για τις ανάγκες σας",
             "industries_btn": "Δείτε τους κλάδους που εξυπηρετούμε"
         }
     },
@@ -1539,7 +1539,7 @@
                 "title": "Υπηρεσίες",
                 "items": [
                     {
-                        "label": "Επιμελημένες Playlists",
+                        "label": "Signature Playlists",
                         "link": "services/signature-playlists"
                     },
                     {
@@ -1691,13 +1691,13 @@
     },
     "signature_playlists": {
         "meta": {
-            "title": "Επιμελημένες Playlists | SensEar",
+            "title": "Signature Playlists | SensEar",
             "description": "Εξειδικευμένη μουσική επιμέλεια για χώρους που θέλουν να ξεχωρίζουν. Δημιουργούμε playlists που αντικατοπτρίζουν την ταυτότητα του brand σας."
         },
         "hero": {
-            "title": "Επιμελημένες playlists:",
-            "subtitle": "Μουσική προσαρμοσμένη στον χώρο σας.",
-            "description": "Playlists που ακολουθούν το brand, τον χώρο και την καθημερινή ροή σας."
+            "title": "Signature Playlists",
+            "subtitle": "Ένας ήχος ξεκάθαρα δικός σας.",
+            "description": "Σπάνια κομμάτια, προσεκτικά επιλεγμένα πάνω στο concept, το κοινό και τον ρυθμό του χώρου σας."
         },
         "intro": {
             "title": "Δημιουργία playlists για μοναδική ατμόσφαιρα χώρου",
@@ -1858,7 +1858,7 @@
             "description": "Χρειάζεστε ένα soundtrack που να φαίνεται επιμελημένο όπως όλα τα άλλα;",
             "button": "Μιλήστε μας για το event σας",
             "explore": "Εξερευνήστε πώς οι",
-            "signature_playlists": "Επιμελημένες Playlists",
+            "signature_playlists": "Signature Playlists",
             "audio_upgrades": "Ακουστική Αναβάθμιση",
             "support": "υποστηρίζουν τις εμπειρίες εκδηλώσεων."
         }
@@ -1944,7 +1944,7 @@
             "description": "Χρειάζεστε μια στρατηγική ήχου τόσο μελετημένη όσο το σχεδιασμό σας;",
             "button": "Ορίστε το ηχητικό DNA του brand σας",
             "explore": "Εξερευνήστε πώς οι",
-            "signature_playlists": "Επιμελημένες Playlists",
+            "signature_playlists": "Signature Playlists",
             "audio_upgrades": "Ακουστική Αναβάθμιση",
             "bring_to_life": "φέρνουν τη στρατηγική σας στη ζωή."
         }
@@ -2030,7 +2030,7 @@
             "description": "Χρειάζεστε ήχο που ταιριάζει με την ποιότητα του σχεδιασμού σας;",
             "button": "Κλείστε μια ακουστική αξιολόγηση",
             "pair_with": "Συνδυάστε με τις",
-            "signature_playlists": "Επιμελημένες Playlists",
+            "signature_playlists": "Signature Playlists",
             "sonic_identity": "Ηχητική Ταυτότητα",
             "complete_identity": "για πλήρη ηχητική ταυτότητα."
         }
@@ -2132,7 +2132,7 @@
             "description": "Ας δούμε πώς η μουσική μπορεί να υποστηρίξει την εμπειρία των επισκεπτών σας και τη συνολική εικόνα του ξενοδοχείου.",
             "button": "Ζητήστε μια πρόταση για το ξενοδοχείο σας",
             "see_also": "Δείτε επίσης πώς οι",
-            "signature_playlists": "Επιμελημένες playlists",
+            "signature_playlists": "Signature Playlists",
             "and": "και ο",
             "sonic_strategy": "Σχεδιασμός ηχητικής ταυτότητας",
             "work_for": "λειτουργούν για ξενοδοχεία & θέρετρα."
@@ -2231,7 +2231,7 @@
             "description": "Χρειάζεστε καλύτερο ήχο για πιο δυνατές βραδιές; Αξιολογούμε τον υπάρχοντα ήχο, τη ροή του service και το concept σας και προτείνουμε μια προσαρμοσμένη προσέγγιση.",
             "button": "Ζητήστε μια προσφορά για το χώρο σας",
             "see_also": "Δείτε πώς οι",
-            "signature_playlists": "Επιμελημένες playlists",
+            "signature_playlists": "Signature Playlists",
             "and": "και η",
             "audio_upgrades": "Ακουστική αναβάθμιση",
             "work_for": "λειτουργούν για εστιατόρια & bar."
@@ -2330,7 +2330,7 @@
             "description": "Θέλετε η μουσική να δουλεύει πραγματικά για τον χώρο σας; Αξιολογούμε τον υπάρχοντα ήχο, χαρτογραφούμε τη διαδρομή του πελάτη και προτείνουμε μια προσέγγιση ειδικά για το brand σας.",
             "button": "Σχεδιάστε τον ήχο του καταστήματός σας",
             "see_also": "Δείτε πώς οι",
-            "signature_playlists": "Επιμελημένες playlists",
+            "signature_playlists": "Signature Playlists",
             "and": "και ο",
             "sonic_strategy": "Σχεδιασμός ηχητικής ταυτότητας",
             "work_for": "λειτουργούν για καταστήματα λιανικής."
@@ -2429,7 +2429,7 @@
             "description": "Έτοιμοι να σχεδιάσουμε ήχο για θεραπεία και προπόνηση; Αξιολογούμε το υπάρχον setup, τις συνεδρίες και το ταξίδι των μελών και προτείνουμε μια προσαρμοσμένη προσέγγιση.",
             "button": "Σχεδιάστε τον ήχο του wellness χώρου σας",
             "see_also": "Δείτε πώς οι",
-            "signature_playlists": "Επιμελημένες playlists",
+            "signature_playlists": "Signature Playlists",
             "and": "και ο",
             "sonic_strategy": "Σχεδιασμός ηχητικής ταυτότητας",
             "work_for": "λειτουργούν για wellness & γυμναστήρια."
@@ -2526,7 +2526,7 @@
             "see_also": "Δείτε πώς τα",
             "event_soundtracks": "Event Soundtracks",
             "and": "και οι",
-            "signature_playlists": "Επιμελημένες playlists",
+            "signature_playlists": "Signature Playlists",
             "support": "υποστηρίζουν εκδηλώσεις και εμπειρίες."
         }
     },
