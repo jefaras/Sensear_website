@@ -31,7 +31,7 @@ export function HeroCarousel() {
         // Case study images from case-studies page
         { src: "/images/case-studies/case-study-beach-house.webp", alt: "Beach House Antiparos - curated music experience" },
         { src: "/images/case-studies/case-study-pelicanos.webp", alt: "Pelicanos Sifnos - jazzy playlist curation" },
-        { src: "/images/case-studies/case-study-yam.jpg", alt: "Yam Antiparos - night playlist design" },
+        { src: "/images/services/signature-playlists/signature-playlists-hero.jpg", alt: "Yam Antiparos - night playlist design" },
         { src: "/images/case-studies/case-study-levantis.webp", alt: "Levantis - signature sound identity" },
     ];
 
