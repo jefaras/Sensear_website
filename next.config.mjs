@@ -21,6 +21,113 @@ const nextConfig = {
     // Keep empty config for dev mode, but use --no-turbopack for production builds
     turbopack: {},
     
+    // Redirects to fix Google Search Console indexing issues
+    async redirects() {
+        return [
+            // Fix redirect errors for trailing slash on locale routes
+            {
+                source: '/en/',
+                destination: '/en',
+                permanent: true, // 308 - permanent redirect
+            },
+            {
+                source: '/el/',
+                destination: '/el',
+                permanent: true, // 308 - permanent redirect
+            },
+            // Fix 404 error: old URL structure for hotels-resorts
+            {
+                source: '/:lang/industries/hotels-resorts',
+                destination: '/:lang/industries/music-for-hotels-and-resorts',
+                permanent: true, // 308 - permanent redirect
+            },
+            // Fix alternative page with canonical: /home doesn't exist
+            {
+                source: '/home',
+                destination: '/',
+                permanent: true, // 308 - permanent redirect
+            },
+            // Fix crawled but not indexed: non-existent client pages
+            // Redirect to case studies page where these clients are featured
+            {
+                source: '/klouvi-bar',
+                destination: '/case-studies',
+                permanent: true, // 308 - permanent redirect
+            },
+            {
+                source: '/:lang/klouvi-bar',
+                destination: '/:lang/case-studies',
+                permanent: true, // 308 - permanent redirect
+            },
+            {
+                source: '/beach-house-antiparos',
+                destination: '/case-studies',
+                permanent: true, // 308 - permanent redirect
+            },
+            {
+                source: '/:lang/beach-house-antiparos',
+                destination: '/:lang/case-studies',
+                permanent: true, // 308 - permanent redirect
+            },
+            
+            // Fix Bing Webmaster Tools 400-499 errors
+            
+            // Fix double /services/services/ duplication
+            {
+                source: '/:lang/services/services/:slug',
+                destination: '/:lang/services/:slug',
+                permanent: true, // 308 - permanent redirect
+            },
+            
+            // Fix missing /industries/ prefix for industry pages
+            {
+                source: '/:lang/music-for-hotels-and-resorts',
+                destination: '/:lang/industries/music-for-hotels-and-resorts',
+                permanent: true, // 308 - permanent redirect
+            },
+            {
+                source: '/:lang/music-for-restaurants-and-bars',
+                destination: '/:lang/industries/music-for-restaurants-and-bars',
+                permanent: true, // 308 - permanent redirect
+            },
+            
+            // Fix missing /services/ prefix for service pages (localized)
+            {
+                source: '/:lang/sonic-identity',
+                destination: '/:lang/services/sonic-identity',
+                permanent: true, // 308 - permanent redirect
+            },
+            {
+                source: '/:lang/signature-playlists',
+                destination: '/:lang/services/signature-playlists',
+                permanent: true, // 308 - permanent redirect
+            },
+            
+            // Fix broken redirects for non-localized URLs (Bing Webmaster Tools)
+            // These need to redirect to the correct path structure with locale
+            {
+                source: '/sonic-identity',
+                destination: '/services/sonic-identity',
+                permanent: true, // 308 - permanent redirect
+            },
+            {
+                source: '/signature-playlists',
+                destination: '/services/signature-playlists',
+                permanent: true, // 308 - permanent redirect
+            },
+            {
+                source: '/music-for-hotels-and-resorts',
+                destination: '/industries/music-for-hotels-and-resorts',
+                permanent: true, // 308 - permanent redirect
+            },
+            {
+                source: '/music-for-restaurants-and-bars',
+                destination: '/industries/music-for-restaurants-and-bars',
+                permanent: true, // 308 - permanent redirect
+            },
+        ];
+    },
+    
     // Caching headers for better performance
     headers: async () => [
         {
