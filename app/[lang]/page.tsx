@@ -103,9 +103,18 @@ export default async function Home({ params }: { params: Promise<{ lang: Locale 
                                     dangerouslySetInnerHTML={{ __html: dict.home.hero.title }}
                                 />
 
-                                <div className="mb-8 max-w-xl slide-up-2">
+                                <div className="mb-8 max-w-xl slide-up-2" style={{ maxWidth: '890px' }}>
                                     {dict.home.hero.subtitle.map((line: string, i: number) => (
-                                        <p key={i} className="text-lg sm:text-xl md:text-2xl text-black/65 leading-relaxed">
+                                        <p 
+                                            key={i} 
+                                            className={
+                                                i === 0 
+                                                    ? "text-xl md:text-2xl text-black font-bold mt-4"
+                                                    : i === 1
+                                                    ? "text-xl md:text-2xl text-black font-bold"
+                                                    : "text-xl md:text-2xl text-black/65 leading-relaxed mt-4"
+                                            }
+                                        >
                                             {line}
                                         </p>
                                     ))}
@@ -128,7 +137,7 @@ export default async function Home({ params }: { params: Promise<{ lang: Locale 
 
                             {/* Image Carousel */}
                             <div className="w-full slide-up-4 flex justify-center lg:justify-end">
-                                <div className="w-full lg:w-[93.5%]">
+                                <div className="w-full lg:w-[84%]">
                                     <HeroCarousel />
                                 </div>
                             </div>
