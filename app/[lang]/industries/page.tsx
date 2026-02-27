@@ -34,7 +34,7 @@ export default async function Industries({
     return (
         <div className="bg-[#faebe3]">
             {/* Hero Section */}
-            <section className="relative pt-32 pb-32 min-h-[90vh] flex flex-col justify-center overflow-hidden">
+            <section className="relative pt-20 sm:pt-24 md:pt-28 lg:pt-32 xl:pt-32 pb-8 lg:pb-24 min-h-[90vh] lg:min-h-screen flex flex-col justify-center overflow-hidden">
                 {/* Background Image Overlay - using inline style for arbitrary external URL from original site */}
                 <div
                     className="absolute inset-0 z-0"
@@ -60,8 +60,8 @@ export default async function Industries({
                         </div>
 
                         {/* Right Column: Square Image */}
-                        <div className="w-full flex justify-center lg:justify-end slide-up-4">
-                            <div className="w-full lg:w-[93.5%]">
+                        <div className="w-full flex justify-end slide-up-4">
+                            <div className="w-full max-w-[740px]">
                                 <div className="overflow-hidden rounded-2xl shadow-2xl bg-white aspect-square relative">
                                     <Image
                                         src="/images/industries/industries-hero.jpg"

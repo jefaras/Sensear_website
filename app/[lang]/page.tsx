@@ -88,7 +88,7 @@ export default async function Home({ params }: { params: Promise<{ lang: Locale 
     return (
         <div className="bg-[#faebe3]">
             {/* Hero Section - Critical, loads immediately */}
-            <section className="relative pt-32 pb-32 min-h-[90vh] flex flex-col justify-center overflow-hidden"
+            <section className="relative pt-32 pb-24 min-h-[90vh] flex flex-col justify-center overflow-hidden"
                 style={{
                     backgroundImage: "url('/images/backgrounds/background-texture-warm-silver.jpg')",
                     backgroundSize: 'cover',
@@ -137,7 +137,7 @@ export default async function Home({ params }: { params: Promise<{ lang: Locale 
 
                             {/* Image Carousel */}
                             <div className="w-full slide-up-4 flex justify-end">
-                                <div className="w-full lg:w-[80%]">
+                                <div className="w-full max-w-[740px]">
                                     <HeroCarousel />
                                 </div>
                             </div>

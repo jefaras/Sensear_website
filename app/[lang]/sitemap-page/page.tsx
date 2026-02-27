@@ -4,6 +4,7 @@ import { getDictionary } from "@/lib/dictionary";
 import type { Locale } from "@/lib/i18n";
 import { Card } from "@/components/ui/card";
 import { FinalCTA } from "@/components/sections/FinalCTA";
+import Image from "next/image";
 
 export default async function SitemapPage({
     params,
@@ -70,36 +71,60 @@ export default async function SitemapPage({
 
     return (
         <div className="bg-[#faebe3]">
+            <style dangerouslySetInnerHTML={{
+                __html: `
+        @keyframes slideUp {
+          from { opacity: 0; transform: translateY(40px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+        .slide-up-1 { animation: slideUp 0.8s ease-out forwards; opacity: 0; }
+        .slide-up-2 { animation: slideUp 0.8s ease-out 0.2s forwards; opacity: 0; }
+        .slide-up-4 { animation: slideUp 0.8s ease-out 0.6s forwards; opacity: 0; }
+
+        @keyframes gradient-shift {
+          0% { background-position: 0% 50%; }
+          50% { background-position: 100% 50%; }
+          100% { background-position: 0% 50%; }
+        }
+        .animated-gradient {
+            background-size: 400% 400%;
+            animation: gradient-shift 10s ease infinite;
+        }
+      `}} />
+
             {/* Hero Section */}
-            <section
-                className="relative pt-32 pb-32 min-h-[50vh] flex flex-col justify-center overflow-hidden"
-                style={{
-                    backgroundImage: "url('/images/backgrounds/background-texture-warm-silver.jpg')",
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center'
-                }}
-            >
-                <div className="w-full px-6 md:px-12 lg:px-16 container mx-auto">
+            <section className="relative pt-20 sm:pt-24 md:pt-28 lg:pt-32 xl:pt-32 pb-8 lg:pb-24 min-h-[90vh] lg:min-h-screen flex flex-col justify-center overflow-hidden">
+                <div
+                    className="absolute inset-0 z-0"
+                    style={{
+                        backgroundImage: "url('/images/backgrounds/background-texture-warm-silver.jpg')",
+                        backgroundSize: 'cover',
+                        backgroundPosition: 'center'
+                    }}
+                />
+
+                <div className="w-full px-6 md:px-12 lg:px-16 relative z-10">
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
                         <div className="flex flex-col justify-center text-left">
-                            <h1 className="text-[2.2rem] sm:text-[3.2rem] md:text-[4rem] lg:text-[4.8rem] font-extrabold text-black mb-6 leading-[1.1]">
+                            <h1 className="text-[2.2rem] sm:text-[3.2rem] md:text-[4rem] lg:text-[4.8rem] font-extrabold text-black mb-6 leading-[1.1] slide-up-1">
                                 {content.hero.title}
                             </h1>
-                            <p className="text-xl md:text-2xl text-black/70 leading-relaxed">
+                            <p className="text-xl md:text-2xl text-black/70 leading-relaxed slide-up-2">
                                 {content.hero.subtitle}
                             </p>
                         </div>
 
-                        <div className="w-full flex justify-center lg:justify-end">
-                            <div className="w-full lg:w-[93.5%]">
-                                <div className="overflow-hidden rounded-2xl shadow-2xl">
-                                    <div className="relative aspect-square">
-                                        <img
-                                            src="/images/sitemap-visual.jpg"
-                                            alt="Sitemap"
-                                            className="w-full h-full object-cover"
-                                        />
-                                    </div>
+                        <div className="w-full slide-up-4 flex justify-end">
+                            <div className="w-full max-w-[740px]">
+                                <div className="overflow-hidden rounded-2xl shadow-2xl bg-white aspect-square relative">
+                                    <Image
+                                        src="/images/sitemap-visual.jpg"
+                                        alt="Sitemap"
+                                        fill
+                                        className="object-cover"
+                                        sizes="(max-width: 768px) 100vw, 50vw"
+                                        priority
+                                    />
                                 </div>
                             </div>
                         </div>

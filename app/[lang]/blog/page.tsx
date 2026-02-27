@@ -1,10 +1,8 @@
 import { getDictionary } from "@/lib/dictionary";
 import { Locale } from "@/lib/i18n";
-import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { Metadata } from "next";
-import { NewsletterCTA } from "@/components/sections/NewsletterCTA";
 import Image from "next/image";
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: Locale }> }): Promise<Metadata> {
@@ -27,53 +25,86 @@ export default async function Blog({
 
     const featuredArticle = content.articles[0];
     const recentArticles = content.articles.slice(1);
+    const gridArticles = featuredArticle ? recentArticles : content.articles;
 
     return (
-        <div className="bg-[#faebe3] min-h-screen pt-32 pb-24">
-            <div className="max-w-7xl mx-auto px-6">
-                {/* Hero Section */}
-                <div className="text-center max-w-4xl mx-auto mb-20 space-y-8">
-                    <h1 className="text-[2.2rem] sm:text-[3.2rem] md:text-[4rem] lg:text-[4.8rem] font-extrabold text-black leading-[1.1] tracking-tight slide-up-1">{content.hero.title}</h1>
-                    <p className="text-xl md:text-2xl text-black/60 leading-relaxed max-w-2xl text-center mx-auto slide-up-2">{content.hero.subtitle}</p>
-                </div>
+        <div className="bg-[#faebe3]">
+            {/* Hero Section */}
+            <section className="relative pt-20 sm:pt-24 md:pt-28 lg:pt-32 xl:pt-32 pb-8 lg:pb-24 min-h-[90vh] lg:min-h-screen flex flex-col justify-center overflow-hidden">
+                <div
+                    className="absolute inset-0 z-0"
+                    style={{
+                        backgroundImage: "url('/images/backgrounds/background-texture-warm-silver.jpg')",
+                        backgroundSize: 'cover',
+                        backgroundPosition: 'center'
+                    }}
+                />
 
-                {/* Featured Article */}
-                {featuredArticle && (
-                    <div className="mb-24 slide-up-4">
-                        <Link href={`/${lang}/blog/${featuredArticle.link}`} className="group block">
-                            <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-[2/1]">
-                                <Image
-                                    src={featuredArticle.image}
-                                    alt={featuredArticle.alt || featuredArticle.title}
-                                    fill
-                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1200px"
-                                    className="object-cover transition-transform duration-700 group-hover:scale-105"
-                                    priority
-                                />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-8 md:p-12">
-                                    <span className="inline-block px-4 py-1.5 bg-white/20 backdrop-blur-md text-white text-sm font-semibold rounded-full mb-4 w-fit">
-                                        {featuredArticle.tag}
-                                    </span>
-                                    <h2 className="text-3xl md:text-5xl font-bold text-white mb-4 group-hover:underline decoration-2 underline-offset-4">
-                                        {featuredArticle.title}
-                                    </h2>
-                                    <p className="text-lg md:text-xl text-white/90 max-w-2xl mb-6">
-                                        {featuredArticle.desc}
-                                    </p>
-                                    <div className="flex items-center text-white font-semibold">
-                                        {content.featured.read_more} <ArrowRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
+                <div className="w-full px-6 md:px-12 lg:px-16 relative z-10">
+                    <div className="grid lg:grid-cols-2 gap-12 items-center">
+                        <div className="flex flex-col justify-center text-left">
+                            <h1 className="text-[2.2rem] sm:text-[3.2rem] md:text-[4rem] lg:text-[4.8rem] font-extrabold text-black mb-6 leading-[1.1] tracking-tight slide-up-1">
+                                {content.hero.title}
+                            </h1>
+                            <p className="text-xl md:text-2xl text-black/60 leading-relaxed max-w-2xl slide-up-2">
+                                {content.hero.subtitle}
+                            </p>
+                        </div>
+
+                        <div className="w-full slide-up-4 flex justify-end">
+                            <div className="w-full max-w-[740px]">
+                                {featuredArticle ? (
+                                    <Link href={`/${lang}/blog/${featuredArticle.link}`} className="group block">
+                                        <div className="relative overflow-hidden rounded-2xl shadow-2xl bg-white aspect-square">
+                                            <Image
+                                                src={featuredArticle.image}
+                                                alt={featuredArticle.alt || featuredArticle.title}
+                                                fill
+                                                sizes="(max-width: 768px) 100vw, 50vw"
+                                                className="object-cover transition-transform duration-700 group-hover:scale-105"
+                                                priority
+                                            />
+                                            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent flex flex-col justify-end p-6 md:p-8">
+                                                <span className="inline-block px-3 py-1.5 bg-white/20 backdrop-blur-md text-white text-xs md:text-sm font-semibold rounded-full mb-3 w-fit">
+                                                    {featuredArticle.tag}
+                                                </span>
+                                                <h2 className="text-2xl md:text-4xl font-bold text-white mb-3 leading-tight group-hover:underline decoration-2 underline-offset-4">
+                                                    {featuredArticle.title}
+                                                </h2>
+                                                <p className="text-base md:text-lg text-white/90 mb-4 line-clamp-3">
+                                                    {featuredArticle.desc}
+                                                </p>
+                                                <div className="flex items-center text-white font-semibold">
+                                                    {content.featured.read_more}
+                                                    <ArrowRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </Link>
+                                ) : (
+                                    <div className="relative overflow-hidden rounded-2xl shadow-2xl bg-white aspect-square">
+                                        <Image
+                                            src="/images/blog/blog-faq-default.jpg"
+                                            alt="Blog hero image"
+                                            fill
+                                            sizes="(max-width: 768px) 100vw, 50vw"
+                                            className="object-cover"
+                                            priority
+                                        />
                                     </div>
-                                </div>
+                                )}
                             </div>
-                        </Link>
+                        </div>
                     </div>
-                )}
+                </div>
+            </section>
 
+            <div className="max-w-7xl mx-auto px-6 pb-24">
                 {/* Recent Articles Grid */}
-                <div className="mb-16">
+                <div className="pt-16 mb-16">
                     <h3 className="text-2xl font-bold text-black mb-10">{content.recent.title}</h3>
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {recentArticles.map((article, index) => (
+                        {gridArticles.map((article) => (
                             <Link
                                 key={article.link}
                                 href={`/${lang}/blog/${article.link}`}
@@ -110,20 +141,6 @@ export default async function Blog({
                         ))}
                     </div>
                 </div>
-
-                {/* Stay Updated Section - temporarily disabled */}
-                {/*
-                <NewsletterCTA
-                    heading={lang === 'el' ? 'Μείνετε ενημερωμένοι' : 'Stay Updated'}
-                    text={lang === 'el' 
-                        ? 'Εγγραφείτε στο newsletter μας για τα τελευταία νέα και συμβουλές μουσικής επιμέλειας.'
-                        : 'Subscribe to our newsletter for the latest news and music curation insights.'
-                    }
-                    placeholder={lang === 'el' ? 'Το email σας' : 'Your email'}
-                    buttonText={lang === 'el' ? 'Εγγραφή' : 'Subscribe'}
-                    lang={lang}
-                />
-                */}
             </div>
         </div>
     );

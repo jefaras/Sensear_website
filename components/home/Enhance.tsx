@@ -18,8 +18,8 @@ export default function Enhance({ lang, title, subtitle, items, cta }: EnhancePr
         <section className="py-24 bg-black">
             <div className="max-w-7xl mx-auto px-6">
                 <div className="grid md:grid-cols-2 gap-12 items-center">
-                    {/* Left: Image */}
-                    <div className="block">
+                    {/* Left: Image - order-2 on mobile (below text), order-1 on desktop (left) */}
+                    <div className="block order-2 md:order-1">
                         <Image
                             src="/images/homepage/vinyl-records-music-curation-optimized.jpg"
                             alt="Enhance your brand with SensEar music curation"
@@ -32,8 +32,8 @@ export default function Enhance({ lang, title, subtitle, items, cta }: EnhancePr
                         />
                     </div>
 
-                    {/* Right: Content */}
-                    <div className="md:pl-12">
+                    {/* Right: Content - order-1 on mobile (above image), order-2 on desktop (right) */}
+                    <div className="md:pl-12 order-1 md:order-2">
                         <h2 className="text-[2.7rem] md:text-[3.45rem] font-bold text-white mb-6 leading-heading">
                             {title}
                         </h2>

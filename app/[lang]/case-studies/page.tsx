@@ -64,7 +64,7 @@ export default async function CaseStudies({
       `}} />
 
             {/* Hero Section */}
-            <section className="relative pt-32 pb-32 min-h-[90vh] flex flex-col justify-center overflow-hidden">
+            <section className="relative pt-20 sm:pt-24 md:pt-28 lg:pt-32 xl:pt-32 pb-8 lg:pb-24 min-h-[90vh] lg:min-h-screen flex flex-col justify-center overflow-hidden">
                 {/* Background Image Overlay */}
                 <div
                     className="absolute inset-0 z-0"
@@ -90,8 +90,8 @@ export default async function CaseStudies({
                         </div>
 
                         {/* Right Column: Square Image */}
-                        <div className="w-full slide-up-4 flex justify-center lg:justify-end">
-                            <div className="w-full lg:w-[93.5%]">
+                        <div className="w-full slide-up-4 flex justify-end">
+                            <div className="w-full max-w-[740px]">
                                 <div className="overflow-hidden rounded-2xl shadow-2xl bg-white aspect-square relative">
                                     <Image
                                         src="/images/case-studies/case-studies-hero.jpg"
