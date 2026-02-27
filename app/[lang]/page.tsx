@@ -137,7 +137,7 @@ export default async function Home({ params }: { params: Promise<{ lang: Locale 
 
                             {/* Image Carousel */}
                             <div className="w-full slide-up-4 flex justify-center lg:justify-end">
-                                <div className="w-full lg:w-[84%]">
+                                <div className="w-full lg:w-[70%]">
                                     <HeroCarousel />
                                 </div>
                             </div>

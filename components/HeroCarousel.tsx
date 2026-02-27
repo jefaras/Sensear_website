@@ -42,7 +42,7 @@ export function HeroCarousel() {
     };
 
     return (
-        <div className="overflow-hidden rounded-2xl shadow-2xl" ref={emblaRef}>
+        <div className="overflow-hidden rounded-2xl shadow-2xl w-full max-w-[700px]" ref={emblaRef}>
             <div className="flex">
                 {images.map((image, index) => (
                     <div className="flex-[0_0_100%] min-w-0 relative aspect-square" key={index}>
