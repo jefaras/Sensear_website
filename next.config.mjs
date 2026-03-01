@@ -47,7 +47,7 @@ const nextConfig = {
             },
             // Fix 404 error: old URL structure for hotels-resorts
             {
-                source: '/:lang/industries/hotels-resorts',
+                source: '/:lang(en|el)/industries/hotels-resorts',
                 destination: '/:lang/industries/music-for-hotels-and-resorts',
                 permanent: true, // 308 - permanent redirect
             },
@@ -65,7 +65,7 @@ const nextConfig = {
                 permanent: true, // 308 - permanent redirect
             },
             {
-                source: '/:lang/klouvi-bar',
+                source: '/:lang(en|el)/klouvi-bar',
                 destination: '/:lang/case-studies',
                 permanent: true, // 308 - permanent redirect
             },
@@ -75,7 +75,7 @@ const nextConfig = {
                 permanent: true, // 308 - permanent redirect
             },
             {
-                source: '/:lang/beach-house-antiparos',
+                source: '/:lang(en|el)/beach-house-antiparos',
                 destination: '/:lang/case-studies',
                 permanent: true, // 308 - permanent redirect
             },
@@ -84,31 +84,31 @@ const nextConfig = {
 
             // Fix double /services/services/ duplication
             {
-                source: '/:lang/services/services/:slug',
+                source: '/:lang(en|el)/services/services/:slug',
                 destination: '/:lang/services/:slug',
                 permanent: true, // 308 - permanent redirect
             },
 
             // Fix missing /industries/ prefix for industry pages
             {
-                source: '/:lang/music-for-hotels-and-resorts',
+                source: '/:lang(en|el)/music-for-hotels-and-resorts',
                 destination: '/:lang/industries/music-for-hotels-and-resorts',
                 permanent: true, // 308 - permanent redirect
             },
             {
-                source: '/:lang/music-for-restaurants-and-bars',
+                source: '/:lang(en|el)/music-for-restaurants-and-bars',
                 destination: '/:lang/industries/music-for-restaurants-and-bars',
                 permanent: true, // 308 - permanent redirect
             },
 
             // Fix missing /services/ prefix for service pages (localized)
             {
-                source: '/:lang/sonic-identity',
+                source: '/:lang(en|el)/sonic-identity',
                 destination: '/:lang/services/sonic-identity',
                 permanent: true, // 308 - permanent redirect
             },
             {
-                source: '/:lang/signature-playlists',
+                source: '/:lang(en|el)/signature-playlists',
                 destination: '/:lang/services/signature-playlists',
                 permanent: true, // 308 - permanent redirect
             },
