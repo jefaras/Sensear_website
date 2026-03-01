@@ -16,11 +16,21 @@ const nextConfig = {
             },
         ],
     },
-    
+
+    // Disable ES Lint and Typescript checks during build to prevent out-of-memory errors
+    // Since we check the code locally before pushing, running it again on a low-RAM production 
+    // server is redundant and often kills the build process (Exit code: 9).
+    typescript: {
+        ignoreBuildErrors: true,
+    },
+    eslint: {
+        ignoreDuringBuilds: true,
+    },
+
     // Turbopack configuration (Next.js 16 default bundler)
     // Keep empty config for dev mode, but use --no-turbopack for production builds
     turbopack: {},
-    
+
     // Redirects to fix Google Search Console indexing issues
     async redirects() {
         return [
@@ -69,16 +79,16 @@ const nextConfig = {
                 destination: '/:lang/case-studies',
                 permanent: true, // 308 - permanent redirect
             },
-            
+
             // Fix Bing Webmaster Tools 400-499 errors
-            
+
             // Fix double /services/services/ duplication
             {
                 source: '/:lang/services/services/:slug',
                 destination: '/:lang/services/:slug',
                 permanent: true, // 308 - permanent redirect
             },
-            
+
             // Fix missing /industries/ prefix for industry pages
             {
                 source: '/:lang/music-for-hotels-and-resorts',
@@ -90,7 +100,7 @@ const nextConfig = {
                 destination: '/:lang/industries/music-for-restaurants-and-bars',
                 permanent: true, // 308 - permanent redirect
             },
-            
+
             // Fix missing /services/ prefix for service pages (localized)
             {
                 source: '/:lang/sonic-identity',
@@ -102,7 +112,7 @@ const nextConfig = {
                 destination: '/:lang/services/signature-playlists',
                 permanent: true, // 308 - permanent redirect
             },
-            
+
             // Fix broken redirects for non-localized URLs (Bing Webmaster Tools)
             // These need to redirect to the correct path structure with locale
             {
@@ -127,7 +137,7 @@ const nextConfig = {
             },
         ];
     },
-    
+
     // Caching headers for better performance
     headers: async () => [
         {
@@ -152,7 +162,7 @@ const nextConfig = {
             ],
         },
     ],
-    
+
     // Enable experimental features for package import optimization
     experimental: {
         // Enable Lightning CSS for CSS optimization (reduces CSS size by 20-30%)
@@ -173,7 +183,7 @@ const nextConfig = {
             '@radix-ui/react-tooltip',
         ],
     },
-    
+
     // Webpack configuration for bundle optimization
     webpack: (config, { isServer }) => {
         // Enable tree shaking
@@ -182,7 +192,7 @@ const nextConfig = {
             usedExports: true,
             sideEffects: true,
         };
-        
+
         // Split chunks configuration for better caching and smaller bundles
         if (!isServer) {
             config.optimization.splitChunks = {
@@ -227,7 +237,7 @@ const nextConfig = {
                 minSize: 20000,
             };
         }
-        
+
         return config;
     },
 };
