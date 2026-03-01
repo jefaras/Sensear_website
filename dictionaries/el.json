@@ -355,9 +355,7 @@
         },
         "vision": {
             "heading": "Το όραμά μας",
-            "text": "Η <strong>SensEar</strong> αντιμετωπίζει τη μουσική ως <strong>βασικό μέρος</strong> της <strong>εμπειρίας</strong>: Η μουσική δεν είναι υπόκρουση, αλλά <strong>ατμόσφαιρα</strong>, <strong>μνήμη</strong> και <strong>συναίσθημα</strong> που μπορεί να <strong>επηρεάσει</strong> πώς νιώθουν και συμπεριφέρονται οι επισκέπτες.",
-            "cta": "",
-            "cta_link": ""
+            "text": "Να γίνουμε ο <strong>κορυφαίος μουσικός συνεργάτης</strong> για <strong>εκλεκτικά brands φιλοξενίας</strong> & <strong>events</strong> που επιδιώκουν να <strong>εκφράσουν ταυτότητα</strong>, να <strong>αναβαθμίσουν την ατμόσφαιρα</strong> και να <strong>δημιουργήσουν διαρκείς συνδέσεις</strong> με τους επισκέπτες."
         },
         "philosophy": {
             "heading": "Η φιλοσοφία μας",
@@ -389,12 +387,6 @@
                 }
             ],
             "image": "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/92f0d2705_16685b806_pexels-monstera-1408089.jpg"
-        },
-        "vision": {
-            "heading": "Το όραμά μας",
-            "text": "Να γίνουμε ο <strong>κορυφαίος μουσικός συνεργάτης</strong> για <strong>εκλεκτικά brands φιλοξενίας</strong> & <strong>events</strong> που επιδιώκουν να <strong>εκφράσουν ταυτότητα</strong>, να <strong>αναβαθμίσουν την ατμόσφαιρα</strong> και να <strong>δημιουργήσουν διαρκείς συνδέσεις</strong> με τους επισκέπτες.",
-            "link_text": "υπηρεσία sonic identity",
-            "link": "services/sonic-identity"
         },
         "team": {
             "heading": "Γνωρίστε την ομάδα",
