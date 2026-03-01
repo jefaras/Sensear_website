@@ -27,7 +27,7 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: Lo
     const content = dict.about_page;
 
     return (
-        <div className="bg-[#faebe3] min-h-screen relative overflow-x-hidden">
+        <main className="bg-[#faebe3] min-h-screen relative overflow-x-hidden">
             <style dangerouslySetInnerHTML={{
                 __html: `
         @keyframes slideUp {
@@ -168,10 +168,12 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: Lo
 
                         {/* Right Column: Image */}
                         <div className="hidden lg:block">
-                            <img
+                            <Image
                                 src={content.journey.image}
-                                alt="Journey"
-                                className="w-full rounded-2xl shadow-lg"
+                                alt={lang === 'el' ? 'Η πορεία μας' : 'Our journey'}
+                                width={800}
+                                height={800}
+                                className="w-full h-auto rounded-2xl shadow-lg"
                             />
                         </div>
                     </div>
@@ -208,9 +210,10 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: Lo
                                                 : "G's lifelong passion for music and record collecting was further shaped by a BA in Media & Communications and an MA in Popular Music in Film."
                                             }
                                         </p>
-                                        <p className="text-lg md:text-xl text-black/60 leading-relaxed mb-4" dangerouslySetInnerHTML={{ __html: lang === 'el'
-                                            ? 'Σύντομα καθιερώθηκε ως τακτικός guest DJ στην αθηναϊκή σκηνή, αναλαμβάνοντας ιδιωτικά πάρτι και residencies σε εμβληματικούς χώρους όπως το <strong>Balux</strong>, το <strong>Sunset Antiparos</strong> και το <strong>Burger Disco</strong>. Παράλληλα, έχει μοιραστεί τα decks με κορυφαίες προσωπικότητες του χώρου, όπως η <strong>Colleen "Cosmo" Murphy</strong>, ο <strong>Danny Krivit</strong> και ο <strong>Gerd Janson</strong>.'
-                                            : 'He soon became a regular guest DJ on the Athens scene, holding private parties and long-term residencies at venues such as <strong>Balux</strong>, <strong>Sunset Antiparos</strong>, and <strong>Burger Disco</strong>, while sharing the decks with key DJ figures like <strong>Colleen "Cosmo" Murphy</strong>, <strong>Danny Krivit</strong>, and <strong>Gerd Janson</strong>.'
+                                        <p className="text-lg md:text-xl text-black/60 leading-relaxed mb-4" dangerouslySetInnerHTML={{
+                                            __html: lang === 'el'
+                                                ? 'Σύντομα καθιερώθηκε ως τακτικός guest DJ στην αθηναϊκή σκηνή, αναλαμβάνοντας ιδιωτικά πάρτι και residencies σε εμβληματικούς χώρους όπως το <strong>Balux</strong>, το <strong>Sunset Antiparos</strong> και το <strong>Burger Disco</strong>. Παράλληλα, έχει μοιραστεί τα decks με κορυφαίες προσωπικότητες του χώρου, όπως η <strong>Colleen "Cosmo" Murphy</strong>, ο <strong>Danny Krivit</strong> και ο <strong>Gerd Janson</strong>.'
+                                                : 'He soon became a regular guest DJ on the Athens scene, holding private parties and long-term residencies at venues such as <strong>Balux</strong>, <strong>Sunset Antiparos</strong>, and <strong>Burger Disco</strong>, while sharing the decks with key DJ figures like <strong>Colleen "Cosmo" Murphy</strong>, <strong>Danny Krivit</strong>, and <strong>Gerd Janson</strong>.'
                                         }} />
                                         <p className="text-lg md:text-xl text-black/60 leading-relaxed">
                                             {lang === 'el'
@@ -266,10 +269,11 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: Lo
                                                 : 'From his early DJ sets to his studies in Hospitality Management, JEF has always been guided by music\'s magnetic pull.'
                                             }
                                         </p>
-                                        <p className="text-lg md:text-xl text-black/60 leading-relaxed mb-4" dangerouslySetInnerHTML={{ __html: lang === 'el'
+                                        <p className="text-lg md:text-xl text-black/60 leading-relaxed mb-4" dangerouslySetInnerHTML={{
+                                            __html: lang === 'el'
                                                 ? 'Είναι συνιδρυτής μιας επιτυχημένης digital agency, με 25ετή εμπειρία στις <strong>Διαδικτυακές Υπηρεσίες</strong>, τις <strong>Πωλήσεις/Marketing</strong> και την <strong>Εξυπηρέτηση Πελατών</strong>. Είναι κάτοχος πτυχίου στη <strong>Διοίκηση Φιλοξενίας</strong> και στον <strong>Σχεδιασμό Εμπειριών & Υπηρεσιών</strong> (Hospitality Management & Experience Design) από το Πανεπιστήμιο Εφαρμοσμένων Επιστημών Haaga-Helia.'
                                                 : 'He is a co-founder of a successful digital agency, with 25 years of experience in <strong>Web Services</strong>, <strong>Sales/Marketing</strong> & <strong>Customer Care</strong> and a degree in <strong>Hospitality Management</strong> and <strong>Experience Design</strong> from the Haaga-Helia University of Applied Science.'
-                                            }}>
+                                        }}>
                                         </p>
                                         <p className="text-lg md:text-xl text-black/60 leading-relaxed">
                                             {lang === 'el'
@@ -368,9 +372,11 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: Lo
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
                         {/* Left: Image */}
                         <div className="hidden lg:block">
-                            <img
+                            <Image
                                 src="/images/about/about-unique-approach.jpg"
                                 alt={lang === 'el' ? 'Η μοναδική προσέγγιση της SensEar' : 'SensEar unique approach'}
+                                width={800}
+                                height={800}
                                 className="w-full h-auto rounded-2xl shadow-lg"
                             />
                         </div>
@@ -470,6 +476,6 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: Lo
                 buttons={content.final_cta.buttons}
                 lang={lang}
             />
-        </div>
+        </main>
     );
 }

@@ -15,7 +15,7 @@ export default async function SignaturePlaylistsPage({
     const t = dict.signature_playlists;
 
     return (
-        <div className="bg-[#faebe3]">
+        <main className="bg-[#faebe3]">
             <style dangerouslySetInnerHTML={{
                 __html: `
                 @keyframes slideUp {
@@ -204,6 +204,6 @@ export default async function SignaturePlaylistsPage({
                 ]}
                 lang={lang}
             />
-        </div>
+        </main>
     );
 }

@@ -11,7 +11,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: Loc
     const { lang } = await params;
     const dict = await getDictionary(lang);
     const t = dict.restaurants_bars;
-    
+
     return {
         title: t.meta?.title || "Music for Restaurants & Bars | SensEar",
         description: lang === 'el'
@@ -33,7 +33,7 @@ export default async function RestaurantsBarsPage({ params }: { params: Promise<
     const t = dict.restaurants_bars;
 
     return (
-        <div className="bg-[#faebe3]">
+        <main className="bg-[#faebe3]">
             <section className="relative pt-20 sm:pt-24 md:pt-28 lg:pt-32 xl:pt-32 pb-8 lg:pb-24 min-h-[90vh] lg:min-h-screen flex flex-col justify-center overflow-hidden" style={{ backgroundImage: "url('/images/backgrounds/background-texture-warm-silver.jpg')", backgroundSize: 'cover', backgroundPosition: 'center' }}>
                 <div className="w-full px-6 md:px-12 lg:px-16"><div className="grid lg:grid-cols-2 gap-12 items-center">
                     <div className="flex flex-col justify-center text-left">
@@ -106,6 +106,6 @@ export default async function RestaurantsBarsPage({ params }: { params: Promise<
                 ]}
                 lang={lang}
             />
-        </div>
+        </main>
     );
 }

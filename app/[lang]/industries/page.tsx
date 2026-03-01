@@ -32,7 +32,7 @@ export default async function Industries({
     const content = dict.industries_page;
 
     return (
-        <div className="bg-[#faebe3]">
+        <main className="bg-[#faebe3]">
             {/* Hero Section */}
             <section className="relative pt-20 sm:pt-24 md:pt-28 lg:pt-32 xl:pt-32 pb-8 lg:pb-24 min-h-[90vh] lg:min-h-screen flex flex-col justify-center overflow-hidden">
                 {/* Background Image Overlay - using inline style for arbitrary external URL from original site */}
@@ -204,7 +204,7 @@ export default async function Industries({
                         <div className="order-1 lg:order-2 md:pl-12">
                             <h2 className="text-[2.7rem] md:text-[3.45rem] font-bold text-black mb-6 leading-heading">{content.connect.title}</h2>
                             <p className="text-xl text-black/60 font-medium mb-12 leading-relaxed">{content.connect.subtitle}</p>
-                            
+
                             <div className="space-y-4 mb-8">
                                 {content.connect.points.map((point, i) => (
                                     <div key={i} className="flex items-start gap-3">
@@ -234,6 +234,6 @@ export default async function Industries({
                 ]}
                 lang={lang}
             />
-        </div>
+        </main>
     );
 }

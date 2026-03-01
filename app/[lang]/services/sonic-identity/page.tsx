@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import Image from "next/image";
 import { getDictionary } from "@/lib/dictionary";
 import type { Locale } from "@/lib/i18n";
 import { FinalCTA } from "@/components/sections/FinalCTA";
@@ -10,7 +11,7 @@ export default async function SonicIdentityPage({ params }: { params: Promise<{ 
     const t = dict.sonic_identity;
 
     return (
-        <div className="bg-[#faebe3]">
+        <main className="bg-[#faebe3]">
             <section className="relative pt-20 sm:pt-24 md:pt-28 lg:pt-32 xl:pt-32 pb-8 lg:pb-24 min-h-[90vh] lg:min-h-screen flex flex-col justify-center overflow-hidden" style={{ backgroundImage: "url('/images/backgrounds/background-texture-warm-silver.jpg')", backgroundSize: 'cover', backgroundPosition: 'center' }}>
                 <div className="w-full px-6 md:px-12 lg:px-16"><div className="grid lg:grid-cols-2 gap-12 items-center">
                     <div className="flex flex-col justify-center text-left">
@@ -21,7 +22,7 @@ export default async function SonicIdentityPage({ params }: { params: Promise<{ 
                         <p className="text-xl md:text-2xl text-black/70 leading-relaxed slide-up-2">{t.hero.description}</p>
                     </div>
                     <div className="w-full slide-up-4 flex justify-end"><div className="w-full max-w-[740px]"><div className="overflow-hidden rounded-2xl shadow-2xl"><div className="relative aspect-square">
-                        <img src="/images/services/sonic-identity/sonic-identity-hero.jpg" alt="Sonic identity and audio branding for brands" className="w-full h-full object-cover" />
+                        <Image src="/images/services/sonic-identity/sonic-identity-hero.jpg" alt="Sonic identity and audio branding for brands" fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" />
                     </div></div></div></div>
                 </div></div>
             </section>
@@ -36,7 +37,7 @@ export default async function SonicIdentityPage({ params }: { params: Promise<{ 
                 <h2 className="text-[2.7rem] md:text-[3.45rem] font-bold mb-4 text-black text-center leading-heading">{t.what_we_do.title}</h2>
                 <p className="text-xl text-black/60 font-medium text-center mb-12">{t.what_we_do.subtitle}</p>
                 <div className="grid lg:grid-cols-2 gap-12 items-center">
-                    <div className="hidden lg:block"><img src="/images/services/sonic-identity/sonic-identity-workshop.jpg" alt="Sonic DNA workshop and brand audio strategy" className="w-full h-auto rounded-2xl shadow-lg" /></div>
+                    <div className="hidden lg:block"><Image src="/images/services/sonic-identity/sonic-identity-workshop.jpg" alt="Sonic DNA workshop and brand audio strategy" width={800} height={600} sizes="50vw" className="w-full h-auto rounded-2xl shadow-lg" /></div>
                     <div className="space-y-8">
                         {t.what_we_do.items.map((item: any, index: number) => (
                             <div key={index}>
@@ -62,13 +63,13 @@ export default async function SonicIdentityPage({ params }: { params: Promise<{ 
                             </li>
                         ))}
                     </ul></div>
-                    <div className="hidden lg:block"><img src="/images/services/sonic-identity/sonic-identity-development.jpg" alt="Brand sonic identity development" className="w-full h-auto rounded-2xl shadow-lg" /></div>
+                    <div className="hidden lg:block"><Image src="/images/services/sonic-identity/sonic-identity-development.jpg" alt="Brand sonic identity development" width={800} height={600} sizes="50vw" className="w-full h-auto rounded-2xl shadow-lg" /></div>
                 </div>
             </div></section>
             <section className="py-20 bg-white"><div className="max-w-7xl mx-auto px-6">
                 <h2 className="text-[2.7rem] md:text-[3.45rem] font-bold mb-12 text-black text-center leading-heading">{t.identity.title}</h2>
                 <div className="grid lg:grid-cols-2 gap-12 items-center">
-                    <div className="hidden lg:block"><img src="/images/services/sonic-identity/sonic-identity-implementation.jpg" alt="Sonic identity implementation process" className="w-full h-auto rounded-2xl shadow-lg" /></div>
+                    <div className="hidden lg:block"><Image src="/images/services/sonic-identity/sonic-identity-implementation.jpg" alt="Sonic identity implementation process" width={800} height={600} sizes="50vw" className="w-full h-auto rounded-2xl shadow-lg" /></div>
                     <div className="space-y-8">
                         {t.identity.items.map((item: any, index: number) => (
                             <div key={index}>
@@ -88,6 +89,6 @@ export default async function SonicIdentityPage({ params }: { params: Promise<{ 
                 ]}
                 lang={lang}
             />
-        </div>
+        </main>
     );
 }

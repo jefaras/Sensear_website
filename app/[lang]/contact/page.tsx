@@ -20,7 +20,7 @@ export default async function Contact({ params }: { params: Promise<{ lang: Loca
     const dict = await getDictionary(lang);
 
     return (
-        <div className="bg-[#faebe3]">
+        <main className="bg-[#faebe3]">
             <section className="relative pt-20 sm:pt-24 md:pt-28 lg:pt-32 xl:pt-32 pb-8 lg:pb-24 min-h-[90vh] lg:min-h-screen flex flex-col justify-center overflow-hidden">
                 {/* Background - using inline style for arbitrary external URL */}
                 <div
@@ -79,7 +79,7 @@ export default async function Contact({ params }: { params: Promise<{ lang: Loca
                         {/*
                         <ContactForm labels={dict.contact.form} />
                         */}
-                        
+
                         {/* Temporary replacement message */}
                         <div className="space-y-4 text-lg text-black/80 leading-relaxed">
                             <p className="font-semibold text-xl">
@@ -183,6 +183,6 @@ export default async function Contact({ params }: { params: Promise<{ lang: Loca
                     </div>
                 </div>
             </section>
-        </div>
+        </main>
     );
 }

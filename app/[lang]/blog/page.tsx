@@ -28,7 +28,7 @@ export default async function Blog({
     const gridArticles = featuredArticle ? recentArticles : content.articles;
 
     return (
-        <div className="bg-[#faebe3]">
+        <main className="bg-[#faebe3]">
             {/* Hero Section */}
             <section className="relative pt-20 sm:pt-24 md:pt-28 lg:pt-32 xl:pt-32 pb-8 lg:pb-24 min-h-[90vh] lg:min-h-screen flex flex-col justify-center overflow-hidden">
                 <div
@@ -142,6 +142,6 @@ export default async function Blog({
                     </div>
                 </div>
             </div>
-        </div>
+        </main>
     );
 }

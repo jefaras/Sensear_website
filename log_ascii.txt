@@ -1,0 +1,68 @@
+commit 38992c0cc9911f71b9b3d805a69da5585c7fbd4a
+Author: jefaras <jefaraz@gmail.com>
+Date:   Sat Feb 28 13:25:07 2026 +0200
+
+    Update dictionary files
+
+ dictionaries/el.json | 146 +++++++++++++++++++++++++--------------------------
+ dictionaries/en.json |   2 +-
+ 2 files changed, 74 insertions(+), 74 deletions(-)
+
+commit fd0fb3367d456dca2f9cbe887656d97827d2e3eb
+Author: jefaras <jefaraz@gmail.com>
+Date:   Fri Feb 27 17:41:24 2026 +0200
+
+    Refine localized pages and global styling updates
+
+ app/[lang]/about/page.tsx                          |   6 +-
+ app/[lang]/blog/page.tsx                           | 123 ++++++++++++---------
+ app/[lang]/case-studies/page.tsx                   |   6 +-
+ app/[lang]/contact/page.tsx                        |   6 +-
+ app/[lang]/faq/page.tsx                            |   6 +-
+ .../music-for-art-museums-and-fashion/page.tsx     |   4 +-
+ .../music-for-events-and-experiences/page.tsx      |   6 +-
+ .../music-for-hotels-and-resorts/page.tsx          |   4 +-
+ .../music-for-restaurants-and-bars/page.tsx        |   4 +-
+ .../industries/music-for-retail-stores/page.tsx    |   4 +-
+ .../music-for-wellness-and-gyms/page.tsx           |   4 +-
+ app/[lang]/industries/page.tsx                     |   6 +-
+ app/[lang]/page.tsx                                |   4 +-
+ app/[lang]/services/audio-upgrades/page.tsx        |   4 +-
+ app/[lang]/services/event-soundtracks/page.tsx     |   6 +-
+ app/[lang]/services/page.tsx                       |   6 +-
+ app/[lang]/services/signature-playlists/page.tsx   |   6 +-
+ app/[lang]/services/sonic-identity/page.tsx        |   4 +-
+ app/[lang]/sitemap-page/page.tsx                   |  67 +++++++----
+ app/globals.css                                    |   3 +
+ components/home/Enhance.tsx                        |   8 +-
+ 21 files changed, 166 insertions(+), 121 deletions(-)
+
+commit 05f57c19a51d33a860969354524095d5d45b2785
+Author: jefaras <jefaraz@gmail.com>
+Date:   Fri Feb 27 14:35:10 2026 +0200
+
+    Fix hero carousel size and centering
+
+ app/[lang]/page.tsx         | 4 ++--
+ components/HeroCarousel.tsx | 2 +-
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+
+commit 3ada3df7f313aaba22d9030ae29c6567edabe5bb
+Author: jefaras <jefaraz@gmail.com>
+Date:   Fri Feb 27 04:29:24 2026 +0200
+
+    Reduce hero carousel size to fit within viewport
+
+ app/[lang]/page.tsx         | 2 +-
+ components/HeroCarousel.tsx | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+commit 6969aeea9b9d72bce08a98eb5cfdc1e9adae8309
+Author: jefaras <jefaraz@gmail.com>
+Date:   Fri Feb 27 03:54:14 2026 +0200
+
+    Apply same font size as Services page to Home Page subtitle
+
+ app/[lang]/page.tsx  |  15 +-
+ dictionaries/el.json | 667 +++++++++++++++++++++++++--------------------------
+ 2 files changed, 345 insertions(+), 337 deletions(-)

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import Image from "next/image";
 import { getDictionary } from "@/lib/dictionary";
 import type { Locale } from "@/lib/i18n";
 import { FinalCTA } from "@/components/sections/FinalCTA";
@@ -14,7 +15,7 @@ export default async function EventSoundtracksPage({
     const t = dict.event_soundtracks;
 
     return (
-        <div className="bg-[#faebe3]">
+        <main className="bg-[#faebe3]">
             <style dangerouslySetInnerHTML={{
                 __html: `
                 @keyframes slideUp {
@@ -43,7 +44,7 @@ export default async function EventSoundtracksPage({
                             <div className="w-full max-w-[740px]">
                                 <div className="overflow-hidden rounded-2xl shadow-2xl">
                                     <div className="relative aspect-square">
-                                        <img src="/images/services/event-soundtracks/event-soundtracks-hero.jpg" alt="Custom event soundtracks and live DJ programming" className="w-full h-full object-cover" />
+                                        <Image src="/images/services/event-soundtracks/event-soundtracks-hero.jpg" alt="Custom event soundtracks and live DJ programming" fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" />
                                     </div>
                                 </div>
                             </div>
@@ -71,7 +72,7 @@ export default async function EventSoundtracksPage({
                     <h2 className="text-[2.7rem] md:text-[3.45rem] font-bold mb-12 text-black text-center leading-heading">{t.what_we_do.title}</h2>
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
                         <div className="hidden lg:block">
-                            <img src="/images/services/event-soundtracks/event-soundtracks-planning.jpg" alt="Event soundtrack planning and execution" className="w-full h-auto rounded-2xl shadow-lg" />
+                            <Image src="/images/services/event-soundtracks/event-soundtracks-planning.jpg" alt="Event soundtrack planning and execution" width={800} height={600} sizes="50vw" className="w-full h-auto rounded-2xl shadow-lg" />
                         </div>
                         <div className="space-y-8">
                             {t.what_we_do.items.map((item: any, index: number) => (
@@ -101,7 +102,7 @@ export default async function EventSoundtracksPage({
                             </ul>
                         </div>
                         <div className="hidden lg:block">
-                            <img src="/images/services/event-soundtracks/event-soundtracks-venue.jpg" alt="Event venue with curated soundscape" className="w-full h-auto rounded-2xl shadow-lg" />
+                            <Image src="/images/services/event-soundtracks/event-soundtracks-venue.jpg" alt="Event venue with curated soundscape" width={800} height={600} sizes="50vw" className="w-full h-auto rounded-2xl shadow-lg" />
                         </div>
                     </div>
                 </div>
@@ -113,7 +114,7 @@ export default async function EventSoundtracksPage({
                     <h2 className="text-[2.7rem] md:text-[3.45rem] font-bold mb-12 text-black text-center leading-heading">{t.staging.title}</h2>
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
                         <div className="hidden lg:block">
-                            <img src="/images/services/event-soundtracks/event-soundtracks-process.jpg" alt="Event music planning process" className="w-full h-auto rounded-2xl shadow-lg" />
+                            <Image src="/images/services/event-soundtracks/event-soundtracks-process.jpg" alt="Event music planning process" width={800} height={600} sizes="50vw" className="w-full h-auto rounded-2xl shadow-lg" />
                         </div>
                         <div className="space-y-8">
                             {t.staging.items.map((item: any, index: number) => (
@@ -137,6 +138,6 @@ export default async function EventSoundtracksPage({
                 ]}
                 lang={lang}
             />
-        </div>
+        </main>
     );
 }

@@ -51,7 +51,7 @@ export default async function CaseStudies({
     ];
 
     return (
-        <div className="bg-[#faebe3]">
+        <main className="bg-[#faebe3]">
             <style dangerouslySetInnerHTML={{
                 __html: `
         @keyframes slideUp {
@@ -223,6 +223,6 @@ export default async function CaseStudies({
                 ]}
                 lang={lang}
             />
-        </div>
+        </main>
     );
 }

@@ -11,7 +11,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: Loc
     const { lang } = await params;
     const dict = await getDictionary(lang);
     const t = dict.events_experiences;
-    
+
     return {
         title: t.meta?.title || "Music for Events | SensEar",
         description: lang === 'el'
@@ -37,7 +37,7 @@ export default async function EventsExperiencesPage({
     const t = dict.events_experiences;
 
     return (
-        <div className="bg-[#faebe3]">
+        <main className="bg-[#faebe3]">
             {/* Hero Section */}
             <section
                 className="relative pt-20 sm:pt-24 md:pt-28 lg:pt-32 xl:pt-32 pb-8 lg:pb-24 min-h-[90vh] lg:min-h-screen flex flex-col justify-center overflow-hidden"
@@ -196,6 +196,6 @@ export default async function EventsExperiencesPage({
                 ]}
                 lang={lang}
             />
-        </div>
+        </main>
     );
 }

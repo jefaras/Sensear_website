@@ -26,7 +26,7 @@ export default async function Services({
     const content = dict.services_page;
 
     return (
-        <div className="bg-[#faebe3]">
+        <main className="bg-[#faebe3]">
             <style dangerouslySetInnerHTML={{
                 __html: `
         @keyframes slideUp {
@@ -298,7 +298,7 @@ export default async function Services({
                         <div className="order-1 lg:order-2 md:pl-12">
                             <h2 className="text-[2.7rem] md:text-[3.45rem] font-bold text-black mb-6 leading-heading">{content.delivery.title}</h2>
                             <p className="text-xl text-black/60 font-medium mb-12 leading-relaxed">{content.delivery.subtitle}</p>
-                            
+
                             <div className="space-y-8">
                                 {content.delivery.points.map((point, index) => (
                                     <div key={index}>
@@ -324,6 +324,6 @@ export default async function Services({
                 ]}
                 lang={lang}
             />
-        </div>
+        </main>
     );
 }
