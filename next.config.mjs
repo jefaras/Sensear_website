@@ -125,22 +125,22 @@ const nextConfig = {
             // These need to redirect to the correct path structure with locale
             {
                 source: '/sonic-identity',
-                destination: '/services/sonic-identity',
+                destination: '/el/services/sonic-identity',
                 permanent: true, // 308 - permanent redirect
             },
             {
                 source: '/signature-playlists',
-                destination: '/services/signature-playlists',
+                destination: '/el/services/signature-playlists',
                 permanent: true, // 308 - permanent redirect
             },
             {
                 source: '/music-for-hotels-and-resorts',
-                destination: '/industries/music-for-hotels-and-resorts',
+                destination: '/el/industries/music-for-hotels-and-resorts',
                 permanent: true, // 308 - permanent redirect
             },
             {
                 source: '/music-for-restaurants-and-bars',
-                destination: '/industries/music-for-restaurants-and-bars',
+                destination: '/el/industries/music-for-restaurants-and-bars',
                 permanent: true, // 308 - permanent redirect
             },
         ];
