@@ -101,6 +101,14 @@ const nextConfig = {
                 permanent: true, // 308 - permanent redirect
             },
 
+            // Clean up 404 errors for pages Google indexed during the previous redirect loop bug
+            // Specifically catching paths that repeat /industries/industries/
+            {
+                source: '/:lang(en|el)?/industries/industries/:slug',
+                destination: '/:lang/industries/:slug',
+                permanent: true, // 308 - permanent redirect
+            },
+
             // Fix missing /services/ prefix for service pages (localized)
             {
                 source: '/:lang(en|el)/sonic-identity',
