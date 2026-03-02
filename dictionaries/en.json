@@ -10,7 +10,7 @@
     },
     "home": {
         "meta": {
-            "title": "Music Curation & Sonic Branding | SensEar",
+            "title": "Music Curation & Sonic Branding",
             "description": "Expert music curation and sonic branding for hotels, restaurants, and retail. We create atmosphere with character."
         },
         "hero": {
@@ -143,7 +143,7 @@
     },
     "contact": {
         "meta": {
-            "title": "Contact Us | SensEar",
+            "title": "Contact Us",
             "description": "Get in touch with SensEar. We're here to discuss your music curation and sonic branding needs."
         },
         "hero": {
@@ -233,7 +233,6 @@
     },
     "about": {
         "meta": {
-            "title": "About Us | SensEar",
             "description": "Meet the SensEar team. We are experts in music curation and sonic branding, passionate about creating unique experiences."
         },
         "hero": {
@@ -344,7 +343,7 @@
     },
     "about_page": {
         "meta": {
-            "title": "About SensEar | Music Curation Team & Approach",
+            "title": "Our music curation team & approach",
             "description": "Learn how SensEar approaches music curation with clarity and intent, shaping how spaces are felt through sound."
         },
         "hero": {
@@ -355,9 +354,9 @@
         },
         "vision": {
             "heading": "Our vision",
-            "text": "To become the **leading music partner** for **eclectic hospitality brands & events** seeking to express **identity**, elevate **atmosphere** & create **lasting guest connections**.",
-            "cta": "Learn more about creating a unique Sonic Identity",
-            "cta_link": "sonic-identity"
+            "text": "To become the <strong>premier music partner</strong> for <strong>eclectic hospitality brands</strong> & <strong>events</strong> seeking to <strong>express identity</strong>, <strong>elevate atmosphere</strong> & <strong>create lasting guest connections</strong>.",
+            "link_text": "sonic identity service",
+            "link": "services/sonic-identity"
         },
         "philosophy": {
             "heading": "Our philosophy",
@@ -389,12 +388,6 @@
                 }
             ],
             "image": "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/92f0d2705_16685b806_pexels-monstera-1408089.jpg"
-        },
-        "vision": {
-            "heading": "Our vision",
-            "text": "To become the <strong>premier music partner</strong> for <strong>eclectic hospitality brands</strong> & <strong>events</strong> seeking to <strong>express identity</strong>, <strong>elevate atmosphere</strong> & <strong>create lasting guest connections</strong>.",
-            "link_text": "sonic identity service",
-            "link": "services/sonic-identity"
         },
         "team": {
             "heading": "Meet the team",
@@ -473,7 +466,7 @@
     },
     "blog": {
         "meta": {
-            "title": "Music Curation Blog | SensEar",
+            "title": "Music Curation Blog",
             "description": "Articles, insights, and news on music curation, sonic branding, and the importance of sound in customer experience."
         },
         "hero": {
@@ -505,7 +498,7 @@
         },
         "articles": [
             {
-                "title": "How top hospitality brands design their sound on purpose",
+                "title": "Designing sound for hospitality",
                 "desc": "Learn how luxury hospitality brands use strategic music curation and sonic branding to create distinctive customer experiences.",
                 "tag": "Insights",
                 "category": "Insights",
@@ -660,7 +653,7 @@
                 ]
             },
             {
-                "title": "Three reasons to make music part of your luxury hospitality strategy",
+                "title": "Why luxury hotels need music",
                 "desc": "Why curated music is a practical way to shape how guests feel, what they remember, and how they spend.",
                 "tag": "Insights",
                 "category": "Insights",
@@ -722,7 +715,7 @@
                 ]
             },
             {
-                "title": "How brand-fit music converts browsers into buyers",
+                "title": "How music converts buyers",
                 "desc": "Evidence-based research showing how brand-aligned music increases sales by 9.1% in hospitality venues.",
                 "tag": "Research",
                 "category": "Research",
@@ -811,7 +804,7 @@
                 ]
             },
             {
-                "title": "What exactly does a music curator do?",
+                "title": "What does a music curator do?",
                 "desc": "Learn how professional music curators architect brand soundtracks through strategic curation and data-driven sonic branding.",
                 "tag": "Education",
                 "category": "Education",
@@ -935,7 +928,7 @@
                 ]
             },
             {
-                "title": "The music curation cycle: analyze, optimize & evolve your sonic identity",
+                "title": "Master the music curation cycle",
                 "desc": "Learn how continuous music curation optimization enhances venue atmosphere through data-driven refinement and expert human curation.",
                 "tag": "Strategy",
                 "category": "Strategy",
@@ -1127,7 +1120,7 @@
                 ]
             },
             {
-                "title": "Sound strategy that sells: how background music shapes customer behavior",
+                "title": "How music shapes buyer behavior",
                 "desc": "Field research reveals how strategic background music increases sales and dwell time in retail and hospitality environments.",
                 "tag": "Research",
                 "category": "Research",
@@ -1237,7 +1230,7 @@
                 ]
             },
             {
-                "title": "How your service environment shapes perceived wait time",
+                "title": "How spaces shape perceived wait time",
                 "desc": "How music and environmental design can transform the waiting experience and improve customer satisfaction.",
                 "tag": "Research",
                 "category": "Research",
@@ -1324,7 +1317,7 @@
     },
     "case_studies": {
         "meta": {
-            "title": "Case Studies | SensEar",
+            "title": "Hospitality music case studies",
             "description": "See how we have transformed the atmosphere in hotels, restaurants, and events through strategic music curation."
         },
         "hero": {
@@ -1375,7 +1368,7 @@
     },
     "industries_page": {
         "meta": {
-            "title": "Industries | SensEar",
+            "title": "Music curation by industry",
             "description": "Specialized music solutions for hotels, restaurants, retail, wellness spaces, and culture."
         },
         "hero": {
@@ -1462,7 +1455,7 @@
     },
     "services_page": {
         "meta": {
-            "title": "Music Curation Services | SensEar",
+            "title": "Music curation services",
             "description": "Discover our services: Signature Playlists, Sonic Identity, Event Soundtracks, and Audio Upgrades."
         },
         "hero": {
@@ -1711,7 +1704,7 @@
     },
     "signature_playlists": {
         "meta": {
-            "title": "Signature Playlists | SensEar",
+            "title": "Signature Playlists",
             "description": "Expert music curation for venues that want to stand out. We create playlists that reflect your brand identity."
         },
         "hero": {
@@ -1800,7 +1793,7 @@
     },
     "event_soundtracks": {
         "meta": {
-            "title": "Event Soundtracks | SensEar",
+            "title": "Event Soundtracks",
             "description": "Expert music curation for events. We create soundtracks that follow the flow of the event."
         },
         "hero": {
@@ -1885,7 +1878,7 @@
     },
     "sonic_identity": {
         "meta": {
-            "title": "Sonic Identity | SensEar",
+            "title": "Sonic Identity",
             "description": "Strategic sonic identity design for brands. We create consistent sound across all locations and communication channels."
         },
         "hero": {
@@ -1971,7 +1964,7 @@
     },
     "audio_upgrades": {
         "meta": {
-            "title": "Audio Upgrades | SensEar",
+            "title": "Audio Upgrades",
             "description": "Expert acoustic solutions for venues. We optimize sound quality and clarity."
         },
         "hero": {
@@ -2057,7 +2050,7 @@
     },
     "hotels_resorts": {
         "meta": {
-            "title": "Music for Hotels & Resorts | Sensear",
+            "title": "Music for Hotels & Resorts",
             "description": "Music for Hotels & Resorts designed to build atmosphere across spaces and time of day, with soundscapes guests feel & remember."
         },
         "hero": {
@@ -2160,7 +2153,7 @@
     },
     "restaurants_bars": {
         "meta": {
-            "title": "Music for Restaurants & Bars | SensEar",
+            "title": "Music for Restaurants & Bars",
             "description": "Music for Restaurants and Bars that blends naturally with food and service, supporting dining flow, conversation and the overall setting."
         },
         "hero": {
@@ -2259,7 +2252,7 @@
     },
     "retail_stores": {
         "meta": {
-            "title": "Music for Retail Stores | SensEar",
+            "title": "Music for Retail Stores",
             "description": "Music for retail stores shaped to welcome customers, support browsing and reinforce brand image without distracting from the shopping experience."
         },
         "hero": {
@@ -2358,7 +2351,7 @@
     },
     "wellness_gyms": {
         "meta": {
-            "title": "Music for Spas & Gyms | SensEar",
+            "title": "Music for Spas & Gyms",
             "description": "Music for wellness and gyms curated around activity and intensity, supporting focus, calm and movement across treatments and training spaces."
         },
         "hero": {
@@ -2457,7 +2450,7 @@
     },
     "events_experiences": {
         "meta": {
-            "title": "Music for Events | SensEar",
+            "title": "Music for Events",
             "description": "Music for events, occasions & experiences planned to fit timing & flow, supporting transitions, pacing & atmosphere from arrival to final moment."
         },
         "hero": {
@@ -2552,7 +2545,7 @@
     },
     "art_museums_fashion": {
         "meta": {
-            "title": "Music for Art, Museums & Fashion | SensEar",
+            "title": "Music for Art, Museums & Fashion",
             "description": "Music for art galleries, museums & fashion spaces that respects the work, supports focus & complements exhibitions, shows & cultural settings."
         },
         "hero": {
