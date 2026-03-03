@@ -13,6 +13,7 @@ const transporter = nodemailer.createTransport({
     port: parseInt(process.env.SMTP_PORT || '587'),
     secure: process.env.SMTP_SECURE === 'true', // true for 465, false for 587
     ignoreTLS: process.env.SMTP_SECURE !== 'true', // completely disable STARTTLS if secure is false
+    name: 'sensear.music', // Explicitly set EHLO domain to prevent local hostname defaults
     auth: {
         user: process.env.SMTP_USER,
         pass: process.env.SMTP_PASSWORD,
