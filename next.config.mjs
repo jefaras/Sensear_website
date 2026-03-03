@@ -23,9 +23,6 @@ const nextConfig = {
     typescript: {
         ignoreBuildErrors: true,
     },
-    eslint: {
-        ignoreDuringBuilds: true,
-    },
 
     // Turbopack configuration (Next.js 16 default bundler)
     // Keep empty config for dev mode, but use --no-turbopack for production builds
