@@ -2153,12 +2153,12 @@
     },
     "restaurants_bars": {
         "meta": {
-            "title": "Music for Restaurants & Bars",
+            "title": "Music for Restaurants, Cafes & Bars",
             "description": "Music for Restaurants and Bars that blends naturally with food and service, supporting dining flow, conversation and the overall setting."
         },
         "hero": {
-            "title": "Music for Restaurants & Bars:",
-            "subtitle": "Designed to blend with food and service",
+            "title": "Music for Restaurants, Cafes & Bars:",
+            "subtitle": "Designed to blend with food, drinks and service",
             "description": "Music selections that complement flavor, timing, and environment.",
             "image": "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/e18536343_seedream-40_professional_photo_of_upscale_the_image_but_make_sure_it_still_looks_realistic_1-1.jpg",
             "image_alt": "Elegant restaurant interior with curated music atmosphere"
@@ -2192,15 +2192,15 @@
             "image": "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/45c5bf8ee_0518d03f51766be5a36a8fa5df900697.jpg"
         },
         "ideal_for": {
-            "title": "Ideal for restaurant & bar music",
+            "title": "Ideal for restaurant, bar & cafe music",
             "items": [
                 {
                     "title": "Casual & fine dining restaurants",
                     "description": "That rely on atmosphere and repeat visitors."
                 },
                 {
-                    "title": "Cocktail & wine bars",
-                    "description": "That need the right mood from aperitivo to last order."
+                    "title": "All-day cafes, cocktail & wine bars",
+                    "description": "That need the right mood from morning coffee to last order."
                 },
                 {
                     "title": "Hotel restaurants",
@@ -2217,7 +2217,7 @@
             "title": "How we help",
             "items": [
                 {
-                    "title": "Build energy on quiet nights",
+                    "title": "Build energy on quiet days & nights",
                     "description": "We create atmosphere where energy comes from sound, not just guest count."
                 },
                 {
@@ -2230,7 +2230,7 @@
                 },
                 {
                     "title": "Remove playlist friction",
-                    "description": "We provide the music, you set the rules, and staff focuses on guests, not track selection."
+                    "description": "We provide the music, you set the rules and staff focuses on guests, not track selection."
                 }
             ],
             "image": "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/bf81c0608_f73e72546f5644a803c4dd204f0d7de1.jpg",
@@ -2240,14 +2240,14 @@
             "cta_link": "case-studies"
         },
         "cta": {
-            "title": "Upgrade your restaurant's atmosphere",
-            "description": "Need better sound for stronger nights? We assess your current sound, service flow, and concept, and recommend a customized approach.",
+            "title": "Upgrade your restaurant, cafe or bar's atmosphere",
+            "description": "Need better sound for stronger days & nights? We assess your current sound, service flow and concept, and recommend a customized approach.",
             "button": "Request a concept-led music plan",
             "see_also": "See how",
             "signature_playlists": "Signature Playlists",
             "and": "and",
             "audio_upgrades": "Audio Upgrades",
-            "work_for": "work for restaurants & bars."
+            "work_for": "work for restaurants, cafes & bars."
         }
     },
     "retail_stores": {
