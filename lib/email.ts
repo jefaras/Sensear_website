@@ -11,21 +11,26 @@ interface EmailOptions {
 const transporter = nodemailer.createTransport({
     host: process.env.SMTP_HOST,
     port: parseInt(process.env.SMTP_PORT || '587'),
-    secure: process.env.SMTP_SECURE === 'true', // true for 465, false for other ports
+    secure: process.env.SMTP_SECURE === 'true', // true for 465, false for 587
     auth: {
         user: process.env.SMTP_USER,
         pass: process.env.SMTP_PASSWORD,
     },
+    tls: {
+        // Enforce STARTTLS for port 587
+        ciphers: 'SSLv3',
+        rejectUnauthorized: false
+    }
 });
 
 // Verify transporter configuration
 export async function verifyEmailConnection() {
     try {
         await transporter.verify();
-        console.log('✅ SMTP Server is ready to send emails');
+        console.log('Success! SMTP Server is ready to send emails');
         return true;
     } catch (error) {
-        console.error('❌ SMTP Server connection failed:', error);
+        console.error('Error! SMTP Server connection failed:', error);
         return false;
     }
 }
@@ -41,10 +46,10 @@ export async function sendEmail({ to, subject, html, text }: EmailOptions) {
             text: text || html.replace(/<[^>]*>/g, ''), // Strip HTML for text version
         });
 
-        console.log('✅ Email sent successfully:', info.messageId);
+        console.log('Success! Email sent successfully:', info.messageId);
         return { success: true, messageId: info.messageId };
     } catch (error) {
-        console.error('❌ Email sending failed:', error);
+        console.error('Error! Email sending failed:', error);
         return { success: false, error };
     }
 }
@@ -77,7 +82,7 @@ export function generateContactEmailHTML(data: {
 <body>
     <div class="container">
         <div class="header">
-            <h1>🎵 SENSEAR</h1>
+            <h1>SENSEAR</h1>
             <p>New Contact Form Submission</p>
         </div>
         
@@ -110,7 +115,7 @@ export function generateContactEmailHTML(data: {
             </div>
             
             <div class="field">
-                <div class="field-label">💬 Message:</div>
+                <div class="field-label">Message:</div>
                 <div class="field-value">${data.message.replace(/\n/g, '<br>')}</div>
             </div>
         </div>
@@ -149,7 +154,7 @@ export function generateNewsletterEmailHTML(data: {
 <body>
     <div class="container">
         <div class="header">
-            <h1>🎵 SENSEAR</h1>
+            <h1>SENSEAR</h1>
             <p>New Newsletter Subscription</p>
         </div>
         

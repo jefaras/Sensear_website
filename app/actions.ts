@@ -42,7 +42,7 @@ export async function submitContactForm(formData: FormData) {
     // Send email via SMTP
     const emailResult = await sendEmail({
         to: process.env.SMTP_TO || "hello@sensear.music",
-        subject: `🎵 New Contact Form Submission from ${data.name}`,
+        subject: `[SensEar] New Contact Form Submission from ${data.name}`,
         html: emailHTML,
     });
 
@@ -56,7 +56,7 @@ export async function submitContactForm(formData: FormData) {
         };
     }
 
-    console.log("✅ Contact form submitted and email sent:", data.name, data.email);
+    console.log("Success! Contact form submitted and email sent:", data.name, data.email);
 
     // Return success
     return {
@@ -87,12 +87,12 @@ export async function submitNewsletterForm(formData: FormData) {
 
     // Send email to both recipients
     const recipients = ["jefaraz@gmail.com", "info@sensear.music"];
-    
+
     const emailResults = await Promise.all(
         recipients.map(recipient =>
             sendEmail({
                 to: recipient,
-                subject: `🎵 New Newsletter Subscription from ${data.email}`,
+                subject: `[SensEar] New Newsletter Subscription from ${data.email}`,
                 html: emailHTML,
             })
         )
@@ -109,7 +109,7 @@ export async function submitNewsletterForm(formData: FormData) {
         };
     }
 
-    console.log("✅ Newsletter subscription submitted and emails sent:", data.email);
+    console.log("Success! Newsletter subscription submitted and emails sent:", data.email);
 
     // Return success
     return {
