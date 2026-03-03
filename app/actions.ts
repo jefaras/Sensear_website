@@ -51,7 +51,7 @@ export async function submitContactForm(formData: FormData) {
         console.error("Failed to send email:", emailResult.error);
         return {
             errors: {
-                _form: ["Failed to send email. Please try again or contact us directly at hello@sensear.music"],
+                _form: [`Failed to send email. Server Error: ${String(emailResult.error?.message || emailResult.error)}`],
             },
         };
     }
@@ -104,7 +104,7 @@ export async function submitNewsletterForm(formData: FormData) {
         console.error("Failed to send some newsletter emails:", failedEmails);
         return {
             errors: {
-                _form: ["Failed to subscribe. Please try again or contact us directly."],
+                _form: [`Failed to subscribe. Server Error: ${String(failedEmails[0].error?.message || failedEmails[0].error)}`],
             },
         };
     }
