@@ -12,14 +12,10 @@ const transporter = nodemailer.createTransport({
     host: process.env.SMTP_HOST,
     port: parseInt(process.env.SMTP_PORT || '587'),
     secure: process.env.SMTP_SECURE === 'true', // true for 465, false for 587
+    ignoreTLS: process.env.SMTP_SECURE !== 'true', // completely disable STARTTLS if secure is false
     auth: {
         user: process.env.SMTP_USER,
         pass: process.env.SMTP_PASSWORD,
-    },
-    tls: {
-        // Enforce STARTTLS for port 587
-        ciphers: 'SSLv3',
-        rejectUnauthorized: false
     }
 });
 
@@ -38,8 +34,11 @@ export async function verifyEmailConnection() {
 // Send email function
 export async function sendEmail({ to, subject, html, text }: EmailOptions) {
     try {
+        // Ensure we only use the first email address for the 'from' field if a list is provided
+        const fromEmail = (process.env.SMTP_FROM || '').split(',')[0].trim();
+
         const info = await transporter.sendMail({
-            from: `"${process.env.COMPANY_NAME || 'SensEar'}" <${process.env.SMTP_FROM}>`,
+            from: `"${process.env.COMPANY_NAME || 'SensEar'}" <${fromEmail}>`,
             to,
             subject,
             html,
