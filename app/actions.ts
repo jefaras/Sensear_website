@@ -39,24 +39,31 @@ export async function submitContactForm(formData: FormData) {
     // Generate email HTML
     const emailHTML = generateContactEmailHTML(data);
 
-    // Send email via SMTP
-    const emailResult = await sendEmail({
-        to: process.env.SMTP_TO || "hello@sensear.music",
-        subject: `[SensEar] New Contact Form Submission from ${data.name}`,
-        html: emailHTML,
-    });
+    // Send email to all recipients
+    const recipients = process.env.SMTP_TO ? process.env.SMTP_TO.split(',').map(e => e.trim()) : ["jefaraz@gmail.com", "info@sensear.music"];
 
-    // Check if email was sent successfully
-    if (!emailResult.success) {
-        console.error("Failed to send email:", emailResult.error);
+    const emailResults = await Promise.all(
+        recipients.map(recipient =>
+            sendEmail({
+                to: recipient,
+                subject: `[SensEar] New Contact Form Submission from ${data.name}`,
+                html: emailHTML,
+            })
+        )
+    );
+
+    // Check if all emails were sent successfully
+    const failedEmails = emailResults.filter(result => !result.success);
+    if (failedEmails.length > 0) {
+        console.error("Failed to send some contact form emails:", failedEmails);
         return {
             errors: {
-                _form: [`Failed to send email. Server Error: ${String(emailResult.error?.message || emailResult.error)}`],
+                _form: [`Failed to send email. Server Error: ${String((failedEmails[0].error as any)?.message || failedEmails[0].error)}`],
             },
         };
     }
 
-    console.log("Success! Contact form submitted and email sent:", data.name, data.email);
+    console.log("Success! Contact form submitted and emails sent:", data.name, data.email);
 
     // Return success
     return {
@@ -104,7 +111,7 @@ export async function submitNewsletterForm(formData: FormData) {
         console.error("Failed to send some newsletter emails:", failedEmails);
         return {
             errors: {
-                _form: [`Failed to subscribe. Server Error: ${String(failedEmails[0].error?.message || failedEmails[0].error)}`],
+                _form: [`Failed to subscribe. Server Error: ${String((failedEmails[0].error as any)?.message || failedEmails[0].error)}`],
             },
         };
     }
