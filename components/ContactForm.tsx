@@ -6,8 +6,6 @@ import { CheckCircle, ArrowRight } from "lucide-react";
 import { Turnstile } from '@marsidev/react-turnstile';
 
 interface ContactFormLabels {
-    title: string;
-    subtitle: string;
     name: string;
     surname: string;
     business_name: string;
