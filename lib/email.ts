@@ -7,9 +7,17 @@ interface EmailOptions {
     text?: string;
 }
 
+// Clean the SMTP host from environment variables to prevent EBADNAME and HTTP prefix errors
+let smtpHost = (process.env.SMTP_HOST || '').replace(/^https?:\/\//i, '').trim();
+
+// Automatically correct the host if the user accidentally put the base domain instead of the mail server
+if (smtpHost === 'sensear.music' || !smtpHost) {
+    smtpHost = 'mail.sensear.music';
+}
+
 // Create reusable transporter using SMTP
 const transporter = nodemailer.createTransport({
-    host: process.env.SMTP_HOST,
+    host: smtpHost,
     port: parseInt(process.env.SMTP_PORT || '587'),
     secure: process.env.SMTP_SECURE === 'true', // true for 465, false for 587
     ignoreTLS: process.env.SMTP_SECURE !== 'true', // completely disable STARTTLS if secure is false
