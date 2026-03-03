@@ -159,8 +159,10 @@
         },
         "form": {
             "name": "Name *",
+            "surname": "Surname *",
+            "business_name": "Business Name",
             "email": "Email *",
-            "phone": "Phone",
+            "phone": "Phone *",
             "venue": "Venue Type *",
             "interest": "Service Interest *",
             "message": "Message *",
@@ -169,7 +171,9 @@
             "success": "Thank You!",
             "success_message": "We've received your inquiry...",
             "send_another": "Send another",
-            "name_placeholder": "Your full name",
+            "name_placeholder": "Your name",
+            "surname_placeholder": "Your surname",
+            "business_name_placeholder": "Your business name",
             "email_placeholder": "your@email.com",
             "phone_placeholder": "+30 xxx xxx xxxx",
             "message_placeholder": "Tell us about your venue, your vision, and how we can help...",
@@ -184,7 +188,8 @@
                 "placeholder": "Select...",
                 "playlists": "Playlists",
                 "events": "Events",
-                "strategy": "Strategy"
+                "strategy": "Strategy",
+                "audio_upgrades": "Audio Upgrades"
             },
             "temp_title": "",
             "temp_message": "Send us an email with your contact details, your venue type (hotel, restaurant, bar, or other) and how we can help you, or call us today."

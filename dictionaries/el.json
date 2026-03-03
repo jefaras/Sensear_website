@@ -159,8 +159,10 @@
         },
         "form": {
             "name": "Όνομα *",
+            "surname": "Επίθετο *",
+            "business_name": "Όνομα επιχείρησης",
             "email": "Email *",
-            "phone": "Τηλέφωνο",
+            "phone": "Τηλέφωνο *",
             "venue": "Τύπος χώρου *",
             "interest": "Ενδιαφέρον για υπηρεσία *",
             "message": "Μήνυμα *",
@@ -169,7 +171,9 @@
             "success": "Ευχαριστούμε!",
             "success_message": "Λάβαμε το αίτημά σας...",
             "send_another": "Αποστολή νέου",
-            "name_placeholder": "Το πλήρες όνομά σας",
+            "name_placeholder": "Το όνομα σας",
+            "surname_placeholder": "Το επίθετό σας",
+            "business_name_placeholder": "Το όνομα επιχείρησης",
             "email_placeholder": "to@email.σας",
             "phone_placeholder": "+30 xxx xxx xxxx",
             "message_placeholder": "Πείτε μας για τον χώρο σας, το όραμά σας και πώς μπορούμε να βοηθήσουμε...",
@@ -184,7 +188,8 @@
                 "placeholder": "Επιλέξτε...",
                 "playlists": "Playlists",
                 "events": "Εκδηλώσεις",
-                "strategy": "Στρατηγική"
+                "strategy": "Στρατηγική",
+                "audio_upgrades": "Ακουστική Αναβάθμιση"
             },
             "temp_title": "",
             "temp_message": "Στείλτε μας ένα email με τα στοιχεία σας, τον τύπο του χώρου σας (ξενοδοχείο, εστιατόριο, bar ή άλλο) και πώς μπορούμε να σας βοηθήσουμε ή καλέστε μας σήμερα κιόλας."

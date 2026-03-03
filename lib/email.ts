@@ -68,6 +68,8 @@ export async function sendEmail({ to, subject, html, text }: EmailOptions) {
 // Generate contact form email HTML template
 export function generateContactEmailHTML(data: {
     name: string;
+    surname: string;
+    business_name?: string;
     email: string;
     phone?: string;
     venue_type: string;
@@ -100,8 +102,15 @@ export function generateContactEmailHTML(data: {
         <div class="content">
             <div class="field">
                 <div class="field-label">👤 Name:</div>
-                <div class="field-value">${data.name}</div>
+                <div class="field-value">${data.name} ${data.surname}</div>
             </div>
+            
+            ${data.business_name ? `
+            <div class="field">
+                <div class="field-label">💼 Business Name:</div>
+                <div class="field-value">${data.business_name}</div>
+            </div>
+            ` : ''}
             
             <div class="field">
                 <div class="field-label">📧 Email:</div>

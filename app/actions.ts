@@ -5,8 +5,10 @@ import { sendEmail, generateContactEmailHTML, generateNewsletterEmailHTML } from
 
 const schema = z.object({
     name: z.string().min(2, "Name must be at least 2 characters"),
+    surname: z.string().min(2, "Surname must be at least 2 characters"),
+    business_name: z.string().optional(),
     email: z.string().email("Invalid email address"),
-    phone: z.string().optional(),
+    phone: z.string().min(6, "Phone number is required"),
     venue_type: z.string().min(1, "Please select a venue type"),
     service_interest: z.string().min(1, "Please select a service interest"),
     message: z.string().min(10, "Message must be at least 10 characters"),
@@ -21,6 +23,8 @@ export async function submitContactForm(formData: FormData) {
     // Validate form data
     const validatedFields = schema.safeParse({
         name: formData.get("name"),
+        surname: formData.get("surname"),
+        business_name: formData.get("business_name"),
         email: formData.get("email"),
         phone: formData.get("phone"),
         venue_type: formData.get("venue_type"),

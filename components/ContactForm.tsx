@@ -8,6 +8,8 @@ interface ContactFormLabels {
     title: string;
     subtitle: string;
     name: string;
+    surname: string;
+    business_name: string;
     email: string;
     phone: string;
     venue: string;
@@ -19,6 +21,8 @@ interface ContactFormLabels {
     success_message: string;
     send_another: string;
     name_placeholder: string;
+    surname_placeholder: string;
+    business_name_placeholder: string;
     email_placeholder: string;
     phone_placeholder: string;
     message_placeholder: string;
@@ -34,6 +38,7 @@ interface ContactFormLabels {
         playlists: string;
         events: string;
         strategy: string;
+        audio_upgrades: string;
     };
 }
 
@@ -43,8 +48,11 @@ interface ContactFormProps {
 
 interface FormData {
     name: string;
+    surname: string;
+    business_name: string;
     email: string;
     phone: string;
+    country_code: string;
     venue_type: string;
     service_interest: string;
     message: string;
@@ -56,8 +64,11 @@ export function ContactForm({ labels }: ContactFormProps) {
     const [errors, setErrors] = useState<Record<string, string[]>>({});
     const [formData, setFormData] = useState<FormData>({
         name: "",
+        surname: "",
+        business_name: "",
         email: "",
         phone: "",
+        country_code: "+30",
         venue_type: "",
         service_interest: "",
         message: "",
@@ -83,8 +94,13 @@ export function ContactForm({ labels }: ContactFormProps) {
 
         const submitData = new FormData();
         submitData.append("name", formData.name);
+        submitData.append("surname", formData.surname);
+        submitData.append("business_name", formData.business_name);
         submitData.append("email", formData.email);
-        submitData.append("phone", formData.phone);
+
+        const formattedPhone = formData.country_code ? `${formData.country_code} ${formData.phone}` : formData.phone;
+        submitData.append("phone", formattedPhone);
+
         submitData.append("venue_type", formData.venue_type);
         submitData.append("service_interest", formData.service_interest);
         submitData.append("message", formData.message);
@@ -100,8 +116,11 @@ export function ContactForm({ labels }: ContactFormProps) {
             // Reset form on success
             setFormData({
                 name: "",
+                surname: "",
+                business_name: "",
                 email: "",
                 phone: "",
+                country_code: "+30",
                 venue_type: "",
                 service_interest: "",
                 message: "",
@@ -137,27 +156,55 @@ export function ContactForm({ labels }: ContactFormProps) {
             <div className="grid md:grid-cols-2 gap-6">
                 <div>
                     <label className="block text-sm font-medium mb-2">{labels.name}</label>
-                    <input 
-                        name="name" 
-                        type="text" 
-                        required 
+                    <input
+                        name="name"
+                        type="text"
+                        required
                         value={formData.name}
                         onChange={handleChange}
-                        placeholder={labels.name_placeholder} 
-                        className={`w-full px-4 py-3 bg-gray-50 border rounded-lg focus:outline-none focus:ring-2 focus:ring-black/20 ${errors.name ? 'border-red-500' : 'border-gray-200'}`} 
+                        placeholder={labels.name_placeholder}
+                        className={`w-full px-4 py-3 bg-gray-50 border rounded-lg focus:outline-none focus:ring-2 focus:ring-black/20 ${errors.name ? 'border-red-500' : 'border-gray-200'}`}
                     />
                     {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name[0]}</p>}
                 </div>
                 <div>
+                    <label className="block text-sm font-medium mb-2">{labels.surname}</label>
+                    <input
+                        name="surname"
+                        type="text"
+                        required
+                        value={formData.surname}
+                        onChange={handleChange}
+                        placeholder={labels.surname_placeholder}
+                        className={`w-full px-4 py-3 bg-gray-50 border rounded-lg focus:outline-none focus:ring-2 focus:ring-black/20 ${errors.surname ? 'border-red-500' : 'border-gray-200'}`}
+                    />
+                    {errors.surname && <p className="text-red-500 text-sm mt-1">{errors.surname[0]}</p>}
+                </div>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-6">
+                <div>
+                    <label className="block text-sm font-medium mb-2">{labels.business_name}</label>
+                    <input
+                        name="business_name"
+                        type="text"
+                        value={formData.business_name}
+                        onChange={handleChange}
+                        placeholder={labels.business_name_placeholder}
+                        className={`w-full px-4 py-3 bg-gray-50 border rounded-lg focus:outline-none focus:ring-2 focus:ring-black/20 ${errors.business_name ? 'border-red-500' : 'border-gray-200'}`}
+                    />
+                    {errors.business_name && <p className="text-red-500 text-sm mt-1">{errors.business_name[0]}</p>}
+                </div>
+                <div>
                     <label className="block text-sm font-medium mb-2">{labels.email}</label>
-                    <input 
-                        name="email" 
-                        type="email" 
-                        required 
+                    <input
+                        name="email"
+                        type="email"
+                        required
                         value={formData.email}
                         onChange={handleChange}
-                        placeholder={labels.email_placeholder} 
-                        className={`w-full px-4 py-3 bg-gray-50 border rounded-lg focus:outline-none focus:ring-2 focus:ring-black/20 ${errors.email ? 'border-red-500' : 'border-gray-200'}`} 
+                        placeholder={labels.email_placeholder}
+                        className={`w-full px-4 py-3 bg-gray-50 border rounded-lg focus:outline-none focus:ring-2 focus:ring-black/20 ${errors.email ? 'border-red-500' : 'border-gray-200'}`}
                     />
                     {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email[0]}</p>}
                 </div>
@@ -165,21 +212,41 @@ export function ContactForm({ labels }: ContactFormProps) {
 
             <div>
                 <label className="block text-sm font-medium mb-2">{labels.phone}</label>
-                <input 
-                    name="phone" 
-                    type="tel" 
-                    value={formData.phone}
-                    onChange={handleChange}
-                    placeholder={labels.phone_placeholder} 
-                    className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-black/20" 
-                />
+                <div className={`flex bg-gray-50 border rounded-lg focus-within:ring-2 focus-within:ring-black/20 focus-within:border-transparent overflow-hidden ${errors.phone ? 'border-red-500' : 'border-gray-200'}`}>
+                    <select
+                        name="country_code"
+                        value={formData.country_code}
+                        onChange={handleChange}
+                        className="px-3 py-3 bg-gray-200/50 border-r border-gray-200 focus:outline-none text-gray-700 font-medium cursor-pointer"
+                    >
+                        <option value="+30">GR (+30)</option>
+                        <option value="+357">CY (+357)</option>
+                        <option value="+1">US/CA (+1)</option>
+                        <option value="+44">UK (+44)</option>
+                        <option value="+49">DE (+49)</option>
+                        <option value="+33">FR (+33)</option>
+                        <option value="+39">IT (+39)</option>
+                        <option value="+34">ES (+34)</option>
+                        <option value="">Other</option>
+                    </select>
+                    <input
+                        name="phone"
+                        type="tel"
+                        required
+                        value={formData.phone}
+                        onChange={handleChange}
+                        placeholder={labels.phone_placeholder}
+                        className="w-full px-4 py-3 bg-transparent focus:outline-none"
+                    />
+                </div>
+                {errors.phone && <p className="text-red-500 text-sm mt-1">{errors.phone[0]}</p>}
             </div>
 
             <div className="grid md:grid-cols-2 gap-6">
                 <div>
                     <label className="block text-sm font-medium mb-2">{labels.venue}</label>
-                    <select 
-                        name="venue_type" 
+                    <select
+                        name="venue_type"
                         value={formData.venue_type}
                         onChange={handleChange}
                         className={`w-full px-4 py-3 bg-gray-50 border rounded-lg focus:outline-none focus:ring-2 focus:ring-black/20 ${errors.venue_type ? 'border-red-500' : 'border-gray-200'}`}
@@ -194,8 +261,8 @@ export function ContactForm({ labels }: ContactFormProps) {
                 </div>
                 <div>
                     <label className="block text-sm font-medium mb-2">{labels.interest}</label>
-                    <select 
-                        name="service_interest" 
+                    <select
+                        name="service_interest"
                         value={formData.service_interest}
                         onChange={handleChange}
                         className={`w-full px-4 py-3 bg-gray-50 border rounded-lg focus:outline-none focus:ring-2 focus:ring-black/20 ${errors.service_interest ? 'border-red-500' : 'border-gray-200'}`}
@@ -204,6 +271,7 @@ export function ContactForm({ labels }: ContactFormProps) {
                         <option value="playlists">{labels.interest_options.playlists}</option>
                         <option value="events">{labels.interest_options.events}</option>
                         <option value="strategy">{labels.interest_options.strategy}</option>
+                        <option value="audio_upgrades">{labels.interest_options.audio_upgrades}</option>
                     </select>
                     {errors.service_interest && <p className="text-red-500 text-sm mt-1">{errors.service_interest[0]}</p>}
                 </div>
@@ -211,13 +279,13 @@ export function ContactForm({ labels }: ContactFormProps) {
 
             <div>
                 <label className="block text-sm font-medium mb-2">{labels.message}</label>
-                <textarea 
-                    name="message" 
-                    rows={5} 
-                    required 
+                <textarea
+                    name="message"
+                    rows={5}
+                    required
                     value={formData.message}
                     onChange={handleChange}
-                    placeholder={labels.message_placeholder} 
+                    placeholder={labels.message_placeholder}
                     className={`w-full px-4 py-3 bg-gray-50 border rounded-lg focus:outline-none focus:ring-2 focus:ring-black/20 ${errors.message ? 'border-red-500' : 'border-gray-200'}`}
                 ></textarea>
                 {errors.message && <p className="text-red-500 text-sm mt-1">{errors.message[0]}</p>}
@@ -235,8 +303,8 @@ export function ContactForm({ labels }: ContactFormProps) {
                         <span className="relative inline-flex items-center mr-2 align-middle">
                             <img
                                 src="/images/brand/sensear-logo-color.png"
-                                className="w-8 h-8 object-contain opacity-100 scale-100 group-hover:opacity-0 group-hover:scale-0 transition-all duration-300" 
-                                alt="" 
+                                className="w-8 h-8 object-contain opacity-100 scale-100 group-hover:opacity-0 group-hover:scale-0 transition-all duration-300"
+                                alt=""
                             />
                         </span>
                         <span className="transition-transform duration-300 group-hover:-translate-x-10 inline-block">
