@@ -97,9 +97,8 @@ export function ContactForm({ labels }: ContactFormProps) {
         submitData.append("surname", formData.surname);
         submitData.append("business_name", formData.business_name);
         submitData.append("email", formData.email);
-
-        const formattedPhone = formData.country_code ? `${formData.country_code} ${formData.phone}` : formData.phone;
-        submitData.append("phone", formattedPhone);
+        submitData.append("phone", formData.phone);
+        submitData.append("country_code", formData.country_code);
 
         submitData.append("venue_type", formData.venue_type);
         submitData.append("service_interest", formData.service_interest);

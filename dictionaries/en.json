@@ -175,7 +175,7 @@
             "surname_placeholder": "Your surname",
             "business_name_placeholder": "Your business name",
             "email_placeholder": "your@email.com",
-            "phone_placeholder": "+30 xxx xxx xxxx",
+            "phone_placeholder": "xxx xxx xxxx",
             "message_placeholder": "Tell us about your venue, your vision, and how we can help...",
             "venue_options": {
                 "placeholder": "Select...",

@@ -8,7 +8,8 @@ const schema = z.object({
     surname: z.string().min(2, "Surname must be at least 2 characters"),
     business_name: z.string().optional(),
     email: z.string().email("Invalid email address"),
-    phone: z.string().min(6, "Phone number is required"),
+    phone: z.string().refine(val => val.replace(/\D/g, '').length === 10, "Phone number must contain exactly 10 digits"),
+    country_code: z.string().optional(),
     venue_type: z.string().min(1, "Please select a venue type"),
     service_interest: z.string().min(1, "Please select a service interest"),
     message: z.string().min(10, "Message must be at least 10 characters"),
@@ -27,6 +28,7 @@ export async function submitContactForm(formData: FormData) {
         business_name: formData.get("business_name"),
         email: formData.get("email"),
         phone: formData.get("phone"),
+        country_code: formData.get("country_code"),
         venue_type: formData.get("venue_type"),
         service_interest: formData.get("service_interest"),
         message: formData.get("message"),
@@ -41,7 +43,10 @@ export async function submitContactForm(formData: FormData) {
     const data = validatedFields.data;
 
     // Generate email HTML
-    const emailHTML = generateContactEmailHTML(data);
+    const emailHTML = generateContactEmailHTML({
+        ...data,
+        phone: data.country_code ? `${data.country_code} ${data.phone}` : data.phone
+    });
 
     // Send email to all recipients
     const recipients = process.env.SMTP_TO ? process.env.SMTP_TO.split(',').map(e => e.trim()) : ["jefaraz@gmail.com", "info@sensear.music"];
