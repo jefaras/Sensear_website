@@ -4,6 +4,7 @@ import { useState } from "react";
 import { submitNewsletterForm } from "@/app/actions";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
+import { Turnstile } from '@marsidev/react-turnstile';
 
 interface NewsletterFormProps {
     placeholder: string;
@@ -12,22 +13,30 @@ interface NewsletterFormProps {
     variant?: "footer" | "cta";
 }
 
-export function NewsletterForm({ 
-    placeholder, 
-    buttonText, 
+export function NewsletterForm({
+    placeholder,
+    buttonText,
     source = "Website",
     variant = "footer"
 }: NewsletterFormProps) {
     const [email, setEmail] = useState("");
     const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
     const [errorMessage, setErrorMessage] = useState("");
+    const [turnstileToken, setTurnstileToken] = useState<string | null>(null);
 
     async function handleSubmit(e: React.FormEvent) {
         e.preventDefault();
         setStatus("loading");
         setErrorMessage("");
 
+        if (!turnstileToken) {
+            setStatus("error");
+            setErrorMessage("Security verification failed. Please refresh the page.");
+            return;
+        }
+
         const formData = new FormData();
+        formData.append("cf-turnstile-response", turnstileToken);
         formData.append("email", email);
         formData.append("source", source);
 
@@ -36,12 +45,13 @@ export function NewsletterForm({
         if (result.success) {
             setStatus("success");
             setEmail("");
+            setTurnstileToken(null);
         } else if (result.errors) {
             setStatus("error");
             const errors = result.errors as Record<string, string[]>;
             setErrorMessage(
-                errors._form?.[0] || 
-                errors.email?.[0] || 
+                errors._form?.[0] ||
+                errors.email?.[0] ||
                 "Something went wrong. Please try again."
             );
         }
@@ -70,9 +80,8 @@ export function NewsletterForm({
                     }}
                     placeholder={placeholder}
                     required
-                    className={`flex-1 px-8 py-5 text-lg rounded-full border-2 bg-white/80 text-black placeholder:text-black/50 focus:outline-none ${
-                        status === "error" ? 'border-red-500' : 'border-black/20 focus:border-black/50'
-                    }`}
+                    className={`flex-1 px-8 py-5 text-lg rounded-full border-2 bg-white/80 text-black placeholder:text-black/50 focus:outline-none ${status === "error" ? 'border-red-500' : 'border-black/20 focus:border-black/50'
+                        }`}
                 />
                 <button
                     type="submit"
@@ -93,6 +102,11 @@ export function NewsletterForm({
                 {status === "error" && (
                     <p className="text-red-500 text-sm w-full text-center">{errorMessage}</p>
                 )}
+                <Turnstile
+                    siteKey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY || ""}
+                    onSuccess={(token) => setTurnstileToken(token)}
+                    options={{ size: 'invisible' }}
+                />
             </form>
         );
     }
@@ -113,9 +127,8 @@ export function NewsletterForm({
                     }}
                     placeholder={placeholder}
                     required
-                    className={`bg-white/10 border text-white placeholder:text-white/50 flex-1 text-sm h-9 max-w-[180px] rounded-full px-4 focus:outline-none ${
-                        status === "error" ? 'border-red-500' : 'border-white/20 focus:border-white/50'
-                    }`}
+                    className={`bg-white/10 border text-white placeholder:text-white/50 flex-1 text-sm h-9 max-w-[180px] rounded-full px-4 focus:outline-none ${status === "error" ? 'border-red-500' : 'border-white/20 focus:border-white/50'
+                        }`}
                 />
                 <button
                     type="submit"
@@ -134,6 +147,11 @@ export function NewsletterForm({
             {status === "error" && (
                 <p className="text-red-400 text-xs">{errorMessage}</p>
             )}
+            <Turnstile
+                siteKey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY || ""}
+                onSuccess={(token) => setTurnstileToken(token)}
+                options={{ size: 'invisible' }}
+            />
         </form>
     );
 }

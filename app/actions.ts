@@ -3,6 +3,34 @@
 import { z } from "zod";
 import { sendEmail, generateContactEmailHTML, generateNewsletterEmailHTML } from "@/lib/email";
 
+async function verifyTurnstileToken(token: string | null) {
+    if (!token) return false;
+
+    if (!process.env.TURNSTILE_SECRET_KEY) {
+        console.warn("TURNSTILE_SECRET_KEY is missing, bypassing security check for development");
+        return true;
+    }
+
+    try {
+        const response = await fetch("https://challenges.cloudflare.com/turnstile/v0/siteverify", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/x-www-form-urlencoded",
+            },
+            body: new URLSearchParams({
+                secret: process.env.TURNSTILE_SECRET_KEY,
+                response: token,
+            }),
+        });
+
+        const data = await response.json();
+        return data.success;
+    } catch (error) {
+        console.error("Turnstile verification error:", error);
+        return false;
+    }
+}
+
 const schema = z.object({
     name: z.string().min(2, "Name must be at least 2 characters"),
     surname: z.string().min(2, "Surname must be at least 2 characters"),
@@ -21,6 +49,18 @@ const newsletterSchema = z.object({
 });
 
 export async function submitContactForm(formData: FormData) {
+    // Verify turnstile token first
+    const token = formData.get("cf-turnstile-response")?.toString() || null;
+    const isValidToken = await verifyTurnstileToken(token);
+
+    if (!isValidToken) {
+        return {
+            errors: {
+                _form: ["Security verification failed. Please try again."],
+            }
+        };
+    }
+
     // Validate form data
     const validatedFields = schema.safeParse({
         name: formData.get("name"),
@@ -81,6 +121,18 @@ export async function submitContactForm(formData: FormData) {
 }
 
 export async function submitNewsletterForm(formData: FormData) {
+    // Verify turnstile token first
+    const token = formData.get("cf-turnstile-response")?.toString() || null;
+    const isValidToken = await verifyTurnstileToken(token);
+
+    if (!isValidToken) {
+        return {
+            errors: {
+                _form: ["Security verification failed. Please try again."],
+            }
+        };
+    }
+
     // Validate form data
     const validatedFields = newsletterSchema.safeParse({
         email: formData.get("email"),

@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { submitContactForm } from "@/app/actions";
 import { CheckCircle, ArrowRight } from "lucide-react";
+import { Turnstile } from '@marsidev/react-turnstile';
 
 interface ContactFormLabels {
     title: string;
@@ -61,6 +62,7 @@ interface FormData {
 export function ContactForm({ labels }: ContactFormProps) {
     const [pending, setPending] = useState(false);
     const [success, setSuccess] = useState(false);
+    const [turnstileToken, setTurnstileToken] = useState<string | null>(null);
     const [errors, setErrors] = useState<Record<string, string[]>>({});
     const [formData, setFormData] = useState<FormData>({
         name: "",
@@ -92,7 +94,14 @@ export function ContactForm({ labels }: ContactFormProps) {
         setPending(true);
         setErrors({});
 
+        if (!turnstileToken) {
+            setErrors({ _form: ["Please complete the security challenge."] });
+            setPending(false);
+            return;
+        }
+
         const submitData = new FormData();
+        submitData.append("cf-turnstile-response", turnstileToken);
         submitData.append("name", formData.name);
         submitData.append("surname", formData.surname);
         submitData.append("business_name", formData.business_name);
@@ -112,6 +121,7 @@ export function ContactForm({ labels }: ContactFormProps) {
             setErrors(res.errors as Record<string, string[]>);
         } else if (res?.success) {
             setSuccess(true);
+            setTurnstileToken(null);
             // Reset form on success
             setFormData({
                 name: "",
@@ -288,6 +298,15 @@ export function ContactForm({ labels }: ContactFormProps) {
                     className={`w-full px-4 py-3 bg-gray-50 border rounded-lg focus:outline-none focus:ring-2 focus:ring-black/20 ${errors.message ? 'border-red-500' : 'border-gray-200'}`}
                 ></textarea>
                 {errors.message && <p className="text-red-500 text-sm mt-1">{errors.message[0]}</p>}
+            </div>
+
+            <div className="flex justify-center !mt-8 !mb-4">
+                <Turnstile
+                    siteKey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY || ""}
+                    onSuccess={(token) => setTurnstileToken(token)}
+                    onError={() => setErrors({ _form: ["Security challenge failed. Please try again."] })}
+                    options={{ theme: 'light' }}
+                />
             </div>
 
             <button
