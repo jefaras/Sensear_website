@@ -1,0 +1,17 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/[lang]/layout,_N_T_/[lang]/industries/layout,_N_T_/[lang]/industries/music-for-hotels-and-resorts/layout,_N_T_/[lang]/industries/music-for-hotels-and-resorts/page,_N_T_/el/industries/music-for-hotels-and-resorts"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/$d$lang/industries/music-for-hotels-and-resorts/__PAGE__",
+    "/$d$lang/industries/music-for-hotels-and-resorts",
+    "/$d$lang/industries",
+    "/$d$lang",
+    "/_index",
+    "/_head"
+  ]
+}

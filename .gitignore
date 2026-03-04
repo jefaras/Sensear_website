@@ -11,8 +11,12 @@
 # planning documents
 /plans/
 
-# next.js
+# next.js - ignore everything except the production build output
 /.next/
+!/.next/standalone/
+!/.next/standalone/**
+!/.next/static/
+!/.next/static/**
 /out/
 
 # production

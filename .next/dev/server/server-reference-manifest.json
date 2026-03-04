@@ -1,0 +1,43 @@
+{
+  "node": {
+    "40df08ee095886368fb9400a0d42a79e1be75ed6bc": {
+      "workers": {
+        "app/[lang]/industries/music-for-restaurants-and-bars/page": {
+          "moduleId": "[project]/.next-internal/server/app/[lang]/industries/music-for-restaurants-and-bars/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "submitNewsletterForm",
+          "filename": "app/actions.ts"
+        },
+        "app/[lang]/test-forms/page": {
+          "moduleId": "[project]/.next-internal/server/app/[lang]/test-forms/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "submitNewsletterForm",
+          "filename": "app/actions.ts"
+        }
+      },
+      "layer": {
+        "app/[lang]/industries/music-for-restaurants-and-bars/page": "action-browser",
+        "app/[lang]/test-forms/page": "action-browser"
+      },
+      "filename": "app/actions.ts",
+      "exportedName": "submitNewsletterForm"
+    },
+    "40d95e467e282307a7308d2e55eb8d0d5c9a0d04d8": {
+      "workers": {
+        "app/[lang]/test-forms/page": {
+          "moduleId": "[project]/.next-internal/server/app/[lang]/test-forms/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "submitContactForm",
+          "filename": "app/actions.ts"
+        }
+      },
+      "layer": {
+        "app/[lang]/test-forms/page": "action-browser"
+      },
+      "filename": "app/actions.ts",
+      "exportedName": "submitContactForm"
+    }
+  },
+  "edge": {},
+  "encryptionKey": "noKdl/2NMg3Wz+v7JCZjn9JKOGbmL8yVaRtAjzLU598="
+}

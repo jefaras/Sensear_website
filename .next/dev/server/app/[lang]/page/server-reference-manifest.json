@@ -1,0 +1,20 @@
+{
+  "node": {
+    "40df08ee095886368fb9400a0d42a79e1be75ed6bc": {
+      "workers": {
+        "app/[lang]/page": {
+          "moduleId": "[project]/.next-internal/server/app/[lang]/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "submitNewsletterForm",
+          "filename": "app/actions.ts"
+        }
+      },
+      "layer": {
+        "app/[lang]/page": "action-browser"
+      },
+      "exportedName": "submitNewsletterForm",
+      "filename": "app/actions.ts"
+    }
+  },
+  "edge": {}
+}

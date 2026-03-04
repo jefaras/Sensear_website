@@ -1,0 +1,17 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/[lang]/layout,_N_T_/[lang]/industries/layout,_N_T_/[lang]/industries/music-for-restaurants-and-bars/layout,_N_T_/[lang]/industries/music-for-restaurants-and-bars/page,_N_T_/en/industries/music-for-restaurants-and-bars"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/$d$lang/industries/music-for-restaurants-and-bars/__PAGE__",
+    "/$d$lang/industries/music-for-restaurants-and-bars",
+    "/$d$lang/industries",
+    "/$d$lang",
+    "/_index",
+    "/_head"
+  ]
+}

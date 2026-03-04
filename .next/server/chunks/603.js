@@ -1,0 +1,149 @@
+exports.id=603,exports.ids=[603],exports.modules={2985:(a,b,c)=>{"use strict";c.r(b),c.d(b,{Navbar:()=>d});let d=(0,c(77943).registerClientReference)(function(){throw Error("Attempted to call Navbar() from the server but Navbar is on the client. It's not possible to invoke a client function from the server, it can only be rendered as a Component or passed to props of a Client Component.")},"C:\\Users\\jef\\Documents\\Antigravity\\components\\Navbar.tsx","Navbar")},2987:(a,b,c)=>{"use strict";c.r(b),c.d(b,{default:()=>e});var d=c(88868);let e=async a=>[{type:"image/png",sizes:"500x500",url:(0,d.fillMetadataSegment)(".",await a.params,"icon.png")+"?6e1542d91eaac5ac"}]},14707:(a,b,c)=>{Promise.resolve().then(c.t.bind(c,95547,23))},19684:(a,b,c)=>{"use strict";c.r(b),c.d(b,{default:()=>A,generateMetadata:()=>z,generateStaticParams:()=>y});var d=c(5735);c(82704);var e=c(85980),f=c(33586);let g=["en","el"];var h=c(40489),i=c(84898),j=c.n(i),k=c(91428),l=c.n(k),m=c(37541),n=c.n(m),o=c(97110),p=c.n(o),q=c(95170),r=c.n(q),s=c(39054),t=c.n(s);let u=`${j().variable} ${l().variable} ${n().variable} ${p().variable} ${r().variable} ${t().variable}`;var v=c(39994);let w=(0,e.default)(()=>Promise.resolve().then(c.bind(c,2985)).then(a=>a.Navbar),{loadableGenerated:{modules:["app\\[lang]\\layout.tsx -> @/components/Navbar"]},ssr:!0,loading:()=>(0,d.jsx)("div",{className:"h-20 bg-white border-b border-gray-100 animate-pulse","aria-hidden":"true"})}),x=(0,e.default)(()=>Promise.all([c.e(716),c.e(837)]).then(c.bind(c,61837)).then(a=>a.Footer),{loadableGenerated:{modules:["app\\[lang]\\layout.tsx -> @/components/Footer"]},ssr:!0,loading:()=>(0,d.jsx)("div",{className:"h-64 bg-gray-900 animate-pulse","aria-hidden":"true"})});async function y(){return g.map(a=>({lang:a}))}async function z({params:a}){let{lang:b}=await a,c=process.env.NEXT_PUBLIC_BASE_URL||"https://sensear.music",d="el"===b?"SensEar Music - Μουσική Επιμέλεια & Sonic Branding":"SensEar Music - Bespoke Music Curation & Sonic Branding",e="el"===b?"Εξειδικευμένη μουσική επιμέλεια και sonic branding για ξενοδοχεία, εστιατόρια, retail και εκδηλώσεις. Δημιουργούμε τη μοναδική ηχητική ταυτότητα του brand σας.":"Bespoke music curation and sonic branding for hospitality, retail, and events. We craft your brand's unique sonic identity through tailored playlists and audio experiences.";return{title:{default:d,template:"%s | SensEar Music"},description:e,keywords:"el"===b?["μουσική επιμέλεια","sonic branding","ηχητική ταυτότητα","μουσική ξενοδοχείων","μουσική εστιατορίων","playlist επιμέλεια","Αθήνα","Ελλάδα"]:["music curation","sonic branding","audio identity","hotel music","restaurant music","playlist curation","Athens","Greece","hospitality music","retail music"],authors:[{name:"SensEar Music"}],creator:"SensEar Music",publisher:"SensEar Music",formatDetection:{email:!1,address:!1,telephone:!1},metadataBase:new URL(c),alternates:{canonical:`/${b}`,languages:{en:"/en",el:"/el"}},openGraph:{type:"website",locale:"el"===b?"el_GR":"en_US",url:`${c}/${b}`,siteName:"SensEar Music",title:d,description:e,images:[{url:`${c}/images/brand/sensear-og-image.svg`,width:1200,height:630,alt:"SensEar Music - Bespoke Music Curation"}]},twitter:{card:"summary_large_image",title:d,description:e,images:[`${c}/images/brand/sensear-og-image.svg`],creator:"@sensear_music"},robots:{index:!0,follow:!0,googleBot:{index:!0,follow:!0,"max-video-preview":-1,"max-image-preview":"large","max-snippet":-1}}}}async function A({children:a,params:b}){let{lang:c}=await b,e=await (0,f.T)(c);return(0,d.jsxs)("html",{lang:c,className:u,children:[(0,d.jsxs)("head",{children:[(0,d.jsx)("link",{rel:"preload",as:"image",href:"/images/backgrounds/background-texture-warm-silver.jpg"}),(0,d.jsx)("link",{rel:"preload",as:"image",href:"/images/carousel/carousel-home-interior.jpg"}),(0,d.jsx)("style",{dangerouslySetInnerHTML:{__html:`
+                            /* Critical hero section styles */
+                            .bg-\\[\\#faebe3\\]{background-color:#faebe3}
+                            .min-h-\\[90vh\\]{min-height:90vh}
+                            .pt-32{padding-top:8rem}
+                            .pb-32{padding-bottom:8rem}
+                            .slide-up-1{opacity:0;animation:slideUp 0.8s ease-out forwards}
+                            .slide-up-2{opacity:0;animation:slideUp 0.8s ease-out 0.2s forwards}
+                            .slide-up-4{opacity:0;animation:slideUp 0.8s ease-out 0.6s forwards}
+                            @keyframes slideUp{0%{opacity:0;transform:translateY(40px)}to{opacity:1;transform:translateY(0)}}
+                            .text-\\[2\\.2rem\\]{font-size:2.2rem}
+                            .font-extrabold{font-weight:800}
+                            .leading-\\[1\\.1\\]{line-height:1.1}
+                            .text-black{--tw-text-opacity:1;color:rgb(0 0 0/var(--tw-text-opacity,1))}
+                            .mb-6{margin-bottom:1.5rem}
+                            .text-lg{font-size:1.125rem;line-height:1.75rem}
+                            .text-black\\/65{color:#000000a6}
+                            .leading-relaxed{line-height:1.625}
+                            .max-w-xl{max-width:36rem}
+                            .flex{display:flex}
+                            .flex-col{flex-direction:column}
+                            .gap-4{gap:1rem}
+                            .sm\\:flex-row{flex-direction:row}
+                            .w-full{width:100%}
+                            .sm\\:w-auto{width:auto}
+                            .px-10{padding-left:2.5rem;padding-right:2.5rem}
+                            .py-6{padding-top:1.5rem;padding-bottom:1.5rem}
+                            .text-xl{font-size:1.25rem;line-height:1.75rem}
+                            .md\\:text-2xl{font-size:1.5rem;line-height:2rem}
+                            .md\\:text-\\[4rem\\]{font-size:4rem}
+                            .lg\\:text-\\[4\\.8rem\\]{font-size:4.8rem}
+                            .sm\\:text-\\[3\\.2rem\\]{font-size:3.2rem}
+                            @media(min-width:640px){.sm\\:text-\\[3\\.2rem\\]{font-size:3.2rem}.sm\\:flex-row{flex-direction:row}.sm\\:w-auto{width:auto}}
+                            @media(min-width:768px){.md\\:text-2xl{font-size:1.5rem;line-height:2rem}.md\\:text-\\[4rem\\]{font-size:4rem}}
+                            @media(min-width:1024px){.lg\\:text-\\[4\\.8rem\\]{font-size:4.8rem}}
+                        `}}),(0,d.jsx)(h.Ws,{}),(0,d.jsx)(h.Mf,{}),(0,d.jsx)(h.sp,{})]}),(0,d.jsxs)("body",{className:"antialiased min-h-screen flex flex-col",suppressHydrationWarning:!0,children:[(0,d.jsx)("a",{href:"#main-content",className:"sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-black text-white px-4 py-2 rounded z-50",children:"Skip to main content"}),(0,d.jsx)(w,{lang:c,navigation:e.navigation}),(0,d.jsx)("main",{id:"main-content",className:"flex-grow",children:a}),(0,d.jsx)(x,{lang:c,dict:e}),(0,d.jsx)(v.ScrollToTop,{})]})]})}},30855:(a,b,c)=>{Promise.resolve().then(c.t.bind(c,95547,23)),Promise.resolve().then(c.t.bind(c,15098,23)),Promise.resolve().then(c.t.bind(c,47644,23)),Promise.resolve().then(c.t.bind(c,33859,23)),Promise.resolve().then(c.t.bind(c,98099,23)),Promise.resolve().then(c.t.bind(c,16237,23)),Promise.resolve().then(c.t.bind(c,98562,23)),Promise.resolve().then(c.t.bind(c,36675,23))},33191:(a,b,c)=>{"use strict";c.d(b,{cn:()=>f});var d=c(99314),e=c(96862);function f(...a){return(0,e.QP)((0,d.$)(a))}},33350:(a,b,c)=>{"use strict";c.d(b,{NewsletterForm:()=>l});var d=c(48249),e=c(67484),f=c(99829);let g=(0,f.createServerReference)("40f3e89d082ba78a76cd53b50a9565a75df9eb5ecb",f.callServer,void 0,f.findSourceMapURL,"submitNewsletterForm");var h=c(16442),i=c(81220),j=c(95373);let k={size:"invisible"};function l({placeholder:a,buttonText:b,source:c="Website",variant:f="footer"}){let[l,m]=(0,e.useState)(""),[n,o]=(0,e.useState)("idle"),[p,q]=(0,e.useState)(""),[r,s]=(0,e.useState)(null);async function t(a){if(a.preventDefault(),o("loading"),q(""),!r){o("error"),q("Security verification failed. Please refresh the page.");return}let b=new FormData;b.append("cf-turnstile-response",r),b.append("email",l),b.append("source",c);let d=await g(b);if(d.success)o("success"),m(""),s(null);else if(d.errors){o("error");let a=d.errors;q(a._form?.[0]||a.email?.[0]||"Something went wrong. Please try again.")}}return"success"===n?(0,d.jsx)("div",{className:`text-lg ${"footer"===f?"text-white/70":"text-black/70"}`,children:"✓ Thank you for subscribing!"}):"cta"===f?(0,d.jsxs)("form",{onSubmit:t,className:"flex flex-col sm:flex-row gap-4 w-full max-w-lg mx-auto",children:[(0,d.jsx)("input",{type:"email",value:l,onChange:a=>{m(a.target.value),"error"===n&&(o("idle"),q(""))},placeholder:a,required:!0,className:`flex-1 px-8 py-5 text-lg rounded-full border-2 bg-white/80 text-black placeholder:text-black/50 focus:outline-none ${"error"===n?"border-red-500":"border-black/20 focus:border-black/50"}`}),(0,d.jsx)("button",{type:"submit",disabled:"loading"===n,className:"group relative bg-black text-white hover:bg-black/90 px-12 py-5 text-lg font-semibold rounded-full transition-all duration-500 overflow-hidden flex items-center justify-center border-2 border-transparent disabled:opacity-50 disabled:cursor-not-allowed",children:"loading"===n?"Subscribing...":(0,d.jsxs)(d.Fragment,{children:[(0,d.jsx)("span",{className:"transition-transform duration-300 group-hover:-translate-x-2 inline-block",children:b}),(0,d.jsx)(h.A,{className:"absolute right-6 w-5 h-5 opacity-0 translate-x-4 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0"})]})}),"error"===n&&(0,d.jsx)("p",{className:"text-red-500 text-sm w-full text-center",children:p}),(0,d.jsx)(j.Xs,{siteKey:"1x00000000000000000000AA",onSuccess:a=>s(a),options:k})]}):(0,d.jsxs)("form",{onSubmit:t,className:"flex flex-col gap-2",children:[(0,d.jsxs)("div",{className:"flex gap-2",children:[(0,d.jsx)("input",{type:"email",value:l,onChange:a=>{m(a.target.value),"error"===n&&(o("idle"),q(""))},placeholder:a,required:!0,className:`bg-white/10 border text-white placeholder:text-white/50 flex-1 text-sm h-9 max-w-[180px] rounded-full px-4 focus:outline-none ${"error"===n?"border-red-500":"border-white/20 focus:border-white/50"}`}),(0,d.jsxs)("button",{type:"submit",disabled:"loading"===n,className:"group relative bg-transparent border-2 border-white text-white hover:bg-white hover:text-black px-8 py-2 text-xs font-semibold rounded-full transition-all duration-300 overflow-hidden h-9 flex items-center disabled:opacity-50 disabled:cursor-not-allowed",children:[(0,d.jsx)("span",{className:"relative inline-flex items-center mr-2 align-middle transition-transform duration-300 group-hover:-translate-x-2",children:(0,d.jsx)(i.default,{src:"/images/brand/sensear-logo-white.png",width:20,height:20,className:"w-5 h-5 object-contain",alt:""})}),(0,d.jsx)("span",{className:"transition-transform duration-300 group-hover:-translate-x-2 inline-block",children:"loading"===n?"...":b}),(0,d.jsx)(h.A,{className:"absolute right-2 w-3 h-3 opacity-0 translate-x-3 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0 top-1/2 -translate-y-1/2"})]})]}),"error"===n&&(0,d.jsx)("p",{className:"text-red-400 text-xs",children:p}),(0,d.jsx)(j.Xs,{siteKey:"1x00000000000000000000AA",onSuccess:a=>s(a),options:k})]})}},33586:(a,b,c)=>{"use strict";c.d(b,{T:()=>e});let d={en:()=>c.e(440).then(c.t.bind(c,12440,19)).then(a=>a.default),el:()=>c.e(102).then(c.t.bind(c,23102,19)).then(a=>a.default)},e=async a=>d[a]()},34040:(a,b,c)=>{"use strict";c.d(b,{ScrollToTop:()=>g});var d=c(48249),e=c(67484),f=c(38939);function g(){let[a,b]=(0,e.useState)(!1);return(0,d.jsx)("button",{onClick:()=>{window.scrollTo({top:0,behavior:"smooth"})},className:`fixed bottom-8 right-8 z-50 p-3 rounded-full bg-black/30 backdrop-blur-sm text-white border border-white/20 shadow-lg transition-all duration-300 hover:bg-black/50 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-white/30 ${a?"opacity-100 translate-y-0":"opacity-0 translate-y-4 pointer-events-none"}`,"aria-label":"Scroll to top",children:(0,d.jsx)(f.A,{className:"w-5 h-5"})})}},37174:(a,b,c)=>{"use strict";c.r(b),c.d(b,{"4007e26e891ac6bb1e4b37b330a388665cb625fc49":()=>n,"40f3e89d082ba78a76cd53b50a9565a75df9eb5ecb":()=>o});var d=c(95349),e=c(95966),f=c(40965);let g=(process.env.SMTP_HOST||"").replace(/^https?:\/\//i,"").trim();"sensear.music"!==g&&g||(g="mail.sensear.music");let h=f.createTransport({host:g,port:parseInt(process.env.SMTP_PORT||"587"),secure:"true"===process.env.SMTP_SECURE,ignoreTLS:"true"!==process.env.SMTP_SECURE,name:"sensear.music",tls:{rejectUnauthorized:!1},auth:{user:process.env.SMTP_USER,pass:process.env.SMTP_PASSWORD}});async function i({to:a,subject:b,html:c,text:d}){try{let e=(process.env.SMTP_FROM||"").split(",")[0].trim(),f=await h.sendMail({from:`"${process.env.COMPANY_NAME||"SensEar"}" <${e}>`,to:a,subject:b,html:c,text:d||c.replace(/<[^>]*>/g,"")});return console.log("Success! Email sent successfully:",f.messageId),{success:!0,messageId:f.messageId}}catch(a){return console.error("Error! Email sending failed:",a),{success:!1,error:a}}}var j=c(89337);async function k(a){if(!a)return!1;if(!process.env.TURNSTILE_SECRET_KEY)return console.warn("TURNSTILE_SECRET_KEY is missing, bypassing security check for development"),!0;try{let b=await fetch("https://challenges.cloudflare.com/turnstile/v0/siteverify",{method:"POST",headers:{"Content-Type":"application/x-www-form-urlencoded"},body:new URLSearchParams({secret:process.env.TURNSTILE_SECRET_KEY,response:a})});return(await b.json()).success}catch(a){return console.error("Turnstile verification error:",a),!1}}let l=e.Ik({name:e.Yj().min(2,"Name must be at least 2 characters"),surname:e.Yj().min(2,"Surname must be at least 2 characters"),business_name:e.Yj().optional(),email:e.Yj().email("Invalid email address"),phone:e.Yj().refine(a=>10===a.replace(/\D/g,"").length,"Phone number must contain exactly 10 digits"),country_code:e.Yj().optional(),venue_type:e.Yj().min(1,"Please select a venue type"),service_interest:e.Yj().min(1,"Please select a service interest"),message:e.Yj().min(10,"Message must be at least 10 characters")}),m=e.Ik({email:e.Yj().email("Invalid email address"),source:e.Yj().optional()});async function n(a){var b;let c=a.get("cf-turnstile-response")?.toString()||null;if(!await k(c))return{errors:{_form:["Security verification failed. Please try again."]}};let d=l.safeParse({name:a.get("name"),surname:a.get("surname"),business_name:a.get("business_name"),email:a.get("email"),phone:a.get("phone"),country_code:a.get("country_code"),venue_type:a.get("venue_type"),service_interest:a.get("service_interest"),message:a.get("message")});if(!d.success)return{errors:d.error.flatten().fieldErrors};let e=d.data,f=(b={...e,phone:e.country_code?`${e.country_code} ${e.phone}`:e.phone},`
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <style>
+        body { font-family: 'Arial', sans-serif; line-height: 1.6; color: #333; }
+        .container { max-width: 600px; margin: 0 auto; padding: 20px; }
+        .header { background: #000; color: #fff; padding: 20px; text-align: center; }
+        .content { background: #f9f9f9; padding: 30px; border-radius: 8px; margin-top: 20px; }
+        .field { margin-bottom: 20px; }
+        .field-label { font-weight: bold; color: #000; margin-bottom: 5px; }
+        .field-value { color: #555; }
+        .footer { text-align: center; margin-top: 30px; color: #999; font-size: 12px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>SENSEAR</h1>
+            <p>New Contact Form Submission</p>
+        </div>
+        
+        <div class="content">
+            <div class="field">
+                <div class="field-label">👤 Name:</div>
+                <div class="field-value">${b.name} ${b.surname}</div>
+            </div>
+            
+            ${b.business_name?`
+            <div class="field">
+                <div class="field-label">💼 Business Name:</div>
+                <div class="field-value">${b.business_name}</div>
+            </div>
+            `:""}
+            
+            <div class="field">
+                <div class="field-label">📧 Email:</div>
+                <div class="field-value"><a href="mailto:${b.email}">${b.email}</a></div>
+            </div>
+            
+            ${b.phone?`
+            <div class="field">
+                <div class="field-label">📱 Phone:</div>
+                <div class="field-value"><a href="tel:${b.phone}">${b.phone}</a></div>
+            </div>
+            `:""}
+            
+            <div class="field">
+                <div class="field-label">🏢 Venue Type:</div>
+                <div class="field-value">${b.venue_type}</div>
+            </div>
+            
+            <div class="field">
+                <div class="field-label">🎯 Service Interest:</div>
+                <div class="field-value">${b.service_interest}</div>
+            </div>
+            
+            <div class="field">
+                <div class="field-label">Message:</div>
+                <div class="field-value">${b.message.replace(/\n/g,"<br>")}</div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>This email was sent from the SensEar contact form</p>
+            <p>Received at: ${new Date().toLocaleString("en-US",{timeZone:"Europe/Athens"})} (Athens Time)</p>
+        </div>
+    </div>
+</body>
+</html>
+    `.trim()),g=process.env.SMTP_TO?process.env.SMTP_TO.split(",").map(a=>a.trim()):["jefaraz@gmail.com","info@sensear.music"],h=(await Promise.all(g.map(a=>i({to:a,subject:`[SensEar] New Contact Form Submission from ${e.name}`,html:f})))).filter(a=>!a.success);return h.length>0?(console.error("Failed to send some contact form emails:",h),{errors:{_form:[`Failed to send email. Server Error: ${String(h[0].error?.message||h[0].error)}`]}}):(console.log("Success! Contact form submitted and emails sent:",e.name,e.email),{success:!0})}async function o(a){var b;let c=a.get("cf-turnstile-response")?.toString()||null;if(!await k(c))return{errors:{_form:["Security verification failed. Please try again."]}};let d=m.safeParse({email:a.get("email"),source:a.get("source")});if(!d.success)return{errors:d.error.flatten().fieldErrors};let e=d.data,f=(b={email:e.email,source:e.source||"Website"},`
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <style>
+        body { font-family: 'Arial', sans-serif; line-height: 1.6; color: #333; }
+        .container { max-width: 600px; margin: 0 auto; padding: 20px; }
+        .header { background: #000; color: #fff; padding: 20px; text-align: center; }
+        .content { background: #f9f9f9; padding: 30px; border-radius: 8px; margin-top: 20px; }
+        .field { margin-bottom: 20px; }
+        .field-label { font-weight: bold; color: #000; margin-bottom: 5px; }
+        .field-value { color: #555; }
+        .footer { text-align: center; margin-top: 30px; color: #999; font-size: 12px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>SENSEAR</h1>
+            <p>New Newsletter Subscription</p>
+        </div>
+        
+        <div class="content">
+            <div class="field">
+                <div class="field-label">📧 Subscriber Email:</div>
+                <div class="field-value"><a href="mailto:${b.email}">${b.email}</a></div>
+            </div>
+            
+            <div class="field">
+                <div class="field-label">📍 Subscription Source:</div>
+                <div class="field-value">${b.source}</div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>This email was sent from the SensEar newsletter subscription form</p>
+            <p>Received at: ${new Date().toLocaleString("en-US",{timeZone:"Europe/Athens"})} (Athens Time)</p>
+        </div>
+    </div>
+</body>
+</html>
+    `.trim()),g=(await Promise.all(["jefaraz@gmail.com","info@sensear.music"].map(a=>i({to:a,subject:`[SensEar] New Newsletter Subscription from ${e.email}`,html:f})))).filter(a=>!a.success);return g.length>0?(console.error("Failed to send some newsletter emails:",g),{errors:{_form:[`Failed to subscribe. Server Error: ${String(g[0].error?.message||g[0].error)}`]}}):(console.log("Success! Newsletter subscription submitted and emails sent:",e.email),{success:!0})}(0,j.D)([n,o]),(0,d.A)(n,"4007e26e891ac6bb1e4b37b330a388665cb625fc49",null),(0,d.A)(o,"40f3e89d082ba78a76cd53b50a9565a75df9eb5ecb",null)},39994:(a,b,c)=>{"use strict";c.d(b,{ScrollToTop:()=>d});let d=(0,c(77943).registerClientReference)(function(){throw Error("Attempted to call ScrollToTop() from the server but ScrollToTop is on the client. It's not possible to invoke a client function from the server, it can only be rendered as a Component or passed to props of a Client Component.")},"C:\\Users\\jef\\Documents\\Antigravity\\components\\ScrollToTop.tsx","ScrollToTop")},40489:(a,b,c)=>{"use strict";c.d(b,{Mf:()=>g,Ws:()=>f,dp:()=>i,sp:()=>h});var d=c(5735);let e=process.env.NEXT_PUBLIC_BASE_URL||"https://sensear.music";function f(){let a={"@context":"https://schema.org","@type":"Organization",name:"SensEar Music",description:"Bespoke music curation and sonic branding for hospitality and retail businesses.",url:e,logo:`${e}/images/brand/sensear-logo-color.png`,contactPoint:{"@type":"ContactPoint",telephone:"+30-697-699-4212",contactType:"customer service",email:"hello@sensear.music",availableLanguage:["English","Greek"]},sameAs:["https://www.instagram.com/sensear.music","https://www.linkedin.com/company/sensear-music","https://soundcloud.com/sensear_music"],address:{"@type":"PostalAddress",addressCountry:"GR"}};return(0,d.jsx)("script",{type:"application/ld+json",dangerouslySetInnerHTML:{__html:JSON.stringify(a)}})}function g(){let a={"@context":"https://schema.org","@type":"LocalBusiness",name:"SensEar Music",description:"Bespoke music curation and sonic branding services for hospitality, retail, and events.",url:e,telephone:"+30-697-699-4212",email:"hello@sensear.music",address:{"@type":"PostalAddress",addressCountry:"GR"},priceRange:"$$",openingHours:"Mo-Fr 09:00-18:00",image:`${e}/images/brand/sensear-logo-color.png`};return(0,d.jsx)("script",{type:"application/ld+json",dangerouslySetInnerHTML:{__html:JSON.stringify(a)}})}function h(){let a={"@context":"https://schema.org","@type":"WebSite",name:"SensEar Music",description:"Bespoke music curation and sonic branding for hospitality and retail businesses.",url:e,potentialAction:{"@type":"SearchAction",target:{"@type":"EntryPoint",urlTemplate:`${e}/en/blog?search={search_term_string}`},"query-input":"required name=search_term_string"}};return(0,d.jsx)("script",{type:"application/ld+json",dangerouslySetInnerHTML:{__html:JSON.stringify(a)}})}function i({title:a,description:b,url:c,image:f,datePublished:g,dateModified:h,author:i="SensEar Music"}){let j={"@context":"https://schema.org","@type":"Article",headline:a,description:b,url:`${e}${c}`,...f&&{image:`${e}${f}`},...g&&{datePublished:g},...h&&{dateModified:h},author:{"@type":"Organization",name:i,url:e},publisher:{"@type":"Organization",name:"SensEar Music",url:e,logo:{"@type":"ImageObject",url:`${e}/images/brand/sensear-logo-color.png`}},mainEntityOfPage:{"@type":"WebPage","@id":`${e}${c}`}};return(0,d.jsx)("script",{type:"application/ld+json",dangerouslySetInnerHTML:{__html:JSON.stringify(j)}})}},51659:(a,b,c)=>{Promise.resolve().then(c.t.bind(c,81921,23))},74168:(a,b,c)=>{Promise.resolve().then(c.bind(c,81275)),Promise.resolve().then(c.bind(c,33350)),Promise.resolve().then(c.bind(c,34040)),Promise.resolve().then(c.t.bind(c,2116,23)),Promise.resolve().then(c.t.bind(c,51455,23)),Promise.resolve().then(c.bind(c,66958)),Promise.resolve().then(c.bind(c,62883))},78335:()=>{},81275:(a,b,c)=>{"use strict";c.r(b),c.d(b,{Navbar:()=>n});var d=c(48249),e=c(67484),f=c(2116),g=c.n(f),h=c(81220),i=c(19099),j=c(84289),k=c(104),l=c(19289),m=c(33191);function n({lang:a,navigation:b}){let[c,f]=(0,e.useState)(!1),[n,o]=(0,e.useState)(!1),p=(0,i.usePathname)(),q=()=>{if(!p)return"/";let a=p.split("/"),b=a[1];return a[1]="en"===b?"el":"en",a.join("/")},r="en"===a?"GR":"EN",s=[{href:`/${a}`,label:b.home},{href:`/${a}/services`,label:b.services},{href:`/${a}/industries`,label:b.industries},{href:`/${a}/case-studies`,label:b.case_studies}];return(0,d.jsxs)("nav",{role:"navigation","aria-label":"Main navigation",suppressHydrationWarning:!0,className:(0,m.cn)("fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-1",n||c?"bg-black lg:bg-black/95 shadow-lg":"bg-transparent",n||c?"text-white":"text-black"),children:[(0,d.jsxs)("div",{className:"max-w-7xl mx-auto px-6 flex items-center justify-between",children:[(0,d.jsxs)(g(),{href:`/${a}`,className:"group flex items-center gap-3 shrink-0",children:[(0,d.jsx)("div",{className:"relative w-16 h-16",children:(0,d.jsx)(h.default,{src:n||c?"/images/brand/sensear-logo-white.png":"/images/brand/sensear-logo-color.png",alt:"SensEar",fill:!0,className:"object-contain transition-all duration-300 group-hover:scale-110",priority:!0})}),(0,d.jsx)("span",{className:(0,m.cn)("font-syne text-3xl font-bold tracking-wide transition-colors",n||c?"text-white":"text-black"),children:"SENSEAR"})]}),(0,d.jsxs)("div",{className:"hidden lg:flex items-center gap-6",children:[s.map(a=>(0,d.jsx)(g(),{href:a.href,className:(0,m.cn)("font-jakarta text-base font-bold tracking-wide transition-all hover:underline decoration-1 underline-offset-4",n||c?"text-white/90 hover:text-white":"text-black/80 hover:text-black",p===a.href&&"underline"),children:a.label},a.href)),(0,d.jsx)(g(),{href:`/${a}/blog`,className:(0,m.cn)("font-jakarta text-base font-bold tracking-wide transition-all hover:underline decoration-1 underline-offset-4",n||c?"text-white/90 hover:text-white":"text-black/80 hover:text-black",p===`/${a}/blog`&&"underline"),children:b.blog}),(0,d.jsx)(g(),{href:`/${a}/about`,className:(0,m.cn)("font-jakarta text-base font-bold tracking-wide transition-all hover:underline decoration-1 underline-offset-4",n||c?"text-white/90 hover:text-white":"text-black/80 hover:text-black",p===`/${a}/about`&&"underline"),children:b.about}),(0,d.jsx)(g(),{href:`/${a}/contact`,className:(0,m.cn)("rounded-full px-6 py-2 border font-jakarta text-base font-bold tracking-wide transition-all hover:underline decoration-1 underline-offset-4",n||c?"border-white/30 text-white/90 hover:text-white hover:border-white/50":"border-black/30 text-black/80 hover:text-black hover:border-black/50",p===`/${a}/contact`&&"underline"),children:b.contact}),(0,d.jsxs)(g(),{href:q(),"aria-label":`Switch to ${"EN"===r?"English":"Ελληνικά"}`,className:(0,m.cn)("flex items-center gap-1 text-sm font-medium px-3 py-1 border rounded-full transition-colors",n||c?"border-white/20 text-white hover:bg-white/10":"border-black/20 text-black hover:bg-black/5"),children:[(0,d.jsx)(j.A,{className:"w-4 h-4","aria-hidden":"true"}),(0,d.jsx)("span",{children:r})]})]}),(0,d.jsx)("button",{"aria-label":c?"Close menu":"Open menu","aria-expanded":c,className:(0,m.cn)("lg:hidden p-2 transition-colors",n||c?"text-white":"text-black"),onClick:()=>f(!c),children:c?(0,d.jsx)(k.A,{}):(0,d.jsx)(l.A,{})})]}),c&&(0,d.jsxs)("div",{className:"lg:hidden absolute top-full left-0 right-0 bg-black shadow-lg p-6 flex flex-col gap-4 max-h-[80vh] overflow-y-auto",children:[s.map(a=>(0,d.jsx)(g(),{href:a.href,onClick:()=>f(!1),className:(0,m.cn)("text-lg font-jakarta font-bold py-3 border-b border-white/10",p===a.href?"text-white":"text-white/70"),children:a.label},a.href)),(0,d.jsx)(g(),{href:`/${a}/contact`,onClick:()=>f(!1),className:"text-lg font-jakarta font-bold py-3 border-b border-white/10 text-white/70",children:b.contact}),(0,d.jsx)(g(),{href:`/${a}/blog`,onClick:()=>f(!1),className:(0,m.cn)("text-lg font-jakarta font-bold py-3 border-b border-white/10",p===`/${a}/blog`?"text-white":"text-white/70"),children:b.blog}),(0,d.jsx)(g(),{href:`/${a}/about`,onClick:()=>f(!1),className:(0,m.cn)("text-lg font-jakarta font-bold py-3 border-b border-white/10",p===`/${a}/about`?"text-white":"text-white/70"),children:b.about}),(0,d.jsxs)(g(),{href:q(),className:"flex items-center gap-2 text-lg font-bold py-2 text-white",children:[(0,d.jsx)(j.A,{className:"w-5 h-5"}),(0,d.jsxs)("span",{children:["Switch to ",r]})]})]})]})}},82704:()=>{},89848:(a,b,c)=>{Promise.resolve().then(c.bind(c,2985)),Promise.resolve().then(c.bind(c,98032)),Promise.resolve().then(c.bind(c,39994)),Promise.resolve().then(c.t.bind(c,23318,23)),Promise.resolve().then(c.t.bind(c,58637,23)),Promise.resolve().then(c.t.bind(c,9732,23)),Promise.resolve().then(c.t.bind(c,35825,23))},96351:(a,b,c)=>{Promise.resolve().then(c.t.bind(c,81921,23)),Promise.resolve().then(c.t.bind(c,60440,23)),Promise.resolve().then(c.t.bind(c,84342,23)),Promise.resolve().then(c.t.bind(c,82265,23)),Promise.resolve().then(c.t.bind(c,35421,23)),Promise.resolve().then(c.t.bind(c,61335,23)),Promise.resolve().then(c.t.bind(c,70664,23)),Promise.resolve().then(c.bind(c,74661))},96487:()=>{},98032:(a,b,c)=>{"use strict";c.d(b,{NewsletterForm:()=>d});let d=(0,c(77943).registerClientReference)(function(){throw Error("Attempted to call NewsletterForm() from the server but NewsletterForm is on the client. It's not possible to invoke a client function from the server, it can only be rendered as a Component or passed to props of a Client Component.")},"C:\\Users\\jef\\Documents\\Antigravity\\components\\NewsletterForm.tsx","NewsletterForm")}};

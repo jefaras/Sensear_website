@@ -1,0 +1,16 @@
+{
+  "node_modules\\next\\dist\\client\\index.js -> ../pages/_app": {
+    "id": 1966,
+    "files": [
+      "static/css/b23798b7ae16a7cc.css",
+      "static/chunks/vendors-ce890ba0fe6a9909.js"
+    ]
+  },
+  "node_modules\\next\\dist\\client\\index.js -> ../pages/_error": {
+    "id": 3899,
+    "files": [
+      "static/css/b23798b7ae16a7cc.css",
+      "static/chunks/vendors-ce890ba0fe6a9909.js"
+    ]
+  }
+}
