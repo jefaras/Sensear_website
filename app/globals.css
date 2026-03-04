@@ -147,3 +147,8 @@
   white-space: nowrap;
   width: fit-content;
 }
+
+/* Hide Google reCAPTCHA v3 floating badge — text attribution is included in forms */
+.grecaptcha-badge {
+  visibility: hidden !important;
+}

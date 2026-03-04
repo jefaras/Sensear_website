@@ -1,9 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import { submitContactForm } from "@/app/actions";
 import { CheckCircle, ArrowRight } from "lucide-react";
-import { Turnstile } from '@marsidev/react-turnstile';
+import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 
 interface ContactFormLabels {
     name: string;
@@ -60,8 +60,8 @@ interface FormData {
 export function ContactForm({ labels }: ContactFormProps) {
     const [pending, setPending] = useState(false);
     const [success, setSuccess] = useState(false);
-    const [turnstileToken, setTurnstileToken] = useState<string | null>(null);
     const [errors, setErrors] = useState<Record<string, string[]>>({});
+    const { executeRecaptcha } = useGoogleReCaptcha();
     const [formData, setFormData] = useState<FormData>({
         name: "",
         surname: "",
@@ -87,19 +87,25 @@ export function ContactForm({ labels }: ContactFormProps) {
         }
     }
 
-    async function handleSubmit(e: React.FormEvent) {
+    const handleSubmit = useCallback(async (e: React.FormEvent) => {
         e.preventDefault();
         setPending(true);
         setErrors({});
 
-        if (!turnstileToken) {
-            setErrors({ _form: ["Please complete the security challenge."] });
-            setPending(false);
-            return;
+        // Get reCAPTCHA token
+        let recaptchaToken = "";
+        if (executeRecaptcha) {
+            try {
+                recaptchaToken = await executeRecaptcha("contact_form");
+            } catch {
+                setErrors({ _form: ["Security verification failed. Please refresh the page."] });
+                setPending(false);
+                return;
+            }
         }
 
         const submitData = new FormData();
-        submitData.append("cf-turnstile-response", turnstileToken);
+        submitData.append("g-recaptcha-response", recaptchaToken);
         submitData.append("name", formData.name);
         submitData.append("surname", formData.surname);
         submitData.append("business_name", formData.business_name);
@@ -119,7 +125,6 @@ export function ContactForm({ labels }: ContactFormProps) {
             setErrors(res.errors as Record<string, string[]>);
         } else if (res?.success) {
             setSuccess(true);
-            setTurnstileToken(null);
             // Reset form on success
             setFormData({
                 name: "",
@@ -133,7 +138,7 @@ export function ContactForm({ labels }: ContactFormProps) {
                 message: "",
             });
         }
-    }
+    }, [executeRecaptcha, formData, labels]);
 
     if (success) {
         return (
@@ -298,14 +303,6 @@ export function ContactForm({ labels }: ContactFormProps) {
                 {errors.message && <p className="text-red-500 text-sm mt-1">{errors.message[0]}</p>}
             </div>
 
-            <div className="flex justify-center !mt-8 !mb-4">
-                <Turnstile
-                    siteKey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY || ""}
-                    onSuccess={(token) => setTurnstileToken(token)}
-                    onError={() => setErrors({ _form: ["Security challenge failed. Please try again."] })}
-                />
-            </div>
-
             <button
                 type="submit"
                 disabled={pending}
@@ -329,6 +326,12 @@ export function ContactForm({ labels }: ContactFormProps) {
                     </>
                 )}
             </button>
+
+            <p className="text-xs text-black/40 text-center mt-3">
+                This site is protected by reCAPTCHA and the Google{" "}
+                <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="underline hover:text-black/60">Privacy Policy</a> and{" "}
+                <a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer" className="underline hover:text-black/60">Terms of Service</a> apply.
+            </p>
         </form>
     )
 }

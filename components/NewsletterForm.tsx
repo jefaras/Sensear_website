@@ -1,10 +1,10 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import { submitNewsletterForm } from "@/app/actions";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
-import { Turnstile } from '@marsidev/react-turnstile';
+import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 
 interface NewsletterFormProps {
     placeholder: string;
@@ -12,8 +12,6 @@ interface NewsletterFormProps {
     source?: string;
     variant?: "footer" | "cta";
 }
-
-const invisibleOptions = { size: 'invisible' as const };
 
 export function NewsletterForm({
     placeholder,
@@ -24,21 +22,27 @@ export function NewsletterForm({
     const [email, setEmail] = useState("");
     const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
     const [errorMessage, setErrorMessage] = useState("");
-    const [turnstileToken, setTurnstileToken] = useState<string | null>(null);
+    const { executeRecaptcha } = useGoogleReCaptcha();
 
-    async function handleSubmit(e: React.FormEvent) {
+    const handleSubmit = useCallback(async (e: React.FormEvent) => {
         e.preventDefault();
         setStatus("loading");
         setErrorMessage("");
 
-        if (!turnstileToken) {
-            setStatus("error");
-            setErrorMessage("Security verification failed. Please refresh the page.");
-            return;
+        // Get reCAPTCHA token
+        let recaptchaToken = "";
+        if (executeRecaptcha) {
+            try {
+                recaptchaToken = await executeRecaptcha("newsletter");
+            } catch {
+                setStatus("error");
+                setErrorMessage("Security verification failed. Please refresh the page.");
+                return;
+            }
         }
 
         const formData = new FormData();
-        formData.append("cf-turnstile-response", turnstileToken);
+        formData.append("g-recaptcha-response", recaptchaToken);
         formData.append("email", email);
         formData.append("source", source);
 
@@ -47,7 +51,6 @@ export function NewsletterForm({
         if (result.success) {
             setStatus("success");
             setEmail("");
-            setTurnstileToken(null);
         } else if (result.errors) {
             setStatus("error");
             const errors = result.errors as Record<string, string[]>;
@@ -57,7 +60,7 @@ export function NewsletterForm({
                 "Something went wrong. Please try again."
             );
         }
-    }
+    }, [executeRecaptcha, email, source]);
 
     if (status === "success") {
         return (
@@ -104,11 +107,11 @@ export function NewsletterForm({
                 {status === "error" && (
                     <p className="text-red-500 text-sm w-full text-center">{errorMessage}</p>
                 )}
-                <Turnstile
-                    siteKey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY || ""}
-                    onSuccess={(token) => setTurnstileToken(token)}
-                    options={invisibleOptions}
-                />
+                <p className="text-xs text-black/40 text-center w-full mt-1">
+                    Protected by reCAPTCHA —{" "}
+                    <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="underline">Privacy</a> &amp;{" "}
+                    <a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer" className="underline">Terms</a>
+                </p>
             </form>
         );
     }
@@ -149,11 +152,11 @@ export function NewsletterForm({
             {status === "error" && (
                 <p className="text-red-400 text-xs">{errorMessage}</p>
             )}
-            <Turnstile
-                siteKey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY || ""}
-                onSuccess={(token) => setTurnstileToken(token)}
-                options={invisibleOptions}
-            />
+            <p className="text-xs text-white/30 mt-1">
+                Protected by reCAPTCHA —{" "}
+                <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="underline">Privacy</a> &amp;{" "}
+                <a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer" className="underline">Terms</a>
+            </p>
         </form>
     );
 }

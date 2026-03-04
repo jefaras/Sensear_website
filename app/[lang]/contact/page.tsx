@@ -75,12 +75,9 @@ export default async function Contact({ params }: { params: Promise<{ lang: Loca
                     </div>
 
                     <div className="max-w-3xl mx-auto bg-white p-8 shadow-lg rounded-xl">
-                        {/* ContactForm temporarily disabled */}
-                        {/*
                         <ContactForm labels={dict.contact.form} />
-                        */}
 
-                        {/* Temporary replacement message */}
+                        {/* Temporary replacement message — commented out now that form is live
                         <div className="space-y-4 text-lg text-black/80 leading-relaxed">
                             <p className="font-semibold text-xl">
                                 {dict.contact.form.temp_title}
@@ -89,6 +86,7 @@ export default async function Contact({ params }: { params: Promise<{ lang: Loca
                                 {dict.contact.form.temp_message}
                             </p>
                         </div>
+                        */}
                     </div>
                 </div>
             </section>

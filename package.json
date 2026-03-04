@@ -16,7 +16,6 @@
     "dependencies": {
         "@formatjs/intl-localematcher": "^0.5.4",
         "@hookform/resolvers": "^3.10.0",
-        "@marsidev/react-turnstile": "^1.4.2",
         "@radix-ui/react-accordion": "^1.2.12",
         "class-variance-authority": "^0.7.1",
         "clsx": "^2.1.1",
@@ -27,6 +26,7 @@
         "nodemailer": "^7.0.13",
         "react": "^19.0.0",
         "react-dom": "^19.0.0",
+        "react-google-recaptcha-v3": "^1.11.0",
         "react-hook-form": "^7.54.2",
         "tailwind-merge": "^2.6.0",
         "tailwindcss-animate": "^1.0.7",

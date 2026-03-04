@@ -3,30 +3,35 @@
 import { z } from "zod";
 import { sendEmail, generateContactEmailHTML, generateNewsletterEmailHTML } from "@/lib/email";
 
-async function verifyTurnstileToken(token: string | null) {
+async function verifyRecaptchaToken(token: string | null): Promise<boolean> {
     if (!token) return false;
 
-    if (!process.env.TURNSTILE_SECRET_KEY) {
-        console.warn("TURNSTILE_SECRET_KEY is missing, bypassing security check for development");
+    const secretKey = process.env.RECAPTCHA_SECRET_KEY;
+    if (!secretKey) {
+        console.warn("RECAPTCHA_SECRET_KEY is missing, bypassing security check for development");
         return true;
     }
 
     try {
-        const response = await fetch("https://challenges.cloudflare.com/turnstile/v0/siteverify", {
+        const response = await fetch("https://www.google.com/recaptcha/api/siteverify", {
             method: "POST",
-            headers: {
-                "Content-Type": "application/x-www-form-urlencoded",
-            },
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
             body: new URLSearchParams({
-                secret: process.env.TURNSTILE_SECRET_KEY,
+                secret: secretKey,
                 response: token,
             }),
         });
 
         const data = await response.json();
-        return data.success;
+        // reCAPTCHA v3 returns a score from 0.0 to 1.0
+        // 1.0 is very likely a good interaction, 0.0 is very likely a bot
+        if (data.success && data.score >= 0.5) {
+            return true;
+        }
+        console.warn("reCAPTCHA verification failed or low score:", data);
+        return false;
     } catch (error) {
-        console.error("Turnstile verification error:", error);
+        console.error("reCAPTCHA verification error:", error);
         return false;
     }
 }
@@ -49,11 +54,11 @@ const newsletterSchema = z.object({
 });
 
 export async function submitContactForm(formData: FormData) {
-    // Verify turnstile token first
-    const token = formData.get("cf-turnstile-response")?.toString() || null;
-    const isValidToken = await verifyTurnstileToken(token);
+    // Verify reCAPTCHA token
+    const token = formData.get("g-recaptcha-response")?.toString() || null;
+    const isValid = await verifyRecaptchaToken(token);
 
-    if (!isValidToken) {
+    if (!isValid) {
         return {
             errors: {
                 _form: ["Security verification failed. Please try again."],
@@ -121,11 +126,11 @@ export async function submitContactForm(formData: FormData) {
 }
 
 export async function submitNewsletterForm(formData: FormData) {
-    // Verify turnstile token first
-    const token = formData.get("cf-turnstile-response")?.toString() || null;
-    const isValidToken = await verifyTurnstileToken(token);
+    // Verify reCAPTCHA token
+    const token = formData.get("g-recaptcha-response")?.toString() || null;
+    const isValid = await verifyRecaptchaToken(token);
 
-    if (!isValidToken) {
+    if (!isValid) {
         return {
             errors: {
                 _form: ["Security verification failed. Please try again."],

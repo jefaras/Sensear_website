@@ -30,7 +30,7 @@ export default async function TestFormsPage({ params }: { params: Promise<{ lang
                             Newsletter Form
                         </h2>
                         <div className="bg-black/5 p-8 rounded-xl">
-                            <NewsletterForm 
+                            <NewsletterForm
                                 placeholder={dict.footer.newsletter.placeholder}
                                 buttonText={dict.footer.newsletter.button}
                                 variant="cta"
@@ -38,7 +38,7 @@ export default async function TestFormsPage({ params }: { params: Promise<{ lang
                         </div>
                         <div className="mt-8 bg-black p-8 rounded-xl">
                             <h3 className="text-white mb-4">Footer Variant Test:</h3>
-                            <NewsletterForm 
+                            <NewsletterForm
                                 placeholder={dict.footer.newsletter.placeholder}
                                 buttonText={dict.footer.newsletter.button}
                                 variant="footer"
