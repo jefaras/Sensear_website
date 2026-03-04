@@ -149,8 +149,8 @@
         "hero": {
             "title": "Ας μιλήσουμε για τις ανάγκες σας",
             "subtitle": "Πείτε μας λίγα λόγια για τον χώρο σας και την αίσθηση που θέλετε να δημιουργεί.",
-            "background_image": "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/178049824_warmsilverfoilsample-Picsart-AiImageEnhancer.jpg",
-            "image": "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/f3cada14a_gemini-image-2_photography_of_a_scene_captured_in_a_candid_style_with_high-quality_details_show-0--.jpg",
+            "background_image": "/images/backgrounds/warm-silver-foil-texture.jpg",
+            "image": "/images/contact/contact-hero-venue-consultation.jpg",
             "image_alt": "Επικοινωνία SensEar"
         },
         "intro": {
@@ -354,7 +354,7 @@
         "hero": {
             "title": "Οι άνθρωποι πίσω από το soundtrack σας",
             "subtitle": "Βοηθάμε τους χώρους να διαμορφώσουν το πώς ακούγονται και πώς βιώνονται.",
-            "image": "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/178049824_warmsilverfoilsample-Picsart-AiImageEnhancer.jpg",
+            "image": "/images/backgrounds/warm-silver-foil-texture.jpg",
             "image_alt": "Οι άνθρωποι πίσω από το soundtrack σας"
         },
         "vision": {
@@ -390,7 +390,7 @@
                     "text": "Η **SensEar ξεκινά**. Οι πρώτοι πελάτες επιβεβαιώνουν: οι χώροι αξίζουν **soundtracks σχεδιασμένα με πρόθεση**."
                 }
             ],
-            "image": "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/92f0d2705_16685b806_pexels-monstera-1408089.jpg"
+            "image": "/images/about/about-journey-team-collaboration.jpg"
         },
         "team": {
             "heading": "Γνωρίστε την ομάδα",
@@ -404,7 +404,7 @@
                         "Καθιερώθηκε στην Αθήνα ως DJ & music curator σε ραδιόφωνο, πάρτι και residencies σε venues.",
                         "Στη SensEar, δημιουργεί τη μουσική ταυτότητα κάθε venue με ακρίβεια, ρυθμό και ατμόσφαιρες που ορίζουν το signature sound του brand."
                     ],
-                    "image": "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/9e1d5056f_398e0cca3_84887785_172252324195148_2160204890159185920_n1.jpg",
+                    "image": "/images/about/team-george-fameliaris.jpg",
                     "alt": "Γιώργος Φαμελιάρης"
                 },
                 {
@@ -415,7 +415,7 @@
                         "Έχει ηγηθεί ψηφιακών projects and brand strategies για brands φιλοξενίας και lifestyle.",
                         "Στη SensEar, διασφαλίζει ότι κάθε ηχητική λύση ευθυγραμμίζεται με επιχειρηματικούς στόχους και παρέχει μετρήσιμο αντίκτυπο."
                     ],
-                    "image": "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/98a0a7252_b24ebd26f_JEF_square_bw.png",
+                    "image": "/images/about/team-john-farazoumis.png",
                     "alt": "Ιωάννης Ε. Φαραζούμης"
                 },
                 {
@@ -426,7 +426,7 @@
                         "Έχει μοναδική ικανότητα να διαβάζει ένα χώρο και να προσαρμόζει soundscapes σε μεταβαλλόμενες ενέργειες.",
                         "Στη SensEar, φέρνει διαισθητικές δεξιότητες επιμέλειας που κάνουν κάθε playlist να νιώθει προσωπική και τέλεια χρονομετρημένη."
                     ],
-                    "image": "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/a4ebc438b_73ba1e2e2_86455570_172252364195144_3083930653335486464_n1.jpg",
+                    "image": "/images/about/team-katerina-karali.jpg",
                     "alt": "Κατερίνα Καραλή"
                 }
             ]
@@ -506,7 +506,7 @@
                 "tag": "Insights",
                 "category": "Insights",
                 "link": "how-top-hospitality-brands-design-sound",
-                "image": "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/5c8fc795c_hotel-1-1.jpg",
+                "image": "/images/blog/blog-designing-sound-hospitality.jpg",
                 "alt": "Εσωτερικός χώρος πολυτελούς φιλοξενίας που αναδεικνύει τον στρατηγικό σχεδιασμό ήχου και τη μουσική επιμέλεια",
                 "date": "2025-01-20",
                 "displayDate": "20 Ιανουαρίου 2025",
@@ -661,7 +661,7 @@
                 "tag": "Insights",
                 "category": "Insights",
                 "link": "three-reasons-make-music-hospitality",
-                "image": "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/2d2243a41_seedream-40_Upscale_this_image_keeping_all_natural_contexts_and_add_two_small_and_discreet_s-0.jpg",
+                "image": "/images/blog/blog-why-luxury-hotels-need-music.jpg",
                 "alt": "Εσωτερικό πολυτελούς ξενοδοχείου που αναδεικνύει τον ρόλο της μουσικής στη στρατηγική marketing φιλοξενίας",
                 "date": "2025-01-15",
                 "displayDate": "15 Ιανουαρίου 2025",
@@ -723,7 +723,7 @@
                 "tag": "Research",
                 "category": "Research",
                 "link": "brand-music-converts-browsers-buyers",
-                "image": "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/f0b3de4b5_gemini-25-flash-image_professional_photo_of_Upscale_this_image_carefully_keeping_the_natural_photo_sty-0.jpg",
+                "image": "/images/blog/blog-music-converts-browsers-buyers.jpg",
                 "alt": "Εσωτερικός χώρος εστιατορίου που δείχνει την επίδραση της μουσικής στις πωλήσεις και τη συμπεριφορά των πελατών",
                 "date": "2025-11-20",
                 "displayDate": "20 Νοεμβρίου 2025",
@@ -812,7 +812,7 @@
                 "tag": "Education",
                 "category": "Education",
                 "link": "what-exactly-does-music-curator-do",
-                "image": "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/c4ed33ff8_gemini-25-flash-image_professional_photo_of_Upscale_this_image_carefully_keeping_the_natural_photo_sty-01.jpg",
+                "image": "/images/blog/blog-what-does-music-curator-do.jpg",
                 "alt": "Επαγγελματίας music curator επιλέγει κομμάτια για custom playlists επαγγελματικών χώρων",
                 "date": "2025-01-10",
                 "displayDate": "10 Aπριλίου 2025",
@@ -936,7 +936,7 @@
                 "tag": "Strategy",
                 "category": "Strategy",
                 "link": "music-curation-cycle-venues",
-                "image": "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/a730d7c9f_gemini-25-flash-image_professional_photo_of_Upscale_this_image_carefully_keeping_the_natural_photo_sty-02.jpg",
+                "image": "/images/blog/blog-master-music-curation-cycle.jpg",
                 "alt": "Διαδικασία ανάλυσης και μουσικής βελτιστοποίησης για ηχητικά τοπία επαγγελματικών χώρων",
                 "date": "2025-01-15",
                 "displayDate": "13 Ιουνίου 2025",
@@ -1037,7 +1037,7 @@
                 "tag": "Branding",
                 "category": "Branding",
                 "link": "building-brand-people-can-hear",
-                "image": "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/3a329efef_gemini-25-flash-image_professional_photo_of_Upscale_this_image_carefully_keeping_the_natural_photo_sty-03.jpg",
+                "image": "/images/blog/blog-building-brand-people-can-hear.jpg",
                 "alt": "Στρατηγική sonic branding που χτίζει την ηχητική ταυτότητα του brand μέσα από τη μουσική",
                 "date": "2025-02-12",
                 "displayDate": "12 Φ εβρουαρίου 2025",
@@ -1108,7 +1108,7 @@
                 "tag": "Research",
                 "category": "Research",
                 "link": "background-music-shapes-customer-behavior",
-                "image": "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/6d2ec8236_g-cb-1-1.jpg",
+                "image": "/images/blog/blog-music-shapes-buyer-behavior.jpg",
                 "alt": "Χώρος καταστήματος (retail) που αναδεικνύει την επιρροή της μουσικής στην αγοραστική συμπεριφορά",
                 "date": "2025-03-08",
                 "displayDate": "8 Μαρτίου 2025",
@@ -1218,7 +1218,7 @@
                 "tag": "Research",
                 "category": "Research",
                 "link": "service-environment-shapes-wait-time",
-                "image": "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/ba5124b88_gemini-25-flash-image_professional_photo_of_1-1.jpg",
+                "image": "/images/blog/blog-spaces-shape-perceived-wait-time.jpg",
                 "alt": "Σχεδιασμός χώρου εξυπηρέτησης που αξιοποιεί τη μουσική για τη βελτίωση της εμπειρίας αναμονής των επισκεπτών",
                 "date": "2025-03-15",
                 "displayDate": "15 Μαρτίου 2025",
@@ -2040,7 +2040,7 @@
             "title": "Μουσική για ξενοδοχεία & Resorts:",
             "subtitle": "Ηχοτοπία για κάθε ώρα και χώρο",
             "description": "Στοχευμένος ήχος που συμπληρώνει το service, τον σχεδιασμό και τη διάθεση του χώρου.",
-            "image": "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/7aec5d264_seedream-40_professional_photo_of_upscale_the_image_but_make_sure_it_still_looks_realistic_p-1.jpg",
+            "image": "/images/industries/hotels-resorts-curated-music-ambiance.jpg",
             "image_alt": "Πολυτελές resort και ξενοδοχείο με επιμελημένη μουσική ατμόσφαιρα"
         },
         "intro": {
@@ -2069,7 +2069,7 @@
                     "description": "Αφαιρούμε το άγχος της μουσικής επιλογής από το προσωπικό σας. Το σύστημα αναπαραγωγής ακολουθεί το ιδανικό flow, επιτρέποντας στην ομάδα σας να εστιάσει αποκλειστικά στη φιλοξενία."
                 }
             ],
-            "image": "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/4bc198c23_BHA1.png"
+            "image": "/images/industries/hotels-resorts-boutique-hotel-music.png"
         },
         "ideal_for": {
             "title": "Λύσεις ήχου για premium χώρους φιλοξενίας",
@@ -2095,7 +2095,7 @@
                     "description": "Για γάμους, parties, εταιρικά events/retreats και συνέδρια."
                 }
             ],
-            "image": "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/b32503d17_wi-cltcw-westin-charlotte-dogwood-13256_Classic-Hor1.jpg"
+            "image": "/images/industries/hotels-resorts-luxury-hotel-lobby.jpg"
         },
         "how_we_help": {
             "title": "Πώς η στοχευμένη μουσική αναβαθμίζει το ξενοδοχείο σας",
@@ -2117,7 +2117,7 @@
                     "description": "Αναλαμβάνουμε την αναπαραγωγή της μουσικής και την αδειοδότηση επαγγελματικής χρήσης, ώστε η ομάδα σας να εστιάζει στους επισκέπτες και όχι στην ένταση ή τα κομμάτια."
                 }
             ],
-            "image": "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/7ba13d3db_95c488ed9_silver-ear-ear-ring.jpg",
+            "image": "/images/industries/hotels-resorts-sonic-identity-detail.jpg",
             "cta_title": "Ακούστε τον ήχο του κλάδου σας στην πράξη",
             "cta_description": "Διαβάστε τα case studies μας και ακούστε δείγματα από premium χώρους φιλοξενίας.",
             "cta_button": "Δείτε το Portfolio",
@@ -2143,7 +2143,7 @@
             "title": "Μουσική για Εστιατόρια, Καφέ & Bar:",
             "subtitle": "Εναρμονισμένη με τις γεύσεις και το service",
             "description": "Μουσική που συμπληρώνει το φαγητό και το service, αναδεικνύοντας τη ροή του γεύματος, τις συζητήσεις και τη συνολική ατμόσφαιρα.",
-            "image": "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/e18536343_seedream-40_professional_photo_of_upscale_the_image_but_make_sure_it_still_looks_realistic_1-1.jpg",
+            "image": "/images/industries/restaurants-bars-curated-music-atmosphere.jpg",
             "image_alt": "Κομψός εσωτερικός χώρος εστιατορίου με επιμελημένη μουσική ατμόσφαιρα"
         },
         "intro": {
@@ -2172,7 +2172,7 @@
                     "description": "Τακτικές αλλαγές που κρατούν τη μουσική φρέσκια για τους τακτικούς πελάτες και το προσωπικό, διατηρώντας τον χαρακτήρα σας."
                 }
             ],
-            "image": "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/45c5bf8ee_0518d03f51766be5a36a8fa5df900697.jpg"
+            "image": "/images/industries/restaurants-bars-dining-music-experience.jpg"
         },
         "ideal_for": {
             "title": "Ιδανικές λύσεις μουσικής για εστιατόρια, καφέ & μπαρ",
@@ -2194,7 +2194,7 @@
                     "description": "Που θέλουν συνεπή ηχητική ταυτότητα σε όλα τους τα σημεία."
                 }
             ],
-            "image": "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/74f06e87c_dbf1c8542_c383f86fd572aa6ee623a8fd6ab443df.jpg"
+            "image": "/images/industries/restaurants-bars-cocktail-bar-atmosphere.jpg"
         },
         "how_we_help": {
             "title": "Πώς η σωστή μουσική μεταμορφώνει τον χώρο σας",
@@ -2216,7 +2216,7 @@
                     "description": "Εμείς σχεδιάζουμε τον ήχο, εσείς θέτετε τους κανόνες. Η ομάδα σας εστιάζει αποκλειστικά στη φιλοξενία, ξεχνώντας το άγχος των playlists."
                 }
             ],
-            "image": "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/bf81c0608_f73e72546f5644a803c4dd204f0d7de1.jpg",
+            "image": "/images/industries/restaurants-bars-restaurant-dining-room.jpg",
             "cta_title": "Ακούστε τον ήχο του κλάδου στην πράξη",
             "cta_description": "Διαβάστε ιστορίες πελατών και ακούστε δείγματα από premium χώρους εστίασης και cafe-bars.",
             "cta_button": "Δείτε τo Portfolio",
@@ -2242,7 +2242,7 @@
             "title": "Μουσική για Καταστήματα Λιανικής:",
             "subtitle": "Σχεδιασμένη να ενισχύει την περιήγηση και την ταυτότητα του brand",
             "description": "Ρυθμός επιμελημένος ώστε να υποστηρίζει την εμπορική δραστηριότητα και την εικόνα του κατστήματος.",
-            "image": "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/aa39fb29d_ignan-travel-thesquare-5-2048x1328-1-1.jpg",
+            "image": "/images/industries/retail-stores-curated-music-shopping.jpg",
             "image_alt": "Σύγχρονος χώρος καταστήματος (retail) με επιμελημένη μουσική ατμόσφαιρα"
         },
         "intro": {
@@ -2271,7 +2271,7 @@
                     "description": "Playlists που εξελίσσονται παράλληλα με τις νέες συλλογές και τις περιόδους προσφορών, διατηρώντας ζωντανό τον χαρακτήρα σας."
                 }
             ],
-            "image": "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/989688cc0_fea79f153_e416ab4395ea12d490e85d406ce8fcc3.jpg"
+            "image": "/images/industries/retail-stores-music-strategy-browsing.jpg"
         },
         "ideal_for": {
             "title": "Λύσεις ήχου για σύγχρονα retail brands",
@@ -2297,7 +2297,7 @@
                     "description": "Που πρέπει να αφήσουν ισχυρή εντύπωση και να μεταφέρουν το brand vibe από την πρώτη μέρα."
                 }
             ],
-            "image": "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/1eae8a545_9ce5db84dcf12ffe5ccf1513e7eabca6.jpg"
+            "image": "/images/industries/retail-stores-boutique-music-atmosphere.jpg"
         },
         "how_we_help": {
             "title": "Πώς ο μελετημένος ήχος αναβαθμίζει το κατάστημά σας",
@@ -2319,7 +2319,7 @@
                     "description": "Με κεντρική διαχείριση και νόμιμα αδειοδοτημένη μουσική, το προσωπικό σας εστιάζει αποκλειστικά στις πωλήσεις και την εξυπηρέτηση, χωρίς να αναζητά playlists."
                 }
             ],
-            "image": "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/fb3de1cb6_bacc2ba6c_photo-1529480993802-d8e747bb1ecb.jpg"
+            "image": "/images/industries/retail-stores-customer-journey-sound.jpg"
         },
         "cta": {
             "title": "Αναβαθμίστε την εμπειρία του καταστήματός σας",
@@ -2341,7 +2341,7 @@
             "title": "Μουσική για Σπα & Γυμναστήρια:",
             "subtitle": "Σχεδιασμένη γύρω από τη δραστηριότητα και την ένταση",
             "description": "Στοχευμένη μουσική που ενισχύει τη συγκέντρωση σε όλους τους χώρους και τις πρακτικές.",
-            "image": "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/1328f3e9a_80sspa-1-1.jpg",
+            "image": "/images/industries/wellness-gyms-luxury-spa-ambient-music.jpg",
             "image_alt": "Εσωτερικός χώρος πολυτελούς spa και κέντρου ευεξίας με επιμελημένη ambient μουσική"
         },
         "intro": {
@@ -2370,7 +2370,7 @@
                     "description": "Η υποδοχή, οι χώροι θεραπειών και οι αίθουσες άσκησης αποκτούν τον δικό τους ήχο, διατηρώντας όμως μία κοινή, αναγνωρίσιμη ηχητική ταυτότητα."
                 }
             ],
-            "image": "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/f7415e860_MaxFine-Walk-On-Snow-collection-by-FMG-Fabbrica-Marmi-e-Graniti-4-4c.jpg"
+            "image": "/images/industries/wellness-gyms-spa-treatment-music.jpg"
         },
         "ideal_for": {
             "title": "Ιδανικές λύσεις ήχου για premium wellness brands",
@@ -2396,7 +2396,7 @@
                     "description": "Που συνδυάζουν ομαλά τις χαλαρωτικές θεραπείες με την ενεργή άσκηση."
                 }
             ],
-            "image": "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/1918a9569_73e713e59820cc7915a71ef35c9d5835.jpg"
+            "image": "/images/industries/wellness-gyms-fitness-music-curation.jpg"
         },
         "how_we_help": {
             "title": "Πώς οι custom μουσικές επιλογές μας αναβαθμίζουν τον χώρο σας",
@@ -2418,7 +2418,7 @@
                     "description": "Το προσωπικό εστιάζει αποκλειστικά στα μέλη, ενώ εμείς αναλαμβάνουμε τις λίστες, τις ανανεώσεις και τη νόμιμη αδειοδότηση."
                 }
             ],
-            "image": "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/677b8f7ca_d3ccc7081_24ff3eb97d703e018840f54d6030eb58.jpg"
+            "image": "/images/industries/wellness-gyms-yoga-studio-soundscape.jpg"
         },
         "cta": {
             "title": "Αναβαθμίστε την ατμόσφαιρα του χώρου ευεξίας σας",
@@ -2440,7 +2440,7 @@
             "title": "Μουσική για Εκδηλώσεις:",
             "subtitle": "Ήχος που απογειώνει τη στιγμή",
             "description": "Επιμελημένη μουσική, απόλυτα συγχρονισμένη με τη ροή και το χρονοδιάγραμμα του event σας.",
-            "image": "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/aa36ad57a_gemini-25-flash-image_fix_the_woman_s_uppoer_lip_s_right_side_as_it_appears_like_she_was_stung_by_a_be-0.jpg",
+            "image": "/images/industries/events-experiences-music-curation-event.jpg",
             "image_alt": "Μουσική επιμέλεια εκδηλώσεων και παραγωγή premium events"
         },
         "intro": {
@@ -2469,7 +2469,7 @@
                     "description": "Συνεργαζόμαστε απευθείας με τον χώρο διεξαγωγής για όλα τα μουσικά και τεχνικά θέματα, απαλλάσσοντάς σας από το βάρος του συντονισμού."
                 }
             ],
-            "image": "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/9c0a5ab31_f202eaf0e_410494315_375848528274698_8398961206007741661_ncropped.jpg"
+            "image": "/images/industries/events-experiences-branded-event-music.jpg"
         },
         "ideal_for": {
             "title": "Ιδανικές λύσεις μουσικής κάλυψης για events",
@@ -2495,7 +2495,7 @@
                     "description": "Που κατανοούν ότι ο σωστός ήχος και μουσική καθορίζουν την τελική εντύπωση της εκδήλωσης."
                 }
             ],
-            "image": "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/857dd2f02_604e3a452_2eb02f6aa00cbdc92f835b115166f9fb.jpg"
+            "image": "/images/industries/events-experiences-event-music-planning.jpg"
         },
         "how_we_help": {
             "title": "Πώς ο σωστός ρυθμός απογειώνει την εκδήλωσή σας",
@@ -2513,7 +2513,7 @@
                     "description": "Η ομάδα μας εγγυάται την άψογη τεχνική και μουσική ροή, επιτρέποντάς σας να εστιάσετε αποκλειστικά στον ρόλο του οικοδεσπότη."
                 }
             ],
-            "image": "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/b7d509322_princepartyup4-5.jpg"
+            "image": "/images/industries/events-experiences-private-event-soundscape.jpg"
         },
         "cta": {
             "title": "Αναβαθμίστε την ατμόσφαιρα της επόμενης εκδήλωσής σας",
@@ -2535,7 +2535,7 @@
             "title": "Μουσική για Τέχνη, Μουσεία & Μόδα:",
             "subtitle": "Διακριτικό ηχητικό υπόβαθρο που αναδεικνύει το έργο",
             "description": "Στοχευμένες μουσικές επιλογές που συμπληρώνουν το επιμελητικό σας όραμα.",
-            "image": "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/49f04cdfd_seedream-40_professional_photo_of_Upscale_this_image_keeping_all_natural_contexts_and_detail-0.jpg",
+            "image": "/images/industries/art-museums-fashion-gallery-curation.jpg",
             "image_alt": "Γκαλερί τέχνης με επιμελημένη μουσική ατμόσφαιρα και εγκατάσταση μόδας"
         },
         "intro": {
@@ -2564,7 +2564,7 @@
                     "description": "Μηνιαίες ανανεώσεις στα tracks που διατηρούν φρέσκια την ατμόσφαιρα, με πλήρη κάλυψη εμπορικής αδειοδότησης."
                 }
             ],
-            "image": "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/7952e2759_seedream-40_professional_photo_of_Upscale_this_image_keeping_physical_all_natural_contexts_a-1.jpg"
+            "image": "/images/industries/art-museums-fashion-cultural-space-music.jpg"
         },
         "ideal_for": {
             "title": "Ιδανικές ηχητικές λύσεις για τέχνη & μόδα",
@@ -2590,7 +2590,7 @@
                     "description": "Που χρειάζονται άμεση και ισχυρή ηχητική ταυτότητα."
                 }
             ],
-            "image": "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/a98f357a2_a_gem_of_a_museum_allows_us_to_enjoy_the_biggest_names_in_contemporary_art-cropped.jpg"
+            "image": "/images/industries/art-museums-fashion-museum-soundscape.jpg"
         },
         "how_we_help": {
             "title": "Πώς ο μεθοδευμένος ήχος αναβαθμίζει το event σας",
@@ -2608,7 +2608,7 @@
                     "description": "Η αξιόπιστη αναπαραγωγή κομματιών σας επιτρέπει να εστιάζετε στους δημιουργούς και το κοινό, αντί να ανησυχείτε για το soundcheck."
                 }
             ],
-            "image": "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68e53c2bf0c2fbec935083b6/0460123b3_652b0f6467d21dea21815655a47b712d.jpg",
+            "image": "/images/industries/art-museums-fashion-exhibition-ambient-music.jpg",
             "cta_title": "κούστε την ακουστική εμπειρία στην πράξη",
             "cta_description": "Διαβάστε παραδείγματα και ακούστε δείγματα από χώρους τέχνης, μόδας και μουσεία.",
             "cta_button": "Δείτε τα Παραδείγματα",

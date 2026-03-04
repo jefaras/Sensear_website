@@ -34,11 +34,11 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
     const { lang } = await params;
     const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://sensear.music';
-    
-    const title = lang === 'el' 
+
+    const title = lang === 'el'
         ? 'SensEar Music - Μουσική Επιμέλεια & Sonic Branding'
         : 'SensEar Music - Bespoke Music Curation & Sonic Branding';
-    
+
     const description = lang === 'el'
         ? 'Εξειδικευμένη μουσική επιμέλεια και sonic branding για ξενοδοχεία, εστιατόρια, retail και εκδηλώσεις. Δημιουργούμε τη μοναδική ηχητική ταυτότητα του brand σας.'
         : 'Bespoke music curation and sonic branding for hospitality, retail, and events. We craft your brand\'s unique sonic identity through tailored playlists and audio experiences.';
@@ -124,9 +124,6 @@ export default async function RootLayout({
     return (
         <html lang={lang} className={fontVariables}>
             <head>
-                {/* Preconnect to Supabase CDN for faster image loading */}
-                <link rel="preconnect" href="https://qtrypzzcjebvfcihiynt.supabase.co" crossOrigin="anonymous" />
-                <link rel="dns-prefetch" href="https://qtrypzzcjebvfcihiynt.supabase.co" />
                 {/* Preload critical images for LCP optimization */}
                 <link rel="preload" as="image" href="/images/backgrounds/background-texture-warm-silver.jpg" />
                 <link rel="preload" as="image" href="/images/carousel/carousel-home-interior.jpg" />
