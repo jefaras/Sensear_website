@@ -13,6 +13,8 @@ interface NewsletterFormProps {
     variant?: "footer" | "cta";
 }
 
+const invisibleOptions = { size: 'invisible' as const };
+
 export function NewsletterForm({
     placeholder,
     buttonText,
@@ -105,7 +107,7 @@ export function NewsletterForm({
                 <Turnstile
                     siteKey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY || ""}
                     onSuccess={(token) => setTurnstileToken(token)}
-                    options={{ size: 'invisible' }}
+                    options={invisibleOptions}
                 />
             </form>
         );
@@ -150,7 +152,7 @@ export function NewsletterForm({
             <Turnstile
                 siteKey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY || ""}
                 onSuccess={(token) => setTurnstileToken(token)}
-                options={{ size: 'invisible' }}
+                options={invisibleOptions}
             />
         </form>
     );

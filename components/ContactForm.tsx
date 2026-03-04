@@ -303,7 +303,6 @@ export function ContactForm({ labels }: ContactFormProps) {
                     siteKey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY || ""}
                     onSuccess={(token) => setTurnstileToken(token)}
                     onError={() => setErrors({ _form: ["Security challenge failed. Please try again."] })}
-                    options={{ theme: 'light' }}
                 />
             </div>
 
