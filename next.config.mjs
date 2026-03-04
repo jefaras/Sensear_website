@@ -8,13 +8,7 @@ const withBundleAnalyzer = analyzer({
 const nextConfig = {
     output: 'standalone',
     images: {
-        remotePatterns: [
-            {
-                protocol: 'https',
-                hostname: 'qtrypzzcjebvfcihiynt.supabase.co',
-                pathname: '/storage/v1/object/public/**',
-            },
-        ],
+        remotePatterns: [],
     },
 
     // Disable ES Lint and Typescript checks during build to prevent out-of-memory errors
