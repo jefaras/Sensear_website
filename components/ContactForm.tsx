@@ -4,6 +4,7 @@ import { useState, useCallback } from "react";
 import { submitContactForm } from "@/app/actions";
 import { CheckCircle, ArrowRight } from "lucide-react";
 import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
+import TransparentSelect from "./TransparentSelect";
 
 interface ContactFormLabels {
     name: string;
@@ -235,22 +236,26 @@ export function ContactForm({ labels, variant = "default" }: ContactFormProps) {
             <div>
                 {!isVinyl && <label className="block text-sm font-medium mb-2">{labels.phone}</label>}
                 <div className={`flex rounded-lg overflow-hidden ${isVinyl ? 'border border-white/20' : 'border border-gray-200'} ${errors.phone ? '!border-red-500' : ''} focus-within:ring-2 ${isVinyl ? 'focus-within:ring-white/30' : 'focus-within:ring-black/20'} focus-within:border-transparent`}>
-                    <select
+                    <TransparentSelect
                         name="country_code"
                         value={formData.country_code}
                         onChange={handleChange}
-                        className={`px-3 py-3 focus:outline-none font-medium cursor-pointer ${isVinyl ? 'bg-transparent text-white border-r border-white/20' : 'bg-gray-200/50 text-gray-700 border-r border-gray-200'}`}
-                    >
-                        <option value="+30">GR (+30)</option>
-                        <option value="+357">CY (+357)</option>
-                        <option value="+1">US/CA (+1)</option>
-                        <option value="+44">UK (+44)</option>
-                        <option value="+49">DE (+49)</option>
-                        <option value="+33">FR (+33)</option>
-                        <option value="+39">IT (+39)</option>
-                        <option value="+34">ES (+34)</option>
-                        <option value="">Other</option>
-                    </select>
+                        placeholder="Other"
+                        hidePlaceholderOption
+                        isVinyl={isVinyl}
+                        triggerClassName={`px-3 py-3 w-[120px] flex items-center justify-between focus:outline-none font-medium cursor-pointer transition-all ${isVinyl ? 'bg-transparent text-white border-r border-white/20 hover:bg-white/5' : 'bg-gray-200/50 text-gray-700 border-r border-gray-200 hover:bg-gray-200'} text-left`}
+                        options={[
+                            { value: '+30', label: 'GR (+30)' },
+                            { value: '+357', label: 'CY (+357)' },
+                            { value: '+1', label: 'US/CA (+1)' },
+                            { value: '+44', label: 'UK (+44)' },
+                            { value: '+49', label: 'DE (+49)' },
+                            { value: '+33', label: 'FR (+33)' },
+                            { value: '+39', label: 'IT (+39)' },
+                            { value: '+34', label: 'ES (+34)' },
+                            { value: '', label: 'Other' },
+                        ]}
+                    />
                     <input
                         name="phone"
                         type="tel"
@@ -267,34 +272,40 @@ export function ContactForm({ labels, variant = "default" }: ContactFormProps) {
             <div className="grid md:grid-cols-2 gap-4">
                 <div>
                     {!isVinyl && <label className="block text-sm font-medium mb-2">{labels.venue}</label>}
-                    <select
+                    <TransparentSelect
                         name="venue_type"
                         value={formData.venue_type}
                         onChange={handleChange}
-                        className={`${selectClass} ${errors.venue_type ? '!border-red-500' : ''} ${formData.venue_type === '' && isVinyl ? 'text-white/50' : ''}`}
-                    >
-                        <option value="">{labels.venue_options.placeholder}</option>
-                        <option value="hotel">{labels.venue_options.hotel}</option>
-                        <option value="restaurant">{labels.venue_options.restaurant}</option>
-                        <option value="bar">{labels.venue_options.bar}</option>
-                        <option value="other">{labels.venue_options.other}</option>
-                    </select>
+                        placeholder={labels.venue_options.placeholder}
+                        isVinyl={isVinyl}
+                        error={!!errors.venue_type}
+                        className="w-full"
+                        options={[
+                            { value: 'hotel', label: labels.venue_options.hotel },
+                            { value: 'restaurant', label: labels.venue_options.restaurant },
+                            { value: 'bar', label: labels.venue_options.bar },
+                            { value: 'other', label: labels.venue_options.other },
+                        ]}
+                    />
                     {errors.venue_type && <p className={errorClass}>{errors.venue_type[0]}</p>}
                 </div>
                 <div>
                     {!isVinyl && <label className="block text-sm font-medium mb-2">{labels.interest}</label>}
-                    <select
+                    <TransparentSelect
                         name="service_interest"
                         value={formData.service_interest}
                         onChange={handleChange}
-                        className={`${selectClass} ${errors.service_interest ? '!border-red-500' : ''} ${formData.service_interest === '' && isVinyl ? 'text-white/50' : ''}`}
-                    >
-                        <option value="">{labels.interest_options.placeholder}</option>
-                        <option value="playlists">{labels.interest_options.playlists}</option>
-                        <option value="events">{labels.interest_options.events}</option>
-                        <option value="strategy">{labels.interest_options.strategy}</option>
-                        <option value="audio_upgrades">{labels.interest_options.audio_upgrades}</option>
-                    </select>
+                        placeholder={labels.interest_options.placeholder}
+                        isVinyl={isVinyl}
+                        error={!!errors.service_interest}
+                        className="w-full"
+                        options={[
+                            { value: 'playlists', label: labels.interest_options.playlists },
+                            { value: 'events', label: labels.interest_options.events },
+                            { value: 'strategy', label: labels.interest_options.strategy },
+                            { value: 'audio_upgrades', label: labels.interest_options.audio_upgrades },
+                        ]}
+                    />
                     {errors.service_interest && <p className={errorClass}>{errors.service_interest[0]}</p>}
                 </div>
             </div>
