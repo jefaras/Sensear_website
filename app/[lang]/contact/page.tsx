@@ -74,21 +74,22 @@ export default async function Contact({ params }: { params: Promise<{ lang: Loca
                         </p>
                     </div>
 
-                    {/* Vinyl record form area */}
-                    <div className="relative max-w-2xl mx-auto rounded-2xl overflow-hidden">
-                        {/* Vinyl record background — only behind the form */}
-                        <div className="absolute inset-0 bg-black flex items-center justify-center pointer-events-none" aria-hidden="true">
+                    {/* Vinyl record as circular background behind the form */}
+                    <div className="relative max-w-2xl mx-auto">
+                        {/* Vinyl record — CSS-clipped circle, sitting on peach bg */}
+                        <div className="absolute inset-0 flex items-center justify-center pointer-events-none" aria-hidden="true">
                             <Image
                                 src="/images/backgrounds/vinyl-record.png"
                                 alt=""
                                 width={1200}
                                 height={1200}
-                                className="w-full h-auto opacity-60 select-none"
+                                style={{ width: 'max(110%, 850px)', height: 'auto' }}
+                                className="max-w-none select-none rounded-full"
                                 priority={false}
                             />
                         </div>
 
-                        <div className="relative z-10 p-8 md:p-10">
+                        <div className="relative z-10 px-8 py-12 md:px-16">
                             <ContactForm labels={dict.contact.form} variant="vinyl" />
                         </div>
                     </div>
