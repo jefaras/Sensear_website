@@ -1,7 +1,0 @@
-User-Agent: *
-Allow: /
-Disallow: /api/
-Disallow: /_next/
-Disallow: /private/
-
-Sitemap: https://sensear.music/sitemap.xml

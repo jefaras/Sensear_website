@@ -63,31 +63,30 @@ export default async function Contact({ params }: { params: Promise<{ lang: Loca
                 </div>
             </section>
 
-            <section className="py-20 bg-[#faebe3]">
-                <div className="max-w-6xl mx-auto px-6">
-                    <div className="text-center mb-12 w-full">
-                        <h2 className="text-[2.7rem] md:text-[3.45rem] font-bold text-black mb-6 leading-heading">
+            <section className="relative py-20 bg-black overflow-hidden">
+                {/* Vinyl record as prominent background */}
+                <div className="absolute inset-0 flex items-center justify-center pointer-events-none" aria-hidden="true">
+                    <Image
+                        src="/images/backgrounds/vinyl-record.png"
+                        alt=""
+                        width={1200}
+                        height={1200}
+                        className="w-[min(100vw,900px)] h-auto opacity-60 select-none"
+                        priority={false}
+                    />
+                </div>
+
+                <div className="max-w-2xl mx-auto px-6 relative z-10">
+                    <div className="text-center mb-10">
+                        <h2 className="text-[2.7rem] md:text-[3.45rem] font-bold text-white mb-4 leading-heading">
                             {dict.contact.intro.title}
                         </h2>
-                        <p className="text-xl text-black/60 font-medium mb-12">
+                        <p className="text-xl text-white/60 font-medium">
                             {dict.contact.intro.subtitle}
                         </p>
                     </div>
 
-                    <div className="max-w-3xl mx-auto bg-white p-8 shadow-lg rounded-xl">
-                        <ContactForm labels={dict.contact.form} />
-
-                        {/* Temporary replacement message — commented out now that form is live
-                        <div className="space-y-4 text-lg text-black/80 leading-relaxed">
-                            <p className="font-semibold text-xl">
-                                {dict.contact.form.temp_title}
-                            </p>
-                            <p>
-                                {dict.contact.form.temp_message}
-                            </p>
-                        </div>
-                        */}
-                    </div>
+                    <ContactForm labels={dict.contact.form} variant="vinyl" />
                 </div>
             </section>
 

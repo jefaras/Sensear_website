@@ -178,14 +178,14 @@
             "phone_placeholder": "xxx xxx xxxx",
             "message_placeholder": "Tell us about your venue, your vision, and how we can help...",
             "venue_options": {
-                "placeholder": "Select...",
+                "placeholder": "Select your venue type",
                 "hotel": "Hotel",
                 "restaurant": "Restaurant",
                 "bar": "Bar",
                 "other": "Other"
             },
             "interest_options": {
-                "placeholder": "Select...",
+                "placeholder": "Select your interest",
                 "playlists": "Playlists",
                 "events": "Events",
                 "strategy": "Strategy",

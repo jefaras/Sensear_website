@@ -178,14 +178,14 @@
             "phone_placeholder": "xxx xxx xxxx",
             "message_placeholder": "Πείτε μας για τον χώρο σας, το όραμά σας και πώς μπορούμε να βοηθήσουμε...",
             "venue_options": {
-                "placeholder": "Επιλέξτε...",
+                "placeholder": "Επιλέξτε τύπο χώρου",
                 "hotel": "Ξενοδοχείο",
                 "restaurant": "Εστιατόριο",
                 "bar": "Μπαρ",
                 "other": "Άλλο"
             },
             "interest_options": {
-                "placeholder": "Επιλέξτε...",
+                "placeholder": "Επιλέξτε ενδιαφέρον",
                 "playlists": "Playlists",
                 "events": "Εκδηλώσεις",
                 "strategy": "Στρατηγική",

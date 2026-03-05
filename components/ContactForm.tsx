@@ -43,6 +43,7 @@ interface ContactFormLabels {
 
 interface ContactFormProps {
     labels: ContactFormLabels;
+    variant?: "default" | "vinyl";
 }
 
 interface FormData {
@@ -57,7 +58,7 @@ interface FormData {
     message: string;
 }
 
-export function ContactForm({ labels }: ContactFormProps) {
+export function ContactForm({ labels, variant = "default" }: ContactFormProps) {
     const [pending, setPending] = useState(false);
     const [success, setSuccess] = useState(false);
     const [errors, setErrors] = useState<Record<string, string[]>>({});
@@ -74,10 +75,11 @@ export function ContactForm({ labels }: ContactFormProps) {
         message: "",
     });
 
+    const isVinyl = variant === "vinyl";
+
     function handleChange(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) {
         const { name, value } = e.target;
         setFormData(prev => ({ ...prev, [name]: value }));
-        // Clear error for this field when user starts typing
         if (errors[name]) {
             setErrors(prev => {
                 const newErrors = { ...prev };
@@ -92,7 +94,6 @@ export function ContactForm({ labels }: ContactFormProps) {
         setPending(true);
         setErrors({});
 
-        // Get reCAPTCHA token
         let recaptchaToken = "";
         if (executeRecaptcha) {
             try {
@@ -112,7 +113,6 @@ export function ContactForm({ labels }: ContactFormProps) {
         submitData.append("email", formData.email);
         submitData.append("phone", formData.phone);
         submitData.append("country_code", formData.country_code);
-
         submitData.append("venue_type", formData.venue_type);
         submitData.append("service_interest", formData.service_interest);
         submitData.append("message", formData.message);
@@ -125,7 +125,6 @@ export function ContactForm({ labels }: ContactFormProps) {
             setErrors(res.errors as Record<string, string[]>);
         } else if (res?.success) {
             setSuccess(true);
-            // Reset form on success
             setFormData({
                 name: "",
                 surname: "",
@@ -140,15 +139,26 @@ export function ContactForm({ labels }: ContactFormProps) {
         }
     }, [executeRecaptcha, formData, labels]);
 
+    // Styles based on variant
+    const inputClass = isVinyl
+        ? "w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder:text-white/50 focus:outline-none focus:ring-2 focus:ring-white/30 focus:border-transparent"
+        : "w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-black/20";
+
+    const selectClass = isVinyl
+        ? "w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-white/30 focus:border-transparent cursor-pointer"
+        : "w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-black/20";
+
+    const errorClass = isVinyl ? "text-red-400 text-sm mt-1" : "text-red-500 text-sm mt-1";
+
     if (success) {
         return (
-            <div className="flex flex-col items-center justify-center p-8 bg-black/5 rounded-xl">
-                <CheckCircle className="w-16 h-16 text-green-500 mb-4" />
-                <h3 className="text-2xl font-bold mb-2">{labels.success}</h3>
-                <p className="text-center text-black/60">{labels.success_message}</p>
+            <div className={`flex flex-col items-center justify-center p-8 rounded-xl ${isVinyl ? 'bg-white/10 backdrop-blur-sm' : 'bg-black/5'}`}>
+                <CheckCircle className={`w-16 h-16 mb-4 ${isVinyl ? 'text-green-400' : 'text-green-500'}`} />
+                <h3 className={`text-2xl font-bold mb-2 ${isVinyl ? 'text-white' : ''}`}>{labels.success}</h3>
+                <p className={`text-center ${isVinyl ? 'text-white/70' : 'text-black/60'}`}>{labels.success_message}</p>
                 <button
                     onClick={() => setSuccess(false)}
-                    className="mt-6 px-6 py-2 bg-black text-white rounded-full hover:bg-black/80 transition-colors"
+                    className={`mt-6 px-6 py-2 rounded-full transition-colors ${isVinyl ? 'bg-white text-black hover:bg-white/90' : 'bg-black text-white hover:bg-black/80'}`}
                 >
                     {labels.send_another}
                 </button>
@@ -157,17 +167,17 @@ export function ContactForm({ labels }: ContactFormProps) {
     }
 
     return (
-        <form onSubmit={handleSubmit} className="space-y-6">
-            {/* Display form-level errors (e.g., SMTP failure) */}
+        <form onSubmit={handleSubmit} className="space-y-5">
+            {/* Form-level errors */}
             {errors._form && (
-                <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg">
+                <div className={`px-4 py-3 rounded-lg ${isVinyl ? 'bg-red-500/20 border border-red-500/30 text-red-300' : 'bg-red-50 border border-red-200 text-red-700'}`}>
                     {errors._form[0]}
                 </div>
             )}
 
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="grid md:grid-cols-2 gap-4">
                 <div>
-                    <label className="block text-sm font-medium mb-2">{labels.name}</label>
+                    {!isVinyl && <label className="block text-sm font-medium mb-2">{labels.name}</label>}
                     <input
                         name="name"
                         type="text"
@@ -175,12 +185,12 @@ export function ContactForm({ labels }: ContactFormProps) {
                         value={formData.name}
                         onChange={handleChange}
                         placeholder={labels.name_placeholder}
-                        className={`w-full px-4 py-3 bg-gray-50 border rounded-lg focus:outline-none focus:ring-2 focus:ring-black/20 ${errors.name ? 'border-red-500' : 'border-gray-200'}`}
+                        className={`${inputClass} ${errors.name ? '!border-red-500' : ''}`}
                     />
-                    {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name[0]}</p>}
+                    {errors.name && <p className={errorClass}>{errors.name[0]}</p>}
                 </div>
                 <div>
-                    <label className="block text-sm font-medium mb-2">{labels.surname}</label>
+                    {!isVinyl && <label className="block text-sm font-medium mb-2">{labels.surname}</label>}
                     <input
                         name="surname"
                         type="text"
@@ -188,27 +198,27 @@ export function ContactForm({ labels }: ContactFormProps) {
                         value={formData.surname}
                         onChange={handleChange}
                         placeholder={labels.surname_placeholder}
-                        className={`w-full px-4 py-3 bg-gray-50 border rounded-lg focus:outline-none focus:ring-2 focus:ring-black/20 ${errors.surname ? 'border-red-500' : 'border-gray-200'}`}
+                        className={`${inputClass} ${errors.surname ? '!border-red-500' : ''}`}
                     />
-                    {errors.surname && <p className="text-red-500 text-sm mt-1">{errors.surname[0]}</p>}
+                    {errors.surname && <p className={errorClass}>{errors.surname[0]}</p>}
                 </div>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="grid md:grid-cols-2 gap-4">
                 <div>
-                    <label className="block text-sm font-medium mb-2">{labels.business_name}</label>
+                    {!isVinyl && <label className="block text-sm font-medium mb-2">{labels.business_name}</label>}
                     <input
                         name="business_name"
                         type="text"
                         value={formData.business_name}
                         onChange={handleChange}
                         placeholder={labels.business_name_placeholder}
-                        className={`w-full px-4 py-3 bg-gray-50 border rounded-lg focus:outline-none focus:ring-2 focus:ring-black/20 ${errors.business_name ? 'border-red-500' : 'border-gray-200'}`}
+                        className={`${inputClass} ${errors.business_name ? '!border-red-500' : ''}`}
                     />
-                    {errors.business_name && <p className="text-red-500 text-sm mt-1">{errors.business_name[0]}</p>}
+                    {errors.business_name && <p className={errorClass}>{errors.business_name[0]}</p>}
                 </div>
                 <div>
-                    <label className="block text-sm font-medium mb-2">{labels.email}</label>
+                    {!isVinyl && <label className="block text-sm font-medium mb-2">{labels.email}</label>}
                     <input
                         name="email"
                         type="email"
@@ -216,20 +226,20 @@ export function ContactForm({ labels }: ContactFormProps) {
                         value={formData.email}
                         onChange={handleChange}
                         placeholder={labels.email_placeholder}
-                        className={`w-full px-4 py-3 bg-gray-50 border rounded-lg focus:outline-none focus:ring-2 focus:ring-black/20 ${errors.email ? 'border-red-500' : 'border-gray-200'}`}
+                        className={`${inputClass} ${errors.email ? '!border-red-500' : ''}`}
                     />
-                    {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email[0]}</p>}
+                    {errors.email && <p className={errorClass}>{errors.email[0]}</p>}
                 </div>
             </div>
 
             <div>
-                <label className="block text-sm font-medium mb-2">{labels.phone}</label>
-                <div className={`flex bg-gray-50 border rounded-lg focus-within:ring-2 focus-within:ring-black/20 focus-within:border-transparent overflow-hidden ${errors.phone ? 'border-red-500' : 'border-gray-200'}`}>
+                {!isVinyl && <label className="block text-sm font-medium mb-2">{labels.phone}</label>}
+                <div className={`flex rounded-lg overflow-hidden ${isVinyl ? 'border border-white/20' : 'border border-gray-200'} ${errors.phone ? '!border-red-500' : ''} focus-within:ring-2 ${isVinyl ? 'focus-within:ring-white/30' : 'focus-within:ring-black/20'} focus-within:border-transparent`}>
                     <select
                         name="country_code"
                         value={formData.country_code}
                         onChange={handleChange}
-                        className="px-3 py-3 bg-gray-200/50 border-r border-gray-200 focus:outline-none text-gray-700 font-medium cursor-pointer"
+                        className={`px-3 py-3 focus:outline-none font-medium cursor-pointer ${isVinyl ? 'bg-white/15 text-white border-r border-white/20' : 'bg-gray-200/50 text-gray-700 border-r border-gray-200'}`}
                     >
                         <option value="+30">GR (+30)</option>
                         <option value="+357">CY (+357)</option>
@@ -248,20 +258,20 @@ export function ContactForm({ labels }: ContactFormProps) {
                         value={formData.phone}
                         onChange={handleChange}
                         placeholder={labels.phone_placeholder}
-                        className="w-full px-4 py-3 bg-transparent focus:outline-none"
+                        className={`w-full px-4 py-3 bg-transparent focus:outline-none ${isVinyl ? 'text-white placeholder:text-white/50' : ''}`}
                     />
                 </div>
-                {errors.phone && <p className="text-red-500 text-sm mt-1">{errors.phone[0]}</p>}
+                {errors.phone && <p className={errorClass}>{errors.phone[0]}</p>}
             </div>
 
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="grid md:grid-cols-2 gap-4">
                 <div>
-                    <label className="block text-sm font-medium mb-2">{labels.venue}</label>
+                    {!isVinyl && <label className="block text-sm font-medium mb-2">{labels.venue}</label>}
                     <select
                         name="venue_type"
                         value={formData.venue_type}
                         onChange={handleChange}
-                        className={`w-full px-4 py-3 bg-gray-50 border rounded-lg focus:outline-none focus:ring-2 focus:ring-black/20 ${errors.venue_type ? 'border-red-500' : 'border-gray-200'}`}
+                        className={`${selectClass} ${errors.venue_type ? '!border-red-500' : ''} ${formData.venue_type === '' && isVinyl ? 'text-white/50' : ''}`}
                     >
                         <option value="">{labels.venue_options.placeholder}</option>
                         <option value="hotel">{labels.venue_options.hotel}</option>
@@ -269,15 +279,15 @@ export function ContactForm({ labels }: ContactFormProps) {
                         <option value="bar">{labels.venue_options.bar}</option>
                         <option value="other">{labels.venue_options.other}</option>
                     </select>
-                    {errors.venue_type && <p className="text-red-500 text-sm mt-1">{errors.venue_type[0]}</p>}
+                    {errors.venue_type && <p className={errorClass}>{errors.venue_type[0]}</p>}
                 </div>
                 <div>
-                    <label className="block text-sm font-medium mb-2">{labels.interest}</label>
+                    {!isVinyl && <label className="block text-sm font-medium mb-2">{labels.interest}</label>}
                     <select
                         name="service_interest"
                         value={formData.service_interest}
                         onChange={handleChange}
-                        className={`w-full px-4 py-3 bg-gray-50 border rounded-lg focus:outline-none focus:ring-2 focus:ring-black/20 ${errors.service_interest ? 'border-red-500' : 'border-gray-200'}`}
+                        className={`${selectClass} ${errors.service_interest ? '!border-red-500' : ''} ${formData.service_interest === '' && isVinyl ? 'text-white/50' : ''}`}
                     >
                         <option value="">{labels.interest_options.placeholder}</option>
                         <option value="playlists">{labels.interest_options.playlists}</option>
@@ -285,28 +295,31 @@ export function ContactForm({ labels }: ContactFormProps) {
                         <option value="strategy">{labels.interest_options.strategy}</option>
                         <option value="audio_upgrades">{labels.interest_options.audio_upgrades}</option>
                     </select>
-                    {errors.service_interest && <p className="text-red-500 text-sm mt-1">{errors.service_interest[0]}</p>}
+                    {errors.service_interest && <p className={errorClass}>{errors.service_interest[0]}</p>}
                 </div>
             </div>
 
             <div>
-                <label className="block text-sm font-medium mb-2">{labels.message}</label>
+                {!isVinyl && <label className="block text-sm font-medium mb-2">{labels.message}</label>}
                 <textarea
                     name="message"
-                    rows={5}
+                    rows={4}
                     required
                     value={formData.message}
                     onChange={handleChange}
                     placeholder={labels.message_placeholder}
-                    className={`w-full px-4 py-3 bg-gray-50 border rounded-lg focus:outline-none focus:ring-2 focus:ring-black/20 ${errors.message ? 'border-red-500' : 'border-gray-200'}`}
+                    className={`${inputClass} ${errors.message ? '!border-red-500' : ''}`}
                 ></textarea>
-                {errors.message && <p className="text-red-500 text-sm mt-1">{errors.message[0]}</p>}
+                {errors.message && <p className={errorClass}>{errors.message[0]}</p>}
             </div>
 
             <button
                 type="submit"
                 disabled={pending}
-                className="group relative w-full bg-black text-white font-bold text-lg py-7 rounded-full hover:bg-black/90 transition-all disabled:opacity-50 border-2 border-transparent overflow-hidden flex items-center justify-center"
+                className={`group relative w-full font-bold text-lg py-7 rounded-full transition-all disabled:opacity-50 border-2 overflow-hidden flex items-center justify-center ${isVinyl
+                        ? 'bg-white text-black hover:bg-white/90 border-transparent'
+                        : 'bg-black text-white hover:bg-black/90 border-transparent'
+                    }`}
             >
                 {pending ? (
                     labels.submitting
@@ -314,7 +327,7 @@ export function ContactForm({ labels }: ContactFormProps) {
                     <>
                         <span className="relative inline-flex items-center mr-2 align-middle">
                             <img
-                                src="/images/brand/sensear-logo-color.png"
+                                src={isVinyl ? "/images/brand/sensear-logo-color.png" : "/images/brand/sensear-logo-color.png"}
                                 className="w-8 h-8 object-contain opacity-100 scale-100 group-hover:opacity-0 group-hover:scale-0 transition-all duration-300"
                                 alt=""
                             />
@@ -327,10 +340,10 @@ export function ContactForm({ labels }: ContactFormProps) {
                 )}
             </button>
 
-            <p className="text-xs text-black/40 text-center mt-3">
+            <p className={`text-xs text-center mt-3 ${isVinyl ? 'text-white/30' : 'text-black/40'}`}>
                 This site is protected by reCAPTCHA and the Google{" "}
-                <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="underline hover:text-black/60">Privacy Policy</a> and{" "}
-                <a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer" className="underline hover:text-black/60">Terms of Service</a> apply.
+                <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className={`underline ${isVinyl ? 'hover:text-white/50' : 'hover:text-black/60'}`}>Privacy Policy</a> and{" "}
+                <a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer" className={`underline ${isVinyl ? 'hover:text-white/50' : 'hover:text-black/60'}`}>Terms of Service</a> apply.
             </p>
         </form>
     )
