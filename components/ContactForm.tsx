@@ -239,7 +239,7 @@ export function ContactForm({ labels, variant = "default" }: ContactFormProps) {
                         name="country_code"
                         value={formData.country_code}
                         onChange={handleChange}
-                        className={`px-3 py-3 focus:outline-none font-medium cursor-pointer ${isVinyl ? 'bg-white/15 text-white border-r border-white/20' : 'bg-gray-200/50 text-gray-700 border-r border-gray-200'}`}
+                        className={`px-3 py-3 focus:outline-none font-medium cursor-pointer ${isVinyl ? 'bg-transparent text-white border-r border-white/20' : 'bg-gray-200/50 text-gray-700 border-r border-gray-200'}`}
                     >
                         <option value="+30">GR (+30)</option>
                         <option value="+357">CY (+357)</option>
@@ -317,8 +317,8 @@ export function ContactForm({ labels, variant = "default" }: ContactFormProps) {
                 type="submit"
                 disabled={pending}
                 className={`group relative w-full font-bold text-lg py-7 rounded-full transition-all disabled:opacity-50 border-2 overflow-hidden flex items-center justify-center ${isVinyl
-                        ? 'bg-white text-black hover:bg-white/90 border-transparent'
-                        : 'bg-black text-white hover:bg-black/90 border-transparent'
+                    ? 'bg-white text-black hover:bg-white/90 border-transparent'
+                    : 'bg-black text-white hover:bg-black/90 border-transparent'
                     }`}
             >
                 {pending ? (

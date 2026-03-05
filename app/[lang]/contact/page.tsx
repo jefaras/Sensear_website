@@ -63,30 +63,35 @@ export default async function Contact({ params }: { params: Promise<{ lang: Loca
                 </div>
             </section>
 
-            <section className="relative py-20 bg-black overflow-hidden">
-                {/* Vinyl record as prominent background */}
-                <div className="absolute inset-0 flex items-center justify-center pointer-events-none" aria-hidden="true">
-                    <Image
-                        src="/images/backgrounds/vinyl-record.png"
-                        alt=""
-                        width={1200}
-                        height={1200}
-                        className="w-[min(100vw,900px)] h-auto opacity-60 select-none"
-                        priority={false}
-                    />
-                </div>
-
-                <div className="max-w-2xl mx-auto px-6 relative z-10">
-                    <div className="text-center mb-10">
-                        <h2 className="text-[2.7rem] md:text-[3.45rem] font-bold text-white mb-4 leading-heading">
+            <section className="py-20 bg-[#faebe3]">
+                <div className="max-w-6xl mx-auto px-6">
+                    <div className="text-center mb-12 w-full">
+                        <h2 className="text-[2.7rem] md:text-[3.45rem] font-bold text-black mb-6 leading-heading">
                             {dict.contact.intro.title}
                         </h2>
-                        <p className="text-xl text-white/60 font-medium">
+                        <p className="text-xl text-black/60 font-medium mb-12">
                             {dict.contact.intro.subtitle}
                         </p>
                     </div>
 
-                    <ContactForm labels={dict.contact.form} variant="vinyl" />
+                    {/* Vinyl record form area */}
+                    <div className="relative max-w-2xl mx-auto rounded-2xl overflow-hidden">
+                        {/* Vinyl record background — only behind the form */}
+                        <div className="absolute inset-0 bg-black flex items-center justify-center pointer-events-none" aria-hidden="true">
+                            <Image
+                                src="/images/backgrounds/vinyl-record.png"
+                                alt=""
+                                width={1200}
+                                height={1200}
+                                className="w-full h-auto opacity-60 select-none"
+                                priority={false}
+                            />
+                        </div>
+
+                        <div className="relative z-10 p-8 md:p-10">
+                            <ContactForm labels={dict.contact.form} variant="vinyl" />
+                        </div>
+                    </div>
                 </div>
             </section>
 
