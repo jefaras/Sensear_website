@@ -154,8 +154,8 @@
             "image_alt": "Contact SensEar"
         },
         "intro": {
-            "title": "Thinking about how music could support your space or event?",
-            "subtitle": "We listen, ask the right questions and explore if, and how, sound can play a role."
+            "title": "Looking for the perfect sound for your space?",
+            "subtitle": "Fill out the form and we will contact you shortly to meet and design the ideal music plan for your venue."
         },
         "form": {
             "name": "Name *",
@@ -210,6 +210,10 @@
                 "label": "Location",
                 "value": "Athens, Greece",
                 "note": "Working with brands across Greece and its islands."
+            },
+            "social": {
+                "label": "Social",
+                "note": "Follow and contact us on social media."
             }
         },
         "faq": {
@@ -1547,7 +1551,7 @@
         "rights": "© 2026 SensEar Music. All rights reserved.",
         "tagline": "Soundtracking Unique Experiences",
         "newsletter": {
-            "title": "Curated sound, delivered monthly",
+            "title": "Subscribe to our Curation Journal newsletter",
             "placeholder": "Your email",
             "button": "Subscribe"
         },

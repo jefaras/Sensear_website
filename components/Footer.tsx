@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Instagram, Facebook, Mail, Phone } from "lucide-react";
+import { Instagram, Facebook, Mail, Phone, Linkedin } from "lucide-react";
 import { Locale } from "@/lib/i18n";
 import { NewsletterForm } from "@/components/NewsletterForm";
 
@@ -11,7 +11,7 @@ export function Footer({ lang, dict }: { lang: Locale, dict: any }) {
     return (
         <footer role="contentinfo" aria-label="Site footer" className="bg-black text-white relative overflow-hidden">
             {/* Background decorative element */}
-            <div 
+            <div
                 className="absolute top-4 left-0 right-0 z-0 opacity-[0.1] pointer-events-none bottom-4"
                 style={{
                     backgroundImage: "url('/images/backgrounds/footer-background-pattern.png')",
@@ -20,7 +20,7 @@ export function Footer({ lang, dict }: { lang: Locale, dict: any }) {
                     backgroundRepeat: 'no-repeat'
                 }}
             />
-            
+
             {/* Main Footer Content */}
             <div className="max-w-7xl mx-auto px-6 py-16 relative z-10">
                 <div className="flex flex-wrap gap-12 lg:gap-24">
@@ -48,6 +48,9 @@ export function Footer({ lang, dict }: { lang: Locale, dict: any }) {
                             </Link>
                             <Link href="https://www.instagram.com/sensear.music" target="_blank" className="text-white/70 hover:text-[#faebe3] transition-colors" aria-label="Visit SensEar on Instagram">
                                 <Instagram className="w-6 h-6" />
+                            </Link>
+                            <Link href="https://www.linkedin.com/company/sensear-music/" target="_blank" className="text-white/70 hover:text-[#faebe3] transition-colors" aria-label="Visit SensEar on LinkedIn">
+                                <Linkedin className="w-6 h-6" />
                             </Link>
                         </div>
 

@@ -176,7 +176,7 @@ export function ContactForm({ labels, variant = "default" }: ContactFormProps) {
                 </div>
             )}
 
-            <div className="grid md:grid-cols-2 gap-4">
+            <div className="grid md:grid-cols-2 gap-4 relative z-50">
                 <div>
                     {!isVinyl && <label className="block text-sm font-medium mb-2">{labels.name}</label>}
                     <input
@@ -205,7 +205,7 @@ export function ContactForm({ labels, variant = "default" }: ContactFormProps) {
                 </div>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-4">
+            <div className="grid md:grid-cols-2 gap-4 relative z-40">
                 <div>
                     {!isVinyl && <label className="block text-sm font-medium mb-2">{labels.business_name}</label>}
                     <input
@@ -233,9 +233,9 @@ export function ContactForm({ labels, variant = "default" }: ContactFormProps) {
                 </div>
             </div>
 
-            <div>
+            <div className="relative z-30">
                 {!isVinyl && <label className="block text-sm font-medium mb-2">{labels.phone}</label>}
-                <div className={`flex rounded-lg ${isVinyl ? 'border border-white/20' : 'border border-gray-200'} ${errors.phone ? '!border-red-500' : ''} focus-within:ring-2 ${isVinyl ? 'focus-within:ring-white/30' : 'focus-within:ring-black/20'} focus-within:border-transparent`}>
+                <div className={`flex rounded-lg ${isVinyl ? 'bg-white/10 backdrop-blur-sm border border-white/20' : 'bg-gray-50 border border-gray-200'} ${errors.phone ? '!border-red-500' : ''} focus-within:ring-2 ${isVinyl ? 'focus-within:ring-white/30' : 'focus-within:ring-black/20'} focus-within:border-transparent`}>
                     <TransparentSelect
                         name="country_code"
                         value={formData.country_code}
@@ -269,7 +269,7 @@ export function ContactForm({ labels, variant = "default" }: ContactFormProps) {
                 {errors.phone && <p className={errorClass}>{errors.phone[0]}</p>}
             </div>
 
-            <div className="grid md:grid-cols-2 gap-4">
+            <div className="grid md:grid-cols-2 gap-4 relative z-20">
                 <div>
                     {!isVinyl && <label className="block text-sm font-medium mb-2">{labels.venue}</label>}
                     <TransparentSelect
@@ -310,7 +310,7 @@ export function ContactForm({ labels, variant = "default" }: ContactFormProps) {
                 </div>
             </div>
 
-            <div>
+            <div className="relative z-10">
                 {!isVinyl && <label className="block text-sm font-medium mb-2">{labels.message}</label>}
                 <textarea
                     name="message"

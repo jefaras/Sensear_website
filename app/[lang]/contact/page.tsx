@@ -1,11 +1,10 @@
 import { getDictionary } from "@/lib/dictionary";
 import { ContactForm } from "@/components/ContactForm";
 import type { Locale } from "@/lib/i18n";
-import React from "react";
 import { Metadata } from "next";
 import Image from "next/image";
 import { AnimatedButton } from "@/components/AnimatedButton";
-
+import { Instagram, Facebook, Linkedin, ThumbsUp } from "lucide-react";
 export async function generateMetadata({ params }: { params: Promise<{ lang: Locale }> }): Promise<Metadata> {
     const { lang } = await params;
     const dict = await getDictionary(lang);
@@ -111,7 +110,7 @@ export default async function Contact({ params }: { params: Promise<{ lang: Loca
                                 </svg>
                             </div>
                             <h3 className="text-xl font-bold text-white mb-2">{dict.contact.contact_info.phone.label}</h3>
-                            <div className="flex justify-center mb-1">
+                            <div className="flex justify-center mt-3 mb-2">
                                 <Image
                                     src="/images/brand/contact-phone.png"
                                     alt="+30 6976994212"
@@ -130,7 +129,7 @@ export default async function Contact({ params }: { params: Promise<{ lang: Loca
                                 </svg>
                             </div>
                             <h3 className="text-xl font-bold text-white mb-2">{dict.contact.contact_info.email.label}</h3>
-                            <div className="flex justify-center mb-1">
+                            <div className="flex justify-center mt-3 mb-2">
                                 <Image
                                     src="/images/brand/contact-email.png"
                                     alt="hello@sensear.music"
@@ -141,18 +140,38 @@ export default async function Contact({ params }: { params: Promise<{ lang: Loca
                             </div>
                             <p className="text-white/60 text-sm">{dict.contact.contact_info.email.note}</p>
                         </div>
-                        {/* Location */}
+                        {/* Social */}
                         <div className="text-center">
                             <div className="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                                </svg>
+                                <ThumbsUp className="w-8 h-8 text-white" />
                             </div>
-                            <h3 className="text-xl font-bold text-white mb-2">{dict.contact.contact_info.location.label}</h3>
-                            <p className="text-white text-lg mb-1">{dict.contact.contact_info.location.value}</p>
-                            <p className="text-white/60 text-sm">{dict.contact.contact_info.location.note}</p>
+                            <h3 className="text-xl font-bold text-white mb-2">{dict.contact.contact_info.social.label}</h3>
+                            <div className="flex justify-center gap-8 mt-2 mb-2">
+                                <a href="https://www.facebook.com/61575909304249/" target="_blank" rel="noopener noreferrer" className="hover:text-white/70 transition-colors" aria-label="Facebook">
+                                    <Facebook className="w-6 h-6 text-white" />
+                                </a>
+                                <a href="https://www.instagram.com/sensear.music" target="_blank" rel="noopener noreferrer" className="hover:text-white/70 transition-colors" aria-label="Instagram">
+                                    <Instagram className="w-6 h-6 text-white" />
+                                </a>
+                                <a href="https://www.linkedin.com/company/sensear-music/" target="_blank" rel="noopener noreferrer" className="hover:text-white/70 transition-colors" aria-label="LinkedIn">
+                                    <Linkedin className="w-6 h-6 text-white" />
+                                </a>
+                            </div>
+                            <p className="text-white/60 text-sm">{dict.contact.contact_info.social.note}</p>
                         </div>
+                    </div>
+
+                    {/* Location */}
+                    <div className="flex flex-col items-center justify-center mt-16 text-center">
+                        <div className="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                            </svg>
+                        </div>
+                        <h3 className="text-xl font-bold text-white mb-2">{dict.contact.contact_info.location.label}</h3>
+                        <p className="text-white text-lg mb-1">{dict.contact.contact_info.location.value}</p>
+                        <p className="text-white/60 text-sm">{dict.contact.contact_info.location.note}</p>
                     </div>
                 </div>
             </section>

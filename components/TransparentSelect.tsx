@@ -62,8 +62,8 @@ export default function TransparentSelect({
 
     // Use default styles if triggerClassName is not fully overriding
     const defaultTriggerClass = isVinyl
-        ? `bg-white/10 text-white backdrop-blur-sm border border-white/20 ${error ? '!border-red-500' : ''} focus:ring-white/30 rounded-xl`
-        : `bg-white text-black border border-gray-200 ${error ? '!border-red-500' : ''} focus:ring-black/20 rounded-xl`;
+        ? `bg-white/10 text-white backdrop-blur-sm border border-white/20 ${error ? '!border-red-500' : ''} focus:ring-white/30 rounded-lg`
+        : `bg-white text-black border border-gray-200 ${error ? '!border-red-500' : ''} focus:ring-black/20 rounded-lg`;
 
     const buttonClass = triggerClassName !== undefined
         ? triggerClassName
@@ -89,7 +89,7 @@ export default function TransparentSelect({
             </button>
 
             {isOpen && (
-                <div className={`absolute z-[100] w-full min-w-max left-0 mt-2 rounded-xl overflow-hidden py-1 ${baseDropdownClass} max-h-60 overflow-y-auto`}>
+                <div className={`absolute z-[100] w-full min-w-max left-0 mt-2 rounded-lg overflow-hidden py-1 ${baseDropdownClass} max-h-60 overflow-y-auto`}>
                     {!hidePlaceholderOption && (
                         <div
                             onClick={() => handleSelect('')}
