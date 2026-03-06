@@ -75,15 +75,15 @@ export default async function Contact({ params }: { params: Promise<{ lang: Loca
                     </div>
 
                     {/* Vinyl Background and Form Wrapper */}
-                    <div className="relative w-full max-w-xl mx-auto py-20 md:py-28 flex justify-center items-center">
+                    <div className="relative w-full max-w-xl mx-auto py-20 md:py-28 flex justify-center items-center md:min-h-[850px]">
                         {/* Circular Vinyl Background - absolute, centered, scalable by fixed responsive dimensions */}
                         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none flex justify-center items-center" aria-hidden="true">
                             <Image
                                 src="/images/contact/vinyl-record-contact-form-bg.png"
                                 alt=""
-                                width={1050}
-                                height={1050}
-                                className="object-cover rounded-full select-none w-[900px] h-[900px] md:w-[1050px] md:h-[1050px] max-w-none"
+                                width={850}
+                                height={850}
+                                className="object-cover rounded-full select-none w-[900px] h-[900px] md:w-[850px] md:h-[850px] max-w-none"
                                 priority={false}
                             />
                         </div>
