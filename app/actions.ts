@@ -3,8 +3,8 @@
 import { z } from "zod";
 import { sendEmail, generateContactEmailHTML, generateNewsletterEmailHTML } from "@/lib/email";
 
-async function verifyRecaptchaToken(token: string | null): Promise<boolean> {
-    if (!token) return false;
+async function verifyRecaptchaToken(token: string | null): Promise<true | string> {
+    if (!token) return "Missing token from client.";
 
     const secretKey = process.env.RECAPTCHA_SECRET_KEY;
     if (!secretKey) {
@@ -23,16 +23,22 @@ async function verifyRecaptchaToken(token: string | null): Promise<boolean> {
         });
 
         const data = await response.json();
-        // reCAPTCHA v3 returns a score from 0.0 to 1.0
-        // 1.0 is very likely a good interaction, 0.0 is very likely a bot
         if (data.success && data.score >= 0.5) {
             return true;
         }
-        console.warn("reCAPTCHA verification failed or low score:", data);
-        return false;
-    } catch (error) {
+
+        // Return exactly what Google is upset about
+        if (data["error-codes"]) {
+            return `Google reCAPTCHA Rejected: ${data["error-codes"].join(", ")}`;
+        } else if (data.success === true && data.score < 0.5) {
+            return `Google reCAPTCHA Rejected: Score too low (${data.score})`;
+        }
+
+        return `Google reCAPTCHA Rejected: Unknown reason`;
+
+    } catch (error: any) {
         console.error("reCAPTCHA verification error:", error);
-        return false;
+        return `reCAPTCHA Server Fetch Error: ${error?.message || "Unknown error"}`;
     }
 }
 
@@ -56,12 +62,12 @@ const newsletterSchema = z.object({
 export async function submitContactForm(formData: FormData) {
     // Verify reCAPTCHA token
     const token = formData.get("g-recaptcha-response")?.toString() || null;
-    const isValid = await verifyRecaptchaToken(token);
+    const verifyResult = await verifyRecaptchaToken(token);
 
-    if (!isValid) {
+    if (verifyResult !== true) {
         return {
             errors: {
-                _form: ["Security verification failed. Please try again."],
+                _form: [`${verifyResult}`],
             }
         };
     }
@@ -128,12 +134,14 @@ export async function submitContactForm(formData: FormData) {
 export async function submitNewsletterForm(formData: FormData) {
     // Verify reCAPTCHA token
     const token = formData.get("g-recaptcha-response")?.toString() || null;
-    const isValid = await verifyRecaptchaToken(token);
 
-    if (!isValid) {
+    // TEMPORARY BYPASS FOR NEWSLETTER (IF NEEDED LATER, NOT ACTIVE NOW)
+    const verifyResult = await verifyRecaptchaToken(token);
+
+    if (verifyResult !== true) {
         return {
             errors: {
-                _form: ["Security verification failed. Please try again."],
+                _form: [`${verifyResult}`],
             }
         };
     }
