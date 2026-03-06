@@ -63,8 +63,8 @@ export default async function Contact({ params }: { params: Promise<{ lang: Loca
                 </div>
             </section>
 
-            <section className="py-20 bg-[#faebe3]">
-                <div className="max-w-6xl mx-auto px-6">
+            <section className="py-20 bg-[#faebe3] relative overflow-hidden">
+                <div className="max-w-6xl mx-auto px-6 relative z-10">
                     <div className="text-center mb-12 w-full">
                         <h2 className="text-[2.7rem] md:text-[3.45rem] font-bold text-black mb-6 leading-heading">
                             {dict.contact.intro.title}
@@ -74,45 +74,22 @@ export default async function Contact({ params }: { params: Promise<{ lang: Loca
                         </p>
                     </div>
 
-                    {/* Vinyl record as circular background behind the form */}
-                    <div className="relative max-w-2xl mx-auto aspect-square">
-                        {/* Phase 1: Vinyl image — fills container, circular, no bg color */}
-                        <div className="absolute inset-0 flex items-center justify-center pointer-events-none" aria-hidden="true">
+                    {/* Vinyl Background and Form Wrapper */}
+                    <div className="relative w-full max-w-xl mx-auto py-20 md:py-28 flex justify-center items-center">
+                        {/* Circular Vinyl Background - absolute, centered, scalable by fixed responsive dimensions */}
+                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none flex justify-center items-center" aria-hidden="true">
                             <Image
                                 src="/images/contact/vinyl-record-contact-form-bg.png"
                                 alt=""
-                                width={1200}
-                                height={1200}
-                                className="select-none"
-                                style={{
-                                    width: '100%',
-                                    height: '100%',
-                                    objectFit: 'cover',
-                                    borderRadius: '50%',
-                                }}
+                                width={1050}
+                                height={1050}
+                                className="object-cover rounded-full select-none w-[900px] h-[900px] md:w-[1050px] md:h-[1050px] max-w-none"
                                 priority={false}
                             />
                         </div>
 
-                        {/* Phase 2: Form — absolutely centered within the circle */}
-                        <div
-                            className="z-10"
-                            style={{
-                                position: 'absolute',
-                                top: '50%',
-                                left: '50%',
-                                transform: 'translate(-50%, -50%)',
-                                width: '70%',
-                                height: 'auto',
-                                minHeight: '400px',
-                                padding: '20px',
-                                boxSizing: 'border-box',
-                                display: 'flex',
-                                flexDirection: 'column',
-                                justifyContent: 'center',
-                                alignItems: 'center',
-                            }}
-                        >
+                        {/* Form - in normal document flow to dictate container height on mobile */}
+                        <div className="relative z-10 w-full px-4 sm:px-8">
                             <ContactForm labels={dict.contact.form} variant="vinyl" />
                         </div>
                     </div>
