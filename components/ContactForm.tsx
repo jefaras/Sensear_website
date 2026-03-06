@@ -235,7 +235,7 @@ export function ContactForm({ labels, variant = "default" }: ContactFormProps) {
 
             <div>
                 {!isVinyl && <label className="block text-sm font-medium mb-2">{labels.phone}</label>}
-                <div className={`flex rounded-lg overflow-hidden ${isVinyl ? 'border border-white/20' : 'border border-gray-200'} ${errors.phone ? '!border-red-500' : ''} focus-within:ring-2 ${isVinyl ? 'focus-within:ring-white/30' : 'focus-within:ring-black/20'} focus-within:border-transparent`}>
+                <div className={`flex rounded-lg ${isVinyl ? 'border border-white/20' : 'border border-gray-200'} ${errors.phone ? '!border-red-500' : ''} focus-within:ring-2 ${isVinyl ? 'focus-within:ring-white/30' : 'focus-within:ring-black/20'} focus-within:border-transparent`}>
                     <TransparentSelect
                         name="country_code"
                         value={formData.country_code}
@@ -243,7 +243,7 @@ export function ContactForm({ labels, variant = "default" }: ContactFormProps) {
                         placeholder="Other"
                         hidePlaceholderOption
                         isVinyl={isVinyl}
-                        triggerClassName={`px-3 py-3 w-[120px] flex items-center justify-between focus:outline-none font-medium cursor-pointer transition-all ${isVinyl ? 'bg-transparent text-white border-r border-white/20 hover:bg-white/5' : 'bg-gray-200/50 text-gray-700 border-r border-gray-200 hover:bg-gray-200'} text-left`}
+                        triggerClassName={`px-3 py-3 w-[120px] rounded-l-lg flex items-center justify-between focus:outline-none font-medium cursor-pointer transition-all ${isVinyl ? 'bg-transparent text-white border-r border-white/20 hover:bg-white/5' : 'bg-gray-200/50 text-gray-700 border-r border-gray-200 hover:bg-gray-200'} text-left`}
                         options={[
                             { value: '+30', label: 'GR (+30)' },
                             { value: '+357', label: 'CY (+357)' },
@@ -263,7 +263,7 @@ export function ContactForm({ labels, variant = "default" }: ContactFormProps) {
                         value={formData.phone}
                         onChange={handleChange}
                         placeholder={labels.phone_placeholder}
-                        className={`w-full px-4 py-3 bg-transparent focus:outline-none ${isVinyl ? 'text-white placeholder:text-white/50' : ''}`}
+                        className={`w-full px-4 py-3 rounded-r-lg bg-transparent focus:outline-none ${isVinyl ? 'text-white placeholder:text-white/50' : ''}`}
                     />
                 </div>
                 {errors.phone && <p className={errorClass}>{errors.phone[0]}</p>}

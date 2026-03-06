@@ -79,7 +79,7 @@ export default async function Contact({ params }: { params: Promise<{ lang: Loca
                         {/* Phase 1: Vinyl image — fills container, circular, no bg color */}
                         <div className="absolute inset-0 flex items-center justify-center pointer-events-none" aria-hidden="true">
                             <Image
-                                src="/images/backgrounds/vinyl-record.png"
+                                src="/images/contact/vinyl-record-contact-form-bg.png"
                                 alt=""
                                 width={1200}
                                 height={1200}
@@ -102,7 +102,7 @@ export default async function Contact({ params }: { params: Promise<{ lang: Loca
                                 top: '50%',
                                 left: '50%',
                                 transform: 'translate(-50%, -50%)',
-                                width: '80%',
+                                width: '70%',
                                 height: 'auto',
                                 minHeight: '400px',
                                 padding: '20px',
