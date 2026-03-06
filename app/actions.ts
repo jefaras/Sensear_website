@@ -4,7 +4,7 @@ import { z } from "zod";
 import { sendEmail, generateContactEmailHTML, generateNewsletterEmailHTML } from "@/lib/email";
 
 async function verifyRecaptchaToken(token: string | null): Promise<true | string> {
-    if (!token) return "Missing token from client.";
+    return true; // TEMPORARILY DISABLED RECAPTCHA FOR TROUBLESHOOTING
 
     const secretKey = process.env.RECAPTCHA_SECRET_KEY;
     if (!secretKey) {
@@ -17,8 +17,8 @@ async function verifyRecaptchaToken(token: string | null): Promise<true | string
             method: "POST",
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
             body: new URLSearchParams({
-                secret: secretKey,
-                response: token,
+                secret: secretKey || "",
+                response: token || "",
             }),
         });
 
