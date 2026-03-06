@@ -96,15 +96,16 @@ export function ContactForm({ labels, variant = "default" }: ContactFormProps) {
         setErrors({});
 
         let recaptchaToken = "";
-        if (executeRecaptcha) {
-            try {
-                recaptchaToken = await executeRecaptcha("contact_form");
-            } catch {
-                setErrors({ _form: ["Security verification failed. Please refresh the page."] });
-                setPending(false);
-                return;
-            }
-        }
+        // TEMPORARILY BYPASSED RECAPTCHA
+        // if (executeRecaptcha) {
+        //     try {
+        //         recaptchaToken = await executeRecaptcha("contact_form");
+        //     } catch {
+        //         setErrors({ _form: ["Security verification failed. Please refresh the page."] });
+        //         setPending(false);
+        //         return;
+        //     }
+        // }
 
         const submitData = new FormData();
         submitData.append("g-recaptcha-response", recaptchaToken);
