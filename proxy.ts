@@ -5,6 +5,13 @@ import { i18n } from '@/lib/i18n'
 import { match as matchLocale } from '@formatjs/intl-localematcher'
 import Negotiator from 'negotiator'
 
+function generateNonce(): string {
+    const bytes = new Uint8Array(16)
+    crypto.getRandomValues(bytes)
+    const binary = Array.from(bytes, (b) => String.fromCharCode(b)).join('')
+    return btoa(binary).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '')
+}
+
 function buildCsp(nonce: string): string {
     return [
         "default-src 'self'",
@@ -38,7 +45,7 @@ function getLocale(request: NextRequest): string {
 
 export function proxy(request: NextRequest) {
     const pathname = request.nextUrl.pathname
-    const nonce = process.env.CSP_NONCE || 'sensearcspnonce'
+    const nonce = generateNonce()
     const csp = buildCsp(nonce)
     const requestHeaders = new Headers(request.headers)
     requestHeaders.set('x-nonce', nonce)
@@ -61,7 +68,6 @@ export function proxy(request: NextRequest) {
             )
         )
         response.headers.set('Content-Security-Policy', csp)
-        response.headers.set('x-nonce', nonce)
         return response
     }
 
@@ -71,7 +77,6 @@ export function proxy(request: NextRequest) {
         },
     })
     response.headers.set('Content-Security-Policy', csp)
-    response.headers.set('x-nonce', nonce)
     return response
 }
 
