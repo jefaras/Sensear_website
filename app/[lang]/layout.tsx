@@ -7,6 +7,8 @@ import { OrganizationJsonLd, LocalBusinessJsonLd, WebSiteJsonLd } from "@/compon
 import { fontVariables } from "@/app/fonts";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import { ReCaptchaProvider } from "@/components/ReCaptchaProvider";
+import { headers } from "next/headers";
+import { getSiteUrl } from "@/lib/site-url";
 
 // Dynamic imports for heavy components to reduce initial bundle size
 // Navbar and Footer are loaded client-side after initial render
@@ -34,7 +36,7 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
     const { lang } = await params;
-    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://sensear.music';
+    const baseUrl = getSiteUrl();
 
     const title = lang === 'el'
         ? 'SensEar Music - Μουσική Επιμέλεια & Sonic Branding'
@@ -118,6 +120,7 @@ export default async function RootLayout({
     params: Promise<{ lang: string }>;
 }) {
     const { lang } = await params;
+    const nonce = (await headers()).get("x-nonce") ?? undefined;
     // Cast to Locale type - middleware ensures only valid locales reach here
     const locale = lang as Locale;
     const dict = await getDictionary(locale);
@@ -130,6 +133,7 @@ export default async function RootLayout({
                 <link rel="preload" as="image" href="/images/carousel/carousel-home-interior.jpg" />
                 {/* Critical CSS for above-the-fold content - reduces render blocking */}
                 <style
+                    nonce={nonce}
                     dangerouslySetInnerHTML={{
                         __html: `
                             /* Critical hero section styles */
@@ -170,9 +174,9 @@ export default async function RootLayout({
                     }}
                 />
                 {/* Self-hosted fonts via next/font/google - no external requests needed */}
-                <OrganizationJsonLd />
-                <LocalBusinessJsonLd />
-                <WebSiteJsonLd />
+                <OrganizationJsonLd nonce={nonce} />
+                <LocalBusinessJsonLd nonce={nonce} />
+                <WebSiteJsonLd nonce={nonce} />
             </head>
             <body className="antialiased min-h-screen flex flex-col" suppressHydrationWarning>
                 <ReCaptchaProvider>

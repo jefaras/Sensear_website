@@ -27,7 +27,7 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: Lo
     const content = dict.about_page;
 
     return (
-        <main className="bg-[#faebe3] min-h-screen relative overflow-x-hidden">
+        <div className="bg-[#faebe3] min-h-screen relative overflow-x-hidden">
             <style dangerouslySetInnerHTML={{
                 __html: `
         @keyframes slideUp {
@@ -476,6 +476,6 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: Lo
                 buttons={content.final_cta.buttons}
                 lang={lang}
             />
-        </main>
+        </div>
     );
 }

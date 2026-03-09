@@ -32,7 +32,7 @@ export default async function Industries({
     const content = dict.industries_page;
 
     return (
-        <main className="bg-[#faebe3]">
+        <div className="bg-[#faebe3]">
             {/* Hero Section */}
             <section className="relative pt-20 sm:pt-24 md:pt-28 lg:pt-32 xl:pt-32 pb-8 lg:pb-24 min-h-[90vh] lg:min-h-screen flex flex-col justify-center overflow-hidden">
                 {/* Background Image Overlay - using inline style for arbitrary external URL from original site */}
@@ -153,7 +153,7 @@ export default async function Industries({
                                         <Link href={`/${lang}/${item.link}`} aria-label={item.title}>
                                             <button className="group relative bg-transparent border-2 border-black text-black hover:bg-black hover:text-white px-8 py-6 text-lg font-semibold rounded-full transition-all duration-300 overflow-hidden flex items-center">
                                                 <span className="relative inline-flex items-center mr-2 align-middle">
-                                                    <Image src="/images/brand/sensear-logo-color.png" width={32} height={32} className="w-8 h-8 object-contain opacity-100 scale-100 group-hover:opacity-0 group-hover:scale-0 transition-all duration-300" alt="" />
+                                                    <Image src="/images/brand/sensear-logo-color.png" width={32} height={32} className="w-8 h-8 object-contain opacity-100 scale-100 group-hover:opacity-0 group-hover:scale-0 transition-all duration-300" alt="SensEar logo" />
                                                 </span>
                                                 <span className="transition-transform duration-300 group-hover:-translate-x-10 inline-block">
                                                     {item.cta}
@@ -234,6 +234,6 @@ export default async function Industries({
                 ]}
                 lang={lang}
             />
-        </main>
+        </div>
     );
 }

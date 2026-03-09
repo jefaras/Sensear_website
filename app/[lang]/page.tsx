@@ -124,7 +124,7 @@ export default async function Home({ params }: { params: Promise<{ lang: Locale 
                                     <Link href={`/${lang}/services`}>
                                         <button className="group relative bg-transparent border-2 border-black text-black hover:bg-black hover:text-white px-10 py-6 text-lg font-semibold rounded-full transition-all duration-300 overflow-hidden w-full sm:w-auto flex items-center">
                                             <span className="relative inline-flex items-center mr-2 align-middle">
-                                                <Image src="/images/brand/sensear-logo-color.png" width={40} height={40} className="w-10 h-10 object-contain opacity-100 scale-100 group-hover:opacity-0 group-hover:scale-0 transition-all duration-300" alt="" />
+                                                <Image src="/images/brand/sensear-logo-color.png" width={40} height={40} className="w-10 h-10 object-contain opacity-100 scale-100 group-hover:opacity-0 group-hover:scale-0 transition-all duration-300" alt="SensEar logo" />
                                             </span>
                                             <span className="transition-transform duration-300 group-hover:-translate-x-12 inline-block">
                                                 {dict.home.hero.cta}

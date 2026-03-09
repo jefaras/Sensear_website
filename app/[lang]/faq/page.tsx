@@ -51,6 +51,8 @@ export default async function FAQPage({
                                         <img
                                             src="/images/blog/blog-faq-default.jpg"
                                             alt="FAQ"
+                                            width={1200}
+                                            height={1200}
                                             className="w-full h-full object-cover"
                                         />
                                     </div>

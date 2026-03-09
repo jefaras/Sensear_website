@@ -6,6 +6,18 @@ import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import { notFound } from "next/navigation";
 import { ArticleJsonLd } from "@/components/JsonLd";
+import { headers } from "next/headers";
+
+const BLOG_PUBLISHED_DATES: Record<string, string> = {
+    "how-top-hospitality-brands-design-sound": "2025-01-20",
+    "three-reasons-make-music-hospitality": "2025-01-15",
+    "brand-music-converts-browsers-buyers": "2025-01-20",
+    "what-exactly-does-music-curator-do": "2025-01-10",
+    "music-curation-cycle-venues": "2025-01-15",
+    "building-brand-people-can-hear": "2025-02-12",
+    "background-music-shapes-customer-behavior": "2025-03-08",
+    "service-environment-shapes-wait-time": "2025-03-15",
+};
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: Locale; slug: string }> }) {
     const { lang, slug } = await params;
@@ -32,6 +44,7 @@ export default async function BlogPost({
     params: Promise<{ lang: Locale; slug: string }>;
 }) {
     const { lang, slug } = await params;
+    const nonce = (await headers()).get("x-nonce") ?? undefined;
     const dict = await getDictionary(lang);
 
     // Find article from dictionary
@@ -43,6 +56,7 @@ export default async function BlogPost({
 
     const backButtonText = (dict.blog as any).back_button || "Back to Insights";
     const cta = (dict.blog as any).blog_cta || {};
+    const publishedDate = BLOG_PUBLISHED_DATES[article.link];
 
     const titleParts = article.title.split('|');
 
@@ -76,7 +90,10 @@ export default async function BlogPost({
                 description={article.desc}
                 url={`/${lang}/blog/${article.link}`}
                 image={article.image}
+                datePublished={publishedDate}
+                dateModified={publishedDate}
                 author={article.author}
+                nonce={nonce}
             />
             
             {/* Hero Section */}
@@ -123,6 +140,8 @@ export default async function BlogPost({
                                 <img
                                     src={article.image || "/images/blog/blog-faq-default.jpg"}
                                     alt={article.alt || article.title}
+                                    width={900}
+                                    height={1200}
                                     className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
                                 />
                             </div>
@@ -176,6 +195,8 @@ export default async function BlogPost({
                                                             <img
                                                                 src={section.src}
                                                                 alt={section.alt || ""}
+                                                                width={1600}
+                                                                height={900}
                                                                 className="w-full h-full object-cover"
                                                             />
                                                         </div>

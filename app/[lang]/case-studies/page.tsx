@@ -51,7 +51,7 @@ export default async function CaseStudies({
     ];
 
     return (
-        <main className="bg-[#faebe3]">
+        <div className="bg-[#faebe3]">
             <style dangerouslySetInnerHTML={{
                 __html: `
         @keyframes slideUp {
@@ -199,10 +199,11 @@ export default async function CaseStudies({
                                                 frameBorder="0"
                                                 allow="autoplay"
                                                 src={assets.scUrl}
+                                                title={`${item.title} sound sample`}
                                                 className="rounded-xl shadow-md"
                                             ></iframe>
                                             <div style={{ fontSize: '10px', color: '#cccccc', lineBreak: 'anywhere', wordBreak: 'normal', overflow: 'hidden', whiteSpace: 'nowrap', textOverflow: 'ellipsis', fontFamily: 'Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif', fontWeight: '100' }}>
-                                                <a href="https://soundcloud.com/sensear_music" title="SensEar.Music" target="_blank" style={{ color: '#cccccc', textDecoration: 'none' }}>SensEar.Music</a> · <a href={assets.scLink} title={item.link_text} target="_blank" style={{ color: '#cccccc', textDecoration: 'none' }}>{item.link_text}</a>
+                                                <a href="https://soundcloud.com/sensear_music" title="SensEar.Music" target="_blank" rel="noopener noreferrer" style={{ color: '#cccccc', textDecoration: 'none' }}>SensEar.Music</a> · <a href={assets.scLink} title={item.link_text} target="_blank" rel="noopener noreferrer" style={{ color: '#cccccc', textDecoration: 'none' }}>{item.link_text}</a>
                                             </div>
                                         </div>
                                     </div>
@@ -223,6 +224,6 @@ export default async function CaseStudies({
                 ]}
                 lang={lang}
             />
-        </main>
+        </div>
     );
 }

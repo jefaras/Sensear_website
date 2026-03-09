@@ -33,7 +33,7 @@ export default async function HotelsResortsPage({ params }: { params: Promise<{ 
     const t = dict.hotels_resorts;
 
     return (
-        <main className="bg-[#faebe3]">
+        <div className="bg-[#faebe3]">
             {/* Hero Section */}
             <section className="relative pt-20 sm:pt-24 md:pt-28 lg:pt-32 xl:pt-32 pb-8 lg:pb-24 min-h-[90vh] lg:min-h-screen flex flex-col justify-center overflow-hidden" style={{ backgroundImage: "url('/images/backgrounds/background-texture-warm-silver.jpg')", backgroundSize: 'cover', backgroundPosition: 'center' }}>
                 <div className="w-full px-6 md:px-12 lg:px-16"><div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -117,6 +117,6 @@ export default async function HotelsResortsPage({ params }: { params: Promise<{ 
                 ]}
                 lang={lang}
             />
-        </main>
+        </div>
     );
 }

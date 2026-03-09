@@ -43,13 +43,13 @@ export function Footer({ lang, dict }: { lang: Locale, dict: any }) {
 
                         {/* Social Icons */}
                         <div className="flex gap-6 mb-6">
-                            <Link href="https://www.facebook.com/61575909304249/" target="_blank" className="text-white/70 hover:text-[#faebe3] transition-colors" aria-label="Visit SensEar on Facebook">
+                            <Link href="https://www.facebook.com/61575909304249/" target="_blank" rel="noopener noreferrer" className="text-white/70 hover:text-[#faebe3] transition-colors" aria-label="Visit SensEar on Facebook">
                                 <Facebook className="w-6 h-6" />
                             </Link>
-                            <Link href="https://www.instagram.com/sensear.music" target="_blank" className="text-white/70 hover:text-[#faebe3] transition-colors" aria-label="Visit SensEar on Instagram">
+                            <Link href="https://www.instagram.com/sensear.music" target="_blank" rel="noopener noreferrer" className="text-white/70 hover:text-[#faebe3] transition-colors" aria-label="Visit SensEar on Instagram">
                                 <Instagram className="w-6 h-6" />
                             </Link>
-                            <Link href="https://www.linkedin.com/company/sensear-music/" target="_blank" className="text-white/70 hover:text-[#faebe3] transition-colors" aria-label="Visit SensEar on LinkedIn">
+                            <Link href="https://www.linkedin.com/company/sensear-music/" target="_blank" rel="noopener noreferrer" className="text-white/70 hover:text-[#faebe3] transition-colors" aria-label="Visit SensEar on LinkedIn">
                                 <Linkedin className="w-6 h-6" />
                             </Link>
                         </div>

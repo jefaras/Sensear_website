@@ -1,0 +1,16 @@
+
+> sensear-music-web@0.1.0 dev
+> next dev --turbopack
+
+▲ Next.js 16.1.6 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://192.168.178.52:3000
+- Environments: .env.local
+- Experiments (use with caution):
+  · cpus: 1
+  ✓ optimizeCss
+  · optimizePackageImports
+
+✓ Starting...
+Creating turbopack project { dir: 'C:\\Users\\jef\\Documents\\Antigravity', testMode: true }
+✓ Ready in 1994ms

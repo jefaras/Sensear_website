@@ -143,6 +143,14 @@ const nextConfig = {
             // Apply to all routes
             source: '/:path*',
             headers: [
+                {
+                    key: 'Strict-Transport-Security',
+                    value: 'max-age=31536000; includeSubDomains; preload',
+                },
+                {
+                    key: 'X-Frame-Options',
+                    value: 'SAMEORIGIN',
+                },
                 // Cache static assets for 1 year (immutable)
                 {
                     key: 'Cache-Control',

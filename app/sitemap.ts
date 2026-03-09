@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next'
+import { getSiteUrl } from '@/lib/site-url'
 
-// Base URL - In production this should be your actual domain
-const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://sensear.music'
+const BASE_URL = getSiteUrl()
 
 export default function sitemap(): MetadataRoute.Sitemap {
     // List of all static routes in the application
@@ -22,6 +22,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
         '/industries/music-for-art-museums-and-fashion',
         '/case-studies',
         '/blog',
+        '/blog/how-top-hospitality-brands-design-sound',
+        '/blog/three-reasons-make-music-hospitality',
+        '/blog/brand-music-converts-browsers-buyers',
+        '/blog/what-exactly-does-music-curator-do',
+        '/blog/music-curation-cycle-venues',
+        '/blog/building-brand-people-can-hear',
+        '/blog/background-music-shapes-customer-behavior',
+        '/blog/service-environment-shapes-wait-time',
         '/contact',
         '/faq',
         '/privacy',

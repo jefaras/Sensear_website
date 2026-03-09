@@ -26,7 +26,7 @@ export default async function Services({
     const content = dict.services_page;
 
     return (
-        <main className="bg-[#faebe3]">
+        <div className="bg-[#faebe3]">
             <style dangerouslySetInnerHTML={{
                 __html: `
         @keyframes slideUp {
@@ -165,7 +165,7 @@ export default async function Services({
                                     <Link href={`/${lang}/services/signature-playlists`}>
                                         <button className="group relative bg-transparent border-2 border-black text-black hover:bg-black hover:text-white px-8 py-6 text-lg font-semibold rounded-full transition-all duration-300 overflow-hidden flex items-center">
                                             <span className="relative inline-flex items-center mr-2 align-middle">
-                                                <Image src="/images/brand/sensear-logo-color.png" width={32} height={32} className="w-8 h-8 object-contain opacity-100 scale-100 group-hover:opacity-0 group-hover:scale-0 transition-all duration-300" alt="" />
+                                                <Image src="/images/brand/sensear-logo-color.png" width={32} height={32} className="w-8 h-8 object-contain opacity-100 scale-100 group-hover:opacity-0 group-hover:scale-0 transition-all duration-300" alt="SensEar logo" />
                                             </span>
                                             <span className="transition-transform duration-300 group-hover:-translate-x-10 inline-block">
                                                 {content.services.playlists.cta}
@@ -198,7 +198,7 @@ export default async function Services({
                                     <Link href={`/${lang}/services/event-soundtracks`}>
                                         <button className="group relative bg-transparent border-2 border-black text-black hover:bg-black hover:text-white px-8 py-6 text-lg font-semibold rounded-full transition-all duration-300 overflow-hidden flex items-center">
                                             <span className="relative inline-flex items-center mr-2 align-middle">
-                                                <Image src="/images/brand/sensear-logo-color.png" width={32} height={32} className="w-8 h-8 object-contain opacity-100 scale-100 group-hover:opacity-0 group-hover:scale-0 transition-all duration-300" alt="" />
+                                                <Image src="/images/brand/sensear-logo-color.png" width={32} height={32} className="w-8 h-8 object-contain opacity-100 scale-100 group-hover:opacity-0 group-hover:scale-0 transition-all duration-300" alt="SensEar logo" />
                                             </span>
                                             <span className="transition-transform duration-300 group-hover:-translate-x-10 inline-block">
                                                 {content.services.events.cta}
@@ -241,7 +241,7 @@ export default async function Services({
                             <Link href={`/${lang}/services/sonic-identity`}>
                                 <button className="group relative bg-transparent border-2 border-black text-black hover:bg-black hover:text-white px-6 py-4 text-base font-semibold rounded-full transition-all duration-300 overflow-hidden flex items-center">
                                     <span className="relative inline-flex items-center mr-2 align-middle">
-                                        <Image src="/images/brand/sensear-logo-color.png" width={28} height={28} className="w-7 h-7 object-contain opacity-100 scale-100 group-hover:opacity-0 group-hover:scale-0 transition-all duration-300" alt="" />
+                                        <Image src="/images/brand/sensear-logo-color.png" width={28} height={28} className="w-7 h-7 object-contain opacity-100 scale-100 group-hover:opacity-0 group-hover:scale-0 transition-all duration-300" alt="SensEar logo" />
                                     </span>
                                     <span className="transition-transform duration-300 group-hover:-translate-x-9 inline-block">
                                         {content.services.strategy.cta}
@@ -269,7 +269,7 @@ export default async function Services({
                             <Link href={`/${lang}/services/audio-upgrades`}>
                                 <button className="group relative bg-transparent border-2 border-black text-black hover:bg-black hover:text-white px-6 py-4 text-base font-semibold rounded-full transition-all duration-300 overflow-hidden flex items-center">
                                     <span className="relative inline-flex items-center mr-2 align-middle">
-                                        <Image src="/images/brand/sensear-logo-color.png" width={28} height={28} className="w-7 h-7 object-contain opacity-100 scale-100 group-hover:opacity-0 group-hover:scale-0 transition-all duration-300" alt="" />
+                                        <Image src="/images/brand/sensear-logo-color.png" width={28} height={28} className="w-7 h-7 object-contain opacity-100 scale-100 group-hover:opacity-0 group-hover:scale-0 transition-all duration-300" alt="SensEar logo" />
                                     </span>
                                     <span className="transition-transform duration-300 group-hover:-translate-x-9 inline-block">
                                         {content.services.upgrades.cta}
@@ -302,7 +302,7 @@ export default async function Services({
                             <div className="space-y-8">
                                 {content.delivery.points.map((point, index) => (
                                     <div key={index}>
-                                        <Link href={`/${lang}/services/${point.link}`} className="text-2xl font-bold text-black block mb-1 group w-fit">
+                                        <Link href={`/${lang}/${point.link}`} className="text-2xl font-bold text-black block mb-1 group w-fit">
                                             <span className="group-hover:translate-x-1 group-hover:underline transition-transform inline-block decoration-1 underline-offset-4">{point.link_text}</span> <ArrowRight className="inline ml-2 w-5 h-5 opacity-0 group-hover:opacity-100 transition-opacity" />
                                         </Link>
                                         <p className="text-lg text-black/70">{point.text}</p>
@@ -324,6 +324,6 @@ export default async function Services({
                 ]}
                 lang={lang}
             />
-        </main>
+        </div>
     );
 }

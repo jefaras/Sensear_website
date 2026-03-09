@@ -15,7 +15,7 @@ export default async function EventSoundtracksPage({
     const t = dict.event_soundtracks;
 
     return (
-        <main className="bg-[#faebe3]">
+        <div className="bg-[#faebe3]">
             <style dangerouslySetInnerHTML={{
                 __html: `
                 @keyframes slideUp {
@@ -138,6 +138,6 @@ export default async function EventSoundtracksPage({
                 ]}
                 lang={lang}
             />
-        </main>
+        </div>
     );
 }

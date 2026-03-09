@@ -10,7 +10,7 @@ export default async function AudioUpgradesPage({ params }: { params: Promise<{ 
     const t = dict.audio_upgrades;
 
     return (
-        <main className="bg-[#faebe3]">
+        <div className="bg-[#faebe3]">
             <section className="relative pt-20 sm:pt-24 md:pt-28 lg:pt-32 xl:pt-32 pb-8 lg:pb-24 min-h-[90vh] lg:min-h-screen flex flex-col justify-center overflow-hidden" style={{ backgroundImage: "url('/images/backgrounds/background-texture-warm-silver.jpg')", backgroundSize: 'cover', backgroundPosition: 'center' }}>
                 <div className="w-full px-6 md:px-12 lg:px-16"><div className="grid lg:grid-cols-2 gap-12 items-center">
                     <div className="flex flex-col justify-center text-left">
@@ -85,6 +85,6 @@ export default async function AudioUpgradesPage({ params }: { params: Promise<{ 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center items-center"><Link href={`/${lang}/contact`}><button className="group relative bg-transparent border-2 border-black text-black hover:bg-black hover:text-white px-14 py-6 text-lg font-semibold rounded-full transition-all duration-300 overflow-hidden flex items-center"><span className="transition-transform duration-300 group-hover:-translate-x-3 inline-block">{t.cta.button}</span><ArrowRight className="absolute right-6 w-5 h-5 opacity-0 translate-x-4 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0" /></button></Link></div>
                 <p className="text-black/70 mt-8">{t.cta.pair_with} <Link href={`/${lang}/services/signature-playlists`} className="underline hover:text-black font-semibold">{t.cta.signature_playlists}</Link> & <Link href={`/${lang}/services/sonic-identity`} className="underline hover:text-black font-semibold">{t.cta.sonic_identity}</Link> {t.cta.complete_identity}</p>
             </div></section>
-        </main>
+        </div>
     );
 }

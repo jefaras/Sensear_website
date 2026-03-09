@@ -45,6 +45,7 @@
         "eslint": "^9",
         "eslint-config-next": "15.1.6",
         "postcss": "^8",
+        "squirrelscan": "^0.0.38",
         "tailwindcss": "^3.4.1",
         "tsx": "^4.21.0",
         "typescript": "^5"

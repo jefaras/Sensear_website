@@ -9,7 +9,7 @@ export default async function TestFormsPage({ params }: { params: Promise<{ lang
     const dict = await getDictionary(lang);
 
     return (
-        <main className="bg-[#faebe3] min-h-screen py-32">
+        <div className="bg-[#faebe3] min-h-screen py-32">
             <div className="max-w-6xl mx-auto px-6">
                 <h1 className="text-4xl font-bold text-black mb-12 text-center">
                     Forms Test Page ({lang.toUpperCase()})
@@ -47,6 +47,6 @@ export default async function TestFormsPage({ params }: { params: Promise<{ lang
                     </div>
                 </div>
             </div>
-        </main>
+        </div>
     );
 }

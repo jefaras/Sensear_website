@@ -19,7 +19,7 @@ export default async function Contact({ params }: { params: Promise<{ lang: Loca
     const dict = await getDictionary(lang);
 
     return (
-        <main className="bg-[#faebe3]">
+        <div className="bg-[#faebe3]">
             <section className="relative pt-20 sm:pt-24 md:pt-28 lg:pt-32 xl:pt-32 pb-8 lg:pb-24 min-h-[90vh] lg:min-h-screen flex flex-col justify-center overflow-hidden">
                 {/* Background - using inline style for arbitrary external URL */}
                 <div
@@ -79,7 +79,7 @@ export default async function Contact({ params }: { params: Promise<{ lang: Loca
                         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none flex justify-center items-center" aria-hidden="true">
                             <Image
                                 src="/images/contact/vinyl-record-contact-form-bg.png"
-                                alt=""
+                                alt="Vinyl record background"
                                 width={850}
                                 height={850}
                                 className="object-cover rounded-full select-none w-[900px] h-[900px] md:w-[850px] md:h-[850px] max-w-none"
@@ -205,6 +205,6 @@ export default async function Contact({ params }: { params: Promise<{ lang: Loca
                     </div>
                 </div>
             </section>
-        </main>
+        </div>
     );
 }

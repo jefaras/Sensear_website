@@ -184,6 +184,7 @@ export function ContactForm({ labels, variant = "default" }: ContactFormProps) {
                         name="name"
                         type="text"
                         required
+                        aria-label={labels.name}
                         value={formData.name}
                         onChange={handleChange}
                         placeholder={labels.name_placeholder}
@@ -197,6 +198,7 @@ export function ContactForm({ labels, variant = "default" }: ContactFormProps) {
                         name="surname"
                         type="text"
                         required
+                        aria-label={labels.surname}
                         value={formData.surname}
                         onChange={handleChange}
                         placeholder={labels.surname_placeholder}
@@ -212,6 +214,7 @@ export function ContactForm({ labels, variant = "default" }: ContactFormProps) {
                     <input
                         name="business_name"
                         type="text"
+                        aria-label={labels.business_name}
                         value={formData.business_name}
                         onChange={handleChange}
                         placeholder={labels.business_name_placeholder}
@@ -225,6 +228,7 @@ export function ContactForm({ labels, variant = "default" }: ContactFormProps) {
                         name="email"
                         type="email"
                         required
+                        aria-label={labels.email}
                         value={formData.email}
                         onChange={handleChange}
                         placeholder={labels.email_placeholder}
@@ -261,6 +265,7 @@ export function ContactForm({ labels, variant = "default" }: ContactFormProps) {
                         name="phone"
                         type="tel"
                         required
+                        aria-label={labels.phone}
                         value={formData.phone}
                         onChange={handleChange}
                         placeholder={labels.phone_placeholder}
@@ -317,6 +322,7 @@ export function ContactForm({ labels, variant = "default" }: ContactFormProps) {
                     name="message"
                     rows={4}
                     required
+                    aria-label={labels.message}
                     value={formData.message}
                     onChange={handleChange}
                     placeholder={labels.message_placeholder}
@@ -341,7 +347,9 @@ export function ContactForm({ labels, variant = "default" }: ContactFormProps) {
                             <img
                                 src={isVinyl ? "/images/brand/sensear-logo-color.png" : "/images/brand/sensear-logo-color.png"}
                                 className="w-8 h-8 object-contain opacity-100 scale-100 group-hover:opacity-0 group-hover:scale-0 transition-all duration-300"
-                                alt=""
+                                width={32}
+                                height={32}
+                                alt="SensEar logo"
                             />
                         </span>
                         <span className="transition-transform duration-300 group-hover:-translate-x-10 inline-block">
