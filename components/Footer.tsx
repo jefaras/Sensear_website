@@ -1,5 +1,7 @@
+"use client";
+
 import Link from "next/link";
-import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { Instagram, Facebook, Mail, Phone, Linkedin } from "lucide-react";
 import { Locale } from "@/lib/i18n";
 import { NewsletterForm } from "@/components/NewsletterForm";
@@ -7,6 +9,10 @@ import { NewsletterForm } from "@/components/NewsletterForm";
 export function Footer({ lang, dict }: { lang: Locale, dict: any }) {
     const footer = dict.footer;
     const nav = footer.nav;
+    const pathname = usePathname() || "";
+    const isEagerFooterAssetPage =
+        /\/(faq|privacy|terms|sitemap-page)$/.test(pathname) ||
+        /\/blog\/[^/]+$/.test(pathname);
 
     return (
         <footer role="contentinfo" aria-label="Site footer" className="bg-black text-white relative overflow-hidden">
@@ -28,12 +34,13 @@ export function Footer({ lang, dict }: { lang: Locale, dict: any }) {
                     {/* Brand Column */}
                     <div className="min-w-[300px] lg:w-1/3">
                         <Link href={`/${lang}`} className="flex items-center gap-3 group mb-6 w-fit">
-                            <Image
+                            <img
                                 src="/images/brand/sensear-logo-white.png"
                                 alt="SensEar"
                                 width={64}
                                 height={64}
-                                sizes="64px"
+                                loading={isEagerFooterAssetPage ? "eager" : "lazy"}
+                                decoding="async"
                                 className="w-16 h-16 object-contain group-hover:scale-110 transition-transform"
                             />
                             <div>
@@ -59,23 +66,25 @@ export function Footer({ lang, dict }: { lang: Locale, dict: any }) {
                         <div className="space-y-3 mb-6">
                             <div className="flex items-center gap-2">
                                 <Mail className="w-4 h-4 text-white/70" />
-                                <Image
+                                <img
                                     src="/images/brand/contact-email.png"
                                     alt="hello@sensear.music"
                                     width={200}
                                     height={20}
-                                    sizes="200px"
+                                    loading={isEagerFooterAssetPage ? "eager" : "lazy"}
+                                    decoding="async"
                                     className="h-5 w-auto"
                                 />
                             </div>
                             <div className="flex items-center gap-2">
                                 <Phone className="w-4 h-4 text-white/70" />
-                                <Image
+                                <img
                                     src="/images/brand/contact-phone.png"
                                     alt="+30 6976994212"
                                     width={200}
                                     height={20}
-                                    sizes="200px"
+                                    loading={isEagerFooterAssetPage ? "eager" : "lazy"}
+                                    decoding="async"
                                     className="h-5 w-auto"
                                 />
                             </div>

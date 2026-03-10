@@ -114,7 +114,7 @@ export default async function SignaturePlaylistsPage({
                                 width={600}
                                 height={400}
                                 sizes="50vw"
-                                loading="lazy"
+                                loading="eager"
                                 className="w-full h-auto rounded-2xl shadow-lg"
                             />
                         </div>
@@ -162,7 +162,7 @@ export default async function SignaturePlaylistsPage({
                                 width={600}
                                 height={400}
                                 sizes="50vw"
-                                loading="lazy"
+                                loading="eager"
                                 className="w-full h-auto rounded-2xl shadow-lg"
                             />
                         </div>
@@ -212,3 +212,6 @@ export default async function SignaturePlaylistsPage({
         </div>
     );
 }
+
+
+

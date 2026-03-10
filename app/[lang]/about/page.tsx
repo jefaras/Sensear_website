@@ -481,3 +481,6 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: Lo
         </div>
     );
 }
+
+
+

@@ -54,8 +54,8 @@ export default async function FAQPage({
                                             alt="FAQ"
                                             fill
                                             sizes="(max-width: 1024px) 100vw, 50vw"
-                                            priority
                                             className="w-full h-full object-cover"
+                                            priority
                                         />
                                     </div>
                                 </div>

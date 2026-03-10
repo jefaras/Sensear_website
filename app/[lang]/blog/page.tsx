@@ -88,9 +88,7 @@ export default async function Blog({
                                             alt="Blog hero image"
                                             fill
                                             sizes="(max-width: 768px) 100vw, 50vw"
-                                            className="object-cover"
-                                            priority
-                                        />
+                                            className="object-cover" priority />
                                     </div>
                                 )}
                             </div>
@@ -146,3 +144,6 @@ export default async function Blog({
         </div>
     );
 }
+
+
+

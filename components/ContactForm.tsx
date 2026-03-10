@@ -6,6 +6,7 @@ import { CheckCircle, ArrowRight } from "lucide-react";
 import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 import TransparentSelect from "./TransparentSelect";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 interface ContactFormLabels {
     name: string;
@@ -65,6 +66,7 @@ export function ContactForm({ labels, variant = "default" }: ContactFormProps) {
     const [success, setSuccess] = useState(false);
     const [errors, setErrors] = useState<Record<string, string[]>>({});
     const { executeRecaptcha } = useGoogleReCaptcha();
+    const pathname = usePathname() || "";
     const [formData, setFormData] = useState<FormData>({
         name: "",
         surname: "",
@@ -78,6 +80,7 @@ export function ContactForm({ labels, variant = "default" }: ContactFormProps) {
     });
 
     const isVinyl = variant === "vinyl";
+    const isEagerLogoPage = /^\/(en|el)\/(contact|services|industries)$/.test(pathname);
 
     function handleChange(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) {
         const { name, value } = e.target;
@@ -351,6 +354,7 @@ export function ContactForm({ labels, variant = "default" }: ContactFormProps) {
                                 width={32}
                                 height={32}
                                 sizes="32px"
+                                loading={isEagerLogoPage ? "eager" : "lazy"}
                                 alt="SensEar logo"
                             />
                         </span>

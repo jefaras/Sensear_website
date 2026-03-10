@@ -52,9 +52,7 @@ export default async function Contact({ params }: { params: Promise<{ lang: Loca
                                         alt={dict.contact.hero.image_alt}
                                         fill
                                         sizes="(max-width: 1024px) 100vw, 50vw"
-                                        className="object-cover"
-                                        priority
-                                    />
+                                        className="object-cover" priority />
                                 </div>
                             </div>
                         </div>
@@ -138,6 +136,7 @@ export default async function Contact({ params }: { params: Promise<{ lang: Loca
                                     width={200}
                                     height={20}
                                     sizes="200px"
+                                    loading="eager"
                                     className="h-5 w-auto"
                                 />
                             </div>
@@ -211,3 +210,6 @@ export default async function Contact({ params }: { params: Promise<{ lang: Loca
         </div>
     );
 }
+
+
+

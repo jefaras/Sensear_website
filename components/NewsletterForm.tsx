@@ -3,7 +3,7 @@
 import { useState, useCallback } from "react";
 import { submitNewsletterForm } from "@/app/actions";
 import { ArrowRight } from "lucide-react";
-import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 
 interface NewsletterFormProps {
@@ -23,6 +23,10 @@ export function NewsletterForm({
     const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
     const [errorMessage, setErrorMessage] = useState("");
     const { executeRecaptcha } = useGoogleReCaptcha();
+    const pathname = usePathname() || "";
+    const isEagerFooterAssetPage =
+        /\/(faq|privacy|terms|sitemap-page)$/.test(pathname) ||
+        /\/blog\/[^/]+$/.test(pathname);
 
     const handleSubmit = useCallback(async (e: React.FormEvent) => {
         e.preventDefault();
@@ -143,7 +147,15 @@ export function NewsletterForm({
                     className="group relative bg-transparent border-2 border-white text-white hover:bg-white hover:text-black px-8 py-2 text-xs font-semibold rounded-full transition-all duration-300 overflow-hidden h-9 flex items-center disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                     <span className="relative inline-flex items-center mr-2 align-middle transition-transform duration-300 group-hover:-translate-x-2">
-                        <Image src="/images/brand/sensear-logo-white.png" width={20} height={20} sizes="20px" className="w-5 h-5 object-contain" alt="SensEar logo" />
+                        <img
+                            src="/images/brand/sensear-logo-white.png"
+                            width={20}
+                            height={20}
+                            loading={isEagerFooterAssetPage ? "eager" : "lazy"}
+                            decoding="async"
+                            className="w-5 h-5 object-contain"
+                            alt="SensEar logo"
+                        />
                     </span>
                     <span className="transition-transform duration-300 group-hover:-translate-x-2 inline-block">
                         {status === "loading" ? "..." : buttonText}

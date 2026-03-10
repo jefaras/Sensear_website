@@ -68,9 +68,7 @@ export default async function EventsExperiencesPage({
                                             alt={t.hero.image_alt}
                                             fill
                                             sizes="(max-width: 1024px) 100vw, 50vw"
-                                            className="object-cover"
-                                            priority
-                                        />
+                                            className="object-cover" priority />
                                     </div>
                                 </div>
                             </div>
@@ -197,3 +195,6 @@ export default async function EventsExperiencesPage({
         </div>
     );
 }
+
+
+

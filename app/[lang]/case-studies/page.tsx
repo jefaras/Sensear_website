@@ -174,6 +174,7 @@ export default async function CaseStudies({
                                                 fill
                                                 className="object-cover"
                                                 sizes="(max-width: 768px) 100vw, 50vw"
+                                                loading={index < 2 ? "eager" : "lazy"}
                                             />
                                         </div>
                                     </div>
@@ -227,3 +228,6 @@ export default async function CaseStudies({
         </div>
     );
 }
+
+
+
