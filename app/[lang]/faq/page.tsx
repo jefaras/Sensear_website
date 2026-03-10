@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/accordion";
 import { AnimatedButton } from "@/components/AnimatedButton";
 import { FinalCTA } from "@/components/sections/FinalCTA";
+import Image from "next/image";
 
 export default async function FAQPage({
     params,
@@ -48,11 +49,12 @@ export default async function FAQPage({
                             <div className="w-full max-w-[740px]">
                                 <div className="overflow-hidden rounded-2xl shadow-2xl">
                                     <div className="relative aspect-square">
-                                        <img
+                                        <Image
                                             src="/images/blog/blog-faq-default.jpg"
                                             alt="FAQ"
-                                            width={1200}
-                                            height={1200}
+                                            fill
+                                            sizes="(max-width: 1024px) 100vw, 50vw"
+                                            priority
                                             className="w-full h-full object-cover"
                                         />
                                     </div>

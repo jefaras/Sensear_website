@@ -82,8 +82,9 @@ export default async function Contact({ params }: { params: Promise<{ lang: Loca
                                 alt="Vinyl record background"
                                 width={850}
                                 height={850}
+                                sizes="(max-width: 768px) 900px, 850px"
+                                loading="eager"
                                 className="object-cover rounded-full select-none w-[900px] h-[900px] md:w-[850px] md:h-[850px] max-w-none"
-                                priority={false}
                             />
                         </div>
 
@@ -116,6 +117,7 @@ export default async function Contact({ params }: { params: Promise<{ lang: Loca
                                     alt="+30 6976994212"
                                     width={200}
                                     height={20}
+                                    sizes="200px"
                                     className="h-5 w-auto"
                                 />
                             </div>
@@ -135,6 +137,7 @@ export default async function Contact({ params }: { params: Promise<{ lang: Loca
                                     alt="hello@sensear.music"
                                     width={200}
                                     height={20}
+                                    sizes="200px"
                                     className="h-5 w-auto"
                                 />
                             </div>

@@ -130,7 +130,7 @@ export default async function RootLayout({
             <head>
                 {/* Preload critical images for LCP optimization */}
                 <link rel="preload" as="image" href="/images/backgrounds/background-texture-warm-silver.jpg" />
-                <link rel="preload" as="image" href="/images/carousel/carousel-home-interior.jpg" />
+                <link rel="preload" as="image" href="/images/carousel/carousel-event-venue.jpg" />
                 {/* Critical CSS for above-the-fold content - reduces render blocking */}
                 <style
                     nonce={nonce}

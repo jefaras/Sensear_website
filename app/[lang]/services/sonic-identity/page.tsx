@@ -22,7 +22,7 @@ export default async function SonicIdentityPage({ params }: { params: Promise<{ 
                         <p className="text-xl md:text-2xl text-black/70 leading-relaxed slide-up-2">{t.hero.description}</p>
                     </div>
                     <div className="w-full slide-up-4 flex justify-end"><div className="w-full max-w-[740px]"><div className="overflow-hidden rounded-2xl shadow-2xl"><div className="relative aspect-square">
-                        <Image src="/images/services/sonic-identity/sonic-identity-hero.jpg" alt="Sonic identity and audio branding for brands" fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" />
+                        <Image src="/images/services/sonic-identity/sonic-identity-hero.jpg" alt="Sonic identity and audio branding for brands" fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" priority />
                     </div></div></div></div>
                 </div></div>
             </section>
@@ -37,7 +37,7 @@ export default async function SonicIdentityPage({ params }: { params: Promise<{ 
                 <h2 className="text-[2.7rem] md:text-[3.45rem] font-bold mb-4 text-black text-center leading-heading">{t.what_we_do.title}</h2>
                 <p className="text-xl text-black/60 font-medium text-center mb-12">{t.what_we_do.subtitle}</p>
                 <div className="grid lg:grid-cols-2 gap-12 items-center">
-                    <div className="hidden lg:block"><Image src="/images/services/sonic-identity/sonic-identity-workshop.jpg" alt="Sonic DNA workshop and brand audio strategy" width={800} height={600} sizes="50vw" className="w-full h-auto rounded-2xl shadow-lg" /></div>
+                    <div className="hidden lg:block"><Image src="/images/services/sonic-identity/sonic-identity-workshop.jpg" alt="Sonic DNA workshop and brand audio strategy" width={800} height={600} sizes="50vw" loading="eager" className="w-full h-auto rounded-2xl shadow-lg" /></div>
                     <div className="space-y-8">
                         {t.what_we_do.items.map((item: any, index: number) => (
                             <div key={index}>
@@ -63,7 +63,7 @@ export default async function SonicIdentityPage({ params }: { params: Promise<{ 
                             </li>
                         ))}
                     </ul></div>
-                    <div className="hidden lg:block"><Image src="/images/services/sonic-identity/sonic-identity-development.jpg" alt="Brand sonic identity development" width={800} height={600} sizes="50vw" className="w-full h-auto rounded-2xl shadow-lg" /></div>
+                    <div className="hidden lg:block"><Image src="/images/services/sonic-identity/sonic-identity-development.jpg" alt="Brand sonic identity development" width={800} height={600} sizes="50vw" loading="eager" className="w-full h-auto rounded-2xl shadow-lg" /></div>
                 </div>
             </div></section>
             <section className="py-20 bg-white"><div className="max-w-7xl mx-auto px-6">

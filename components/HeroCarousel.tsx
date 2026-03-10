@@ -53,7 +53,7 @@ export function HeroCarousel() {
                             className="object-cover"
                             sizes="(max-width: 768px) 100vw, 50vw"
                             priority={index === 0}
-                            loading={index === 0 ? "eager" : "lazy"}
+                            loading={index <= 2 ? "eager" : "lazy"}
                             placeholder="blur"
                             blurDataURL={getBlurPlaceholder(image.src)}
                         />

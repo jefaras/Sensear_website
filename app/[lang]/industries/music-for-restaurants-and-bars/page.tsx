@@ -58,7 +58,7 @@ export default async function RestaurantsBarsPage({ params }: { params: Promise<
             <section className="py-20 bg-white"><div className="max-w-7xl mx-auto px-6">
                 <div className="text-center mb-12"><h2 className="text-[2.7rem] md:text-[3.45rem] font-bold text-black mb-4 leading-heading">{t.what_we_do.title}</h2><p className="text-xl text-black/60 font-medium">{t.what_we_do.subtitle}</p></div>
                 <div className="grid lg:grid-cols-2 gap-12 items-center">
-                    <div className="hidden lg:block relative aspect-[3/4]"><Image src={t.what_we_do.image} alt="Cocktail glass with ice representing bar atmosphere" fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover rounded-2xl shadow-lg" /></div>
+                    <div className="hidden lg:block relative aspect-[3/4]"><Image src={t.what_we_do.image} alt="Cocktail glass with ice representing bar atmosphere" fill sizes="(max-width: 1024px) 100vw, 50vw" loading="eager" className="object-cover rounded-2xl shadow-lg" /></div>
                     <div className="space-y-8">
                         {t.what_we_do.items.map((item, index) => (
                             <div key={index}><h3 className="text-2xl font-bold text-black mb-3">{item.title}</h3><p className="text-lg text-black/70">{item.description}</p></div>
@@ -74,7 +74,7 @@ export default async function RestaurantsBarsPage({ params }: { params: Promise<
                             <li key={index} className="block"><span className="font-semibold text-2xl block mb-1 text-black">{item.title}</span><span>{item.description}</span></li>
                         ))}
                     </ul></div>
-                    <div className="hidden lg:block relative aspect-[3/4]"><Image src={t.ideal_for.image} alt="Elegant dining scene with guests enjoying atmosphere" fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover rounded-2xl shadow-lg" /></div>
+                    <div className="hidden lg:block relative aspect-[3/4]"><Image src={t.ideal_for.image} alt="Elegant dining scene with guests enjoying atmosphere" fill sizes="(max-width: 1024px) 100vw, 50vw" loading="eager" className="object-cover rounded-2xl shadow-lg" /></div>
                 </div>
             </div></section>
             <section className="py-20 bg-white"><div className="max-w-7xl mx-auto px-6">

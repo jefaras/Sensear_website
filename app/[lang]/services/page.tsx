@@ -144,6 +144,8 @@ export default async function Services({
                                     alt="Signature Playlists service for curated music experiences"
                                     width={800}
                                     height={600}
+                                    sizes="(max-width: 1024px) 100vw, 50vw"
+                                    loading="eager"
                                     className="w-full h-auto object-cover rounded-xl shadow-lg"
                                 />
                             </div>
@@ -165,7 +167,7 @@ export default async function Services({
                                     <Link href={`/${lang}/services/signature-playlists`}>
                                         <button className="group relative bg-transparent border-2 border-black text-black hover:bg-black hover:text-white px-8 py-6 text-lg font-semibold rounded-full transition-all duration-300 overflow-hidden flex items-center">
                                             <span className="relative inline-flex items-center mr-2 align-middle">
-                                                <Image src="/images/brand/sensear-logo-color.png" width={32} height={32} className="w-8 h-8 object-contain opacity-100 scale-100 group-hover:opacity-0 group-hover:scale-0 transition-all duration-300" alt="SensEar logo" />
+                                                <Image src="/images/brand/sensear-logo-color.png" width={32} height={32} sizes="32px" loading="eager" className="w-8 h-8 object-contain opacity-100 scale-100 group-hover:opacity-0 group-hover:scale-0 transition-all duration-300" alt="SensEar logo" />
                                             </span>
                                             <span className="transition-transform duration-300 group-hover:-translate-x-10 inline-block">
                                                 {content.services.playlists.cta}
@@ -198,7 +200,7 @@ export default async function Services({
                                     <Link href={`/${lang}/services/event-soundtracks`}>
                                         <button className="group relative bg-transparent border-2 border-black text-black hover:bg-black hover:text-white px-8 py-6 text-lg font-semibold rounded-full transition-all duration-300 overflow-hidden flex items-center">
                                             <span className="relative inline-flex items-center mr-2 align-middle">
-                                                <Image src="/images/brand/sensear-logo-color.png" width={32} height={32} className="w-8 h-8 object-contain opacity-100 scale-100 group-hover:opacity-0 group-hover:scale-0 transition-all duration-300" alt="SensEar logo" />
+                                                <Image src="/images/brand/sensear-logo-color.png" width={32} height={32} sizes="32px" className="w-8 h-8 object-contain opacity-100 scale-100 group-hover:opacity-0 group-hover:scale-0 transition-all duration-300" alt="SensEar logo" />
                                             </span>
                                             <span className="transition-transform duration-300 group-hover:-translate-x-10 inline-block">
                                                 {content.services.events.cta}
@@ -215,6 +217,7 @@ export default async function Services({
                                     alt="Event Soundtracks service for memorable experiences"
                                     width={800}
                                     height={1000}
+                                    sizes="(max-width: 1024px) 100vw, 50vw"
                                     className="w-full aspect-[3/4] object-cover rounded-xl shadow-lg"
                                 />
                             </div>
@@ -241,7 +244,7 @@ export default async function Services({
                             <Link href={`/${lang}/services/sonic-identity`}>
                                 <button className="group relative bg-transparent border-2 border-black text-black hover:bg-black hover:text-white px-6 py-4 text-base font-semibold rounded-full transition-all duration-300 overflow-hidden flex items-center">
                                     <span className="relative inline-flex items-center mr-2 align-middle">
-                                        <Image src="/images/brand/sensear-logo-color.png" width={28} height={28} className="w-7 h-7 object-contain opacity-100 scale-100 group-hover:opacity-0 group-hover:scale-0 transition-all duration-300" alt="SensEar logo" />
+                                        <Image src="/images/brand/sensear-logo-color.png" width={28} height={28} sizes="28px" className="w-7 h-7 object-contain opacity-100 scale-100 group-hover:opacity-0 group-hover:scale-0 transition-all duration-300" alt="SensEar logo" />
                                     </span>
                                     <span className="transition-transform duration-300 group-hover:-translate-x-9 inline-block">
                                         {content.services.strategy.cta}
@@ -269,7 +272,7 @@ export default async function Services({
                             <Link href={`/${lang}/services/audio-upgrades`}>
                                 <button className="group relative bg-transparent border-2 border-black text-black hover:bg-black hover:text-white px-6 py-4 text-base font-semibold rounded-full transition-all duration-300 overflow-hidden flex items-center">
                                     <span className="relative inline-flex items-center mr-2 align-middle">
-                                        <Image src="/images/brand/sensear-logo-color.png" width={28} height={28} className="w-7 h-7 object-contain opacity-100 scale-100 group-hover:opacity-0 group-hover:scale-0 transition-all duration-300" alt="SensEar logo" />
+                                        <Image src="/images/brand/sensear-logo-color.png" width={28} height={28} sizes="28px" className="w-7 h-7 object-contain opacity-100 scale-100 group-hover:opacity-0 group-hover:scale-0 transition-all duration-300" alt="SensEar logo" />
                                     </span>
                                     <span className="transition-transform duration-300 group-hover:-translate-x-9 inline-block">
                                         {content.services.upgrades.cta}
@@ -292,6 +295,7 @@ export default async function Services({
                                 alt="Services delivery process for music curation"
                                 width={800}
                                 height={600}
+                                sizes="(max-width: 1024px) 100vw, 50vw"
                                 className="w-full h-auto rounded-2xl shadow-lg"
                             />
                         </div>

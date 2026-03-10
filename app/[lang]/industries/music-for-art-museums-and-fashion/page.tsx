@@ -63,7 +63,7 @@ export default async function ArtMuseumsFashionPage({ params }: { params: Promis
                             <div key={index}><h3 className="text-2xl font-bold text-black mb-3">{item.title}</h3><p className="text-lg text-black/70">{item.description}</p></div>
                         ))}
                     </div>
-                    <div className="hidden lg:block relative aspect-[3/4]"><Image src={t.what_we_do.image} alt="Fashion runway show" fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover rounded-2xl shadow-lg" /></div>
+                    <div className="hidden lg:block relative aspect-[3/4]"><Image src={t.what_we_do.image} alt="Fashion runway show" fill sizes="(max-width: 1024px) 100vw, 50vw" loading="eager" className="object-cover rounded-2xl shadow-lg" /></div>
                 </div>
             </div></section>
             <section className="py-20" style={{ backgroundImage: "url('/images/backgrounds/background-texture-warm-silver.jpg')", backgroundSize: 'cover', backgroundPosition: 'center' }}><div className="max-w-7xl mx-auto px-6">
@@ -74,7 +74,7 @@ export default async function ArtMuseumsFashionPage({ params }: { params: Promis
                             <div key={index}><h3 className="text-2xl font-bold text-black mb-3">{item.title}</h3><p className="text-lg text-black/70">{item.description}</p></div>
                         ))}
                     </div>
-                    <div className="hidden lg:block relative aspect-[3/4]"><Image src={t.ideal_for.image} alt="Fashion portrait" fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover rounded-2xl shadow-lg" /></div>
+                    <div className="hidden lg:block relative aspect-[3/4]"><Image src={t.ideal_for.image} alt="Fashion portrait" fill sizes="(max-width: 1024px) 100vw, 50vw" loading="eager" className="object-cover rounded-2xl shadow-lg" /></div>
                 </div>
             </div></section>
             <section className="py-20 bg-black"><div className="max-w-7xl mx-auto px-6">

@@ -5,6 +5,7 @@ import { submitContactForm } from "@/app/actions";
 import { CheckCircle, ArrowRight } from "lucide-react";
 import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 import TransparentSelect from "./TransparentSelect";
+import Image from "next/image";
 
 interface ContactFormLabels {
     name: string;
@@ -344,11 +345,12 @@ export function ContactForm({ labels, variant = "default" }: ContactFormProps) {
                 ) : (
                     <>
                         <span className="relative inline-flex items-center mr-2 align-middle">
-                            <img
-                                src={isVinyl ? "/images/brand/sensear-logo-color.png" : "/images/brand/sensear-logo-color.png"}
+                            <Image
+                                src="/images/brand/sensear-logo-color.png"
                                 className="w-8 h-8 object-contain opacity-100 scale-100 group-hover:opacity-0 group-hover:scale-0 transition-all duration-300"
                                 width={32}
                                 height={32}
+                                sizes="32px"
                                 alt="SensEar logo"
                             />
                         </span>

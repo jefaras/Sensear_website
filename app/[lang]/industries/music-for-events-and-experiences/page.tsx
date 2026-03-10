@@ -117,8 +117,7 @@ export default async function EventsExperiencesPage({
                                 src={t.what_we_do.image}
                                 alt="Event experience with guests dancing"
                                 fill
-                                sizes="(max-width: 1024px) 100vw, 50vw"
-                                className="object-cover rounded-2xl shadow-lg"
+                                sizes="(max-width: 1024px) 100vw, 50vw" loading="eager" className="object-cover rounded-2xl shadow-lg"
                             />
                         </div>
                     </div>
@@ -151,8 +150,7 @@ export default async function EventsExperiencesPage({
                                 src={t.ideal_for.image}
                                 alt="Event sound technical challenge"
                                 fill
-                                sizes="(max-width: 1024px) 100vw, 50vw"
-                                className="object-cover rounded-2xl shadow-lg"
+                                sizes="(max-width: 1024px) 100vw, 50vw" loading="eager" className="object-cover rounded-2xl shadow-lg"
                             />
                         </div>
                     </div>

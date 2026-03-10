@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<diff version="0.0.38">
+ <baseline id="f23d9184-70e6-4789-b999-0f1fe55b2fb8" url="https://sensear.music" date="2026-03-09T21:38:58.731Z" pages="58" score="69" grade="D"/>
+ <current id="af08ed3d-fc30-4a62-8129-d2565a2148e9" url="https://sensear.music" date="2026-03-09T22:58:15.430Z" pages="58" score="69" grade="D"/>
+ <summary added="6" removed="0" changed="0" regressions="0" improvements="0"/>
+ <added>
+  <issue fp="6d03659d9718" rule="links/broken-external-links" severity="warning" status="warn" check="broken-external-links" category="links" weight="5">
+   6 broken external link(s): 2 with 404, 4 failed
+   Target: item https://eclass-demo.aueb.gr/modules/document/file.php/MISC418/Lecture5_Reading_Servicescapes.pdf (https://eclass-demo.aueb.gr/modules/document/file.php/MISC418/Lecture5_Reading_Servicescapes.pdf (Error: ERR_TLS_CERT_ALTNAME_INVALID fetching &quot;https://eclass-demo.aueb.gr/modules/document/file.php/MISC418/Lecture5_Reading_Servicescapes.pdf&quot;. For more information, pass `verbose: true` in the second argument to fetch()))
+   Meta: error: ERR_TLS_CERT_ALTNAME_INVALID fetching &quot;https://eclass-demo.aueb.gr/modules/document/file.php/MISC418/Lecture5_Reading_Servicescapes.pdf&quot;. For more information, pass `verbose: true` in the second argument to fetch(), status: null, totalBroken: 6, totalChecked: 68
+  </issue>
+  <issue fp="29e7a4a45d89" rule="links/broken-external-links" severity="warning" status="warn" check="broken-external-links" category="links" weight="5">
+   6 broken external link(s): 2 with 404, 4 failed
+   Target: item https://idj.journals.ekb.eg/article_340785_a40c2229d0f8979f8c85180171b7e998.pdf (https://idj.journals.ekb.eg/article_340785_a40c2229d0f8979f8c85180171b7e998.pdf (Error: The socket connection was closed unexpectedly. For more information, pass `verbose: true` in the second argument to fetch()))
+   Meta: error: The socket connection was closed unexpectedly. For more information, pass `verbose: true` in the second argument to fetch(), status: null, totalBroken: 6, totalChecked: 68
+  </issue>
+  <issue fp="0e8cb40653b4" rule="links/broken-external-links" severity="warning" status="warn" check="broken-external-links" category="links" weight="5">
+   6 broken external link(s): 2 with 404, 4 failed
+   Target: item https://journal.ipb.ac.id/index.php/jcs/article/view/57484 (https://journal.ipb.ac.id/index.php/jcs/article/view/57484 (Error: timeout))
+   Meta: error: timeout, status: null, totalBroken: 6, totalChecked: 68
+  </issue>
+  <issue fp="b64f129e1e1c" rule="links/broken-external-links" severity="warning" status="warn" check="broken-external-links" category="links" weight="5">
+   6 broken external link(s): 2 with 404, 4 failed
+   Target: item https://journals.itb.ac.id/index.php/ajht/article/view/25753/7113 (https://journals.itb.ac.id/index.php/ajht/article/view/25753/7113 (Error: timeout))
+   Meta: error: timeout, status: null, totalBroken: 6, totalChecked: 68
+  </issue>
+  <issue fp="1d97a1af421a" rule="links/broken-external-links" severity="warning" status="warn" check="broken-external-links" category="links" weight="5">
+   6 broken external link(s): 2 with 404, 4 failed
+   Target: item https://open.spotify.com/playlist/18e07cRHXIDILrMizuN3Ye (https://open.spotify.com/playlist/18e07cRHXIDILrMizuN3Ye (404))
+   Meta: error: null, status: 404, totalBroken: 6, totalChecked: 68
+  </issue>
+  <issue fp="2f69da61bb4b" rule="links/broken-external-links" severity="warning" status="warn" check="broken-external-links" category="links" weight="5">
+   6 broken external link(s): 2 with 404, 4 failed
+   Target: item https://www.ioa.org.uk/system/files/proceedings/kp_roy_sound_masking_system_design_and_speech_privacy.pdf (https://www.ioa.org.uk/system/files/proceedings/kp_roy_sound_masking_system_design_and_speech_privacy.pdf (404))
+   Meta: error: null, status: 404, totalBroken: 6, totalChecked: 68
+  </issue>
+ </added>
+ <removed>
+ </removed>
+ <changed>
+ </changed>
+</diff>

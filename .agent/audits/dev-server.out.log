@@ -14,3 +14,4 @@
 ✓ Starting...
 Creating turbopack project { dir: 'C:\\Users\\jef\\Documents\\Antigravity', testMode: true }
 ✓ Ready in 1994ms
+ GET /el/contact 200 in 2.8s (compile: 1255ms, proxy.ts: 19ms, generate-params: 684ms, render: 1506ms)

@@ -104,7 +104,7 @@ export default async function Blog({
                 <div className="pt-16 mb-16">
                     <h3 className="text-2xl font-bold text-black mb-10">{content.recent.title}</h3>
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {gridArticles.map((article) => (
+                        {gridArticles.map((article, index) => (
                             <Link
                                 key={article.link}
                                 href={`/${lang}/blog/${article.link}`}
@@ -116,6 +116,7 @@ export default async function Blog({
                                         alt={article.alt || article.title}
                                         fill
                                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                        loading={index < 2 ? "eager" : "lazy"}
                                         className="object-cover transition-transform duration-500 group-hover:scale-105"
                                     />
                                 </div>

@@ -173,6 +173,7 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: Lo
                                 alt={lang === 'el' ? 'Η πορεία μας' : 'Our journey'}
                                 width={800}
                                 height={800}
+                                loading="eager"
                                 className="w-full h-auto rounded-2xl shadow-lg"
                             />
                         </div>
@@ -231,6 +232,7 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: Lo
                                         alt={lang === 'el' ? 'Γιώργος Φαμελιάρης - Συνιδρυτής και Επικεφαλής Μουσικής Επιμέλειας SensEar' : 'George Fameliaris - SensEar Co-Founder and Chief Music Curator'}
                                         width={600}
                                         height={600}
+                                        loading="eager"
                                         className="w-full h-auto rounded-2xl shadow-lg"
                                     />
                                 </div>

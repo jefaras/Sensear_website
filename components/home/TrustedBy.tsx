@@ -44,7 +44,7 @@ export default function TrustedBy({ lang, title }: TrustedByProps) {
                                     <div key={i} className="flex gap-12">
                                         <div className="flex-shrink-0 text-center w-[180px]">
                                             <div className="w-28 h-28 mx-auto mb-4 flex items-center justify-center bg-white rounded-lg p-3 border border-gray-200 shadow-sm">
-                                                <Image src="/images/homepage/clients/client-klouvi-bar-athens.jpg" alt="Klouvi Bar logo" width={100} height={100} loading="lazy" className="max-w-full max-h-full object-contain" />
+                                                <Image src="/images/homepage/clients/client-klouvi-bar-athens.jpg" alt="Klouvi Bar logo" width={100} height={100} sizes="100px" loading="lazy" className="max-w-full max-h-full object-contain" />
                                             </div>
                                             <p className="text-lg font-semibold text-black tracking-widest uppercase">Klouvi Bar</p>
                                             <p className="text-sm text-black/60 mt-1">Athens</p>
@@ -52,7 +52,7 @@ export default function TrustedBy({ lang, title }: TrustedByProps) {
 
                                         <div className="flex-shrink-0 text-center w-[180px]">
                                             <div className="w-28 h-28 mx-auto mb-4 flex items-center justify-center bg-white rounded-lg p-3 border border-gray-200 shadow-sm">
-                                                <Image src="/images/homepage/clients/client-blue-bamboo-athens-serifos.jpg" alt="Blue Bamboo logo" width={100} height={100} loading="lazy" className="max-w-full max-h-full object-contain" />
+                                                <Image src="/images/homepage/clients/client-blue-bamboo-athens-serifos.jpg" alt="Blue Bamboo logo" width={100} height={100} sizes="100px" loading="lazy" className="max-w-full max-h-full object-contain" />
                                             </div>
                                             <p className="text-lg font-semibold text-black tracking-widest uppercase">Blue Bamboo</p>
                                             <p className="text-sm text-black/60 mt-1">Athens-Serifos</p>
@@ -60,7 +60,7 @@ export default function TrustedBy({ lang, title }: TrustedByProps) {
 
                                         <div className="flex-shrink-0 text-center w-[180px]">
                                             <div className="w-28 h-28 mx-auto mb-4 flex items-center justify-center bg-white rounded-lg p-3 border border-gray-200 shadow-sm">
-                                                <Image src="/images/homepage/clients/client-beach-house-antiparos.jpg" alt="Beach House logo" width={100} height={100} loading="lazy" className="max-w-full max-h-full object-contain" />
+                                                <Image src="/images/homepage/clients/client-beach-house-antiparos.jpg" alt="Beach House logo" width={100} height={100} sizes="100px" loading="lazy" className="max-w-full max-h-full object-contain" />
                                             </div>
                                             <p className="text-lg font-semibold text-black tracking-widest uppercase">Beach House</p>
                                             <p className="text-sm text-black/60 mt-1">Antiparos</p>
@@ -68,7 +68,7 @@ export default function TrustedBy({ lang, title }: TrustedByProps) {
 
                                         <div className="flex-shrink-0 text-center w-[180px]">
                                             <div className="w-28 h-28 mx-auto mb-4 flex items-center justify-center bg-white rounded-lg p-3 border border-gray-200 shadow-sm">
-                                                <Image src="/images/homepage/clients/client-pelicanos-sifnos.jpg" alt="Pelicanos logo" width={100} height={100} loading="lazy" className="max-w-full max-h-full object-contain" />
+                                                <Image src="/images/homepage/clients/client-pelicanos-sifnos.jpg" alt="Pelicanos logo" width={100} height={100} sizes="100px" loading="lazy" className="max-w-full max-h-full object-contain" />
                                             </div>
                                             <p className="text-lg font-semibold text-black tracking-widest uppercase">Pelicanos</p>
                                             <p className="text-sm text-black/60 mt-1">Sifnos</p>
@@ -76,7 +76,7 @@ export default function TrustedBy({ lang, title }: TrustedByProps) {
 
                                         <div className="flex-shrink-0 text-center w-[180px]">
                                             <div className="w-28 h-28 mx-auto mb-4 flex items-center justify-center bg-white rounded-lg p-3 border border-gray-200 shadow-sm">
-                                                <Image src="/images/homepage/clients/client-yam-antiparos.png" alt="Yam logo" width={100} height={100} loading="lazy" className="max-w-full max-h-full object-contain" />
+                                                <Image src="/images/homepage/clients/client-yam-antiparos.png" alt="Yam logo" width={100} height={100} sizes="100px" loading="lazy" className="max-w-full max-h-full object-contain" />
                                             </div>
                                             <p className="text-lg font-semibold text-black tracking-widest uppercase">Yam</p>
                                             <p className="text-sm text-black/60 mt-1">Antiparos</p>

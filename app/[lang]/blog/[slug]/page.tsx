@@ -7,6 +7,7 @@ import { ArrowLeft } from "lucide-react";
 import { notFound } from "next/navigation";
 import { ArticleJsonLd } from "@/components/JsonLd";
 import { headers } from "next/headers";
+import Image from "next/image";
 
 const BLOG_PUBLISHED_DATES: Record<string, string> = {
     "how-top-hospitality-brands-design-sound": "2025-01-20",
@@ -137,11 +138,13 @@ export default async function BlogPost({
                         {/* Hero Image */}
                         <div className="lg:col-span-5 relative group animate-in fade-in zoom-in-95 duration-1000">
                             <div className="aspect-[3/4] rounded-[2.5rem] overflow-hidden shadow-[0_40px_80px_-15px_rgba(0,0,0,0.15)] bg-white border border-white/20">
-                                <img
+                                <Image
                                     src={article.image || "/images/blog/blog-faq-default.jpg"}
                                     alt={article.alt || article.title}
                                     width={900}
                                     height={1200}
+                                    sizes="(max-width: 1024px) 100vw, 40vw"
+                                    priority
                                     className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
                                 />
                             </div>
@@ -192,11 +195,12 @@ export default async function BlogPost({
                                                 return (
                                                     <figure key={idx} className="my-20 -mx-10 md:-mx-20">
                                                         <div className="aspect-video w-full bg-gray-50 overflow-hidden md:rounded-2xl shadow-lg">
-                                                            <img
+                                                            <Image
                                                                 src={section.src}
                                                                 alt={section.alt || ""}
                                                                 width={1600}
                                                                 height={900}
+                                                                sizes="(max-width: 1024px) 100vw, 80vw"
                                                                 className="w-full h-full object-cover"
                                                             />
                                                         </div>

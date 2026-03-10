@@ -33,6 +33,7 @@ export function Footer({ lang, dict }: { lang: Locale, dict: any }) {
                                 alt="SensEar"
                                 width={64}
                                 height={64}
+                                sizes="64px"
                                 className="w-16 h-16 object-contain group-hover:scale-110 transition-transform"
                             />
                             <div>
@@ -63,6 +64,7 @@ export function Footer({ lang, dict }: { lang: Locale, dict: any }) {
                                     alt="hello@sensear.music"
                                     width={200}
                                     height={20}
+                                    sizes="200px"
                                     className="h-5 w-auto"
                                 />
                             </div>
@@ -73,6 +75,7 @@ export function Footer({ lang, dict }: { lang: Locale, dict: any }) {
                                     alt="+30 6976994212"
                                     width={200}
                                     height={20}
+                                    sizes="200px"
                                     className="h-5 w-auto"
                                 />
                             </div>

@@ -1,0 +1,165 @@
+⨯ TypeError: dictionaries[locale] is not a function
+    at getDictionary (lib\dictionary.ts:9:76)
+    at Home (app\[lang]\page.tsx:86:37)
+   7 | }
+   8 |
+>  9 | export const getDictionary = async (locale: Locale) => dictionaries[locale]()
+     |                                                                            ^
+  10 | {
+  digest: '2405502409'
+}
+⨯ TypeError: dictionaries[locale] is not a function
+    at getDictionary (lib\dictionary.ts:9:76)
+    at Home (app\[lang]\page.tsx:86:37)
+   7 | }
+   8 |
+>  9 | export const getDictionary = async (locale: Locale) => dictionaries[locale]()
+     |                                                                            ^
+  10 | {
+  digest: '2405502409'
+}
+⨯ TypeError: dictionaries[locale] is not a function
+    at getDictionary (lib\dictionary.ts:9:76)
+    at Home (app\[lang]\page.tsx:86:37)
+   7 | }
+   8 |
+>  9 | export const getDictionary = async (locale: Locale) => dictionaries[locale]()
+     |                                                                            ^
+  10 | {
+  digest: '2405502409'
+}
+⨯ TypeError: dictionaries[locale] is not a function
+    at getDictionary (lib\dictionary.ts:9:76)
+    at RootLayout (app\[lang]\layout.tsx:126:37)
+   7 | }
+   8 |
+>  9 | export const getDictionary = async (locale: Locale) => dictionaries[locale]()
+     |                                                                            ^
+  10 | {
+  digest: '3091665987'
+}
+⨯ TypeError: dictionaries[locale] is not a function
+    at getDictionary (lib\dictionary.ts:9:76)
+    at RootLayout (app\[lang]\layout.tsx:126:37)
+   7 | }
+   8 |
+>  9 | export const getDictionary = async (locale: Locale) => dictionaries[locale]()
+     |                                                                            ^
+  10 | {
+  digest: '3091665987'
+}
+⨯ TypeError: dictionaries[locale] is not a function
+    at getDictionary (lib\dictionary.ts:9:76)
+    at Home (app\[lang]\page.tsx:86:37)
+   7 | }
+   8 |
+>  9 | export const getDictionary = async (locale: Locale) => dictionaries[locale]()
+     |                                                                            ^
+  10 | {
+  digest: '2405502409'
+}
+⨯ TypeError: dictionaries[locale] is not a function
+    at getDictionary (lib\dictionary.ts:9:76)
+    at RootLayout (app\[lang]\layout.tsx:126:37)
+   7 | }
+   8 |
+>  9 | export const getDictionary = async (locale: Locale) => dictionaries[locale]()
+     |                                                                            ^
+  10 | {
+  digest: '3091665987'
+}
+⨯ TypeError: dictionaries[locale] is not a function
+    at getDictionary (lib\dictionary.ts:9:76)
+    at RootLayout (app\[lang]\layout.tsx:126:37)
+   7 | }
+   8 |
+>  9 | export const getDictionary = async (locale: Locale) => dictionaries[locale]()
+     |                                                                            ^
+  10 | {
+  digest: '3091665987'
+}
+⨯ TypeError: dictionaries[locale] is not a function
+    at getDictionary (lib\dictionary.ts:9:76)
+    at Home (app\[lang]\page.tsx:86:37)
+   7 | }
+   8 |
+>  9 | export const getDictionary = async (locale: Locale) => dictionaries[locale]()
+     |                                                                            ^
+  10 | {
+  digest: '2405502409'
+}
+⨯ TypeError: dictionaries[locale] is not a function
+    at getDictionary (lib\dictionary.ts:9:76)
+    at RootLayout (app\[lang]\layout.tsx:126:37)
+   7 | }
+   8 |
+>  9 | export const getDictionary = async (locale: Locale) => dictionaries[locale]()
+     |                                                                            ^
+  10 | {
+  digest: '3091665987'
+}
+⨯ TypeError: dictionaries[locale] is not a function
+    at getDictionary (lib\dictionary.ts:9:76)
+    at Home (app\[lang]\page.tsx:86:37)
+   7 | }
+   8 |
+>  9 | export const getDictionary = async (locale: Locale) => dictionaries[locale]()
+     |                                                                            ^
+  10 | {
+  digest: '2405502409'
+}
+⨯ TypeError: dictionaries[locale] is not a function
+    at getDictionary (lib\dictionary.ts:9:76)
+    at Home (app\[lang]\page.tsx:86:37)
+   7 | }
+   8 |
+>  9 | export const getDictionary = async (locale: Locale) => dictionaries[locale]()
+     |                                                                            ^
+  10 | {
+  digest: '2405502409'
+}
+⨯ TypeError: dictionaries[locale] is not a function
+    at getDictionary (lib\dictionary.ts:9:76)
+    at RootLayout (app\[lang]\layout.tsx:126:37)
+   7 | }
+   8 |
+>  9 | export const getDictionary = async (locale: Locale) => dictionaries[locale]()
+     |                                                                            ^
+  10 | {
+  digest: '3091665987'
+}
+⨯ TypeError: dictionaries[locale] is not a function
+    at getDictionary (lib\dictionary.ts:9:76)
+    at RootLayout (app\[lang]\layout.tsx:126:37)
+   7 | }
+   8 |
+>  9 | export const getDictionary = async (locale: Locale) => dictionaries[locale]()
+     |                                                                            ^
+  10 | {
+  digest: '3091665987'
+}
+⨯ The requested resource isn't a valid image for /images/homepage/sensear-signature-playlist-service.jpg received null
+⨯ The requested resource isn't a valid image for /images/homepage/vinyl-records-music-curation-optimized.jpg received null
+⨯ The requested resource isn't a valid image for /images/homepage/clients/client-klouvi-bar-athens.jpg received null
+⨯ The requested resource isn't a valid image for /images/homepage/clients/client-blue-bamboo-athens-serifos.jpg received null
+⨯ The requested resource isn't a valid image for /images/homepage/clients/client-beach-house-antiparos.jpg received null
+⨯ The requested resource isn't a valid image for /images/homepage/clients/client-pelicanos-sifnos.jpg received null
+⨯ The requested resource isn't a valid image for /images/homepage/clients/client-yam-antiparos.png received null
+⨯ The requested resource isn't a valid image for /images/brand/sensear-logo-white.png received null
+⨯ The requested resource isn't a valid image for /images/brand/contact-email.png received null
+⨯ The requested resource isn't a valid image for /images/brand/contact-phone.png received null
+⨯ The requested resource isn't a valid image for /images/services/signature-playlists/signature-playlists-curation.jpg received null
+⨯ The requested resource isn't a valid image for /images/services/signature-playlists/signature-playlists-hotel-room.jpg received null
+⨯ The requested resource isn't a valid image for /images/services/signature-playlists/signature-playlists-vinyl-collection.jpg received null
+⨯ The requested resource isn't a valid image for /images/services/service-signature-playlists.jpg received null
+⨯ The requested resource isn't a valid image for /images/services/service-event-soundtracks.jpg received null
+⨯ The requested resource isn't a valid image for /images/services/services-delivery-process.jpg received null
+⨯ The requested resource isn't a valid image for /images/industries/industry-restaurants-bars.jpg received null
+⨯ The requested resource isn't a valid image for /images/industries/industry-hotels-resorts.jpg received null
+⨯ The requested resource isn't a valid image for /images/industries/industry-retail-stores.jpg received null
+⨯ The requested resource isn't a valid image for /images/industries/industry-wellness-gyms.jpg received null
+⨯ The requested resource isn't a valid image for /images/industries/industry-events-experiences.jpg received null
+⨯ The requested resource isn't a valid image for /images/industries/industry-art-museums-fashion.jpg received null
+⨯ The requested resource isn't a valid image for /images/industries/industries-connected-worlds.png received null
+⨯ The requested resource isn't a valid image for /images/contact/vinyl-record-contact-form-bg.png received null
+⨯ The requested resource isn't a valid image for /images/blog/blog-faq-default.jpg received null

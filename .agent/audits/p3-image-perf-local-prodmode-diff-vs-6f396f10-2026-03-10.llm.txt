@@ -1,0 +1,1936 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<diff version="0.0.38">
+ <baseline id="6f396f10-9bfe-45c9-bf45-ea49a433d994" url="http://127.0.0.1:3000" date="2026-03-09T20:32:20.694Z" pages="58" score="62" grade="D"/>
+ <current id="a0da4a54-5263-4420-a867-1017d637d9a1" url="http://127.0.0.1:3000" date="2026-03-09T23:45:15.171Z" pages="58" score="58" grade="F"/>
+ <summary added="28" removed="2" changed="120" regressions="0" improvements="0"/>
+ <added>
+  <issue fp="f9907058e65d" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   24 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: 31M3io******tcH3 (Found in html (http://127.0.0.1:3000/en/industries))
+  </issue>
+  <issue fp="797d893dabc3" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   24 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: 50kZ6z******uRHe (Found in html (http://127.0.0.1:3000/el/blog/what-exactly-does-music-curator-do))
+  </issue>
+  <issue fp="21b2ef26e860" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   24 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: 6zCEAg******FkiD (Found in html (http://127.0.0.1:3000/en/industries/music-for-hotels-and-resorts))
+  </issue>
+  <issue fp="6ec8fd57058f" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   24 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: ABHSiF******3vYu (Found in html (http://127.0.0.1:3000/el/blog/service-environment-shapes-wait-time))
+  </issue>
+  <issue fp="0378b1afe08a" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   24 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: ESEGaL******1zZX (Found in html (http://127.0.0.1:3000/el/privacy))
+  </issue>
+  <issue fp="d416bd43b936" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   24 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: GBqoOw******E0js (Found in html (http://127.0.0.1:3000/el/blog/brand-music-converts-browsers-buyers))
+  </issue>
+  <issue fp="fd25c6028e0d" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   24 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: gh8wSQ******0XBF (Found in html (http://127.0.0.1:3000/en/blog))
+  </issue>
+  <issue fp="cc41675391fe" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   24 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: HO3WnR******FYIm (Found in html (http://127.0.0.1:3000/el/industries/music-for-events-and-experiences))
+  </issue>
+  <issue fp="a915474b48fc" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   24 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: iq2bzu******lB6s (Found in html (http://127.0.0.1:3000/en/faq))
+  </issue>
+  <issue fp="cb8a970a54ed" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   24 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: J0Wr8z******7XL4 (Found in html (http://127.0.0.1:3000/en/services/sonic-identity))
+  </issue>
+  <issue fp="1e5948532b6d" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   24 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: KBX39S******HE4C (Found in html (http://127.0.0.1:3000/el/industries))
+  </issue>
+  <issue fp="8bc71ebebbbb" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   24 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: LHvExd******4u5n (Found in html (http://127.0.0.1:3000/el/case-studies))
+  </issue>
+  <issue fp="ea9813c2d85d" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   24 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: MBc5XS******1Xtp (Found in html (http://127.0.0.1:3000/en/contact))
+  </issue>
+  <issue fp="da3b0eb7b987" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   24 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: n07pbf******DkEh (Found in html (http://127.0.0.1:3000/en/blog/building-brand-people-can-hear))
+  </issue>
+  <issue fp="749de35f1d3b" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   24 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: n5Xf0H******PDLL (Found in html (http://127.0.0.1:3000/en/privacy))
+  </issue>
+  <issue fp="7e95a1309909" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   24 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: N974KC******YNEj (Found in html (http://127.0.0.1:3000/el/blog/building-brand-people-can-hear))
+  </issue>
+  <issue fp="e4ef55de82bf" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   24 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: ssn1nh******oMDI (Found in html (http://127.0.0.1:3000/en/case-studies))
+  </issue>
+  <issue fp="c5b175e74d07" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   24 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: stg1Up******h7NE (Found in html (http://127.0.0.1:3000/en/services/event-soundtracks))
+  </issue>
+  <issue fp="95ae9145a4e9" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   24 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: ul0Kr3******CRWW (Found in html (http://127.0.0.1:3000/el/blog))
+  </issue>
+  <issue fp="ac959d70eac2" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   24 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: vbdj5u******uhBm (Found in html (http://127.0.0.1:3000/en/blog/service-environment-shapes-wait-time))
+  </issue>
+  <issue fp="689c1c11f4de" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   24 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: VIV2h7******bdHz (Found in html (http://127.0.0.1:3000/el/services/audio-upgrades))
+  </issue>
+  <issue fp="96b0bdb3e218" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   24 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: X30I6v******GQNn (Found in html (http://127.0.0.1:3000/en/blog/background-music-shapes-customer-behavior))
+  </issue>
+  <issue fp="1e9cb2b96a87" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   24 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: XOKPDg******lSlg (Found in html (http://127.0.0.1:3000/el/blog/music-curation-cycle-venues))
+  </issue>
+  <issue fp="f4935a4be25a" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   24 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: y6IUdy******mTCX (Found in html (http://127.0.0.1:3000/en/services))
+  </issue>
+  <issue fp="b20ccb67e1d1" rule="images/image-file-size" severity="error" status="warn" check="image-file-size-warn" category="images" weight="7">
+   4 image(s) exceed 200.0 KB
+   Target: item http://127.0.0.1:3000/_next/image
+   Sources (2): http://127.0.0.1:3000/en/industries, http://127.0.0.1:3000/el/industries
+   Meta: contentType: image/png, size: 246.2 KB, sizeBytes: 252105, status: 200, thresholdBytes: 204800, total: 4
+  </issue>
+  <issue fp="25598baeb600" rule="perf/js-file-size" severity="error" status="warn" check="js-file-size-warn" category="perf" weight="7">
+   1 JS file(s) exceed 250.0 KB
+   Target: item http://127.0.0.1:3000/_next/static/chunks/vendors-7c9e56b05284c79d.js
+   Sources (58): http://127.0.0.1:3000/en, http://127.0.0.1:3000/en/services, http://127.0.0.1:3000/el, http://127.0.0.1:3000/en/case-studies, http://127.0.0.1:3000/en/industries, http://127.0.0.1:3000/en/blog, http://127.0.0.1:3000/en/contact, http://127.0.0.1:3000/en/about, http://127.0.0.1:3000/en/sitemap-page, http://127.0.0.1:3000/en/faq, http://127.0.0.1:3000/en/privacy, http://127.0.0.1:3000/en/terms, http://127.0.0.1:3000/en/services/signature-playlists, http://127.0.0.1:3000/en/services/sonic-identity, http://127.0.0.1:3000/en/services/event-soundtracks, http://127.0.0.1:3000/en/services/audio-upgrades, http://127.0.0.1:3000/en/industries/music-for-hotels-and-resorts, http://127.0.0.1:3000/en/industries/music-for-restaurants-and-bars, http://127.0.0.1:3000/en/industries/music-for-retail-stores, http://127.0.0.1:3000/en/industries/music-for-events-and-experiences, http://127.0.0.1:3000/en/industries/music-for-wellness-and-gyms, http://127.0.0.1:3000/en/blog/three-reasons-make-music-hospitality, http://127.0.0.1:3000/en/industries/music-for-art-museums-and-fashion, http://127.0.0.1:3000/en/blog/brand-music-converts-browsers-buyers, http://127.0.0.1:3000/en/blog/what-exactly-does-music-curator-do, http://127.0.0.1:3000/el/services, http://127.0.0.1:3000/el/case-studies, http://127.0.0.1:3000/el/industries, http://127.0.0.1:3000/el/about, http://127.0.0.1:3000/el/blog, http://127.0.0.1:3000/el/contact, http://127.0.0.1:3000/el/blog/how-top-hospitality-brands-design-sound, http://127.0.0.1:3000/el/blog/music-curation-cycle-venues, http://127.0.0.1:3000/el/blog/building-brand-people-can-hear, http://127.0.0.1:3000/el/blog/background-music-shapes-customer-behavior, http://127.0.0.1:3000/el/blog/service-environment-shapes-wait-time, http://127.0.0.1:3000/el/faq, http://127.0.0.1:3000/el/sitemap-page, http://127.0.0.1:3000/el/privacy, http://127.0.0.1:3000/el/terms, http://127.0.0.1:3000/el/services/signature-playlists, http://127.0.0.1:3000/el/services/event-soundtracks, http://127.0.0.1:3000/el/services/sonic-identity, http://127.0.0.1:3000/el/industries/music-for-hotels-and-resorts, http://127.0.0.1:3000/el/services/audio-upgrades, http://127.0.0.1:3000/el/industries/music-for-restaurants-and-bars, http://127.0.0.1:3000/el/industries/music-for-events-and-experiences, http://127.0.0.1:3000/el/industries/music-for-retail-stores, http://127.0.0.1:3000/el/industries/music-for-wellness-and-gyms, http://127.0.0.1:3000/el/industries/music-for-art-museums-and-fashion, http://127.0.0.1:3000/el/blog/three-reasons-make-music-hospitality, http://127.0.0.1:3000/el/blog/brand-music-converts-browsers-buyers, http://127.0.0.1:3000/el/blog/what-exactly-does-music-curator-do, http://127.0.0.1:3000/en/blog/how-top-hospitality-brands-design-sound, http://127.0.0.1:3000/en/blog/music-curation-cycle-venues, http://127.0.0.1:3000/en/blog/building-brand-people-can-hear, http://127.0.0.1:3000/en/blog/service-environment-shapes-wait-time, http://127.0.0.1:3000/en/blog/background-music-shapes-customer-behavior
+   Meta: contentType: application/javascript; charset=UTF-8, size: 578.2 KB, sizeBytes: 592091, status: 200, thresholdBytes: 256000, total: 1
+  </issue>
+  <issue fp="176b33166e3a" rule="perf/total-byte-weight" severity="warning" status="fail" check="total-byte-weight" category="perf" weight="6">
+   Total tracked resources: 7820KB (very heavy)
+   Target: check total-byte-weight
+   Meta: css: 228KB, cssBreakdown: inline: 144KB, external: 84KB, cssFiles: 2, imageFiles: 92, images: 6867KB, js: 725KB, jsFiles: 10, pagesAnalyzed: 58
+  </issue>
+  <issue fp="13106654dc19" rule="perf/unminified-js" severity="warning" status="warn" check="unminified-js" category="perf" weight="5">
+   1 JavaScript file(s) appear unminified
+   Target: item vendors-7c9e56b05284c79d.js (578.2KB, ~551.5KB savings)
+   Meta: reason: 6 comments, totalPotentialSavingsKb: 551.5
+  </issue>
+ </added>
+ <removed>
+  <issue fp="71880b61a8d1" rule="perf/lcp-hints" severity="warning" status="warn" check="lcp-preload" category="perf" weight="7">
+   3 potential LCP image(s) without preload
+   Target: item http://127.0.0.1:3000/images/brand/sensear-logo-color.png
+  </issue>
+  <issue fp="568e2d175fad" rule="images/responsive-size" severity="warning" status="warn" check="images-possibly-oversized" category="images" weight="5">
+   3 small image(s) may be serving oversized files
+   Target: item sensear-logo-color.png (32x32, no srcset)
+  </issue>
+ </removed>
+ <changed>
+  <change type="change" fp="43978e3b5ded" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain">
+   fail→fail: 116 URL(s) point to different domain(s)
+   Before:
+    <issue fp="43978e3b5ded" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain" category="crawl" weight="8">
+     100 URL(s) point to different domain(s)
+     Target: item https://sensear.music/el
+     Meta: expectedHost: 127.0.0.1, foundHosts: sensear.music, host: sensear.music
+    </issue>
+   After:
+    <issue fp="43978e3b5ded" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain" category="crawl" weight="8">
+     116 URL(s) point to different domain(s)
+     Target: item https://sensear.music/el
+     Meta: expectedHost: 127.0.0.1, foundHosts: sensear.music, host: sensear.music
+    </issue>
+  </change>
+  <change type="change" fp="a5ed7e34491d" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain">
+   fail→fail: 116 URL(s) point to different domain(s)
+   Before:
+    <issue fp="a5ed7e34491d" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain" category="crawl" weight="8">
+     100 URL(s) point to different domain(s)
+     Target: item https://sensear.music/el/about
+     Meta: expectedHost: 127.0.0.1, foundHosts: sensear.music, host: sensear.music
+    </issue>
+   After:
+    <issue fp="a5ed7e34491d" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain" category="crawl" weight="8">
+     116 URL(s) point to different domain(s)
+     Target: item https://sensear.music/el/about
+     Meta: expectedHost: 127.0.0.1, foundHosts: sensear.music, host: sensear.music
+    </issue>
+  </change>
+  <change type="change" fp="16bbbea7cf01" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain">
+   fail→fail: 116 URL(s) point to different domain(s)
+   Before:
+    <issue fp="16bbbea7cf01" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain" category="crawl" weight="8">
+     100 URL(s) point to different domain(s)
+     Target: item https://sensear.music/el/blog
+     Meta: expectedHost: 127.0.0.1, foundHosts: sensear.music, host: sensear.music
+    </issue>
+   After:
+    <issue fp="16bbbea7cf01" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain" category="crawl" weight="8">
+     116 URL(s) point to different domain(s)
+     Target: item https://sensear.music/el/blog
+     Meta: expectedHost: 127.0.0.1, foundHosts: sensear.music, host: sensear.music
+    </issue>
+  </change>
+  <change type="change" fp="fe86da36cd26" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain">
+   fail→fail: 116 URL(s) point to different domain(s)
+   Before:
+    <issue fp="fe86da36cd26" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain" category="crawl" weight="8">
+     100 URL(s) point to different domain(s)
+     Target: item https://sensear.music/el/blog/background-music-shapes-customer-behavior
+     Meta: expectedHost: 127.0.0.1, foundHosts: sensear.music, host: sensear.music
+    </issue>
+   After:
+    <issue fp="fe86da36cd26" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain" category="crawl" weight="8">
+     116 URL(s) point to different domain(s)
+     Target: item https://sensear.music/el/blog/background-music-shapes-customer-behavior
+     Meta: expectedHost: 127.0.0.1, foundHosts: sensear.music, host: sensear.music
+    </issue>
+  </change>
+  <change type="change" fp="685da0d72e98" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain">
+   fail→fail: 116 URL(s) point to different domain(s)
+   Before:
+    <issue fp="685da0d72e98" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain" category="crawl" weight="8">
+     100 URL(s) point to different domain(s)
+     Target: item https://sensear.music/el/blog/brand-music-converts-browsers-buyers
+     Meta: expectedHost: 127.0.0.1, foundHosts: sensear.music, host: sensear.music
+    </issue>
+   After:
+    <issue fp="685da0d72e98" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain" category="crawl" weight="8">
+     116 URL(s) point to different domain(s)
+     Target: item https://sensear.music/el/blog/brand-music-converts-browsers-buyers
+     Meta: expectedHost: 127.0.0.1, foundHosts: sensear.music, host: sensear.music
+    </issue>
+  </change>
+  <change type="change" fp="ceeb2001d55e" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain">
+   fail→fail: 116 URL(s) point to different domain(s)
+   Before:
+    <issue fp="ceeb2001d55e" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain" category="crawl" weight="8">
+     100 URL(s) point to different domain(s)
+     Target: item https://sensear.music/el/blog/building-brand-people-can-hear
+     Meta: expectedHost: 127.0.0.1, foundHosts: sensear.music, host: sensear.music
+    </issue>
+   After:
+    <issue fp="ceeb2001d55e" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain" category="crawl" weight="8">
+     116 URL(s) point to different domain(s)
+     Target: item https://sensear.music/el/blog/building-brand-people-can-hear
+     Meta: expectedHost: 127.0.0.1, foundHosts: sensear.music, host: sensear.music
+    </issue>
+  </change>
+  <change type="change" fp="3e090aced596" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain">
+   fail→fail: 116 URL(s) point to different domain(s)
+   Before:
+    <issue fp="3e090aced596" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain" category="crawl" weight="8">
+     100 URL(s) point to different domain(s)
+     Target: item https://sensear.music/el/blog/how-top-hospitality-brands-design-sound
+     Meta: expectedHost: 127.0.0.1, foundHosts: sensear.music, host: sensear.music
+    </issue>
+   After:
+    <issue fp="3e090aced596" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain" category="crawl" weight="8">
+     116 URL(s) point to different domain(s)
+     Target: item https://sensear.music/el/blog/how-top-hospitality-brands-design-sound
+     Meta: expectedHost: 127.0.0.1, foundHosts: sensear.music, host: sensear.music
+    </issue>
+  </change>
+  <change type="change" fp="69e5f73662de" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain">
+   fail→fail: 116 URL(s) point to different domain(s)
+   Before:
+    <issue fp="69e5f73662de" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain" category="crawl" weight="8">
+     100 URL(s) point to different domain(s)
+     Target: item https://sensear.music/el/blog/music-curation-cycle-venues
+     Meta: expectedHost: 127.0.0.1, foundHosts: sensear.music, host: sensear.music
+    </issue>
+   After:
+    <issue fp="69e5f73662de" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain" category="crawl" weight="8">
+     116 URL(s) point to different domain(s)
+     Target: item https://sensear.music/el/blog/music-curation-cycle-venues
+     Meta: expectedHost: 127.0.0.1, foundHosts: sensear.music, host: sensear.music
+    </issue>
+  </change>
+  <change type="change" fp="e48b99ca1167" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain">
+   fail→fail: 116 URL(s) point to different domain(s)
+   Before:
+    <issue fp="e48b99ca1167" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain" category="crawl" weight="8">
+     100 URL(s) point to different domain(s)
+     Target: item https://sensear.music/el/blog/service-environment-shapes-wait-time
+     Meta: expectedHost: 127.0.0.1, foundHosts: sensear.music, host: sensear.music
+    </issue>
+   After:
+    <issue fp="e48b99ca1167" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain" category="crawl" weight="8">
+     116 URL(s) point to different domain(s)
+     Target: item https://sensear.music/el/blog/service-environment-shapes-wait-time
+     Meta: expectedHost: 127.0.0.1, foundHosts: sensear.music, host: sensear.music
+    </issue>
+  </change>
+  <change type="change" fp="802987b0ae03" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain">
+   fail→fail: 116 URL(s) point to different domain(s)
+   Before:
+    <issue fp="802987b0ae03" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain" category="crawl" weight="8">
+     100 URL(s) point to different domain(s)
+     Target: item https://sensear.music/el/blog/three-reasons-make-music-hospitality
+     Meta: expectedHost: 127.0.0.1, foundHosts: sensear.music, host: sensear.music
+    </issue>
+   After:
+    <issue fp="802987b0ae03" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain" category="crawl" weight="8">
+     116 URL(s) point to different domain(s)
+     Target: item https://sensear.music/el/blog/three-reasons-make-music-hospitality
+     Meta: expectedHost: 127.0.0.1, foundHosts: sensear.music, host: sensear.music
+    </issue>
+  </change>
+  <change type="change" fp="4b54a3a76d2c" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain">
+   fail→fail: 116 URL(s) point to different domain(s)
+   Before:
+    <issue fp="4b54a3a76d2c" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain" category="crawl" weight="8">
+     100 URL(s) point to different domain(s)
+     Target: item https://sensear.music/el/blog/what-exactly-does-music-curator-do
+     Meta: expectedHost: 127.0.0.1, foundHosts: sensear.music, host: sensear.music
+    </issue>
+   After:
+    <issue fp="4b54a3a76d2c" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain" category="crawl" weight="8">
+     116 URL(s) point to different domain(s)
+     Target: item https://sensear.music/el/blog/what-exactly-does-music-curator-do
+     Meta: expectedHost: 127.0.0.1, foundHosts: sensear.music, host: sensear.music
+    </issue>
+  </change>
+  <change type="change" fp="2c574c555e23" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain">
+   fail→fail: 116 URL(s) point to different domain(s)
+   Before:
+    <issue fp="2c574c555e23" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain" category="crawl" weight="8">
+     100 URL(s) point to different domain(s)
+     Target: item https://sensear.music/el/case-studies
+     Meta: expectedHost: 127.0.0.1, foundHosts: sensear.music, host: sensear.music
+    </issue>
+   After:
+    <issue fp="2c574c555e23" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain" category="crawl" weight="8">
+     116 URL(s) point to different domain(s)
+     Target: item https://sensear.music/el/case-studies
+     Meta: expectedHost: 127.0.0.1, foundHosts: sensear.music, host: sensear.music
+    </issue>
+  </change>
+  <change type="change" fp="db9d05d24791" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain">
+   fail→fail: 116 URL(s) point to different domain(s)
+   Before:
+    <issue fp="db9d05d24791" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain" category="crawl" weight="8">
+     100 URL(s) point to different domain(s)
+     Target: item https://sensear.music/el/contact
+     Meta: expectedHost: 127.0.0.1, foundHosts: sensear.music, host: sensear.music
+    </issue>
+   After:
+    <issue fp="db9d05d24791" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain" category="crawl" weight="8">
+     116 URL(s) point to different domain(s)
+     Target: item https://sensear.music/el/contact
+     Meta: expectedHost: 127.0.0.1, foundHosts: sensear.music, host: sensear.music
+    </issue>
+  </change>
+  <change type="change" fp="24b24c3bc019" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain">
+   fail→fail: 116 URL(s) point to different domain(s)
+   Before:
+    <issue fp="24b24c3bc019" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain" category="crawl" weight="8">
+     100 URL(s) point to different domain(s)
+     Target: item https://sensear.music/el/faq
+     Meta: expectedHost: 127.0.0.1, foundHosts: sensear.music, host: sensear.music
+    </issue>
+   After:
+    <issue fp="24b24c3bc019" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain" category="crawl" weight="8">
+     116 URL(s) point to different domain(s)
+     Target: item https://sensear.music/el/faq
+     Meta: expectedHost: 127.0.0.1, foundHosts: sensear.music, host: sensear.music
+    </issue>
+  </change>
+  <change type="change" fp="0f760ec68bbe" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain">
+   fail→fail: 116 URL(s) point to different domain(s)
+   Before:
+    <issue fp="0f760ec68bbe" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain" category="crawl" weight="8">
+     100 URL(s) point to different domain(s)
+     Target: item https://sensear.music/el/industries
+     Meta: expectedHost: 127.0.0.1, foundHosts: sensear.music, host: sensear.music
+    </issue>
+   After:
+    <issue fp="0f760ec68bbe" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain" category="crawl" weight="8">
+     116 URL(s) point to different domain(s)
+     Target: item https://sensear.music/el/industries
+     Meta: expectedHost: 127.0.0.1, foundHosts: sensear.music, host: sensear.music
+    </issue>
+  </change>
+  <change type="change" fp="6e2e813c09f0" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain">
+   fail→fail: 116 URL(s) point to different domain(s)
+   Before:
+    <issue fp="6e2e813c09f0" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain" category="crawl" weight="8">
+     100 URL(s) point to different domain(s)
+     Target: item https://sensear.music/el/industries/music-for-art-museums-and-fashion
+     Meta: expectedHost: 127.0.0.1, foundHosts: sensear.music, host: sensear.music
+    </issue>
+   After:
+    <issue fp="6e2e813c09f0" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain" category="crawl" weight="8">
+     116 URL(s) point to different domain(s)
+     Target: item https://sensear.music/el/industries/music-for-art-museums-and-fashion
+     Meta: expectedHost: 127.0.0.1, foundHosts: sensear.music, host: sensear.music
+    </issue>
+  </change>
+  <change type="change" fp="aa87a27332f5" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain">
+   fail→fail: 116 URL(s) point to different domain(s)
+   Before:
+    <issue fp="aa87a27332f5" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain" category="crawl" weight="8">
+     100 URL(s) point to different domain(s)
+     Target: item https://sensear.music/el/industries/music-for-events-and-experiences
+     Meta: expectedHost: 127.0.0.1, foundHosts: sensear.music, host: sensear.music
+    </issue>
+   After:
+    <issue fp="aa87a27332f5" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain" category="crawl" weight="8">
+     116 URL(s) point to different domain(s)
+     Target: item https://sensear.music/el/industries/music-for-events-and-experiences
+     Meta: expectedHost: 127.0.0.1, foundHosts: sensear.music, host: sensear.music
+    </issue>
+  </change>
+  <change type="change" fp="94a97bcffeba" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain">
+   fail→fail: 116 URL(s) point to different domain(s)
+   Before:
+    <issue fp="94a97bcffeba" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain" category="crawl" weight="8">
+     100 URL(s) point to different domain(s)
+     Target: item https://sensear.music/el/industries/music-for-hotels-and-resorts
+     Meta: expectedHost: 127.0.0.1, foundHosts: sensear.music, host: sensear.music
+    </issue>
+   After:
+    <issue fp="94a97bcffeba" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain" category="crawl" weight="8">
+     116 URL(s) point to different domain(s)
+     Target: item https://sensear.music/el/industries/music-for-hotels-and-resorts
+     Meta: expectedHost: 127.0.0.1, foundHosts: sensear.music, host: sensear.music
+    </issue>
+  </change>
+  <change type="change" fp="6dfba2f81809" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain">
+   fail→fail: 116 URL(s) point to different domain(s)
+   Before:
+    <issue fp="6dfba2f81809" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain" category="crawl" weight="8">
+     100 URL(s) point to different domain(s)
+     Target: item https://sensear.music/el/industries/music-for-restaurants-and-bars
+     Meta: expectedHost: 127.0.0.1, foundHosts: sensear.music, host: sensear.music
+    </issue>
+   After:
+    <issue fp="6dfba2f81809" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain" category="crawl" weight="8">
+     116 URL(s) point to different domain(s)
+     Target: item https://sensear.music/el/industries/music-for-restaurants-and-bars
+     Meta: expectedHost: 127.0.0.1, foundHosts: sensear.music, host: sensear.music
+    </issue>
+  </change>
+  <change type="change" fp="c9f51f97164d" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain">
+   fail→fail: 116 URL(s) point to different domain(s)
+   Before:
+    <issue fp="c9f51f97164d" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain" category="crawl" weight="8">
+     100 URL(s) point to different domain(s)
+     Target: item https://sensear.music/el/industries/music-for-retail-stores
+     Meta: expectedHost: 127.0.0.1, foundHosts: sensear.music, host: sensear.music
+    </issue>
+   After:
+    <issue fp="c9f51f97164d" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain" category="crawl" weight="8">
+     116 URL(s) point to different domain(s)
+     Target: item https://sensear.music/el/industries/music-for-retail-stores
+     Meta: expectedHost: 127.0.0.1, foundHosts: sensear.music, host: sensear.music
+    </issue>
+  </change>
+  <change type="change" fp="fbbd7eb6e2c3" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain">
+   fail→fail: 116 URL(s) point to different domain(s)
+   Before:
+    <issue fp="fbbd7eb6e2c3" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain" category="crawl" weight="8">
+     100 URL(s) point to different domain(s)
+     Target: item https://sensear.music/el/industries/music-for-wellness-and-gyms
+     Meta: expectedHost: 127.0.0.1, foundHosts: sensear.music, host: sensear.music
+    </issue>
+   After:
+    <issue fp="fbbd7eb6e2c3" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain" category="crawl" weight="8">
+     116 URL(s) point to different domain(s)
+     Target: item https://sensear.music/el/industries/music-for-wellness-and-gyms
+     Meta: expectedHost: 127.0.0.1, foundHosts: sensear.music, host: sensear.music
+    </issue>
+  </change>
+  <change type="change" fp="f01b921552aa" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain">
+   fail→fail: 116 URL(s) point to different domain(s)
+   Before:
+    <issue fp="f01b921552aa" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain" category="crawl" weight="8">
+     100 URL(s) point to different domain(s)
+     Target: item https://sensear.music/el/privacy
+     Meta: expectedHost: 127.0.0.1, foundHosts: sensear.music, host: sensear.music
+    </issue>
+   After:
+    <issue fp="f01b921552aa" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain" category="crawl" weight="8">
+     116 URL(s) point to different domain(s)
+     Target: item https://sensear.music/el/privacy
+     Meta: expectedHost: 127.0.0.1, foundHosts: sensear.music, host: sensear.music
+    </issue>
+  </change>
+  <change type="change" fp="f2dfdefe25fd" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain">
+   fail→fail: 116 URL(s) point to different domain(s)
+   Before:
+    <issue fp="f2dfdefe25fd" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain" category="crawl" weight="8">
+     100 URL(s) point to different domain(s)
+     Target: item https://sensear.music/el/services
+     Meta: expectedHost: 127.0.0.1, foundHosts: sensear.music, host: sensear.music
+    </issue>
+   After:
+    <issue fp="f2dfdefe25fd" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain" category="crawl" weight="8">
+     116 URL(s) point to different domain(s)
+     Target: item https://sensear.music/el/services
+     Meta: expectedHost: 127.0.0.1, foundHosts: sensear.music, host: sensear.music
+    </issue>
+  </change>
+  <change type="change" fp="0aef208dde84" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain">
+   fail→fail: 116 URL(s) point to different domain(s)
+   Before:
+    <issue fp="0aef208dde84" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain" category="crawl" weight="8">
+     100 URL(s) point to different domain(s)
+     Target: item https://sensear.music/el/services/audio-upgrades
+     Meta: expectedHost: 127.0.0.1, foundHosts: sensear.music, host: sensear.music
+    </issue>
+   After:
+    <issue fp="0aef208dde84" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain" category="crawl" weight="8">
+     116 URL(s) point to different domain(s)
+     Target: item https://sensear.music/el/services/audio-upgrades
+     Meta: expectedHost: 127.0.0.1, foundHosts: sensear.music, host: sensear.music
+    </issue>
+  </change>
+  <change type="change" fp="524e0ea51794" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain">
+   fail→fail: 116 URL(s) point to different domain(s)
+   Before:
+    <issue fp="524e0ea51794" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain" category="crawl" weight="8">
+     100 URL(s) point to different domain(s)
+     Target: item https://sensear.music/el/services/event-soundtracks
+     Meta: expectedHost: 127.0.0.1, foundHosts: sensear.music, host: sensear.music
+    </issue>
+   After:
+    <issue fp="524e0ea51794" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain" category="crawl" weight="8">
+     116 URL(s) point to different domain(s)
+     Target: item https://sensear.music/el/services/event-soundtracks
+     Meta: expectedHost: 127.0.0.1, foundHosts: sensear.music, host: sensear.music
+    </issue>
+  </change>
+  <change type="change" fp="846220bbdcc0" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain">
+   fail→fail: 116 URL(s) point to different domain(s)
+   Before:
+    <issue fp="846220bbdcc0" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain" category="crawl" weight="8">
+     100 URL(s) point to different domain(s)
+     Target: item https://sensear.music/el/services/signature-playlists
+     Meta: expectedHost: 127.0.0.1, foundHosts: sensear.music, host: sensear.music
+    </issue>
+   After:
+    <issue fp="846220bbdcc0" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain" category="crawl" weight="8">
+     116 URL(s) point to different domain(s)
+     Target: item https://sensear.music/el/services/signature-playlists
+     Meta: expectedHost: 127.0.0.1, foundHosts: sensear.music, host: sensear.music
+    </issue>
+  </change>
+  <change type="change" fp="448dc7fa0080" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain">
+   fail→fail: 116 URL(s) point to different domain(s)
+   Before:
+    <issue fp="448dc7fa0080" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain" category="crawl" weight="8">
+     100 URL(s) point to different domain(s)
+     Target: item https://sensear.music/el/services/sonic-identity
+     Meta: expectedHost: 127.0.0.1, foundHosts: sensear.music, host: sensear.music
+    </issue>
+   After:
+    <issue fp="448dc7fa0080" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain" category="crawl" weight="8">
+     116 URL(s) point to different domain(s)
+     Target: item https://sensear.music/el/services/sonic-identity
+     Meta: expectedHost: 127.0.0.1, foundHosts: sensear.music, host: sensear.music
+    </issue>
+  </change>
+  <change type="change" fp="190eee36fa2a" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain">
+   fail→fail: 116 URL(s) point to different domain(s)
+   Before:
+    <issue fp="190eee36fa2a" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain" category="crawl" weight="8">
+     100 URL(s) point to different domain(s)
+     Target: item https://sensear.music/el/sitemap-page
+     Meta: expectedHost: 127.0.0.1, foundHosts: sensear.music, host: sensear.music
+    </issue>
+   After:
+    <issue fp="190eee36fa2a" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain" category="crawl" weight="8">
+     116 URL(s) point to different domain(s)
+     Target: item https://sensear.music/el/sitemap-page
+     Meta: expectedHost: 127.0.0.1, foundHosts: sensear.music, host: sensear.music
+    </issue>
+  </change>
+  <change type="change" fp="30659f055f4f" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain">
+   fail→fail: 116 URL(s) point to different domain(s)
+   Before:
+    <issue fp="30659f055f4f" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain" category="crawl" weight="8">
+     100 URL(s) point to different domain(s)
+     Target: item https://sensear.music/el/terms
+     Meta: expectedHost: 127.0.0.1, foundHosts: sensear.music, host: sensear.music
+    </issue>
+   After:
+    <issue fp="30659f055f4f" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain" category="crawl" weight="8">
+     116 URL(s) point to different domain(s)
+     Target: item https://sensear.music/el/terms
+     Meta: expectedHost: 127.0.0.1, foundHosts: sensear.music, host: sensear.music
+    </issue>
+  </change>
+  <change type="change" fp="41f73eab7fac" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain">
+   fail→fail: 116 URL(s) point to different domain(s)
+   Before:
+    <issue fp="41f73eab7fac" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain" category="crawl" weight="8">
+     100 URL(s) point to different domain(s)
+     Target: item https://sensear.music/en
+     Meta: expectedHost: 127.0.0.1, foundHosts: sensear.music, host: sensear.music
+    </issue>
+   After:
+    <issue fp="41f73eab7fac" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain" category="crawl" weight="8">
+     116 URL(s) point to different domain(s)
+     Target: item https://sensear.music/en
+     Meta: expectedHost: 127.0.0.1, foundHosts: sensear.music, host: sensear.music
+    </issue>
+  </change>
+  <change type="change" fp="78c9b57819dc" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain">
+   fail→fail: 116 URL(s) point to different domain(s)
+   Before:
+    <issue fp="78c9b57819dc" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain" category="crawl" weight="8">
+     100 URL(s) point to different domain(s)
+     Target: item https://sensear.music/en/about
+     Meta: expectedHost: 127.0.0.1, foundHosts: sensear.music, host: sensear.music
+    </issue>
+   After:
+    <issue fp="78c9b57819dc" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain" category="crawl" weight="8">
+     116 URL(s) point to different domain(s)
+     Target: item https://sensear.music/en/about
+     Meta: expectedHost: 127.0.0.1, foundHosts: sensear.music, host: sensear.music
+    </issue>
+  </change>
+  <change type="change" fp="981192070eab" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain">
+   fail→fail: 116 URL(s) point to different domain(s)
+   Before:
+    <issue fp="981192070eab" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain" category="crawl" weight="8">
+     100 URL(s) point to different domain(s)
+     Target: item https://sensear.music/en/blog
+     Meta: expectedHost: 127.0.0.1, foundHosts: sensear.music, host: sensear.music
+    </issue>
+   After:
+    <issue fp="981192070eab" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain" category="crawl" weight="8">
+     116 URL(s) point to different domain(s)
+     Target: item https://sensear.music/en/blog
+     Meta: expectedHost: 127.0.0.1, foundHosts: sensear.music, host: sensear.music
+    </issue>
+  </change>
+  <change type="change" fp="fa1877443053" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain">
+   fail→fail: 116 URL(s) point to different domain(s)
+   Before:
+    <issue fp="fa1877443053" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain" category="crawl" weight="8">
+     100 URL(s) point to different domain(s)
+     Target: item https://sensear.music/en/blog/background-music-shapes-customer-behavior
+     Meta: expectedHost: 127.0.0.1, foundHosts: sensear.music, host: sensear.music
+    </issue>
+   After:
+    <issue fp="fa1877443053" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain" category="crawl" weight="8">
+     116 URL(s) point to different domain(s)
+     Target: item https://sensear.music/en/blog/background-music-shapes-customer-behavior
+     Meta: expectedHost: 127.0.0.1, foundHosts: sensear.music, host: sensear.music
+    </issue>
+  </change>
+  <change type="change" fp="9f2cf53f2c49" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain">
+   fail→fail: 116 URL(s) point to different domain(s)
+   Before:
+    <issue fp="9f2cf53f2c49" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain" category="crawl" weight="8">
+     100 URL(s) point to different domain(s)
+     Target: item https://sensear.music/en/blog/brand-music-converts-browsers-buyers
+     Meta: expectedHost: 127.0.0.1, foundHosts: sensear.music, host: sensear.music
+    </issue>
+   After:
+    <issue fp="9f2cf53f2c49" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain" category="crawl" weight="8">
+     116 URL(s) point to different domain(s)
+     Target: item https://sensear.music/en/blog/brand-music-converts-browsers-buyers
+     Meta: expectedHost: 127.0.0.1, foundHosts: sensear.music, host: sensear.music
+    </issue>
+  </change>
+  <change type="change" fp="0625402075ab" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain">
+   fail→fail: 116 URL(s) point to different domain(s)
+   Before:
+    <issue fp="0625402075ab" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain" category="crawl" weight="8">
+     100 URL(s) point to different domain(s)
+     Target: item https://sensear.music/en/blog/building-brand-people-can-hear
+     Meta: expectedHost: 127.0.0.1, foundHosts: sensear.music, host: sensear.music
+    </issue>
+   After:
+    <issue fp="0625402075ab" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain" category="crawl" weight="8">
+     116 URL(s) point to different domain(s)
+     Target: item https://sensear.music/en/blog/building-brand-people-can-hear
+     Meta: expectedHost: 127.0.0.1, foundHosts: sensear.music, host: sensear.music
+    </issue>
+  </change>
+  <change type="change" fp="224b9ab400d8" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain">
+   fail→fail: 116 URL(s) point to different domain(s)
+   Before:
+    <issue fp="224b9ab400d8" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain" category="crawl" weight="8">
+     100 URL(s) point to different domain(s)
+     Target: item https://sensear.music/en/blog/how-top-hospitality-brands-design-sound
+     Meta: expectedHost: 127.0.0.1, foundHosts: sensear.music, host: sensear.music
+    </issue>
+   After:
+    <issue fp="224b9ab400d8" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain" category="crawl" weight="8">
+     116 URL(s) point to different domain(s)
+     Target: item https://sensear.music/en/blog/how-top-hospitality-brands-design-sound
+     Meta: expectedHost: 127.0.0.1, foundHosts: sensear.music, host: sensear.music
+    </issue>
+  </change>
+  <change type="change" fp="2989152606e8" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain">
+   fail→fail: 116 URL(s) point to different domain(s)
+   Before:
+    <issue fp="2989152606e8" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain" category="crawl" weight="8">
+     100 URL(s) point to different domain(s)
+     Target: item https://sensear.music/en/blog/music-curation-cycle-venues
+     Meta: expectedHost: 127.0.0.1, foundHosts: sensear.music, host: sensear.music
+    </issue>
+   After:
+    <issue fp="2989152606e8" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain" category="crawl" weight="8">
+     116 URL(s) point to different domain(s)
+     Target: item https://sensear.music/en/blog/music-curation-cycle-venues
+     Meta: expectedHost: 127.0.0.1, foundHosts: sensear.music, host: sensear.music
+    </issue>
+  </change>
+  <change type="change" fp="e019418f2dc7" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain">
+   fail→fail: 116 URL(s) point to different domain(s)
+   Before:
+    <issue fp="e019418f2dc7" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain" category="crawl" weight="8">
+     100 URL(s) point to different domain(s)
+     Target: item https://sensear.music/en/blog/service-environment-shapes-wait-time
+     Meta: expectedHost: 127.0.0.1, foundHosts: sensear.music, host: sensear.music
+    </issue>
+   After:
+    <issue fp="e019418f2dc7" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain" category="crawl" weight="8">
+     116 URL(s) point to different domain(s)
+     Target: item https://sensear.music/en/blog/service-environment-shapes-wait-time
+     Meta: expectedHost: 127.0.0.1, foundHosts: sensear.music, host: sensear.music
+    </issue>
+  </change>
+  <change type="change" fp="018677072bb0" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain">
+   fail→fail: 116 URL(s) point to different domain(s)
+   Before:
+    <issue fp="018677072bb0" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain" category="crawl" weight="8">
+     100 URL(s) point to different domain(s)
+     Target: item https://sensear.music/en/blog/three-reasons-make-music-hospitality
+     Meta: expectedHost: 127.0.0.1, foundHosts: sensear.music, host: sensear.music
+    </issue>
+   After:
+    <issue fp="018677072bb0" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain" category="crawl" weight="8">
+     116 URL(s) point to different domain(s)
+     Target: item https://sensear.music/en/blog/three-reasons-make-music-hospitality
+     Meta: expectedHost: 127.0.0.1, foundHosts: sensear.music, host: sensear.music
+    </issue>
+  </change>
+  <change type="change" fp="6a510abfc562" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain">
+   fail→fail: 116 URL(s) point to different domain(s)
+   Before:
+    <issue fp="6a510abfc562" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain" category="crawl" weight="8">
+     100 URL(s) point to different domain(s)
+     Target: item https://sensear.music/en/blog/what-exactly-does-music-curator-do
+     Meta: expectedHost: 127.0.0.1, foundHosts: sensear.music, host: sensear.music
+    </issue>
+   After:
+    <issue fp="6a510abfc562" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain" category="crawl" weight="8">
+     116 URL(s) point to different domain(s)
+     Target: item https://sensear.music/en/blog/what-exactly-does-music-curator-do
+     Meta: expectedHost: 127.0.0.1, foundHosts: sensear.music, host: sensear.music
+    </issue>
+  </change>
+  <change type="change" fp="de7918d3b8ca" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain">
+   fail→fail: 116 URL(s) point to different domain(s)
+   Before:
+    <issue fp="de7918d3b8ca" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain" category="crawl" weight="8">
+     100 URL(s) point to different domain(s)
+     Target: item https://sensear.music/en/case-studies
+     Meta: expectedHost: 127.0.0.1, foundHosts: sensear.music, host: sensear.music
+    </issue>
+   After:
+    <issue fp="de7918d3b8ca" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain" category="crawl" weight="8">
+     116 URL(s) point to different domain(s)
+     Target: item https://sensear.music/en/case-studies
+     Meta: expectedHost: 127.0.0.1, foundHosts: sensear.music, host: sensear.music
+    </issue>
+  </change>
+  <change type="change" fp="ba184baa3d6c" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain">
+   fail→fail: 116 URL(s) point to different domain(s)
+   Before:
+    <issue fp="ba184baa3d6c" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain" category="crawl" weight="8">
+     100 URL(s) point to different domain(s)
+     Target: item https://sensear.music/en/contact
+     Meta: expectedHost: 127.0.0.1, foundHosts: sensear.music, host: sensear.music
+    </issue>
+   After:
+    <issue fp="ba184baa3d6c" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain" category="crawl" weight="8">
+     116 URL(s) point to different domain(s)
+     Target: item https://sensear.music/en/contact
+     Meta: expectedHost: 127.0.0.1, foundHosts: sensear.music, host: sensear.music
+    </issue>
+  </change>
+  <change type="change" fp="4b6b15bf98d2" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain">
+   fail→fail: 116 URL(s) point to different domain(s)
+   Before:
+    <issue fp="4b6b15bf98d2" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain" category="crawl" weight="8">
+     100 URL(s) point to different domain(s)
+     Target: item https://sensear.music/en/faq
+     Meta: expectedHost: 127.0.0.1, foundHosts: sensear.music, host: sensear.music
+    </issue>
+   After:
+    <issue fp="4b6b15bf98d2" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain" category="crawl" weight="8">
+     116 URL(s) point to different domain(s)
+     Target: item https://sensear.music/en/faq
+     Meta: expectedHost: 127.0.0.1, foundHosts: sensear.music, host: sensear.music
+    </issue>
+  </change>
+  <change type="change" fp="6038d0973678" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain">
+   fail→fail: 116 URL(s) point to different domain(s)
+   Before:
+    <issue fp="6038d0973678" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain" category="crawl" weight="8">
+     100 URL(s) point to different domain(s)
+     Target: item https://sensear.music/en/industries
+     Meta: expectedHost: 127.0.0.1, foundHosts: sensear.music, host: sensear.music
+    </issue>
+   After:
+    <issue fp="6038d0973678" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain" category="crawl" weight="8">
+     116 URL(s) point to different domain(s)
+     Target: item https://sensear.music/en/industries
+     Meta: expectedHost: 127.0.0.1, foundHosts: sensear.music, host: sensear.music
+    </issue>
+  </change>
+  <change type="change" fp="99a101a3dbef" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain">
+   fail→fail: 116 URL(s) point to different domain(s)
+   Before:
+    <issue fp="99a101a3dbef" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain" category="crawl" weight="8">
+     100 URL(s) point to different domain(s)
+     Target: item https://sensear.music/en/industries/music-for-art-museums-and-fashion
+     Meta: expectedHost: 127.0.0.1, foundHosts: sensear.music, host: sensear.music
+    </issue>
+   After:
+    <issue fp="99a101a3dbef" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain" category="crawl" weight="8">
+     116 URL(s) point to different domain(s)
+     Target: item https://sensear.music/en/industries/music-for-art-museums-and-fashion
+     Meta: expectedHost: 127.0.0.1, foundHosts: sensear.music, host: sensear.music
+    </issue>
+  </change>
+  <change type="change" fp="72dbcfa3a186" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain">
+   fail→fail: 116 URL(s) point to different domain(s)
+   Before:
+    <issue fp="72dbcfa3a186" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain" category="crawl" weight="8">
+     100 URL(s) point to different domain(s)
+     Target: item https://sensear.music/en/industries/music-for-events-and-experiences
+     Meta: expectedHost: 127.0.0.1, foundHosts: sensear.music, host: sensear.music
+    </issue>
+   After:
+    <issue fp="72dbcfa3a186" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain" category="crawl" weight="8">
+     116 URL(s) point to different domain(s)
+     Target: item https://sensear.music/en/industries/music-for-events-and-experiences
+     Meta: expectedHost: 127.0.0.1, foundHosts: sensear.music, host: sensear.music
+    </issue>
+  </change>
+  <change type="change" fp="dfb15b59921c" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain">
+   fail→fail: 116 URL(s) point to different domain(s)
+   Before:
+    <issue fp="dfb15b59921c" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain" category="crawl" weight="8">
+     100 URL(s) point to different domain(s)
+     Target: item https://sensear.music/en/industries/music-for-hotels-and-resorts
+     Meta: expectedHost: 127.0.0.1, foundHosts: sensear.music, host: sensear.music
+    </issue>
+   After:
+    <issue fp="dfb15b59921c" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain" category="crawl" weight="8">
+     116 URL(s) point to different domain(s)
+     Target: item https://sensear.music/en/industries/music-for-hotels-and-resorts
+     Meta: expectedHost: 127.0.0.1, foundHosts: sensear.music, host: sensear.music
+    </issue>
+  </change>
+  <change type="change" fp="826e75e5f5ea" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain">
+   fail→fail: 116 URL(s) point to different domain(s)
+   Before:
+    <issue fp="826e75e5f5ea" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain" category="crawl" weight="8">
+     100 URL(s) point to different domain(s)
+     Target: item https://sensear.music/en/industries/music-for-restaurants-and-bars
+     Meta: expectedHost: 127.0.0.1, foundHosts: sensear.music, host: sensear.music
+    </issue>
+   After:
+    <issue fp="826e75e5f5ea" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain" category="crawl" weight="8">
+     116 URL(s) point to different domain(s)
+     Target: item https://sensear.music/en/industries/music-for-restaurants-and-bars
+     Meta: expectedHost: 127.0.0.1, foundHosts: sensear.music, host: sensear.music
+    </issue>
+  </change>
+  <change type="change" fp="cc7e33e95c44" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain">
+   fail→fail: 116 URL(s) point to different domain(s)
+   Before:
+    <issue fp="cc7e33e95c44" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain" category="crawl" weight="8">
+     100 URL(s) point to different domain(s)
+     Target: item https://sensear.music/en/industries/music-for-retail-stores
+     Meta: expectedHost: 127.0.0.1, foundHosts: sensear.music, host: sensear.music
+    </issue>
+   After:
+    <issue fp="cc7e33e95c44" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain" category="crawl" weight="8">
+     116 URL(s) point to different domain(s)
+     Target: item https://sensear.music/en/industries/music-for-retail-stores
+     Meta: expectedHost: 127.0.0.1, foundHosts: sensear.music, host: sensear.music
+    </issue>
+  </change>
+  <change type="change" fp="21f055e183ba" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain">
+   fail→fail: 116 URL(s) point to different domain(s)
+   Before:
+    <issue fp="21f055e183ba" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain" category="crawl" weight="8">
+     100 URL(s) point to different domain(s)
+     Target: item https://sensear.music/en/industries/music-for-wellness-and-gyms
+     Meta: expectedHost: 127.0.0.1, foundHosts: sensear.music, host: sensear.music
+    </issue>
+   After:
+    <issue fp="21f055e183ba" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain" category="crawl" weight="8">
+     116 URL(s) point to different domain(s)
+     Target: item https://sensear.music/en/industries/music-for-wellness-and-gyms
+     Meta: expectedHost: 127.0.0.1, foundHosts: sensear.music, host: sensear.music
+    </issue>
+  </change>
+  <change type="change" fp="3fc65f7f93af" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain">
+   fail→fail: 116 URL(s) point to different domain(s)
+   Before:
+    <issue fp="3fc65f7f93af" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain" category="crawl" weight="8">
+     100 URL(s) point to different domain(s)
+     Target: item https://sensear.music/en/privacy
+     Meta: expectedHost: 127.0.0.1, foundHosts: sensear.music, host: sensear.music
+    </issue>
+   After:
+    <issue fp="3fc65f7f93af" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain" category="crawl" weight="8">
+     116 URL(s) point to different domain(s)
+     Target: item https://sensear.music/en/privacy
+     Meta: expectedHost: 127.0.0.1, foundHosts: sensear.music, host: sensear.music
+    </issue>
+  </change>
+  <change type="change" fp="e3a610d17ebd" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain">
+   fail→fail: 116 URL(s) point to different domain(s)
+   Before:
+    <issue fp="e3a610d17ebd" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain" category="crawl" weight="8">
+     100 URL(s) point to different domain(s)
+     Target: item https://sensear.music/en/services
+     Meta: expectedHost: 127.0.0.1, foundHosts: sensear.music, host: sensear.music
+    </issue>
+   After:
+    <issue fp="e3a610d17ebd" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain" category="crawl" weight="8">
+     116 URL(s) point to different domain(s)
+     Target: item https://sensear.music/en/services
+     Meta: expectedHost: 127.0.0.1, foundHosts: sensear.music, host: sensear.music
+    </issue>
+  </change>
+  <change type="change" fp="fe2d90f31e63" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain">
+   fail→fail: 116 URL(s) point to different domain(s)
+   Before:
+    <issue fp="fe2d90f31e63" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain" category="crawl" weight="8">
+     100 URL(s) point to different domain(s)
+     Target: item https://sensear.music/en/services/audio-upgrades
+     Meta: expectedHost: 127.0.0.1, foundHosts: sensear.music, host: sensear.music
+    </issue>
+   After:
+    <issue fp="fe2d90f31e63" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain" category="crawl" weight="8">
+     116 URL(s) point to different domain(s)
+     Target: item https://sensear.music/en/services/audio-upgrades
+     Meta: expectedHost: 127.0.0.1, foundHosts: sensear.music, host: sensear.music
+    </issue>
+  </change>
+  <change type="change" fp="55beccb17608" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain">
+   fail→fail: 116 URL(s) point to different domain(s)
+   Before:
+    <issue fp="55beccb17608" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain" category="crawl" weight="8">
+     100 URL(s) point to different domain(s)
+     Target: item https://sensear.music/en/services/event-soundtracks
+     Meta: expectedHost: 127.0.0.1, foundHosts: sensear.music, host: sensear.music
+    </issue>
+   After:
+    <issue fp="55beccb17608" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain" category="crawl" weight="8">
+     116 URL(s) point to different domain(s)
+     Target: item https://sensear.music/en/services/event-soundtracks
+     Meta: expectedHost: 127.0.0.1, foundHosts: sensear.music, host: sensear.music
+    </issue>
+  </change>
+  <change type="change" fp="e80a38a47086" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain">
+   fail→fail: 116 URL(s) point to different domain(s)
+   Before:
+    <issue fp="e80a38a47086" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain" category="crawl" weight="8">
+     100 URL(s) point to different domain(s)
+     Target: item https://sensear.music/en/services/signature-playlists
+     Meta: expectedHost: 127.0.0.1, foundHosts: sensear.music, host: sensear.music
+    </issue>
+   After:
+    <issue fp="e80a38a47086" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain" category="crawl" weight="8">
+     116 URL(s) point to different domain(s)
+     Target: item https://sensear.music/en/services/signature-playlists
+     Meta: expectedHost: 127.0.0.1, foundHosts: sensear.music, host: sensear.music
+    </issue>
+  </change>
+  <change type="change" fp="a118eecc91fa" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain">
+   fail→fail: 116 URL(s) point to different domain(s)
+   Before:
+    <issue fp="a118eecc91fa" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain" category="crawl" weight="8">
+     100 URL(s) point to different domain(s)
+     Target: item https://sensear.music/en/services/sonic-identity
+     Meta: expectedHost: 127.0.0.1, foundHosts: sensear.music, host: sensear.music
+    </issue>
+   After:
+    <issue fp="a118eecc91fa" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain" category="crawl" weight="8">
+     116 URL(s) point to different domain(s)
+     Target: item https://sensear.music/en/services/sonic-identity
+     Meta: expectedHost: 127.0.0.1, foundHosts: sensear.music, host: sensear.music
+    </issue>
+  </change>
+  <change type="change" fp="4f6d5bd5aaad" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain">
+   fail→fail: 116 URL(s) point to different domain(s)
+   Before:
+    <issue fp="4f6d5bd5aaad" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain" category="crawl" weight="8">
+     100 URL(s) point to different domain(s)
+     Target: item https://sensear.music/en/sitemap-page
+     Meta: expectedHost: 127.0.0.1, foundHosts: sensear.music, host: sensear.music
+    </issue>
+   After:
+    <issue fp="4f6d5bd5aaad" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain" category="crawl" weight="8">
+     116 URL(s) point to different domain(s)
+     Target: item https://sensear.music/en/sitemap-page
+     Meta: expectedHost: 127.0.0.1, foundHosts: sensear.music, host: sensear.music
+    </issue>
+  </change>
+  <change type="change" fp="753d07129060" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain">
+   fail→fail: 116 URL(s) point to different domain(s)
+   Before:
+    <issue fp="753d07129060" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain" category="crawl" weight="8">
+     100 URL(s) point to different domain(s)
+     Target: item https://sensear.music/en/terms
+     Meta: expectedHost: 127.0.0.1, foundHosts: sensear.music, host: sensear.music
+    </issue>
+   After:
+    <issue fp="753d07129060" rule="crawl/sitemap-domain" severity="error" status="fail" check="sitemap-domain" category="crawl" weight="8">
+     116 URL(s) point to different domain(s)
+     Target: item https://sensear.music/en/terms
+     Meta: expectedHost: 127.0.0.1, foundHosts: sensear.music, host: sensear.music
+    </issue>
+  </change>
+  <change type="change" fp="19b9affa5c1c" rule="perf/lcp-hints" severity="warning" status="warn" check="lcp-preload">
+   warn→warn: 3 potential LCP image(s) without preload
+   Before:
+    <issue fp="19b9affa5c1c" rule="perf/lcp-hints" severity="warning" status="warn" check="lcp-preload" category="perf" weight="7">
+     2 potential LCP image(s) without preload
+     Target: item http://127.0.0.1:3000/_next/image
+    </issue>
+   After:
+    <issue fp="19b9affa5c1c" rule="perf/lcp-hints" severity="warning" status="warn" check="lcp-preload" category="perf" weight="7">
+     3 potential LCP image(s) without preload
+     Target: item http://127.0.0.1:3000/_next/image
+    </issue>
+  </change>
+  <change type="change" fp="bb4fec44bbd7" rule="perf/compression" severity="warning" status="fail" check="compression">
+   fail→fail: No compression detected (152KB uncompressed)
+   Before:
+    <issue fp="bb4fec44bbd7" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (127KB uncompressed)
+     Target: page http://127.0.0.1:3000/el
+     Meta: estimatedSavings: ~89KB
+    </issue>
+   After:
+    <issue fp="bb4fec44bbd7" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (152KB uncompressed)
+     Target: page http://127.0.0.1:3000/el
+     Meta: estimatedSavings: ~106KB
+    </issue>
+  </change>
+  <change type="change" fp="5d209d8c92b5" rule="perf/compression" severity="warning" status="fail" check="compression">
+   fail→fail: No compression detected (115KB uncompressed)
+   Before:
+    <issue fp="5d209d8c92b5" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (109KB uncompressed)
+     Target: page http://127.0.0.1:3000/el/about
+     Meta: estimatedSavings: ~76KB
+    </issue>
+   After:
+    <issue fp="5d209d8c92b5" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (115KB uncompressed)
+     Target: page http://127.0.0.1:3000/el/about
+     Meta: estimatedSavings: ~81KB
+    </issue>
+  </change>
+  <change type="change" fp="aeac877eaba5" rule="perf/compression" severity="warning" status="fail" check="compression">
+   fail→fail: No compression detected (106KB uncompressed)
+   Before:
+    <issue fp="aeac877eaba5" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (100KB uncompressed)
+     Target: page http://127.0.0.1:3000/el/blog
+     Meta: estimatedSavings: ~70KB
+    </issue>
+   After:
+    <issue fp="aeac877eaba5" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (106KB uncompressed)
+     Target: page http://127.0.0.1:3000/el/blog
+     Meta: estimatedSavings: ~74KB
+    </issue>
+  </change>
+  <change type="change" fp="4c00ea97109d" rule="perf/compression" severity="warning" status="fail" check="compression">
+   fail→fail: No compression detected (112KB uncompressed)
+   Before:
+    <issue fp="4c00ea97109d" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (104KB uncompressed)
+     Target: page http://127.0.0.1:3000/el/blog/background-music-shapes-customer-behavior
+     Meta: estimatedSavings: ~73KB
+    </issue>
+   After:
+    <issue fp="4c00ea97109d" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (112KB uncompressed)
+     Target: page http://127.0.0.1:3000/el/blog/background-music-shapes-customer-behavior
+     Meta: estimatedSavings: ~78KB
+    </issue>
+  </change>
+  <change type="change" fp="ff86143733f4" rule="perf/compression" severity="warning" status="fail" check="compression">
+   fail→fail: No compression detected (99KB uncompressed)
+   Before:
+    <issue fp="ff86143733f4" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (91KB uncompressed)
+     Target: page http://127.0.0.1:3000/el/blog/brand-music-converts-browsers-buyers
+     Meta: estimatedSavings: ~64KB
+    </issue>
+   After:
+    <issue fp="ff86143733f4" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (99KB uncompressed)
+     Target: page http://127.0.0.1:3000/el/blog/brand-music-converts-browsers-buyers
+     Meta: estimatedSavings: ~69KB
+    </issue>
+  </change>
+  <change type="change" fp="ce8416521ade" rule="perf/compression" severity="warning" status="fail" check="compression">
+   fail→fail: No compression detected (88KB uncompressed)
+   Before:
+    <issue fp="ce8416521ade" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (81KB uncompressed)
+     Target: page http://127.0.0.1:3000/el/blog/building-brand-people-can-hear
+     Meta: estimatedSavings: ~56KB
+    </issue>
+   After:
+    <issue fp="ce8416521ade" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (88KB uncompressed)
+     Target: page http://127.0.0.1:3000/el/blog/building-brand-people-can-hear
+     Meta: estimatedSavings: ~62KB
+    </issue>
+  </change>
+  <change type="change" fp="efb0c859dfec" rule="perf/compression" severity="warning" status="fail" check="compression">
+   fail→fail: No compression detected (98KB uncompressed)
+   Before:
+    <issue fp="efb0c859dfec" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (90KB uncompressed)
+     Target: page http://127.0.0.1:3000/el/blog/how-top-hospitality-brands-design-sound
+     Meta: estimatedSavings: ~63KB
+    </issue>
+   After:
+    <issue fp="efb0c859dfec" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (98KB uncompressed)
+     Target: page http://127.0.0.1:3000/el/blog/how-top-hospitality-brands-design-sound
+     Meta: estimatedSavings: ~69KB
+    </issue>
+  </change>
+  <change type="change" fp="5b0d095ef417" rule="perf/compression" severity="warning" status="fail" check="compression">
+   fail→fail: No compression detected (104KB uncompressed)
+   Before:
+    <issue fp="5b0d095ef417" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (96KB uncompressed)
+     Target: page http://127.0.0.1:3000/el/blog/music-curation-cycle-venues
+     Meta: estimatedSavings: ~67KB
+    </issue>
+   After:
+    <issue fp="5b0d095ef417" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (104KB uncompressed)
+     Target: page http://127.0.0.1:3000/el/blog/music-curation-cycle-venues
+     Meta: estimatedSavings: ~72KB
+    </issue>
+  </change>
+  <change type="change" fp="1b172a8db53b" rule="perf/compression" severity="warning" status="fail" check="compression">
+   fail→fail: No compression detected (95KB uncompressed)
+   Before:
+    <issue fp="1b172a8db53b" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (87KB uncompressed)
+     Target: page http://127.0.0.1:3000/el/blog/service-environment-shapes-wait-time
+     Meta: estimatedSavings: ~61KB
+    </issue>
+   After:
+    <issue fp="1b172a8db53b" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (95KB uncompressed)
+     Target: page http://127.0.0.1:3000/el/blog/service-environment-shapes-wait-time
+     Meta: estimatedSavings: ~66KB
+    </issue>
+  </change>
+  <change type="change" fp="aeabce56927b" rule="perf/compression" severity="warning" status="fail" check="compression">
+   fail→fail: No compression detected (91KB uncompressed)
+   Before:
+    <issue fp="aeabce56927b" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (83KB uncompressed)
+     Target: page http://127.0.0.1:3000/el/blog/three-reasons-make-music-hospitality
+     Meta: estimatedSavings: ~58KB
+    </issue>
+   After:
+    <issue fp="aeabce56927b" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (91KB uncompressed)
+     Target: page http://127.0.0.1:3000/el/blog/three-reasons-make-music-hospitality
+     Meta: estimatedSavings: ~63KB
+    </issue>
+  </change>
+  <change type="change" fp="c3e32c568636" rule="perf/compression" severity="warning" status="fail" check="compression">
+   fail→fail: No compression detected (111KB uncompressed)
+   Before:
+    <issue fp="c3e32c568636" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (103KB uncompressed)
+     Target: page http://127.0.0.1:3000/el/blog/what-exactly-does-music-curator-do
+     Meta: estimatedSavings: ~72KB
+    </issue>
+   After:
+    <issue fp="c3e32c568636" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (111KB uncompressed)
+     Target: page http://127.0.0.1:3000/el/blog/what-exactly-does-music-curator-do
+     Meta: estimatedSavings: ~78KB
+    </issue>
+  </change>
+  <change type="change" fp="3ef34f075647" rule="perf/compression" severity="warning" status="fail" check="compression">
+   fail→fail: No compression detected (101KB uncompressed)
+   Before:
+    <issue fp="3ef34f075647" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (95KB uncompressed)
+     Target: page http://127.0.0.1:3000/el/case-studies
+     Meta: estimatedSavings: ~67KB
+    </issue>
+   After:
+    <issue fp="3ef34f075647" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (101KB uncompressed)
+     Target: page http://127.0.0.1:3000/el/case-studies
+     Meta: estimatedSavings: ~71KB
+    </issue>
+  </change>
+  <change type="change" fp="536ecd97fba0" rule="perf/compression" severity="warning" status="fail" check="compression">
+   fail→fail: No compression detected (102KB uncompressed)
+   Before:
+    <issue fp="536ecd97fba0" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (91KB uncompressed)
+     Target: page http://127.0.0.1:3000/el/contact
+     Meta: estimatedSavings: ~64KB
+    </issue>
+   After:
+    <issue fp="536ecd97fba0" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (102KB uncompressed)
+     Target: page http://127.0.0.1:3000/el/contact
+     Meta: estimatedSavings: ~71KB
+    </issue>
+  </change>
+  <change type="change" fp="f449d9fce4cf" rule="perf/compression" severity="warning" status="fail" check="compression">
+   fail→fail: No compression detected (89KB uncompressed)
+   Before:
+    <issue fp="f449d9fce4cf" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (81KB uncompressed)
+     Target: page http://127.0.0.1:3000/el/faq
+     Meta: estimatedSavings: ~57KB
+    </issue>
+   After:
+    <issue fp="f449d9fce4cf" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (89KB uncompressed)
+     Target: page http://127.0.0.1:3000/el/faq
+     Meta: estimatedSavings: ~62KB
+    </issue>
+  </change>
+  <change type="change" fp="300fc402197a" rule="perf/compression" severity="warning" status="fail" check="compression">
+   fail→fail: No compression detected (132KB uncompressed)
+   Before:
+    <issue fp="300fc402197a" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (114KB uncompressed)
+     Target: page http://127.0.0.1:3000/el/industries
+     Meta: estimatedSavings: ~80KB
+    </issue>
+   After:
+    <issue fp="300fc402197a" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (132KB uncompressed)
+     Target: page http://127.0.0.1:3000/el/industries
+     Meta: estimatedSavings: ~92KB
+    </issue>
+  </change>
+  <change type="change" fp="822da9618a45" rule="perf/compression" severity="warning" status="fail" check="compression">
+   fail→fail: No compression detected (93KB uncompressed)
+   Before:
+    <issue fp="822da9618a45" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (87KB uncompressed)
+     Target: page http://127.0.0.1:3000/el/industries/music-for-art-museums-and-fashion
+     Meta: estimatedSavings: ~61KB
+    </issue>
+   After:
+    <issue fp="822da9618a45" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (93KB uncompressed)
+     Target: page http://127.0.0.1:3000/el/industries/music-for-art-museums-and-fashion
+     Meta: estimatedSavings: ~65KB
+    </issue>
+  </change>
+  <change type="change" fp="5c17af82f56a" rule="perf/compression" severity="warning" status="fail" check="compression">
+   fail→fail: No compression detected (90KB uncompressed)
+   Before:
+    <issue fp="5c17af82f56a" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (84KB uncompressed)
+     Target: page http://127.0.0.1:3000/el/industries/music-for-events-and-experiences
+     Meta: estimatedSavings: ~59KB
+    </issue>
+   After:
+    <issue fp="5c17af82f56a" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (90KB uncompressed)
+     Target: page http://127.0.0.1:3000/el/industries/music-for-events-and-experiences
+     Meta: estimatedSavings: ~63KB
+    </issue>
+  </change>
+  <change type="change" fp="2f409fe7557a" rule="perf/compression" severity="warning" status="fail" check="compression">
+   fail→fail: No compression detected (94KB uncompressed)
+   Before:
+    <issue fp="2f409fe7557a" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (88KB uncompressed)
+     Target: page http://127.0.0.1:3000/el/industries/music-for-hotels-and-resorts
+     Meta: estimatedSavings: ~62KB
+    </issue>
+   After:
+    <issue fp="2f409fe7557a" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (94KB uncompressed)
+     Target: page http://127.0.0.1:3000/el/industries/music-for-hotels-and-resorts
+     Meta: estimatedSavings: ~66KB
+    </issue>
+  </change>
+  <change type="change" fp="d5e4854499bc" rule="perf/compression" severity="warning" status="fail" check="compression">
+   fail→fail: No compression detected (94KB uncompressed)
+   Before:
+    <issue fp="d5e4854499bc" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (88KB uncompressed)
+     Target: page http://127.0.0.1:3000/el/industries/music-for-restaurants-and-bars
+     Meta: estimatedSavings: ~62KB
+    </issue>
+   After:
+    <issue fp="d5e4854499bc" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (94KB uncompressed)
+     Target: page http://127.0.0.1:3000/el/industries/music-for-restaurants-and-bars
+     Meta: estimatedSavings: ~66KB
+    </issue>
+  </change>
+  <change type="change" fp="93c641e05b77" rule="perf/compression" severity="warning" status="fail" check="compression">
+   fail→fail: No compression detected (91KB uncompressed)
+   Before:
+    <issue fp="93c641e05b77" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (85KB uncompressed)
+     Target: page http://127.0.0.1:3000/el/industries/music-for-retail-stores
+     Meta: estimatedSavings: ~60KB
+    </issue>
+   After:
+    <issue fp="93c641e05b77" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (91KB uncompressed)
+     Target: page http://127.0.0.1:3000/el/industries/music-for-retail-stores
+     Meta: estimatedSavings: ~64KB
+    </issue>
+  </change>
+  <change type="change" fp="912cce987e5a" rule="perf/compression" severity="warning" status="fail" check="compression">
+   fail→fail: No compression detected (91KB uncompressed)
+   Before:
+    <issue fp="912cce987e5a" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (85KB uncompressed)
+     Target: page http://127.0.0.1:3000/el/industries/music-for-wellness-and-gyms
+     Meta: estimatedSavings: ~59KB
+    </issue>
+   After:
+    <issue fp="912cce987e5a" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (91KB uncompressed)
+     Target: page http://127.0.0.1:3000/el/industries/music-for-wellness-and-gyms
+     Meta: estimatedSavings: ~63KB
+    </issue>
+  </change>
+  <change type="change" fp="bb0bd2500254" rule="perf/compression" severity="warning" status="fail" check="compression">
+   fail→fail: No compression detected (80KB uncompressed)
+   Before:
+    <issue fp="bb0bd2500254" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (74KB uncompressed)
+     Target: page http://127.0.0.1:3000/el/privacy
+     Meta: estimatedSavings: ~52KB
+    </issue>
+   After:
+    <issue fp="bb0bd2500254" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (80KB uncompressed)
+     Target: page http://127.0.0.1:3000/el/privacy
+     Meta: estimatedSavings: ~56KB
+    </issue>
+  </change>
+  <change type="change" fp="86c67d79ca2d" rule="perf/compression" severity="warning" status="fail" check="compression">
+   fail→fail: No compression detected (114KB uncompressed)
+   Before:
+    <issue fp="86c67d79ca2d" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (102KB uncompressed)
+     Target: page http://127.0.0.1:3000/el/services
+     Meta: estimatedSavings: ~71KB
+    </issue>
+   After:
+    <issue fp="86c67d79ca2d" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (114KB uncompressed)
+     Target: page http://127.0.0.1:3000/el/services
+     Meta: estimatedSavings: ~80KB
+    </issue>
+  </change>
+  <change type="change" fp="772694681bf1" rule="perf/compression" severity="warning" status="fail" check="compression">
+   fail→fail: No compression detected (88KB uncompressed)
+   Before:
+    <issue fp="772694681bf1" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (81KB uncompressed)
+     Target: page http://127.0.0.1:3000/el/services/audio-upgrades
+     Meta: estimatedSavings: ~57KB
+    </issue>
+   After:
+    <issue fp="772694681bf1" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (88KB uncompressed)
+     Target: page http://127.0.0.1:3000/el/services/audio-upgrades
+     Meta: estimatedSavings: ~61KB
+    </issue>
+  </change>
+  <change type="change" fp="41bc36c35302" rule="perf/compression" severity="warning" status="fail" check="compression">
+   fail→fail: No compression detected (91KB uncompressed)
+   Before:
+    <issue fp="41bc36c35302" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (84KB uncompressed)
+     Target: page http://127.0.0.1:3000/el/services/event-soundtracks
+     Meta: estimatedSavings: ~59KB
+    </issue>
+   After:
+    <issue fp="41bc36c35302" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (91KB uncompressed)
+     Target: page http://127.0.0.1:3000/el/services/event-soundtracks
+     Meta: estimatedSavings: ~64KB
+    </issue>
+  </change>
+  <change type="change" fp="2f7d7dac9829" rule="perf/compression" severity="warning" status="fail" check="compression">
+   fail→fail: No compression detected (95KB uncompressed)
+   Before:
+    <issue fp="2f7d7dac9829" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (84KB uncompressed)
+     Target: page http://127.0.0.1:3000/el/services/signature-playlists
+     Meta: estimatedSavings: ~59KB
+    </issue>
+   After:
+    <issue fp="2f7d7dac9829" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (95KB uncompressed)
+     Target: page http://127.0.0.1:3000/el/services/signature-playlists
+     Meta: estimatedSavings: ~67KB
+    </issue>
+  </change>
+  <change type="change" fp="d3a1d9a3fb87" rule="perf/compression" severity="warning" status="fail" check="compression">
+   fail→fail: No compression detected (91KB uncompressed)
+   Before:
+    <issue fp="d3a1d9a3fb87" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (84KB uncompressed)
+     Target: page http://127.0.0.1:3000/el/services/sonic-identity
+     Meta: estimatedSavings: ~59KB
+    </issue>
+   After:
+    <issue fp="d3a1d9a3fb87" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (91KB uncompressed)
+     Target: page http://127.0.0.1:3000/el/services/sonic-identity
+     Meta: estimatedSavings: ~63KB
+    </issue>
+  </change>
+  <change type="change" fp="f0283b811c6f" rule="perf/compression" severity="warning" status="fail" check="compression">
+   fail→fail: No compression detected (94KB uncompressed)
+   Before:
+    <issue fp="f0283b811c6f" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (88KB uncompressed)
+     Target: page http://127.0.0.1:3000/el/sitemap-page
+     Meta: estimatedSavings: ~61KB
+    </issue>
+   After:
+    <issue fp="f0283b811c6f" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (94KB uncompressed)
+     Target: page http://127.0.0.1:3000/el/sitemap-page
+     Meta: estimatedSavings: ~65KB
+    </issue>
+  </change>
+  <change type="change" fp="71b41851a805" rule="perf/compression" severity="warning" status="fail" check="compression">
+   fail→fail: No compression detected (89KB uncompressed)
+   Before:
+    <issue fp="71b41851a805" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (83KB uncompressed)
+     Target: page http://127.0.0.1:3000/el/terms
+     Meta: estimatedSavings: ~58KB
+    </issue>
+   After:
+    <issue fp="71b41851a805" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (89KB uncompressed)
+     Target: page http://127.0.0.1:3000/el/terms
+     Meta: estimatedSavings: ~62KB
+    </issue>
+  </change>
+  <change type="change" fp="f21401109ec2" rule="perf/compression" severity="warning" status="fail" check="compression">
+   fail→fail: No compression detected (151KB uncompressed)
+   Before:
+    <issue fp="f21401109ec2" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (125KB uncompressed)
+     Target: page http://127.0.0.1:3000/en
+     Meta: estimatedSavings: ~88KB
+    </issue>
+   After:
+    <issue fp="f21401109ec2" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (151KB uncompressed)
+     Target: page http://127.0.0.1:3000/en
+     Meta: estimatedSavings: ~105KB
+    </issue>
+  </change>
+  <change type="change" fp="a6a135a5010d" rule="perf/compression" severity="warning" status="fail" check="compression">
+   fail→fail: No compression detected (114KB uncompressed)
+   Before:
+    <issue fp="a6a135a5010d" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (108KB uncompressed)
+     Target: page http://127.0.0.1:3000/en/about
+     Meta: estimatedSavings: ~75KB
+    </issue>
+   After:
+    <issue fp="a6a135a5010d" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (114KB uncompressed)
+     Target: page http://127.0.0.1:3000/en/about
+     Meta: estimatedSavings: ~80KB
+    </issue>
+  </change>
+  <change type="change" fp="8deb81265261" rule="perf/compression" severity="warning" status="fail" check="compression">
+   fail→fail: No compression detected (105KB uncompressed)
+   Before:
+    <issue fp="8deb81265261" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (99KB uncompressed)
+     Target: page http://127.0.0.1:3000/en/blog
+     Meta: estimatedSavings: ~69KB
+    </issue>
+   After:
+    <issue fp="8deb81265261" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (105KB uncompressed)
+     Target: page http://127.0.0.1:3000/en/blog
+     Meta: estimatedSavings: ~73KB
+    </issue>
+  </change>
+  <change type="change" fp="9eea078a4b50" rule="perf/compression" severity="warning" status="fail" check="compression">
+   fail→fail: No compression detected (108KB uncompressed)
+   Before:
+    <issue fp="9eea078a4b50" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (100KB uncompressed)
+     Target: page http://127.0.0.1:3000/en/blog/background-music-shapes-customer-behavior
+     Meta: estimatedSavings: ~70KB
+    </issue>
+   After:
+    <issue fp="9eea078a4b50" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (108KB uncompressed)
+     Target: page http://127.0.0.1:3000/en/blog/background-music-shapes-customer-behavior
+     Meta: estimatedSavings: ~75KB
+    </issue>
+  </change>
+  <change type="change" fp="ae4f88df4e5d" rule="perf/compression" severity="warning" status="fail" check="compression">
+   fail→fail: No compression detected (96KB uncompressed)
+   Before:
+    <issue fp="ae4f88df4e5d" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (89KB uncompressed)
+     Target: page http://127.0.0.1:3000/en/blog/brand-music-converts-browsers-buyers
+     Meta: estimatedSavings: ~62KB
+    </issue>
+   After:
+    <issue fp="ae4f88df4e5d" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (96KB uncompressed)
+     Target: page http://127.0.0.1:3000/en/blog/brand-music-converts-browsers-buyers
+     Meta: estimatedSavings: ~67KB
+    </issue>
+  </change>
+  <change type="change" fp="1bc2e2fbf3fc" rule="perf/compression" severity="warning" status="fail" check="compression">
+   fail→fail: No compression detected (107KB uncompressed)
+   Before:
+    <issue fp="1bc2e2fbf3fc" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (99KB uncompressed)
+     Target: page http://127.0.0.1:3000/en/blog/building-brand-people-can-hear
+     Meta: estimatedSavings: ~70KB
+    </issue>
+   After:
+    <issue fp="1bc2e2fbf3fc" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (107KB uncompressed)
+     Target: page http://127.0.0.1:3000/en/blog/building-brand-people-can-hear
+     Meta: estimatedSavings: ~75KB
+    </issue>
+  </change>
+  <change type="change" fp="125b314c7921" rule="perf/compression" severity="warning" status="fail" check="compression">
+   fail→fail: No compression detected (96KB uncompressed)
+   Before:
+    <issue fp="125b314c7921" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (88KB uncompressed)
+     Target: page http://127.0.0.1:3000/en/blog/how-top-hospitality-brands-design-sound
+     Meta: estimatedSavings: ~62KB
+    </issue>
+   After:
+    <issue fp="125b314c7921" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (96KB uncompressed)
+     Target: page http://127.0.0.1:3000/en/blog/how-top-hospitality-brands-design-sound
+     Meta: estimatedSavings: ~67KB
+    </issue>
+  </change>
+  <change type="change" fp="a0299f45d837" rule="perf/compression" severity="warning" status="fail" check="compression">
+   fail→fail: No compression detected (100KB uncompressed)
+   Before:
+    <issue fp="a0299f45d837" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (92KB uncompressed)
+     Target: page http://127.0.0.1:3000/en/blog/music-curation-cycle-venues
+     Meta: estimatedSavings: ~64KB
+    </issue>
+   After:
+    <issue fp="a0299f45d837" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (100KB uncompressed)
+     Target: page http://127.0.0.1:3000/en/blog/music-curation-cycle-venues
+     Meta: estimatedSavings: ~70KB
+    </issue>
+  </change>
+  <change type="change" fp="a0a34d7eb9ef" rule="perf/compression" severity="warning" status="fail" check="compression">
+   fail→fail: No compression detected (92KB uncompressed)
+   Before:
+    <issue fp="a0a34d7eb9ef" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (85KB uncompressed)
+     Target: page http://127.0.0.1:3000/en/blog/service-environment-shapes-wait-time
+     Meta: estimatedSavings: ~59KB
+    </issue>
+   After:
+    <issue fp="a0a34d7eb9ef" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (92KB uncompressed)
+     Target: page http://127.0.0.1:3000/en/blog/service-environment-shapes-wait-time
+     Meta: estimatedSavings: ~65KB
+    </issue>
+  </change>
+  <change type="change" fp="be6fb521061c" rule="perf/compression" severity="warning" status="fail" check="compression">
+   fail→fail: No compression detected (89KB uncompressed)
+   Before:
+    <issue fp="be6fb521061c" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (81KB uncompressed)
+     Target: page http://127.0.0.1:3000/en/blog/three-reasons-make-music-hospitality
+     Meta: estimatedSavings: ~57KB
+    </issue>
+   After:
+    <issue fp="be6fb521061c" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (89KB uncompressed)
+     Target: page http://127.0.0.1:3000/en/blog/three-reasons-make-music-hospitality
+     Meta: estimatedSavings: ~62KB
+    </issue>
+  </change>
+  <change type="change" fp="11b4b515f1ad" rule="perf/compression" severity="warning" status="fail" check="compression">
+   fail→fail: No compression detected (106KB uncompressed)
+   Before:
+    <issue fp="11b4b515f1ad" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (98KB uncompressed)
+     Target: page http://127.0.0.1:3000/en/blog/what-exactly-does-music-curator-do
+     Meta: estimatedSavings: ~69KB
+    </issue>
+   After:
+    <issue fp="11b4b515f1ad" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (106KB uncompressed)
+     Target: page http://127.0.0.1:3000/en/blog/what-exactly-does-music-curator-do
+     Meta: estimatedSavings: ~74KB
+    </issue>
+  </change>
+  <change type="change" fp="6ec1c8da26d6" rule="perf/compression" severity="warning" status="fail" check="compression">
+   fail→fail: No compression detected (101KB uncompressed)
+   Before:
+    <issue fp="6ec1c8da26d6" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (95KB uncompressed)
+     Target: page http://127.0.0.1:3000/en/case-studies
+     Meta: estimatedSavings: ~66KB
+    </issue>
+   After:
+    <issue fp="6ec1c8da26d6" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (101KB uncompressed)
+     Target: page http://127.0.0.1:3000/en/case-studies
+     Meta: estimatedSavings: ~70KB
+    </issue>
+  </change>
+  <change type="change" fp="41618da968f3" rule="perf/compression" severity="warning" status="fail" check="compression">
+   fail→fail: No compression detected (101KB uncompressed)
+   Before:
+    <issue fp="41618da968f3" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (90KB uncompressed)
+     Target: page http://127.0.0.1:3000/en/contact
+     Meta: estimatedSavings: ~63KB
+    </issue>
+   After:
+    <issue fp="41618da968f3" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (101KB uncompressed)
+     Target: page http://127.0.0.1:3000/en/contact
+     Meta: estimatedSavings: ~71KB
+    </issue>
+  </change>
+  <change type="change" fp="0c20f7179850" rule="perf/compression" severity="warning" status="fail" check="compression">
+   fail→fail: No compression detected (89KB uncompressed)
+   Before:
+    <issue fp="0c20f7179850" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (81KB uncompressed)
+     Target: page http://127.0.0.1:3000/en/faq
+     Meta: estimatedSavings: ~57KB
+    </issue>
+   After:
+    <issue fp="0c20f7179850" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (89KB uncompressed)
+     Target: page http://127.0.0.1:3000/en/faq
+     Meta: estimatedSavings: ~62KB
+    </issue>
+  </change>
+  <change type="change" fp="7bddb38336d7" rule="perf/compression" severity="warning" status="fail" check="compression">
+   fail→fail: No compression detected (131KB uncompressed)
+   Before:
+    <issue fp="7bddb38336d7" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (113KB uncompressed)
+     Target: page http://127.0.0.1:3000/en/industries
+     Meta: estimatedSavings: ~79KB
+    </issue>
+   After:
+    <issue fp="7bddb38336d7" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (131KB uncompressed)
+     Target: page http://127.0.0.1:3000/en/industries
+     Meta: estimatedSavings: ~92KB
+    </issue>
+  </change>
+  <change type="change" fp="37a624cf8c82" rule="perf/compression" severity="warning" status="fail" check="compression">
+   fail→fail: No compression detected (92KB uncompressed)
+   Before:
+    <issue fp="37a624cf8c82" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (86KB uncompressed)
+     Target: page http://127.0.0.1:3000/en/industries/music-for-art-museums-and-fashion
+     Meta: estimatedSavings: ~60KB
+    </issue>
+   After:
+    <issue fp="37a624cf8c82" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (92KB uncompressed)
+     Target: page http://127.0.0.1:3000/en/industries/music-for-art-museums-and-fashion
+     Meta: estimatedSavings: ~64KB
+    </issue>
+  </change>
+  <change type="change" fp="8b2eaea50a49" rule="perf/compression" severity="warning" status="fail" check="compression">
+   fail→fail: No compression detected (89KB uncompressed)
+   Before:
+    <issue fp="8b2eaea50a49" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (83KB uncompressed)
+     Target: page http://127.0.0.1:3000/en/industries/music-for-events-and-experiences
+     Meta: estimatedSavings: ~58KB
+    </issue>
+   After:
+    <issue fp="8b2eaea50a49" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (89KB uncompressed)
+     Target: page http://127.0.0.1:3000/en/industries/music-for-events-and-experiences
+     Meta: estimatedSavings: ~62KB
+    </issue>
+  </change>
+  <change type="change" fp="37fcc58a0952" rule="perf/compression" severity="warning" status="fail" check="compression">
+   fail→fail: No compression detected (92KB uncompressed)
+   Before:
+    <issue fp="37fcc58a0952" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (86KB uncompressed)
+     Target: page http://127.0.0.1:3000/en/industries/music-for-hotels-and-resorts
+     Meta: estimatedSavings: ~61KB
+    </issue>
+   After:
+    <issue fp="37fcc58a0952" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (92KB uncompressed)
+     Target: page http://127.0.0.1:3000/en/industries/music-for-hotels-and-resorts
+     Meta: estimatedSavings: ~65KB
+    </issue>
+  </change>
+  <change type="change" fp="c80e07fb6c77" rule="perf/compression" severity="warning" status="fail" check="compression">
+   fail→fail: No compression detected (92KB uncompressed)
+   Before:
+    <issue fp="c80e07fb6c77" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (87KB uncompressed)
+     Target: page http://127.0.0.1:3000/en/industries/music-for-restaurants-and-bars
+     Meta: estimatedSavings: ~61KB
+    </issue>
+   After:
+    <issue fp="c80e07fb6c77" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (92KB uncompressed)
+     Target: page http://127.0.0.1:3000/en/industries/music-for-restaurants-and-bars
+     Meta: estimatedSavings: ~65KB
+    </issue>
+  </change>
+  <change type="change" fp="2006dbc23ee4" rule="perf/compression" severity="warning" status="fail" check="compression">
+   fail→fail: No compression detected (89KB uncompressed)
+   Before:
+    <issue fp="2006dbc23ee4" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (83KB uncompressed)
+     Target: page http://127.0.0.1:3000/en/industries/music-for-retail-stores
+     Meta: estimatedSavings: ~58KB
+    </issue>
+   After:
+    <issue fp="2006dbc23ee4" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (89KB uncompressed)
+     Target: page http://127.0.0.1:3000/en/industries/music-for-retail-stores
+     Meta: estimatedSavings: ~62KB
+    </issue>
+  </change>
+  <change type="change" fp="e6eca525495d" rule="perf/compression" severity="warning" status="fail" check="compression">
+   fail→fail: No compression detected (89KB uncompressed)
+   Before:
+    <issue fp="e6eca525495d" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (83KB uncompressed)
+     Target: page http://127.0.0.1:3000/en/industries/music-for-wellness-and-gyms
+     Meta: estimatedSavings: ~58KB
+    </issue>
+   After:
+    <issue fp="e6eca525495d" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (89KB uncompressed)
+     Target: page http://127.0.0.1:3000/en/industries/music-for-wellness-and-gyms
+     Meta: estimatedSavings: ~62KB
+    </issue>
+  </change>
+  <change type="change" fp="5861dd4ceee1" rule="perf/compression" severity="warning" status="fail" check="compression">
+   fail→fail: No compression detected (78KB uncompressed)
+   Before:
+    <issue fp="5861dd4ceee1" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (72KB uncompressed)
+     Target: page http://127.0.0.1:3000/en/privacy
+     Meta: estimatedSavings: ~50KB
+    </issue>
+   After:
+    <issue fp="5861dd4ceee1" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (78KB uncompressed)
+     Target: page http://127.0.0.1:3000/en/privacy
+     Meta: estimatedSavings: ~55KB
+    </issue>
+  </change>
+  <change type="change" fp="29f43b2d1679" rule="perf/compression" severity="warning" status="fail" check="compression">
+   fail→fail: No compression detected (114KB uncompressed)
+   Before:
+    <issue fp="29f43b2d1679" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (101KB uncompressed)
+     Target: page http://127.0.0.1:3000/en/services
+     Meta: estimatedSavings: ~71KB
+    </issue>
+   After:
+    <issue fp="29f43b2d1679" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (114KB uncompressed)
+     Target: page http://127.0.0.1:3000/en/services
+     Meta: estimatedSavings: ~80KB
+    </issue>
+  </change>
+  <change type="change" fp="20804bc25b33" rule="perf/compression" severity="warning" status="fail" check="compression">
+   fail→fail: No compression detected (87KB uncompressed)
+   Before:
+    <issue fp="20804bc25b33" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (80KB uncompressed)
+     Target: page http://127.0.0.1:3000/en/services/audio-upgrades
+     Meta: estimatedSavings: ~56KB
+    </issue>
+   After:
+    <issue fp="20804bc25b33" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (87KB uncompressed)
+     Target: page http://127.0.0.1:3000/en/services/audio-upgrades
+     Meta: estimatedSavings: ~61KB
+    </issue>
+  </change>
+  <change type="change" fp="13046e8b4488" rule="perf/compression" severity="warning" status="fail" check="compression">
+   fail→fail: No compression detected (90KB uncompressed)
+   Before:
+    <issue fp="13046e8b4488" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (83KB uncompressed)
+     Target: page http://127.0.0.1:3000/en/services/event-soundtracks
+     Meta: estimatedSavings: ~58KB
+    </issue>
+   After:
+    <issue fp="13046e8b4488" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (90KB uncompressed)
+     Target: page http://127.0.0.1:3000/en/services/event-soundtracks
+     Meta: estimatedSavings: ~63KB
+    </issue>
+  </change>
+  <change type="change" fp="a4054512773f" rule="perf/compression" severity="warning" status="fail" check="compression">
+   fail→fail: No compression detected (94KB uncompressed)
+   Before:
+    <issue fp="a4054512773f" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (84KB uncompressed)
+     Target: page http://127.0.0.1:3000/en/services/signature-playlists
+     Meta: estimatedSavings: ~58KB
+    </issue>
+   After:
+    <issue fp="a4054512773f" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (94KB uncompressed)
+     Target: page http://127.0.0.1:3000/en/services/signature-playlists
+     Meta: estimatedSavings: ~66KB
+    </issue>
+  </change>
+  <change type="change" fp="1fa862258b91" rule="perf/compression" severity="warning" status="fail" check="compression">
+   fail→fail: No compression detected (90KB uncompressed)
+   Before:
+    <issue fp="1fa862258b91" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (83KB uncompressed)
+     Target: page http://127.0.0.1:3000/en/services/sonic-identity
+     Meta: estimatedSavings: ~58KB
+    </issue>
+   After:
+    <issue fp="1fa862258b91" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (90KB uncompressed)
+     Target: page http://127.0.0.1:3000/en/services/sonic-identity
+     Meta: estimatedSavings: ~63KB
+    </issue>
+  </change>
+  <change type="change" fp="dc543dae68c9" rule="perf/compression" severity="warning" status="fail" check="compression">
+   fail→fail: No compression detected (93KB uncompressed)
+   Before:
+    <issue fp="dc543dae68c9" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (87KB uncompressed)
+     Target: page http://127.0.0.1:3000/en/sitemap-page
+     Meta: estimatedSavings: ~61KB
+    </issue>
+   After:
+    <issue fp="dc543dae68c9" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (93KB uncompressed)
+     Target: page http://127.0.0.1:3000/en/sitemap-page
+     Meta: estimatedSavings: ~65KB
+    </issue>
+  </change>
+  <change type="change" fp="a695a8962a1a" rule="perf/compression" severity="warning" status="fail" check="compression">
+   fail→fail: No compression detected (87KB uncompressed)
+   Before:
+    <issue fp="a695a8962a1a" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (81KB uncompressed)
+     Target: page http://127.0.0.1:3000/en/terms
+     Meta: estimatedSavings: ~57KB
+    </issue>
+   After:
+    <issue fp="a695a8962a1a" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (87KB uncompressed)
+     Target: page http://127.0.0.1:3000/en/terms
+     Meta: estimatedSavings: ~61KB
+    </issue>
+  </change>
+  <change type="change" fp="082d03c217cc" rule="perf/critical-request-chains" severity="warning" status="warn" check="critical-request-chains">
+   warn→warn: 3 critical request chain(s) found
+   Before:
+    <issue fp="082d03c217cc" rule="perf/critical-request-chains" severity="warning" status="warn" check="critical-request-chains" category="perf" weight="5">
+     3 critical request chain(s) found
+     Target: item CSS: /_next/static/css/6ce0b14ba110c083.css
+     Meta: blockingCss: 2, blockingJs: 1, importCount: 0, preloads: 7
+    </issue>
+   After:
+    <issue fp="082d03c217cc" rule="perf/critical-request-chains" severity="warning" status="warn" check="critical-request-chains" category="perf" weight="5">
+     3 critical request chain(s) found
+     Target: item CSS: /_next/static/css/6ce0b14ba110c083.css
+     Meta: blockingCss: 2, blockingJs: 1, importCount: 0, preloads: 9
+    </issue>
+  </change>
+  <change type="change" fp="e0e1b772fdde" rule="perf/critical-request-chains" severity="warning" status="warn" check="critical-request-chains">
+   warn→warn: 3 critical request chain(s) found
+   Before:
+    <issue fp="e0e1b772fdde" rule="perf/critical-request-chains" severity="warning" status="warn" check="critical-request-chains" category="perf" weight="5">
+     3 critical request chain(s) found
+     Target: item CSS: /_next/static/css/b23798b7ae16a7cc.css
+     Meta: blockingCss: 2, blockingJs: 1, importCount: 0, preloads: 7
+    </issue>
+   After:
+    <issue fp="e0e1b772fdde" rule="perf/critical-request-chains" severity="warning" status="warn" check="critical-request-chains" category="perf" weight="5">
+     3 critical request chain(s) found
+     Target: item CSS: /_next/static/css/b23798b7ae16a7cc.css
+     Meta: blockingCss: 2, blockingJs: 1, importCount: 0, preloads: 9
+    </issue>
+  </change>
+  <change type="change" fp="639bdc8e1a05" rule="perf/critical-request-chains" severity="warning" status="warn" check="critical-request-chains">
+   warn→warn: 3 critical request chain(s) found
+   Before:
+    <issue fp="639bdc8e1a05" rule="perf/critical-request-chains" severity="warning" status="warn" check="critical-request-chains" category="perf" weight="5">
+     3 critical request chain(s) found
+     Target: item JS: /_next/static/chunks/polyfills-42372ed130431b0a.js
+     Meta: blockingCss: 2, blockingJs: 1, importCount: 0, preloads: 7
+    </issue>
+   After:
+    <issue fp="639bdc8e1a05" rule="perf/critical-request-chains" severity="warning" status="warn" check="critical-request-chains" category="perf" weight="5">
+     3 critical request chain(s) found
+     Target: item JS: /_next/static/chunks/polyfills-42372ed130431b0a.js
+     Meta: blockingCss: 2, blockingJs: 1, importCount: 0, preloads: 9
+    </issue>
+  </change>
+ </changed>
+</diff>

@@ -91,6 +91,7 @@ export function Navbar({ lang, navigation }: NavbarProps) {
                             }
                             alt="SensEar"
                             fill
+                            sizes="64px"
                             className="object-contain transition-all duration-300 group-hover:scale-110"
                             priority
                         />

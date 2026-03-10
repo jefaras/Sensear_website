@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<diff version="0.0.38">
+ <baseline id="07153a4e-7415-4ea6-b83d-54daba5fe206" url="https://sensear.music" date="2026-03-09T23:05:08.822Z" pages="58" score="69" grade="D"/>
+ <current id="303bfdf9-ad17-43d9-8d59-47a1609f1855" url="https://sensear.music" date="2026-03-09T23:34:13.279Z" pages="58" score="69" grade="D"/>
+ <summary added="19" removed="21" changed="0" regressions="0" improvements="0"/>
+ <added>
+  <issue fp="a011bec93fc7" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   19 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: 2R2WDb******nVNq (Found in html (https://sensear.music/el/blog/what-exactly-does-music-curator-do))
+  </issue>
+  <issue fp="4a18dcad3e2e" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   19 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: 4kx1nM******UlBy (Found in html (https://sensear.music/el/blog/background-music-shapes-customer-behavior))
+  </issue>
+  <issue fp="685fb574e111" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   19 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: 5eQtwG******Srpf (Found in html (https://sensear.music/el/industries/music-for-hotels-and-resorts))
+  </issue>
+  <issue fp="1f7f75937134" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   19 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: 6o2a1y******ytE3 (Found in html (https://sensear.music/el/services/audio-upgrades))
+  </issue>
+  <issue fp="1948736fb920" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   19 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: 6SQm3E******Q07q (Found in html (https://sensear.music/en/terms))
+  </issue>
+  <issue fp="2356f73a9657" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   19 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: 8WiFSj******Y2fO (Found in html (https://sensear.music/en/industries/music-for-art-museums-and-fashion))
+  </issue>
+  <issue fp="3c3e9142000d" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   19 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: 98TZ0R******GxW9 (Found in html (https://sensear.music/en/blog/service-environment-shapes-wait-time))
+  </issue>
+  <issue fp="50d755b437d7" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   19 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: Ah59ym******KW27 (Found in html (https://sensear.music/en/blog/what-exactly-does-music-curator-do))
+  </issue>
+  <issue fp="6314c2fabad8" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   19 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: EG8sCn******yTzX (Found in html (https://sensear.music/el/blog/brand-music-converts-browsers-buyers))
+  </issue>
+  <issue fp="de2a1eaf964c" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   19 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: F4FVlm******8eRP (Found in html (https://sensear.music/en/faq))
+  </issue>
+  <issue fp="e04313a001c8" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   19 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: f69TfG******ylN8 (Found in html (https://sensear.music/el/services/signature-playlists))
+  </issue>
+  <issue fp="129c4a434203" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   19 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: FZ5fnj******dm89 (Found in html (https://sensear.music/el/faq))
+  </issue>
+  <issue fp="27190109a45b" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   19 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: Iqx6uV******yost (Found in html (https://sensear.music/en/services/sonic-identity))
+  </issue>
+  <issue fp="5a15cb51f65a" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   19 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: kq5vlV******4Fbr (Found in html (https://sensear.music/el/industries))
+  </issue>
+  <issue fp="ab0adae4c23c" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   19 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: ni2TKN******dpPe (Found in html (https://sensear.music/el/industries/music-for-retail-stores))
+  </issue>
+  <issue fp="2cf8a43fce9c" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   19 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: o5KBwZ******c2Lz (Found in html (https://sensear.music/en/blog/three-reasons-make-music-hospitality))
+  </issue>
+  <issue fp="b8ad6e9dc61b" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   19 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: QWCXdM******tghu (Found in html (https://sensear.music/el/services/sonic-identity))
+  </issue>
+  <issue fp="bed680452643" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   19 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: W9AWAI******o6Tl (Found in html (https://sensear.music/en/services/signature-playlists))
+  </issue>
+  <issue fp="b0b7a7af29d8" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   19 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: Xl25Ey******9ZEP (Found in html (https://sensear.music/en/blog))
+  </issue>
+ </added>
+ <removed>
+  <issue fp="f1e5564af2dd" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   21 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: 0g2Uxa******gamu (Found in html (https://sensear.music/el/services/signature-playlists))
+  </issue>
+  <issue fp="11bcbfcaf8a2" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   21 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: 41zIiz******9Mea (Found in html (https://sensear.music/en/terms))
+  </issue>
+  <issue fp="0e253563d557" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   21 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: 47CSYv******QJmP (Found in html (https://sensear.music/en/blog/brand-music-converts-browsers-buyers))
+  </issue>
+  <issue fp="95d14e4b680a" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   21 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: 4mbO3K******urSZ (Found in html (https://sensear.music/en/industries/music-for-restaurants-and-bars))
+  </issue>
+  <issue fp="456d4880cef8" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   21 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: 4vM60b******Ucwq (Found in html (https://sensear.music/en/blog/building-brand-people-can-hear))
+  </issue>
+  <issue fp="7be40f715f9f" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   21 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: 5FiA8U******8582 (Found in html (https://sensear.music/en/blog/background-music-shapes-customer-behavior))
+  </issue>
+  <issue fp="5277edd9acb1" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   21 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: 9YhGQK******Lfzi (Found in html (https://sensear.music/el/blog/building-brand-people-can-hear))
+  </issue>
+  <issue fp="b85ac94dff6a" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   21 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: AMXM50******o8dn (Found in html (https://sensear.music/el/services))
+  </issue>
+  <issue fp="eee0afea7d4c" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   21 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: BTZ5zs******rG5d (Found in html (https://sensear.music/el/blog/music-curation-cycle-venues))
+  </issue>
+  <issue fp="45021f1fceb7" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   21 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: d0z1X0******MOsG (Found in html (https://sensear.music/en/services/event-soundtracks))
+  </issue>
+  <issue fp="35d704a42692" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   21 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: GAPnTb******7Vf5 (Found in html (https://sensear.music/el/sitemap-page))
+  </issue>
+  <issue fp="d6f9fb8b0d33" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   21 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: IK48XJ******fFZd (Found in html (https://sensear.music/el/industries/music-for-art-museums-and-fashion))
+  </issue>
+  <issue fp="496aeb2c620c" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   21 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: Iy1CPs******F27x (Found in html (https://sensear.music/en/industries/music-for-events-and-experiences))
+  </issue>
+  <issue fp="de4d7f3b7006" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   21 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: LDYimx******yv3m (Found in html (https://sensear.music/en/blog/music-curation-cycle-venues))
+  </issue>
+  <issue fp="604b4d567259" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   21 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: MCoOTl******BoqM (Found in html (https://sensear.music/el/blog/brand-music-converts-browsers-buyers))
+  </issue>
+  <issue fp="3ba045f3c584" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   21 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: MVPu1k******Au1E (Found in html (https://sensear.music/en/faq))
+  </issue>
+  <issue fp="2904adbbb857" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   21 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: NDDKXR******FI6K (Found in html (https://sensear.music/el/blog/how-top-hospitality-brands-design-sound))
+  </issue>
+  <issue fp="0e55ebf5d85a" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   21 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: Q2b9K1******4WkV (Found in html (https://sensear.music/en/services/audio-upgrades))
+  </issue>
+  <issue fp="565586b5c433" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   21 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: TT2yBl******ypqG (Found in html (https://sensear.music/en/services/signature-playlists))
+  </issue>
+  <issue fp="f29afece8579" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   21 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: w6HYUl******M9Z4 (Found in html (https://sensear.music/el/case-studies))
+  </issue>
+  <issue fp="7f8f031c1cf8" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   21 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: Wg4HH5******OEl1 (Found in html (https://sensear.music/en/contact))
+  </issue>
+ </removed>
+ <changed>
+ </changed>
+</diff>

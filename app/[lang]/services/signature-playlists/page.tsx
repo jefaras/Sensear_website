@@ -113,6 +113,8 @@ export default async function SignaturePlaylistsPage({
                                 alt="Mindful music curation experience"
                                 width={600}
                                 height={400}
+                                sizes="50vw"
+                                loading="lazy"
                                 className="w-full h-auto rounded-2xl shadow-lg"
                             />
                         </div>
@@ -159,6 +161,8 @@ export default async function SignaturePlaylistsPage({
                                 alt="Luxury hotel room with curated music atmosphere"
                                 width={600}
                                 height={400}
+                                sizes="50vw"
+                                loading="lazy"
                                 className="w-full h-auto rounded-2xl shadow-lg"
                             />
                         </div>
@@ -178,6 +182,7 @@ export default async function SignaturePlaylistsPage({
                                 alt="Vinyl records collection for curated playlists"
                                 width={600}
                                 height={400}
+                                sizes="50vw"
                                 className="w-full h-auto rounded-2xl shadow-lg"
                             />
                         </div>

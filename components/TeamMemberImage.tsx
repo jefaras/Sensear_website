@@ -7,13 +7,17 @@ interface TeamMemberImageProps {
     alt: string;
     className?: string;
     fallbackSrc?: string;
+    width?: number;
+    height?: number;
 }
 
 export function TeamMemberImage({
     src,
     alt,
     className,
-    fallbackSrc = "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=500&q=80"
+    fallbackSrc = "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=500&q=80",
+    width = 500,
+    height = 500,
 }: TeamMemberImageProps) {
     const [imgSrc, setImgSrc] = useState(src);
     const [hasError, setHasError] = useState(false);
@@ -23,6 +27,10 @@ export function TeamMemberImage({
             src={hasError ? fallbackSrc : imgSrc}
             alt={alt}
             className={className}
+            width={width}
+            height={height}
+            loading="lazy"
+            decoding="async"
             onError={() => setHasError(true)}
         />
     );

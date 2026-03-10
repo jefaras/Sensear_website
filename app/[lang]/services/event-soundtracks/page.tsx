@@ -44,7 +44,7 @@ export default async function EventSoundtracksPage({
                             <div className="w-full max-w-[740px]">
                                 <div className="overflow-hidden rounded-2xl shadow-2xl">
                                     <div className="relative aspect-square">
-                                        <Image src="/images/services/event-soundtracks/event-soundtracks-hero.jpg" alt="Custom event soundtracks and live DJ programming" fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" />
+                                        <Image src="/images/services/event-soundtracks/event-soundtracks-hero.jpg" alt="Custom event soundtracks and live DJ programming" fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" priority />
                                     </div>
                                 </div>
                             </div>
@@ -72,7 +72,7 @@ export default async function EventSoundtracksPage({
                     <h2 className="text-[2.7rem] md:text-[3.45rem] font-bold mb-12 text-black text-center leading-heading">{t.what_we_do.title}</h2>
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
                         <div className="hidden lg:block">
-                            <Image src="/images/services/event-soundtracks/event-soundtracks-planning.jpg" alt="Event soundtrack planning and execution" width={800} height={600} sizes="50vw" className="w-full h-auto rounded-2xl shadow-lg" />
+                            <Image src="/images/services/event-soundtracks/event-soundtracks-planning.jpg" alt="Event soundtrack planning and execution" width={800} height={600} sizes="50vw" loading="eager" className="w-full h-auto rounded-2xl shadow-lg" />
                         </div>
                         <div className="space-y-8">
                             {t.what_we_do.items.map((item: any, index: number) => (
@@ -102,7 +102,7 @@ export default async function EventSoundtracksPage({
                             </ul>
                         </div>
                         <div className="hidden lg:block">
-                            <Image src="/images/services/event-soundtracks/event-soundtracks-venue.jpg" alt="Event venue with curated soundscape" width={800} height={600} sizes="50vw" className="w-full h-auto rounded-2xl shadow-lg" />
+                            <Image src="/images/services/event-soundtracks/event-soundtracks-venue.jpg" alt="Event venue with curated soundscape" width={800} height={600} sizes="50vw" loading="eager" className="w-full h-auto rounded-2xl shadow-lg" />
                         </div>
                     </div>
                 </div>
