@@ -54,7 +54,7 @@ export default async function Industries({
                                     <span key={i} className="block">{line}</span>
                                 )) || content.hero.title}
                             </h1>
-                            <p className="text-lg md:text-xl text-black/60 leading-relaxed slide-up-2">
+                            <p className="text-xl md:text-2xl text-black/70 leading-relaxed slide-up-2">
                                 {content.hero.subtitle}
                             </p>
                         </div>
