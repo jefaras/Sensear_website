@@ -23,6 +23,14 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: Loc
                 ? 'Εξειδικευμένη μουσική επιμέλεια για σπα και γυμναστήρια.'
                 : 'Bespoke music curation for spas and gyms.',
             type: 'website',
+            images: [
+                {
+                    url: '/images/industries/industry-wellness-gyms.jpg',
+                    width: 1200,
+                    height: 630,
+                    alt: 'Music curation for spas and gyms',
+                },
+            ],
         },
     };
 }

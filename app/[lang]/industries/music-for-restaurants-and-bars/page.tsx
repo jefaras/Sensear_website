@@ -23,6 +23,14 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: Loc
                 ? 'Εξειδικευμένη μουσική επιμέλεια για εστιατόρια και μπαρ.'
                 : 'Bespoke music curation for restaurants and bars.',
             type: 'website',
+            images: [
+                {
+                    url: '/images/industries/restaurants-bars-curated-music-atmosphere.jpg',
+                    width: 1200,
+                    height: 630,
+                    alt: 'Music curation for restaurants and bars',
+                },
+            ],
         },
     };
 }

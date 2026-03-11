@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<audit version="0.0.38">
+<site url="http://127.0.0.1:3000" crawled="58" date="2026-03-10T20:22:49.269Z"/>
+<score overall="61" grade="D">
+ <cat name="Performance" score="81"/>
+ <cat name="Security" score="57"/>
+ <cat name="Accessibility" score="97"/>
+ <cat name="Crawlability" score="86"/>
+ <cat name="Images" score="79"/>
+ <cat name="Core SEO" score="88"/>
+ <cat name="Structured Data" score="90"/>
+ <cat name="Content" score="79"/>
+ <cat name="E-E-A-T" score="85"/>
+ <cat name="Mobile" score="92"/>
+ <cat name="Internationalization" score="100"/>
+ <cat name="Legal Compliance" score="100"/>
+ <cat name="Links" score="100"/>
+ <cat name="Local SEO" score="100"/>
+ <cat name="Social Media" score="100"/>
+ <cat name="URL Structure" score="100"/>
+</score>
+<summary passed="5702" warnings="727" failed="147"/>
+<issues>
+ <category name="Crawlability" errors="1" warnings="2">
+  <rule id="crawl/sitemap-domain" severity="error" status="fail" docs="https://docs.squirrelscan.com/rules/crawl/sitemap-domain">
+   116 URL(s) point to different domain(s)
+   Items (5/116):
+    - https://sensear.music/en [host: sensear.music]
+    - https://sensear.music/el [host: sensear.music]
+    - https://sensear.music/en/about [host: sensear.music]
+    - https://sensear.music/el/about [host: sensear.music]
+    - https://sensear.music/en/services [host: sensear.music]
+  </rule>
+  <rule id="crawl/sitemap-coverage" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/crawl/sitemap-coverage">
+   58 indexable page(s) not in sitemap (100%); 58 sitemap URL(s) were not crawled
+   Items (5/116):
+    - /en
+    - /en/services
+    - /el
+    - /en/industries
+    - /en/case-studies
+  </rule>
+ </category>
+ <category name="Core SEO" errors="0" warnings="58">
+  <rule id="core/meta-title" severity="error" status="warn" docs="https://docs.squirrelscan.com/rules/core/meta-title">
+   Title too short; Title too long
+   Pages (5/15): /en/contact, /el/blog/background-music-shapes-customer-behavior, /el/blog/brand-music-converts-browsers-buyers, /el/blog/building-brand-people-can-hear, /el/blog/how-top-hospitality-brands-design-sound
+   Items (5/15):
+    - /en/contact (Contact Us | SensEar Music (26 chars))
+    - /en/blog/what-exactly-does-music-curator-do (What does a music curator do? - SensEar Music | Se (61 chars))
+    - /el/blog/how-top-hospitality-brands-design-sound (Σχεδιασμός ήχου στη φιλοξενία - SensEar Music | Se (61 chars))
+    - /el/blog/music-curation-cycle-venues (Ο κύκλος της μουσικής επιμέλειας - SensEar Music | (64 chars))
+    - /el/blog/building-brand-people-can-hear (Χτίζοντας brands που «ακούγονται» - SensEar Music  (65 chars))
+  </rule>
+  <rule id="core/meta-description" severity="error" status="warn" docs="https://docs.squirrelscan.com/rules/core/meta-description">
+   Description too long; Description too short
+   Pages (5/30): /en, /el/blog, /el/industries, /el/services, /el/terms
+   Items (5/30):
+    - /en (Bespoke music curation and sonic branding for hosp (172 chars))
+    - /en/faq (Bespoke music curation and sonic branding for hosp (172 chars))
+    - /en/sitemap-page (Bespoke music curation and sonic branding for hosp (172 chars))
+    - /en/services/signature-playlists (Bespoke music curation and sonic branding for hosp (172 chars))
+    - /en/services/event-soundtracks (Bespoke music curation and sonic branding for hosp (172 chars))
+  </rule>
+  <rule id="core/og-tags" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/core/og-tags">
+   Missing og:image - social shares will lack imagery
+   Pages (5/12): /el/industries/music-for-art-museums-and-fashion, /el/industries/music-for-events-and-experiences, /el/industries/music-for-hotels-and-resorts, /el/industries/music-for-restaurants-and-bars, /el/industries/music-for-retail-stores
+  </rule>
+  <rule id="core/title-unique" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/core/title-unique">
+   2 duplicate title(s) affecting 14 pages
+   Items (2):
+    - sensear music - bespoke music curation &amp; sonic branding (&quot;sensear music - bespoke music curation &amp;...&quot; (7 pages)) [pageCount: 7] (from: /en, /en/faq, /en/sitemap-page, /en/services/signature-playlists, /en/services/event-soundtracks; +2 more)
+    - sensear music - μουσική επιμέλεια &amp; sonic branding (&quot;sensear music - μουσική επιμέλεια &amp; soni...&quot; (7 pages)) [pageCount: 7] (from: /el, /el/faq, /el/sitemap-page, /el/services/signature-playlists, /el/services/sonic-identity; +2 more)
+  </rule>
+ </category>
+ <category name="Security" errors="58" warnings="59">
+  <rule id="security/leaked-secrets" severity="error" status="warn" docs="https://docs.squirrelscan.com/rules/security/leaked-secrets">
+   18 potential secret(s) detected (verify manually)
+   Items (5/18):
+    - LinkedIn Client Secret: 6M6NfH******v0N9 (Found in html (http://127.0.0.1:3000/en/case-studies))
+    - LinkedIn Client Secret: 7dHOSP******wUhu (Found in html (http://127.0.0.1:3000/en/contact))
+    - LinkedIn Client Secret: 4pSquR******pxxW (Found in html (http://127.0.0.1:3000/en/industries/music-for-hotels-and-resorts))
+    - LinkedIn Client Secret: M7pMnz******9CFY (Found in html (http://127.0.0.1:3000/en/blog/three-reasons-make-music-hospitality))
+    - LinkedIn Client Secret: dl4feE******8Qzl (Found in html (http://127.0.0.1:3000/en/blog/brand-music-converts-browsers-buyers))
+  </rule>
+  <rule id="security/https" severity="error" status="fail" docs="https://docs.squirrelscan.com/rules/security/https">
+   Page not served over HTTPS
+   Pages (5/58): /el, /en, /el/about, /el/blog, /el/case-studies
+  </rule>
+  <rule id="security/form-captcha" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/security/form-captcha">
+   N public form(s) without CAPTCHA
+   Pages (5/58): /el, /en, /el/about, /el/blog, /el/case-studies
+   Items (2):
+    - form[0]
+    - form[1]
+  </rule>
+ </category>
+ <category name="Content" errors="0" warnings="25">
+  <rule id="content/duplicate-title" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/content/duplicate-title">
+   2 duplicate title(s) found across 14 pages
+   Items (2):
+    - sensear music - bespoke music curation &amp; sonic branding (&quot;sensear music - bespoke music curation &amp;...&quot; (7 pages)) [pageCount: 7] (from: /en, /en/faq, /en/sitemap-page, /en/services/signature-playlists, /en/services/event-soundtracks; +2 more)
+    - sensear music - μουσική επιμέλεια &amp; sonic branding (&quot;sensear music - μουσική επιμέλεια &amp; soni...&quot; (7 pages)) [pageCount: 7] (from: /el, /el/faq, /el/sitemap-page, /el/services/signature-playlists, /el/services/sonic-identity; +2 more)
+  </rule>
+  <rule id="content/duplicate-description" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/content/duplicate-description">
+   2 duplicate description(s) found across 14 pages
+   Items (2):
+    - bespoke music curation and sonic branding for hospitality, r (&quot;bespoke music curation and sonic brandin...&quot; (7 pages)) [pageCount: 7] (from: /en, /en/faq, /en/sitemap-page, /en/services/signature-playlists, /en/services/event-soundtracks; +2 more)
+    - εξειδικευμένη μουσική επιμέλεια και sonic branding για ξενοδ (&quot;εξειδικευμένη μουσική επιμέλεια και soni...&quot; (7 pages)) [pageCount: 7] (from: /el, /el/faq, /el/sitemap-page, /el/services/signature-playlists, /el/services/sonic-identity; +2 more)
+  </rule>
+  <rule id="content/keyword-stuffing" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/content/keyword-stuffing">
+   N word(s) may be overused
+   Pages (5/18): /en, /en/about, /en/blog, /en/case-studies, /en/contact
+   Items (5/10):
+    - music (&quot;music&quot; (4.8%)) [count: 19, density: 4.8346055979643765]
+    - your (&quot;your&quot; (3.2%)) [count: 9, density: 3.1578947368421053]
+    - curation (&quot;curation&quot; (3.2%)) [count: 9, density: 3.214285714285714]
+    - information (&quot;information&quot; (3.2%)) [count: 20, density: 3.1645569620253164]
+    - event (&quot;event&quot; (3.6%)) [count: 9, density: 3.5856573705179287]
+  </rule>
+  <rule id="content/word-count" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/content/word-count">
+   Thin content: N words (min N)
+   Pages (5): /el/faq, /el/sitemap-page, /en/faq, /en/sitemap-page, /en/services/event-soundtracks
+   Items (5):
+    - /en/faq (Thin content: 213 words (min 300))
+    - /en/sitemap-page (Thin content: 228 words (min 300))
+    - /en/services/event-soundtracks (Thin content: 295 words (min 300))
+    - /el/faq (Thin content: 211 words (min 300))
+    - /el/sitemap-page (Thin content: 231 words (min 300))
+  </rule>
+ </category>
+ <category name="Structured Data" errors="0" warnings="58">
+  <rule id="schema/local-business" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/schema/local-business">
+   Address incomplete
+   Pages (5/58): /el, /en, /el/about, /el/blog, /el/case-studies
+   Items (3):
+    - streetAddress
+    - addressLocality
+    - postalCode
+  </rule>
+ </category>
+ <category name="Images" errors="0" warnings="208">
+  <rule id="images/offscreen-lazy" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/images/offscreen-lazy">
+   1 below-fold image(s) without lazy loading
+   Pages (5/34): /el, /en, /el/about, /el/blog, /el/case-studies
+   Items (1):
+    - image
+  </rule>
+  <rule id="images/responsive-size" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/images/responsive-size">
+   N small image(s) may be serving oversized files
+   Pages (5/58): /el, /en, /el/about, /el/blog, /el/case-studies
+   Items (5/14):
+    - image (40x40, no srcset)
+    - image (100x100, no srcset)
+    - image (100x100, no srcset)
+    - image (100x100, no srcset)
+    - image (100x100, no srcset)
+  </rule>
+  <rule id="images/dimensions" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/images/dimensions">
+   N image(s) missing width/height (causes CLS)
+   Pages (5/58): /el, /en, /el/about, /el/blog, /el/case-studies
+   Items (5/52):
+    - /_next/image?url=%2Fimages%2Fcarousel%2Fcarousel-event-venue.jpg&amp;w=3840&amp;q=75 | &lt;img src=&quot;http://127.0.0.1:3000/_next/image?url=%2Fimages%2Fcarousel%2Fcarousel-event-venue.jpg&amp;w=3840&amp;q=75&quot; alt=&quot;Event venue professional audio solutions&quot;&gt;
+    - /_next/image?url=%2Fimages%2Fcase-studies%2Fcase-study-beach-house.webp&amp;w=3840&amp;q=75 | &lt;img src=&quot;http://127.0.0.1:3000/_next/image?url=%2Fimages%2Fcase-studies%2Fcase-study-beach-house.webp&amp;w=3840&amp;q=75&quot; alt=&quot;Beach House Antiparos - curated music experience&quot;&gt;
+    - /_next/image?url=%2Fimages%2Fcase-studies%2Fcase-study-pelicanos.webp&amp;w=3840&amp;q=75 | &lt;img src=&quot;http://127.0.0.1:3000/_next/image?url=%2Fimages%2Fcase-studies%2Fcase-study-pelicanos.webp&amp;w=3840&amp;q=75&quot; alt=&quot;Pelicanos Sifnos - jazzy playlist curation&quot;&gt;
+    - /_next/image?url=%2Fimages%2Fservices%2Fsignature-playlists%2Fsignature-playlists-hero.jpg&amp;w=3840&amp;q=75 | &lt;img src=&quot;http://127.0.0.1:3000/_next/image?url=%2Fimages%2Fservices%2Fsignature-playlists%2Fsignature-playlists-hero.jpg&amp;w=3840&amp;q=75&quot; alt=&quot;Yam Antiparos - night playlist design&quot;&gt;
+    - /_next/image?url=%2Fimages%2Fcase-studies%2Fcase-study-levantis.webp&amp;w=3840&amp;q=75 | &lt;img src=&quot;http://127.0.0.1:3000/_next/image?url=%2Fimages%2Fcase-studies%2Fcase-study-levantis.webp&amp;w=3840&amp;q=75&quot; alt=&quot;Levantis - signature sound identity&quot;&gt;
+  </rule>
+  <rule id="images/optimized" severity="info" status="warn" docs="https://docs.squirrelscan.com/rules/images/optimized">
+   Images may not be optimized - consider using an image CDN
+   Pages (5/58): /el, /en, /el/about, /el/blog, /el/case-studies
+  </rule>
+ </category>
+ <category name="Performance" errors="58" warnings="252">
+  <rule id="perf/lcp-hints" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/perf/lcp-hints">
+   N potential LCP image(s) without preload
+   Pages (5/58): /el, /en, /el/about, /el/blog, /el/case-studies
+   Items (5/36):
+    - /_next/image?url=%2Fimages%2Fbrand%2Fsensear-logo-color.png&amp;w=3840&amp;q=75
+    - /_next/image?url=%2Fimages%2Fcarousel%2Fcarousel-event-venue.jpg&amp;w=3840&amp;q=75
+    - /_next/image?url=%2Fimages%2Fcase-studies%2Fcase-study-beach-house.webp&amp;w=3840&amp;q=75
+    - /_next/image?url=%2Fimages%2Fservices%2Fservices-hero-strategic-music.jpg&amp;w=3840&amp;q=75
+    - /_next/image?url=%2Fimages%2Fservices%2Fservice-signature-playlists.jpg&amp;w=3840&amp;q=75
+  </rule>
+  <rule id="perf/compression" severity="warning" status="fail" docs="https://docs.squirrelscan.com/rules/perf/compression">
+   No compression detected (NKB uncompressed)
+   Pages (5/58): /el, /en, /el/about, /el/blog, /el/case-studies
+   Items (5/58):
+    - /en (No compression detected (248KB uncompressed))
+    - /en/services (No compression detected (216KB uncompressed))
+    - /el (No compression detected (263KB uncompressed))
+    - /en/industries (No compression detected (232KB uncompressed))
+    - /en/case-studies (No compression detected (201KB uncompressed))
+  </rule>
+  <rule id="perf/critical-request-chains" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/perf/critical-request-chains">
+   3 critical request chain(s) found
+   Pages (5/58): /el, /en, /el/about, /el/blog, /el/case-studies
+   Items (3):
+    - CSS: /_next/static/css/b23798b7ae16a7cc.css
+    - CSS: /_next/static/css/6ce0b14ba110c083.css
+    - JS: /_next/static/chunks/polyfills-42372ed130431b0a.js
+  </rule>
+  <rule id="perf/lazy-above-fold" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/perf/lazy-above-fold">
+   2 above-fold image(s) with lazy loading
+   Pages (5/20): /el/industries/music-for-art-museums-and-fashion, /el/industries/music-for-events-and-experiences, /el/industries/music-for-hotels-and-resorts, /el/industries/music-for-restaurants-and-bars, /el/industries/music-for-retail-stores
+   Items (5/20):
+    - /_next/image?url=%2Fimages%2Fservices%2Fsignature-playlists%2Fsignature-playlists-curation.jpg&amp;w=3840&amp;q=75
+    - /_next/image?url=%2Fimages%2Fservices%2Fsignature-playlists%2Fsignature-playlists-hotel-room.jpg&amp;w=3840&amp;q=75
+    - /_next/image?url=%2Fimages%2Fservices%2Fevent-soundtracks%2Fevent-soundtracks-planning.jpg&amp;w=3840&amp;q=75
+    - /_next/image?url=%2Fimages%2Fservices%2Fevent-soundtracks%2Fevent-soundtracks-venue.jpg&amp;w=3840&amp;q=75
+    - /_next/image?url=%2Fimages%2Fservices%2Fsonic-identity%2Fsonic-identity-workshop.jpg&amp;w=3840&amp;q=75
+  </rule>
+  <rule id="perf/unminified-css" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/perf/unminified-css">
+   1 CSS file(s) appear unminified
+   Pages (5/58): /el, /en, /el/about, /el/blog, /el/case-studies
+   Items (1):
+    - inline style (2.5KB, ~1.0KB savings) [reason: high newlines (1.4%), excessive whitespace (40.5%)]
+  </rule>
+  <rule id="perf/http2" severity="info" status="warn" docs="https://docs.squirrelscan.com/rules/perf/http2">
+   HTTP/2 requires HTTPS
+   Pages (5/58): /el, /en, /el/about, /el/blog, /el/case-studies
+   Items (5/58):
+    - /en (HTTP/2 requires HTTPS)
+    - /en/services (HTTP/2 requires HTTPS)
+    - /el (HTTP/2 requires HTTPS)
+    - /en/industries (HTTP/2 requires HTTPS)
+    - /en/case-studies (HTTP/2 requires HTTPS)
+  </rule>
+ </category>
+ <category name="Accessibility" errors="30" warnings="61">
+  <rule id="a11y/label-content-name-mismatch" severity="error" status="fail" docs="https://docs.squirrelscan.com/rules/a11y/label-content-name-mismatch">
+   N element(s) where visible text doesn&apos;t match accessible name
+   Pages (5/30): /en, /el/industries, /en/about, /en/blog, /en/case-studies
+   Items (5/13):
+    - a: visible=&quot;gr&quot; vs aria-label=&quot;switch to ελληνικά&quot;
+    - a: visible=&quot;create your signatur&quot; vs aria-label=&quot;hotels &amp; resorts&quot;
+    - a: visible=&quot;upgrade your dining &quot; vs aria-label=&quot;restaurants &amp; bars&quot;
+    - a: visible=&quot;perfect your next ev&quot; vs aria-label=&quot;events &amp; experiences&quot;
+    - a: visible=&quot;transform your retai&quot; vs aria-label=&quot;retail stores&quot;
+  </rule>
+  <rule id="a11y/color-contrast" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/a11y/color-contrast">
+   N potential color contrast issue(s)
+   Pages (5/58): /el, /en, /el/about, /el/blog, /el/case-studies
+   Items (5):
+    - White text (verify background): 1 instance(s)
+    - Very light text color: 1 instance(s)
+    - div with class &quot;absolute inset-0 z-0 opacity-2...&quot; may have low contrast
+    - Light gray text: 12 instance(s)
+    - svg with class &quot;lucide lucide-chevron-down h-4...&quot; may have low contrast
+  </rule>
+  <rule id="a11y/identical-links-same-purpose" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/a11y/identical-links-same-purpose">
+   N link text(s) lead to different destinations
+   Pages (3): /en/contact, /el/blog/music-curation-cycle-venues, /en/blog/music-curation-cycle-venues
+   Items (4):
+    - &quot;privacy policy&quot; → 2 different URLs
+    - &quot;terms of service&quot; → 2 different URLs
+    - &quot;πηγή&quot; → 8 different URLs
+    - &quot;source&quot; → 8 different URLs
+  </rule>
+ </category>
+ <category name="Mobile" errors="0" warnings="2">
+  <rule id="mobile/font-size" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/mobile/font-size">
+   4 element(s) with font-size under 12px
+   Pages (2): /el/case-studies, /en/case-studies
+   Items (2):
+    - /en/case-studies (4 element(s) with font-size under 12px)
+    - /el/case-studies (4 element(s) with font-size under 12px)
+  </rule>
+ </category>
+ <category name="E-E-A-T" errors="0" warnings="2">
+  <rule id="eeat/author-byline" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/eeat/author-byline">
+   No content pages have author attribution
+  </rule>
+  <rule id="eeat/content-dates" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/eeat/content-dates">
+   No content pages have datePublished
+  </rule>
+ </category>
+</issues>
+</audit>

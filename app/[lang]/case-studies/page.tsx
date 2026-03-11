@@ -203,7 +203,7 @@ export default async function CaseStudies({
                                                 title={`${item.title} sound sample`}
                                                 className="rounded-xl shadow-md"
                                             ></iframe>
-                                            <div style={{ fontSize: '10px', color: '#cccccc', lineBreak: 'anywhere', wordBreak: 'normal', overflow: 'hidden', whiteSpace: 'nowrap', textOverflow: 'ellipsis', fontFamily: 'Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif', fontWeight: '100' }}>
+                                            <div style={{ fontSize: '12px', color: '#cccccc', lineBreak: 'anywhere', wordBreak: 'normal', overflow: 'hidden', whiteSpace: 'nowrap', textOverflow: 'ellipsis', fontFamily: 'Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif', fontWeight: '100' }}>
                                                 <a href="https://soundcloud.com/sensear_music" title="SensEar.Music" target="_blank" rel="noopener noreferrer" style={{ color: '#cccccc', textDecoration: 'none' }}>SensEar.Music</a> · <a href={assets.scLink} title={item.link_text} target="_blank" rel="noopener noreferrer" style={{ color: '#cccccc', textDecoration: 'none' }}>{item.link_text}</a>
                                             </div>
                                         </div>

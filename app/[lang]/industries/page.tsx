@@ -150,7 +150,7 @@ export default async function Industries({
                                     </div>
 
                                     <div className="mt-8">
-                                        <Link href={`/${lang}/${item.link}`} aria-label={item.title}>
+                                        <Link href={`/${lang}/${item.link}`} aria-label={`${item.cta} — ${item.title}`}>
                                             <button className="group relative bg-transparent border-2 border-black text-black hover:bg-black hover:text-white px-8 py-6 text-lg font-semibold rounded-full transition-all duration-300 overflow-hidden flex items-center">
                                                 <span className="relative inline-flex items-center mr-2 align-middle">
                                                     <Image src="/images/brand/sensear-logo-color.png" width={32} height={32} sizes="32px" loading="eager" className="w-8 h-8 object-contain opacity-100 scale-100 group-hover:opacity-0 group-hover:scale-0 transition-all duration-300" alt="SensEar logo" />

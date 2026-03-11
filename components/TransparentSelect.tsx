@@ -19,6 +19,7 @@ interface TransparentSelectProps {
     isVinyl?: boolean;
     error?: boolean;
     hidePlaceholderOption?: boolean;
+    ariaLabel?: string;
 }
 
 export default function TransparentSelect({
@@ -32,6 +33,7 @@ export default function TransparentSelect({
     isVinyl = false,
     error = false,
     hidePlaceholderOption = false,
+    ariaLabel,
 }: TransparentSelectProps) {
     const [isOpen, setIsOpen] = useState(false);
     const dropdownRef = useRef<HTMLDivElement>(null);
@@ -82,6 +84,7 @@ export default function TransparentSelect({
             <button
                 type="button"
                 onClick={() => setIsOpen(!isOpen)}
+                aria-label={ariaLabel}
                 className={`${buttonClass} ${!selectedOption && isVinyl ? 'text-white/50' : ''}`}
             >
                 <span className="truncate">{displayLabel}</span>

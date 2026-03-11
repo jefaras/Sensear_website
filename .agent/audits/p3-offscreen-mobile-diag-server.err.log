@@ -1,0 +1,703 @@
+⨯ The requested resource isn't a valid image for /images/brand/sensear-logo-color.png received null
+⨯ The requested resource isn't a valid image for /images/case-studies/case-study-pelicanos.webp received null
+⨯ The requested resource isn't a valid image for /images/case-studies/case-study-beach-house.webp received null
+⨯ The requested resource isn't a valid image for /images/carousel/carousel-event-venue.jpg received null
+⨯ The requested resource isn't a valid image for /images/brand/sensear-logo-color.png received null
+⨯ The requested resource isn't a valid image for /images/services/signature-playlists/signature-playlists-hero.jpg received null
+⨯ The requested resource isn't a valid image for /images/case-studies/case-study-levantis.webp received null
+⨯ The requested resource isn't a valid image for /images/homepage/sensear-signature-playlist-service.jpg received null
+⨯ The requested resource isn't a valid image for /images/services/services-hero-strategic-music.jpg received null
+⨯ The requested resource isn't a valid image for /images/services/service-signature-playlists.jpg received null
+⨯ The requested resource isn't a valid image for /images/brand/sensear-logo-color.png received null
+⨯ The requested resource isn't a valid image for /images/services/service-sonic-strategy.jpg received null
+⨯ The requested resource isn't a valid image for /images/services/service-event-soundtracks.jpg received null
+⨯ The requested resource isn't a valid image for /images/industries/industries-hero.jpg received null
+⨯ The requested resource isn't a valid image for /images/industries/industry-restaurants-bars.jpg received null
+⨯ The requested resource isn't a valid image for /images/industries/industry-hotels-resorts.jpg received null
+⨯ The requested resource isn't a valid image for /images/case-studies/case-studies-hero.jpg received null
+⨯ TypeError: d[a] is not a function
+    at e (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\chunks\749.js:36:1958)
+    at D (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\chunks\749.js:1:8318) {
+  digest: '2267888421'
+}
+⨯ TypeError: d[a] is not a function
+    at e (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\chunks\749.js:36:1958)
+    at p (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\app\[lang]\blog\[slug]\page.js:2:14850) {
+  digest: '2480218683'
+}
+⨯ TypeError: d[a] is not a function
+    at e (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\chunks\749.js:36:1958)
+    at Module.o (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\app\[lang]\blog\[slug]\page.js:2:14506) {
+  digest: '2763360702'
+}
+⨯ TypeError: d[a] is not a function
+    at e (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\chunks\749.js:36:1958)
+    at D (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\chunks\749.js:1:8318) {
+  digest: '2267888421'
+}
+⨯ TypeError: d[a] is not a function
+    at e (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\chunks\749.js:36:1958)
+    at p (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\app\[lang]\blog\[slug]\page.js:2:14850) {
+  digest: '2480218683'
+}
+⨯ TypeError: d[a] is not a function
+    at e (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\chunks\749.js:36:1958)
+    at Module.o (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\app\[lang]\blog\[slug]\page.js:2:14506) {
+  digest: '2763360702'
+}
+⨯ TypeError: d[a] is not a function
+    at e (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\chunks\749.js:36:1958)
+    at D (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\chunks\749.js:1:8318) {
+  digest: '2267888421'
+}
+⨯ TypeError: d[a] is not a function
+    at e (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\chunks\749.js:36:1958)
+    at p (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\app\[lang]\blog\[slug]\page.js:2:14850) {
+  digest: '2480218683'
+}
+⨯ TypeError: d[a] is not a function
+    at e (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\chunks\749.js:36:1958)
+    at Module.o (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\app\[lang]\blog\[slug]\page.js:2:14506) {
+  digest: '2763360702'
+}
+⨯ The requested resource isn't a valid image for /images/blog/blog-designing-sound-hospitality.jpg received null
+⨯ TypeError: d[a] is not a function
+    at e (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\chunks\749.js:36:1958)
+    at D (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\chunks\749.js:1:8318) {
+  digest: '2267888421'
+}
+⨯ TypeError: d[a] is not a function
+    at e (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\chunks\749.js:36:1958)
+    at p (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\app\[lang]\blog\[slug]\page.js:2:14850) {
+  digest: '2480218683'
+}
+⨯ TypeError: d[a] is not a function
+    at e (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\chunks\749.js:36:1958)
+    at Module.o (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\app\[lang]\blog\[slug]\page.js:2:14506) {
+  digest: '2763360702'
+}
+⨯ TypeError: d[a] is not a function
+    at e (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\chunks\749.js:36:1958)
+    at D (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\chunks\749.js:1:8318) {
+  digest: '2267888421'
+}
+⨯ TypeError: d[a] is not a function
+    at e (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\chunks\749.js:36:1958)
+    at p (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\app\[lang]\blog\[slug]\page.js:2:14850) {
+  digest: '2480218683'
+}
+⨯ TypeError: d[a] is not a function
+    at e (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\chunks\749.js:36:1958)
+    at Module.o (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\app\[lang]\blog\[slug]\page.js:2:14506) {
+  digest: '2763360702'
+}
+⨯ TypeError: d[a] is not a function
+    at e (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\chunks\749.js:36:1958)
+    at D (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\chunks\749.js:1:8318) {
+  digest: '2267888421'
+}
+⨯ TypeError: d[a] is not a function
+    at e (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\chunks\749.js:36:1958)
+    at p (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\app\[lang]\blog\[slug]\page.js:2:14850) {
+  digest: '2480218683'
+}
+⨯ TypeError: d[a] is not a function
+    at e (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\chunks\749.js:36:1958)
+    at Module.o (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\app\[lang]\blog\[slug]\page.js:2:14506) {
+  digest: '2763360702'
+}
+⨯ The requested resource isn't a valid image for /images/blog/blog-why-luxury-hotels-need-music.jpg received null
+⨯ The requested resource isn't a valid image for /images/blog/blog-music-converts-browsers-buyers.jpg received null
+⨯ The requested resource isn't a valid image for /images/blog/blog-what-does-music-curator-do.jpg received null
+⨯ The requested resource isn't a valid image for /images/blog/blog-master-music-curation-cycle.jpg received null
+⨯ The requested resource isn't a valid image for /images/blog/blog-building-brand-people-can-hear.jpg received null
+⨯ TypeError: d[a] is not a function
+    at e (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\chunks\749.js:36:1958)
+    at D (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\chunks\749.js:1:8318) {
+  digest: '2267888421'
+}
+⨯ TypeError: d[a] is not a function
+    at e (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\chunks\749.js:36:1958)
+    at p (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\app\[lang]\blog\[slug]\page.js:2:14850) {
+  digest: '2480218683'
+}
+⨯ TypeError: d[a] is not a function
+    at e (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\chunks\749.js:36:1958)
+    at Module.o (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\app\[lang]\blog\[slug]\page.js:2:14506) {
+  digest: '2763360702'
+}
+⨯ The requested resource isn't a valid image for /images/blog/blog-music-shapes-buyer-behavior.jpg received null
+⨯ The requested resource isn't a valid image for /images/contact/vinyl-record-contact-form-bg.png received null
+⨯ The requested resource isn't a valid image for /images/contact/contact-hero-venue-consultation.jpg received null
+⨯ The requested resource isn't a valid image for /images/brand/contact-email.png received null
+⨯ The requested resource isn't a valid image for /images/brand/contact-phone.png received null
+⨯ The requested resource isn't a valid image for /images/about/about-hero.jpg received null
+⨯ The requested resource isn't a valid image for /images/about/team-george-fameliaris.jpg received null
+⨯ The requested resource isn't a valid image for /images/about/about-journey-team-collaboration.jpg received null
+⨯ The requested resource isn't a valid image for /images/services/signature-playlists/signature-playlists-curation.jpg received null
+⨯ The requested resource isn't a valid image for /images/services/signature-playlists/signature-playlists-hotel-room.jpg received null
+⨯ The requested resource isn't a valid image for /images/services/event-soundtracks/event-soundtracks-hero.jpg received null
+⨯ The requested resource isn't a valid image for /images/services/event-soundtracks/event-soundtracks-venue.jpg received null
+⨯ The requested resource isn't a valid image for /images/services/event-soundtracks/event-soundtracks-planning.jpg received null
+⨯ The requested resource isn't a valid image for /images/services/sonic-identity/sonic-identity-workshop.jpg received null
+⨯ The requested resource isn't a valid image for /images/services/sonic-identity/sonic-identity-development.jpg received null
+⨯ The requested resource isn't a valid image for /images/services/sonic-identity/sonic-identity-hero.jpg received null
+⨯ The requested resource isn't a valid image for /images/services/audio-upgrades/audio-upgrades-hero.jpg received null
+⨯ The requested resource isn't a valid image for /images/services/audio-upgrades/audio-upgrades-assessment.jpg received null
+⨯ The requested resource isn't a valid image for /images/services/audio-upgrades/audio-upgrades-venue.jpg received null
+⨯ The requested resource isn't a valid image for /images/industries/hotels-resorts-curated-music-ambiance.jpg received null
+⨯ The requested resource isn't a valid image for /images/industries/hotels-resorts-boutique-hotel-music.png received null
+⨯ The requested resource isn't a valid image for /images/industries/hotels-resorts-luxury-hotel-lobby.jpg received null
+⨯ The requested resource isn't a valid image for /images/industries/restaurants-bars-curated-music-atmosphere.jpg received null
+⨯ The requested resource isn't a valid image for /images/industries/restaurants-bars-dining-music-experience.jpg received null
+⨯ The requested resource isn't a valid image for /images/industries/restaurants-bars-cocktail-bar-atmosphere.jpg received null
+⨯ The requested resource isn't a valid image for /images/industries/events-experiences-event-music-planning.jpg received null
+⨯ The requested resource isn't a valid image for /images/industries/events-experiences-branded-event-music.jpg received null
+⨯ The requested resource isn't a valid image for /images/industries/events-experiences-music-curation-event.jpg received null
+⨯ The requested resource isn't a valid image for /images/industries/retail-stores-music-strategy-browsing.jpg received null
+⨯ The requested resource isn't a valid image for /images/industries/retail-stores-curated-music-shopping.jpg received null
+⨯ The requested resource isn't a valid image for /images/industries/retail-stores-boutique-music-atmosphere.jpg received null
+⨯ The requested resource isn't a valid image for /images/industries/wellness-gyms-spa-treatment-music.jpg received null
+⨯ The requested resource isn't a valid image for /images/industries/wellness-gyms-luxury-spa-ambient-music.jpg received null
+⨯ The requested resource isn't a valid image for /images/industries/wellness-gyms-fitness-music-curation.jpg received null
+⨯ The requested resource isn't a valid image for /images/industries/art-museums-fashion-gallery-curation.jpg received null
+⨯ The requested resource isn't a valid image for /images/industries/art-museums-fashion-cultural-space-music.jpg received null
+⨯ The requested resource isn't a valid image for /images/industries/art-museums-fashion-museum-soundscape.jpg received null
+⨯ The requested resource isn't a valid image for /images/brand/sensear-logo-color.png received null
+⨯ The requested resource isn't a valid image for /images/brand/sensear-logo-color.png received null
+⨯ The requested resource isn't a valid image for /images/carousel/carousel-event-venue.jpg received null
+⨯ The requested resource isn't a valid image for /images/case-studies/case-study-beach-house.webp received null
+⨯ The requested resource isn't a valid image for /images/case-studies/case-study-pelicanos.webp received null
+⨯ The requested resource isn't a valid image for /images/services/signature-playlists/signature-playlists-hero.jpg received null
+⨯ The requested resource isn't a valid image for /images/case-studies/case-study-levantis.webp received null
+⨯ The requested resource isn't a valid image for /images/homepage/sensear-signature-playlist-service.jpg received null
+⨯ The requested resource isn't a valid image for /images/services/services-hero-strategic-music.jpg received null
+⨯ The requested resource isn't a valid image for /images/services/service-signature-playlists.jpg received null
+⨯ The requested resource isn't a valid image for /images/brand/sensear-logo-color.png received null
+⨯ The requested resource isn't a valid image for /images/services/service-event-soundtracks.jpg received null
+⨯ The requested resource isn't a valid image for /images/industries/industries-hero.jpg received null
+⨯ The requested resource isn't a valid image for /images/industries/industry-restaurants-bars.jpg received null
+⨯ The requested resource isn't a valid image for /images/industries/industry-hotels-resorts.jpg received null
+⨯ The requested resource isn't a valid image for /images/case-studies/case-studies-hero.jpg received null
+⨯ TypeError: d[a] is not a function
+    at e (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\chunks\749.js:36:1958)
+    at D (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\chunks\749.js:1:8318) {
+  digest: '2267888421'
+}
+⨯ TypeError: d[a] is not a function
+    at e (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\chunks\749.js:36:1958)
+    at p (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\app\[lang]\blog\[slug]\page.js:2:14850) {
+  digest: '2480218683'
+}
+⨯ TypeError: d[a] is not a function
+    at e (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\chunks\749.js:36:1958)
+    at Module.o (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\app\[lang]\blog\[slug]\page.js:2:14506) {
+  digest: '2763360702'
+}
+⨯ TypeError: d[a] is not a function
+    at e (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\chunks\749.js:36:1958)
+    at D (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\chunks\749.js:1:8318) {
+  digest: '2267888421'
+}
+⨯ TypeError: d[a] is not a function
+    at e (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\chunks\749.js:36:1958)
+    at p (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\app\[lang]\blog\[slug]\page.js:2:14850) {
+  digest: '2480218683'
+}
+⨯ TypeError: d[a] is not a function
+    at e (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\chunks\749.js:36:1958)
+    at Module.o (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\app\[lang]\blog\[slug]\page.js:2:14506) {
+  digest: '2763360702'
+}
+⨯ TypeError: d[a] is not a function
+    at e (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\chunks\749.js:36:1958)
+    at D (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\chunks\749.js:1:8318) {
+  digest: '2267888421'
+}
+⨯ TypeError: d[a] is not a function
+    at e (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\chunks\749.js:36:1958)
+    at p (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\app\[lang]\blog\[slug]\page.js:2:14850) {
+  digest: '2480218683'
+}
+⨯ TypeError: d[a] is not a function
+    at e (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\chunks\749.js:36:1958)
+    at Module.o (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\app\[lang]\blog\[slug]\page.js:2:14506) {
+  digest: '2763360702'
+}
+⨯ The requested resource isn't a valid image for /images/blog/blog-designing-sound-hospitality.jpg received null
+⨯ The requested resource isn't a valid image for /images/blog/blog-why-luxury-hotels-need-music.jpg received null
+⨯ The requested resource isn't a valid image for /images/blog/blog-music-converts-browsers-buyers.jpg received null
+⨯ TypeError: d[a] is not a function
+    at e (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\chunks\749.js:36:1958)
+    at D (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\chunks\749.js:1:8318) {
+  digest: '2267888421'
+}
+⨯ TypeError: d[a] is not a function
+    at e (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\chunks\749.js:36:1958)
+    at p (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\app\[lang]\blog\[slug]\page.js:2:14850) {
+  digest: '2480218683'
+}
+⨯ TypeError: d[a] is not a function
+    at e (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\chunks\749.js:36:1958)
+    at Module.o (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\app\[lang]\blog\[slug]\page.js:2:14506) {
+  digest: '2763360702'
+}
+⨯ TypeError: d[a] is not a function
+    at e (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\chunks\749.js:36:1958)
+    at D (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\chunks\749.js:1:8318) {
+  digest: '2267888421'
+}
+⨯ TypeError: d[a] is not a function
+    at e (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\chunks\749.js:36:1958)
+    at p (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\app\[lang]\blog\[slug]\page.js:2:14850) {
+  digest: '2480218683'
+}
+⨯ TypeError: d[a] is not a function
+    at e (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\chunks\749.js:36:1958)
+    at Module.o (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\app\[lang]\blog\[slug]\page.js:2:14506) {
+  digest: '2763360702'
+}
+⨯ TypeError: d[a] is not a function
+    at e (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\chunks\749.js:36:1958)
+    at D (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\chunks\749.js:1:8318) {
+  digest: '2267888421'
+}
+⨯ TypeError: d[a] is not a function
+    at e (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\chunks\749.js:36:1958)
+    at p (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\app\[lang]\blog\[slug]\page.js:2:14850) {
+  digest: '2480218683'
+}
+⨯ TypeError: d[a] is not a function
+    at e (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\chunks\749.js:36:1958)
+    at Module.o (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\app\[lang]\blog\[slug]\page.js:2:14506) {
+  digest: '2763360702'
+}
+⨯ The requested resource isn't a valid image for /images/blog/blog-what-does-music-curator-do.jpg received null
+⨯ The requested resource isn't a valid image for /images/blog/blog-building-brand-people-can-hear.jpg received null
+⨯ The requested resource isn't a valid image for /images/blog/blog-master-music-curation-cycle.jpg received null
+⨯ The requested resource isn't a valid image for /images/contact/contact-hero-venue-consultation.jpg received null
+⨯ The requested resource isn't a valid image for /images/contact/vinyl-record-contact-form-bg.png received null
+⨯ The requested resource isn't a valid image for /images/brand/contact-email.png received null
+⨯ The requested resource isn't a valid image for /images/brand/contact-phone.png received null
+⨯ The requested resource isn't a valid image for /images/about/about-hero.jpg received null
+⨯ The requested resource isn't a valid image for /images/about/about-journey-team-collaboration.jpg received null
+⨯ The requested resource isn't a valid image for /images/about/team-george-fameliaris.jpg received null
+⨯ The requested resource isn't a valid image for /images/services/signature-playlists/signature-playlists-hotel-room.jpg received null
+⨯ The requested resource isn't a valid image for /images/services/signature-playlists/signature-playlists-curation.jpg received null
+⨯ The requested resource isn't a valid image for /images/services/event-soundtracks/event-soundtracks-venue.jpg received null
+⨯ The requested resource isn't a valid image for /images/services/event-soundtracks/event-soundtracks-hero.jpg received null
+⨯ The requested resource isn't a valid image for /images/services/event-soundtracks/event-soundtracks-planning.jpg received null
+⨯ The requested resource isn't a valid image for /images/services/sonic-identity/sonic-identity-development.jpg received null
+⨯ The requested resource isn't a valid image for /images/services/sonic-identity/sonic-identity-hero.jpg received null
+⨯ The requested resource isn't a valid image for /images/services/sonic-identity/sonic-identity-workshop.jpg received null
+⨯ The requested resource isn't a valid image for /images/services/audio-upgrades/audio-upgrades-hero.jpg received null
+⨯ The requested resource isn't a valid image for /images/services/audio-upgrades/audio-upgrades-assessment.jpg received null
+⨯ The requested resource isn't a valid image for /images/services/audio-upgrades/audio-upgrades-venue.jpg received null
+⨯ The requested resource isn't a valid image for /images/industries/hotels-resorts-curated-music-ambiance.jpg received null
+⨯ The requested resource isn't a valid image for /images/industries/hotels-resorts-boutique-hotel-music.png received null
+⨯ The requested resource isn't a valid image for /images/industries/hotels-resorts-luxury-hotel-lobby.jpg received null
+⨯ The requested resource isn't a valid image for /images/industries/restaurants-bars-curated-music-atmosphere.jpg received null
+⨯ The requested resource isn't a valid image for /images/industries/restaurants-bars-cocktail-bar-atmosphere.jpg received null
+⨯ The requested resource isn't a valid image for /images/industries/restaurants-bars-dining-music-experience.jpg received null
+⨯ The requested resource isn't a valid image for /images/industries/events-experiences-music-curation-event.jpg received null
+⨯ The requested resource isn't a valid image for /images/industries/events-experiences-event-music-planning.jpg received null
+⨯ The requested resource isn't a valid image for /images/industries/events-experiences-branded-event-music.jpg received null
+⨯ The requested resource isn't a valid image for /images/industries/retail-stores-curated-music-shopping.jpg received null
+⨯ The requested resource isn't a valid image for /images/industries/retail-stores-music-strategy-browsing.jpg received null
+⨯ The requested resource isn't a valid image for /images/industries/retail-stores-boutique-music-atmosphere.jpg received null
+⨯ The requested resource isn't a valid image for /images/industries/wellness-gyms-luxury-spa-ambient-music.jpg received null
+⨯ The requested resource isn't a valid image for /images/industries/wellness-gyms-spa-treatment-music.jpg received null
+⨯ The requested resource isn't a valid image for /images/industries/wellness-gyms-fitness-music-curation.jpg received null
+⨯ The requested resource isn't a valid image for /images/industries/art-museums-fashion-gallery-curation.jpg received null
+⨯ The requested resource isn't a valid image for /images/industries/art-museums-fashion-museum-soundscape.jpg received null
+⨯ The requested resource isn't a valid image for /images/industries/art-museums-fashion-cultural-space-music.jpg received null
+⨯ The requested resource isn't a valid image for /images/brand/sensear-logo-color.png received null
+⨯ The requested resource isn't a valid image for /images/carousel/carousel-event-venue.jpg received null
+⨯ The requested resource isn't a valid image for /images/brand/sensear-logo-color.png received null
+⨯ The requested resource isn't a valid image for /images/case-studies/case-study-beach-house.webp received null
+⨯ The requested resource isn't a valid image for /images/case-studies/case-study-pelicanos.webp received null
+⨯ The requested resource isn't a valid image for /images/services/signature-playlists/signature-playlists-hero.jpg received null
+⨯ The requested resource isn't a valid image for /images/homepage/vinyl-records-music-curation-optimized.jpg received null
+⨯ The requested resource isn't a valid image for /images/homepage/sensear-signature-playlist-service.jpg received null
+⨯ The requested resource isn't a valid image for /images/services/services-hero-strategic-music.jpg received null
+⨯ The requested resource isn't a valid image for /images/services/service-signature-playlists.jpg received null
+⨯ The requested resource isn't a valid image for /images/brand/sensear-logo-color.png received null
+⨯ The requested resource isn't a valid image for /images/services/service-event-soundtracks.jpg received null
+⨯ The requested resource isn't a valid image for /images/services/service-sonic-strategy.jpg received null
+⨯ The requested resource isn't a valid image for /images/services/service-audio-upgrades.jpg received null
+⨯ The requested resource isn't a valid image for /images/industries/industries-hero.jpg received null
+⨯ The requested resource isn't a valid image for /images/industries/industry-restaurants-bars.jpg received null
+⨯ The requested resource isn't a valid image for /images/industries/industry-hotels-resorts.jpg received null
+⨯ The requested resource isn't a valid image for /images/industries/industry-retail-stores.jpg received null
+⨯ The requested resource isn't a valid image for /images/case-studies/case-studies-hero.jpg received null
+⨯ The requested resource isn't a valid image for /images/case-studies/case-study-yam.jpg received null
+⨯ TypeError: d[a] is not a function
+    at e (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\chunks\749.js:36:1958)
+    at D (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\chunks\749.js:1:8318) {
+  digest: '2267888421'
+}
+⨯ TypeError: d[a] is not a function
+    at e (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\chunks\749.js:36:1958)
+    at p (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\app\[lang]\blog\[slug]\page.js:2:14850) {
+  digest: '2480218683'
+}
+⨯ TypeError: d[a] is not a function
+    at e (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\chunks\749.js:36:1958)
+    at Module.o (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\app\[lang]\blog\[slug]\page.js:2:14506) {
+  digest: '2763360702'
+}
+⨯ TypeError: d[a] is not a function
+    at e (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\chunks\749.js:36:1958)
+    at D (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\chunks\749.js:1:8318) {
+  digest: '2267888421'
+}
+⨯ TypeError: d[a] is not a function
+    at e (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\chunks\749.js:36:1958)
+    at p (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\app\[lang]\blog\[slug]\page.js:2:14850) {
+  digest: '2480218683'
+}
+⨯ TypeError: d[a] is not a function
+    at e (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\chunks\749.js:36:1958)
+    at Module.o (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\app\[lang]\blog\[slug]\page.js:2:14506) {
+  digest: '2763360702'
+}
+⨯ TypeError: d[a] is not a function
+    at e (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\chunks\749.js:36:1958)
+    at D (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\chunks\749.js:1:8318) {
+  digest: '2267888421'
+}
+⨯ TypeError: d[a] is not a function
+    at e (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\chunks\749.js:36:1958)
+    at p (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\app\[lang]\blog\[slug]\page.js:2:14850) {
+  digest: '2480218683'
+}
+⨯ TypeError: d[a] is not a function
+    at e (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\chunks\749.js:36:1958)
+    at Module.o (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\app\[lang]\blog\[slug]\page.js:2:14506) {
+  digest: '2763360702'
+}
+⨯ The requested resource isn't a valid image for /images/blog/blog-designing-sound-hospitality.jpg received null
+⨯ The requested resource isn't a valid image for /images/blog/blog-why-luxury-hotels-need-music.jpg received null
+⨯ The requested resource isn't a valid image for /images/blog/blog-music-converts-browsers-buyers.jpg received null
+⨯ TypeError: d[a] is not a function
+    at e (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\chunks\749.js:36:1958)
+    at D (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\chunks\749.js:1:8318) {
+  digest: '2267888421'
+}
+⨯ TypeError: d[a] is not a function
+    at e (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\chunks\749.js:36:1958)
+    at p (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\app\[lang]\blog\[slug]\page.js:2:14850) {
+  digest: '2480218683'
+}
+⨯ TypeError: d[a] is not a function
+    at e (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\chunks\749.js:36:1958)
+    at Module.o (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\app\[lang]\blog\[slug]\page.js:2:14506) {
+  digest: '2763360702'
+}
+⨯ TypeError: d[a] is not a function
+    at e (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\chunks\749.js:36:1958)
+    at D (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\chunks\749.js:1:8318) {
+  digest: '2267888421'
+}
+⨯ TypeError: d[a] is not a function
+    at e (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\chunks\749.js:36:1958)
+    at p (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\app\[lang]\blog\[slug]\page.js:2:14850) {
+  digest: '2480218683'
+}
+⨯ TypeError: d[a] is not a function
+    at e (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\chunks\749.js:36:1958)
+    at Module.o (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\app\[lang]\blog\[slug]\page.js:2:14506) {
+  digest: '2763360702'
+}
+⨯ TypeError: d[a] is not a function
+    at e (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\chunks\749.js:36:1958)
+    at D (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\chunks\749.js:1:8318) {
+  digest: '2267888421'
+}
+⨯ TypeError: d[a] is not a function
+    at e (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\chunks\749.js:36:1958)
+    at p (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\app\[lang]\blog\[slug]\page.js:2:14850) {
+  digest: '2480218683'
+}
+⨯ TypeError: d[a] is not a function
+    at e (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\chunks\749.js:36:1958)
+    at Module.o (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\app\[lang]\blog\[slug]\page.js:2:14506) {
+  digest: '2763360702'
+}
+⨯ TypeError: d[a] is not a function
+    at e (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\chunks\749.js:36:1958)
+    at D (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\chunks\749.js:1:8318) {
+  digest: '2267888421'
+}
+⨯ TypeError: d[a] is not a function
+    at e (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\chunks\749.js:36:1958)
+    at p (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\app\[lang]\blog\[slug]\page.js:2:14850) {
+  digest: '2480218683'
+}
+⨯ TypeError: d[a] is not a function
+    at e (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\chunks\749.js:36:1958)
+    at Module.o (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\app\[lang]\blog\[slug]\page.js:2:14506) {
+  digest: '2763360702'
+}
+⨯ TypeError: d[a] is not a function
+    at e (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\chunks\749.js:36:1958)
+    at D (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\chunks\749.js:1:8318) {
+  digest: '2267888421'
+}
+⨯ TypeError: d[a] is not a function
+    at e (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\chunks\749.js:36:1958)
+    at p (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\app\[lang]\blog\[slug]\page.js:2:14850) {
+  digest: '2480218683'
+}
+⨯ TypeError: d[a] is not a function
+    at e (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\chunks\749.js:36:1958)
+    at Module.o (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\app\[lang]\blog\[slug]\page.js:2:14506) {
+  digest: '2763360702'
+}
+⨯ The requested resource isn't a valid image for /images/blog/blog-master-music-curation-cycle.jpg received null
+⨯ The requested resource isn't a valid image for /images/blog/blog-what-does-music-curator-do.jpg received null
+⨯ The requested resource isn't a valid image for /images/blog/blog-building-brand-people-can-hear.jpg received null
+⨯ The requested resource isn't a valid image for /images/blog/blog-music-shapes-buyer-behavior.jpg received null
+⨯ The requested resource isn't a valid image for /images/blog/blog-spaces-shape-perceived-wait-time.jpg received null
+⨯ The requested resource isn't a valid image for /images/contact/contact-hero-venue-consultation.jpg received null
+⨯ The requested resource isn't a valid image for /images/contact/vinyl-record-contact-form-bg.png received null
+⨯ The requested resource isn't a valid image for /images/brand/contact-email.png received null
+⨯ The requested resource isn't a valid image for /images/brand/contact-phone.png received null
+⨯ The requested resource isn't a valid image for /images/about/about-hero.jpg received null
+⨯ The requested resource isn't a valid image for /images/about/about-journey-team-collaboration.jpg received null
+⨯ The requested resource isn't a valid image for /images/about/team-george-fameliaris.jpg received null
+⨯ The requested resource isn't a valid image for /images/about/team-john-farazoumis.png received null
+⨯ The requested resource isn't a valid image for /images/services/signature-playlists/signature-playlists-hotel-room.jpg received null
+⨯ The requested resource isn't a valid image for /images/services/signature-playlists/signature-playlists-curation.jpg received null
+⨯ The requested resource isn't a valid image for /images/services/signature-playlists/signature-playlists-vinyl-collection.jpg received null
+⨯ The requested resource isn't a valid image for /images/services/event-soundtracks/event-soundtracks-hero.jpg received null
+⨯ The requested resource isn't a valid image for /images/services/event-soundtracks/event-soundtracks-planning.jpg received null
+⨯ The requested resource isn't a valid image for /images/services/event-soundtracks/event-soundtracks-venue.jpg received null
+⨯ The requested resource isn't a valid image for /images/services/event-soundtracks/event-soundtracks-process.jpg received null
+⨯ The requested resource isn't a valid image for /images/services/sonic-identity/sonic-identity-hero.jpg received null
+⨯ The requested resource isn't a valid image for /images/services/sonic-identity/sonic-identity-development.jpg received null
+⨯ The requested resource isn't a valid image for /images/services/sonic-identity/sonic-identity-workshop.jpg received null
+⨯ The requested resource isn't a valid image for /images/services/sonic-identity/sonic-identity-implementation.jpg received null
+⨯ The requested resource isn't a valid image for /images/services/audio-upgrades/audio-upgrades-assessment.jpg received null
+⨯ The requested resource isn't a valid image for /images/services/audio-upgrades/audio-upgrades-venue.jpg received null
+⨯ The requested resource isn't a valid image for /images/services/audio-upgrades/audio-upgrades-hero.jpg received null
+⨯ The requested resource isn't a valid image for /images/services/audio-upgrades/audio-upgrades-clarity.jpg received null
+⨯ The requested resource isn't a valid image for /images/industries/hotels-resorts-curated-music-ambiance.jpg received null
+⨯ The requested resource isn't a valid image for /images/industries/hotels-resorts-boutique-hotel-music.png received null
+⨯ The requested resource isn't a valid image for /images/industries/hotels-resorts-luxury-hotel-lobby.jpg received null
+⨯ The requested resource isn't a valid image for /images/industries/hotels-resorts-sonic-identity-detail.jpg received null
+⨯ The requested resource isn't a valid image for /images/industries/restaurants-bars-curated-music-atmosphere.jpg received null
+⨯ The requested resource isn't a valid image for /images/industries/restaurants-bars-dining-music-experience.jpg received null
+⨯ The requested resource isn't a valid image for /images/industries/restaurants-bars-cocktail-bar-atmosphere.jpg received null
+⨯ The requested resource isn't a valid image for /images/industries/restaurants-bars-restaurant-dining-room.jpg received null
+⨯ The requested resource isn't a valid image for /images/industries/events-experiences-music-curation-event.jpg received null
+⨯ The requested resource isn't a valid image for /images/industries/events-experiences-branded-event-music.jpg received null
+⨯ The requested resource isn't a valid image for /images/industries/events-experiences-event-music-planning.jpg received null
+⨯ The requested resource isn't a valid image for /images/industries/events-experiences-private-event-soundscape.jpg received null
+⨯ The requested resource isn't a valid image for /images/industries/retail-stores-curated-music-shopping.jpg received null
+⨯ The requested resource isn't a valid image for /images/industries/retail-stores-music-strategy-browsing.jpg received null
+⨯ The requested resource isn't a valid image for /images/industries/retail-stores-boutique-music-atmosphere.jpg received null
+⨯ The requested resource isn't a valid image for /images/industries/retail-stores-customer-journey-sound.jpg received null
+⨯ The requested resource isn't a valid image for /images/industries/wellness-gyms-luxury-spa-ambient-music.jpg received null
+⨯ The requested resource isn't a valid image for /images/industries/wellness-gyms-spa-treatment-music.jpg received null
+⨯ The requested resource isn't a valid image for /images/industries/wellness-gyms-fitness-music-curation.jpg received null
+⨯ The requested resource isn't a valid image for /images/industries/wellness-gyms-yoga-studio-soundscape.jpg received null
+⨯ The requested resource isn't a valid image for /images/industries/art-museums-fashion-gallery-curation.jpg received null
+⨯ The requested resource isn't a valid image for /images/industries/art-museums-fashion-museum-soundscape.jpg received null
+⨯ The requested resource isn't a valid image for /images/industries/art-museums-fashion-cultural-space-music.jpg received null
+⨯ The requested resource isn't a valid image for /images/industries/art-museums-fashion-exhibition-ambient-music.jpg received null
+⨯ The requested resource isn't a valid image for /images/brand/sensear-logo-color.png received null
+⨯ The requested resource isn't a valid image for /images/carousel/carousel-event-venue.jpg received null
+⨯ The requested resource isn't a valid image for /images/case-studies/case-study-beach-house.webp received null
+⨯ The requested resource isn't a valid image for /images/brand/sensear-logo-color.png received null
+⨯ The requested resource isn't a valid image for /images/case-studies/case-study-pelicanos.webp received null
+⨯ The requested resource isn't a valid image for /images/services/signature-playlists/signature-playlists-hero.jpg received null
+⨯ The requested resource isn't a valid image for /images/homepage/sensear-signature-playlist-service.jpg received null
+⨯ The requested resource isn't a valid image for /images/homepage/vinyl-records-music-curation-optimized.jpg received null
+⨯ The requested resource isn't a valid image for /images/services/services-hero-strategic-music.jpg received null
+⨯ The requested resource isn't a valid image for /images/services/service-signature-playlists.jpg received null
+⨯ The requested resource isn't a valid image for /images/brand/sensear-logo-color.png received null
+⨯ The requested resource isn't a valid image for /images/services/service-event-soundtracks.jpg received null
+⨯ The requested resource isn't a valid image for /images/services/service-sonic-strategy.jpg received null
+⨯ The requested resource isn't a valid image for /images/services/service-audio-upgrades.jpg received null
+⨯ The requested resource isn't a valid image for /images/industries/industries-hero.jpg received null
+⨯ The requested resource isn't a valid image for /images/industries/industry-restaurants-bars.jpg received null
+⨯ The requested resource isn't a valid image for /images/industries/industry-retail-stores.jpg received null
+⨯ The requested resource isn't a valid image for /images/industries/industry-hotels-resorts.jpg received null
+⨯ The requested resource isn't a valid image for /images/case-studies/case-studies-hero.jpg received null
+⨯ The requested resource isn't a valid image for /images/case-studies/case-study-yam.jpg received null
+⨯ TypeError: d[a] is not a function
+    at e (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\chunks\749.js:36:1958)
+    at D (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\chunks\749.js:1:8318) {
+  digest: '2267888421'
+}
+⨯ TypeError: d[a] is not a function
+    at e (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\chunks\749.js:36:1958)
+    at p (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\app\[lang]\blog\[slug]\page.js:2:14850) {
+  digest: '2480218683'
+}
+⨯ TypeError: d[a] is not a function
+    at e (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\chunks\749.js:36:1958)
+    at Module.o (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\app\[lang]\blog\[slug]\page.js:2:14506) {
+  digest: '2763360702'
+}
+⨯ TypeError: d[a] is not a function
+    at e (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\chunks\749.js:36:1958)
+    at D (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\chunks\749.js:1:8318) {
+  digest: '2267888421'
+}
+⨯ TypeError: d[a] is not a function
+    at e (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\chunks\749.js:36:1958)
+    at p (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\app\[lang]\blog\[slug]\page.js:2:14850) {
+  digest: '2480218683'
+}
+⨯ TypeError: d[a] is not a function
+    at e (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\chunks\749.js:36:1958)
+    at Module.o (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\app\[lang]\blog\[slug]\page.js:2:14506) {
+  digest: '2763360702'
+}
+⨯ TypeError: d[a] is not a function
+    at e (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\chunks\749.js:36:1958)
+    at D (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\chunks\749.js:1:8318) {
+  digest: '2267888421'
+}
+⨯ TypeError: d[a] is not a function
+    at e (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\chunks\749.js:36:1958)
+    at p (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\app\[lang]\blog\[slug]\page.js:2:14850) {
+  digest: '2480218683'
+}
+⨯ TypeError: d[a] is not a function
+    at e (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\chunks\749.js:36:1958)
+    at Module.o (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\app\[lang]\blog\[slug]\page.js:2:14506) {
+  digest: '2763360702'
+}
+⨯ The requested resource isn't a valid image for /images/blog/blog-music-converts-browsers-buyers.jpg received null
+⨯ The requested resource isn't a valid image for /images/blog/blog-designing-sound-hospitality.jpg received null
+⨯ The requested resource isn't a valid image for /images/blog/blog-why-luxury-hotels-need-music.jpg received null
+⨯ TypeError: d[a] is not a function
+    at e (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\chunks\749.js:36:1958)
+    at D (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\chunks\749.js:1:8318) {
+  digest: '2267888421'
+}
+⨯ TypeError: d[a] is not a function
+    at e (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\chunks\749.js:36:1958)
+    at p (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\app\[lang]\blog\[slug]\page.js:2:14850) {
+  digest: '2480218683'
+}
+⨯ TypeError: d[a] is not a function
+    at e (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\chunks\749.js:36:1958)
+    at Module.o (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\app\[lang]\blog\[slug]\page.js:2:14506) {
+  digest: '2763360702'
+}
+⨯ TypeError: d[a] is not a function
+    at e (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\chunks\749.js:36:1958)
+    at D (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\chunks\749.js:1:8318) {
+  digest: '2267888421'
+}
+⨯ TypeError: d[a] is not a function
+    at e (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\chunks\749.js:36:1958)
+    at p (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\app\[lang]\blog\[slug]\page.js:2:14850) {
+  digest: '2480218683'
+}
+⨯ TypeError: d[a] is not a function
+    at e (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\chunks\749.js:36:1958)
+    at Module.o (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\app\[lang]\blog\[slug]\page.js:2:14506) {
+  digest: '2763360702'
+}
+⨯ TypeError: d[a] is not a function
+    at e (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\chunks\749.js:36:1958)
+    at D (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\chunks\749.js:1:8318) {
+  digest: '2267888421'
+}
+⨯ TypeError: d[a] is not a function
+    at e (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\chunks\749.js:36:1958)
+    at p (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\app\[lang]\blog\[slug]\page.js:2:14850) {
+  digest: '2480218683'
+}
+⨯ TypeError: d[a] is not a function
+    at e (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\chunks\749.js:36:1958)
+    at Module.o (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\app\[lang]\blog\[slug]\page.js:2:14506) {
+  digest: '2763360702'
+}
+⨯ TypeError: d[a] is not a function
+    at e (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\chunks\749.js:36:1958)
+    at D (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\chunks\749.js:1:8318) {
+  digest: '2267888421'
+}
+⨯ TypeError: d[a] is not a function
+    at e (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\chunks\749.js:36:1958)
+    at p (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\app\[lang]\blog\[slug]\page.js:2:14850) {
+  digest: '2480218683'
+}
+⨯ TypeError: d[a] is not a function
+    at e (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\chunks\749.js:36:1958)
+    at Module.o (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\app\[lang]\blog\[slug]\page.js:2:14506) {
+  digest: '2763360702'
+}
+⨯ TypeError: d[a] is not a function
+    at e (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\chunks\749.js:36:1958)
+    at D (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\chunks\749.js:1:8318) {
+  digest: '2267888421'
+}
+⨯ TypeError: d[a] is not a function
+    at e (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\chunks\749.js:36:1958)
+    at p (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\app\[lang]\blog\[slug]\page.js:2:14850) {
+  digest: '2480218683'
+}
+⨯ TypeError: d[a] is not a function
+    at e (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\chunks\749.js:36:1958)
+    at Module.o (C:\Users\jef\Documents\Antigravity\.next\standalone\.next\server\app\[lang]\blog\[slug]\page.js:2:14506) {
+  digest: '2763360702'
+}
+⨯ The requested resource isn't a valid image for /images/blog/blog-what-does-music-curator-do.jpg received null
+⨯ The requested resource isn't a valid image for /images/blog/blog-master-music-curation-cycle.jpg received null
+⨯ The requested resource isn't a valid image for /images/blog/blog-building-brand-people-can-hear.jpg received null
+⨯ The requested resource isn't a valid image for /images/blog/blog-music-shapes-buyer-behavior.jpg received null
+⨯ The requested resource isn't a valid image for /images/blog/blog-spaces-shape-perceived-wait-time.jpg received null
+⨯ The requested resource isn't a valid image for /images/contact/vinyl-record-contact-form-bg.png received null
+⨯ The requested resource isn't a valid image for /images/contact/contact-hero-venue-consultation.jpg received null
+⨯ The requested resource isn't a valid image for /images/brand/contact-email.png received null
+⨯ The requested resource isn't a valid image for /images/brand/contact-phone.png received null
+⨯ The requested resource isn't a valid image for /images/about/team-george-fameliaris.jpg received null
+⨯ The requested resource isn't a valid image for /images/about/about-journey-team-collaboration.jpg received null
+⨯ The requested resource isn't a valid image for /images/about/about-hero.jpg received null
+⨯ The requested resource isn't a valid image for /images/about/team-john-farazoumis.png received null
+⨯ The requested resource isn't a valid image for /images/services/signature-playlists/signature-playlists-curation.jpg received null
+⨯ The requested resource isn't a valid image for /images/services/signature-playlists/signature-playlists-hotel-room.jpg received null
+⨯ The requested resource isn't a valid image for /images/services/signature-playlists/signature-playlists-vinyl-collection.jpg received null
+⨯ The requested resource isn't a valid image for /images/services/event-soundtracks/event-soundtracks-hero.jpg received null
+⨯ The requested resource isn't a valid image for /images/services/event-soundtracks/event-soundtracks-venue.jpg received null
+⨯ The requested resource isn't a valid image for /images/services/event-soundtracks/event-soundtracks-planning.jpg received null
+⨯ The requested resource isn't a valid image for /images/services/event-soundtracks/event-soundtracks-process.jpg received null
+⨯ The requested resource isn't a valid image for /images/services/sonic-identity/sonic-identity-hero.jpg received null
+⨯ The requested resource isn't a valid image for /images/services/sonic-identity/sonic-identity-workshop.jpg received null
+⨯ The requested resource isn't a valid image for /images/services/sonic-identity/sonic-identity-development.jpg received null
+⨯ The requested resource isn't a valid image for /images/services/sonic-identity/sonic-identity-implementation.jpg received null
+⨯ The requested resource isn't a valid image for /images/services/audio-upgrades/audio-upgrades-hero.jpg received null
+⨯ The requested resource isn't a valid image for /images/services/audio-upgrades/audio-upgrades-venue.jpg received null
+⨯ The requested resource isn't a valid image for /images/services/audio-upgrades/audio-upgrades-assessment.jpg received null
+⨯ The requested resource isn't a valid image for /images/services/audio-upgrades/audio-upgrades-clarity.jpg received null
+⨯ The requested resource isn't a valid image for /images/industries/hotels-resorts-curated-music-ambiance.jpg received null
+⨯ The requested resource isn't a valid image for /images/industries/hotels-resorts-boutique-hotel-music.png received null
+⨯ The requested resource isn't a valid image for /images/industries/hotels-resorts-luxury-hotel-lobby.jpg received null
+⨯ The requested resource isn't a valid image for /images/industries/hotels-resorts-sonic-identity-detail.jpg received null
+⨯ The requested resource isn't a valid image for /images/industries/restaurants-bars-curated-music-atmosphere.jpg received null
+⨯ The requested resource isn't a valid image for /images/industries/restaurants-bars-dining-music-experience.jpg received null
+⨯ The requested resource isn't a valid image for /images/industries/restaurants-bars-cocktail-bar-atmosphere.jpg received null
+⨯ The requested resource isn't a valid image for /images/industries/restaurants-bars-restaurant-dining-room.jpg received null
+⨯ The requested resource isn't a valid image for /images/industries/events-experiences-music-curation-event.jpg received null
+⨯ The requested resource isn't a valid image for /images/industries/events-experiences-branded-event-music.jpg received null
+⨯ The requested resource isn't a valid image for /images/industries/events-experiences-event-music-planning.jpg received null
+⨯ The requested resource isn't a valid image for /images/industries/events-experiences-private-event-soundscape.jpg received null
+⨯ The requested resource isn't a valid image for /images/industries/retail-stores-curated-music-shopping.jpg received null
+⨯ The requested resource isn't a valid image for /images/industries/retail-stores-music-strategy-browsing.jpg received null
+⨯ The requested resource isn't a valid image for /images/industries/retail-stores-boutique-music-atmosphere.jpg received null
+⨯ The requested resource isn't a valid image for /images/industries/retail-stores-customer-journey-sound.jpg received null
+⨯ The requested resource isn't a valid image for /images/industries/wellness-gyms-luxury-spa-ambient-music.jpg received null
+⨯ The requested resource isn't a valid image for /images/industries/wellness-gyms-fitness-music-curation.jpg received null
+⨯ The requested resource isn't a valid image for /images/industries/wellness-gyms-spa-treatment-music.jpg received null
+⨯ The requested resource isn't a valid image for /images/industries/wellness-gyms-yoga-studio-soundscape.jpg received null
+⨯ The requested resource isn't a valid image for /images/industries/art-museums-fashion-gallery-curation.jpg received null
+⨯ The requested resource isn't a valid image for /images/industries/art-museums-fashion-museum-soundscape.jpg received null
+⨯ The requested resource isn't a valid image for /images/industries/art-museums-fashion-cultural-space-music.jpg received null
+⨯ The requested resource isn't a valid image for /images/industries/art-museums-fashion-exhibition-ambient-music.jpg received null

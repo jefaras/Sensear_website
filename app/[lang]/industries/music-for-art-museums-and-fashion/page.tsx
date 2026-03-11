@@ -23,6 +23,14 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: Loc
                 ? 'Εξειδικευμένη μουσική επιμέλεια για μουσεία και μόδα.'
                 : 'Bespoke music curation for museums and fashion.',
             type: 'website',
+            images: [
+                {
+                    url: '/images/industries/industry-art-museums-fashion.jpg',
+                    width: 1200,
+                    height: 630,
+                    alt: 'Music curation for art museums and fashion',
+                },
+            ],
         },
     };
 }

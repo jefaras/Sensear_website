@@ -1,0 +1,188 @@
+[
+  {
+    "src": "/_next/image?url=%2Fimages%2Fbrand%2Fsensear-logo-color.png&w=3840&q=75",
+    "alt": "SensEar logo",
+    "loading": "eager",
+    "pages": [
+      "/en/services",
+      "/en/services",
+      "/en/services",
+      "/en/services",
+      "/en/industries",
+      "/en/industries",
+      "/en/industries",
+      "/en/industries",
+      "/en/industries",
+      "/en/industries",
+      "/en/contact",
+      "/el/services",
+      "/el/services",
+      "/el/services",
+      "/el/services",
+      "/el/industries",
+      "/el/industries",
+      "/el/industries",
+      "/el/industries",
+      "/el/industries",
+      "/el/industries",
+      "/el/contact"
+    ],
+    "count": 22
+  },
+  {
+    "src": "/_next/image?url=%2Fimages%2Fservices%2Fservice-signature-playlists.jpg&w=3840&q=75",
+    "alt": "Signature Playlists service for curated music experiences",
+    "loading": "eager",
+    "pages": [
+      "/en/services",
+      "/el/services"
+    ],
+    "count": 2
+  },
+  {
+    "src": "/_next/image?url=%2Fimages%2Fcontact%2Fvinyl-record-contact-form-bg.png&w=3840&q=75",
+    "alt": "Vinyl record background",
+    "loading": "eager",
+    "pages": [
+      "/en/contact",
+      "/el/contact"
+    ],
+    "count": 2
+  },
+  {
+    "src": "/_next/image?url=%2Fimages%2Fbrand%2Fcontact-email.png&w=3840&q=75",
+    "alt": "hello@sensear.music",
+    "loading": "eager",
+    "pages": [
+      "/en/contact",
+      "/el/contact"
+    ],
+    "count": 2
+  },
+  {
+    "src": "/_next/image?url=%2Fimages%2Findustries%2Findustry-restaurants-bars.jpg&w=3840&q=75",
+    "alt": "Hotels & Resorts",
+    "loading": "eager",
+    "pages": [
+      "/en/industries"
+    ],
+    "count": 1
+  },
+  {
+    "src": "/_next/image?url=%2Fimages%2Fcase-studies%2Fcase-study-beach-house.webp&w=3840&q=75",
+    "alt": "Beach House, Antiparos",
+    "loading": "eager",
+    "pages": [
+      "/en/case-studies"
+    ],
+    "count": 1
+  },
+  {
+    "src": "/_next/image?url=%2Fimages%2Fcase-studies%2Fcase-study-pelicanos.webp&w=3840&q=75",
+    "alt": "Pelicanos, Sifnos",
+    "loading": "eager",
+    "pages": [
+      "/en/case-studies"
+    ],
+    "count": 1
+  },
+  {
+    "src": "/_next/image?url=%2Fimages%2Fblog%2Fblog-why-luxury-hotels-need-music.jpg&w=3840&q=75",
+    "alt": "Luxury hotel interior showcasing music's role in hospitality marketing strategy",
+    "loading": "eager",
+    "pages": [
+      "/en/blog"
+    ],
+    "count": 1
+  },
+  {
+    "src": "/_next/image?url=%2Fimages%2Fblog%2Fblog-music-converts-browsers-buyers.jpg&w=3840&q=75",
+    "alt": "Restaurant ambiance demonstrating music's impact on customer sales and behavior",
+    "loading": "eager",
+    "pages": [
+      "/en/blog"
+    ],
+    "count": 1
+  },
+  {
+    "src": "/_next/image?url=%2Fimages%2Fabout%2Fabout-journey-team-collaboration.jpg&w=1920&q=75",
+    "alt": "Our journey",
+    "loading": "eager",
+    "pages": [
+      "/en/about"
+    ],
+    "count": 1
+  },
+  {
+    "src": "/_next/image?url=%2Fimages%2Fabout%2Fteam-george-fameliaris.jpg&w=1200&q=75",
+    "alt": "George Fameliaris - SensEar Co-Founder and Chief Music Curator",
+    "loading": "eager",
+    "pages": [
+      "/en/about"
+    ],
+    "count": 1
+  },
+  {
+    "src": "/_next/image?url=%2Fimages%2Findustries%2Findustry-restaurants-bars.jpg&w=3840&q=75",
+    "alt": "?e??d??e?a & T??et?a",
+    "loading": "eager",
+    "pages": [
+      "/el/industries"
+    ],
+    "count": 1
+  },
+  {
+    "src": "/_next/image?url=%2Fimages%2Fcase-studies%2Fcase-study-beach-house.webp&w=3840&q=75",
+    "alt": "Beach House, ??t?pa???",
+    "loading": "eager",
+    "pages": [
+      "/el/case-studies"
+    ],
+    "count": 1
+  },
+  {
+    "src": "/_next/image?url=%2Fimages%2Fcase-studies%2Fcase-study-pelicanos.webp&w=3840&q=75",
+    "alt": "Pelicanos, S?f???",
+    "loading": "eager",
+    "pages": [
+      "/el/case-studies"
+    ],
+    "count": 1
+  },
+  {
+    "src": "/_next/image?url=%2Fimages%2Fblog%2Fblog-why-luxury-hotels-need-music.jpg&w=3840&q=75",
+    "alt": "?s?te???? p???te???? ?e??d??e??? p?? a?ade????e? t?? ???? t?? µ??s???? st? st?at????? marketing f????e??a?",
+    "loading": "eager",
+    "pages": [
+      "/el/blog"
+    ],
+    "count": 1
+  },
+  {
+    "src": "/_next/image?url=%2Fimages%2Fblog%2Fblog-music-converts-browsers-buyers.jpg&w=3840&q=75",
+    "alt": "?s?te????? ????? est?at????? p?? de???e? t?? ep?d?as? t?? µ??s???? st?? p???se?? ?a? t? s?µpe??f??? t?? pe?at??",
+    "loading": "eager",
+    "pages": [
+      "/el/blog"
+    ],
+    "count": 1
+  },
+  {
+    "src": "/_next/image?url=%2Fimages%2Fabout%2Fabout-journey-team-collaboration.jpg&w=1920&q=75",
+    "alt": "? p??e?a µa?",
+    "loading": "eager",
+    "pages": [
+      "/el/about"
+    ],
+    "count": 1
+  },
+  {
+    "src": "/_next/image?url=%2Fimages%2Fabout%2Fteam-george-fameliaris.jpg&w=1200&q=75",
+    "alt": "G?????? Faµe?????? - S???d??t?? ?a? ?p??efa??? ???s???? ?p?µ??e?a? SensEar",
+    "loading": "eager",
+    "pages": [
+      "/el/about"
+    ],
+    "count": 1
+  }
+]

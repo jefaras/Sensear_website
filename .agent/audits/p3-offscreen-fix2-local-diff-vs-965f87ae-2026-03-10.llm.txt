@@ -1,0 +1,1110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<diff version="0.0.38">
+ <baseline id="965f87ae-b388-4bc0-a9c9-11d622c97172" url="http://127.0.0.1:3000" date="2026-03-10T09:49:24.140Z" pages="58" score="60" grade="D"/>
+ <current id="ea0976fb-9f59-42c5-9a65-7ead5976321c" url="http://127.0.0.1:3000" date="2026-03-10T11:54:10.238Z" pages="58" score="59" grade="F"/>
+ <summary added="22" removed="20" changed="62" regressions="0" improvements="0"/>
+ <added>
+  <issue fp="402db597e331" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   21 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: 3KO8Gk******PfPR (Found in html (http://127.0.0.1:3000/el/blog))
+  </issue>
+  <issue fp="3db683daaa67" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   21 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: 6NXRRc******Kdlp (Found in html (http://127.0.0.1:3000/el/terms))
+  </issue>
+  <issue fp="1d650ac1838e" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   21 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: 6ROw48******83SF (Found in html (http://127.0.0.1:3000/el/industries/music-for-retail-stores))
+  </issue>
+  <issue fp="e1b78f682b22" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   21 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: 8ikfIG******pmLR (Found in html (http://127.0.0.1:3000/en/sitemap-page))
+  </issue>
+  <issue fp="4f8633cba7dd" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   21 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: 8vC3Ew******BFNM (Found in html (http://127.0.0.1:3000/el/privacy))
+  </issue>
+  <issue fp="9b6e13babae3" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   21 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: Bgjub7******q0K3 (Found in html (http://127.0.0.1:3000/el/industries/music-for-hotels-and-resorts))
+  </issue>
+  <issue fp="80e9bcae3d72" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   21 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: bzg5CU******WkKN (Found in html (http://127.0.0.1:3000/en/blog))
+  </issue>
+  <issue fp="51e228096bf1" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   21 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: doj6VX******0r1t (Found in html (http://127.0.0.1:3000/el/blog/service-environment-shapes-wait-time))
+  </issue>
+  <issue fp="6b7f6eb9222a" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   21 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: DXIEZG******eRrb (Found in html (http://127.0.0.1:3000/el/blog/building-brand-people-can-hear))
+  </issue>
+  <issue fp="476220af0b2d" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   21 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: DXNjs9******FWEl (Found in html (http://127.0.0.1:3000/el/case-studies))
+  </issue>
+  <issue fp="a93371f72e61" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   21 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: GIMEGO******rZ0g (Found in html (http://127.0.0.1:3000/el/blog/background-music-shapes-customer-behavior))
+  </issue>
+  <issue fp="5ce123d4bf45" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   21 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: Ks08Oz******cB6D (Found in html (http://127.0.0.1:3000/el/blog/how-top-hospitality-brands-design-sound))
+  </issue>
+  <issue fp="d4617ad8be03" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   21 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: LEgFhR******yvqs (Found in html (http://127.0.0.1:3000/en/industries/music-for-hotels-and-resorts))
+  </issue>
+  <issue fp="db9cfea08b5f" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   21 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: MCJyvA******JUpj (Found in html (http://127.0.0.1:3000/en/blog/three-reasons-make-music-hospitality))
+  </issue>
+  <issue fp="122ac2bb069b" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   21 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: ODJFJS******S0th (Found in html (http://127.0.0.1:3000/en/contact))
+  </issue>
+  <issue fp="eb471e844668" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   21 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: RWybT2******wjh5 (Found in html (http://127.0.0.1:3000/en/privacy))
+  </issue>
+  <issue fp="ed568c79b161" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   21 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: SR5dml******Sp5R (Found in html (http://127.0.0.1:3000/el/sitemap-page))
+  </issue>
+  <issue fp="44f63bdcf528" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   21 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: V5OPib******RRGt (Found in html (http://127.0.0.1:3000/en/blog/background-music-shapes-customer-behavior))
+  </issue>
+  <issue fp="d8a52f1e1948" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   21 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: v6XmeP******AoGx (Found in html (http://127.0.0.1:3000/en/about))
+  </issue>
+  <issue fp="ffb158b47a47" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   21 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: wo0Pnf******RanE (Found in html (http://127.0.0.1:3000/en/blog/brand-music-converts-browsers-buyers))
+  </issue>
+  <issue fp="22474edeb95a" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   21 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: Xvbv08******ukzE (Found in html (http://127.0.0.1:3000/el/blog/three-reasons-make-music-hospitality))
+  </issue>
+  <issue fp="f62558f26b83" rule="perf/lazy-above-fold" severity="warning" status="warn" check="lazy-above-fold" category="perf" weight="5">
+   1 above-fold image(s) with lazy loading
+   Target: item http://127.0.0.1:3000/_next/image
+  </issue>
+ </added>
+ <removed>
+  <issue fp="a8b3618ffc06" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   20 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: 1m5jz0******1hDG (Found in html (http://127.0.0.1:3000/el/industries))
+  </issue>
+  <issue fp="1e617c572dc3" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   20 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: 4a1dPf******Z0JM (Found in html (http://127.0.0.1:3000/el/industries/music-for-wellness-and-gyms))
+  </issue>
+  <issue fp="d6e01dc2e279" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   20 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: 6AXI2k******PAyw (Found in html (http://127.0.0.1:3000/en/industries/music-for-wellness-and-gyms))
+  </issue>
+  <issue fp="6008ae389297" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   20 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: 6N9Efa******17nO (Found in html (http://127.0.0.1:3000/el/terms))
+  </issue>
+  <issue fp="89ce4c2b3c8c" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   20 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: 6v0104******G4QV (Found in html (http://127.0.0.1:3000/en/services/signature-playlists))
+  </issue>
+  <issue fp="f96c730f1043" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   20 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: 8LNT4J******l7RP (Found in html (http://127.0.0.1:3000/el/blog))
+  </issue>
+  <issue fp="71661ab72be9" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   20 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: DFmETr******No6j (Found in html (http://127.0.0.1:3000/en/blog/three-reasons-make-music-hospitality))
+  </issue>
+  <issue fp="dde5e20d331e" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   20 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: GEnHgz******gkvK (Found in html (http://127.0.0.1:3000/en/privacy))
+  </issue>
+  <issue fp="2761c70a401b" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   20 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: Gl93Tn******dZk9 (Found in html (http://127.0.0.1:3000/el/blog/background-music-shapes-customer-behavior))
+  </issue>
+  <issue fp="57ecba5c540f" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   20 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: KBgFM4******CoGE (Found in html (http://127.0.0.1:3000/el/services))
+  </issue>
+  <issue fp="787184f6c4f0" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   20 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: nsbp0N******YnW9 (Found in html (http://127.0.0.1:3000/en/about))
+  </issue>
+  <issue fp="353ecabb64b4" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   20 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: NWOvew******ZEin (Found in html (http://127.0.0.1:3000/el/industries/music-for-retail-stores))
+  </issue>
+  <issue fp="03323f594ba0" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   20 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: o8xEmd******W5WL (Found in html (http://127.0.0.1:3000/en/blog))
+  </issue>
+  <issue fp="9cfb26fc1d1e" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   20 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: P5qGop******ADjd (Found in html (http://127.0.0.1:3000/en/sitemap-page))
+  </issue>
+  <issue fp="d4be4592db9c" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   20 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: Qc87Bf******bPrl (Found in html (http://127.0.0.1:3000/en/services/audio-upgrades))
+  </issue>
+  <issue fp="12b593ace96c" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   20 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: tu5oLo******r8wX (Found in html (http://127.0.0.1:3000/el/contact))
+  </issue>
+  <issue fp="8440e0b963fd" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   20 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: u8lIVr******n5QP (Found in html (http://127.0.0.1:3000/en/blog/music-curation-cycle-venues))
+  </issue>
+  <issue fp="0b5341e89f7b" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   20 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: Uf4UvI******dwnd (Found in html (http://127.0.0.1:3000/en/blog/service-environment-shapes-wait-time))
+  </issue>
+  <issue fp="425186643e7a" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   20 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: x1gszU******sBUx (Found in html (http://127.0.0.1:3000/el/services/signature-playlists))
+  </issue>
+  <issue fp="69eb9d20468e" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   20 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: ZUYWQb******doYW (Found in html (http://127.0.0.1:3000/en/services/event-soundtracks))
+  </issue>
+ </removed>
+ <changed>
+  <change type="change" fp="bb4fec44bbd7" rule="perf/compression" severity="warning" status="fail" check="compression">
+   fail→fail: No compression detected (155KB uncompressed)
+   Before:
+    <issue fp="bb4fec44bbd7" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (157KB uncompressed)
+     Target: page http://127.0.0.1:3000/el
+     Meta: estimatedSavings: ~110KB
+    </issue>
+   After:
+    <issue fp="bb4fec44bbd7" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (155KB uncompressed)
+     Target: page http://127.0.0.1:3000/el
+     Meta: estimatedSavings: ~109KB
+    </issue>
+  </change>
+  <change type="change" fp="5d209d8c92b5" rule="perf/compression" severity="warning" status="fail" check="compression">
+   fail→fail: No compression detected (118KB uncompressed)
+   Before:
+    <issue fp="5d209d8c92b5" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (119KB uncompressed)
+     Target: page http://127.0.0.1:3000/el/about
+     Meta: estimatedSavings: ~84KB
+    </issue>
+   After:
+    <issue fp="5d209d8c92b5" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (118KB uncompressed)
+     Target: page http://127.0.0.1:3000/el/about
+     Meta: estimatedSavings: ~83KB
+    </issue>
+  </change>
+  <change type="change" fp="aeac877eaba5" rule="perf/compression" severity="warning" status="fail" check="compression">
+   fail→fail: No compression detected (111KB uncompressed)
+   Before:
+    <issue fp="aeac877eaba5" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (112KB uncompressed)
+     Target: page http://127.0.0.1:3000/el/blog
+     Meta: estimatedSavings: ~78KB
+    </issue>
+   After:
+    <issue fp="aeac877eaba5" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (111KB uncompressed)
+     Target: page http://127.0.0.1:3000/el/blog
+     Meta: estimatedSavings: ~78KB
+    </issue>
+  </change>
+  <change type="change" fp="4c00ea97109d" rule="perf/compression" severity="warning" status="fail" check="compression">
+   fail→fail: No compression detected (115KB uncompressed)
+   Before:
+    <issue fp="4c00ea97109d" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (116KB uncompressed)
+     Target: page http://127.0.0.1:3000/el/blog/background-music-shapes-customer-behavior
+     Meta: estimatedSavings: ~81KB
+    </issue>
+   After:
+    <issue fp="4c00ea97109d" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (115KB uncompressed)
+     Target: page http://127.0.0.1:3000/el/blog/background-music-shapes-customer-behavior
+     Meta: estimatedSavings: ~80KB
+    </issue>
+  </change>
+  <change type="change" fp="ff86143733f4" rule="perf/compression" severity="warning" status="fail" check="compression">
+   fail→fail: No compression detected (102KB uncompressed)
+   Before:
+    <issue fp="ff86143733f4" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (103KB uncompressed)
+     Target: page http://127.0.0.1:3000/el/blog/brand-music-converts-browsers-buyers
+     Meta: estimatedSavings: ~72KB
+    </issue>
+   After:
+    <issue fp="ff86143733f4" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (102KB uncompressed)
+     Target: page http://127.0.0.1:3000/el/blog/brand-music-converts-browsers-buyers
+     Meta: estimatedSavings: ~71KB
+    </issue>
+  </change>
+  <change type="change" fp="ce8416521ade" rule="perf/compression" severity="warning" status="fail" check="compression">
+   fail→fail: No compression detected (91KB uncompressed)
+   Before:
+    <issue fp="ce8416521ade" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (92KB uncompressed)
+     Target: page http://127.0.0.1:3000/el/blog/building-brand-people-can-hear
+     Meta: estimatedSavings: ~65KB
+    </issue>
+   After:
+    <issue fp="ce8416521ade" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (91KB uncompressed)
+     Target: page http://127.0.0.1:3000/el/blog/building-brand-people-can-hear
+     Meta: estimatedSavings: ~64KB
+    </issue>
+  </change>
+  <change type="change" fp="efb0c859dfec" rule="perf/compression" severity="warning" status="fail" check="compression">
+   fail→fail: No compression detected (101KB uncompressed)
+   Before:
+    <issue fp="efb0c859dfec" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (102KB uncompressed)
+     Target: page http://127.0.0.1:3000/el/blog/how-top-hospitality-brands-design-sound
+     Meta: estimatedSavings: ~71KB
+    </issue>
+   After:
+    <issue fp="efb0c859dfec" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (101KB uncompressed)
+     Target: page http://127.0.0.1:3000/el/blog/how-top-hospitality-brands-design-sound
+     Meta: estimatedSavings: ~70KB
+    </issue>
+  </change>
+  <change type="change" fp="5b0d095ef417" rule="perf/compression" severity="warning" status="fail" check="compression">
+   fail→fail: No compression detected (106KB uncompressed)
+   Before:
+    <issue fp="5b0d095ef417" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (107KB uncompressed)
+     Target: page http://127.0.0.1:3000/el/blog/music-curation-cycle-venues
+     Meta: estimatedSavings: ~75KB
+    </issue>
+   After:
+    <issue fp="5b0d095ef417" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (106KB uncompressed)
+     Target: page http://127.0.0.1:3000/el/blog/music-curation-cycle-venues
+     Meta: estimatedSavings: ~74KB
+    </issue>
+  </change>
+  <change type="change" fp="1b172a8db53b" rule="perf/compression" severity="warning" status="fail" check="compression">
+   fail→fail: No compression detected (97KB uncompressed)
+   Before:
+    <issue fp="1b172a8db53b" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (99KB uncompressed)
+     Target: page http://127.0.0.1:3000/el/blog/service-environment-shapes-wait-time
+     Meta: estimatedSavings: ~69KB
+    </issue>
+   After:
+    <issue fp="1b172a8db53b" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (97KB uncompressed)
+     Target: page http://127.0.0.1:3000/el/blog/service-environment-shapes-wait-time
+     Meta: estimatedSavings: ~68KB
+    </issue>
+  </change>
+  <change type="change" fp="aeabce56927b" rule="perf/compression" severity="warning" status="fail" check="compression">
+   fail→fail: No compression detected (93KB uncompressed)
+   Before:
+    <issue fp="aeabce56927b" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (94KB uncompressed)
+     Target: page http://127.0.0.1:3000/el/blog/three-reasons-make-music-hospitality
+     Meta: estimatedSavings: ~66KB
+    </issue>
+   After:
+    <issue fp="aeabce56927b" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (93KB uncompressed)
+     Target: page http://127.0.0.1:3000/el/blog/three-reasons-make-music-hospitality
+     Meta: estimatedSavings: ~65KB
+    </issue>
+  </change>
+  <change type="change" fp="c3e32c568636" rule="perf/compression" severity="warning" status="fail" check="compression">
+   fail→fail: No compression detected (114KB uncompressed)
+   Before:
+    <issue fp="c3e32c568636" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (115KB uncompressed)
+     Target: page http://127.0.0.1:3000/el/blog/what-exactly-does-music-curator-do
+     Meta: estimatedSavings: ~81KB
+    </issue>
+   After:
+    <issue fp="c3e32c568636" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (114KB uncompressed)
+     Target: page http://127.0.0.1:3000/el/blog/what-exactly-does-music-curator-do
+     Meta: estimatedSavings: ~80KB
+    </issue>
+  </change>
+  <change type="change" fp="3ef34f075647" rule="perf/compression" severity="warning" status="fail" check="compression">
+   fail→fail: No compression detected (105KB uncompressed)
+   Before:
+    <issue fp="3ef34f075647" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (107KB uncompressed)
+     Target: page http://127.0.0.1:3000/el/case-studies
+     Meta: estimatedSavings: ~75KB
+    </issue>
+   After:
+    <issue fp="3ef34f075647" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (105KB uncompressed)
+     Target: page http://127.0.0.1:3000/el/case-studies
+     Meta: estimatedSavings: ~74KB
+    </issue>
+  </change>
+  <change type="change" fp="536ecd97fba0" rule="perf/compression" severity="warning" status="fail" check="compression">
+   fail→fail: No compression detected (107KB uncompressed)
+   Before:
+    <issue fp="536ecd97fba0" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (108KB uncompressed)
+     Target: page http://127.0.0.1:3000/el/contact
+     Meta: estimatedSavings: ~76KB
+    </issue>
+   After:
+    <issue fp="536ecd97fba0" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (107KB uncompressed)
+     Target: page http://127.0.0.1:3000/el/contact
+     Meta: estimatedSavings: ~75KB
+    </issue>
+  </change>
+  <change type="change" fp="f449d9fce4cf" rule="perf/compression" severity="warning" status="fail" check="compression">
+   fail→fail: No compression detected (92KB uncompressed)
+   Before:
+    <issue fp="f449d9fce4cf" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (93KB uncompressed)
+     Target: page http://127.0.0.1:3000/el/faq
+     Meta: estimatedSavings: ~65KB
+    </issue>
+   After:
+    <issue fp="f449d9fce4cf" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (92KB uncompressed)
+     Target: page http://127.0.0.1:3000/el/faq
+     Meta: estimatedSavings: ~64KB
+    </issue>
+  </change>
+  <change type="change" fp="300fc402197a" rule="perf/compression" severity="warning" status="fail" check="compression">
+   fail→fail: No compression detected (137KB uncompressed)
+   Before:
+    <issue fp="300fc402197a" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (138KB uncompressed)
+     Target: page http://127.0.0.1:3000/el/industries
+     Meta: estimatedSavings: ~97KB
+    </issue>
+   After:
+    <issue fp="300fc402197a" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (137KB uncompressed)
+     Target: page http://127.0.0.1:3000/el/industries
+     Meta: estimatedSavings: ~96KB
+    </issue>
+  </change>
+  <change type="change" fp="822da9618a45" rule="perf/compression" severity="warning" status="fail" check="compression">
+   fail→fail: No compression detected (98KB uncompressed)
+   Before:
+    <issue fp="822da9618a45" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (99KB uncompressed)
+     Target: page http://127.0.0.1:3000/el/industries/music-for-art-museums-and-fashion
+     Meta: estimatedSavings: ~69KB
+    </issue>
+   After:
+    <issue fp="822da9618a45" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (98KB uncompressed)
+     Target: page http://127.0.0.1:3000/el/industries/music-for-art-museums-and-fashion
+     Meta: estimatedSavings: ~68KB
+    </issue>
+  </change>
+  <change type="change" fp="5c17af82f56a" rule="perf/compression" severity="warning" status="fail" check="compression">
+   fail→fail: No compression detected (95KB uncompressed)
+   Before:
+    <issue fp="5c17af82f56a" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (96KB uncompressed)
+     Target: page http://127.0.0.1:3000/el/industries/music-for-events-and-experiences
+     Meta: estimatedSavings: ~67KB
+    </issue>
+   After:
+    <issue fp="5c17af82f56a" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (95KB uncompressed)
+     Target: page http://127.0.0.1:3000/el/industries/music-for-events-and-experiences
+     Meta: estimatedSavings: ~66KB
+    </issue>
+  </change>
+  <change type="change" fp="2f409fe7557a" rule="perf/compression" severity="warning" status="fail" check="compression">
+   fail→fail: No compression detected (99KB uncompressed)
+   Before:
+    <issue fp="2f409fe7557a" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (100KB uncompressed)
+     Target: page http://127.0.0.1:3000/el/industries/music-for-hotels-and-resorts
+     Meta: estimatedSavings: ~70KB
+    </issue>
+   After:
+    <issue fp="2f409fe7557a" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (99KB uncompressed)
+     Target: page http://127.0.0.1:3000/el/industries/music-for-hotels-and-resorts
+     Meta: estimatedSavings: ~69KB
+    </issue>
+  </change>
+  <change type="change" fp="d5e4854499bc" rule="perf/compression" severity="warning" status="fail" check="compression">
+   fail→fail: No compression detected (99KB uncompressed)
+   Before:
+    <issue fp="d5e4854499bc" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (100KB uncompressed)
+     Target: page http://127.0.0.1:3000/el/industries/music-for-restaurants-and-bars
+     Meta: estimatedSavings: ~70KB
+    </issue>
+   After:
+    <issue fp="d5e4854499bc" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (99KB uncompressed)
+     Target: page http://127.0.0.1:3000/el/industries/music-for-restaurants-and-bars
+     Meta: estimatedSavings: ~69KB
+    </issue>
+  </change>
+  <change type="change" fp="93c641e05b77" rule="perf/compression" severity="warning" status="fail" check="compression">
+   fail→fail: No compression detected (96KB uncompressed)
+   Before:
+    <issue fp="93c641e05b77" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (97KB uncompressed)
+     Target: page http://127.0.0.1:3000/el/industries/music-for-retail-stores
+     Meta: estimatedSavings: ~68KB
+    </issue>
+   After:
+    <issue fp="93c641e05b77" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (96KB uncompressed)
+     Target: page http://127.0.0.1:3000/el/industries/music-for-retail-stores
+     Meta: estimatedSavings: ~67KB
+    </issue>
+  </change>
+  <change type="change" fp="912cce987e5a" rule="perf/compression" severity="warning" status="fail" check="compression">
+   fail→fail: No compression detected (95KB uncompressed)
+   Before:
+    <issue fp="912cce987e5a" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (97KB uncompressed)
+     Target: page http://127.0.0.1:3000/el/industries/music-for-wellness-and-gyms
+     Meta: estimatedSavings: ~68KB
+    </issue>
+   After:
+    <issue fp="912cce987e5a" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (95KB uncompressed)
+     Target: page http://127.0.0.1:3000/el/industries/music-for-wellness-and-gyms
+     Meta: estimatedSavings: ~67KB
+    </issue>
+  </change>
+  <change type="change" fp="bb0bd2500254" rule="perf/compression" severity="warning" status="fail" check="compression">
+   fail→fail: No compression detected (82KB uncompressed)
+   Before:
+    <issue fp="bb0bd2500254" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (83KB uncompressed)
+     Target: page http://127.0.0.1:3000/el/privacy
+     Meta: estimatedSavings: ~58KB
+    </issue>
+   After:
+    <issue fp="bb0bd2500254" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (82KB uncompressed)
+     Target: page http://127.0.0.1:3000/el/privacy
+     Meta: estimatedSavings: ~58KB
+    </issue>
+  </change>
+  <change type="change" fp="86c67d79ca2d" rule="perf/compression" severity="warning" status="fail" check="compression">
+   fail→fail: No compression detected (121KB uncompressed)
+   Before:
+    <issue fp="86c67d79ca2d" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (122KB uncompressed)
+     Target: page http://127.0.0.1:3000/el/services
+     Meta: estimatedSavings: ~85KB
+    </issue>
+   After:
+    <issue fp="86c67d79ca2d" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (121KB uncompressed)
+     Target: page http://127.0.0.1:3000/el/services
+     Meta: estimatedSavings: ~85KB
+    </issue>
+  </change>
+  <change type="change" fp="772694681bf1" rule="perf/compression" severity="warning" status="fail" check="compression">
+   fail→fail: No compression detected (93KB uncompressed)
+   Before:
+    <issue fp="772694681bf1" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (94KB uncompressed)
+     Target: page http://127.0.0.1:3000/el/services/audio-upgrades
+     Meta: estimatedSavings: ~66KB
+    </issue>
+   After:
+    <issue fp="772694681bf1" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (93KB uncompressed)
+     Target: page http://127.0.0.1:3000/el/services/audio-upgrades
+     Meta: estimatedSavings: ~65KB
+    </issue>
+  </change>
+  <change type="change" fp="41bc36c35302" rule="perf/compression" severity="warning" status="fail" check="compression">
+   fail→fail: No compression detected (96KB uncompressed)
+   Before:
+    <issue fp="41bc36c35302" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (97KB uncompressed)
+     Target: page http://127.0.0.1:3000/el/services/event-soundtracks
+     Meta: estimatedSavings: ~68KB
+    </issue>
+   After:
+    <issue fp="41bc36c35302" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (96KB uncompressed)
+     Target: page http://127.0.0.1:3000/el/services/event-soundtracks
+     Meta: estimatedSavings: ~67KB
+    </issue>
+  </change>
+  <change type="change" fp="2f7d7dac9829" rule="perf/compression" severity="warning" status="fail" check="compression">
+   fail→fail: No compression detected (98KB uncompressed)
+   Before:
+    <issue fp="2f7d7dac9829" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (99KB uncompressed)
+     Target: page http://127.0.0.1:3000/el/services/signature-playlists
+     Meta: estimatedSavings: ~69KB
+    </issue>
+   After:
+    <issue fp="2f7d7dac9829" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (98KB uncompressed)
+     Target: page http://127.0.0.1:3000/el/services/signature-playlists
+     Meta: estimatedSavings: ~68KB
+    </issue>
+  </change>
+  <change type="change" fp="d3a1d9a3fb87" rule="perf/compression" severity="warning" status="fail" check="compression">
+   fail→fail: No compression detected (95KB uncompressed)
+   Before:
+    <issue fp="d3a1d9a3fb87" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (97KB uncompressed)
+     Target: page http://127.0.0.1:3000/el/services/sonic-identity
+     Meta: estimatedSavings: ~68KB
+    </issue>
+   After:
+    <issue fp="d3a1d9a3fb87" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (95KB uncompressed)
+     Target: page http://127.0.0.1:3000/el/services/sonic-identity
+     Meta: estimatedSavings: ~67KB
+    </issue>
+  </change>
+  <change type="change" fp="f0283b811c6f" rule="perf/compression" severity="warning" status="fail" check="compression">
+   fail→fail: No compression detected (96KB uncompressed)
+   Before:
+    <issue fp="f0283b811c6f" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (97KB uncompressed)
+     Target: page http://127.0.0.1:3000/el/sitemap-page
+     Meta: estimatedSavings: ~68KB
+    </issue>
+   After:
+    <issue fp="f0283b811c6f" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (96KB uncompressed)
+     Target: page http://127.0.0.1:3000/el/sitemap-page
+     Meta: estimatedSavings: ~67KB
+    </issue>
+  </change>
+  <change type="change" fp="71b41851a805" rule="perf/compression" severity="warning" status="fail" check="compression">
+   fail→fail: No compression detected (91KB uncompressed)
+   Before:
+    <issue fp="71b41851a805" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (93KB uncompressed)
+     Target: page http://127.0.0.1:3000/el/terms
+     Meta: estimatedSavings: ~65KB
+    </issue>
+   After:
+    <issue fp="71b41851a805" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (91KB uncompressed)
+     Target: page http://127.0.0.1:3000/el/terms
+     Meta: estimatedSavings: ~64KB
+    </issue>
+  </change>
+  <change type="change" fp="f21401109ec2" rule="perf/compression" severity="warning" status="fail" check="compression">
+   fail→fail: No compression detected (154KB uncompressed)
+   Before:
+    <issue fp="f21401109ec2" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (156KB uncompressed)
+     Target: page http://127.0.0.1:3000/en
+     Meta: estimatedSavings: ~109KB
+    </issue>
+   After:
+    <issue fp="f21401109ec2" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (154KB uncompressed)
+     Target: page http://127.0.0.1:3000/en
+     Meta: estimatedSavings: ~108KB
+    </issue>
+  </change>
+  <change type="change" fp="a6a135a5010d" rule="perf/compression" severity="warning" status="fail" check="compression">
+   fail→fail: No compression detected (117KB uncompressed)
+   Before:
+    <issue fp="a6a135a5010d" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (118KB uncompressed)
+     Target: page http://127.0.0.1:3000/en/about
+     Meta: estimatedSavings: ~83KB
+    </issue>
+   After:
+    <issue fp="a6a135a5010d" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (117KB uncompressed)
+     Target: page http://127.0.0.1:3000/en/about
+     Meta: estimatedSavings: ~82KB
+    </issue>
+  </change>
+  <change type="change" fp="8deb81265261" rule="perf/compression" severity="warning" status="fail" check="compression">
+   fail→fail: No compression detected (110KB uncompressed)
+   Before:
+    <issue fp="8deb81265261" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (111KB uncompressed)
+     Target: page http://127.0.0.1:3000/en/blog
+     Meta: estimatedSavings: ~78KB
+    </issue>
+   After:
+    <issue fp="8deb81265261" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (110KB uncompressed)
+     Target: page http://127.0.0.1:3000/en/blog
+     Meta: estimatedSavings: ~77KB
+    </issue>
+  </change>
+  <change type="change" fp="9eea078a4b50" rule="perf/compression" severity="warning" status="fail" check="compression">
+   fail→fail: No compression detected (110KB uncompressed)
+   Before:
+    <issue fp="9eea078a4b50" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (112KB uncompressed)
+     Target: page http://127.0.0.1:3000/en/blog/background-music-shapes-customer-behavior
+     Meta: estimatedSavings: ~78KB
+    </issue>
+   After:
+    <issue fp="9eea078a4b50" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (110KB uncompressed)
+     Target: page http://127.0.0.1:3000/en/blog/background-music-shapes-customer-behavior
+     Meta: estimatedSavings: ~77KB
+    </issue>
+  </change>
+  <change type="change" fp="ae4f88df4e5d" rule="perf/compression" severity="warning" status="fail" check="compression">
+   fail→fail: No compression detected (99KB uncompressed)
+   Before:
+    <issue fp="ae4f88df4e5d" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (100KB uncompressed)
+     Target: page http://127.0.0.1:3000/en/blog/brand-music-converts-browsers-buyers
+     Meta: estimatedSavings: ~70KB
+    </issue>
+   After:
+    <issue fp="ae4f88df4e5d" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (99KB uncompressed)
+     Target: page http://127.0.0.1:3000/en/blog/brand-music-converts-browsers-buyers
+     Meta: estimatedSavings: ~69KB
+    </issue>
+  </change>
+  <change type="change" fp="1bc2e2fbf3fc" rule="perf/compression" severity="warning" status="fail" check="compression">
+   fail→fail: No compression detected (110KB uncompressed)
+   Before:
+    <issue fp="1bc2e2fbf3fc" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (111KB uncompressed)
+     Target: page http://127.0.0.1:3000/en/blog/building-brand-people-can-hear
+     Meta: estimatedSavings: ~78KB
+    </issue>
+   After:
+    <issue fp="1bc2e2fbf3fc" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (110KB uncompressed)
+     Target: page http://127.0.0.1:3000/en/blog/building-brand-people-can-hear
+     Meta: estimatedSavings: ~77KB
+    </issue>
+  </change>
+  <change type="change" fp="125b314c7921" rule="perf/compression" severity="warning" status="fail" check="compression">
+   fail→fail: No compression detected (98KB uncompressed)
+   Before:
+    <issue fp="125b314c7921" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (100KB uncompressed)
+     Target: page http://127.0.0.1:3000/en/blog/how-top-hospitality-brands-design-sound
+     Meta: estimatedSavings: ~70KB
+    </issue>
+   After:
+    <issue fp="125b314c7921" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (98KB uncompressed)
+     Target: page http://127.0.0.1:3000/en/blog/how-top-hospitality-brands-design-sound
+     Meta: estimatedSavings: ~69KB
+    </issue>
+  </change>
+  <change type="change" fp="a0299f45d837" rule="perf/compression" severity="warning" status="fail" check="compression">
+   fail→fail: No compression detected (102KB uncompressed)
+   Before:
+    <issue fp="a0299f45d837" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (104KB uncompressed)
+     Target: page http://127.0.0.1:3000/en/blog/music-curation-cycle-venues
+     Meta: estimatedSavings: ~73KB
+    </issue>
+   After:
+    <issue fp="a0299f45d837" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (102KB uncompressed)
+     Target: page http://127.0.0.1:3000/en/blog/music-curation-cycle-venues
+     Meta: estimatedSavings: ~72KB
+    </issue>
+  </change>
+  <change type="change" fp="a0a34d7eb9ef" rule="perf/compression" severity="warning" status="fail" check="compression">
+   fail→fail: No compression detected (95KB uncompressed)
+   Before:
+    <issue fp="a0a34d7eb9ef" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (96KB uncompressed)
+     Target: page http://127.0.0.1:3000/en/blog/service-environment-shapes-wait-time
+     Meta: estimatedSavings: ~67KB
+    </issue>
+   After:
+    <issue fp="a0a34d7eb9ef" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (95KB uncompressed)
+     Target: page http://127.0.0.1:3000/en/blog/service-environment-shapes-wait-time
+     Meta: estimatedSavings: ~66KB
+    </issue>
+  </change>
+  <change type="change" fp="be6fb521061c" rule="perf/compression" severity="warning" status="fail" check="compression">
+   fail→fail: No compression detected (91KB uncompressed)
+   Before:
+    <issue fp="be6fb521061c" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (93KB uncompressed)
+     Target: page http://127.0.0.1:3000/en/blog/three-reasons-make-music-hospitality
+     Meta: estimatedSavings: ~65KB
+    </issue>
+   After:
+    <issue fp="be6fb521061c" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (91KB uncompressed)
+     Target: page http://127.0.0.1:3000/en/blog/three-reasons-make-music-hospitality
+     Meta: estimatedSavings: ~64KB
+    </issue>
+  </change>
+  <change type="change" fp="11b4b515f1ad" rule="perf/compression" severity="warning" status="fail" check="compression">
+   fail→fail: No compression detected (109KB uncompressed)
+   Before:
+    <issue fp="11b4b515f1ad" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (110KB uncompressed)
+     Target: page http://127.0.0.1:3000/en/blog/what-exactly-does-music-curator-do
+     Meta: estimatedSavings: ~77KB
+    </issue>
+   After:
+    <issue fp="11b4b515f1ad" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (109KB uncompressed)
+     Target: page http://127.0.0.1:3000/en/blog/what-exactly-does-music-curator-do
+     Meta: estimatedSavings: ~76KB
+    </issue>
+  </change>
+  <change type="change" fp="6ec1c8da26d6" rule="perf/compression" severity="warning" status="fail" check="compression">
+   fail→fail: No compression detected (105KB uncompressed)
+   Before:
+    <issue fp="6ec1c8da26d6" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (106KB uncompressed)
+     Target: page http://127.0.0.1:3000/en/case-studies
+     Meta: estimatedSavings: ~74KB
+    </issue>
+   After:
+    <issue fp="6ec1c8da26d6" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (105KB uncompressed)
+     Target: page http://127.0.0.1:3000/en/case-studies
+     Meta: estimatedSavings: ~74KB
+    </issue>
+  </change>
+  <change type="change" fp="41618da968f3" rule="perf/compression" severity="warning" status="fail" check="compression">
+   fail→fail: No compression detected (106KB uncompressed)
+   Before:
+    <issue fp="41618da968f3" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (108KB uncompressed)
+     Target: page http://127.0.0.1:3000/en/contact
+     Meta: estimatedSavings: ~75KB
+    </issue>
+   After:
+    <issue fp="41618da968f3" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (106KB uncompressed)
+     Target: page http://127.0.0.1:3000/en/contact
+     Meta: estimatedSavings: ~74KB
+    </issue>
+  </change>
+  <change type="change" fp="0c20f7179850" rule="perf/compression" severity="warning" status="fail" check="compression">
+   fail→fail: No compression detected (91KB uncompressed)
+   Before:
+    <issue fp="0c20f7179850" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (93KB uncompressed)
+     Target: page http://127.0.0.1:3000/en/faq
+     Meta: estimatedSavings: ~65KB
+    </issue>
+   After:
+    <issue fp="0c20f7179850" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (91KB uncompressed)
+     Target: page http://127.0.0.1:3000/en/faq
+     Meta: estimatedSavings: ~64KB
+    </issue>
+  </change>
+  <change type="change" fp="7bddb38336d7" rule="perf/compression" severity="warning" status="fail" check="compression">
+   fail→fail: No compression detected (136KB uncompressed)
+   Before:
+    <issue fp="7bddb38336d7" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (137KB uncompressed)
+     Target: page http://127.0.0.1:3000/en/industries
+     Meta: estimatedSavings: ~96KB
+    </issue>
+   After:
+    <issue fp="7bddb38336d7" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (136KB uncompressed)
+     Target: page http://127.0.0.1:3000/en/industries
+     Meta: estimatedSavings: ~95KB
+    </issue>
+  </change>
+  <change type="change" fp="37a624cf8c82" rule="perf/compression" severity="warning" status="fail" check="compression">
+   fail→fail: No compression detected (97KB uncompressed)
+   Before:
+    <issue fp="37a624cf8c82" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (98KB uncompressed)
+     Target: page http://127.0.0.1:3000/en/industries/music-for-art-museums-and-fashion
+     Meta: estimatedSavings: ~69KB
+    </issue>
+   After:
+    <issue fp="37a624cf8c82" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (97KB uncompressed)
+     Target: page http://127.0.0.1:3000/en/industries/music-for-art-museums-and-fashion
+     Meta: estimatedSavings: ~68KB
+    </issue>
+  </change>
+  <change type="change" fp="8b2eaea50a49" rule="perf/compression" severity="warning" status="fail" check="compression">
+   fail→fail: No compression detected (93KB uncompressed)
+   Before:
+    <issue fp="8b2eaea50a49" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (95KB uncompressed)
+     Target: page http://127.0.0.1:3000/en/industries/music-for-events-and-experiences
+     Meta: estimatedSavings: ~66KB
+    </issue>
+   After:
+    <issue fp="8b2eaea50a49" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (93KB uncompressed)
+     Target: page http://127.0.0.1:3000/en/industries/music-for-events-and-experiences
+     Meta: estimatedSavings: ~65KB
+    </issue>
+  </change>
+  <change type="change" fp="37fcc58a0952" rule="perf/compression" severity="warning" status="fail" check="compression">
+   fail→fail: No compression detected (97KB uncompressed)
+   Before:
+    <issue fp="37fcc58a0952" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (98KB uncompressed)
+     Target: page http://127.0.0.1:3000/en/industries/music-for-hotels-and-resorts
+     Meta: estimatedSavings: ~69KB
+    </issue>
+   After:
+    <issue fp="37fcc58a0952" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (97KB uncompressed)
+     Target: page http://127.0.0.1:3000/en/industries/music-for-hotels-and-resorts
+     Meta: estimatedSavings: ~68KB
+    </issue>
+  </change>
+  <change type="change" fp="c80e07fb6c77" rule="perf/compression" severity="warning" status="fail" check="compression">
+   fail→fail: No compression detected (97KB uncompressed)
+   Before:
+    <issue fp="c80e07fb6c77" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (99KB uncompressed)
+     Target: page http://127.0.0.1:3000/en/industries/music-for-restaurants-and-bars
+     Meta: estimatedSavings: ~69KB
+    </issue>
+   After:
+    <issue fp="c80e07fb6c77" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (97KB uncompressed)
+     Target: page http://127.0.0.1:3000/en/industries/music-for-restaurants-and-bars
+     Meta: estimatedSavings: ~68KB
+    </issue>
+  </change>
+  <change type="change" fp="2006dbc23ee4" rule="perf/compression" severity="warning" status="fail" check="compression">
+   fail→fail: No compression detected (94KB uncompressed)
+   Before:
+    <issue fp="2006dbc23ee4" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (95KB uncompressed)
+     Target: page http://127.0.0.1:3000/en/industries/music-for-retail-stores
+     Meta: estimatedSavings: ~67KB
+    </issue>
+   After:
+    <issue fp="2006dbc23ee4" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (94KB uncompressed)
+     Target: page http://127.0.0.1:3000/en/industries/music-for-retail-stores
+     Meta: estimatedSavings: ~66KB
+    </issue>
+  </change>
+  <change type="change" fp="e6eca525495d" rule="perf/compression" severity="warning" status="fail" check="compression">
+   fail→fail: No compression detected (94KB uncompressed)
+   Before:
+    <issue fp="e6eca525495d" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (95KB uncompressed)
+     Target: page http://127.0.0.1:3000/en/industries/music-for-wellness-and-gyms
+     Meta: estimatedSavings: ~67KB
+    </issue>
+   After:
+    <issue fp="e6eca525495d" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (94KB uncompressed)
+     Target: page http://127.0.0.1:3000/en/industries/music-for-wellness-and-gyms
+     Meta: estimatedSavings: ~66KB
+    </issue>
+  </change>
+  <change type="change" fp="5861dd4ceee1" rule="perf/compression" severity="warning" status="fail" check="compression">
+   fail→fail: No compression detected (81KB uncompressed)
+   Before:
+    <issue fp="5861dd4ceee1" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (82KB uncompressed)
+     Target: page http://127.0.0.1:3000/en/privacy
+     Meta: estimatedSavings: ~57KB
+    </issue>
+   After:
+    <issue fp="5861dd4ceee1" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (81KB uncompressed)
+     Target: page http://127.0.0.1:3000/en/privacy
+     Meta: estimatedSavings: ~56KB
+    </issue>
+  </change>
+  <change type="change" fp="29f43b2d1679" rule="perf/compression" severity="warning" status="fail" check="compression">
+   fail→fail: No compression detected (120KB uncompressed)
+   Before:
+    <issue fp="29f43b2d1679" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (122KB uncompressed)
+     Target: page http://127.0.0.1:3000/en/services
+     Meta: estimatedSavings: ~85KB
+    </issue>
+   After:
+    <issue fp="29f43b2d1679" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (120KB uncompressed)
+     Target: page http://127.0.0.1:3000/en/services
+     Meta: estimatedSavings: ~84KB
+    </issue>
+  </change>
+  <change type="change" fp="20804bc25b33" rule="perf/compression" severity="warning" status="fail" check="compression">
+   fail→fail: No compression detected (92KB uncompressed)
+   Before:
+    <issue fp="20804bc25b33" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (93KB uncompressed)
+     Target: page http://127.0.0.1:3000/en/services/audio-upgrades
+     Meta: estimatedSavings: ~65KB
+    </issue>
+   After:
+    <issue fp="20804bc25b33" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (92KB uncompressed)
+     Target: page http://127.0.0.1:3000/en/services/audio-upgrades
+     Meta: estimatedSavings: ~64KB
+    </issue>
+  </change>
+  <change type="change" fp="13046e8b4488" rule="perf/compression" severity="warning" status="fail" check="compression">
+   fail→fail: No compression detected (95KB uncompressed)
+   Before:
+    <issue fp="13046e8b4488" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (96KB uncompressed)
+     Target: page http://127.0.0.1:3000/en/services/event-soundtracks
+     Meta: estimatedSavings: ~67KB
+    </issue>
+   After:
+    <issue fp="13046e8b4488" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (95KB uncompressed)
+     Target: page http://127.0.0.1:3000/en/services/event-soundtracks
+     Meta: estimatedSavings: ~66KB
+    </issue>
+  </change>
+  <change type="change" fp="a4054512773f" rule="perf/compression" severity="warning" status="fail" check="compression">
+   fail→fail: No compression detected (97KB uncompressed)
+   Before:
+    <issue fp="a4054512773f" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (98KB uncompressed)
+     Target: page http://127.0.0.1:3000/en/services/signature-playlists
+     Meta: estimatedSavings: ~69KB
+    </issue>
+   After:
+    <issue fp="a4054512773f" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (97KB uncompressed)
+     Target: page http://127.0.0.1:3000/en/services/signature-playlists
+     Meta: estimatedSavings: ~68KB
+    </issue>
+  </change>
+  <change type="change" fp="1fa862258b91" rule="perf/compression" severity="warning" status="fail" check="compression">
+   fail→fail: No compression detected (94KB uncompressed)
+   Before:
+    <issue fp="1fa862258b91" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (96KB uncompressed)
+     Target: page http://127.0.0.1:3000/en/services/sonic-identity
+     Meta: estimatedSavings: ~67KB
+    </issue>
+   After:
+    <issue fp="1fa862258b91" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (94KB uncompressed)
+     Target: page http://127.0.0.1:3000/en/services/sonic-identity
+     Meta: estimatedSavings: ~66KB
+    </issue>
+  </change>
+  <change type="change" fp="dc543dae68c9" rule="perf/compression" severity="warning" status="fail" check="compression">
+   fail→fail: No compression detected (96KB uncompressed)
+   Before:
+    <issue fp="dc543dae68c9" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (97KB uncompressed)
+     Target: page http://127.0.0.1:3000/en/sitemap-page
+     Meta: estimatedSavings: ~68KB
+    </issue>
+   After:
+    <issue fp="dc543dae68c9" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (96KB uncompressed)
+     Target: page http://127.0.0.1:3000/en/sitemap-page
+     Meta: estimatedSavings: ~67KB
+    </issue>
+  </change>
+  <change type="change" fp="a695a8962a1a" rule="perf/compression" severity="warning" status="fail" check="compression">
+   fail→fail: No compression detected (89KB uncompressed)
+   Before:
+    <issue fp="a695a8962a1a" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (91KB uncompressed)
+     Target: page http://127.0.0.1:3000/en/terms
+     Meta: estimatedSavings: ~63KB
+    </issue>
+   After:
+    <issue fp="a695a8962a1a" rule="perf/compression" severity="warning" status="fail" check="compression" category="perf" weight="6">
+     No compression detected (89KB uncompressed)
+     Target: page http://127.0.0.1:3000/en/terms
+     Meta: estimatedSavings: ~62KB
+    </issue>
+  </change>
+  <change type="change" fp="176b33166e3a" rule="perf/total-byte-weight" severity="warning" status="fail" check="total-byte-weight">
+   fail→fail: Total tracked resources: 7809KB (very heavy)
+   Before:
+    <issue fp="176b33166e3a" rule="perf/total-byte-weight" severity="warning" status="fail" check="total-byte-weight" category="perf" weight="6">
+     Total tracked resources: 7820KB (very heavy)
+     Target: check total-byte-weight
+     Meta: css: 228KB, cssBreakdown: inline: 144KB, external: 84KB, cssFiles: 2, imageFiles: 92, images: 6867KB, js: 725KB, jsFiles: 10, pagesAnalyzed: 58
+    </issue>
+   After:
+    <issue fp="176b33166e3a" rule="perf/total-byte-weight" severity="warning" status="fail" check="total-byte-weight" category="perf" weight="6">
+     Total tracked resources: 7809KB (very heavy)
+     Target: check total-byte-weight
+     Meta: css: 228KB, cssBreakdown: inline: 144KB, external: 84KB, cssFiles: 2, imageFiles: 92, images: 6867KB, js: 714KB, jsFiles: 10, pagesAnalyzed: 58
+    </issue>
+  </change>
+  <change type="change" fp="082d03c217cc" rule="perf/critical-request-chains" severity="warning" status="warn" check="critical-request-chains">
+   warn→warn: 3 critical request chain(s) found
+   Before:
+    <issue fp="082d03c217cc" rule="perf/critical-request-chains" severity="warning" status="warn" check="critical-request-chains" category="perf" weight="5">
+     3 critical request chain(s) found
+     Target: item CSS: /_next/static/css/6ce0b14ba110c083.css
+     Meta: blockingCss: 2, blockingJs: 1, importCount: 0, preloads: 13
+    </issue>
+   After:
+    <issue fp="082d03c217cc" rule="perf/critical-request-chains" severity="warning" status="warn" check="critical-request-chains" category="perf" weight="5">
+     3 critical request chain(s) found
+     Target: item CSS: /_next/static/css/6ce0b14ba110c083.css
+     Meta: blockingCss: 2, blockingJs: 1, importCount: 0, preloads: 12
+    </issue>
+  </change>
+  <change type="change" fp="e0e1b772fdde" rule="perf/critical-request-chains" severity="warning" status="warn" check="critical-request-chains">
+   warn→warn: 3 critical request chain(s) found
+   Before:
+    <issue fp="e0e1b772fdde" rule="perf/critical-request-chains" severity="warning" status="warn" check="critical-request-chains" category="perf" weight="5">
+     3 critical request chain(s) found
+     Target: item CSS: /_next/static/css/b23798b7ae16a7cc.css
+     Meta: blockingCss: 2, blockingJs: 1, importCount: 0, preloads: 13
+    </issue>
+   After:
+    <issue fp="e0e1b772fdde" rule="perf/critical-request-chains" severity="warning" status="warn" check="critical-request-chains" category="perf" weight="5">
+     3 critical request chain(s) found
+     Target: item CSS: /_next/static/css/b23798b7ae16a7cc.css
+     Meta: blockingCss: 2, blockingJs: 1, importCount: 0, preloads: 12
+    </issue>
+  </change>
+  <change type="change" fp="639bdc8e1a05" rule="perf/critical-request-chains" severity="warning" status="warn" check="critical-request-chains">
+   warn→warn: 3 critical request chain(s) found
+   Before:
+    <issue fp="639bdc8e1a05" rule="perf/critical-request-chains" severity="warning" status="warn" check="critical-request-chains" category="perf" weight="5">
+     3 critical request chain(s) found
+     Target: item JS: /_next/static/chunks/polyfills-42372ed130431b0a.js
+     Meta: blockingCss: 2, blockingJs: 1, importCount: 0, preloads: 13
+    </issue>
+   After:
+    <issue fp="639bdc8e1a05" rule="perf/critical-request-chains" severity="warning" status="warn" check="critical-request-chains" category="perf" weight="5">
+     3 critical request chain(s) found
+     Target: item JS: /_next/static/chunks/polyfills-42372ed130431b0a.js
+     Meta: blockingCss: 2, blockingJs: 1, importCount: 0, preloads: 12
+    </issue>
+  </change>
+ </changed>
+</diff>

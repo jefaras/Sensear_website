@@ -1,0 +1,396 @@
+[
+  {
+    "url": "http://127.0.0.1:3000/en",
+    "firstOffscreenNonLazy": null,
+    "count": 0
+  },
+  {
+    "url": "http://127.0.0.1:3000/en/services",
+    "firstOffscreenNonLazy": {
+      "src": "/_next/image?url=%2Fimages%2Fservices%2Fservice-signature-playlists.jpg&w=3840&q=75",
+      "alt": "Signature Playlists service for curated music experiences",
+      "loading": "eager",
+      "top": 1599,
+      "belowFold": true,
+      "normalized": "/images/services/service-signature-playlists.jpg"
+    },
+    "count": 5
+  },
+  {
+    "url": "http://127.0.0.1:3000/el",
+    "firstOffscreenNonLazy": null,
+    "count": 0
+  },
+  {
+    "url": "http://127.0.0.1:3000/en/industries",
+    "firstOffscreenNonLazy": {
+      "src": "/_next/image?url=%2Fimages%2Findustries%2Findustry-restaurants-bars.jpg&w=3840&q=75",
+      "alt": "Hotels & Resorts",
+      "loading": "eager",
+      "top": 1461,
+      "belowFold": true,
+      "normalized": "/images/industries/industry-restaurants-bars.jpg"
+    },
+    "count": 7
+  },
+  {
+    "url": "http://127.0.0.1:3000/en/case-studies",
+    "firstOffscreenNonLazy": {
+      "src": "/_next/image?url=%2Fimages%2Fcase-studies%2Fcase-study-beach-house.webp&w=3840&q=75",
+      "alt": "Beach House, Antiparos",
+      "loading": "eager",
+      "top": 1519,
+      "belowFold": true,
+      "normalized": "/images/case-studies/case-study-beach-house.webp"
+    },
+    "count": 2
+  },
+  {
+    "url": "http://127.0.0.1:3000/en/blog",
+    "firstOffscreenNonLazy": {
+      "src": "/_next/image?url=%2Fimages%2Fblog%2Fblog-why-luxury-hotels-need-music.jpg&w=3840&q=75",
+      "alt": "Luxury hotel interior showcasing music's role in hospitality marketing strategy",
+      "loading": "eager",
+      "top": 955,
+      "belowFold": true,
+      "normalized": "/images/blog/blog-why-luxury-hotels-need-music.jpg"
+    },
+    "count": 2
+  },
+  {
+    "url": "http://127.0.0.1:3000/en/contact",
+    "firstOffscreenNonLazy": {
+      "src": "/_next/image?url=%2Fimages%2Fcontact%2Fvinyl-record-contact-form-bg.png&w=3840&q=75",
+      "alt": "Vinyl record background",
+      "loading": "eager",
+      "top": 1123,
+      "belowFold": true,
+      "normalized": "/images/contact/vinyl-record-contact-form-bg.png"
+    },
+    "count": 3
+  },
+  {
+    "url": "http://127.0.0.1:3000/en/about",
+    "firstOffscreenNonLazy": {
+      "src": "/_next/image?url=%2Fimages%2Fabout%2Fabout-journey-team-collaboration.jpg&w=1920&q=75",
+      "alt": "Our journey",
+      "loading": "eager",
+      "top": 1976,
+      "belowFold": true,
+      "normalized": "/images/about/about-journey-team-collaboration.jpg"
+    },
+    "count": 2
+  },
+  {
+    "url": "http://127.0.0.1:3000/en/services/signature-playlists",
+    "firstOffscreenNonLazy": {
+      "src": "/_next/image?url=%2Fimages%2Fservices%2Fsignature-playlists%2Fsignature-playlists-curation.jpg&w=3840&q=75",
+      "alt": "Mindful music curation experience",
+      "loading": "eager",
+      "top": 1520,
+      "belowFold": true,
+      "normalized": "/images/services/signature-playlists/signature-playlists-curation.jpg"
+    },
+    "count": 2
+  },
+  {
+    "url": "http://127.0.0.1:3000/en/services/event-soundtracks",
+    "firstOffscreenNonLazy": {
+      "src": "/_next/image?url=%2Fimages%2Fservices%2Fevent-soundtracks%2Fevent-soundtracks-planning.jpg&w=3840&q=75",
+      "alt": "Event soundtrack planning and execution",
+      "loading": "eager",
+      "top": 1452,
+      "belowFold": true,
+      "normalized": "/images/services/event-soundtracks/event-soundtracks-planning.jpg"
+    },
+    "count": 2
+  },
+  {
+    "url": "http://127.0.0.1:3000/en/services/sonic-identity",
+    "firstOffscreenNonLazy": {
+      "src": "/_next/image?url=%2Fimages%2Fservices%2Fsonic-identity%2Fsonic-identity-workshop.jpg&w=3840&q=75",
+      "alt": "Sonic DNA workshop and brand audio strategy",
+      "loading": "eager",
+      "top": 1522,
+      "belowFold": true,
+      "normalized": "/images/services/sonic-identity/sonic-identity-workshop.jpg"
+    },
+    "count": 2
+  },
+  {
+    "url": "http://127.0.0.1:3000/en/services/audio-upgrades",
+    "firstOffscreenNonLazy": {
+      "src": "/_next/image?url=%2Fimages%2Fservices%2Faudio-upgrades%2Faudio-upgrades-assessment.jpg&w=3840&q=75",
+      "alt": "Professional audio assessment",
+      "loading": "eager",
+      "top": 1584,
+      "belowFold": true,
+      "normalized": "/images/services/audio-upgrades/audio-upgrades-assessment.jpg"
+    },
+    "count": 2
+  },
+  {
+    "url": "http://127.0.0.1:3000/en/industries/music-for-hotels-and-resorts",
+    "firstOffscreenNonLazy": {
+      "src": "/_next/image?url=%2Fimages%2Findustries%2Fhotels-resorts-boutique-hotel-music.png&w=3840&q=75",
+      "alt": "Hotel music implementation",
+      "loading": "eager",
+      "top": 1470,
+      "belowFold": true,
+      "normalized": "/images/industries/hotels-resorts-boutique-hotel-music.png"
+    },
+    "count": 2
+  },
+  {
+    "url": "http://127.0.0.1:3000/en/industries/music-for-restaurants-and-bars",
+    "firstOffscreenNonLazy": {
+      "src": "/_next/image?url=%2Fimages%2Findustries%2Frestaurants-bars-dining-music-experience.jpg&w=3840&q=75",
+      "alt": "Cocktail glass with ice representing bar atmosphere",
+      "loading": "eager",
+      "top": 1470,
+      "belowFold": true,
+      "normalized": "/images/industries/restaurants-bars-dining-music-experience.jpg"
+    },
+    "count": 2
+  },
+  {
+    "url": "http://127.0.0.1:3000/en/industries/music-for-events-and-experiences",
+    "firstOffscreenNonLazy": {
+      "src": "/_next/image?url=%2Fimages%2Findustries%2Fevents-experiences-branded-event-music.jpg&w=3840&q=75",
+      "alt": "Event experience with guests dancing",
+      "loading": "eager",
+      "top": 1523,
+      "belowFold": true,
+      "normalized": "/images/industries/events-experiences-branded-event-music.jpg"
+    },
+    "count": 2
+  },
+  {
+    "url": "http://127.0.0.1:3000/en/industries/music-for-retail-stores",
+    "firstOffscreenNonLazy": {
+      "src": "/_next/image?url=%2Fimages%2Findustries%2Fretail-stores-music-strategy-browsing.jpg&w=3840&q=75",
+      "alt": "Stylish man in retail fashion setting",
+      "loading": "eager",
+      "top": 1496,
+      "belowFold": true,
+      "normalized": "/images/industries/retail-stores-music-strategy-browsing.jpg"
+    },
+    "count": 2
+  },
+  {
+    "url": "http://127.0.0.1:3000/en/industries/music-for-wellness-and-gyms",
+    "firstOffscreenNonLazy": {
+      "src": "/_next/image?url=%2Fimages%2Findustries%2Fwellness-gyms-spa-treatment-music.jpg&w=3840&q=75",
+      "alt": "Modern gym interior with minimalist design",
+      "loading": "eager",
+      "top": 1496,
+      "belowFold": true,
+      "normalized": "/images/industries/wellness-gyms-spa-treatment-music.jpg"
+    },
+    "count": 2
+  },
+  {
+    "url": "http://127.0.0.1:3000/en/industries/music-for-art-museums-and-fashion",
+    "firstOffscreenNonLazy": {
+      "src": "/_next/image?url=%2Fimages%2Findustries%2Fart-museums-fashion-cultural-space-music.jpg&w=3840&q=75",
+      "alt": "Fashion runway show",
+      "loading": "eager",
+      "top": 1438,
+      "belowFold": true,
+      "normalized": "/images/industries/art-museums-fashion-cultural-space-music.jpg"
+    },
+    "count": 2
+  },
+  {
+    "url": "http://127.0.0.1:3000/el/services",
+    "firstOffscreenNonLazy": {
+      "src": "/_next/image?url=%2Fimages%2Fservices%2Fservice-signature-playlists.jpg&w=3840&q=75",
+      "alt": "Signature Playlists service for curated music experiences",
+      "loading": "eager",
+      "top": 1627,
+      "belowFold": true,
+      "normalized": "/images/services/service-signature-playlists.jpg"
+    },
+    "count": 5
+  },
+  {
+    "url": "http://127.0.0.1:3000/el/case-studies",
+    "firstOffscreenNonLazy": {
+      "src": "/_next/image?url=%2Fimages%2Fcase-studies%2Fcase-study-beach-house.webp&w=3840&q=75",
+      "alt": "Beach House, Αντίπαρος",
+      "loading": "eager",
+      "top": 1613,
+      "belowFold": true,
+      "normalized": "/images/case-studies/case-study-beach-house.webp"
+    },
+    "count": 2
+  },
+  {
+    "url": "http://127.0.0.1:3000/el/industries",
+    "firstOffscreenNonLazy": {
+      "src": "/_next/image?url=%2Fimages%2Findustries%2Findustry-restaurants-bars.jpg&w=3840&q=75",
+      "alt": "Ξενοδοχεία & Θέρετρα",
+      "loading": "eager",
+      "top": 1668,
+      "belowFold": true,
+      "normalized": "/images/industries/industry-restaurants-bars.jpg"
+    },
+    "count": 7
+  },
+  {
+    "url": "http://127.0.0.1:3000/el/blog",
+    "firstOffscreenNonLazy": {
+      "src": "/_next/image?url=%2Fimages%2Fblog%2Fblog-why-luxury-hotels-need-music.jpg&w=3840&q=75",
+      "alt": "Εσωτερικό πολυτελούς ξενοδοχείου που αναδεικνύει τον ρόλο της μουσικής στη στρατηγική marketing φιλοξενίας",
+      "loading": "eager",
+      "top": 955,
+      "belowFold": true,
+      "normalized": "/images/blog/blog-why-luxury-hotels-need-music.jpg"
+    },
+    "count": 2
+  },
+  {
+    "url": "http://127.0.0.1:3000/el/about",
+    "firstOffscreenNonLazy": {
+      "src": "/_next/image?url=%2Fimages%2Fabout%2Fabout-journey-team-collaboration.jpg&w=1920&q=75",
+      "alt": "Η πορεία μας",
+      "loading": "eager",
+      "top": 1976,
+      "belowFold": true,
+      "normalized": "/images/about/about-journey-team-collaboration.jpg"
+    },
+    "count": 2
+  },
+  {
+    "url": "http://127.0.0.1:3000/el/contact",
+    "firstOffscreenNonLazy": {
+      "src": "/_next/image?url=%2Fimages%2Fcontact%2Fvinyl-record-contact-form-bg.png&w=3840&q=75",
+      "alt": "Vinyl record background",
+      "loading": "eager",
+      "top": 1089,
+      "belowFold": true,
+      "normalized": "/images/contact/vinyl-record-contact-form-bg.png"
+    },
+    "count": 3
+  },
+  {
+    "url": "http://127.0.0.1:3000/el/services/signature-playlists",
+    "firstOffscreenNonLazy": {
+      "src": "/_next/image?url=%2Fimages%2Fservices%2Fsignature-playlists%2Fsignature-playlists-curation.jpg&w=3840&q=75",
+      "alt": "Mindful music curation experience",
+      "loading": "eager",
+      "top": 1666,
+      "belowFold": true,
+      "normalized": "/images/services/signature-playlists/signature-playlists-curation.jpg"
+    },
+    "count": 2
+  },
+  {
+    "url": "http://127.0.0.1:3000/el/services/event-soundtracks",
+    "firstOffscreenNonLazy": {
+      "src": "/_next/image?url=%2Fimages%2Fservices%2Fevent-soundtracks%2Fevent-soundtracks-planning.jpg&w=3840&q=75",
+      "alt": "Event soundtrack planning and execution",
+      "loading": "eager",
+      "top": 1572,
+      "belowFold": true,
+      "normalized": "/images/services/event-soundtracks/event-soundtracks-planning.jpg"
+    },
+    "count": 2
+  },
+  {
+    "url": "http://127.0.0.1:3000/el/services/sonic-identity",
+    "firstOffscreenNonLazy": {
+      "src": "/_next/image?url=%2Fimages%2Fservices%2Fsonic-identity%2Fsonic-identity-workshop.jpg&w=3840&q=75",
+      "alt": "Sonic DNA workshop and brand audio strategy",
+      "loading": "eager",
+      "top": 1658,
+      "belowFold": true,
+      "normalized": "/images/services/sonic-identity/sonic-identity-workshop.jpg"
+    },
+    "count": 2
+  },
+  {
+    "url": "http://127.0.0.1:3000/el/services/audio-upgrades",
+    "firstOffscreenNonLazy": {
+      "src": "/_next/image?url=%2Fimages%2Fservices%2Faudio-upgrades%2Faudio-upgrades-assessment.jpg&w=3840&q=75",
+      "alt": "Professional audio assessment",
+      "loading": "eager",
+      "top": 1630,
+      "belowFold": true,
+      "normalized": "/images/services/audio-upgrades/audio-upgrades-assessment.jpg"
+    },
+    "count": 2
+  },
+  {
+    "url": "http://127.0.0.1:3000/el/industries/music-for-hotels-and-resorts",
+    "firstOffscreenNonLazy": {
+      "src": "/_next/image?url=%2Fimages%2Findustries%2Fhotels-resorts-boutique-hotel-music.png&w=3840&q=75",
+      "alt": "Hotel music implementation",
+      "loading": "eager",
+      "top": 1649,
+      "belowFold": true,
+      "normalized": "/images/industries/hotels-resorts-boutique-hotel-music.png"
+    },
+    "count": 2
+  },
+  {
+    "url": "http://127.0.0.1:3000/el/industries/music-for-restaurants-and-bars",
+    "firstOffscreenNonLazy": {
+      "src": "/_next/image?url=%2Fimages%2Findustries%2Frestaurants-bars-dining-music-experience.jpg&w=3840&q=75",
+      "alt": "Cocktail glass with ice representing bar atmosphere",
+      "loading": "eager",
+      "top": 1645,
+      "belowFold": true,
+      "normalized": "/images/industries/restaurants-bars-dining-music-experience.jpg"
+    },
+    "count": 2
+  },
+  {
+    "url": "http://127.0.0.1:3000/el/industries/music-for-events-and-experiences",
+    "firstOffscreenNonLazy": {
+      "src": "/_next/image?url=%2Fimages%2Findustries%2Fevents-experiences-branded-event-music.jpg&w=3840&q=75",
+      "alt": "Event experience with guests dancing",
+      "loading": "eager",
+      "top": 1764,
+      "belowFold": true,
+      "normalized": "/images/industries/events-experiences-branded-event-music.jpg"
+    },
+    "count": 2
+  },
+  {
+    "url": "http://127.0.0.1:3000/el/industries/music-for-retail-stores",
+    "firstOffscreenNonLazy": {
+      "src": "/_next/image?url=%2Fimages%2Findustries%2Fretail-stores-music-strategy-browsing.jpg&w=3840&q=75",
+      "alt": "Stylish man in retail fashion setting",
+      "loading": "eager",
+      "top": 1572,
+      "belowFold": true,
+      "normalized": "/images/industries/retail-stores-music-strategy-browsing.jpg"
+    },
+    "count": 2
+  },
+  {
+    "url": "http://127.0.0.1:3000/el/industries/music-for-wellness-and-gyms",
+    "firstOffscreenNonLazy": {
+      "src": "/_next/image?url=%2Fimages%2Findustries%2Fwellness-gyms-spa-treatment-music.jpg&w=3840&q=75",
+      "alt": "Modern gym interior with minimalist design",
+      "loading": "eager",
+      "top": 1590,
+      "belowFold": true,
+      "normalized": "/images/industries/wellness-gyms-spa-treatment-music.jpg"
+    },
+    "count": 2
+  },
+  {
+    "url": "http://127.0.0.1:3000/el/industries/music-for-art-museums-and-fashion",
+    "firstOffscreenNonLazy": {
+      "src": "/_next/image?url=%2Fimages%2Findustries%2Fart-museums-fashion-cultural-space-music.jpg&w=3840&q=75",
+      "alt": "Fashion runway show",
+      "loading": "eager",
+      "top": 1590,
+      "belowFold": true,
+      "normalized": "/images/industries/art-museums-fashion-cultural-space-music.jpg"
+    },
+    "count": 2
+  }
+]

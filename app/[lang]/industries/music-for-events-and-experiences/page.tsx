@@ -23,6 +23,14 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: Loc
                 ? 'Εξειδικευμένη μουσική επιμέλεια για εκδηλώσεις.'
                 : 'Bespoke music curation for events.',
             type: 'website',
+            images: [
+                {
+                    url: '/images/industries/industry-events-experiences.jpg',
+                    width: 1200,
+                    height: 630,
+                    alt: 'Music curation for events and experiences',
+                },
+            ],
         },
     };
 }

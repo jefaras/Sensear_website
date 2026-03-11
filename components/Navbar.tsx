@@ -234,10 +234,11 @@ export function Navbar({ lang, navigation }: NavbarProps) {
 
                     <Link
                         href={switchLang()}
+                        aria-label={`Switch to ${targetLangLabel === 'EN' ? 'English' : 'Ελληνικά'}`}
                         className="flex items-center gap-2 text-lg font-bold py-2 text-white"
                     >
-                        <Globe className="w-5 h-5" />
-                        <span>Switch to {targetLangLabel}</span>
+                        <Globe className="w-5 h-5" aria-hidden="true" />
+                        <span>{targetLangLabel}</span>
                     </Link>
                 </div>
             )}

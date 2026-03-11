@@ -23,6 +23,14 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: Loc
                 ? 'Εξειδικευμένη μουσική επιμέλεια για ξενοδοχεία και θέρετρα.'
                 : 'Bespoke music curation for hotels and resorts.',
             type: 'website',
+            images: [
+                {
+                    url: '/images/industries/hotels-resorts-curated-music-ambiance.jpg',
+                    width: 1200,
+                    height: 630,
+                    alt: 'Music curation for hotels and resorts',
+                },
+            ],
         },
     };
 }

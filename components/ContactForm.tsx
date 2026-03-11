@@ -183,12 +183,12 @@ export function ContactForm({ labels, variant = "default" }: ContactFormProps) {
 
             <div className="grid md:grid-cols-2 gap-4 relative z-50">
                 <div>
-                    {!isVinyl && <label className="block text-sm font-medium mb-2">{labels.name}</label>}
+                    <label htmlFor="input-name" className={isVinyl ? "sr-only" : "block text-sm font-medium mb-2"}>{labels.name}</label>
                     <input
+                        id="input-name"
                         name="name"
                         type="text"
                         required
-                        aria-label={labels.name}
                         value={formData.name}
                         onChange={handleChange}
                         placeholder={labels.name_placeholder}
@@ -197,12 +197,12 @@ export function ContactForm({ labels, variant = "default" }: ContactFormProps) {
                     {errors.name && <p className={errorClass}>{errors.name[0]}</p>}
                 </div>
                 <div>
-                    {!isVinyl && <label className="block text-sm font-medium mb-2">{labels.surname}</label>}
+                    <label htmlFor="input-surname" className={isVinyl ? "sr-only" : "block text-sm font-medium mb-2"}>{labels.surname}</label>
                     <input
+                        id="input-surname"
                         name="surname"
                         type="text"
                         required
-                        aria-label={labels.surname}
                         value={formData.surname}
                         onChange={handleChange}
                         placeholder={labels.surname_placeholder}
@@ -214,11 +214,11 @@ export function ContactForm({ labels, variant = "default" }: ContactFormProps) {
 
             <div className="grid md:grid-cols-2 gap-4 relative z-40">
                 <div>
-                    {!isVinyl && <label className="block text-sm font-medium mb-2">{labels.business_name}</label>}
+                    <label htmlFor="input-business-name" className={isVinyl ? "sr-only" : "block text-sm font-medium mb-2"}>{labels.business_name}</label>
                     <input
+                        id="input-business-name"
                         name="business_name"
                         type="text"
-                        aria-label={labels.business_name}
                         value={formData.business_name}
                         onChange={handleChange}
                         placeholder={labels.business_name_placeholder}
@@ -227,12 +227,12 @@ export function ContactForm({ labels, variant = "default" }: ContactFormProps) {
                     {errors.business_name && <p className={errorClass}>{errors.business_name[0]}</p>}
                 </div>
                 <div>
-                    {!isVinyl && <label className="block text-sm font-medium mb-2">{labels.email}</label>}
+                    <label htmlFor="input-email" className={isVinyl ? "sr-only" : "block text-sm font-medium mb-2"}>{labels.email}</label>
                     <input
+                        id="input-email"
                         name="email"
                         type="email"
                         required
-                        aria-label={labels.email}
                         value={formData.email}
                         onChange={handleChange}
                         placeholder={labels.email_placeholder}
@@ -243,7 +243,7 @@ export function ContactForm({ labels, variant = "default" }: ContactFormProps) {
             </div>
 
             <div className="relative z-30">
-                {!isVinyl && <label className="block text-sm font-medium mb-2">{labels.phone}</label>}
+                <label htmlFor="input-phone" className={isVinyl ? "sr-only" : "block text-sm font-medium mb-2"}>{labels.phone}</label>
                 <div className={`flex rounded-lg ${isVinyl ? 'bg-white/10 backdrop-blur-sm border border-white/20' : 'bg-gray-50 border border-gray-200'} ${errors.phone ? '!border-red-500' : ''} focus-within:ring-2 ${isVinyl ? 'focus-within:ring-white/30' : 'focus-within:ring-black/20'} focus-within:border-transparent`}>
                     <TransparentSelect
                         name="country_code"
@@ -266,10 +266,10 @@ export function ContactForm({ labels, variant = "default" }: ContactFormProps) {
                         ]}
                     />
                     <input
+                        id="input-phone"
                         name="phone"
                         type="tel"
                         required
-                        aria-label={labels.phone}
                         value={formData.phone}
                         onChange={handleChange}
                         placeholder={labels.phone_placeholder}
@@ -281,7 +281,7 @@ export function ContactForm({ labels, variant = "default" }: ContactFormProps) {
 
             <div className="grid md:grid-cols-2 gap-4 relative z-20">
                 <div>
-                    {!isVinyl && <label className="block text-sm font-medium mb-2">{labels.venue}</label>}
+                    <label className={isVinyl ? "sr-only" : "block text-sm font-medium mb-2"}>{labels.venue}</label>
                     <TransparentSelect
                         name="venue_type"
                         value={formData.venue_type}
@@ -290,6 +290,7 @@ export function ContactForm({ labels, variant = "default" }: ContactFormProps) {
                         isVinyl={isVinyl}
                         error={!!errors.venue_type}
                         className="w-full"
+                        ariaLabel={labels.venue}
                         options={[
                             { value: 'hotel', label: labels.venue_options.hotel },
                             { value: 'restaurant', label: labels.venue_options.restaurant },
@@ -300,7 +301,7 @@ export function ContactForm({ labels, variant = "default" }: ContactFormProps) {
                     {errors.venue_type && <p className={errorClass}>{errors.venue_type[0]}</p>}
                 </div>
                 <div>
-                    {!isVinyl && <label className="block text-sm font-medium mb-2">{labels.interest}</label>}
+                    <label className={isVinyl ? "sr-only" : "block text-sm font-medium mb-2"}>{labels.interest}</label>
                     <TransparentSelect
                         name="service_interest"
                         value={formData.service_interest}
@@ -309,6 +310,7 @@ export function ContactForm({ labels, variant = "default" }: ContactFormProps) {
                         isVinyl={isVinyl}
                         error={!!errors.service_interest}
                         className="w-full"
+                        ariaLabel={labels.interest}
                         options={[
                             { value: 'playlists', label: labels.interest_options.playlists },
                             { value: 'events', label: labels.interest_options.events },
@@ -321,12 +323,12 @@ export function ContactForm({ labels, variant = "default" }: ContactFormProps) {
             </div>
 
             <div className="relative z-10">
-                {!isVinyl && <label className="block text-sm font-medium mb-2">{labels.message}</label>}
+                <label htmlFor="input-message" className={isVinyl ? "sr-only" : "block text-sm font-medium mb-2"}>{labels.message}</label>
                 <textarea
+                    id="input-message"
                     name="message"
                     rows={4}
                     required
-                    aria-label={labels.message}
                     value={formData.message}
                     onChange={handleChange}
                     placeholder={labels.message_placeholder}

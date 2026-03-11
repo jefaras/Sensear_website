@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<diff version="0.0.38">
+ <baseline id="e032c506-2881-495d-a47b-88f80f0b4d38" url="http://127.0.0.1:3000" date="2026-03-10T16:28:22.493Z" pages="58" score="62" grade="D"/>
+ <current id="591d8bdc-2c9c-4057-94f2-139bb16e6405" url="http://127.0.0.1:3000" date="2026-03-10T16:44:11.350Z" pages="58" score="62" grade="D"/>
+ <summary added="21" removed="13" changed="0" regressions="0" improvements="0"/>
+ <added>
+  <issue fp="e5cdc33d8511" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   21 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: 4hhPX0******Anky (Found in html (http://127.0.0.1:3000/el/sitemap-page))
+  </issue>
+  <issue fp="be82c53da27d" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   21 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: 5AN1M7******lcxD (Found in html (http://127.0.0.1:3000/en/sitemap-page))
+  </issue>
+  <issue fp="ecfc56eaaad3" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   21 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: 7SaNsx******8yLT (Found in html (http://127.0.0.1:3000/el/blog/brand-music-converts-browsers-buyers))
+  </issue>
+  <issue fp="fb908cd7df91" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   21 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: 87FQye******z9Qo (Found in html (http://127.0.0.1:3000/el/blog/how-top-hospitality-brands-design-sound))
+  </issue>
+  <issue fp="07ecf3c1d989" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   21 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: EJBAqY******8MH6 (Found in html (http://127.0.0.1:3000/el/contact))
+  </issue>
+  <issue fp="ae9efede69e9" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   21 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: F3iRzN******j74s (Found in html (http://127.0.0.1:3000/el/industries/music-for-events-and-experiences))
+  </issue>
+  <issue fp="db9a4989f8a4" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   21 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: F3yBGe******8Ggf (Found in html (http://127.0.0.1:3000/el/industries/music-for-wellness-and-gyms))
+  </issue>
+  <issue fp="67a4fb36ce55" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   21 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: fyx2m0******gmTo (Found in html (http://127.0.0.1:3000/el/privacy))
+  </issue>
+  <issue fp="2cf73b9cf61a" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   21 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: g6rNcW******xf00 (Found in html (http://127.0.0.1:3000/en/industries/music-for-wellness-and-gyms))
+  </issue>
+  <issue fp="d0da8909ac50" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   21 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: Hfpixv******UpCl (Found in html (http://127.0.0.1:3000/en/blog/brand-music-converts-browsers-buyers))
+  </issue>
+  <issue fp="03c96c615891" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   21 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: I2pPbq******1rdg (Found in html (http://127.0.0.1:3000/en/blog/building-brand-people-can-hear))
+  </issue>
+  <issue fp="8bd6769c50cc" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   21 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: JGz18G******HQv5 (Found in html (http://127.0.0.1:3000/el/terms))
+  </issue>
+  <issue fp="51154f271dd0" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   21 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: KR7PPP******4MN3 (Found in html (http://127.0.0.1:3000/el/industries/music-for-art-museums-and-fashion))
+  </issue>
+  <issue fp="6f4b4734544b" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   21 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: op4Vov******Mksv (Found in html (http://127.0.0.1:3000/el/blog/service-environment-shapes-wait-time))
+  </issue>
+  <issue fp="8ce8587116f1" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   21 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: P1WZeo******qGJX (Found in html (http://127.0.0.1:3000/en/contact))
+  </issue>
+  <issue fp="f81050b62246" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   21 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: t6Tdnc******54L4 (Found in html (http://127.0.0.1:3000/el/blog/building-brand-people-can-hear))
+  </issue>
+  <issue fp="74cc4bad93c1" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   21 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: TASRNt******loxH (Found in html (http://127.0.0.1:3000/en/industries/music-for-events-and-experiences))
+  </issue>
+  <issue fp="26e049b4125a" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   21 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: uubfd1******NbM0 (Found in html (http://127.0.0.1:3000/el/industries/music-for-hotels-and-resorts))
+  </issue>
+  <issue fp="8a302c227d85" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   21 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: V35M5L******3MaB (Found in html (http://127.0.0.1:3000/en/industries/music-for-hotels-and-resorts))
+  </issue>
+  <issue fp="b3afb2d80617" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   21 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: w3dcho******0PVC (Found in html (http://127.0.0.1:3000/en/blog/background-music-shapes-customer-behavior))
+  </issue>
+  <issue fp="c6e27a7d19a2" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   21 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: XGwdQE******ZWky (Found in html (http://127.0.0.1:3000/en/blog/three-reasons-make-music-hospitality))
+  </issue>
+ </added>
+ <removed>
+  <issue fp="809569fa3640" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   13 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: 1fzUR6******pF84 (Found in html (http://127.0.0.1:3000/el/blog/what-exactly-does-music-curator-do))
+  </issue>
+  <issue fp="09ac8da1a986" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   13 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: 5JgpWn******9rRl (Found in html (http://127.0.0.1:3000/el/blog))
+  </issue>
+  <issue fp="4b68c07cd7cf" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   13 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: a8H8iM******0g7Y (Found in html (http://127.0.0.1:3000/el/blog/three-reasons-make-music-hospitality))
+  </issue>
+  <issue fp="7f07661d13c7" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   13 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: AZ0OVJ******buso (Found in html (http://127.0.0.1:3000/en/services/sonic-identity))
+  </issue>
+  <issue fp="1e374b496bd3" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   13 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: Cd70Bu******FRMR (Found in html (http://127.0.0.1:3000/en/industries/music-for-events-and-experiences))
+  </issue>
+  <issue fp="9fecb7d3681e" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   13 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: Clg6L0******ZS3Y (Found in html (http://127.0.0.1:3000/el/industries/music-for-wellness-and-gyms))
+  </issue>
+  <issue fp="3828a92a1280" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   13 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: EQjfVG******OuN0 (Found in html (http://127.0.0.1:3000/en/blog/three-reasons-make-music-hospitality))
+  </issue>
+  <issue fp="a68ba186439e" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   13 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: GMecVo******YSdM (Found in html (http://127.0.0.1:3000/en/services/event-soundtracks))
+  </issue>
+  <issue fp="22250c401401" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   13 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: HFwmxC******hhoz (Found in html (http://127.0.0.1:3000/el/industries/music-for-hotels-and-resorts))
+  </issue>
+  <issue fp="657bebc5504c" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   13 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: JHwqTl******YfiN (Found in html (http://127.0.0.1:3000/el/about))
+  </issue>
+  <issue fp="601b7a0be329" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   13 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: JKmOyC******350x (Found in html (http://127.0.0.1:3000/en/faq))
+  </issue>
+  <issue fp="98e3a76157e9" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   13 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: NZpMFW******0oJq (Found in html (http://127.0.0.1:3000/el/industries/music-for-events-and-experiences))
+  </issue>
+  <issue fp="37cf7b90a664" rule="security/leaked-secrets" severity="error" status="warn" check="leaked-secrets-medium" category="security" weight="10">
+   13 potential secret(s) detected (verify manually)
+   Target: item LinkedIn Client Secret: q1uBki******Mwu3 (Found in html (http://127.0.0.1:3000/el/blog/brand-music-converts-browsers-buyers))
+  </issue>
+ </removed>
+ <changed>
+ </changed>
+</diff>
