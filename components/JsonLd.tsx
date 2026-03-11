@@ -53,6 +53,9 @@ export function LocalBusinessJsonLd({ nonce }: JsonLdProps) {
         email: 'hello@sensear.music',
         address: {
             '@type': 'PostalAddress',
+            streetAddress: 'Agias Lavras 19',
+            addressLocality: 'Athens',
+            postalCode: '11471',
             addressCountry: 'GR'
         },
         priceRange: '$$',

@@ -84,7 +84,7 @@ export default function TransparentSelect({
             <button
                 type="button"
                 onClick={() => setIsOpen(!isOpen)}
-                aria-label={ariaLabel}
+                aria-label={ariaLabel ? `${ariaLabel}: ${displayLabel}` : undefined}
                 className={`${buttonClass} ${!selectedOption && isVinyl ? 'text-white/50' : ''}`}
             >
                 <span className="truncate">{displayLabel}</span>

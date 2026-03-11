@@ -11,6 +11,42 @@ const nextConfig = {
         remotePatterns: [],
     },
 
+    webpack: (config, { isServer }) => {
+        if (!isServer) {
+            config.optimization.splitChunks = {
+                ...config.optimization.splitChunks,
+                cacheGroups: {
+                    ...config.optimization.splitChunks?.cacheGroups,
+                    framework: {
+                        name: 'framework',
+                        test: /[\\/]node_modules[\\/](react|react-dom|next)[\\/]/,
+                        priority: 40,
+                        chunks: 'all',
+                    },
+                    lib: {
+                        test(module) {
+                            return module.size() > 160000 &&
+                                /node_modules[/\\]/.test(module.identifier());
+                        },
+                        name(module) {
+                            const hash = require('crypto')
+                                .createHash('sha1')
+                                .update(module.identifier())
+                                .digest('hex')
+                                .slice(0, 8);
+                            return `lib-${hash}`;
+                        },
+                        priority: 30,
+                        minChunks: 1,
+                        reuseExistingChunk: true,
+                        chunks: 'all',
+                    },
+                },
+            };
+        }
+        return config;
+    },
+
     // Disable ES Lint and Typescript checks during build to prevent out-of-memory errors
     // Since we check the code locally before pushing, running it again on a low-RAM production 
     // server is redundant and often kills the build process (Exit code: 9).

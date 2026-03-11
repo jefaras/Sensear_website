@@ -76,7 +76,7 @@ export default async function Contact({ params }: { params: Promise<{ lang: Loca
                         {/* Circular Vinyl Background - absolute, centered, scalable by fixed responsive dimensions */}
                         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none flex justify-center items-center" aria-hidden="true">
                             <Image
-                                src="/images/contact/vinyl-record-contact-form-bg.png"
+                                src="/images/contact/vinyl-record-contact-form-bg.webp"
                                 alt="Vinyl record background"
                                 width={850}
                                 height={850}

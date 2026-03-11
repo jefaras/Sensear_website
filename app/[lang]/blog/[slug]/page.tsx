@@ -126,10 +126,12 @@ export default async function BlogPost({
                             <div className="flex items-center gap-6 text-sm text-black/60 font-jakarta font-medium animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300">
                                 <div className="flex items-center gap-3">
                                     <span className="w-8 h-[1px] bg-black/20" />
-                                    <span className="text-black font-bold uppercase tracking-wider">{article.author}</span>
+                                    <address className="not-italic">
+                                        <span rel="author" className="text-black font-bold uppercase tracking-wider">{article.author}</span>
+                                    </address>
                                 </div>
                                 <span className="w-1 h-1 rounded-full bg-black/20" />
-                                <span className="uppercase tracking-wider">{article.displayDate}</span>
+                                <time dateTime={publishedDate} className="uppercase tracking-wider">{article.displayDate}</time>
                                 <span className="w-1 h-1 rounded-full bg-black/20" />
                                 <span className="uppercase tracking-wider">8 MIN READ</span>
                             </div>

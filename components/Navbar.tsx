@@ -158,7 +158,7 @@ export function Navbar({ lang, navigation }: NavbarProps) {
                     {/* Lang Switcher */}
                     <Link
                         href={switchLang()}
-                        aria-label={`Switch to ${targetLangLabel === 'EN' ? 'English' : 'Ελληνικά'}`}
+                        aria-label={`Switch to ${targetLangLabel}`}
                         className={cn(
                             "flex items-center gap-1 text-sm font-medium px-3 py-1 border rounded-full transition-colors",
                             scrolled || isOpen

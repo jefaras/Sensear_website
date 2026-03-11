@@ -16,34 +16,6 @@ export default async function SignaturePlaylistsPage({
 
     return (
         <div className="bg-[#faebe3]">
-            <style dangerouslySetInnerHTML={{
-                __html: `
-                @keyframes slideUp {
-                    from {
-                        opacity: 0;
-                        transform: translateY(40px);
-                    }
-                    to {
-                        opacity: 1;
-                        transform: translateY(0);
-                    }
-                }
-                
-                .slide-up-1 {
-                    animation: slideUp 0.8s ease-out forwards;
-                    opacity: 0;
-                }
-                
-                .slide-up-2 {
-                    animation: slideUp 0.8s ease-out 0.2s forwards;
-                    opacity: 0;
-                }
-                
-                .slide-up-4 {
-                    animation: slideUp 0.8s ease-out 0.6s forwards;
-                    opacity: 0;
-                }
-            `}} />
 
             {/* Hero Section */}
             <section
@@ -114,7 +86,7 @@ export default async function SignaturePlaylistsPage({
                                 width={600}
                                 height={400}
                                 sizes="50vw"
-                                loading="eager"
+                                loading="lazy"
                                 className="w-full h-auto rounded-2xl shadow-lg"
                             />
                         </div>
@@ -162,7 +134,7 @@ export default async function SignaturePlaylistsPage({
                                 width={600}
                                 height={400}
                                 sizes="50vw"
-                                loading="eager"
+                                loading="lazy"
                                 className="w-full h-auto rounded-2xl shadow-lg"
                             />
                         </div>

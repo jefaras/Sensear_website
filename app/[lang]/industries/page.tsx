@@ -193,7 +193,7 @@ export default async function Industries({
                         <div className="order-2 lg:order-1">
                             <div className="overflow-hidden rounded-xl shadow-lg bg-white relative">
                                 <Image
-                                    src="/images/industries/industries-connected-worlds.png"
+                                    src="/images/industries/industries-connected-worlds.webp"
                                     alt="Connected worlds across hospitality and retail industries"
                                     width={800}
                                     height={600}

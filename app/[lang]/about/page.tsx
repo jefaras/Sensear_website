@@ -28,26 +28,6 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: Lo
 
     return (
         <div className="bg-[#faebe3] min-h-screen relative overflow-x-hidden">
-            <style dangerouslySetInnerHTML={{
-                __html: `
-        @keyframes slideUp {
-          from { opacity: 0; transform: translateY(40px); }
-          to { opacity: 1; transform: translateY(0); }
-        }
-        .slide-up-1 { animation: slideUp 0.8s ease-out forwards; opacity: 0; }
-        .slide-up-2 { animation: slideUp 0.8s ease-out 0.2s forwards; opacity: 0; }
-        .slide-up-4 { animation: slideUp 0.8s ease-out 0.6s forwards; opacity: 0; }
-        
-        @keyframes gradient-shift {
-          0% { background-position: 0% 50%; }
-          50% { background-position: 100% 50%; }
-          100% { background-position: 0% 50%; }
-        }
-        .animated-gradient {
-            background-size: 400% 400%;
-            animation: gradient-shift 10s ease infinite;
-        }
-      `}} />
 
             {/* Hero Section */}
             <section className="relative pt-20 sm:pt-24 md:pt-28 lg:pt-32 xl:pt-32 pb-8 lg:pb-24 min-h-[90vh] lg:min-h-screen flex flex-col justify-center overflow-hidden">
