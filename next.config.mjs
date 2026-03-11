@@ -216,13 +216,34 @@ const nextConfig = {
                     radix: {
                         test: /[\\/]node_modules[\\/]@radix-ui[\\/]/,
                         name: 'radix-ui',
-                        priority: 25,
+                        priority: 30,
                         reuseExistingChunk: true,
                     },
                     // Lucide icons - tree-shakeable icon library
                     lucide: {
                         test: /[\\/]node_modules[\\/]lucide-react[\\/]/,
                         name: 'lucide-icons',
+                        priority: 30,
+                        reuseExistingChunk: true,
+                    },
+                    // Embla carousel - used only on home page
+                    embla: {
+                        test: /[\\/]node_modules[\\/]embla-carousel[\\/]/,
+                        name: 'embla-carousel',
+                        priority: 25,
+                        reuseExistingChunk: true,
+                    },
+                    // reCAPTCHA - only needed on pages with forms
+                    recaptcha: {
+                        test: /[\\/]node_modules[\\/]react-google-recaptcha-v3[\\/]/,
+                        name: 'recaptcha',
+                        priority: 25,
+                        reuseExistingChunk: true,
+                    },
+                    // Form validation stack - only needed on contact page
+                    forms: {
+                        test: /[\\/]node_modules[\\/](react-hook-form|@hookform|zod)[\\/]/,
+                        name: 'forms',
                         priority: 25,
                         reuseExistingChunk: true,
                     },
@@ -240,7 +261,7 @@ const nextConfig = {
                         reuseExistingChunk: true,
                     },
                 },
-                maxInitialRequests: 25,
+                maxInitialRequests: 30,
                 minSize: 20000,
             };
         }
