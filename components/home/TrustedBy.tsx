@@ -1,5 +1,3 @@
-'use client';
-
 import Image from 'next/image';
 import { Locale } from "@/lib/i18n";
 
@@ -9,6 +7,39 @@ interface TrustedByProps {
 }
 
 export default function TrustedBy({ lang, title }: TrustedByProps) {
+    const clients = [
+        {
+            logo: "/images/homepage/clients/client-klouvi-bar-athens.jpg",
+            alt: "Klouvi Bar logo",
+            name: "Klouvi Bar",
+            location: "Athens",
+        },
+        {
+            logo: "/images/homepage/clients/client-blue-bamboo-athens-serifos.jpg",
+            alt: "Blue Bamboo logo",
+            name: "Blue Bamboo",
+            location: "Athens-Serifos",
+        },
+        {
+            logo: "/images/homepage/clients/client-beach-house-antiparos.jpg",
+            alt: "Beach House logo",
+            name: "Beach House",
+            location: "Antiparos",
+        },
+        {
+            logo: "/images/homepage/clients/client-pelicanos-sifnos.jpg",
+            alt: "Pelicanos logo",
+            name: "Pelicanos",
+            location: "Sifnos",
+        },
+        {
+            logo: "/images/homepage/clients/client-yam-antiparos.png",
+            alt: "Yam logo",
+            name: "Yam",
+            location: "Antiparos",
+        },
+    ] as const;
+
     return (
         <section className="py-24 px-6 bg-[#d3d3d3]">
             <style>{`
@@ -42,45 +73,23 @@ export default function TrustedBy({ lang, title }: TrustedByProps) {
                                 {/* Duplicate the items to ensure seamless scrolling */}
                                 {[...Array(2)].map((_, i) => (
                                     <div key={i} className="flex gap-12">
-                                        <div className="flex-shrink-0 text-center w-[180px]">
-                                            <div className="w-28 h-28 mx-auto mb-4 flex items-center justify-center bg-white rounded-lg p-3 border border-gray-200 shadow-sm">
-                                                <Image src="/images/homepage/clients/client-klouvi-bar-athens.jpg" alt="Klouvi Bar logo" width={100} height={100} sizes="100px" loading="lazy" className="max-w-full max-h-full object-contain" />
+                                        {clients.map((client) => (
+                                            <div key={`${i}-${client.name}`} className="flex-shrink-0 text-center w-[180px]">
+                                                <div className="w-28 h-28 mx-auto mb-4 flex items-center justify-center bg-white rounded-lg p-3 border border-gray-200 shadow-sm">
+                                                    <Image
+                                                        src={client.logo}
+                                                        alt={client.alt}
+                                                        width={100}
+                                                        height={100}
+                                                        sizes="100px"
+                                                        loading="lazy"
+                                                        className="max-w-full max-h-full object-contain"
+                                                    />
+                                                </div>
+                                                <p className="text-lg font-semibold text-black tracking-widest uppercase">{client.name}</p>
+                                                <p className="text-sm text-black/60 mt-1">{client.location}</p>
                                             </div>
-                                            <p className="text-lg font-semibold text-black tracking-widest uppercase">Klouvi Bar</p>
-                                            <p className="text-sm text-black/60 mt-1">Athens</p>
-                                        </div>
-
-                                        <div className="flex-shrink-0 text-center w-[180px]">
-                                            <div className="w-28 h-28 mx-auto mb-4 flex items-center justify-center bg-white rounded-lg p-3 border border-gray-200 shadow-sm">
-                                                <Image src="/images/homepage/clients/client-blue-bamboo-athens-serifos.jpg" alt="Blue Bamboo logo" width={100} height={100} sizes="100px" loading="lazy" className="max-w-full max-h-full object-contain" />
-                                            </div>
-                                            <p className="text-lg font-semibold text-black tracking-widest uppercase">Blue Bamboo</p>
-                                            <p className="text-sm text-black/60 mt-1">Athens-Serifos</p>
-                                        </div>
-
-                                        <div className="flex-shrink-0 text-center w-[180px]">
-                                            <div className="w-28 h-28 mx-auto mb-4 flex items-center justify-center bg-white rounded-lg p-3 border border-gray-200 shadow-sm">
-                                                <Image src="/images/homepage/clients/client-beach-house-antiparos.jpg" alt="Beach House logo" width={100} height={100} sizes="100px" loading="lazy" className="max-w-full max-h-full object-contain" />
-                                            </div>
-                                            <p className="text-lg font-semibold text-black tracking-widest uppercase">Beach House</p>
-                                            <p className="text-sm text-black/60 mt-1">Antiparos</p>
-                                        </div>
-
-                                        <div className="flex-shrink-0 text-center w-[180px]">
-                                            <div className="w-28 h-28 mx-auto mb-4 flex items-center justify-center bg-white rounded-lg p-3 border border-gray-200 shadow-sm">
-                                                <Image src="/images/homepage/clients/client-pelicanos-sifnos.jpg" alt="Pelicanos logo" width={100} height={100} sizes="100px" loading="lazy" className="max-w-full max-h-full object-contain" />
-                                            </div>
-                                            <p className="text-lg font-semibold text-black tracking-widest uppercase">Pelicanos</p>
-                                            <p className="text-sm text-black/60 mt-1">Sifnos</p>
-                                        </div>
-
-                                        <div className="flex-shrink-0 text-center w-[180px]">
-                                            <div className="w-28 h-28 mx-auto mb-4 flex items-center justify-center bg-white rounded-lg p-3 border border-gray-200 shadow-sm">
-                                                <Image src="/images/homepage/clients/client-yam-antiparos.png" alt="Yam logo" width={100} height={100} sizes="100px" loading="lazy" className="max-w-full max-h-full object-contain" />
-                                            </div>
-                                            <p className="text-lg font-semibold text-black tracking-widest uppercase">Yam</p>
-                                            <p className="text-sm text-black/60 mt-1">Antiparos</p>
-                                        </div>
+                                        ))}
                                     </div>
                                 ))}
                             </div>

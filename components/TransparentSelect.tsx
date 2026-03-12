@@ -9,6 +9,7 @@ export interface Option {
 }
 
 interface TransparentSelectProps {
+    id?: string;
     name: string;
     value: string;
     options: Option[];
@@ -20,9 +21,11 @@ interface TransparentSelectProps {
     error?: boolean;
     hidePlaceholderOption?: boolean;
     ariaLabel?: string;
+    ariaLabelledBy?: string;
 }
 
 export default function TransparentSelect({
+    id,
     name,
     value,
     options,
@@ -34,6 +37,7 @@ export default function TransparentSelect({
     error = false,
     hidePlaceholderOption = false,
     ariaLabel,
+    ariaLabelledBy,
 }: TransparentSelectProps) {
     const [isOpen, setIsOpen] = useState(false);
     const dropdownRef = useRef<HTMLDivElement>(null);
@@ -82,9 +86,14 @@ export default function TransparentSelect({
     return (
         <div className={`relative ${className}`} ref={dropdownRef}>
             <button
+                id={id}
                 type="button"
                 onClick={() => setIsOpen(!isOpen)}
                 aria-label={ariaLabel ? `${ariaLabel}: ${displayLabel}` : undefined}
+                aria-labelledby={ariaLabelledBy}
+                aria-haspopup="listbox"
+                aria-expanded={isOpen}
+                aria-controls={id ? `${id}-listbox` : undefined}
                 className={`${buttonClass} ${!selectedOption && isVinyl ? 'text-white/50' : ''}`}
             >
                 <span className="truncate">{displayLabel}</span>
@@ -92,9 +101,11 @@ export default function TransparentSelect({
             </button>
 
             {isOpen && (
-                <div className={`absolute z-[100] w-full min-w-max left-0 mt-2 rounded-lg overflow-hidden py-1 ${baseDropdownClass} max-h-60 overflow-y-auto`}>
+                <div id={id ? `${id}-listbox` : undefined} role="listbox" className={`absolute z-[100] w-full min-w-max left-0 mt-2 rounded-lg overflow-hidden py-1 ${baseDropdownClass} max-h-60 overflow-y-auto`}>
                     {!hidePlaceholderOption && (
                         <div
+                            role="option"
+                            aria-selected={value === ''}
                             onClick={() => handleSelect('')}
                             className={`px-4 py-3 cursor-pointer transition-colors text-sm ${optionHoverClass} ${value === '' ? (isVinyl ? 'bg-white/10' : 'bg-gray-50') : ''} ${isVinyl ? 'text-white/50' : 'text-gray-400'}`}
                         >
@@ -104,6 +115,8 @@ export default function TransparentSelect({
                     {options.map((opt) => (
                         <div
                             key={opt.value}
+                            role="option"
+                            aria-selected={value === opt.value}
                             onClick={() => handleSelect(opt.value)}
                             className={`px-4 py-3 cursor-pointer transition-colors ${optionHoverClass} ${value === opt.value ? (isVinyl ? 'bg-white/20 font-medium' : 'bg-gray-50 font-medium') : ''}`}
                         >

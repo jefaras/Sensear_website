@@ -1,5 +1,3 @@
-'use client';
-
 import { Locale } from "@/lib/i18n";
 
 interface WhoWeAreProps {

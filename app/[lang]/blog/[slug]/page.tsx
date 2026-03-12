@@ -60,6 +60,7 @@ export default async function BlogPost({
     const publishedDate = BLOG_PUBLISHED_DATES[article.link];
 
     const titleParts = article.title.split('|');
+    let sourceCounter = 0;
 
     // Helper to render text with markdown-style links [text](url)
     const renderTextWithLinks = (text: string) => {
@@ -67,15 +68,39 @@ export default async function BlogPost({
         return parts.map((part, i) => {
             const match = part.match(/\[(.*?)\]\((.*?)\)/);
             if (match) {
+                const originalLabel = match[1]?.trim() || "";
+                const href = match[2];
+                const isExternal = href.startsWith('http');
+                const isGenericSource = /^(source|πηγή)$/i.test(originalLabel);
+
+                const visibleLabel = isGenericSource
+                    ? `${lang === 'el' ? 'Πηγή' : 'Source'} ${++sourceCounter}`
+                    : originalLabel;
+
+                let externalAriaLabel: string | undefined;
+                if (isExternal) {
+                    try {
+                        const hostname = new URL(href).hostname.replace(/^www\./, '');
+                        externalAriaLabel = lang === 'el'
+                            ? `${visibleLabel} — ανοίγει εξωτερική πηγή: ${hostname}`
+                            : `${visibleLabel} — opens external source: ${hostname}`;
+                    } catch {
+                        externalAriaLabel = lang === 'el'
+                            ? `${visibleLabel} — ανοίγει εξωτερική πηγή`
+                            : `${visibleLabel} — opens external source`;
+                    }
+                }
+
                 return (
                     <Link
                         key={i}
-                        href={match[2]}
+                        href={href}
                         className="text-orange-500 hover:text-orange-600 underline decoration-orange-500/30 underline-offset-4 font-bold transition-colors"
-                        target={match[2].startsWith('http') ? "_blank" : undefined}
-                        rel={match[2].startsWith('http') ? "noopener noreferrer" : undefined}
+                        target={isExternal ? "_blank" : undefined}
+                        rel={isExternal ? "noopener noreferrer" : undefined}
+                        aria-label={externalAriaLabel}
                     >
-                        {match[1]}
+                        {visibleLabel}
                     </Link>
                 );
             }
