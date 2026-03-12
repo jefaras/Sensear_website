@@ -28,7 +28,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: Loc
     if (!article) return { title: "Article Not Found" };
 
     return {
-        title: `${article.title} - SensEar Music`,
+        title: article.title,
         description: article.desc,
         openGraph: {
             title: article.title,
