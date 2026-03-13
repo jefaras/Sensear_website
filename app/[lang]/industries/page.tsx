@@ -68,7 +68,7 @@ export default async function Industries({
                                         alt="Industries we serve with music curation"
                                         fill
                                         className="object-cover"
-                                        sizes="(max-width: 768px) 100vw, 50vw"
+                                        sizes="(max-width: 768px) 100vw, (max-width: 1536px) 50vw, 740px"
                                         priority
                                     />
                                 </div>
@@ -131,12 +131,12 @@ export default async function Industries({
                                 {/* Alternating layout */}
                                 <div className={`order-2 ${index % 2 === 0 ? 'lg:order-1' : ''}`}>
                                     {/* Images with aspect-[3/4] like Event Soundtracks */}
-                                    {index === 0 && <Image src="/images/industries/industry-restaurants-bars.jpg" alt={item.title} width={600} height={800} sizes="(max-width: 1024px) 100vw, 50vw" loading="eager" className="w-full aspect-[3/4] object-cover rounded-xl shadow-lg" />}
-                                    {index === 1 && <Image src="/images/industries/industry-hotels-resorts.jpg" alt={item.title} width={600} height={800} sizes="(max-width: 1024px) 100vw, 50vw" className="w-full aspect-[3/4] object-cover rounded-xl shadow-lg" />}
-                                    {index === 2 && <Image src="/images/industries/industry-retail-stores.jpg" alt={item.title} width={600} height={800} sizes="(max-width: 1024px) 100vw, 50vw" className="w-full aspect-[3/4] object-cover rounded-xl shadow-lg" />}
-                                    {index === 3 && <Image src="/images/industries/industry-wellness-gyms.jpg" alt={item.title} width={600} height={800} sizes="(max-width: 1024px) 100vw, 50vw" className="w-full aspect-[3/4] object-cover rounded-xl shadow-lg" />}
-                                    {index === 4 && <Image src="/images/industries/industry-events-experiences.jpg" alt={item.title} width={600} height={800} sizes="(max-width: 1024px) 100vw, 50vw" className="w-full aspect-[3/4] object-cover rounded-xl shadow-lg" />}
-                                    {index === 5 && <Image src="/images/industries/industry-art-museums-fashion.jpg" alt={item.title} width={600} height={800} sizes="(max-width: 1024px) 100vw, 50vw" className="w-full aspect-[3/4] object-cover rounded-xl shadow-lg" />}
+                                    {index === 0 && <Image src="/images/industries/industry-restaurants-bars.jpg" alt={item.title} width={600} height={800} sizes="(max-width: 1024px) 100vw, (max-width: 1536px) 50vw, 600px" loading="eager" className="w-full aspect-[3/4] object-cover rounded-xl shadow-lg" />}
+                                    {index === 1 && <Image src="/images/industries/industry-hotels-resorts.jpg" alt={item.title} width={600} height={800} sizes="(max-width: 1024px) 100vw, (max-width: 1536px) 50vw, 600px" className="w-full aspect-[3/4] object-cover rounded-xl shadow-lg" />}
+                                    {index === 2 && <Image src="/images/industries/industry-retail-stores.jpg" alt={item.title} width={600} height={800} sizes="(max-width: 1024px) 100vw, (max-width: 1536px) 50vw, 600px" className="w-full aspect-[3/4] object-cover rounded-xl shadow-lg" />}
+                                    {index === 3 && <Image src="/images/industries/industry-wellness-gyms.jpg" alt={item.title} width={600} height={800} sizes="(max-width: 1024px) 100vw, (max-width: 1536px) 50vw, 600px" className="w-full aspect-[3/4] object-cover rounded-xl shadow-lg" />}
+                                    {index === 4 && <Image src="/images/industries/industry-events-experiences.jpg" alt={item.title} width={600} height={800} sizes="(max-width: 1024px) 100vw, (max-width: 1536px) 50vw, 600px" className="w-full aspect-[3/4] object-cover rounded-xl shadow-lg" />}
+                                    {index === 5 && <Image src="/images/industries/industry-art-museums-fashion.jpg" alt={item.title} width={600} height={800} sizes="(max-width: 1024px) 100vw, (max-width: 1536px) 50vw, 600px" className="w-full aspect-[3/4] object-cover rounded-xl shadow-lg" />}
                                 </div>
                                 <div className={`order-1 ${index % 2 === 0 ? 'lg:order-2' : ''}`}>
                                     <h3 className="text-4xl md:text-[48px] font-bold text-black mb-4">{item.title}</h3>
@@ -197,7 +197,7 @@ export default async function Industries({
                                     alt="Connected worlds across hospitality and retail industries"
                                     width={800}
                                     height={600}
-                                    sizes="(max-width: 1024px) 100vw, 50vw"
+                                    sizes="(max-width: 1024px) 100vw, (max-width: 1536px) 50vw, 800px"
                                     className="w-full h-auto object-cover"
                                 />
                             </div>

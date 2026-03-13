@@ -75,7 +75,7 @@ export default async function EventsExperiencesPage({
                                             src={t.hero.image}
                                             alt={t.hero.image_alt}
                                             fill
-                                            sizes="(max-width: 1024px) 100vw, 50vw"
+                                            sizes="(max-width: 1024px) 100vw, (max-width: 1536px) 50vw, 740px"
                                             className="object-cover" priority />
                                     </div>
                                 </div>
@@ -123,7 +123,7 @@ export default async function EventsExperiencesPage({
                                 src={t.what_we_do.image}
                                 alt="Event experience with guests dancing"
                                 fill
-                                sizes="(max-width: 1024px) 100vw, 50vw" loading="eager" className="object-cover rounded-2xl shadow-lg"
+                                sizes="(max-width: 1024px) 100vw, (max-width: 1536px) 50vw, 600px" loading="eager" className="object-cover rounded-2xl shadow-lg"
                             />
                         </div>
                     </div>
@@ -156,7 +156,7 @@ export default async function EventsExperiencesPage({
                                 src={t.ideal_for.image}
                                 alt="Event sound technical challenge"
                                 fill
-                                sizes="(max-width: 1024px) 100vw, 50vw" loading="eager" className="object-cover rounded-2xl shadow-lg"
+                                sizes="(max-width: 1024px) 100vw, (max-width: 1536px) 50vw, 600px" loading="eager" className="object-cover rounded-2xl shadow-lg"
                             />
                         </div>
                     </div>
@@ -174,7 +174,7 @@ export default async function EventsExperiencesPage({
                                 src={t.how_we_help.image}
                                 alt="Event atmosphere with guests enjoying"
                                 fill
-                                sizes="(max-width: 1024px) 100vw, 50vw"
+                                sizes="(max-width: 1024px) 100vw, (max-width: 1536px) 50vw, 600px"
                                 className="object-cover rounded-2xl shadow-lg"
                             />
                         </div>

@@ -47,7 +47,7 @@ export default async function SignaturePlaylistsPage({
                                             alt="Bespoke music curation and playlist creation for unique venue atmosphere"
                                             fill
                                             className="object-cover"
-                                            sizes="(max-width: 768px) 100vw, 50vw"
+                                            sizes="(max-width: 768px) 100vw, (max-width: 1536px) 50vw, 740px"
                                             priority
                                         />
                                     </div>
@@ -85,7 +85,7 @@ export default async function SignaturePlaylistsPage({
                                 alt="Mindful music curation experience"
                                 width={600}
                                 height={400}
-                                sizes="50vw"
+                                sizes="(max-width: 1024px) 100vw, (max-width: 1536px) 50vw, 600px"
                                 loading="lazy"
                                 className="w-full h-auto rounded-2xl shadow-lg"
                             />
@@ -133,7 +133,7 @@ export default async function SignaturePlaylistsPage({
                                 alt="Luxury hotel room with curated music atmosphere"
                                 width={600}
                                 height={400}
-                                sizes="50vw"
+                                sizes="(max-width: 1024px) 100vw, (max-width: 1536px) 50vw, 600px"
                                 loading="lazy"
                                 className="w-full h-auto rounded-2xl shadow-lg"
                             />
@@ -154,7 +154,7 @@ export default async function SignaturePlaylistsPage({
                                 alt="Vinyl records collection for curated playlists"
                                 width={600}
                                 height={400}
-                                sizes="50vw"
+                                sizes="(max-width: 1024px) 100vw, (max-width: 1536px) 50vw, 600px"
                                 className="w-full h-auto rounded-2xl shadow-lg"
                             />
                         </div>

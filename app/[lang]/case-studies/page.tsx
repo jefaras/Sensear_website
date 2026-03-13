@@ -88,7 +88,7 @@ export default async function CaseStudies({
                                         alt="Case Studies showcasing music curation projects"
                                         fill
                                         className="object-cover"
-                                        sizes="(max-width: 768px) 100vw, 50vw"
+                                        sizes="(max-width: 768px) 100vw, (max-width: 1536px) 50vw, 740px"
                                         priority
                                     />
                                 </div>
@@ -163,7 +163,7 @@ export default async function CaseStudies({
                                                 alt={item.title}
                                                 fill
                                                 className="object-cover"
-                                                sizes="(max-width: 768px) 100vw, 50vw"
+                                                sizes="(max-width: 768px) 100vw, (max-width: 1536px) 50vw, 600px"
                                                 loading={index < 2 ? "eager" : "lazy"}
                                             />
                                         </div>

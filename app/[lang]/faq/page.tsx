@@ -53,7 +53,7 @@ export default async function FAQPage({
                                             src="/images/blog/blog-faq-default.jpg"
                                             alt="FAQ"
                                             fill
-                                            sizes="(max-width: 1024px) 100vw, 50vw"
+                                            sizes="(max-width: 1024px) 100vw, (max-width: 1536px) 50vw, 740px"
                                             className="w-full h-full object-cover"
                                             priority
                                         />

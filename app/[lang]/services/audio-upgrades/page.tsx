@@ -21,7 +21,7 @@ export default async function AudioUpgradesPage({ params }: { params: Promise<{ 
                         <p className="text-xl md:text-2xl text-black/70 leading-relaxed slide-up-2">{t.hero.description}</p>
                     </div>
                     <div className="w-full slide-up-4 flex justify-end"><div className="w-full max-w-[740px]"><div className="overflow-hidden rounded-2xl shadow-2xl"><div className="relative aspect-square">
-                        <Image src="/images/services/audio-upgrades/audio-upgrades-hero.jpg" alt="Professional audio equipment optimization" fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" priority />
+                        <Image src="/images/services/audio-upgrades/audio-upgrades-hero.jpg" alt="Professional audio equipment optimization" fill sizes="(max-width: 1024px) 100vw, (max-width: 1536px) 50vw, 740px" className="object-cover" priority />
                     </div></div></div></div>
                 </div></div>
             </section>
@@ -36,7 +36,7 @@ export default async function AudioUpgradesPage({ params }: { params: Promise<{ 
                 <h2 className="text-[2.7rem] md:text-[3.45rem] font-bold mb-4 text-black text-center leading-heading">{t.what_we_do.title}</h2>
                 <p className="text-xl text-black/60 font-medium text-center mb-12">{t.what_we_do.subtitle}</p>
                 <div className="grid lg:grid-cols-2 gap-12 items-center">
-                    <div className="hidden lg:block"><Image src="/images/services/audio-upgrades/audio-upgrades-assessment.jpg" alt="Professional audio assessment" width={800} height={600} sizes="50vw" loading="eager" className="w-full h-auto rounded-2xl shadow-lg" /></div>
+                    <div className="hidden lg:block"><Image src="/images/services/audio-upgrades/audio-upgrades-assessment.jpg" alt="Professional audio assessment" width={800} height={600} sizes="(max-width: 1024px) 100vw, (max-width: 1536px) 50vw, 800px" loading="eager" className="w-full h-auto rounded-2xl shadow-lg" /></div>
                     <div className="space-y-8">
                         {t.what_we_do.items.map((item: any, index: number) => (
                             <div key={index}>
@@ -62,13 +62,13 @@ export default async function AudioUpgradesPage({ params }: { params: Promise<{ 
                             </li>
                         ))}
                     </ul></div>
-                    <div className="hidden lg:block"><Image src="/images/services/audio-upgrades/audio-upgrades-venue.jpg" alt="Audio optimization for venues" width={800} height={600} sizes="50vw" loading="eager" className="w-full h-auto rounded-2xl shadow-lg" /></div>
+                    <div className="hidden lg:block"><Image src="/images/services/audio-upgrades/audio-upgrades-venue.jpg" alt="Audio optimization for venues" width={800} height={600} sizes="(max-width: 1024px) 100vw, (max-width: 1536px) 50vw, 800px" loading="eager" className="w-full h-auto rounded-2xl shadow-lg" /></div>
                 </div>
             </div></section>
             <section className="py-20 bg-white"><div className="max-w-7xl mx-auto px-6">
                 <h2 className="text-[2.7rem] md:text-[3.45rem] font-bold mb-12 text-black text-center leading-heading">{t.clarity.title}</h2>
                 <div className="grid lg:grid-cols-2 gap-12 items-center">
-                    <div className="hidden lg:block"><Image src="/images/services/audio-upgrades/audio-upgrades-clarity.jpg" alt="Audio clarity and coverage" width={800} height={600} sizes="50vw" className="w-full h-auto rounded-2xl shadow-lg" /></div>
+                    <div className="hidden lg:block"><Image src="/images/services/audio-upgrades/audio-upgrades-clarity.jpg" alt="Audio clarity and coverage" width={800} height={600} sizes="(max-width: 1024px) 100vw, (max-width: 1536px) 50vw, 800px" className="w-full h-auto rounded-2xl shadow-lg" /></div>
                     <div className="space-y-8">
                         {t.clarity.items.map((item: any, index: number) => (
                             <div key={index}>

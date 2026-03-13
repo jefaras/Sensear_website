@@ -51,7 +51,7 @@ export function HeroCarousel() {
                             alt={image.alt}
                             fill
                             className="object-cover"
-                            sizes="(max-width: 768px) 100vw, 50vw"
+                            sizes="(max-width: 768px) 100vw, (max-width: 1536px) 50vw, 740px"
                             priority={index === 0}
                             loading={index === 0 ? "eager" : "lazy"}
                             placeholder="blur"

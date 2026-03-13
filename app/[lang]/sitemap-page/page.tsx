@@ -102,7 +102,7 @@ export default async function SitemapPage({
                                         alt="Sitemap"
                                         fill
                                         className="object-cover"
-                                        sizes="(max-width: 768px) 100vw, 50vw"
+                                        sizes="(max-width: 768px) 100vw, (max-width: 1536px) 50vw, 740px"
                                         priority
                                     />
                                 </div>

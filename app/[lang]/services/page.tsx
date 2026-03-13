@@ -63,7 +63,7 @@ export default async function Services({
                                         alt="Strategic music services for hospitality and retail venues"
                                         fill
                                         className="object-cover"
-                                        sizes="(max-width: 768px) 100vw, 50vw"
+                                        sizes="(max-width: 768px) 100vw, (max-width: 1536px) 50vw, 740px"
                                         priority
                                     />
                                 </div>
@@ -124,7 +124,7 @@ export default async function Services({
                                     alt="Signature Playlists service for curated music experiences"
                                     width={800}
                                     height={600}
-                                    sizes="(max-width: 1024px) 100vw, 50vw"
+                                    sizes="(max-width: 1024px) 100vw, (max-width: 1536px) 50vw, 800px"
                                     loading="eager"
                                     className="w-full h-auto object-cover rounded-xl shadow-lg"
                                 />
@@ -197,7 +197,7 @@ export default async function Services({
                                     alt="Event Soundtracks service for memorable experiences"
                                     width={800}
                                     height={1000}
-                                    sizes="(max-width: 1024px) 100vw, 50vw"
+                                    sizes="(max-width: 1024px) 100vw, (max-width: 1536px) 50vw, 800px"
                                     className="w-full aspect-[3/4] object-cover rounded-xl shadow-lg"
                                 />
                             </div>
@@ -275,7 +275,7 @@ export default async function Services({
                                 alt="Services delivery process for music curation"
                                 width={800}
                                 height={600}
-                                sizes="(max-width: 1024px) 100vw, 50vw"
+                                    sizes="(max-width: 1024px) 100vw, (max-width: 1536px) 50vw, 600px"
                                 className="w-full h-auto rounded-2xl shadow-lg"
                             />
                         </div>
