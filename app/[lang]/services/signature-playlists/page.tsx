@@ -149,14 +149,15 @@ export default async function SignaturePlaylistsPage({
 
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
                         <div className="hidden lg:block">
-                            <Image
-                                src="/images/services/signature-playlists/signature-playlists-vinyl-collection.jpg"
-                                alt="Vinyl records collection for curated playlists"
-                                width={600}
-                                height={400}
-                                sizes="(max-width: 1024px) 100vw, (max-width: 1536px) 50vw, 600px"
-                                className="w-full h-auto rounded-2xl shadow-lg"
-                            />
+                                <Image
+                                    src="/images/services/signature-playlists/signature-playlists-vinyl-collection.jpg"
+                                    alt="Vinyl records collection for curated playlists"
+                                    width={600}
+                                    height={400}
+                                    sizes="(max-width: 1024px) 100vw, (max-width: 1536px) 50vw, 600px"
+                                    loading="lazy"
+                                    className="w-full h-auto rounded-2xl shadow-lg"
+                                />
                         </div>
 
                         <div className="space-y-8">

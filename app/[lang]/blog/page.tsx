@@ -114,7 +114,7 @@ export default async function Blog({
                                         alt={article.alt || article.title}
                                         fill
                                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 420px"
-                                        loading={index < 2 ? "eager" : "lazy"}
+                                        loading="lazy"
                                         className="object-cover transition-transform duration-500 group-hover:scale-105"
                                     />
                                 </div>
