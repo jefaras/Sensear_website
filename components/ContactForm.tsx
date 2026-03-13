@@ -3,7 +3,6 @@
 import { useState, useCallback } from "react";
 import { submitContactForm } from "@/app/actions";
 import { CheckCircle, ArrowRight } from "lucide-react";
-import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 import TransparentSelect from "./TransparentSelect";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
@@ -65,7 +64,6 @@ export function ContactForm({ labels, variant = "default" }: ContactFormProps) {
     const [pending, setPending] = useState(false);
     const [success, setSuccess] = useState(false);
     const [errors, setErrors] = useState<Record<string, string[]>>({});
-    const { executeRecaptcha } = useGoogleReCaptcha();
     const pathname = usePathname() || "";
     const [formData, setFormData] = useState<FormData>({
         name: "",
@@ -100,17 +98,7 @@ export function ContactForm({ labels, variant = "default" }: ContactFormProps) {
         setPending(true);
         setErrors({});
 
-        let recaptchaToken = "";
-        // TEMPORARILY BYPASSED RECAPTCHA
-        // if (executeRecaptcha) {
-        //     try {
-        //         recaptchaToken = await executeRecaptcha("contact_form");
-        //     } catch {
-        //         setErrors({ _form: ["Security verification failed. Please refresh the page."] });
-        //         setPending(false);
-        //         return;
-        //     }
-        // }
+        const recaptchaToken = "";
 
         const submitData = new FormData();
         submitData.append("g-recaptcha-response", recaptchaToken);
@@ -144,7 +132,7 @@ export function ContactForm({ labels, variant = "default" }: ContactFormProps) {
                 message: "",
             });
         }
-    }, [executeRecaptcha, formData, labels]);
+    }, [formData, labels]);
 
     // Styles based on variant
     const inputClass = isVinyl
@@ -157,9 +145,6 @@ export function ContactForm({ labels, variant = "default" }: ContactFormProps) {
 
     const errorClass = isVinyl ? "text-red-400 text-sm mt-1" : "text-red-500 text-sm mt-1";
     const labelClass = isVinyl ? "block text-sm font-medium mb-2 text-white/90" : "block text-sm font-medium mb-2";
-
-    const googlePrivacyText = isGreek ? "Πολιτική Απορρήτου Google" : "Google Privacy Policy";
-    const googleTermsText = isGreek ? "Όροι Χρήσης Google" : "Google Terms of Service";
 
     if (success) {
         return (
@@ -380,11 +365,14 @@ export function ContactForm({ labels, variant = "default" }: ContactFormProps) {
                 )}
             </button>
 
+            {/* TEMP: reCAPTCHA client execution is currently disabled. Re-enable disclosure when frontend token generation returns. */}
+            {/*
             <p className={`text-xs text-center mt-3 ${isVinyl ? 'text-white/30' : 'text-black/40'}`}>
                 This site is protected by reCAPTCHA and the Google{" "}
-                <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" aria-label={googlePrivacyText} className={`underline ${isVinyl ? 'hover:text-white/50' : 'hover:text-black/60'}`}>{googlePrivacyText}</a> and{" "}
-                <a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer" aria-label={googleTermsText} className={`underline ${isVinyl ? 'hover:text-white/50' : 'hover:text-black/60'}`}>{googleTermsText}</a> apply.
+                <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" aria-label={isGreek ? "Πολιτική Απορρήτου Google" : "Google Privacy Policy"} className={`underline ${isVinyl ? 'hover:text-white/50' : 'hover:text-black/60'}`}>{isGreek ? "Πολιτική Απορρήτου Google" : "Google Privacy Policy"}</a> and{" "}
+                <a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer" aria-label={isGreek ? "Όροι Χρήσης Google" : "Google Terms of Service"} className={`underline ${isVinyl ? 'hover:text-white/50' : 'hover:text-black/60'}`}>{isGreek ? "Όροι Χρήσης Google" : "Google Terms of Service"}</a> apply.
             </p>
+            */}
         </form>
     )
 }

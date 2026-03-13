@@ -1,0 +1,121 @@
+========================================
+META TITLES & DESCRIPTIONS (EL)
+Source: Next.js metadata in code + dictionary values
+Route order: app/sitemap.ts
+========================================
+
+## URL: /el
+Meta Title: SensEar Music - Μουσική Επιμέλεια & Sonic Branding
+Meta Description: Εξειδικευμένη μουσική επιμέλεια και sonic branding για ξενοδοχεία, εστιατόρια, retail και εκδηλώσεις. Δημιουργούμε τη μοναδική ηχητική ταυτότητα του brand σας.
+
+## URL: /el/about
+Meta Title: Η ομάδα & προσέγγισή μας
+Meta Description: Μάθετε πώς η SensEar προσεγγίζει τη μουσική επιμέλεια με σαφήνεια και πρόθεση, διαμορφώνοντας πώς γίνονται αντιληπτοί οι χώροι μέσα από τον ήχο.
+
+## URL: /el/services
+Meta Title: Υπηρεσίες μουσικής επιμέλειας
+Meta Description: Γνωρίστε τις υπηρεσίες μας: Signature Playlists, Ηχητική Ταυτότητα, Μουσική Εκδηλώσεων και Ακουστική Αναβάθμιση.
+
+## URL: /el/services/signature-playlists
+Meta Title: SensEar Music - Μουσική Επιμέλεια & Sonic Branding
+Meta Description: Εξειδικευμένη μουσική επιμέλεια και sonic branding για ξενοδοχεία, εστιατόρια, retail και εκδηλώσεις. Δημιουργούμε τη μοναδική ηχητική ταυτότητα του brand σας.
+
+## URL: /el/services/event-soundtracks
+Meta Title: SensEar Music - Μουσική Επιμέλεια & Sonic Branding
+Meta Description: Εξειδικευμένη μουσική επιμέλεια και sonic branding για ξενοδοχεία, εστιατόρια, retail και εκδηλώσεις. Δημιουργούμε τη μοναδική ηχητική ταυτότητα του brand σας.
+
+## URL: /el/services/sonic-identity
+Meta Title: SensEar Music - Μουσική Επιμέλεια & Sonic Branding
+Meta Description: Εξειδικευμένη μουσική επιμέλεια και sonic branding για ξενοδοχεία, εστιατόρια, retail και εκδηλώσεις. Δημιουργούμε τη μοναδική ηχητική ταυτότητα του brand σας.
+
+## URL: /el/services/audio-upgrades
+Meta Title: SensEar Music - Μουσική Επιμέλεια & Sonic Branding
+Meta Description: Εξειδικευμένη μουσική επιμέλεια και sonic branding για ξενοδοχεία, εστιατόρια, retail και εκδηλώσεις. Δημιουργούμε τη μοναδική ηχητική ταυτότητα του brand σας.
+
+## URL: /el/industries
+Meta Title: Μουσική κάλυψη ανά κλάδο
+Meta Description: Μουσική κάλυψη υψηλής αισθητικής για ξενοδοχεία, εστιατόρια, retail, χώρους ευεξίας και πολιτισμού.
+
+## URL: /el/industries/music-for-hotels-and-resorts
+Meta Title: Μουσική για Ξενοδοχεία & Resorts
+Meta Description: Εξειδικευμένη μουσική επιμέλεια για ξενοδοχεία και θέρετρα. Δημιουργούμε τη μοναδική ηχητική ταυτότητα του χώρου σας.
+
+## URL: /el/industries/music-for-restaurants-and-bars
+Meta Title: Μουσική για Εστιατόρια, Καφέ & Bars
+Meta Description: Εξειδικευμένη μουσική επιμέλεια για εστιατόρια και μπαρ. Δημιουργούμε τη μοναδική ηχητική ταυτότητα του χώρου σας.
+
+## URL: /el/industries/music-for-retail-stores
+Meta Title: Μουσική για Καταστήματα Λιανικής
+Meta Description: Εξειδικευμένη μουσική επιμέλεια για καταστήματα λιανικής. Δημιουργούμε τη μοναδική ηχητική ταυτότητα του brand σας.
+
+## URL: /el/industries/music-for-wellness-and-gyms
+Meta Title: Μουσική για Σπα & Γυμναστήρια
+Meta Description: Εξειδικευμένη μουσική επιμέλεια για σπα και γυμναστήρια. Δημιουργούμε τη μοναδική ηχητική ταυτότητα του χώρου σας.
+
+## URL: /el/industries/music-for-events-and-experiences
+Meta Title: Μουσική για Εκδηλώσεις & Premium Events
+Meta Description: Εξειδικευμένη μουσική επιμέλεια για εκδηλώσεις και εμπειρίες. Δημιουργούμε τη μοναδική ηχητική ταυτότητα της εκδήλωσής σας.
+
+## URL: /el/industries/music-for-art-museums-and-fashion
+Meta Title: Μουσική για Γκαλερί, Μουσεία & Μόδα
+Meta Description: Εξειδικευμένη μουσική επιμέλεια για μουσεία, γκαλερί και εκδηλώσεις μόδας. Δημιουργούμε τη μοναδική ηχητική ταυτότητα του χώρου σας.
+
+## URL: /el/case-studies
+Meta Title: Παραδείγματα μουσικής επιμέλειας
+Meta Description: Δείτε πώς έχουμε μεταμορφώσει την ατμόσφαιρα σε ξενοδοχεία, εστιατόρια και εκδηλώσεις μέσω της στρατηγικής μουσικής επιμέλειας.
+
+## URL: /el/blog
+Meta Title: Το Blog της μουσικής επιμέλειας
+Meta Description: Άρθρα, insights και νέα για τη μουσική επιμέλεια, το sonic branding και τη σημασία του ήχου στην εμπειρία πελάτη.
+
+## URL: /el/blog/how-top-hospitality-brands-design-sound
+Meta Title: Σχεδιασμός ήχου στη φιλοξενία
+Meta Description: Μάθετε πώς τα πολυτελή brands φιλοξενίας χρησιμοποιούν τη στρατηγική μουσική επιμέλεια και το sonic branding για να δημιουργήσουν ξεχωριστές εμπειρίες.
+
+## URL: /el/blog/three-reasons-make-music-hospitality
+Meta Title: 3 λόγοι για μουσική επιμέλεια
+Meta Description: Γιατί η επιμελημένη μουσική είναι ένας πρακτικός τρόπος να διαμορφώσετε το πώς νιώθουν οι επισκέπτες, τι θυμούνται και πόσο ξοδεύουν.
+
+## URL: /el/blog/brand-music-converts-browsers-buyers
+Meta Title: Brand-fit music & αύξηση πωλήσεων
+Meta Description: Έρευνα με πραγματικά δεδομένα που δείχνει πως η εναρμονισμένη με το brand μουσική αυξάνει τις πωλήσεις κατά 9,1% σε χώρους φιλοξενίας.
+
+## URL: /el/blog/what-exactly-does-music-curator-do
+Meta Title: Τι ακριβώς κάνει ο music curator;
+Meta Description: Μάθετε πώς οι επαγγελματίες music curators σχεδιάζουν τις ηχητικές ταυτότητες των brands μέσα από στρατηγική επιμέλεια και data-driven sonic branding.
+
+## URL: /el/blog/music-curation-cycle-venues
+Meta Title: Ο κύκλος της μουσικής επιμέλειας
+Meta Description: Μάθετε πώς η συνεχής βελτιστοποίηση της μουσικής επιμέλειας αναβαθμίζει την ατμόσφαιρα του χώρου, συνδυάζοντας την ανάλυση δεδομένων με την εξειδικευμένη ανθρώπινη παρέμβαση.
+
+## URL: /el/blog/building-brand-people-can-hear
+Meta Title: Χτίζοντας brands που «ακούγονται»
+Meta Description: Στρατηγικός οδηγός για το sonic branding και την ανάπτυξη ηχητικής ταυτότητας. Δημιουργήστε αξέχαστες εμπειρίες μέσω της μουσικής και του ηχητικού σχεδιασμού.
+
+## URL: /el/blog/background-music-shapes-customer-behavior
+Meta Title: Μουσική & συμπεριφορά πελατών
+Meta Description: Έρευνες αποδεικνύουν πώς το στρατηγικό ηχητικό υπόβαθρο (background music)  αυξάνει τις πωλήσεις και τον χρόνο παραμονής σε περιβάλλοντα retail και φιλοξενίας.
+
+## URL: /el/blog/service-environment-shapes-wait-time
+Meta Title: Πώς ο χώρος αλλάζει την αναμονή
+Meta Description: Πώς η μουσική και ο σχεδιασμός του περιβάλλοντος μπορούν να μεταμορφώσουν την εμπειρία αναμονής και να βελτιώσουν την ικανοποίηση των επισκεπτών.
+
+## URL: /el/contact
+Meta Title: Αναβαθμίστε τον ήχο σας - Μιλήστε μαζί μας
+Meta Description: Επικοινωνήστε μαζί μας για να συζητήσουμε τις ανάγκες του χώρου σας και πώς η μουσική μπορεί να αναβαθμίσει την εμπειρία των επισκεπτών.
+
+## URL: /el/faq
+Meta Title: SensEar Music - Μουσική Επιμέλεια & Sonic Branding
+Meta Description: Εξειδικευμένη μουσική επιμέλεια και sonic branding για ξενοδοχεία, εστιατόρια, retail και εκδηλώσεις. Δημιουργούμε τη μοναδική ηχητική ταυτότητα του brand σας.
+
+## URL: /el/privacy
+Meta Title: Πολιτική Απορρήτου | SensEar Music
+Meta Description: Η πολιτική απορρήτου της SensEar Music. Μάθετε πώς συλλέγουμε, χρησιμοποιούμε και προστατεύουμε τα προσωπικά σας δεδομένα.
+
+## URL: /el/terms
+Meta Title: Όροι Χρήσης | SensEar Music
+Meta Description: Οι όροι χρήσης της SensEar Music. Διαβάστε τους όρους και προϋποθέσεις για τη χρήση των υπηρεσιών μας.
+
+## URL: /el/sitemap-page
+Meta Title: SensEar Music - Μουσική Επιμέλεια & Sonic Branding
+Meta Description: Εξειδικευμένη μουσική επιμέλεια και sonic branding για ξενοδοχεία, εστιατόρια, retail και εκδηλώσεις. Δημιουργούμε τη μοναδική ηχητική ταυτότητα του brand σας.

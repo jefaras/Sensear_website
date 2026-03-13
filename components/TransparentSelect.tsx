@@ -65,6 +65,7 @@ export default function TransparentSelect({
 
     const selectedOption = options.find((opt) => opt.value === value);
     const displayLabel = selectedOption ? selectedOption.label : placeholder;
+    const listboxId = id ? `${id}-listbox` : undefined;
 
     // Use default styles if triggerClassName is not fully overriding
     const defaultTriggerClass = isVinyl
@@ -93,15 +94,20 @@ export default function TransparentSelect({
                 aria-labelledby={ariaLabelledBy}
                 aria-haspopup="listbox"
                 aria-expanded={isOpen}
-                aria-controls={id ? `${id}-listbox` : undefined}
+                aria-controls={listboxId}
                 className={`${buttonClass} ${!selectedOption && isVinyl ? 'text-white/50' : ''}`}
             >
                 <span className="truncate">{displayLabel}</span>
                 <ChevronDown className={`w-4 h-4 ml-2 transition-transform duration-200 flex-shrink-0 ${isOpen ? 'rotate-180' : ''} ${isVinyl ? 'text-white/70' : 'text-gray-500'}`} />
             </button>
 
-            {isOpen && (
-                <div id={id ? `${id}-listbox` : undefined} role="listbox" className={`absolute z-[100] w-full min-w-max left-0 mt-2 rounded-lg overflow-hidden py-1 ${baseDropdownClass} max-h-60 overflow-y-auto`}>
+            <div
+                id={listboxId}
+                role="listbox"
+                aria-labelledby={ariaLabelledBy}
+                aria-label={ariaLabel}
+                className={`absolute z-[100] w-full min-w-max left-0 mt-2 rounded-lg overflow-hidden py-1 ${baseDropdownClass} max-h-60 overflow-y-auto ${isOpen ? '' : 'hidden'}`}
+            >
                     {!hidePlaceholderOption && (
                         <div
                             role="option"
@@ -124,7 +130,6 @@ export default function TransparentSelect({
                         </div>
                     ))}
                 </div>
-            )}
         </div>
     );
 }

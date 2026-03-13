@@ -11,42 +11,6 @@ const nextConfig = {
         remotePatterns: [],
     },
 
-    webpack: (config, { isServer }) => {
-        if (!isServer) {
-            config.optimization.splitChunks = {
-                ...config.optimization.splitChunks,
-                cacheGroups: {
-                    ...config.optimization.splitChunks?.cacheGroups,
-                    framework: {
-                        name: 'framework',
-                        test: /[\\/]node_modules[\\/](react|react-dom|next)[\\/]/,
-                        priority: 40,
-                        chunks: 'all',
-                    },
-                    lib: {
-                        test(module) {
-                            return module.size() > 160000 &&
-                                /node_modules[/\\]/.test(module.identifier());
-                        },
-                        name(module) {
-                            const hash = require('crypto')
-                                .createHash('sha1')
-                                .update(module.identifier())
-                                .digest('hex')
-                                .slice(0, 8);
-                            return `lib-${hash}`;
-                        },
-                        priority: 30,
-                        minChunks: 1,
-                        reuseExistingChunk: true,
-                        chunks: 'all',
-                    },
-                },
-            };
-        }
-        return config;
-    },
-
     // Disable ES Lint and Typescript checks during build to prevent out-of-memory errors
     // Since we check the code locally before pushing, running it again on a low-RAM production 
     // server is redundant and often kills the build process (Exit code: 9).
@@ -227,78 +191,63 @@ const nextConfig = {
         ],
     },
 
-    // Webpack configuration for bundle optimization
+    // Webpack configuration for deterministic chunking without a giant shared vendors bundle
     webpack: (config, { isServer }) => {
-        // Enable tree shaking
         config.optimization = {
             ...config.optimization,
             usedExports: true,
             sideEffects: true,
         };
 
-        // Split chunks configuration for better caching and smaller bundles
         if (!isServer) {
+            const previousSplitChunks = config.optimization.splitChunks ?? {};
+            const previousCacheGroups = previousSplitChunks.cacheGroups ?? {};
+
             config.optimization.splitChunks = {
+                ...previousSplitChunks,
                 chunks: 'all',
+                maxInitialRequests: 30,
+                minSize: 20000,
+                maxSize: 200000,
                 cacheGroups: {
-                    // React core - rarely changes, good for long-term caching
+                    ...previousCacheGroups,
                     react: {
                         test: /[\\/]node_modules[\\/](react|react-dom|scheduler)[\\/]/,
                         name: 'react-vendor',
-                        priority: 40,
+                        priority: 50,
                         reuseExistingChunk: true,
                     },
-                    // Radix UI components
                     radix: {
                         test: /[\\/]node_modules[\\/]@radix-ui[\\/]/,
                         name: 'radix-ui',
-                        priority: 30,
+                        priority: 40,
                         reuseExistingChunk: true,
                     },
-                    // Lucide icons - tree-shakeable icon library
                     lucide: {
                         test: /[\\/]node_modules[\\/]lucide-react[\\/]/,
                         name: 'lucide-icons',
-                        priority: 30,
+                        priority: 40,
                         reuseExistingChunk: true,
                     },
-                    // Embla carousel - used only on home page
                     embla: {
-                        test: /[\\/]node_modules[\\/]embla-carousel[\\/]/,
+                        test: /[\\/]node_modules[\\/](embla-carousel|embla-carousel-react)[\\/]/,
                         name: 'embla-carousel',
-                        priority: 25,
+                        priority: 35,
                         reuseExistingChunk: true,
                     },
-                    // reCAPTCHA - only needed on pages with forms
                     recaptcha: {
                         test: /[\\/]node_modules[\\/]react-google-recaptcha-v3[\\/]/,
                         name: 'recaptcha',
-                        priority: 25,
+                        priority: 35,
                         reuseExistingChunk: true,
                     },
-                    // Form validation stack - only needed on contact page
                     forms: {
                         test: /[\\/]node_modules[\\/](react-hook-form|@hookform|zod)[\\/]/,
                         name: 'forms',
-                        priority: 25,
-                        reuseExistingChunk: true,
-                    },
-                    // Other vendor libraries
-                    vendors: {
-                        test: /[\\/]node_modules[\\/]/,
-                        name: 'vendors',
-                        priority: 20,
-                        reuseExistingChunk: true,
-                    },
-                    // Common modules shared between routes
-                    common: {
-                        minChunks: 2,
-                        priority: 10,
+                        priority: 35,
                         reuseExistingChunk: true,
                     },
                 },
-                maxInitialRequests: 30,
-                minSize: 20000,
             };
         }
 

@@ -4,9 +4,8 @@ import dynamic from "next/dynamic";
 import { getDictionary } from "@/lib/dictionary";
 import { i18n, type Locale } from "@/lib/i18n";
 import { OrganizationJsonLd, LocalBusinessJsonLd, WebSiteJsonLd } from "@/components/JsonLd";
+import { ClientEnhancements } from "@/components/ClientEnhancements";
 import { fontVariables } from "@/app/fonts";
-import { ScrollToTop } from "@/components/ScrollToTop";
-import { ReCaptchaProvider } from "@/components/ReCaptchaProvider";
 import { headers } from "next/headers";
 import { getSiteUrl } from "@/lib/site-url";
 
@@ -53,7 +52,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     return {
         title: {
             default: title,
-            template: '%s | SensEar Music',
+            template: '%s | SensEar',
         },
         description,
         keywords,
@@ -178,17 +177,15 @@ export default async function RootLayout({
                 <WebSiteJsonLd nonce={nonce} />
             </head>
             <body className="antialiased min-h-screen flex flex-col" suppressHydrationWarning>
-                <ReCaptchaProvider>
-                    <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-black text-white px-4 py-2 rounded z-50">
-                        Skip to main content
-                    </a>
-                    <Navbar lang={locale} navigation={dict.navigation} />
-                    <main id="main-content" className="flex-grow">
-                        {children}
-                    </main>
-                    <Footer lang={locale} dict={dict} />
-                    <ScrollToTop />
-                </ReCaptchaProvider>
+                <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-black text-white px-4 py-2 rounded z-50">
+                    Skip to main content
+                </a>
+                <Navbar lang={locale} navigation={dict.navigation} />
+                <main id="main-content" className="flex-grow">
+                    {children}
+                </main>
+                <Footer lang={locale} dict={dict} />
+                <ClientEnhancements />
             </body>
         </html>
     );

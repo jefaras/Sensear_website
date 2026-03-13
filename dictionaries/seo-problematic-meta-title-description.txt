@@ -1,0 +1,359 @@
+============================================================
+PROBLEMATIC META TITLES & DESCRIPTIONS REPORT (EN + EL)
+============================================================
+Generated: 2026-03-12T20:28:13.776Z
+Source files:
+- dictionaries/en-meta-title-description.txt
+- dictionaries/el-meta-title-description.txt
+Audit reference: .agent/audits/agent-seo-content.llm.txt
+
+Issue labels used in this report:
+- core/meta-title: Title too short / Title too long
+- core/meta-description: Description too short / Description too long
+- core/title-unique + content/duplicate-title: Duplicate title
+- content/duplicate-description: Duplicate description
+
+Length ranges applied: title 30-60, description 70-160
+Total URLs analyzed: 58
+Problematic URLs: 33
+
+============================================================
+FULL LIST OF PROBLEMATIC TITLES/DESCRIPTIONS BY URL
+============================================================
+
+URL: /en
+Title: SensEar Music - Bespoke Music Curation & Sonic Branding
+Title problems:
+- core/title-unique + content/duplicate-title: Duplicate title used on 7 URLs
+Description: Bespoke music curation and sonic branding for hospitality, retail, and events. We craft your brand's unique sonic identity through tailored playlists and audio experiences.
+Description problems:
+- core/meta-description: Description too long (172 chars; expected 70-160)
+- content/duplicate-description: Duplicate description used on 7 URLs
+------------------------------------------------------------
+
+URL: /en/services
+Title: Music curation services
+Title problems:
+- core/meta-title: Title too short (23 chars; expected 30-60)
+Description: Discover our services: Signature Playlists, Sonic Identity, Event Soundtracks, and Audio Upgrades.
+Description problems: none
+------------------------------------------------------------
+
+URL: /en/services/signature-playlists
+Title: SensEar Music - Bespoke Music Curation & Sonic Branding
+Title problems:
+- core/title-unique + content/duplicate-title: Duplicate title used on 7 URLs
+Description: Bespoke music curation and sonic branding for hospitality, retail, and events. We craft your brand's unique sonic identity through tailored playlists and audio experiences.
+Description problems:
+- core/meta-description: Description too long (172 chars; expected 70-160)
+- content/duplicate-description: Duplicate description used on 7 URLs
+------------------------------------------------------------
+
+URL: /en/services/event-soundtracks
+Title: SensEar Music - Bespoke Music Curation & Sonic Branding
+Title problems:
+- core/title-unique + content/duplicate-title: Duplicate title used on 7 URLs
+Description: Bespoke music curation and sonic branding for hospitality, retail, and events. We craft your brand's unique sonic identity through tailored playlists and audio experiences.
+Description problems:
+- core/meta-description: Description too long (172 chars; expected 70-160)
+- content/duplicate-description: Duplicate description used on 7 URLs
+------------------------------------------------------------
+
+URL: /en/services/sonic-identity
+Title: SensEar Music - Bespoke Music Curation & Sonic Branding
+Title problems:
+- core/title-unique + content/duplicate-title: Duplicate title used on 7 URLs
+Description: Bespoke music curation and sonic branding for hospitality, retail, and events. We craft your brand's unique sonic identity through tailored playlists and audio experiences.
+Description problems:
+- core/meta-description: Description too long (172 chars; expected 70-160)
+- content/duplicate-description: Duplicate description used on 7 URLs
+------------------------------------------------------------
+
+URL: /en/services/audio-upgrades
+Title: SensEar Music - Bespoke Music Curation & Sonic Branding
+Title problems:
+- core/title-unique + content/duplicate-title: Duplicate title used on 7 URLs
+Description: Bespoke music curation and sonic branding for hospitality, retail, and events. We craft your brand's unique sonic identity through tailored playlists and audio experiences.
+Description problems:
+- core/meta-description: Description too long (172 chars; expected 70-160)
+- content/duplicate-description: Duplicate description used on 7 URLs
+------------------------------------------------------------
+
+URL: /en/industries
+Title: Music curation by industry
+Title problems:
+- core/meta-title: Title too short (26 chars; expected 30-60)
+Description: Specialized music solutions for hotels, restaurants, retail, wellness spaces, and culture.
+Description problems: none
+------------------------------------------------------------
+
+URL: /en/industries/music-for-hotels-and-resorts
+Title: Music for Hotels & Resorts
+Title problems:
+- core/meta-title: Title too short (26 chars; expected 30-60)
+Description: Bespoke music curation for hotels and resorts. We craft your venue's unique sonic identity for memorable guest experiences.
+Description problems: none
+------------------------------------------------------------
+
+URL: /en/industries/music-for-retail-stores
+Title: Music for Retail Stores
+Title problems:
+- core/meta-title: Title too short (23 chars; expected 30-60)
+Description: Bespoke music curation for retail stores. We craft your brand's unique sonic identity for memorable shopping experiences.
+Description problems: none
+------------------------------------------------------------
+
+URL: /en/industries/music-for-wellness-and-gyms
+Title: Music for Spas & Gyms
+Title problems:
+- core/meta-title: Title too short (21 chars; expected 30-60)
+Description: Bespoke music curation for spas and gyms. We craft your venue's unique sonic identity for wellness experiences.
+Description problems: none
+------------------------------------------------------------
+
+URL: /en/industries/music-for-events-and-experiences
+Title: Music for Events
+Title problems:
+- core/meta-title: Title too short (16 chars; expected 30-60)
+Description: Bespoke music curation for events and experiences. We craft your event's unique sonic identity for memorable moments.
+Description problems: none
+------------------------------------------------------------
+
+URL: /en/blog
+Title: Music Curation Blog
+Title problems:
+- core/meta-title: Title too short (19 chars; expected 30-60)
+Description: Articles, insights, and news on music curation, sonic branding, and the importance of sound in customer experience.
+Description problems: none
+------------------------------------------------------------
+
+URL: /en/blog/three-reasons-make-music-hospitality
+Title: Why luxury hotels need music
+Title problems:
+- core/meta-title: Title too short (28 chars; expected 30-60)
+Description: Why curated music is a practical way to shape how guests feel, what they remember, and how they spend.
+Description problems: none
+------------------------------------------------------------
+
+URL: /en/blog/brand-music-converts-browsers-buyers
+Title: How music converts buyers
+Title problems:
+- core/meta-title: Title too short (25 chars; expected 30-60)
+Description: Evidence-based research showing how brand-aligned music increases sales by 9.1% in hospitality venues.
+Description problems: none
+------------------------------------------------------------
+
+URL: /en/blog/what-exactly-does-music-curator-do
+Title: What does a music curator do?
+Title problems:
+- core/meta-title: Title too short (29 chars; expected 30-60)
+Description: Learn how professional music curators architect brand soundtracks through strategic curation and data-driven sonic branding.
+Description problems: none
+------------------------------------------------------------
+
+URL: /en/faq
+Title: SensEar Music - Bespoke Music Curation & Sonic Branding
+Title problems:
+- core/title-unique + content/duplicate-title: Duplicate title used on 7 URLs
+Description: Bespoke music curation and sonic branding for hospitality, retail, and events. We craft your brand's unique sonic identity through tailored playlists and audio experiences.
+Description problems:
+- core/meta-description: Description too long (172 chars; expected 70-160)
+- content/duplicate-description: Duplicate description used on 7 URLs
+------------------------------------------------------------
+
+URL: /en/sitemap-page
+Title: SensEar Music - Bespoke Music Curation & Sonic Branding
+Title problems:
+- core/title-unique + content/duplicate-title: Duplicate title used on 7 URLs
+Description: Bespoke music curation and sonic branding for hospitality, retail, and events. We craft your brand's unique sonic identity through tailored playlists and audio experiences.
+Description problems:
+- core/meta-description: Description too long (172 chars; expected 70-160)
+- content/duplicate-description: Duplicate description used on 7 URLs
+------------------------------------------------------------
+
+URL: /el
+Title: SensEar Music - Μουσική Επιμέλεια & Sonic Branding
+Title problems:
+- core/title-unique + content/duplicate-title: Duplicate title used on 7 URLs
+Description: Εξειδικευμένη μουσική επιμέλεια και sonic branding για ξενοδοχεία, εστιατόρια, retail και εκδηλώσεις. Δημιουργούμε τη μοναδική ηχητική ταυτότητα του brand σας.
+Description problems:
+- content/duplicate-description: Duplicate description used on 7 URLs
+------------------------------------------------------------
+
+URL: /el/about
+Title: Η ομάδα & προσέγγισή μας
+Title problems:
+- core/meta-title: Title too short (24 chars; expected 30-60)
+Description: Μάθετε πώς η SensEar προσεγγίζει τη μουσική επιμέλεια με σαφήνεια και πρόθεση, διαμορφώνοντας πώς γίνονται αντιληπτοί οι χώροι μέσα από τον ήχο.
+Description problems: none
+------------------------------------------------------------
+
+URL: /el/services
+Title: Υπηρεσίες μουσικής επιμέλειας
+Title problems:
+- core/meta-title: Title too short (29 chars; expected 30-60)
+Description: Γνωρίστε τις υπηρεσίες μας: Signature Playlists, Ηχητική Ταυτότητα, Μουσική Εκδηλώσεων και Ακουστική Αναβάθμιση.
+Description problems: none
+------------------------------------------------------------
+
+URL: /el/services/signature-playlists
+Title: SensEar Music - Μουσική Επιμέλεια & Sonic Branding
+Title problems:
+- core/title-unique + content/duplicate-title: Duplicate title used on 7 URLs
+Description: Εξειδικευμένη μουσική επιμέλεια και sonic branding για ξενοδοχεία, εστιατόρια, retail και εκδηλώσεις. Δημιουργούμε τη μοναδική ηχητική ταυτότητα του brand σας.
+Description problems:
+- content/duplicate-description: Duplicate description used on 7 URLs
+------------------------------------------------------------
+
+URL: /el/services/event-soundtracks
+Title: SensEar Music - Μουσική Επιμέλεια & Sonic Branding
+Title problems:
+- core/title-unique + content/duplicate-title: Duplicate title used on 7 URLs
+Description: Εξειδικευμένη μουσική επιμέλεια και sonic branding για ξενοδοχεία, εστιατόρια, retail και εκδηλώσεις. Δημιουργούμε τη μοναδική ηχητική ταυτότητα του brand σας.
+Description problems:
+- content/duplicate-description: Duplicate description used on 7 URLs
+------------------------------------------------------------
+
+URL: /el/services/sonic-identity
+Title: SensEar Music - Μουσική Επιμέλεια & Sonic Branding
+Title problems:
+- core/title-unique + content/duplicate-title: Duplicate title used on 7 URLs
+Description: Εξειδικευμένη μουσική επιμέλεια και sonic branding για ξενοδοχεία, εστιατόρια, retail και εκδηλώσεις. Δημιουργούμε τη μοναδική ηχητική ταυτότητα του brand σας.
+Description problems:
+- content/duplicate-description: Duplicate description used on 7 URLs
+------------------------------------------------------------
+
+URL: /el/services/audio-upgrades
+Title: SensEar Music - Μουσική Επιμέλεια & Sonic Branding
+Title problems:
+- core/title-unique + content/duplicate-title: Duplicate title used on 7 URLs
+Description: Εξειδικευμένη μουσική επιμέλεια και sonic branding για ξενοδοχεία, εστιατόρια, retail και εκδηλώσεις. Δημιουργούμε τη μοναδική ηχητική ταυτότητα του brand σας.
+Description problems:
+- content/duplicate-description: Duplicate description used on 7 URLs
+------------------------------------------------------------
+
+URL: /el/industries
+Title: Μουσική κάλυψη ανά κλάδο
+Title problems:
+- core/meta-title: Title too short (24 chars; expected 30-60)
+Description: Μουσική κάλυψη υψηλής αισθητικής για ξενοδοχεία, εστιατόρια, retail, χώρους ευεξίας και πολιτισμού.
+Description problems: none
+------------------------------------------------------------
+
+URL: /el/industries/music-for-wellness-and-gyms
+Title: Μουσική για Σπα & Γυμναστήρια
+Title problems:
+- core/meta-title: Title too short (29 chars; expected 30-60)
+Description: Εξειδικευμένη μουσική επιμέλεια για σπα και γυμναστήρια. Δημιουργούμε τη μοναδική ηχητική ταυτότητα του χώρου σας.
+Description problems: none
+------------------------------------------------------------
+
+URL: /el/blog/how-top-hospitality-brands-design-sound
+Title: Σχεδιασμός ήχου στη φιλοξενία
+Title problems:
+- core/meta-title: Title too short (29 chars; expected 30-60)
+Description: Μάθετε πώς τα πολυτελή brands φιλοξενίας χρησιμοποιούν τη στρατηγική μουσική επιμέλεια και το sonic branding για να δημιουργήσουν ξεχωριστές εμπειρίες.
+Description problems: none
+------------------------------------------------------------
+
+URL: /el/blog/three-reasons-make-music-hospitality
+Title: 3 λόγοι για μουσική επιμέλεια
+Title problems:
+- core/meta-title: Title too short (29 chars; expected 30-60)
+Description: Γιατί η επιμελημένη μουσική είναι ένας πρακτικός τρόπος να διαμορφώσετε το πώς νιώθουν οι επισκέπτες, τι θυμούνται και πόσο ξοδεύουν.
+Description problems: none
+------------------------------------------------------------
+
+URL: /el/blog/music-curation-cycle-venues
+Title: Ο κύκλος της μουσικής επιμέλειας
+Title problems: none
+Description: Μάθετε πώς η συνεχής βελτιστοποίηση της μουσικής επιμέλειας αναβαθμίζει την ατμόσφαιρα του χώρου, συνδυάζοντας την ανάλυση δεδομένων με την εξειδικευμένη ανθρώπινη παρέμβαση.
+Description problems:
+- core/meta-description: Description too long (174 chars; expected 70-160)
+------------------------------------------------------------
+
+URL: /el/blog/background-music-shapes-customer-behavior
+Title: Μουσική & συμπεριφορά πελατών
+Title problems:
+- core/meta-title: Title too short (29 chars; expected 30-60)
+Description: Έρευνες αποδεικνύουν πώς το στρατηγικό ηχητικό υπόβαθρο (background music)  αυξάνει τις πωλήσεις και τον χρόνο παραμονής σε περιβάλλοντα retail και φιλοξενίας.
+Description problems: none
+------------------------------------------------------------
+
+URL: /el/faq
+Title: SensEar Music - Μουσική Επιμέλεια & Sonic Branding
+Title problems:
+- core/title-unique + content/duplicate-title: Duplicate title used on 7 URLs
+Description: Εξειδικευμένη μουσική επιμέλεια και sonic branding για ξενοδοχεία, εστιατόρια, retail και εκδηλώσεις. Δημιουργούμε τη μοναδική ηχητική ταυτότητα του brand σας.
+Description problems:
+- content/duplicate-description: Duplicate description used on 7 URLs
+------------------------------------------------------------
+
+URL: /el/terms
+Title: Όροι Χρήσης | SensEar Music
+Title problems:
+- core/meta-title: Title too short (27 chars; expected 30-60)
+Description: Οι όροι χρήσης της SensEar Music. Διαβάστε τους όρους και προϋποθέσεις για τη χρήση των υπηρεσιών μας.
+Description problems: none
+------------------------------------------------------------
+
+URL: /el/sitemap-page
+Title: SensEar Music - Μουσική Επιμέλεια & Sonic Branding
+Title problems:
+- core/title-unique + content/duplicate-title: Duplicate title used on 7 URLs
+Description: Εξειδικευμένη μουσική επιμέλεια και sonic branding για ξενοδοχεία, εστιατόρια, retail και εκδηλώσεις. Δημιουργούμε τη μοναδική ηχητική ταυτότητα του brand σας.
+Description problems:
+- content/duplicate-description: Duplicate description used on 7 URLs
+------------------------------------------------------------
+
+============================================================
+DUPLICATE TITLE GROUPS
+============================================================
+
+Title: SensEar Music - Bespoke Music Curation & Sonic Branding
+Problem: core/title-unique + content/duplicate-title (used on 7 URLs)
+URLs:
+- /en
+- /en/services/signature-playlists
+- /en/services/event-soundtracks
+- /en/services/sonic-identity
+- /en/services/audio-upgrades
+- /en/faq
+- /en/sitemap-page
+
+Title: SensEar Music - Μουσική Επιμέλεια & Sonic Branding
+Problem: core/title-unique + content/duplicate-title (used on 7 URLs)
+URLs:
+- /el
+- /el/services/signature-playlists
+- /el/services/event-soundtracks
+- /el/services/sonic-identity
+- /el/services/audio-upgrades
+- /el/faq
+- /el/sitemap-page
+
+============================================================
+DUPLICATE DESCRIPTION GROUPS
+============================================================
+
+Description: Bespoke music curation and sonic branding for hospitality, retail, and events. We craft your brand's unique sonic identity through tailored playlists and audio experiences.
+Problem: content/duplicate-description (used on 7 URLs)
+URLs:
+- /en
+- /en/services/signature-playlists
+- /en/services/event-soundtracks
+- /en/services/sonic-identity
+- /en/services/audio-upgrades
+- /en/faq
+- /en/sitemap-page
+
+Description: Εξειδικευμένη μουσική επιμέλεια και sonic branding για ξενοδοχεία, εστιατόρια, retail και εκδηλώσεις. Δημιουργούμε τη μοναδική ηχητική ταυτότητα του brand σας.
+Problem: content/duplicate-description (used on 7 URLs)
+URLs:
+- /el
+- /el/services/signature-playlists
+- /el/services/event-soundtracks
+- /el/services/sonic-identity
+- /el/services/audio-upgrades
+- /el/faq
+- /el/sitemap-page

@@ -4,7 +4,6 @@ import { useState, useCallback } from "react";
 import { submitNewsletterForm } from "@/app/actions";
 import { ArrowRight } from "lucide-react";
 import { usePathname } from "next/navigation";
-import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 
 interface NewsletterFormProps {
     placeholder: string;
@@ -22,7 +21,6 @@ export function NewsletterForm({
     const [email, setEmail] = useState("");
     const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
     const [errorMessage, setErrorMessage] = useState("");
-    const { executeRecaptcha } = useGoogleReCaptcha();
     const pathname = usePathname() || "";
     const isEagerFooterAssetPage =
         /\/(faq|privacy|terms|sitemap-page)$/.test(pathname) ||
@@ -33,17 +31,7 @@ export function NewsletterForm({
         setStatus("loading");
         setErrorMessage("");
 
-        // Get reCAPTCHA token
-        let recaptchaToken = "";
-        if (executeRecaptcha) {
-            try {
-                recaptchaToken = await executeRecaptcha("newsletter");
-            } catch {
-                setStatus("error");
-                setErrorMessage("Security verification failed. Please refresh the page.");
-                return;
-            }
-        }
+        const recaptchaToken = "";
 
         const formData = new FormData();
         formData.append("g-recaptcha-response", recaptchaToken);
@@ -64,7 +52,7 @@ export function NewsletterForm({
                 "Something went wrong. Please try again."
             );
         }
-    }, [executeRecaptcha, email, source]);
+    }, [email, source]);
 
     if (status === "success") {
         return (
@@ -112,11 +100,14 @@ export function NewsletterForm({
                 {status === "error" && (
                     <p className="text-red-500 text-sm w-full text-center">{errorMessage}</p>
                 )}
+                {/* TEMP: reCAPTCHA client execution is currently disabled. Re-enable disclosure when frontend token generation returns. */}
+                {/*
                 <p className="text-xs text-black/40 text-center w-full mt-1">
                     Protected by reCAPTCHA —{" "}
                     <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="underline">Privacy</a> &amp;{" "}
                     <a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer" className="underline">Terms</a>
                 </p>
+                */}
             </form>
         );
     }
@@ -166,11 +157,14 @@ export function NewsletterForm({
             {status === "error" && (
                 <p className="text-red-400 text-xs">{errorMessage}</p>
             )}
+            {/* TEMP: reCAPTCHA client execution is currently disabled. Re-enable disclosure when frontend token generation returns. */}
+            {/*
             <p className="text-xs text-white/30 mt-1">
                 Protected by reCAPTCHA —{" "}
                 <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="underline">Privacy</a> &amp;{" "}
                 <a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer" className="underline">Terms</a>
             </p>
+            */}
         </form>
     );
 }

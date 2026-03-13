@@ -1,7 +1,4 @@
-"use client";
-
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { Instagram, Facebook, Mail, Phone, Linkedin } from "lucide-react";
 import { Locale } from "@/lib/i18n";
 import { NewsletterForm } from "@/components/NewsletterForm";
@@ -9,10 +6,6 @@ import { NewsletterForm } from "@/components/NewsletterForm";
 export function Footer({ lang, dict }: { lang: Locale, dict: any }) {
     const footer = dict.footer;
     const nav = footer.nav;
-    const pathname = usePathname() || "";
-    const isEagerFooterAssetPage =
-        /\/(faq|privacy|terms|sitemap-page)$/.test(pathname) ||
-        /\/blog\/[^/]+$/.test(pathname);
 
     return (
         <footer role="contentinfo" aria-label="Site footer" className="bg-black text-white relative overflow-hidden">
@@ -39,7 +32,7 @@ export function Footer({ lang, dict }: { lang: Locale, dict: any }) {
                                 alt="SensEar"
                                 width={64}
                                 height={64}
-                                loading={isEagerFooterAssetPage ? "eager" : "lazy"}
+                                loading="lazy"
                                 decoding="async"
                                 className="w-16 h-16 object-contain group-hover:scale-110 transition-transform"
                             />
@@ -71,7 +64,7 @@ export function Footer({ lang, dict }: { lang: Locale, dict: any }) {
                                     alt="hello@sensear.music"
                                     width={200}
                                     height={20}
-                                    loading={isEagerFooterAssetPage ? "eager" : "lazy"}
+                                    loading="lazy"
                                     decoding="async"
                                     className="h-5 w-auto"
                                 />
@@ -83,7 +76,7 @@ export function Footer({ lang, dict }: { lang: Locale, dict: any }) {
                                     alt="+30 6976994212"
                                     width={200}
                                     height={20}
-                                    loading={isEagerFooterAssetPage ? "eager" : "lazy"}
+                                    loading="lazy"
                                     decoding="async"
                                     className="h-5 w-auto"
                                 />

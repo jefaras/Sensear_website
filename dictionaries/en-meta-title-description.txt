@@ -1,0 +1,121 @@
+========================================
+META TITLES & DESCRIPTIONS (EN)
+Source: Next.js metadata in code + dictionary values
+Route order: app/sitemap.ts
+========================================
+
+## URL: /en
+Meta Title: SensEar Music - Bespoke Music Curation & Sonic Branding
+Meta Description: Bespoke music curation and sonic branding for hospitality, retail, and events. We craft your brand's unique sonic identity through tailored playlists and audio experiences.
+
+## URL: /en/about
+Meta Title: Our music curation team & approach
+Meta Description: Learn how SensEar approaches music curation with clarity and intent, shaping how spaces are felt through sound.
+
+## URL: /en/services
+Meta Title: Music curation services
+Meta Description: Discover our services: Signature Playlists, Sonic Identity, Event Soundtracks, and Audio Upgrades.
+
+## URL: /en/services/signature-playlists
+Meta Title: SensEar Music - Bespoke Music Curation & Sonic Branding
+Meta Description: Bespoke music curation and sonic branding for hospitality, retail, and events. We craft your brand's unique sonic identity through tailored playlists and audio experiences.
+
+## URL: /en/services/event-soundtracks
+Meta Title: SensEar Music - Bespoke Music Curation & Sonic Branding
+Meta Description: Bespoke music curation and sonic branding for hospitality, retail, and events. We craft your brand's unique sonic identity through tailored playlists and audio experiences.
+
+## URL: /en/services/sonic-identity
+Meta Title: SensEar Music - Bespoke Music Curation & Sonic Branding
+Meta Description: Bespoke music curation and sonic branding for hospitality, retail, and events. We craft your brand's unique sonic identity through tailored playlists and audio experiences.
+
+## URL: /en/services/audio-upgrades
+Meta Title: SensEar Music - Bespoke Music Curation & Sonic Branding
+Meta Description: Bespoke music curation and sonic branding for hospitality, retail, and events. We craft your brand's unique sonic identity through tailored playlists and audio experiences.
+
+## URL: /en/industries
+Meta Title: Music curation by industry
+Meta Description: Specialized music solutions for hotels, restaurants, retail, wellness spaces, and culture.
+
+## URL: /en/industries/music-for-hotels-and-resorts
+Meta Title: Music for Hotels & Resorts
+Meta Description: Bespoke music curation for hotels and resorts. We craft your venue's unique sonic identity for memorable guest experiences.
+
+## URL: /en/industries/music-for-restaurants-and-bars
+Meta Title: Music for Restaurants, Cafes & Bars
+Meta Description: Bespoke music curation for restaurants and bars. We craft your venue's unique sonic identity for memorable dining experiences.
+
+## URL: /en/industries/music-for-retail-stores
+Meta Title: Music for Retail Stores
+Meta Description: Bespoke music curation for retail stores. We craft your brand's unique sonic identity for memorable shopping experiences.
+
+## URL: /en/industries/music-for-wellness-and-gyms
+Meta Title: Music for Spas & Gyms
+Meta Description: Bespoke music curation for spas and gyms. We craft your venue's unique sonic identity for wellness experiences.
+
+## URL: /en/industries/music-for-events-and-experiences
+Meta Title: Music for Events
+Meta Description: Bespoke music curation for events and experiences. We craft your event's unique sonic identity for memorable moments.
+
+## URL: /en/industries/music-for-art-museums-and-fashion
+Meta Title: Music for Art, Museums & Fashion
+Meta Description: Bespoke music curation for museums, galleries, and fashion events. We craft your venue's unique sonic identity.
+
+## URL: /en/case-studies
+Meta Title: Hospitality music case studies
+Meta Description: See how we have transformed the atmosphere in hotels, restaurants, and events through strategic music curation.
+
+## URL: /en/blog
+Meta Title: Music Curation Blog
+Meta Description: Articles, insights, and news on music curation, sonic branding, and the importance of sound in customer experience.
+
+## URL: /en/blog/how-top-hospitality-brands-design-sound
+Meta Title: Designing sound for hospitality
+Meta Description: Learn how luxury hospitality brands use strategic music curation and sonic branding to create distinctive customer experiences.
+
+## URL: /en/blog/three-reasons-make-music-hospitality
+Meta Title: Why luxury hotels need music
+Meta Description: Why curated music is a practical way to shape how guests feel, what they remember, and how they spend.
+
+## URL: /en/blog/brand-music-converts-browsers-buyers
+Meta Title: How music converts buyers
+Meta Description: Evidence-based research showing how brand-aligned music increases sales by 9.1% in hospitality venues.
+
+## URL: /en/blog/what-exactly-does-music-curator-do
+Meta Title: What does a music curator do?
+Meta Description: Learn how professional music curators architect brand soundtracks through strategic curation and data-driven sonic branding.
+
+## URL: /en/blog/music-curation-cycle-venues
+Meta Title: Master the music curation cycle
+Meta Description: Learn how continuous music curation optimization enhances venue atmosphere through data-driven refinement and expert human curation.
+
+## URL: /en/blog/building-brand-people-can-hear
+Meta Title: Building a brand people can hear
+Meta Description: Strategic guide to sonic branding and audio identity development. Create memorable brand experiences through music and sound design.
+
+## URL: /en/blog/background-music-shapes-customer-behavior
+Meta Title: How music shapes buyer behavior
+Meta Description: Field research reveals how strategic background music increases sales and dwell time in retail and hospitality environments.
+
+## URL: /en/blog/service-environment-shapes-wait-time
+Meta Title: How spaces shape perceived wait time
+Meta Description: How music and environmental design can transform the waiting experience and improve customer satisfaction.
+
+## URL: /en/contact
+Meta Title: Elevate Your Venue/Event Sound - Contact Us
+Meta Description: Get in touch with SensEar. We're here to discuss your music curation and sonic branding needs.
+
+## URL: /en/faq
+Meta Title: SensEar Music - Bespoke Music Curation & Sonic Branding
+Meta Description: Bespoke music curation and sonic branding for hospitality, retail, and events. We craft your brand's unique sonic identity through tailored playlists and audio experiences.
+
+## URL: /en/privacy
+Meta Title: Privacy Policy | SensEar Music
+Meta Description: SensEar Music privacy policy. Learn how we collect, use, and protect your personal data.
+
+## URL: /en/terms
+Meta Title: Terms of Service | SensEar Music
+Meta Description: SensEar Music terms of service. Read the terms and conditions for using our services.
+
+## URL: /en/sitemap-page
+Meta Title: SensEar Music - Bespoke Music Curation & Sonic Branding
+Meta Description: Bespoke music curation and sonic branding for hospitality, retail, and events. We craft your brand's unique sonic identity through tailored playlists and audio experiences.
