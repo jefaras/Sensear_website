@@ -88,13 +88,21 @@ export default async function Home({ params }: { params: Promise<{ lang: Locale 
     return (
         <div className="bg-[#faebe3]">
             {/* Hero Section - Critical, loads immediately */}
-            <section className="relative pt-32 pb-24 min-h-[90vh] flex flex-col justify-center overflow-hidden"
-                style={{
-                    backgroundImage: "url('/images/backgrounds/background-texture-warm-silver.jpg')",
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center'
-                }}>
-                <div className="w-full px-6 md:px-12 lg:px-16">
+            <section className="relative pt-32 pb-24 min-h-[90vh] flex flex-col justify-center overflow-hidden">
+                <Image
+                    src="/images/backgrounds/background-texture-warm-silver.jpg"
+                    alt=""
+                    fill
+                    aria-hidden="true"
+                    role="presentation"
+                    className="object-cover object-center"
+                    sizes="100vw"
+                    priority
+                    fetchPriority="high"
+                    quality={70}
+                />
+                <div className="absolute inset-0 bg-[#faebe3]/30" aria-hidden="true" />
+                <div className="relative z-10 w-full px-6 md:px-12 lg:px-16">
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
                         {/* Text Content */}
                         <div className="flex flex-col justify-center text-left">

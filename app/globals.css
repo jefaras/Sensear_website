@@ -1,14 +1,10 @@
 /* 
- * Fonts are now self-hosted via next/font/google in app/fonts.ts
- * This eliminates external network requests and improves Core Web Vitals
- * Font CSS variables are applied via the fontVariables in layout.tsx
+ * Fonts are self-hosted via next/font/google in app/fonts.ts
+ * Font CSS variables are applied via fontVariables in layout.tsx
  * 
- * Font variables available:
- * --font-outfit: Primary font for body text and UI
- * --font-space-grotesk: Secondary font for headings and accents  
- * --font-syne: Display font for special headings and branding
- * --font-inter: Font with Greek support (fallback for Greek locale)
- * --font-manrope: Font with Greek support (secondary fallback)
+ * Font variables in use:
+ * --font-commissioner: Primary UI + content font (Latin + Greek)
+ * --font-syne: Display/brand font for key headings and logo treatments
  */
 
 @tailwind base;
@@ -88,6 +84,17 @@
   }
 }
 
+@keyframes scroll-bounce {
+  0%, 100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(8px);
+    opacity: 0.5;
+  }
+}
+
 .slide-up-1 {
   animation: slideUp 0.8s ease-out forwards;
   opacity: 0;
@@ -101,6 +108,10 @@
 .slide-up-4 {
   animation: slideUp 0.8s ease-out 0.6s forwards;
   opacity: 0;
+}
+
+.animate-scroll-bounce {
+  animation: scroll-bounce 2s ease-in-out infinite;
 }
 
 /* Animated gradient background */
