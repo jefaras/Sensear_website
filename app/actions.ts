@@ -3,6 +3,17 @@
 import { z } from "zod";
 import { sendEmail, generateContactEmailHTML, generateNewsletterEmailHTML } from "@/lib/email";
 
+const PREFERRED_CALL_TIME_SLOTS = [
+    "10:00 - 13:00",
+    "13:00 - 16:00",
+    "16:00 - 19:00",
+    "19:00 - 21:00",
+] as const;
+
+function isPreferredCallTimeSlot(value: string): value is (typeof PREFERRED_CALL_TIME_SLOTS)[number] {
+    return PREFERRED_CALL_TIME_SLOTS.includes(value as (typeof PREFERRED_CALL_TIME_SLOTS)[number]);
+}
+
 async function verifyRecaptchaToken(token: string | null): Promise<true | string> {
     return true; // TEMPORARILY DISABLED RECAPTCHA FOR TROUBLESHOOTING
 
@@ -51,6 +62,9 @@ const schema = z.object({
     country_code: z.string().optional(),
     venue_type: z.string().min(1, "Please select a venue type"),
     service_interest: z.string().min(1, "Please select a service interest"),
+    preferred_call_time: z
+        .string()
+        .refine(isPreferredCallTimeSlot, "Please select a valid preferred call time"),
     message: z.string().min(10, "Message must be at least 10 characters"),
 });
 
@@ -82,6 +96,7 @@ export async function submitContactForm(formData: FormData) {
         country_code: formData.get("country_code"),
         venue_type: formData.get("venue_type"),
         service_interest: formData.get("service_interest"),
+        preferred_call_time: formData.get("preferred_call_time"),
         message: formData.get("message"),
     });
 

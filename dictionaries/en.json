@@ -165,6 +165,7 @@
             "phone": "Phone *",
             "venue": "Venue Type *",
             "interest": "Service Interest *",
+            "preferred_call_time": "Preferred call time *",
             "message": "Message *",
             "submit": "Send Message",
             "submitting": "Sending...",
@@ -190,6 +191,13 @@
                 "events": "Events",
                 "strategy": "Strategy",
                 "audio_upgrades": "Audio Upgrades"
+            },
+            "preferred_call_time_options": {
+                "placeholder": "Select preferred call time",
+                "slot_10_13": "10:00 - 13:00",
+                "slot_13_16": "13:00 - 16:00",
+                "slot_16_19": "16:00 - 19:00",
+                "slot_19_21": "19:00 - 21:00"
             },
             "temp_title": "",
             "temp_message": "Send us an email with your contact details, your venue type (hotel, restaurant, bar, or other) and how we can help you, or call us today."

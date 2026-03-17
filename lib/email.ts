@@ -1,5 +1,18 @@
 import nodemailer from 'nodemailer';
 
+function escapeHtml(value: string) {
+    return value
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+}
+
+function sanitizeTelHref(value: string) {
+    return value.replace(/[^\d+]/g, '');
+}
+
 interface EmailOptions {
     to: string;
     subject: string;
@@ -74,8 +87,20 @@ export function generateContactEmailHTML(data: {
     phone?: string;
     venue_type: string;
     service_interest: string;
+    preferred_call_time: string;
     message: string;
 }) {
+    const safeName = escapeHtml(data.name);
+    const safeSurname = escapeHtml(data.surname);
+    const safeBusinessName = data.business_name ? escapeHtml(data.business_name) : '';
+    const safeEmail = escapeHtml(data.email);
+    const safePhone = data.phone ? escapeHtml(data.phone) : '';
+    const safeTelHref = data.phone ? sanitizeTelHref(data.phone) : '';
+    const safeVenueType = escapeHtml(data.venue_type);
+    const safeServiceInterest = escapeHtml(data.service_interest);
+    const safePreferredCallTime = escapeHtml(data.preferred_call_time);
+    const safeMessage = escapeHtml(data.message).replace(/\n/g, '<br>');
+
     return `
 <!DOCTYPE html>
 <html>
@@ -102,41 +127,46 @@ export function generateContactEmailHTML(data: {
         <div class="content">
             <div class="field">
                 <div class="field-label">👤 Name:</div>
-                <div class="field-value">${data.name} ${data.surname}</div>
+                <div class="field-value">${safeName} ${safeSurname}</div>
             </div>
             
             ${data.business_name ? `
             <div class="field">
                 <div class="field-label">💼 Business Name:</div>
-                <div class="field-value">${data.business_name}</div>
+                <div class="field-value">${safeBusinessName}</div>
             </div>
             ` : ''}
             
             <div class="field">
                 <div class="field-label">📧 Email:</div>
-                <div class="field-value"><a href="mailto:${data.email}">${data.email}</a></div>
+                <div class="field-value"><a href="mailto:${encodeURIComponent(data.email)}">${safeEmail}</a></div>
             </div>
             
             ${data.phone ? `
             <div class="field">
                 <div class="field-label">📱 Phone:</div>
-                <div class="field-value"><a href="tel:${data.phone}">${data.phone}</a></div>
+                <div class="field-value"><a href="tel:${safeTelHref}">${safePhone}</a></div>
             </div>
             ` : ''}
             
             <div class="field">
                 <div class="field-label">🏢 Venue Type:</div>
-                <div class="field-value">${data.venue_type}</div>
+                <div class="field-value">${safeVenueType}</div>
             </div>
             
             <div class="field">
                 <div class="field-label">🎯 Service Interest:</div>
-                <div class="field-value">${data.service_interest}</div>
+                <div class="field-value">${safeServiceInterest}</div>
             </div>
-            
+
+            <div class="field">
+                <div class="field-label">🕒 Preferred Call Time:</div>
+                <div class="field-value">${safePreferredCallTime}</div>
+            </div>
+             
             <div class="field">
                 <div class="field-label">Message:</div>
-                <div class="field-value">${data.message.replace(/\n/g, '<br>')}</div>
+                <div class="field-value">${safeMessage}</div>
             </div>
         </div>
         

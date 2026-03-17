@@ -15,6 +15,7 @@ interface ContactFormLabels {
     phone: string;
     venue: string;
     interest: string;
+    preferred_call_time: string;
     message: string;
     submit: string;
     submitting: string;
@@ -41,6 +42,13 @@ interface ContactFormLabels {
         strategy: string;
         audio_upgrades: string;
     };
+    preferred_call_time_options: {
+        placeholder: string;
+        slot_10_13: string;
+        slot_13_16: string;
+        slot_16_19: string;
+        slot_19_21: string;
+    };
 }
 
 interface ContactFormProps {
@@ -57,6 +65,7 @@ interface FormData {
     country_code: string;
     venue_type: string;
     service_interest: string;
+    preferred_call_time: string;
     message: string;
 }
 
@@ -74,6 +83,7 @@ export function ContactForm({ labels, variant = "default" }: ContactFormProps) {
         country_code: "+30",
         venue_type: "",
         service_interest: "",
+        preferred_call_time: "",
         message: "",
     });
 
@@ -110,6 +120,7 @@ export function ContactForm({ labels, variant = "default" }: ContactFormProps) {
         submitData.append("country_code", formData.country_code);
         submitData.append("venue_type", formData.venue_type);
         submitData.append("service_interest", formData.service_interest);
+        submitData.append("preferred_call_time", formData.preferred_call_time);
         submitData.append("message", formData.message);
 
         const res = await submitContactForm(submitData);
@@ -129,6 +140,7 @@ export function ContactForm({ labels, variant = "default" }: ContactFormProps) {
                 country_code: "+30",
                 venue_type: "",
                 service_interest: "",
+                preferred_call_time: "",
                 message: "",
             });
         }
@@ -232,44 +244,68 @@ export function ContactForm({ labels, variant = "default" }: ContactFormProps) {
                 </div>
             </div>
 
-            <div className="relative z-30">
-                <label htmlFor="input-phone" className={labelClass}>{labels.phone}</label>
-                <div className={`flex rounded-lg ${isVinyl ? 'bg-white/10 backdrop-blur-sm border border-white/20' : 'bg-gray-50 border border-gray-200'} ${errors.phone ? '!border-red-500' : ''} focus-within:ring-2 ${isVinyl ? 'focus-within:ring-white/30' : 'focus-within:ring-black/20'} focus-within:border-transparent`}>
-                    <label id="input-country-code-label" htmlFor="input-country-code" className="sr-only">{isGreek ? 'Κωδικός χώρας τηλεφώνου' : 'Phone country code'}</label>
+            <div className="grid md:grid-cols-2 gap-4 relative z-30">
+                <div>
+                    <label htmlFor="input-phone" className={labelClass}>{labels.phone}</label>
+                    <div className={`flex rounded-lg ${isVinyl ? 'bg-white/10 backdrop-blur-sm border border-white/20' : 'bg-gray-50 border border-gray-200'} ${errors.phone ? '!border-red-500' : ''} focus-within:ring-2 ${isVinyl ? 'focus-within:ring-white/30' : 'focus-within:ring-black/20'} focus-within:border-transparent`}>
+                        <label id="input-country-code-label" htmlFor="input-country-code" className="sr-only">{isGreek ? 'Κωδικός χώρας τηλεφώνου' : 'Phone country code'}</label>
+                        <TransparentSelect
+                            id="input-country-code"
+                            name="country_code"
+                            value={formData.country_code}
+                            onChange={handleChange}
+                            placeholder="Other"
+                            hidePlaceholderOption
+                            isVinyl={isVinyl}
+                            ariaLabelledBy="input-country-code-label"
+                            triggerClassName={`px-3 py-3 w-[120px] rounded-l-lg flex items-center justify-between focus:outline-none font-medium cursor-pointer transition-all ${isVinyl ? 'bg-transparent text-white border-r border-white/20 hover:bg-white/5' : 'bg-gray-200/50 text-gray-700 border-r border-gray-200 hover:bg-gray-200'} text-left`}
+                            options={[
+                                { value: '+30', label: 'GR (+30)' },
+                                { value: '+357', label: 'CY (+357)' },
+                                { value: '+1', label: 'US/CA (+1)' },
+                                { value: '+44', label: 'UK (+44)' },
+                                { value: '+49', label: 'DE (+49)' },
+                                { value: '+33', label: 'FR (+33)' },
+                                { value: '+39', label: 'IT (+39)' },
+                                { value: '+34', label: 'ES (+34)' },
+                                { value: '', label: 'Other' },
+                            ]}
+                        />
+                        <input
+                            id="input-phone"
+                            name="phone"
+                            type="tel"
+                            required
+                            value={formData.phone}
+                            onChange={handleChange}
+                            placeholder={labels.phone_placeholder}
+                            className={`w-full px-4 py-3 rounded-r-lg bg-transparent focus:outline-none ${isVinyl ? 'text-white placeholder:text-white/50' : ''}`}
+                        />
+                    </div>
+                    {errors.phone && <p className={errorClass}>{errors.phone[0]}</p>}
+                </div>
+                <div>
+                    <label id="input-preferred-call-time-label" htmlFor="input-preferred-call-time" className={labelClass}>{labels.preferred_call_time}</label>
                     <TransparentSelect
-                        id="input-country-code"
-                        name="country_code"
-                        value={formData.country_code}
+                        id="input-preferred-call-time"
+                        name="preferred_call_time"
+                        value={formData.preferred_call_time}
                         onChange={handleChange}
-                        placeholder="Other"
-                        hidePlaceholderOption
+                        placeholder={labels.preferred_call_time_options.placeholder}
                         isVinyl={isVinyl}
-                        ariaLabelledBy="input-country-code-label"
-                        triggerClassName={`px-3 py-3 w-[120px] rounded-l-lg flex items-center justify-between focus:outline-none font-medium cursor-pointer transition-all ${isVinyl ? 'bg-transparent text-white border-r border-white/20 hover:bg-white/5' : 'bg-gray-200/50 text-gray-700 border-r border-gray-200 hover:bg-gray-200'} text-left`}
+                        error={!!errors.preferred_call_time}
+                        className="w-full"
+                        ariaLabel={labels.preferred_call_time}
+                        ariaLabelledBy="input-preferred-call-time-label"
                         options={[
-                            { value: '+30', label: 'GR (+30)' },
-                            { value: '+357', label: 'CY (+357)' },
-                            { value: '+1', label: 'US/CA (+1)' },
-                            { value: '+44', label: 'UK (+44)' },
-                            { value: '+49', label: 'DE (+49)' },
-                            { value: '+33', label: 'FR (+33)' },
-                            { value: '+39', label: 'IT (+39)' },
-                            { value: '+34', label: 'ES (+34)' },
-                            { value: '', label: 'Other' },
+                            { value: '10:00 - 13:00', label: labels.preferred_call_time_options.slot_10_13 },
+                            { value: '13:00 - 16:00', label: labels.preferred_call_time_options.slot_13_16 },
+                            { value: '16:00 - 19:00', label: labels.preferred_call_time_options.slot_16_19 },
+                            { value: '19:00 - 21:00', label: labels.preferred_call_time_options.slot_19_21 },
                         ]}
                     />
-                    <input
-                        id="input-phone"
-                        name="phone"
-                        type="tel"
-                        required
-                        value={formData.phone}
-                        onChange={handleChange}
-                        placeholder={labels.phone_placeholder}
-                        className={`w-full px-4 py-3 rounded-r-lg bg-transparent focus:outline-none ${isVinyl ? 'text-white placeholder:text-white/50' : ''}`}
-                    />
+                    {errors.preferred_call_time && <p className={errorClass}>{errors.preferred_call_time[0]}</p>}
                 </div>
-                {errors.phone && <p className={errorClass}>{errors.phone[0]}</p>}
             </div>
 
             <div className="grid md:grid-cols-2 gap-4 relative z-20">
@@ -329,7 +365,7 @@ export function ContactForm({ labels, variant = "default" }: ContactFormProps) {
                     value={formData.message}
                     onChange={handleChange}
                     placeholder={labels.message_placeholder}
-                    className={`${inputClass} ${errors.message ? '!border-red-500' : ''}`}
+                    className={`${inputClass} h-[88px] md:h-auto md:min-h-[120px] ${errors.message ? '!border-red-500' : ''}`}
                 ></textarea>
                 {errors.message && <p className={errorClass}>{errors.message[0]}</p>}
             </div>
