@@ -3,6 +3,18 @@ import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import { getDictionary } from "@/lib/dictionary";
 import type { Locale } from "@/lib/i18n";
+import type { Metadata } from "next";
+
+export async function generateMetadata({ params }: { params: Promise<{ lang: Locale }> }): Promise<Metadata> {
+    const { lang } = await params;
+    const dict = await getDictionary(lang);
+    const t = dict.audio_upgrades;
+
+    return {
+        title: t.meta?.title ?? "Audio Upgrades",
+        description: t.meta?.description ?? "Expert acoustic solutions for venues. We optimize sound quality and clarity.",
+    };
+}
 
 export default async function AudioUpgradesPage({ params }: { params: Promise<{ lang: Locale }> }) {
     const { lang } = await params;

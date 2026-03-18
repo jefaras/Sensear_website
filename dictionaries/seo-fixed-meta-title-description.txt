@@ -2,39 +2,31 @@ URL: /en
 Title: Music Curation Services for Venues & Events
 Description: Music curation for hospitality, retail & events that elevates atmosphere, engages guests and builds loyalty. Discover a brand-fit sound for your venue.
 
-Επιπλέον ιδέα: στο ίδιο το homepage θα βοηθούσε πολύ να υπάρχει πιο ψηλά μία ξεκάθαρη B2B γραμμή τύπου “Music curation services for hotels, restaurants, retail and events”, ώστε το on-page copy να στηρίζει ακόμη πιο καθαρά το primary keyword targeting.
-
-
-URL: https://sensear.music/en/services
+URL: /en/services
 Title: Strategic Music Services for Spaces & Events
 Description: Explore music curation services for spaces & events, from Signature Playlists to Sonic Identity & Audio Upgrades. Find the solution that fits you.
 
-
-URL: https://sensear.music/en/services/signature-playlists
-Title: Bespoke Signature Playlists for Venues | SensEar
+URL: /en/services/signature-playlists
+Title: Bespoke Signature Playlists for Venues
 Description: Signature playlists for venues curated around your concept, guests & daily rhythm. Replace generic background music with rare, handpicked tracks.
 
-
-URL: https://sensear.music/en/services/event-soundtracks
-Title: Curated Event Soundtracks & DJ Sets | SensEar 
+URL: /en/services/event-soundtracks
+Title: Curated Event Soundtracks & DJ Sets
 Description: Curated event soundtracks for launches, weddings & branded experiences, with playlists, DJ sets and live coordination. Explore the right setup for your event.
 
-
-URL: https://sensear.music/en/services/sonic-identity
-Title: Strategic Sonic Identity for Brands | SensEar
+URL: /en/services/sonic-identity
+Title: Strategic Sonic Identity for Brands
 Description: Sonic identity design for brands that need one clear sound across locations, media & guest touchpoints. Explore your best-fit sound strategy today.
 
-URL: https://sensear.music/en/services/audio-upgrades
+URL: /en/services/audio-upgrades
 Title: Venue Audio Upgrades & Acoustic Support
 Description: Venue audio upgrades with acoustic assessment, AV proposals & system tuning for clear, balanced sound. Explore the right setup for your space.
 
-
-URL: https://sensear.music/en/industries
+URL:  /en/industries
 Title: Industry-Specific Music Solutions
 Description: Explore music solutions for hospitality, retail, wellness, culture & events. Find the approach that fits your sector, atmosphere and guest journey.
 
-
-URL: https://sensear.music/en/industries/music-for-hotels-and-resorts
+URL:  /en/industries/music-for-hotels-and-resorts
 Title: Hotel Music for Every Hour & Zone
 Description: Music for hotels and resorts with 24-hour sound design, zone-based scheduling and one clear sonic identity. Request a tailored hotel sound proposal.
 
@@ -42,37 +34,99 @@ URL: /en/industries/music-for-retail-stores
 Title: Music for Retail Stores That Guide Discovery
 Description: Retail store music with customer-journey playlists, brand-fit sound and seasonal updates. Explore an approach that supports browsing and sales.
 
-
-URL: https://sensear.music/en/industries/music-for-wellness-and-gyms
+URL:  /en/industries/music-for-wellness-and-gyms
 Title: Wellness & Gym Music for Every Practice
 Description: Wellness and gym music with soundscapes for treatment spaces, classes and training, plus schedule-based programming. Design your wellness soundtrack.
 
-
-URL: https://sensear.music/en/industries/music-for-events-and-experiences
+URL:  /en/industries/music-for-events-and-experiences
 Title: Music for Events that Fit Every Moment
-Description: 
+Description: Music for events and experiences with run-of-show sound design, narrative pacing and technical coordination. Explore a soundtrack that fits every moment.
 
+URL: /en/blog
+Title: The Curation Journal: Luxury Sound Insights
+Description: The Curation Journal shares luxury music curation insights, sonic branding ideas and customer-experience research. Explore our latest articles today.
 
-URL: 
-Title: 
-Description: 
+URL:  /en/blog/three-reasons-make-music-hospitality
+Title: Why Music Matters in Luxury Hospitality
+Description: Learn why strategic music influences guest experience, brand identity and team productivity in luxury hotels. Read the three reasons that matter most.
 
+URL: /en/blog/what-exactly-does-music-curator-do
+Title: How Music Curators Build Brand Sound
+Description: Learn how music curators turn brand voice into living sound through diagnostics, adaptive playlists, governance and measurable sound strategy. Read more.
 
-URL: 
-Title: 
-Description: 
+URL: /en/blog/brand-music-converts-browsers-buyers
+Title: How Brand-Fit Music Converts Browsers to Buyers
+Description: See how brand-aligned music can lift revenue, improve dwell time and guide buyer behavior in bars, hotels and restaurants. Read the full research.
 
-URL: 
-Title: 
-Description: 
+URL:  /en/faq
+Title: Venue Music FAQ: Licensing, Playlists & Support
+Description: Get answers on music licensing, custom playlists, platform legality and ongoing support for venues. Understand how SensEar works and what to expect.
 
+URL:  /en/sitemap-page
+Title: SensEar Sitemap: Pages, Services & Insights
+Description: Explore all SensEar pages, from services and industries to blog posts, FAQs and contact details. Find the page, resource or topic you need quickly.
 
-URL: 
-Title: 
-Description: 
+URL:  /el
+Title: Μουσική Επιμέλεια για Χώρους & Εμπειρίες
+Description: Μουσική επιμέλεια για χώρους, εμπειρίες και brands που χτίζει ατμόσφαιρα, ενισχύει την ταυτότητα και κάνει τον ήχο σας αξέχαστο. Δείτε τις υπηρεσίες μας.
 
+URL:  /el/about
+Title: Η Ομάδα και η Μουσική Φιλοσοφία της SensEar
+Description: Γνωρίστε την ομάδα της SensEar, το όραμα και τη φιλοσοφία μας για ήχο με πρόθεση, χαρακτήρα και ουσιαστικό αντίκτυπο στην εμπειρία κάθε premium χώρου.
 
+URL:  /el/services
+Title: Υπηρεσίες Μουσικής & Ήχου για Χώρους & Events
+Description: Ανακαλύψτε υπηρεσίες μουσικής και ήχου για χώρους και εκδηλώσεις, από Signature Playlists έως Ηχητική Ταυτότητα και Ακουστική Αναβάθμιση.
 
-URL: 
-Title: 
-Description: 
+URL: /el/services/signature-playlists
+Title: Signature Playlists για Χώρους με Χαρακτήρα
+Description: Signature Playlists για premium χώρους, με σπάνιες επιλογές, πλήρη διαχείριση και τακτικές ανανεώσεις. Ανακαλύψτε πώς δίνουν χαρακτήρα στον χώρο σας.
+
+URL: /el/services/event-soundtracks
+Title: Μουσική Εκδηλώσεων για Στιγμές που Μένουν
+Description: Soundtracks για premium events με playlists, DJ sets, sound checks και live προσαρμογές. Δώστε στην εκδήλωσή σας τον ρυθμό που της αξίζει.
+
+URL: /el/services/sonic-identity
+Title: Ηχητική Ταυτότητα για Σύγχρονα Brands
+Description: Στρατηγική ηχητική ταυτότητα για brands, με Sonic DNA workshop, ηχητικό οδηγό και πλάνο εφαρμογής σε χώρους, social media και καμπάνιες. Ξεκινήστε εδώ.
+
+URL: /el/services/audio-upgrades
+Title: Ακουστική Αναβάθμιση για Premium Χώρους
+Description: Ακουστική αναβάθμιση με επιτόπια αξιολόγηση, AV προτάσεις και ρυθμίσεις που υποστηρίζουν καθαρό ήχο, άνετες συζητήσεις και μια πιο φιλόξενη ατμόσφαιρα.
+
+URL: /el/industries
+Title: Στοχευμένη Μουσική για Κάθε Κλάδο
+Description: Μουσική για ξενοδοχεία, εστιατόρια, retail, ευεξία και πολιτισμό, σχεδιασμένη γύρω από τον ρυθμό, τη ροή και την εμπειρία κάθε χώρου. Δείτε τον κλάδο σας.
+
+URL: /el/industries/music-for-wellness-and-gyms
+Title: Μουσική για Χώρους Ευεξίας & Γυμναστήρια
+Description: Μουσική για χώρους wellness & γυμναστήρια, με playlists για θεραπείες, μαθήματα & προπονήσεις που ενισχύουν τη συγκέντρωση και την εμπειρία.
+
+URL: /el/blog/how-top-hospitality-brands-design-sound
+Title: Πώς τα Hospitality Brands Σχεδιάζουν τον Ήχο
+Description: Δείτε πώς κορυφαία hospitality brands σχεδιάζουν τη μουσική τους στρατηγική με βάση το brand, τις ζώνες, τις ώρες της ημέρας και την εμπειρία επισκέπτη.
+
+URL: /el/blog/three-reasons-make-music-hospitality
+Title: Γιατί η Μουσική Έχει Σημασία στη Φιλοξενία
+Description: Δείτε γιατί η επιμελημένη μουσική είναι πρακτικό εργαλείο για την εμπειρία επισκέπτη, τη μνήμη του brand και τη δαπάνη στη φιλοξενία.
+
+URL: /el/blog/music-curation-cycle-venues
+Title: Ο Κύκλος της Μουσικής Επιμέλειας
+Description: Μάθετε πώς η συνεχής βελτιστοποίηση της μουσικής επιμέλειας αναβαθμίζει την ατμόσφαιρα του χώρου με δεδομένα, δοκιμές και ανθρώπινη κρίση.
+
+URL: /el/blog/background-music-shapes-customer-behavior
+Title: Πώς η Μουσική Επηρεάζει τη Συμπεριφορά Πελατών
+Description: Δείτε πώς η background μουσική επηρεάζει χρόνο παραμονής, ρυθμό και αγοραστική συμπεριφορά σε retail και hospitality χώρους.
+
+URL: /el/faq
+Title: Συχνές Ερωτήσεις για Μουσική & Αδειοδότηση
+Description: Μάθετε τι ισχύει για άδειες δημόσιας εκτέλεσης, νόμιμη αναπαραγωγή μουσικής, playlists και υποστήριξη για τον χώρο σας.
+
+URL: /el/terms
+Title: Όροι Χρήσης & Παροχής Υπηρεσιών
+Description: Διαβάστε τους όρους χρήσης της SensEar για τον ιστότοπο, τις υπηρεσίες μουσικής επιμέλειας και κάθε άλλη παρεχόμενη υπηρεσία.
+
+URL: /el/sitemap-page
+Title: Χάρτης Ιστότοπου για Υπηρεσίες & Περιεχόμενο
+Description: Εξερευνήστε όλες τις σελίδες και τους πόρους της SensEar, από υπηρεσίες και κλάδους έως blog, FAQ και βασικές εταιρικές πληροφορίες.
+

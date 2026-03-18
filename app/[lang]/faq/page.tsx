@@ -2,6 +2,7 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { getDictionary } from "@/lib/dictionary";
 import type { Locale } from "@/lib/i18n";
+import type { Metadata } from "next";
 import {
     Accordion,
     AccordionContent,
@@ -11,6 +12,15 @@ import {
 import { AnimatedButton } from "@/components/AnimatedButton";
 import { FinalCTA } from "@/components/sections/FinalCTA";
 import Image from "next/image";
+
+export async function generateMetadata({ params }: { params: Promise<{ lang: Locale }> }): Promise<Metadata> {
+    const { lang } = await params;
+    const dict = await getDictionary(lang);
+    return {
+        title: dict.faq_page.meta.title,
+        description: dict.faq_page.meta.description,
+    };
+}
 
 export default async function FAQPage({
     params,

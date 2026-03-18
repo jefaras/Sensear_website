@@ -1,0 +1,10 @@
+{
+  "extends": [
+    "next/core-web-vitals"
+  ],
+  "ignorePatterns": [
+    ".next/**",
+    "node_modules/**",
+    "Base44_sensear_files_EN_GR/**"
+  ]
+}

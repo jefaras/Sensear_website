@@ -11,17 +11,16 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: Loc
     const { lang } = await params;
     const dict = await getDictionary(lang);
     const t = dict.retail_stores;
+    const description = t.meta?.description || (lang === 'el'
+        ? 'Εξειδικευμένη μουσική επιμέλεια για καταστήματα λιανικής. Δημιουργούμε τη μοναδική ηχητική ταυτότητα του brand σας.'
+        : 'Bespoke music curation for retail stores. We craft your brand\'s unique sonic identity for memorable shopping experiences.');
 
     return {
         title: t.meta?.title || "Music for Retail Stores | SensEar",
-        description: lang === 'el'
-            ? 'Εξειδικευμένη μουσική επιμέλεια για καταστήματα λιανικής. Δημιουργούμε τη μοναδική ηχητική ταυτότητα του brand σας.'
-            : 'Bespoke music curation for retail stores. We craft your brand\'s unique sonic identity for memorable shopping experiences.',
+        description,
         openGraph: {
             title: t.meta?.title || "Music for Retail Stores | SensEar",
-            description: lang === 'el'
-                ? 'Εξειδικευμένη μουσική επιμέλεια για καταστήματα λιανικής.'
-                : 'Bespoke music curation for retail stores.',
+            description,
             type: 'website',
             images: [
                 {

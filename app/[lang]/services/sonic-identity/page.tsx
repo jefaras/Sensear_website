@@ -4,6 +4,18 @@ import Image from "next/image";
 import { getDictionary } from "@/lib/dictionary";
 import type { Locale } from "@/lib/i18n";
 import { FinalCTA } from "@/components/sections/FinalCTA";
+import type { Metadata } from "next";
+
+export async function generateMetadata({ params }: { params: Promise<{ lang: Locale }> }): Promise<Metadata> {
+    const { lang } = await params;
+    const dict = await getDictionary(lang);
+    const t = dict.sonic_identity;
+
+    return {
+        title: t.meta?.title ?? "Sonic Identity",
+        description: t.meta?.description ?? "Strategic sonic identity design for brands. We create consistent sound across all locations and communication channels.",
+    };
+}
 
 export default async function SonicIdentityPage({ params }: { params: Promise<{ lang: Locale }> }) {
     const { lang } = await params;
