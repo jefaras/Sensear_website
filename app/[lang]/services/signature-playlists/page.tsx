@@ -4,6 +4,18 @@ import { ArrowRight } from "lucide-react";
 import { getDictionary } from "@/lib/dictionary";
 import type { Locale } from "@/lib/i18n";
 import { FinalCTA } from "@/components/sections/FinalCTA";
+import type { Metadata } from "next";
+
+export async function generateMetadata({ params }: { params: Promise<{ lang: Locale }> }): Promise<Metadata> {
+    const { lang } = await params;
+    const dict = await getDictionary(lang);
+    const t = dict.signature_playlists;
+
+    return {
+        title: t.meta?.title ?? "Signature Playlists",
+        description: t.meta?.description ?? "Expert music curation for venues that want to stand out. We create playlists that reflect your brand identity.",
+    };
+}
 
 export default async function SignaturePlaylistsPage({
     params,

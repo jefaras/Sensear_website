@@ -49,6 +49,7 @@ export function proxy(request: NextRequest) {
     const csp = buildCsp(nonce)
     const requestHeaders = new Headers(request.headers)
     requestHeaders.set('x-nonce', nonce)
+    requestHeaders.set('x-pathname', pathname)
 
     // Check if there is any supported locale in the pathname
     const pathnameIsMissingLocale = i18n.locales.every(

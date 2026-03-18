@@ -4,6 +4,18 @@ import Image from "next/image";
 import { getDictionary } from "@/lib/dictionary";
 import type { Locale } from "@/lib/i18n";
 import { FinalCTA } from "@/components/sections/FinalCTA";
+import type { Metadata } from "next";
+
+export async function generateMetadata({ params }: { params: Promise<{ lang: Locale }> }): Promise<Metadata> {
+    const { lang } = await params;
+    const dict = await getDictionary(lang);
+    const t = dict.event_soundtracks;
+
+    return {
+        title: t.meta?.title ?? "Event Soundtracks",
+        description: t.meta?.description ?? "Expert music curation for events. We create soundtracks that follow the flow of the event.",
+    };
+}
 
 export default async function EventSoundtracksPage({
     params,

@@ -36,14 +36,14 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
     const { lang } = await params;
     const baseUrl = getSiteUrl();
+    const locale = lang as Locale;
+    const dict = await getDictionary(locale);
+    const requestHeaders = await headers();
+    const requestPath = requestHeaders.get("x-pathname");
+    const normalizedPath = requestPath && requestPath.startsWith("/") ? requestPath : `/${lang}`;
 
-    const title = lang === 'el'
-        ? 'SensEar Music - Μουσική Επιμέλεια & Sonic Branding'
-        : 'SensEar Music - Bespoke Music Curation & Sonic Branding';
-
-    const description = lang === 'el'
-        ? 'Εξειδικευμένη μουσική επιμέλεια και sonic branding για ξενοδοχεία, εστιατόρια, retail και εκδηλώσεις. Δημιουργούμε τη μοναδική ηχητική ταυτότητα του brand σας.'
-        : 'Bespoke music curation and sonic branding for hospitality, retail, and events. We craft your brand\'s unique sonic identity through tailored playlists and audio experiences.';
+    const title = dict.home?.meta?.title ?? "SensEar Music";
+    const description = dict.home?.meta?.description ?? "Bespoke music curation and sonic branding.";
 
     const keywords = lang === 'el'
         ? ['μουσική επιμέλεια', 'sonic branding', 'ηχητική ταυτότητα', 'μουσική ξενοδοχείων', 'μουσική εστιατορίων', 'playlist επιμέλεια', 'Αθήνα', 'Ελλάδα']
@@ -66,7 +66,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
         },
         metadataBase: new URL(baseUrl),
         alternates: {
-            canonical: `/${lang}`,
+            canonical: normalizedPath,
             languages: {
                 'en': '/en',
                 'el': '/el',
@@ -75,7 +75,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
         openGraph: {
             type: 'website',
             locale: lang === 'el' ? 'el_GR' : 'en_US',
-            url: `${baseUrl}/${lang}`,
+            url: `${baseUrl}${normalizedPath}`,
             siteName: 'SensEar Music',
             title,
             description,

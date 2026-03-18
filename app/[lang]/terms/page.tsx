@@ -6,11 +6,11 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: Loc
     const { lang } = await params;
     
     const title = lang === 'el' 
-        ? 'Όροι Χρήσης | SensEar Music'
+        ? 'Όροι Χρήσης & Παροχής Υπηρεσιών'
         : 'Terms of Service | SensEar Music';
     
     const description = lang === 'el'
-        ? 'Οι όροι χρήσης της SensEar Music. Διαβάστε τους όρους και προϋποθέσεις για τη χρήση των υπηρεσιών μας.'
+        ? 'Διαβάστε τους όρους χρήσης της SensEar για τον ιστότοπο, τις υπηρεσίες μουσικής επιμέλειας και κάθε άλλη παρεχόμενη υπηρεσία.'
         : 'SensEar Music terms of service. Read the terms and conditions for using our services.';
 
     return {

@@ -11,17 +11,16 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: Loc
     const { lang } = await params;
     const dict = await getDictionary(lang);
     const t = dict.hotels_resorts;
+    const description = t.meta?.description || (lang === 'el'
+        ? 'Εξειδικευμένη μουσική επιμέλεια για ξενοδοχεία και θέρετρα. Δημιουργούμε τη μοναδική ηχητική ταυτότητα του χώρου σας.'
+        : 'Bespoke music curation for hotels and resorts. We craft your venue\'s unique sonic identity for memorable guest experiences.');
 
     return {
         title: t.meta?.title || "Music for Hotels & Resorts | SensEar",
-        description: lang === 'el'
-            ? 'Εξειδικευμένη μουσική επιμέλεια για ξενοδοχεία και θέρετρα. Δημιουργούμε τη μοναδική ηχητική ταυτότητα του χώρου σας.'
-            : 'Bespoke music curation for hotels and resorts. We craft your venue\'s unique sonic identity for memorable guest experiences.',
+        description,
         openGraph: {
             title: t.meta?.title || "Music for Hotels & Resorts | SensEar",
-            description: lang === 'el'
-                ? 'Εξειδικευμένη μουσική επιμέλεια για ξενοδοχεία και θέρετρα.'
-                : 'Bespoke music curation for hotels and resorts.',
+            description,
             type: 'website',
             images: [
                 {

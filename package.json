@@ -6,7 +6,7 @@
         "dev": "next dev --turbopack",
         "build": "next build --webpack",
         "start": "next start",
-        "lint": "next lint",
+        "lint": "cross-env ESLINT_USE_FLAT_CONFIG=false eslint . --ext .js,.jsx,.ts,.tsx,.mjs",
         "test-email": "tsx test-email.ts",
         "test": "playwright test",
         "test:headed": "playwright test --headed",

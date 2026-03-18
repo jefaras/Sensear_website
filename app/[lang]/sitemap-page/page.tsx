@@ -2,9 +2,19 @@ import Link from "next/link";
 import { Home, Briefcase, Building2, BookOpen } from "lucide-react";
 import { getDictionary } from "@/lib/dictionary";
 import type { Locale } from "@/lib/i18n";
+import type { Metadata } from "next";
 import { Card } from "@/components/ui/card";
 import { FinalCTA } from "@/components/sections/FinalCTA";
 import Image from "next/image";
+
+export async function generateMetadata({ params }: { params: Promise<{ lang: Locale }> }): Promise<Metadata> {
+    const { lang } = await params;
+    const dict = await getDictionary(lang);
+    return {
+        title: dict.sitemap_page.meta.title,
+        description: dict.sitemap_page.meta.description,
+    };
+}
 
 export default async function SitemapPage({
     params,

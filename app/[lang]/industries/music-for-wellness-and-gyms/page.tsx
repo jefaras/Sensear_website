@@ -11,17 +11,16 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: Loc
     const { lang } = await params;
     const dict = await getDictionary(lang);
     const t = dict.wellness_gyms;
+    const description = t.meta?.description || (lang === 'el'
+        ? 'Εξειδικευμένη μουσική επιμέλεια για σπα και γυμναστήρια. Δημιουργούμε τη μοναδική ηχητική ταυτότητα του χώρου σας.'
+        : 'Bespoke music curation for spas and gyms. We craft your venue\'s unique sonic identity for wellness experiences.');
 
     return {
         title: t.meta?.title || "Music for Spas & Gyms | SensEar",
-        description: lang === 'el'
-            ? 'Εξειδικευμένη μουσική επιμέλεια για σπα και γυμναστήρια. Δημιουργούμε τη μοναδική ηχητική ταυτότητα του χώρου σας.'
-            : 'Bespoke music curation for spas and gyms. We craft your venue\'s unique sonic identity for wellness experiences.',
+        description,
         openGraph: {
             title: t.meta?.title || "Music for Spas & Gyms | SensEar",
-            description: lang === 'el'
-                ? 'Εξειδικευμένη μουσική επιμέλεια για σπα και γυμναστήρια.'
-                : 'Bespoke music curation for spas and gyms.',
+            description,
             type: 'website',
             images: [
                 {
