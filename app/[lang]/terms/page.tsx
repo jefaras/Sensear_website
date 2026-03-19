@@ -1,17 +1,18 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Locale } from '@/lib/i18n';
+import { parseMarkdownBold } from '@/lib/utils';
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: Locale }> }): Promise<Metadata> {
     const { lang } = await params;
     
     const title = lang === 'el' 
-        ? 'Όροι Χρήσης & Παροχής Υπηρεσιών'
-        : 'Terms of Service | SensEar Music';
+        ? 'Όροι Χρήσης για Ιστότοπο & Υπηρεσίες'
+        : 'Terms of Service for Website & Services';
     
     const description = lang === 'el'
-        ? 'Διαβάστε τους όρους χρήσης της SensEar για τον ιστότοπο, τις υπηρεσίες μουσικής επιμέλειας και κάθε άλλη παρεχόμενη υπηρεσία.'
-        : 'SensEar Music terms of service. Read the terms and conditions for using our services.';
+        ? 'Διαβάστε τους όρους της SensEar για πρόσβαση στον ιστότοπο και χρήση υπηρεσιών, με θέματα ευθυνών, πληρωμών, αδειών και επίλυσης διαφορών.'
+        : 'Review SensEar’s terms for website access and service use, including responsibilities, payments, licensing, confidentiality and dispute resolution.';
 
     return {
         title,
@@ -345,9 +346,11 @@ export default async function TermsPage({ params }: { params: Promise<{ lang: Lo
                             <h2 className="text-2xl font-bold text-black mb-4">{section.title}</h2>
                             <div className="prose prose-lg max-w-none text-black/80">
                                 {section.content.split('\n\n').map((paragraph, pIndex) => (
-                                    <p key={pIndex} className="mb-4 whitespace-pre-line">
-                                        {paragraph}
-                                    </p>
+                                    <p 
+                                        key={pIndex} 
+                                        className="mb-4 whitespace-pre-line"
+                                        dangerouslySetInnerHTML={{ __html: parseMarkdownBold(paragraph) }}
+                                    />
                                 ))}
                             </div>
                         </section>
