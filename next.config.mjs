@@ -8,6 +8,7 @@ const withBundleAnalyzer = analyzer({
 const nextConfig = {
     output: 'standalone',
     images: {
+        qualities: [70, 75],
         remotePatterns: [],
     },
 

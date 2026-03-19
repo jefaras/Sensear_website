@@ -1,0 +1,32 @@
+# Large binary and generated files
+node_modules/
+.next/
+package-lock.json
+
+# Old Base44 codebase (reference only, not active code)
+Base44_sensear_files_EN_GR/
+
+# Skill review/source repos (large, not part of the active project)
+.skill-review/
+.skill-sources/
+
+# Binary assets
+*.webp
+*.png
+*.svg
+*.zip
+*.ico
+
+# Test artifacts and temp files
+contact_form_test_*.webp
+$null
+
+# Log/diff files
+diff_ascii.txt
+diff.txt
+log_ascii.txt
+log.txt
+form-changes.txt
+
+# Git internals
+.git/
