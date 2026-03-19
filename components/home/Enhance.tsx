@@ -1,7 +1,10 @@
+'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import { Locale } from "@/lib/i18n";
+import { ScrollReveal, StaggerChildren } from '@/components/motion';
 
 interface EnhanceProps {
     lang: Locale;
@@ -14,10 +17,10 @@ interface EnhanceProps {
 export default function Enhance({ lang, title, subtitle, items, cta }: EnhanceProps) {
     return (
         <section className="py-24 bg-black">
-            <div className="max-w-7xl mx-auto px-6">
+            <div className="max-w-[1440px] mx-auto px-6 md:px-12">
                 <div className="grid md:grid-cols-2 gap-12 items-center">
                     {/* Left: Image - order-2 on mobile (below text), order-1 on desktop (left) */}
-                    <div className="block order-2 md:order-1">
+                    <ScrollReveal className="block order-2 md:order-1" direction="left">
                         <Image
                             src="/images/homepage/vinyl-records-music-curation-optimized.jpg"
                             alt="Enhance your brand with SensEar music curation"
@@ -29,27 +32,29 @@ export default function Enhance({ lang, title, subtitle, items, cta }: EnhancePr
                             blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBEQACEQA/ALUABo//2Q=="
                             className="w-full h-auto object-cover rounded-xl shadow-lg"
                         />
-                    </div>
+                    </ScrollReveal>
 
                     {/* Right: Content - order-1 on mobile (above image), order-2 on desktop (right) */}
                     <div className="md:pl-12 order-1 md:order-2">
-                        <h2 className="text-[2.7rem] md:text-[3.45rem] font-bold text-white mb-6 leading-heading">
-                            {title}
-                        </h2>
-                        <p className="text-xl text-white/60 font-medium mb-12 leading-relaxed">
-                            {subtitle}
-                        </p>
+                        <ScrollReveal>
+                            <h2 className="text-[2.7rem] md:text-[3.45rem] font-bold text-white mb-6 leading-heading">
+                                {title}
+                            </h2>
+                            <p className="text-xl text-white/60 font-medium mb-12 leading-relaxed">
+                                {subtitle}
+                            </p>
+                        </ScrollReveal>
 
                         {/* Items list */}
                         {items && items.length > 0 && (
-                            <ul className="space-y-8 mb-8">
+                            <StaggerChildren className="space-y-8 mb-8" staggerDelay={0.15}>
                                 {items.map((item, index) => (
-                                    <li key={index}>
+                                    <li key={index} className="list-none">
                                         <h3 className="text-2xl font-bold text-white mb-1">{item.title}</h3>
                                         <p className="text-lg text-white/70">{item.desc}</p>
                                     </li>
                                 ))}
-                            </ul>
+                            </StaggerChildren>
                         )}
 
                         <Link href={`/${lang}/contact`}>

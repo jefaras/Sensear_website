@@ -21,11 +21,11 @@ export function Footer({ lang, dict }: { lang: Locale, dict: any }) {
             />
 
             {/* Main Footer Content */}
-            <div className="max-w-7xl mx-auto px-6 py-16 relative z-10">
-                <div className="flex flex-wrap gap-12 lg:gap-24">
+            <div className="max-w-[1440px] mx-auto px-6 md:px-12 py-16 relative z-10">
+                <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-12 lg:gap-16">
 
                     {/* Brand Column */}
-                    <div className="min-w-[300px] lg:w-1/3">
+                    <div className="max-w-sm">
                         <Link href={`/${lang}`} className="flex items-center gap-3 group mb-6 w-fit">
                             <img
                                 src="/images/brand/sensear-logo-white.png"
@@ -95,6 +95,9 @@ export function Footer({ lang, dict }: { lang: Locale, dict: any }) {
                         </div>
                     </div>
 
+                    {/* Link Columns */}
+                    <div className="grid grid-cols-2 sm:grid-cols-3 gap-8 lg:gap-12">
+
                     {/* Services */}
                     <div>
                         <Link href={`/${lang}/services`} className="text-sm font-semibold text-[#faebe3] mb-4 uppercase tracking-wider hover:underline decoration-1 underline-offset-4 inline-block font-jakarta">
@@ -146,12 +149,14 @@ export function Footer({ lang, dict }: { lang: Locale, dict: any }) {
                             ))}
                         </div>
                     </div>
+
+                    </div>{/* end Link Columns grid */}
                 </div>
             </div>
 
             {/* Copyright Bar - Above Legal Section */}
             <div className="border-t border-white/10 relative z-10">
-                <div className="max-w-7xl mx-auto px-6 py-4 flex flex-col sm:flex-row justify-between items-center gap-2 text-xs text-white/40">
+                <div className="max-w-[1440px] mx-auto px-6 md:px-12 py-4 flex flex-col sm:flex-row justify-between items-center gap-2 text-xs text-white/40">
                     <p>{footer.rights}</p>
                     <div className="flex gap-4">
                         <Link href={`/${lang}/privacy`} className="hover:text-white transition-colors">{nav.policy.privacy}</Link>
@@ -163,7 +168,7 @@ export function Footer({ lang, dict }: { lang: Locale, dict: any }) {
 
             {/* Legal Section */}
             <div className="border-t border-white/20 relative z-10">
-                <div className="max-w-7xl mx-auto px-6 py-8">
+                <div className="max-w-[1440px] mx-auto px-6 md:px-12 py-8">
                     <p className="text-xs text-white/50 text-center leading-relaxed">
                         {footer.legal}
                     </p>

@@ -1,7 +1,10 @@
+'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import { Locale } from "@/lib/i18n";
+import { ScrollReveal, StaggerChildren } from '@/components/motion';
 
 interface BlogArticle {
     title: string;
@@ -22,13 +25,15 @@ interface BlogSectionProps {
 export default function BlogSection({ lang, title, subtitle, articles, read_more, cta }: BlogSectionProps) {
     return (
         <section className="py-24" style={{ backgroundImage: "url('/images/backgrounds/background-texture-warm-silver.jpg')", backgroundSize: 'cover', backgroundPosition: 'center' }}>
-            <div className="max-w-7xl mx-auto px-6">
-                <div className="text-center mb-12">
-                    <h2 className="text-[2.7rem] md:text-[3.45rem] font-bold text-black mb-4 leading-heading">{title}</h2>
-                    <p className="text-xl text-black/60 font-medium max-w-5xl mx-auto">{subtitle}</p>
-                </div>
+            <div className="max-w-[1440px] mx-auto px-6 md:px-12">
+                <ScrollReveal>
+                    <div className="text-center mb-12">
+                        <h2 className="text-[2.7rem] md:text-[3.45rem] font-bold text-black mb-4 leading-heading">{title}</h2>
+                        <p className="text-xl text-black/60 font-medium max-w-5xl mx-auto">{subtitle}</p>
+                    </div>
+                </ScrollReveal>
 
-                <div className="grid md:grid-cols-3 gap-8">
+                <StaggerChildren className="grid md:grid-cols-3 gap-8" staggerDelay={0.15}>
                     {articles.map((article, idx) => (
                         <Link key={idx} href={`/${lang}/blog/${article.link}`} className="block">
                             <div className="bg-white rounded-xl overflow-hidden hover:shadow-xl transition-all duration-300 group cursor-pointer border border-black/5 h-full flex flex-col">
@@ -63,7 +68,7 @@ export default function BlogSection({ lang, title, subtitle, articles, read_more
                             </div>
                         </Link>
                     ))}
-                </div>
+                </StaggerChildren>
 
                 <div className="mt-16 flex justify-center">
                     <Link href={`/${lang}/blog`}>
