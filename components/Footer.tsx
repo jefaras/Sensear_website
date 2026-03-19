@@ -22,7 +22,7 @@ export function Footer({ lang, dict }: { lang: Locale, dict: any }) {
 
             {/* Main Footer Content */}
             <div className="max-w-[1440px] mx-auto px-6 md:px-12 py-16 relative z-10">
-                <div className="grid grid-cols-1 lg:grid-cols-[auto_1fr] gap-12 lg:gap-32">
+                <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-12 lg:gap-16">
 
                     {/* Brand Column */}
                     <div className="max-w-sm">
