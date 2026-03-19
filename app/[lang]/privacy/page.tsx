@@ -1,17 +1,18 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Locale } from '@/lib/i18n';
+import { parseMarkdownBold } from '@/lib/utils';
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: Locale }> }): Promise<Metadata> {
     const { lang } = await params;
     
     const title = lang === 'el' 
-        ? 'Πολιτική Απορρήτου | SensEar Music'
-        : 'Privacy Policy | SensEar Music';
+        ? 'Πολιτική Απορρήτου για Ιστότοπο & Υπηρεσίες'
+        : 'Privacy Policy for Website & Services';
     
     const description = lang === 'el'
-        ? 'Η πολιτική απορρήτου της SensEar Music. Μάθετε πώς συλλέγουμε, χρησιμοποιούμε και προστατεύουμε τα προσωπικά σας δεδομένα.'
-        : 'SensEar Music privacy policy. Learn how we collect, use, and protect your personal data.';
+        ? 'Μάθετε πώς η SensEar συλλέγει, χρησιμοποιεί, κοινοποιεί και προστατεύει προσωπικά δεδομένα, cookies, δικαιώματα GDPR και στοιχεία επικοινωνίας.'
+        : 'Read how SensEar collects, uses, shares and safeguards personal data, including cookies, GDPR rights, security practices and privacy contact options.';
 
     return {
         title,
@@ -219,9 +220,11 @@ export default async function PrivacyPage({ params }: { params: Promise<{ lang: 
                             <h2 className="text-2xl font-bold text-black mb-4">{section.title}</h2>
                             <div className="prose prose-lg max-w-none text-black/80">
                                 {section.content.split('\n\n').map((paragraph, pIndex) => (
-                                    <p key={pIndex} className="mb-4 whitespace-pre-line">
-                                        {paragraph}
-                                    </p>
+                                    <p 
+                                        key={pIndex} 
+                                        className="mb-4 whitespace-pre-line"
+                                        dangerouslySetInnerHTML={{ __html: parseMarkdownBold(paragraph) }}
+                                    />
                                 ))}
                             </div>
                         </section>
