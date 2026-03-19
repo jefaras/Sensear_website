@@ -79,7 +79,7 @@ export function Navbar({ lang, navigation }: NavbarProps) {
                 !scrolled && !isOpen ? "text-black" : "text-white"
             )}
         >
-            <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
+            <div className="max-w-[1440px] mx-auto px-6 md:px-12 flex items-center justify-between">
                 {/* Logo with SENSEAR text */}
                 <Link href={`/${lang}`} className="group flex items-center gap-3 shrink-0">
                     <div className="relative w-16 h-16">

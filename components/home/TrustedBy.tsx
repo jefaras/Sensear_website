@@ -1,5 +1,8 @@
+'use client';
+
 import Image from 'next/image';
 import { Locale } from "@/lib/i18n";
+import { ScrollReveal } from '@/components/motion';
 
 interface TrustedByProps {
     lang: Locale;
@@ -41,7 +44,7 @@ export default function TrustedBy({ lang, title }: TrustedByProps) {
     ] as const;
 
     return (
-        <section className="py-24 px-6 bg-[#d3d3d3]">
+        <section className="py-24 bg-[#d3d3d3]">
             <style>{`
                 @keyframes scroll-left {
                     0% { transform: translateX(0); }
@@ -53,7 +56,7 @@ export default function TrustedBy({ lang, title }: TrustedByProps) {
                     width: fit-content;
                 }
             `}</style>
-            <div className="max-w-7xl mx-auto">
+            <div className="max-w-[1440px] mx-auto px-6 md:px-12">
                 <div className="relative overflow-hidden rounded-[3rem]">
                     {/* Animated Background - matching FinalCTA style */}
                     <div
@@ -66,7 +69,9 @@ export default function TrustedBy({ lang, title }: TrustedByProps) {
                     />
 
                     <div className="relative z-10 p-12 md:p-24">
-                        <h2 className="text-[2.7rem] md:text-[3.45rem] font-bold text-center mb-20 text-black leading-heading">{title}</h2>
+                        <ScrollReveal>
+                            <h2 className="text-[2.7rem] md:text-[3.45rem] font-bold text-center mb-20 text-black leading-heading">{title}</h2>
+                        </ScrollReveal>
 
                         <div className="relative">
                             <div className="flex gap-12 animate-scroll">

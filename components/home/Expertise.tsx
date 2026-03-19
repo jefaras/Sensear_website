@@ -1,7 +1,10 @@
+'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import { Locale } from "@/lib/i18n";
+import { ScrollReveal, StaggerChildren } from '@/components/motion';
 
 interface ExpertiseProps {
     lang: Locale;
@@ -18,17 +21,19 @@ interface ExpertiseProps {
 export default function Expertise({ lang, title, subtitle, items, cta }: ExpertiseProps) {
     return (
         <section className="py-24 bg-[#faebe3]">
-            <div className="max-w-7xl mx-auto px-6">
-                <h2 className="text-[2.7rem] md:text-[3.45rem] font-bold text-black mb-4 text-center leading-heading">
-                    {title}
-                </h2>
-                <p className="text-xl text-black/60 font-medium mb-12 text-center mx-auto max-w-5xl">
-                    {subtitle}
-                </p>
+            <div className="max-w-[1440px] mx-auto px-6 md:px-12">
+                <ScrollReveal>
+                    <h2 className="text-[2.7rem] md:text-[3.45rem] font-bold text-black mb-4 text-center leading-heading">
+                        {title}
+                    </h2>
+                    <p className="text-xl text-black/60 font-medium mb-12 text-center mx-auto max-w-5xl">
+                        {subtitle}
+                    </p>
+                </ScrollReveal>
                 <div className="grid md:grid-cols-[1fr_1.2fr] gap-20 items-center">
                     {/* Left: Content */}
                     <div className="md:order-1 md:pr-12">
-                        <div className="flex flex-col mb-12">
+                        <StaggerChildren className="flex flex-col mb-12" staggerDelay={0.15}>
                             {items.map((item, idx) => (
                                 <div key={idx} className="mb-8">
                                     <Link href={`/${lang}/${item.link}`} className="text-2xl md:text-3xl font-bold text-black block mb-1 group w-fit">
@@ -39,7 +44,7 @@ export default function Expertise({ lang, title, subtitle, items, cta }: Experti
                                     </p>
                                 </div>
                             ))}
-                        </div>
+                        </StaggerChildren>
 
                         <Link href={`/${lang}/industries`}>
                             <button className="group relative bg-transparent border-2 border-black text-black hover:bg-black hover:text-white px-14 py-6 text-lg font-semibold rounded-full transition-all duration-300 overflow-hidden flex items-center">
@@ -52,7 +57,7 @@ export default function Expertise({ lang, title, subtitle, items, cta }: Experti
                     </div>
 
                     {/* Right: Image (Vinyls) */}
-                    <div className="order-last md:order-2 block">
+                    <ScrollReveal className="order-last md:order-2 block" direction="right">
                         <Image
                             src="/images/homepage/vinyl-records-music-curation-optimized.jpg"
                             alt="Sonic expertise in hospitality and retail music curation"
@@ -64,7 +69,7 @@ export default function Expertise({ lang, title, subtitle, items, cta }: Experti
                             blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBEQACEQA/ALUABo//2Q=="
                             className="w-full h-auto object-cover rounded-xl shadow-lg"
                         />
-                    </div>
+                    </ScrollReveal>
                 </div>
             </div>
         </section>

@@ -63,7 +63,7 @@ const BlogSection = dynamic(
 function SectionSkeleton({ className = "" }: { className?: string }) {
     return (
         <section className={`py-24 ${className}`}>
-            <div className="max-w-7xl mx-auto px-6">
+            <div className="max-w-[1440px] mx-auto px-6 md:px-12">
                 <div className="animate-pulse">
                     <div className="h-10 bg-gray-300/30 rounded-lg w-2/3 mx-auto mb-8"></div>
                     <div className="h-6 bg-gray-300/20 rounded-lg w-1/2 mx-auto mb-12"></div>
@@ -102,7 +102,7 @@ export default async function Home({ params }: { params: Promise<{ lang: Locale 
                     quality={70}
                 />
                 <div className="absolute inset-0 bg-[#faebe3]/30" aria-hidden="true" />
-                <div className="relative z-10 w-full px-6 md:px-12 lg:px-16">
+                <div className="relative z-10 max-w-[1440px] mx-auto px-6 md:px-12">
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
                         {/* Text Content */}
                         <div className="flex flex-col justify-center text-left">
