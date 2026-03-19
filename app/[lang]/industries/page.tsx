@@ -193,7 +193,7 @@ export default async function Industries({
                         <ScrollReveal className="order-2 lg:order-1">
                             <div className="overflow-hidden rounded-xl shadow-lg bg-white relative">
                                 <Image
-                                    src="/images/industries/industries-connected-worlds.jpg"
+                                    src="/images/industries/industry-hotels-resorts.jpg"
                                     alt="Connected worlds across hospitality and retail industries"
                                     width={800}
                                     height={600}
