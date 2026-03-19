@@ -84,7 +84,7 @@ export default async function Contact({ params }: { params: Promise<{ lang: Loca
                         <div className="relative w-full max-w-xl mx-auto py-24 md:py-32 flex justify-center items-center min-h-[1280px] sm:min-h-[1320px] md:min-h-[1180px] lg:min-h-[1120px]">
                             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none flex justify-center items-center" aria-hidden="true">
                                 <Image
-                                    src="/images/homepage/vinyl-records-music-curation.jpg"
+                                    src="/images/contact/vinyl-record-contact-form-bg.webp"
                                     alt="Vinyl record background"
                                     width={1060}
                                     height={1060}
