@@ -12,6 +12,7 @@ import {
 import { AnimatedButton } from "@/components/AnimatedButton";
 import { FinalCTA } from "@/components/sections/FinalCTA";
 import Image from "next/image";
+import { ScrollReveal } from "@/components/motion";
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: Locale }> }): Promise<Metadata> {
     const { lang } = await params;
@@ -47,15 +48,19 @@ export default async function FAQPage({
                 <div className="w-full px-6 md:px-12 lg:px-16">
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
                         <div className="flex flex-col justify-center text-left">
-                            <h1 className="text-[2.2rem] sm:text-[3.2rem] md:text-[4rem] lg:text-[4.8rem] font-extrabold text-black mb-6 leading-[1.1]">
-                                {content.hero.title}
-                            </h1>
-                            <p className="text-xl md:text-2xl text-black/70 leading-relaxed">
-                                {content.hero.subtitle}
-                            </p>
+                            <ScrollReveal>
+                                <h1 className="text-[2.2rem] sm:text-[3.2rem] md:text-[4rem] lg:text-[4.8rem] font-extrabold text-black mb-6 leading-[1.1]">
+                                    {content.hero.title}
+                                </h1>
+                            </ScrollReveal>
+                            <ScrollReveal delay={0.1}>
+                                <p className="text-xl md:text-2xl text-black/70 leading-relaxed">
+                                    {content.hero.subtitle}
+                                </p>
+                            </ScrollReveal>
                         </div>
 
-                        <div className="w-full flex justify-end">
+                        <ScrollReveal delay={0.2} className="w-full flex justify-end">
                             <div className="w-full max-w-[740px]">
                                 <div className="overflow-hidden rounded-2xl shadow-2xl">
                                     <div className="relative aspect-square">
@@ -70,7 +75,7 @@ export default async function FAQPage({
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </ScrollReveal>
                     </div>
                 </div>
             </section>
@@ -85,9 +90,11 @@ export default async function FAQPage({
                 }}
             >
                 <div className="max-w-4xl mx-auto px-6">
-                    <h2 className="text-4xl font-bold text-center text-black mb-12">
-                        {content.title}
-                    </h2>
+                    <ScrollReveal>
+                        <h2 className="text-4xl font-bold text-center text-black mb-12">
+                            {content.title}
+                        </h2>
+                    </ScrollReveal>
 
                     <Accordion type="single" collapsible className="w-full space-y-4">
                         {faqItems.map((item: any, index: number) => (
@@ -96,12 +103,14 @@ export default async function FAQPage({
                                 value={`item-${index}`}
                                 className="bg-white/80 border-b-0 rounded-lg shadow-sm px-6"
                             >
-                                <AccordionTrigger className="text-lg font-semibold text-left hover:no-underline">
-                                    {item.question}
-                                </AccordionTrigger>
-                                <AccordionContent className="text-base text-black/70 pt-2 pb-4">
-                                    {item.answer}
-                                </AccordionContent>
+                                <ScrollReveal delay={index * 0.06}>
+                                    <AccordionTrigger className="text-lg font-semibold text-left hover:no-underline">
+                                        {item.question}
+                                    </AccordionTrigger>
+                                    <AccordionContent className="text-base text-black/70 pt-2 pb-4">
+                                        {item.answer}
+                                    </AccordionContent>
+                                </ScrollReveal>
                             </AccordionItem>
                         ))}
                     </Accordion>

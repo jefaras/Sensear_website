@@ -196,7 +196,6 @@ const nextConfig = {
     webpack: (config, { isServer }) => {
         config.optimization = {
             ...config.optimization,
-            usedExports: true,
             sideEffects: true,
         };
 

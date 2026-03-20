@@ -8,6 +8,7 @@ import { notFound } from "next/navigation";
 import { ArticleJsonLd } from "@/components/JsonLd";
 import { headers } from "next/headers";
 import Image from "next/image";
+import { ScrollReveal, StaggerChildren } from "@/components/motion";
 
 const BLOG_PUBLISHED_DATES: Record<string, string> = {
     "how-top-hospitality-brands-design-sound": "2025-01-20",
@@ -128,42 +129,50 @@ export default async function BlogPost({
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                         {/* Hero Text */}
                         <div className="lg:col-span-7">
-                            <Link href={`/${lang}/blog`} className="inline-flex items-center text-black/40 hover:text-black mb-12 transition-colors group">
-                                <ArrowLeft className="w-4 h-4 mr-2 transition-transform group-hover:-translate-x-1" />
-                                <span className="text-sm font-bold tracking-widest uppercase font-jakarta">{backButtonText}</span>
-                            </Link>
+                            <ScrollReveal>
+                                <Link href={`/${lang}/blog`} className="inline-flex items-center text-black/40 hover:text-black mb-12 transition-colors group">
+                                    <ArrowLeft className="w-4 h-4 mr-2 transition-transform group-hover:-translate-x-1" />
+                                    <span className="text-sm font-bold tracking-widest uppercase font-jakarta">{backButtonText}</span>
+                                </Link>
+                            </ScrollReveal>
 
-                            <h1 className="flex flex-col mb-8 font-jakarta">
-                                <span className="text-[2.2rem] sm:text-[3.2rem] md:text-[4rem] lg:text-[4.8rem] font-extrabold text-black leading-[1.1] tracking-tight mb-2 animate-in fade-in slide-in-from-bottom-4 duration-700">
-                                    {titleParts[0]?.trim()}
-                                </span>
-                                {titleParts[1] && (
-                                    <span className="text-4xl md:text-5xl xl:text-6xl font-extrabold italic text-black/70 leading-tight animate-in fade-in slide-in-from-bottom-4 duration-700 delay-100">
-                                        {titleParts[1].trim()}
+                            <ScrollReveal delay={0.08}>
+                                <h1 className="flex flex-col mb-8 font-jakarta">
+                                    <span className="text-[2.2rem] sm:text-[3.2rem] md:text-[4rem] lg:text-[4.8rem] font-extrabold text-black leading-[1.1] tracking-tight mb-2">
+                                        {titleParts[0]?.trim()}
                                     </span>
-                                )}
-                            </h1>
+                                    {titleParts[1] && (
+                                        <span className="text-4xl md:text-5xl xl:text-6xl font-extrabold italic text-black/70 leading-tight">
+                                            {titleParts[1].trim()}
+                                        </span>
+                                    )}
+                                </h1>
+                            </ScrollReveal>
 
-                            <p className="text-xl md:text-2xl text-black/70 mb-10 leading-relaxed max-w-2xl font-normal animate-in fade-in slide-in-from-bottom-4 duration-700 delay-200">
-                                {article.desc}
-                            </p>
+                            <ScrollReveal delay={0.16}>
+                                <p className="text-xl md:text-2xl text-black/70 mb-10 leading-relaxed max-w-2xl font-normal">
+                                    {article.desc}
+                                </p>
+                            </ScrollReveal>
 
-                            <div className="flex items-center gap-6 text-sm text-black/60 font-jakarta font-medium animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300">
-                                <div className="flex items-center gap-3">
-                                    <span className="w-8 h-[1px] bg-black/20" />
-                                    <address className="not-italic">
-                                        <span rel="author" className="text-black font-bold uppercase tracking-wider">{article.author}</span>
-                                    </address>
+                            <ScrollReveal delay={0.24}>
+                                <div className="flex items-center gap-6 text-sm text-black/60 font-jakarta font-medium">
+                                    <div className="flex items-center gap-3">
+                                        <span className="w-8 h-[1px] bg-black/20" />
+                                        <address className="not-italic">
+                                            <span rel="author" className="text-black font-bold uppercase tracking-wider">{article.author}</span>
+                                        </address>
+                                    </div>
+                                    <span className="w-1 h-1 rounded-full bg-black/20" />
+                                    <time dateTime={publishedDate} className="uppercase tracking-wider">{article.displayDate}</time>
+                                    <span className="w-1 h-1 rounded-full bg-black/20" />
+                                    <span className="uppercase tracking-wider">8 MIN READ</span>
                                 </div>
-                                <span className="w-1 h-1 rounded-full bg-black/20" />
-                                <time dateTime={publishedDate} className="uppercase tracking-wider">{article.displayDate}</time>
-                                <span className="w-1 h-1 rounded-full bg-black/20" />
-                                <span className="uppercase tracking-wider">8 MIN READ</span>
-                            </div>
+                            </ScrollReveal>
                         </div>
 
                         {/* Hero Image */}
-                        <div className="lg:col-span-5 relative group animate-in fade-in zoom-in-95 duration-1000">
+                        <ScrollReveal delay={0.18} className="lg:col-span-5 relative group">
                             <div className="aspect-[3/4] rounded-[2.5rem] overflow-hidden shadow-[0_40px_80px_-15px_rgba(0,0,0,0.15)] bg-white border border-white/20">
                                 <Image
                                     src={article.image || "/images/blog/blog-faq-default.jpg"}
@@ -175,7 +184,7 @@ export default async function BlogPost({
                                     className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
                                 />
                             </div>
-                        </div>
+                        </ScrollReveal>
                     </div>
                 </div>
             </section>
@@ -183,10 +192,11 @@ export default async function BlogPost({
             {/* Content Section */}
             <section className="pb-24">
                 <div className="container mx-auto px-6 max-w-5xl">
-                    <div className="bg-white rounded-[3rem] p-10 md:p-20 shadow-[0_32px_120px_-20px_rgba(0,0,0,0.08)]">
-                        <div className="prose prose-xl max-w-none text-black selection:bg-orange-50">
+                    <ScrollReveal>
+                        <div className="bg-white rounded-[3rem] p-10 md:p-20 shadow-[0_32px_120px_-20px_rgba(0,0,0,0.08)]">
+                            <div className="prose prose-xl max-w-none text-black selection:bg-orange-50">
                             {article.structuredContent ? (
-                                <div className="space-y-12">
+                                <StaggerChildren className="space-y-12" staggerDelay={0.08}>
                                     {article.structuredContent.map((section: any, idx: number) => {
                                         switch (section.type) {
                                             case "heading":
@@ -242,39 +252,46 @@ export default async function BlogPost({
                                                 return null;
                                         }
                                     })}
-                                </div>
+                                </StaggerChildren>
                             ) : (
-                                <p className="whitespace-pre-wrap leading-relaxed text-lg md:text-xl text-black/80">
-                                    {renderTextWithLinks(article.content || "Content coming soon...")}
-                                </p>
+                                <ScrollReveal>
+                                    <p className="whitespace-pre-wrap leading-relaxed text-lg md:text-xl text-black/80">
+                                        {renderTextWithLinks(article.content || "Content coming soon...")}
+                                    </p>
+                                </ScrollReveal>
                             )}
-                        </div>
+                            </div>
 
-                        {/* Article Footer Button */}
-                        <div className="mt-24 pt-16 border-t border-gray-100 text-center">
-                            <Link href={`/${lang}/blog`}>
-                                <Button variant="outline" size="lg" className="rounded-full px-12 py-8 border-2 border-black text-black hover:bg-black hover:text-white transition-all duration-500 font-bold tracking-widest uppercase text-sm group">
-                                    <ArrowLeft className="w-4 h-4 mr-3 transition-transform group-hover:-translate-x-1" />
-                                    {backButtonText}
-                                </Button>
-                            </Link>
+                            {/* Article Footer Button */}
+                            <ScrollReveal delay={0.12}>
+                                <div className="mt-24 pt-16 border-t border-gray-100 text-center">
+                                    <Link href={`/${lang}/blog`}>
+                                        <Button variant="outline" size="lg" className="rounded-full px-12 py-8 border-2 border-black text-black hover:bg-black hover:text-white transition-all duration-500 font-bold tracking-widest uppercase text-sm group">
+                                            <ArrowLeft className="w-4 h-4 mr-3 transition-transform group-hover:-translate-x-1" />
+                                            {backButtonText}
+                                        </Button>
+                                    </Link>
+                                </div>
+                            </ScrollReveal>
                         </div>
-                    </div>
+                    </ScrollReveal>
                 </div>
             </section>
 
             {/* CTA Section */}
             <section className="py-24 bg-transparent text-center">
                 <div className="container mx-auto px-6 max-w-4xl">
-                    <h2 className="text-4xl md:text-5xl font-extrabold text-black mb-6 leading-tight tracking-tight font-jakarta">
-                        {cta.title}
-                    </h2>
-                    <p className="text-xl md:text-2xl text-black/60 mb-12 leading-relaxed max-w-3xl mx-auto font-normal">
-                        {cta.description}
-                    </p>
-                    <Button className="rounded-full px-12 py-8 bg-black text-white hover:bg-black/90 transition-all duration-300 font-bold tracking-tight text-lg shadow-xl shadow-black/10">
-                        {cta.button}
-                    </Button>
+                    <StaggerChildren className="flex flex-col items-center" staggerDelay={0.08}>
+                        <h2 className="text-4xl md:text-5xl font-extrabold text-black mb-6 leading-tight tracking-tight font-jakarta">
+                            {cta.title}
+                        </h2>
+                        <p className="text-xl md:text-2xl text-black/60 mb-12 leading-relaxed max-w-3xl mx-auto font-normal">
+                            {cta.description}
+                        </p>
+                        <Button className="rounded-full px-12 py-8 bg-black text-white hover:bg-black/90 transition-all duration-300 font-bold tracking-tight text-lg shadow-xl shadow-black/10">
+                            {cta.button}
+                        </Button>
+                    </StaggerChildren>
                 </div>
             </section>
         </div>

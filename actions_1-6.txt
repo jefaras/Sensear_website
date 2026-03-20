@@ -1,0 +1,191 @@
+[root@ivi:/root]> cd /var/www/vhosts/sensear.music/httpdocs && pwd && ls -la
+/var/www/vhosts/sensear.music/httpdocs
+total 2512
+drwxr-x---  20 zsensear2125gr psaserv    4096 Mar 20 15:02  .
+drwx--x---  20 zsensear2125gr psaserv    4096 Mar 19 15:27  ..
+-rw-r--r--   1 zsensear2125gr psacln       68 Mar 12 15:45 '$null'
+drwxr-xr-x   3 zsensear2125gr psacln     4096 Mar 20 14:34  app
+drwxr-xr-x   4 zsensear2125gr psacln     4096 Mar  6 16:05  Base44_sensear_files_EN_GR
+drwxr-xr-x   7 zsensear2125gr psacln     4096 Mar 20 14:34  components
+-rw-r--r--   1 zsensear2125gr psacln      465 Mar  6 16:05  components.json
+-rw-r--r--   1 zsensear2125gr psacln  1716102 Mar  6 16:05  contact_form_test_1772656377657.webp
+-rw-r--r--   1 zsensear2125gr psacln     4752 Mar 20 14:34  CONTEXT.md
+-rw-r--r--   1 zsensear2125gr psacln     7000 Mar  6 16:05  DEV_SERVER_SETUP.md
+drwxr-xr-x   2 zsensear2125gr psacln     4096 Mar 19 01:00  dictionaries
+-rw-r--r--   1 zsensear2125gr psacln     4345 Mar  6 16:05  diff_ascii.txt
+-rw-r--r--   1 zsensear2125gr psacln     8736 Mar  6 16:05  diff.txt
+-rw-r--r--   1 zsensear2125gr psacln      311 Mar  4 03:19  ecosystem.config.js
+-rw-r--r--   1 zsensear2125gr psacln      724 Mar  3 17:09  .env.local
+-rw-r--r--   1 zsensear2125gr psacln      751 Mar  6 16:05  .env.local.example
+-rw-r--r--   1 zsensear2125gr psacln       72 Mar  6 17:28  .env.production
+-rw-r--r--   1 zsensear2125gr psacln      152 Mar 19 01:00  .eslintrc.json
+-rw-r--r--   1 zsensear2125gr psacln     4053 Mar  6 16:05  form-changes.txt
+drwxr-xr-x   2 zsensear2125gr psacln     4096 Mar  6 16:05  .github
+-rw-r--r--   1 zsensear2125gr psacln      639 Mar 11 02:29  .gitignore
+-rw-r--r--   1 zsensear2125gr psacln     2010 Mar  6 16:05  HOSTING_PROVIDER_REQUEST.md
+-rw-r--r--   1 zsensear2125gr psacln      136 Mar 19 15:56  .htaccess
+-rw-r--r--   1 zsensear2125gr psacln      475 Mar 20 14:34  .kilocodeignore
+drwxr-xr-x   2 zsensear2125gr psacln     4096 Mar 20 14:34  lib
+-rw-r--r--   1 zsensear2125gr psacln     2806 Mar  6 16:05  log_ascii.txt
+-rw-r--r--   1 zsensear2125gr psacln     5750 Mar  6 16:05  log.txt
+-rw-r--r--   1 zsensear2125gr psacln     1081 Mar  6 16:05  netlify.toml
+drwxr-xr-x   9 zsensear2125gr psacln     4096 Mar 19 01:04  .next
+-rw-r--r--   1 zsensear2125gr psacln     9902 Mar 20 14:34  next.config.mjs
+-rw-r--r--   1 zsensear2125gr psacln      247 Mar  6 16:12  next-env.d.ts
+drwxr-xr-x 350 zsensear2125gr psacln    12288 Mar 20 15:05  node_modules
+-rw-r--r--   1 zsensear2125gr psacln        3 Mar 20 14:55  .node-version
+-rw-r--r--   1 zsensear2125gr psacln     1801 Mar 20 14:34  package.json
+-rw-r--r--   1 zsensear2125gr psacln   303208 Mar 20 14:34  package-lock.json
+drwxr-xr-x   2 zsensear2125gr psacln     4096 Mar  6 16:05  plans
+-rw-r--r--   1 zsensear2125gr psacln      898 Mar  6 16:05  playwright.config.ts
+drwxr-xr-x   2 zsensear2125gr psacln     4096 Mar  6 16:05  playwright-report
+-rw-r--r--   1 zsensear2125gr psacln      169 Mar  6 16:05  postcss.config.mjs
+-rw-r--r--   1 zsensear2125gr psacln     3085 Mar 19 01:00  proxy.ts
+drwxr-xr-x   3 zsensear2125gr psacln     4096 Mar  2 19:46  public
+-rw-r--r--   1 zsensear2125gr psacln     2498 Mar  6 16:05  SCOPE.md
+drwxr-xr-x   2 zsensear2125gr psacln     4096 Mar 13 16:17  scripts
+-rw-r--r--   1 zsensear2125gr psacln     1652 Feb 17 15:18  server.js
+drwxr-xr-x   7 zsensear2125gr psacln     4096 Mar  9 22:44  .skill-review
+drwxr-xr-x   8 zsensear2125gr psacln     4096 Mar  9 22:44  .skill-sources
+-rw-r--r--   1 zsensear2125gr psacln     6498 Mar  6 16:05  SMTP_SETUP_GUIDE.md
+-rw-r--r--   1 zsensear2125gr psacln      577 Mar  9 22:44  squirrel.toml
+-rw-r--r--   1 zsensear2125gr psacln   281667 Mar 20 14:35  stderr.log
+-rw-r--r--   1 zsensear2125gr psacln     2914 Mar 14 02:26  tailwind.config.ts
+-rw-r--r--   1 zsensear2125gr psacln     1968 Mar  6 16:05  test-email.ts
+drwxr-xr-x   3 zsensear2125gr psacln     4096 Mar  6 16:05  tests
+drwxr-xr-x   2 zsensear2125gr psacln     4096 Mar  6 16:10  tmp
+drwxr-xr-x   2 zsensear2125gr psacln     4096 Mar  6 16:05  tools
+-rw-r--r--   1 zsensear2125gr psacln      711 Mar 20 14:34  tsconfig.json
+drwxr-xr-x   2 zsensear2125gr psacln     4096 Mar  6 16:05  .vscode
+
+[root@ivi:/var/www/vhosts/sensear.music/httpdocs]> cd /var/www/vhosts/sensear.music/httpdocs && ls -la | egrep 'package.json|package-lock.json|.npmrc|node_modules'
+drwxr-xr-x 350 zsensear2125gr psacln    12288 Mar 20 15:05 node_modules
+-rw-r--r--   1 zsensear2125gr psacln     1801 Mar 20 14:34 package.json
+-rw-r--r--   1 zsensear2125gr psacln   303208 Mar 20 14:34 package-lock.json
+
+[root@ivi:/var/www/vhosts/sensear.music/httpdocs]> cd /var/www/vhosts/sensear.music/httpdocs && stat package.json package-lock.json 2>/dev/null
+  File: package.json
+  Size: 1801            Blocks: 8          IO Block: 4096   regular file
+Device: 801h/2049d      Inode: 30291349    Links: 1
+Access: (0644/-rw-r--r--)  Uid: (11000/zsensear2125gr)   Gid: ( 1003/  psacln)
+Access: 2026-03-20 14:34:41.186622399 +0200
+Modify: 2026-03-20 14:34:41.186622399 +0200
+Change: 2026-03-20 14:34:41.186622399 +0200
+ Birth: 2026-03-20 14:34:41.186622399 +0200
+  File: package-lock.json
+  Size: 303208          Blocks: 600        IO Block: 4096   regular file
+Device: 801h/2049d      Inode: 30290790    Links: 1
+Access: (0644/-rw-r--r--)  Uid: (11000/zsensear2125gr)   Gid: ( 1003/  psacln)
+Access: 2026-03-20 14:34:41.180622377 +0200
+Modify: 2026-03-20 14:34:41.181622381 +0200
+Change: 2026-03-20 14:34:41.181622381 +0200
+ Birth: 2026-03-20 14:34:41.180622377 +0200
+
+[root@ivi:/var/www/vhosts/sensear.music/httpdocs]> cd /var/www/vhosts/sensear.music/httpdocs && head -n 40 package.json && printf '\n--- LOCKFILE ---\n' && head -n 40 package-lock.json
+{
+    "name": "sensear-music-web",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev --turbopack",
+        "build": "next build --webpack",
+        "start": "next start",
+        "lint": "cross-env ESLINT_USE_FLAT_CONFIG=false eslint . --ext .js,.jsx,.ts,.tsx,.mjs",
+        "test-email": "tsx test-email.ts",
+        "test": "playwright test",
+        "test:headed": "playwright test --headed",
+        "test:report": "playwright show-report",
+        "analyze": "cross-env ANALYZE=true next build"
+    },
+    "dependencies": {
+        "@formatjs/intl-localematcher": "^0.5.4",
+        "@hookform/resolvers": "^3.10.0",
+        "@radix-ui/react-accordion": "^1.2.12",
+        "class-variance-authority": "^0.7.1",
+        "clsx": "^2.1.1",
+        "embla-carousel-react": "^8.5.2",
+        "lucide-react": "^0.474.0",
+        "motion": "^12.38.0",
+        "negotiator": "^0.6.3",
+        "next": "^16.1.6",
+        "nodemailer": "^7.0.13",
+        "react": "^19.0.0",
+        "react-dom": "^19.0.0",
+        "react-google-recaptcha-v3": "^1.11.0",
+        "react-hook-form": "^7.54.2",
+        "tailwind-merge": "^2.6.0",
+        "tailwindcss-animate": "^1.0.7",
+        "zod": "^3.24.1"
+    },
+    "devDependencies": {
+        "@next/bundle-analyzer": "^16.1.6",
+        "@playwright/test": "^1.58.1",
+        "@types/negotiator": "^0.6.4",
+        "@types/node": "^20",
+
+--- LOCKFILE ---
+{
+    "name": "sensear-music-web",
+    "version": "0.1.0",
+    "lockfileVersion": 3,
+    "requires": true,
+    "packages": {
+        "": {
+            "name": "sensear-music-web",
+            "version": "0.1.0",
+            "dependencies": {
+                "@formatjs/intl-localematcher": "^0.5.4",
+                "@hookform/resolvers": "^3.10.0",
+                "@radix-ui/react-accordion": "^1.2.12",
+                "class-variance-authority": "^0.7.1",
+                "clsx": "^2.1.1",
+                "embla-carousel-react": "^8.5.2",
+                "lucide-react": "^0.474.0",
+                "motion": "^12.38.0",
+                "negotiator": "^0.6.3",
+                "next": "^16.1.6",
+                "nodemailer": "^7.0.13",
+                "react": "^19.0.0",
+                "react-dom": "^19.0.0",
+                "react-google-recaptcha-v3": "^1.11.0",
+                "react-hook-form": "^7.54.2",
+                "tailwind-merge": "^2.6.0",
+                "tailwindcss-animate": "^1.0.7",
+                "zod": "^3.24.1"
+            },
+            "devDependencies": {
+                "@next/bundle-analyzer": "^16.1.6",
+                "@playwright/test": "^1.58.1",
+                "@types/negotiator": "^0.6.4",
+                "@types/node": "^20",
+                "@types/nodemailer": "^7.0.9",
+                "@types/react": "^19",
+                "@types/react-dom": "^19",
+                "autoprefixer": "^10.4.19",
+                "cross-env": "^10.1.0",
+                "eslint": "^9",
+
+[root@ivi:/var/www/vhosts/sensear.music/httpdocs]> cd /var/www/vhosts/sensear.music/httpdocs && egrep '"name"|"version"|"lockfileVersion"' package-lock.json | head -n 20
+    "name": "sensear-music-web",
+    "version": "0.1.0",
+    "lockfileVersion": 3,
+            "name": "sensear-music-web",
+            "version": "0.1.0",
+            "version": "5.2.0",
+            "version": "0.5.7",
+            "version": "1.8.1",
+            "version": "1.8.1",
+            "version": "1.1.0",
+            "version": "1.0.0",
+            "version": "0.27.2",
+            "version": "0.27.2",
+            "version": "0.27.2",
+            "version": "0.27.2",
+            "version": "0.27.2",
+            "version": "0.27.2",
+            "version": "0.27.2",
+            "version": "0.27.2",
+            "version": "0.27.2",
+			
+[root@ivi:/var/www/vhosts/sensear.music/httpdocs]> cd /var/www/vhosts/sensear.music/httpdocs && node -v && npm -v
+-bash: node: command not found

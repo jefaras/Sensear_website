@@ -4,6 +4,7 @@ import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { Metadata } from "next";
 import Image from "next/image";
+import { ScrollReveal, StaggerChildren } from "@/components/motion";
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: Locale }> }): Promise<Metadata> {
     const { lang } = await params;
@@ -43,15 +44,19 @@ export default async function Blog({
                 <div className="w-full px-6 md:px-12 lg:px-16 relative z-10">
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
                         <div className="flex flex-col justify-center text-left">
-                            <h1 className="text-[2.2rem] sm:text-[3.2rem] md:text-[4rem] lg:text-[4.8rem] font-extrabold text-black mb-6 leading-[1.1] tracking-tight slide-up-1">
-                                {content.hero.title}
-                            </h1>
-                            <p className="text-xl md:text-2xl text-black/60 leading-relaxed max-w-2xl slide-up-2">
-                                {content.hero.subtitle}
-                            </p>
+                            <ScrollReveal>
+                                <h1 className="text-[2.2rem] sm:text-[3.2rem] md:text-[4rem] lg:text-[4.8rem] font-extrabold text-black mb-6 leading-[1.1] tracking-tight">
+                                    {content.hero.title}
+                                </h1>
+                            </ScrollReveal>
+                            <ScrollReveal delay={0.1}>
+                                <p className="text-xl md:text-2xl text-black/60 leading-relaxed max-w-2xl">
+                                    {content.hero.subtitle}
+                                </p>
+                            </ScrollReveal>
                         </div>
 
-                        <div className="w-full slide-up-4 flex justify-end">
+                        <ScrollReveal delay={0.2} className="w-full flex justify-end">
                             <div className="w-full max-w-[740px]">
                                 {featuredArticle ? (
                                     <Link href={`/${lang}/blog/${featuredArticle.link}`} className="group block">
@@ -92,7 +97,7 @@ export default async function Blog({
                                     </div>
                                 )}
                             </div>
-                        </div>
+                        </ScrollReveal>
                     </div>
                 </div>
             </section>
@@ -100,9 +105,11 @@ export default async function Blog({
             <div className="max-w-7xl mx-auto px-6 pb-24">
                 {/* Recent Articles Grid */}
                 <div className="pt-16 mb-16">
-                    <h3 className="text-2xl font-bold text-black mb-10">{content.recent.title}</h3>
-                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {gridArticles.map((article, index) => (
+                    <ScrollReveal>
+                        <h3 className="text-2xl font-bold text-black mb-10">{content.recent.title}</h3>
+                    </ScrollReveal>
+                    <StaggerChildren className="grid md:grid-cols-2 lg:grid-cols-3 gap-8" staggerDelay={0.08}>
+                        {gridArticles.map((article) => (
                             <Link
                                 key={article.link}
                                 href={`/${lang}/blog/${article.link}`}
@@ -138,7 +145,7 @@ export default async function Blog({
                                 </div>
                             </Link>
                         ))}
-                    </div>
+                    </StaggerChildren>
                 </div>
             </div>
         </div>

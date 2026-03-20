@@ -6,6 +6,7 @@ import type { Metadata } from "next";
 import { Card } from "@/components/ui/card";
 import { FinalCTA } from "@/components/sections/FinalCTA";
 import Image from "next/image";
+import { ScrollReveal, StaggerChildren } from "@/components/motion";
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: Locale }> }): Promise<Metadata> {
     const { lang } = await params;
@@ -96,15 +97,19 @@ export default async function SitemapPage({
                 <div className="w-full px-6 md:px-12 lg:px-16 relative z-10">
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
                         <div className="flex flex-col justify-center text-left">
-                            <h1 className="text-[2.2rem] sm:text-[3.2rem] md:text-[4rem] lg:text-[4.8rem] font-extrabold text-black mb-6 leading-[1.1] slide-up-1">
-                                {content.hero.title}
-                            </h1>
-                            <p className="text-xl md:text-2xl text-black/70 leading-relaxed slide-up-2">
-                                {content.hero.subtitle}
-                            </p>
+                            <ScrollReveal>
+                                <h1 className="text-[2.2rem] sm:text-[3.2rem] md:text-[4rem] lg:text-[4.8rem] font-extrabold text-black mb-6 leading-[1.1]">
+                                    {content.hero.title}
+                                </h1>
+                            </ScrollReveal>
+                            <ScrollReveal delay={0.1}>
+                                <p className="text-xl md:text-2xl text-black/70 leading-relaxed">
+                                    {content.hero.subtitle}
+                                </p>
+                            </ScrollReveal>
                         </div>
 
-                        <div className="w-full slide-up-4 flex justify-end">
+                        <ScrollReveal delay={0.2} className="w-full flex justify-end">
                             <div className="w-full max-w-[740px]">
                                 <div className="overflow-hidden rounded-2xl shadow-2xl bg-white aspect-square relative">
                                     <Image
@@ -117,7 +122,7 @@ export default async function SitemapPage({
                                     />
                                 </div>
                             </div>
-                        </div>
+                        </ScrollReveal>
                     </div>
                 </div>
             </section>
@@ -125,7 +130,7 @@ export default async function SitemapPage({
             {/* Sitemap Content */}
             <section className="py-20 bg-[#faebe3]">
                 <div className="max-w-7xl mx-auto px-6">
-                    <div className="grid md:grid-cols-2 gap-8">
+                    <StaggerChildren className="grid md:grid-cols-2 gap-8" staggerDelay={0.1}>
                         {sitemapSections.map((section, index) => (
                             <Card key={index} className="p-8 bg-white shadow-lg">
                                 <div className="flex items-center gap-3 mb-6">
@@ -137,18 +142,20 @@ export default async function SitemapPage({
                                 <ul className="space-y-3">
                                     {section.pages.map((page, pageIndex) => (
                                         <li key={pageIndex}>
-                                            <Link
-                                                href={page.path}
-                                                className="text-black/70 hover:text-black hover:translate-x-2 transition-all inline-block"
-                                            >
-                                                → {page.name}
-                                            </Link>
+                                            <ScrollReveal delay={pageIndex * 0.04}>
+                                                <Link
+                                                    href={page.path}
+                                                    className="text-black/70 hover:text-black hover:translate-x-2 transition-all inline-block"
+                                                >
+                                                    → {page.name}
+                                                </Link>
+                                            </ScrollReveal>
                                         </li>
                                     ))}
                                 </ul>
                             </Card>
                         ))}
-                    </div>
+                    </StaggerChildren>
                 </div>
             </section>
 

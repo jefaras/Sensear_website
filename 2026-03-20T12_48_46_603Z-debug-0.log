@@ -1,0 +1,356 @@
+0 verbose cli /opt/plesk/node/20/bin/node /opt/plesk/node/20/bin/npm
+1 info using npm@10.8.2
+2 info using node@v20.20.1
+3 silly config load:file:/opt/plesk/node/20/lib/node_modules/npm/npmrc
+4 silly config load:file:/var/www/vhosts/sensear.music/httpdocs/.npmrc
+5 silly config load:file:/var/www/vhosts/sensear.music/.npmrc
+6 silly config load:file:/opt/plesk/node/20/etc/npmrc
+7 verbose title npm install
+8 verbose argv "install"
+9 verbose logfile logs-max:10 dir:/var/www/vhosts/sensear.music/.npm/_logs/2026-03-20T12_48_46_603Z-
+10 verbose logfile /var/www/vhosts/sensear.music/.npm/_logs/2026-03-20T12_48_46_603Z-debug-0.log
+11 silly packumentCache heap:549453824 maxSize:137363456 maxEntrySize:68681728
+12 silly logfile start cleaning logs, removing 1 files
+13 silly logfile done cleaning log files
+14 silly idealTree buildDeps
+15 verbose shrinkwrap failed to load node_modules/.package-lock.json out of date, updated: node_modules
+16 silly reify mark retired [ '/var/www/vhosts/sensear.music/httpdocs/node_modules/flatted' ]
+17 silly reify mark retired [ '/var/www/vhosts/sensear.music/httpdocs/node_modules/framer-motion' ]
+18 silly reify mark retired [ '/var/www/vhosts/sensear.music/httpdocs/node_modules/fsevents' ]
+19 silly reify mark retired [ '/var/www/vhosts/sensear.music/httpdocs/node_modules/motion' ]
+20 silly reify mark retired [ '/var/www/vhosts/sensear.music/httpdocs/node_modules/motion-dom' ]
+21 silly reify mark retired [ '/var/www/vhosts/sensear.music/httpdocs/node_modules/motion-utils' ]
+22 silly reify mark retired [ '/var/www/vhosts/sensear.music/httpdocs/node_modules/next' ]
+23 silly reify mark retired [ '/var/www/vhosts/sensear.music/httpdocs/node_modules/@emnapi/core' ]
+24 silly reify mark retired [
+24 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@emnapi/wasi-threads'
+24 silly reify ]
+25 silly reify mark retired [
+25 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@esbuild/aix-ppc64'
+25 silly reify ]
+26 silly reify mark retired [
+26 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@esbuild/android-arm'
+26 silly reify ]
+27 silly reify mark retired [
+27 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@esbuild/android-arm64'
+27 silly reify ]
+28 silly reify mark retired [
+28 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@esbuild/android-x64'
+28 silly reify ]
+29 silly reify mark retired [
+29 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@esbuild/darwin-arm64'
+29 silly reify ]
+30 silly reify mark retired [
+30 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@esbuild/darwin-x64'
+30 silly reify ]
+31 silly reify mark retired [
+31 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@esbuild/freebsd-arm64'
+31 silly reify ]
+32 silly reify mark retired [
+32 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@esbuild/freebsd-x64'
+32 silly reify ]
+33 silly reify mark retired [
+33 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@esbuild/linux-arm'
+33 silly reify ]
+34 silly reify mark retired [
+34 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@esbuild/linux-arm64'
+34 silly reify ]
+35 silly reify mark retired [
+35 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@esbuild/linux-ia32'
+35 silly reify ]
+36 silly reify mark retired [
+36 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@esbuild/linux-loong64'
+36 silly reify ]
+37 silly reify mark retired [
+37 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@esbuild/linux-mips64el'
+37 silly reify ]
+38 silly reify mark retired [
+38 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@esbuild/linux-ppc64'
+38 silly reify ]
+39 silly reify mark retired [
+39 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@esbuild/linux-riscv64'
+39 silly reify ]
+40 silly reify mark retired [
+40 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@esbuild/linux-s390x'
+40 silly reify ]
+41 silly reify mark retired [
+41 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@esbuild/netbsd-arm64'
+41 silly reify ]
+42 silly reify mark retired [
+42 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@esbuild/netbsd-x64'
+42 silly reify ]
+43 silly reify mark retired [
+43 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@esbuild/openbsd-arm64'
+43 silly reify ]
+44 silly reify mark retired [
+44 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@esbuild/openbsd-x64'
+44 silly reify ]
+45 silly reify mark retired [
+45 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@esbuild/openharmony-arm64'
+45 silly reify ]
+46 silly reify mark retired [
+46 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@esbuild/sunos-x64'
+46 silly reify ]
+47 silly reify mark retired [
+47 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@esbuild/win32-arm64'
+47 silly reify ]
+48 silly reify mark retired [
+48 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@esbuild/win32-x64'
+48 silly reify ]
+49 silly reify mark retired [
+49 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@esbuild/win32-ia32'
+49 silly reify ]
+50 silly reify mark retired [
+50 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@img/sharp-darwin-x64'
+50 silly reify ]
+51 silly reify mark retired [
+51 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@img/sharp-darwin-arm64'
+51 silly reify ]
+52 silly reify mark retired [
+52 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@img/sharp-libvips-darwin-arm64'
+52 silly reify ]
+53 silly reify mark retired [
+53 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@img/sharp-libvips-darwin-x64'
+53 silly reify ]
+54 silly reify mark retired [
+54 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@img/sharp-libvips-linux-arm64'
+54 silly reify ]
+55 silly reify mark retired [
+55 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@img/sharp-libvips-linux-ppc64'
+55 silly reify ]
+56 silly reify mark retired [
+56 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@img/sharp-libvips-linux-arm'
+56 silly reify ]
+57 silly reify mark retired [
+57 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@img/sharp-libvips-linux-riscv64'
+57 silly reify ]
+58 silly reify mark retired [
+58 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@img/sharp-libvips-linux-s390x'
+58 silly reify ]
+59 silly reify mark retired [
+59 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@img/sharp-libvips-linuxmusl-arm64'
+59 silly reify ]
+60 silly reify mark retired [
+60 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@img/sharp-linux-arm'
+60 silly reify ]
+61 silly reify mark retired [
+61 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@img/sharp-linux-arm64'
+61 silly reify ]
+62 silly reify mark retired [
+62 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@img/sharp-linux-ppc64'
+62 silly reify ]
+63 silly reify mark retired [
+63 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@img/sharp-linux-riscv64'
+63 silly reify ]
+64 silly reify mark retired [
+64 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@img/sharp-linux-s390x'
+64 silly reify ]
+65 silly reify mark retired [
+65 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@img/sharp-linuxmusl-arm64'
+65 silly reify ]
+66 silly reify mark retired [
+66 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@img/sharp-wasm32'
+66 silly reify ]
+67 silly reify mark retired [
+67 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@img/sharp-win32-arm64'
+67 silly reify ]
+68 silly reify mark retired [
+68 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@img/sharp-win32-x64'
+68 silly reify ]
+69 silly reify mark retired [
+69 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@img/sharp-win32-ia32'
+69 silly reify ]
+70 silly reify mark retired [
+70 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@napi-rs/wasm-runtime'
+70 silly reify ]
+71 silly reify mark retired [ '/var/www/vhosts/sensear.music/httpdocs/node_modules/@next/env' ]
+72 silly reify mark retired [
+72 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@next/swc-darwin-arm64'
+72 silly reify ]
+73 silly reify mark retired [
+73 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@next/swc-darwin-x64'
+73 silly reify ]
+74 silly reify mark retired [
+74 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@next/swc-linux-arm64-gnu'
+74 silly reify ]
+75 silly reify mark retired [
+75 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@next/swc-linux-arm64-musl'
+75 silly reify ]
+76 silly reify mark retired [
+76 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@next/swc-linux-x64-gnu'
+76 silly reify ]
+77 silly reify mark retired [
+77 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@next/swc-win32-arm64-msvc'
+77 silly reify ]
+78 silly reify mark retired [
+78 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@next/swc-linux-x64-musl'
+78 silly reify ]
+79 silly reify mark retired [
+79 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@next/swc-win32-x64-msvc'
+79 silly reify ]
+80 silly reify mark retired [
+80 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@tybys/wasm-util'
+80 silly reify ]
+81 silly reify mark retired [
+81 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@unrs/resolver-binding-android-arm64'
+81 silly reify ]
+82 silly reify mark retired [
+82 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@unrs/resolver-binding-darwin-x64'
+82 silly reify ]
+83 silly reify mark retired [
+83 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@unrs/resolver-binding-darwin-arm64'
+83 silly reify ]
+84 silly reify mark retired [
+84 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@unrs/resolver-binding-android-arm-eabi'
+84 silly reify ]
+85 silly reify mark retired [
+85 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@unrs/resolver-binding-freebsd-x64'
+85 silly reify ]
+86 silly reify mark retired [
+86 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@unrs/resolver-binding-linux-arm-musleabihf'
+86 silly reify ]
+87 silly reify mark retired [
+87 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@unrs/resolver-binding-linux-arm-gnueabihf'
+87 silly reify ]
+88 silly reify mark retired [
+88 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@unrs/resolver-binding-linux-arm64-gnu'
+88 silly reify ]
+89 silly reify mark retired [
+89 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@unrs/resolver-binding-linux-arm64-musl'
+89 silly reify ]
+90 silly reify mark retired [
+90 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@unrs/resolver-binding-linux-ppc64-gnu'
+90 silly reify ]
+91 silly reify mark retired [
+91 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@unrs/resolver-binding-linux-riscv64-gnu'
+91 silly reify ]
+92 silly reify mark retired [
+92 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@unrs/resolver-binding-linux-riscv64-musl'
+92 silly reify ]
+93 silly reify mark retired [
+93 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@unrs/resolver-binding-linux-s390x-gnu'
+93 silly reify ]
+94 silly reify mark retired [
+94 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@unrs/resolver-binding-wasm32-wasi'
+94 silly reify ]
+95 silly reify mark retired [
+95 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@unrs/resolver-binding-win32-arm64-msvc'
+95 silly reify ]
+96 silly reify mark retired [
+96 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@unrs/resolver-binding-win32-x64-msvc'
+96 silly reify ]
+97 silly reify mark retired [
+97 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@unrs/resolver-binding-win32-ia32-msvc'
+97 silly reify ]
+98 silly reify mark retired [
+98 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/playwright/node_modules/fsevents'
+98 silly reify ]
+99 silly reify moves {
+99 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/flatted': '/var/www/vhosts/sensear.music/httpdocs/node_modules/.flatted-NteKa7Sd',
+99 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/framer-motion': '/var/www/vhosts/sensear.music/httpdocs/node_modules/.framer-motion-ghk5QCOD',
+99 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/fsevents': '/var/www/vhosts/sensear.music/httpdocs/node_modules/.fsevents-8vsmn4um',
+99 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/motion': '/var/www/vhosts/sensear.music/httpdocs/node_modules/.motion-PoqQFzgL',
+99 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/motion-dom': '/var/www/vhosts/sensear.music/httpdocs/node_modules/.motion-dom-HCEzUu8c',
+99 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/motion-utils': '/var/www/vhosts/sensear.music/httpdocs/node_modules/.motion-utils-aekEqVAk',
+99 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/next': '/var/www/vhosts/sensear.music/httpdocs/node_modules/.next-NLJYAHLT',
+99 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@emnapi/core': '/var/www/vhosts/sensear.music/httpdocs/node_modules/@emnapi/.core-wvSFQd8c',
+99 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@emnapi/wasi-threads': '/var/www/vhosts/sensear.music/httpdocs/node_modules/@emnapi/.wasi-threads-nRYQQQZs',
+99 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@esbuild/aix-ppc64': '/var/www/vhosts/sensear.music/httpdocs/node_modules/@esbuild/.aix-ppc64-ZrqDRq0N',
+99 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@esbuild/android-arm': '/var/www/vhosts/sensear.music/httpdocs/node_modules/@esbuild/.android-arm-c1QuheMQ',
+99 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@esbuild/android-arm64': '/var/www/vhosts/sensear.music/httpdocs/node_modules/@esbuild/.android-arm64-fk89hfQT',
+99 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@esbuild/android-x64': '/var/www/vhosts/sensear.music/httpdocs/node_modules/@esbuild/.android-x64-BLQguWiC',
+99 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@esbuild/darwin-arm64': '/var/www/vhosts/sensear.music/httpdocs/node_modules/@esbuild/.darwin-arm64-mcii58Qb',
+99 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@esbuild/darwin-x64': '/var/www/vhosts/sensear.music/httpdocs/node_modules/@esbuild/.darwin-x64-y2ii0g0x',
+99 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@esbuild/freebsd-arm64': '/var/www/vhosts/sensear.music/httpdocs/node_modules/@esbuild/.freebsd-arm64-RwKxepUw',
+99 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@esbuild/freebsd-x64': '/var/www/vhosts/sensear.music/httpdocs/node_modules/@esbuild/.freebsd-x64-PCyiPZgo',
+99 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@esbuild/linux-arm': '/var/www/vhosts/sensear.music/httpdocs/node_modules/@esbuild/.linux-arm-5YznGu9A',
+99 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@esbuild/linux-arm64': '/var/www/vhosts/sensear.music/httpdocs/node_modules/@esbuild/.linux-arm64-4zYfD8mH',
+99 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@esbuild/linux-ia32': '/var/www/vhosts/sensear.music/httpdocs/node_modules/@esbuild/.linux-ia32-tgfuh3zE',
+99 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@esbuild/linux-loong64': '/var/www/vhosts/sensear.music/httpdocs/node_modules/@esbuild/.linux-loong64-w1EH6s0d',
+99 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@esbuild/linux-mips64el': '/var/www/vhosts/sensear.music/httpdocs/node_modules/@esbuild/.linux-mips64el-tk8SbeQa',
+99 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@esbuild/linux-ppc64': '/var/www/vhosts/sensear.music/httpdocs/node_modules/@esbuild/.linux-ppc64-pE3slsA4',
+99 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@esbuild/linux-riscv64': '/var/www/vhosts/sensear.music/httpdocs/node_modules/@esbuild/.linux-riscv64-FavDfAgf',
+99 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@esbuild/linux-s390x': '/var/www/vhosts/sensear.music/httpdocs/node_modules/@esbuild/.linux-s390x-EI6guDnx',
+99 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@esbuild/netbsd-arm64': '/var/www/vhosts/sensear.music/httpdocs/node_modules/@esbuild/.netbsd-arm64-3OZvj5xh',
+99 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@esbuild/netbsd-x64': '/var/www/vhosts/sensear.music/httpdocs/node_modules/@esbuild/.netbsd-x64-OtN96N6V',
+99 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@esbuild/openbsd-arm64': '/var/www/vhosts/sensear.music/httpdocs/node_modules/@esbuild/.openbsd-arm64-xxIKxTk8',
+99 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@esbuild/openbsd-x64': '/var/www/vhosts/sensear.music/httpdocs/node_modules/@esbuild/.openbsd-x64-HjGGg0tB',
+99 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@esbuild/openharmony-arm64': '/var/www/vhosts/sensear.music/httpdocs/node_modules/@esbuild/.openharmony-arm64-UIdazfXG',
+99 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@esbuild/sunos-x64': '/var/www/vhosts/sensear.music/httpdocs/node_modules/@esbuild/.sunos-x64-kO1qmppH',
+99 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@esbuild/win32-arm64': '/var/www/vhosts/sensear.music/httpdocs/node_modules/@esbuild/.win32-arm64-FbMQinMA',
+99 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@esbuild/win32-x64': '/var/www/vhosts/sensear.music/httpdocs/node_modules/@esbuild/.win32-x64-YR0HVAfy',
+99 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@esbuild/win32-ia32': '/var/www/vhosts/sensear.music/httpdocs/node_modules/@esbuild/.win32-ia32-nPknBJJK',
+99 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@img/sharp-darwin-x64': '/var/www/vhosts/sensear.music/httpdocs/node_modules/@img/.sharp-darwin-x64-rDM4kFsg',
+99 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@img/sharp-darwin-arm64': '/var/www/vhosts/sensear.music/httpdocs/node_modules/@img/.sharp-darwin-arm64-apnRRqb5',
+99 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@img/sharp-libvips-darwin-arm64': '/var/www/vhosts/sensear.music/httpdocs/node_modules/@img/.sharp-libvips-darwin-arm64-YcRjcoOK',
+99 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@img/sharp-libvips-darwin-x64': '/var/www/vhosts/sensear.music/httpdocs/node_modules/@img/.sharp-libvips-darwin-x64-haqjFWN7',
+99 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@img/sharp-libvips-linux-arm64': '/var/www/vhosts/sensear.music/httpdocs/node_modules/@img/.sharp-libvips-linux-arm64-epzm5Ne8',
+99 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@img/sharp-libvips-linux-ppc64': '/var/www/vhosts/sensear.music/httpdocs/node_modules/@img/.sharp-libvips-linux-ppc64-YfjFwWmt',
+99 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@img/sharp-libvips-linux-arm': '/var/www/vhosts/sensear.music/httpdocs/node_modules/@img/.sharp-libvips-linux-arm-u4kkWXOU',
+99 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@img/sharp-libvips-linux-riscv64': '/var/www/vhosts/sensear.music/httpdocs/node_modules/@img/.sharp-libvips-linux-riscv64-ZrvZTAEU',
+99 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@img/sharp-libvips-linux-s390x': '/var/www/vhosts/sensear.music/httpdocs/node_modules/@img/.sharp-libvips-linux-s390x-J8qEzXY3',
+99 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@img/sharp-libvips-linuxmusl-arm64': '/var/www/vhosts/sensear.music/httpdocs/node_modules/@img/.sharp-libvips-linuxmusl-arm64-xYoOIPXP',
+99 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@img/sharp-linux-arm': '/var/www/vhosts/sensear.music/httpdocs/node_modules/@img/.sharp-linux-arm-DtPt2w8f',
+99 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@img/sharp-linux-arm64': '/var/www/vhosts/sensear.music/httpdocs/node_modules/@img/.sharp-linux-arm64-UKZgwFju',
+99 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@img/sharp-linux-ppc64': '/var/www/vhosts/sensear.music/httpdocs/node_modules/@img/.sharp-linux-ppc64-LtcPdNCO',
+99 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@img/sharp-linux-riscv64': '/var/www/vhosts/sensear.music/httpdocs/node_modules/@img/.sharp-linux-riscv64-1mHCq1Xj',
+99 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@img/sharp-linux-s390x': '/var/www/vhosts/sensear.music/httpdocs/node_modules/@img/.sharp-linux-s390x-gFShU6W4',
+99 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@img/sharp-linuxmusl-arm64': '/var/www/vhosts/sensear.music/httpdocs/node_modules/@img/.sharp-linuxmusl-arm64-0ybqvtJ5',
+99 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@img/sharp-wasm32': '/var/www/vhosts/sensear.music/httpdocs/node_modules/@img/.sharp-wasm32-BAFDzInT',
+99 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@img/sharp-win32-arm64': '/var/www/vhosts/sensear.music/httpdocs/node_modules/@img/.sharp-win32-arm64-hiHLpNim',
+99 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@img/sharp-win32-x64': '/var/www/vhosts/sensear.music/httpdocs/node_modules/@img/.sharp-win32-x64-Q1aGhtF1',
+99 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@img/sharp-win32-ia32': '/var/www/vhosts/sensear.music/httpdocs/node_modules/@img/.sharp-win32-ia32-NQODH4p1',
+99 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@napi-rs/wasm-runtime': '/var/www/vhosts/sensear.music/httpdocs/node_modules/@napi-rs/.wasm-runtime-eL3l3RfD',
+99 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@next/env': '/var/www/vhosts/sensear.music/httpdocs/node_modules/@next/.env-6d61ufZi',
+99 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@next/swc-darwin-arm64': '/var/www/vhosts/sensear.music/httpdocs/node_modules/@next/.swc-darwin-arm64-Vv5BVgNn',
+99 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@next/swc-darwin-x64': '/var/www/vhosts/sensear.music/httpdocs/node_modules/@next/.swc-darwin-x64-nw4IeXRn',
+99 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@next/swc-linux-arm64-gnu': '/var/www/vhosts/sensear.music/httpdocs/node_modules/@next/.swc-linux-arm64-gnu-gVLTSWfb',
+99 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@next/swc-linux-arm64-musl': '/var/www/vhosts/sensear.music/httpdocs/node_modules/@next/.swc-linux-arm64-musl-RWoOpqzm',
+99 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@next/swc-linux-x64-gnu': '/var/www/vhosts/sensear.music/httpdocs/node_modules/@next/.swc-linux-x64-gnu-Oq1sXq2Z',
+99 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@next/swc-win32-arm64-msvc': '/var/www/vhosts/sensear.music/httpdocs/node_modules/@next/.swc-win32-arm64-msvc-rbNimzSb',
+99 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@next/swc-linux-x64-musl': '/var/www/vhosts/sensear.music/httpdocs/node_modules/@next/.swc-linux-x64-musl-YQIxX8gW',
+99 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@next/swc-win32-x64-msvc': '/var/www/vhosts/sensear.music/httpdocs/node_modules/@next/.swc-win32-x64-msvc-xf59pXyZ',
+99 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@tybys/wasm-util': '/var/www/vhosts/sensear.music/httpdocs/node_modules/@tybys/.wasm-util-BiEFsBvF',
+99 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@unrs/resolver-binding-android-arm64': '/var/www/vhosts/sensear.music/httpdocs/node_modules/@unrs/.resolver-binding-android-arm64-26SGtiVe',
+99 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@unrs/resolver-binding-darwin-x64': '/var/www/vhosts/sensear.music/httpdocs/node_modules/@unrs/.resolver-binding-darwin-x64-sK9URNqt',
+99 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@unrs/resolver-binding-darwin-arm64': '/var/www/vhosts/sensear.music/httpdocs/node_modules/@unrs/.resolver-binding-darwin-arm64-94tmhrbD',
+99 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@unrs/resolver-binding-android-arm-eabi': '/var/www/vhosts/sensear.music/httpdocs/node_modules/@unrs/.resolver-binding-android-arm-eabi-jF0qtRFC',
+99 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@unrs/resolver-binding-freebsd-x64': '/var/www/vhosts/sensear.music/httpdocs/node_modules/@unrs/.resolver-binding-freebsd-x64-x8EvV4FY',
+99 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@unrs/resolver-binding-linux-arm-musleabihf': '/var/www/vhosts/sensear.music/httpdocs/node_modules/@unrs/.resolver-binding-linux-arm-musleabihf-dZGmnLWc',
+99 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@unrs/resolver-binding-linux-arm-gnueabihf': '/var/www/vhosts/sensear.music/httpdocs/node_modules/@unrs/.resolver-binding-linux-arm-gnueabihf-uNVY55jP',
+99 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@unrs/resolver-binding-linux-arm64-gnu': '/var/www/vhosts/sensear.music/httpdocs/node_modules/@unrs/.resolver-binding-linux-arm64-gnu-S4FpMGPL',
+99 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@unrs/resolver-binding-linux-arm64-musl': '/var/www/vhosts/sensear.music/httpdocs/node_modules/@unrs/.resolver-binding-linux-arm64-musl-zCI1Km2T',
+99 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@unrs/resolver-binding-linux-ppc64-gnu': '/var/www/vhosts/sensear.music/httpdocs/node_modules/@unrs/.resolver-binding-linux-ppc64-gnu-Fo7iOAmN',
+99 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@unrs/resolver-binding-linux-riscv64-gnu': '/var/www/vhosts/sensear.music/httpdocs/node_modules/@unrs/.resolver-binding-linux-riscv64-gnu-08mZEXi6',
+99 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@unrs/resolver-binding-linux-riscv64-musl': '/var/www/vhosts/sensear.music/httpdocs/node_modules/@unrs/.resolver-binding-linux-riscv64-musl-fiLWctVs',
+99 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@unrs/resolver-binding-linux-s390x-gnu': '/var/www/vhosts/sensear.music/httpdocs/node_modules/@unrs/.resolver-binding-linux-s390x-gnu-xttZphwv',
+99 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@unrs/resolver-binding-wasm32-wasi': '/var/www/vhosts/sensear.music/httpdocs/node_modules/@unrs/.resolver-binding-wasm32-wasi-BbpQHMrT',
+99 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@unrs/resolver-binding-win32-arm64-msvc': '/var/www/vhosts/sensear.music/httpdocs/node_modules/@unrs/.resolver-binding-win32-arm64-msvc-GUFRoyUN',
+99 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@unrs/resolver-binding-win32-x64-msvc': '/var/www/vhosts/sensear.music/httpdocs/node_modules/@unrs/.resolver-binding-win32-x64-msvc-P93Xk1SH',
+99 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/@unrs/resolver-binding-win32-ia32-msvc': '/var/www/vhosts/sensear.music/httpdocs/node_modules/@unrs/.resolver-binding-win32-ia32-msvc-UJ6MsSxl',
+99 silly reify   '/var/www/vhosts/sensear.music/httpdocs/node_modules/playwright/node_modules/fsevents': '/var/www/vhosts/sensear.music/httpdocs/node_modules/playwright/node_modules/.fsevents-bWeulmhN'
+99 silly reify }
+100 verbose stack Error: ENOTEMPTY: directory not empty, rename '/var/www/vhosts/sensear.music/httpdocs/node_modules/flatted' -> '/var/www/vhosts/sensear.music/httpdocs/node_modules/.flatted-NteKa7Sd'
+100 verbose stack     at async Object.rename (node:internal/fs/promises:777:10)
+100 verbose stack     at async moveFile (/opt/plesk/node/20/lib/node_modules/npm/node_modules/@npmcli/fs/lib/move-file.js:30:5)
+100 verbose stack     at async Promise.allSettled (index 0)
+100 verbose stack     at async [reifyPackages] (/opt/plesk/node/20/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/reify.js:325:11)
+100 verbose stack     at async Arborist.reify (/opt/plesk/node/20/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/reify.js:142:5)
+100 verbose stack     at async Install.exec (/opt/plesk/node/20/lib/node_modules/npm/lib/commands/install.js:150:5)
+100 verbose stack     at async Npm.exec (/opt/plesk/node/20/lib/node_modules/npm/lib/npm.js:207:9)
+100 verbose stack     at async module.exports (/opt/plesk/node/20/lib/node_modules/npm/lib/cli/entry.js:74:5)
+101 error code ENOTEMPTY
+102 error syscall rename
+103 error path /var/www/vhosts/sensear.music/httpdocs/node_modules/flatted
+104 error dest /var/www/vhosts/sensear.music/httpdocs/node_modules/.flatted-NteKa7Sd
+105 error errno -39
+106 error ENOTEMPTY: directory not empty, rename '/var/www/vhosts/sensear.music/httpdocs/node_modules/flatted' -> '/var/www/vhosts/sensear.music/httpdocs/node_modules/.flatted-NteKa7Sd'
+107 silly unfinished npm timer reify 1774010928340
+108 silly unfinished npm timer reify:retireShallow 1774010928946
+109 verbose cwd /var/www/vhosts/sensear.music/httpdocs
+110 verbose os Linux 4.18.0-553.54.1.lve.el8.x86_64
+111 verbose node v20.20.1
+112 verbose npm  v10.8.2
+113 verbose exit -39
+114 verbose code -39
+115 error A complete log of this run can be found in: /var/www/vhosts/sensear.music/.npm/_logs/2026-03-20T12_48_46_603Z-debug-0.log

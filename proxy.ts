@@ -13,12 +13,14 @@ function generateNonce(): string {
 }
 
 function buildCsp(nonce: string): string {
+    const isDevelopment = process.env.NODE_ENV !== 'production'
+
     return [
         "default-src 'self'",
         "base-uri 'self'",
         "frame-ancestors 'self'",
         "img-src 'self' data: blob: https:",
-        `script-src 'self' 'nonce-${nonce}' https://www.google.com/recaptcha/ https://www.gstatic.com/recaptcha/`,
+        `script-src 'self' 'nonce-${nonce}'${isDevelopment ? " 'unsafe-eval'" : ''} https://www.google.com/recaptcha/ https://www.gstatic.com/recaptcha/`,
         "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
         "font-src 'self' data: https://fonts.gstatic.com",
         "frame-src 'self' https://www.google.com/recaptcha/ https://www.gstatic.com/recaptcha/ https://w.soundcloud.com",
@@ -51,6 +53,12 @@ export function proxy(request: NextRequest) {
     requestHeaders.set('x-nonce', nonce)
     requestHeaders.set('x-pathname', pathname)
 
+    if (pathname === '/') {
+        const response = NextResponse.redirect(new URL('/en', request.url), 308)
+        response.headers.set('Content-Security-Policy', csp)
+        return response
+    }
+
     // Check if there is any supported locale in the pathname
     const pathnameIsMissingLocale = i18n.locales.every(
         (locale) => !pathname.startsWith(`/${locale}/`) && pathname !== `/${locale}`
@@ -59,15 +67,11 @@ export function proxy(request: NextRequest) {
     // Redirect if there is no locale
     if (pathnameIsMissingLocale) {
         const locale = getLocale(request)
+        const localizedPath = pathname === '/' ? `/${locale}` : `/${locale}${pathname}`
 
         // e.g. incoming request is /products
         // The new URL is now /el/products
-        const response = NextResponse.redirect(
-            new URL(
-                `/${locale}${pathname.startsWith('/') ? '' : '/'}${pathname}`,
-                request.url
-            )
-        )
+        const response = NextResponse.redirect(new URL(localizedPath, request.url), 308)
         response.headers.set('Content-Security-Policy', csp)
         return response
     }
