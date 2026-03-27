@@ -7,6 +7,7 @@ import { usePathname } from "next/navigation";
 import { Menu, X, Globe } from "lucide-react";
 import { cn } from "@/lib/utils";
 import type { Locale } from "@/lib/i18n";
+import { getAlternatePath, getLocalizedPath } from "@/lib/localized-path";
 
 interface NavbarProps {
     lang: Locale;
@@ -49,23 +50,17 @@ export function Navbar({ lang, navigation }: NavbarProps) {
 
     const isActive = (path: string) => pathname === path;
 
-    const switchLang = () => {
-        if (!pathname) return "/";
-        const segments = pathname.split("/");
-        const currentLang = segments[1] as Locale;
-        const newLang = currentLang === "en" ? "el" : "en";
-        segments[1] = newLang;
-        return segments.join("/");
-    };
+    const switchLang = () => getAlternatePath(pathname, lang === "en" ? "el" : "en");
 
     const targetLang = lang === "en" ? "el" : "en";
     const targetLangLabel = lang === "en" ? "GR" : "EN";
+    const localizedPath = (path: string) => getLocalizedPath(lang, path);
 
     const links = [
-        { href: `/${lang}`, label: navigation.home },
-        { href: `/${lang}/services`, label: navigation.services },
-        { href: `/${lang}/industries`, label: navigation.industries },
-        { href: `/${lang}/case-studies`, label: navigation.case_studies },
+        { href: localizedPath('/'), label: navigation.home },
+        { href: localizedPath('/services'), label: navigation.services },
+        { href: localizedPath('/industries'), label: navigation.industries },
+        { href: localizedPath('/case-studies'), label: navigation.case_studies },
     ];
 
     return (
@@ -81,7 +76,7 @@ export function Navbar({ lang, navigation }: NavbarProps) {
         >
             <div className="max-w-[1440px] mx-auto px-6 md:px-12 flex items-center justify-between">
                 {/* Logo with SENSEAR text */}
-                <Link href={`/${lang}`} className="group flex items-center gap-3 shrink-0">
+                <Link href={localizedPath('/')} className="group flex items-center gap-3 shrink-0">
                     <div className="relative w-16 h-16">
                         <Image
                             src={scrolled || isOpen
@@ -120,35 +115,35 @@ export function Navbar({ lang, navigation }: NavbarProps) {
                     ))}
 
                     <Link
-                        href={`/${lang}/blog`}
+                        href={localizedPath('/blog')}
                         className={cn(
                             "font-jakarta text-base font-bold tracking-wide transition-all hover:underline decoration-1 underline-offset-4",
                             scrolled || isOpen ? "text-white/90 hover:text-white" : "text-black/80 hover:text-black",
-                            isActive(`/${lang}/blog`) && "underline"
+                            isActive(localizedPath('/blog')) && "underline"
                         )}
                     >
                         {navigation.blog}
                     </Link>
 
                     <Link
-                        href={`/${lang}/about`}
+                        href={localizedPath('/about')}
                         className={cn(
                             "font-jakarta text-base font-bold tracking-wide transition-all hover:underline decoration-1 underline-offset-4",
                             scrolled || isOpen ? "text-white/90 hover:text-white" : "text-black/80 hover:text-black",
-                            isActive(`/${lang}/about`) && "underline"
+                            isActive(localizedPath('/about')) && "underline"
                         )}
                     >
                         {navigation.about}
                     </Link>
 
                     <Link
-                        href={`/${lang}/contact`}
+                        href={localizedPath('/contact')}
                         className={cn(
                             "rounded-full px-6 py-2 border font-jakarta text-base font-bold tracking-wide transition-all hover:underline decoration-1 underline-offset-4",
                             scrolled || isOpen
                                 ? "border-white/30 text-white/90 hover:text-white hover:border-white/50"
                                 : "border-black/30 text-black/80 hover:text-black hover:border-black/50",
-                            isActive(`/${lang}/contact`) && "underline"
+                            isActive(localizedPath('/contact')) && "underline"
                         )}
                     >
                         {navigation.contact}
@@ -202,7 +197,7 @@ export function Navbar({ lang, navigation }: NavbarProps) {
                     ))}
 
                     <Link
-                        href={`/${lang}/contact`}
+                        href={localizedPath('/contact')}
                         onClick={() => setIsOpen(false)}
                         className="text-lg font-jakarta font-bold py-3 border-b border-white/10 text-white/70"
                     >
@@ -210,22 +205,22 @@ export function Navbar({ lang, navigation }: NavbarProps) {
                     </Link>
 
                     <Link
-                        href={`/${lang}/blog`}
+                        href={localizedPath('/blog')}
                         onClick={() => setIsOpen(false)}
                         className={cn(
                             "text-lg font-jakarta font-bold py-3 border-b border-white/10",
-                            isActive(`/${lang}/blog`) ? "text-white" : "text-white/70"
+                            isActive(localizedPath('/blog')) ? "text-white" : "text-white/70"
                         )}
                     >
                         {navigation.blog}
                     </Link>
 
                     <Link
-                        href={`/${lang}/about`}
+                        href={localizedPath('/about')}
                         onClick={() => setIsOpen(false)}
                         className={cn(
                             "text-lg font-jakarta font-bold py-3 border-b border-white/10",
-                            isActive(`/${lang}/about`) ? "text-white" : "text-white/70"
+                            isActive(localizedPath('/about')) ? "text-white" : "text-white/70"
                         )}
                     >
                         {navigation.about}

@@ -34,8 +34,18 @@ const nextConfig = {
             },
             {
                 source: '/el/',
-                destination: '/el',
+                destination: '/',
                 permanent: true, // 308 - permanent redirect
+            },
+            {
+                source: '/el',
+                destination: '/',
+                permanent: true,
+            },
+            {
+                source: '/el/:path*',
+                destination: '/:path*',
+                permanent: true,
             },
             // Fix 404 error: old URL structure for hotels-resorts
             {

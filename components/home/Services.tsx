@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import { Locale } from "@/lib/i18n";
 import { ScrollReveal, StaggerChildren } from '@/components/motion';
+import { getLocalizedPath } from '@/lib/localized-path';
 
 interface ServicesProps {
     lang: Locale;
@@ -19,6 +20,8 @@ interface ServicesProps {
 }
 
 export default function Services({ lang, title, subtitle, items, cta }: ServicesProps) {
+    const localizedPath = (path: string) => getLocalizedPath(lang, path);
+
     return (
         <section className="py-24" style={{ backgroundImage: "url('/images/backgrounds/background-texture-warm-silver.jpg')", backgroundSize: 'cover', backgroundPosition: 'center' }}>
             <div className="max-w-[1440px] mx-auto px-6 md:px-12">
@@ -48,7 +51,7 @@ export default function Services({ lang, title, subtitle, items, cta }: Services
                         <StaggerChildren staggerDelay={0.15}>
                             {items.map((item, idx) => (
                                 <div key={idx} className="mb-8">
-                                    <Link href={`/${lang}/${item.link}`} className="text-2xl md:text-3xl font-bold text-black block mb-1 group w-fit">
+                                    <Link href={localizedPath(`/${item.link}`)} className="text-2xl md:text-3xl font-bold text-black block mb-1 group w-fit">
                                         <span className="group-hover:translate-x-1 group-hover:underline transition-transform inline-block decoration-1 underline-offset-4">{item.title}</span> <ArrowRight className="inline ml-2 w-5 h-5 opacity-0 group-hover:opacity-100 transition-opacity" />
                                     </Link>
                                     <p className="text-lg md:text-xl text-black/60 leading-relaxed">
@@ -58,7 +61,7 @@ export default function Services({ lang, title, subtitle, items, cta }: Services
                             ))}
                         </StaggerChildren>
 
-                        <Link href={`/${lang}/services`}>
+                        <Link href={localizedPath('/services')}>
                             <button className="group relative bg-transparent border-2 border-black text-black hover:bg-black hover:text-white px-14 py-6 text-lg font-semibold rounded-full transition-all duration-300 overflow-hidden flex items-center">
                                 <span className="transition-transform duration-300 group-hover:-translate-x-3 inline-block">
                                     {cta}

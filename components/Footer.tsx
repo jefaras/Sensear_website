@@ -2,10 +2,12 @@ import Link from "next/link";
 import { Instagram, Facebook, Mail, Phone, Linkedin } from "lucide-react";
 import { Locale } from "@/lib/i18n";
 import { NewsletterForm } from "@/components/NewsletterForm";
+import { getLocalizedPath } from "@/lib/localized-path";
 
 export function Footer({ lang, dict }: { lang: Locale, dict: any }) {
     const footer = dict.footer;
     const nav = footer.nav;
+    const localizedPath = (path: string) => getLocalizedPath(lang, path);
 
     return (
         <footer role="contentinfo" aria-label="Site footer" className="bg-black text-white relative overflow-hidden">
@@ -26,7 +28,7 @@ export function Footer({ lang, dict }: { lang: Locale, dict: any }) {
 
                     {/* Brand Column */}
                     <div className="max-w-sm">
-                        <Link href={`/${lang}`} className="flex items-center gap-3 group mb-6 w-fit">
+                        <Link href={localizedPath('/')} className="flex items-center gap-3 group mb-6 w-fit">
                             <img
                                 src="/images/brand/sensear-logo-white.png"
                                 alt="SensEar"
@@ -100,14 +102,14 @@ export function Footer({ lang, dict }: { lang: Locale, dict: any }) {
 
                     {/* Services */}
                     <div>
-                        <Link href={`/${lang}/services`} className="text-sm font-semibold text-[#faebe3] mb-4 uppercase tracking-wider hover:underline decoration-1 underline-offset-4 inline-block font-jakarta">
+                        <Link href={localizedPath('/services')} className="text-sm font-semibold text-[#faebe3] mb-4 uppercase tracking-wider hover:underline decoration-1 underline-offset-4 inline-block font-jakarta">
                             {nav.services.title}
                         </Link>
                         <div className="space-y-2">
                             {nav.services.items.map((item: any) => (
                                 <Link
                                     key={item.link}
-                                    href={`/${lang}/${item.link}`}
+                                    href={localizedPath(`/${item.link}`)}
                                     className="block text-white/70 hover:text-[#faebe3] transition-colors text-base hover:underline decoration-1 underline-offset-4 font-jakarta"
                                 >
                                     {item.label}
@@ -118,14 +120,14 @@ export function Footer({ lang, dict }: { lang: Locale, dict: any }) {
 
                     {/* Industries */}
                     <div>
-                        <Link href={`/${lang}/industries`} className="text-sm font-semibold text-[#faebe3] mb-4 uppercase tracking-wider hover:underline decoration-1 underline-offset-4 inline-block font-jakarta">
+                        <Link href={localizedPath('/industries')} className="text-sm font-semibold text-[#faebe3] mb-4 uppercase tracking-wider hover:underline decoration-1 underline-offset-4 inline-block font-jakarta">
                             {nav.industries.title}
                         </Link>
                         <div className="space-y-2">
                             {nav.industries.items.map((item: any) => (
                                 <Link
                                     key={item.link}
-                                    href={`/${lang}/${item.link}`}
+                                    href={localizedPath(`/${item.link}`)}
                                     className="block text-white/70 hover:text-[#faebe3] transition-colors text-base hover:underline decoration-1 underline-offset-4 font-jakarta"
                                 >
                                     {item.label}
@@ -141,7 +143,7 @@ export function Footer({ lang, dict }: { lang: Locale, dict: any }) {
                             {nav.company.items.map((item: any) => (
                                 <Link
                                     key={item.link}
-                                    href={`/${lang}/${item.link}`}
+                                    href={localizedPath(`/${item.link}`)}
                                     className="block text-white/70 hover:text-[#faebe3] transition-colors text-base hover:underline decoration-1 underline-offset-4 font-jakarta"
                                 >
                                     {item.label}
@@ -159,9 +161,9 @@ export function Footer({ lang, dict }: { lang: Locale, dict: any }) {
                 <div className="max-w-[1440px] mx-auto px-6 md:px-12 py-4 flex flex-col sm:flex-row justify-between items-center gap-2 text-xs text-white/40">
                     <p>{footer.rights}</p>
                     <div className="flex gap-4">
-                        <Link href={`/${lang}/privacy`} className="hover:text-white transition-colors">{nav.policy.privacy}</Link>
+                        <Link href={localizedPath('/privacy')} className="hover:text-white transition-colors">{nav.policy.privacy}</Link>
                         <span className="text-white/20">|</span>
-                        <Link href={`/${lang}/terms`} className="hover:text-white transition-colors">{nav.policy.terms}</Link>
+                        <Link href={localizedPath('/terms')} className="hover:text-white transition-colors">{nav.policy.terms}</Link>
                     </div>
                 </div>
             </div>

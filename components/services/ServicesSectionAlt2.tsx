@@ -10,6 +10,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
+import { getLocalizedPath } from "@/lib/localized-path";
 
 interface ServicesSectionAlt2Props {
     content: {
@@ -34,6 +35,8 @@ interface ServicesSectionAlt2Props {
 }
 
 export function ServicesSectionAlt2({ content, lang }: ServicesSectionAlt2Props) {
+    const localizedPath = (path: string) => getLocalizedPath(lang === 'en' ? 'en' : 'el', path);
+
     return (
         <div className="space-y-0 divide-y divide-black/10">
             {/* Sonic Strategy Row */}
@@ -51,7 +54,7 @@ export function ServicesSectionAlt2({ content, lang }: ServicesSectionAlt2Props)
                     <p className="text-sm text-black/60 leading-relaxed mb-3 hidden sm:block">{content.services.strategy.desc}</p>
                     <div className="flex flex-col sm:flex-row sm:items-center gap-3">
                         <p className="text-sm text-black/50 leading-relaxed sm:flex-1" dangerouslySetInnerHTML={{ __html: content.services.strategy.ideal_for }} />
-                        <Link href={`/${lang}/contact?interest=sonic-identity`} className="flex-shrink-0">
+                        <Link href={localizedPath('/contact?interest=sonic-identity')} className="flex-shrink-0">
                             <Button
                                 variant="outline"
                                 className="group bg-transparent border border-black/30 text-black hover:bg-black hover:text-white px-4 py-2 text-sm font-medium rounded-full transition-all duration-300"
@@ -79,7 +82,7 @@ export function ServicesSectionAlt2({ content, lang }: ServicesSectionAlt2Props)
                     <p className="text-sm text-black/60 leading-relaxed mb-3 hidden sm:block">{content.services.upgrades.desc}</p>
                     <div className="flex flex-col sm:flex-row sm:items-center gap-3">
                         <p className="text-sm text-black/50 leading-relaxed sm:flex-1" dangerouslySetInnerHTML={{ __html: content.services.upgrades.ideal_for }} />
-                        <Link href={`/${lang}/contact?interest=audio-upgrades`} className="flex-shrink-0">
+                        <Link href={localizedPath('/contact?interest=audio-upgrades')} className="flex-shrink-0">
                             <Button
                                 variant="outline"
                                 className="group bg-transparent border border-black/30 text-black hover:bg-black hover:text-white px-4 py-2 text-sm font-medium rounded-full transition-all duration-300"

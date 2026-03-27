@@ -279,26 +279,25 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: Lo
                                         Katerina Karali
                                     </h3>
                                     <p className="text-xl font-semibold text-black/70 mb-10">
-                                        {lang === 'el' ? 'Συνεργάτιδα, DJ & Μουσική Επιμελήτρια' : 'Contributing associate, DJ, Music curator'}
+                                        {lang === 'el' ? 'Συνεργάτιδα, DJ, Μουσική Επιμελήτρια & Music Supervisor' : 'Contributing associate, DJ, Music curator & Music supervisor'}
                                     </p>
 
                                     <div>
                                         <p className="text-lg md:text-xl text-black/60 leading-relaxed mb-4">
                                             {lang === 'el'
-                                                ? 'Συνδυάζει τον οπτικό σχεδιασμό με την ηχητική αφήγηση, με εκλεπτυσμένη καλλιτεχνική ματιά.'
-                                                : 'Kat combines visual design & sound narrative with a refined artistic sensibility.'
+                                                ? 'Η Κατερίνα κινείται ανάμεσα στον ήχο και την εικόνα με εκλεπτυσμένη επιμελητική ματιά, συνδυάζοντας το ένστικτο της επιλογής με έντονη αίσθηση ατμόσφαιρας, αφήγησης και διάθεσης.'
+                                                : 'Katerina moves between sound and image with a refined curatorial sensibility, blending intuitive selection with a strong sense of atmosphere, narrative and mood.'
                                             }
                                         </p>
-                                        <p className="text-lg md:text-xl text-black/60 leading-relaxed mb-4">
-                                            {lang === 'el'
-                                                ? 'Έμπειρη multimedia art director, επιμελείται ηχητικά τοπία για ταινίες, εκθέσεις και ιδιωτικές εκδηλώσεις.'
-                                                : 'A veteran multimedia art director, she helps curate soundscapes for films, exhibitions & private events.'
-                                            }
-                                        </p>
+                                        <p className="text-lg md:text-xl text-black/60 leading-relaxed mb-4" dangerouslySetInnerHTML={{
+                                            __html: lang === 'el'
+                                                ? 'Ως music selector, supervisor & DJ, έχει διαμορφώσει soundtracks για ντοκιμαντέρ, τηλεοπτικές σειρές και ειδικές εκδηλώσεις, ενώ φέρνει και την οπτική της προσέγγιση ως graphic designer, collage artist & illustrator στον τρόπο που δουλεύει με τον ήχο. Έχει βρεθεί στα ίδια lineups με την <strong>Colleen “Cosmo” Murphy</strong>, τον <strong>Barış K</strong>, τον <strong>Disco Bambino</strong> και άλλους καταξιωμένους selectors.'
+                                                : 'As a music selector, supervisor & DJ, she has shaped soundtracks for documentaries, TV series and special events, while bringing her visual perspective as a graphic designer, collage artist & illustrator into her work with sound. She has played with <strong>Colleen “Cosmo” Murphy</strong>, <strong>Barış K</strong>, <strong>Disco Bambino</strong> and other respected selectors.'
+                                        }} />
                                         <p className="text-lg md:text-xl text-black/60 leading-relaxed">
                                             {lang === 'el'
-                                                ? 'Γνωστή για το ένστικτο και την αγάπη της για σπάνια grooves, προσθέτει βάθος, υφή και απρόσμενο χαρακτήρα στη SensEar.'
-                                                : 'Known for her instinctive selections & taste for rare grooves, she brings depth, texture and a touch of the unexpected to SensEar.'
+                                                ? 'Στη SensEar, φέρνει βάθος, υφή & πολιτισμική ευαισθησία, με σπάνιες επιλογές, κινηματογραφικό ένστικτο και μια απρόσμενη αιχμή στον ήχο της ομάδας.'
+                                                : 'At SensEar, she brings depth, texture & cultural sensitivity, adding rare selections, cinematic instinct and an unexpected edge to the team\'s carefully composed listening environments.'
                                             }
                                         </p>
                                     </div>

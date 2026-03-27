@@ -7,6 +7,7 @@ import { Card } from "@/components/ui/card";
 import { FinalCTA } from "@/components/sections/FinalCTA";
 import Image from "next/image";
 import { ScrollReveal, StaggerChildren } from "@/components/motion";
+import { getLocalizedPath } from "@/lib/localized-path";
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: Locale }> }): Promise<Metadata> {
     const { lang } = await params;
@@ -25,41 +26,42 @@ export default async function SitemapPage({
     const { lang } = await params;
     const dict = await getDictionary(lang);
     const content = dict.sitemap_page;
+    const localizedPath = (path: string) => getLocalizedPath(lang, path);
 
     const sitemapSections = [
         {
             title: content.sections.main,
             icon: Home,
             pages: [
-                { name: dict.navigation.home, path: `/${lang}` },
-                { name: dict.navigation.services, path: `/${lang}/services` },
-                { name: dict.navigation.industries, path: `/${lang}/industries` },
-                { name: dict.navigation.case_studies, path: `/${lang}/case-studies` },
-                { name: dict.navigation.about, path: `/${lang}/about` },
-                { name: dict.navigation.contact, path: `/${lang}/contact` },
-                { name: dict.navigation.blog, path: `/${lang}/blog` },
-                { name: "FAQ", path: `/${lang}/faq` } // FAQ key missing in nav? I'll use dict.footer.nav.company.items find? Or just hardcode logic or add to nav. I added it to footer. I'll use footer label.
+                { name: dict.navigation.home, path: localizedPath('/') },
+                { name: dict.navigation.services, path: localizedPath('/services') },
+                { name: dict.navigation.industries, path: localizedPath('/industries') },
+                { name: dict.navigation.case_studies, path: localizedPath('/case-studies') },
+                { name: dict.navigation.about, path: localizedPath('/about') },
+                { name: dict.navigation.contact, path: localizedPath('/contact') },
+                { name: dict.navigation.blog, path: localizedPath('/blog') },
+                { name: "FAQ", path: localizedPath('/faq') } // FAQ key missing in nav? I'll use dict.footer.nav.company.items find? Or just hardcode logic or add to nav. I added it to footer. I'll use footer label.
             ]
         },
         {
             title: content.sections.services,
             icon: Briefcase,
             pages: [
-                { name: dict.services_page.hero.title.split(',')[0], path: `/${lang}/services` }, // Intro
-                { name: dict.services_page.services.playlists.title, path: `/${lang}/services/signature-playlists` },
-                { name: dict.services_page.services.events.title, path: `/${lang}/services/event-soundtracks` },
-                { name: dict.services_page.services.strategy.title, path: `/${lang}/services/sonic-identity` },
-                { name: dict.services_page.services.upgrades.title, path: `/${lang}/services/audio-upgrades` }
+                { name: dict.services_page.hero.title.split(',')[0], path: localizedPath('/services') }, // Intro
+                { name: dict.services_page.services.playlists.title, path: localizedPath('/services/signature-playlists') },
+                { name: dict.services_page.services.events.title, path: localizedPath('/services/event-soundtracks') },
+                { name: dict.services_page.services.strategy.title, path: localizedPath('/services/sonic-identity') },
+                { name: dict.services_page.services.upgrades.title, path: localizedPath('/services/audio-upgrades') }
             ]
         },
         {
             title: content.sections.industries,
             icon: Building2,
             pages: [
-                { name: dict.industries_page.hero.title, path: `/${lang}/industries` },
+                { name: dict.industries_page.hero.title, path: localizedPath('/industries') },
                 ...dict.industries_page.expertise.items.map((item: any) => ({
                     name: item.title,
-                    path: `/${lang}/${item.link}`
+                    path: localizedPath(`/${item.link}`)
                 }))
             ]
         },
@@ -67,10 +69,10 @@ export default async function SitemapPage({
             title: content.sections.blog,
             icon: BookOpen,
             pages: [
-                { name: dict.blog.meta.title, path: `/${lang}/blog` },
+                { name: dict.blog.meta.title, path: localizedPath('/blog') },
                 ...dict.blog.articles.map((article: any) => ({
                     name: article.title,
-                    path: `/${lang}/blog/${article.link}`
+                    path: localizedPath(`/blog/${article.link}`)
                 }))
             ]
         }

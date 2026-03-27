@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import { Locale } from "@/lib/i18n";
 import { ScrollReveal, StaggerChildren } from '@/components/motion';
+import { getLocalizedPath } from '@/lib/localized-path';
 
 interface EnhanceProps {
     lang: Locale;
@@ -15,6 +16,8 @@ interface EnhanceProps {
 }
 
 export default function Enhance({ lang, title, subtitle, items, cta }: EnhanceProps) {
+    const localizedPath = (path: string) => getLocalizedPath(lang, path);
+
     return (
         <section className="py-24 bg-black">
             <div className="max-w-[1440px] mx-auto px-6 md:px-12">
@@ -57,7 +60,7 @@ export default function Enhance({ lang, title, subtitle, items, cta }: EnhancePr
                             </StaggerChildren>
                         )}
 
-                        <Link href={`/${lang}/contact`}>
+                        <Link href={localizedPath('/contact')}>
                             <button className="group relative bg-white text-black hover:bg-black hover:text-white hover:border-white px-14 py-6 text-lg font-semibold rounded-full transition-all duration-300 overflow-hidden flex items-center border-2 border-white">
                                 <span className="transition-transform duration-300 group-hover:-translate-x-3 inline-block">
                                     {cta}

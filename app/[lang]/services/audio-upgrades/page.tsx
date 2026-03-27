@@ -5,6 +5,7 @@ import { getDictionary } from "@/lib/dictionary";
 import type { Locale } from "@/lib/i18n";
 import { ScrollReveal, StaggerChildren } from "@/components/motion";
 import type { Metadata } from "next";
+import { getLocalizedPath } from "@/lib/localized-path";
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: Locale }> }): Promise<Metadata> {
     const { lang } = await params;
@@ -21,6 +22,7 @@ export default async function AudioUpgradesPage({ params }: { params: Promise<{ 
     const { lang } = await params;
     const dict = await getDictionary(lang);
     const t = dict.audio_upgrades;
+    const localizedPath = (path: string) => getLocalizedPath(lang, path);
 
     return (
         <div className="bg-[#faebe3]">
@@ -104,7 +106,7 @@ export default async function AudioUpgradesPage({ params }: { params: Promise<{ 
                             {t.perfect_for.items.map((item: any, index: number) => (
                                 <li key={index} className="block list-none">
                                     {item.link ? (
-                                        <Link href={`/${lang}/${item.link}`} className="underline hover:text-black font-semibold text-2xl block mb-1">{item.title}</Link>
+                                        <Link href={localizedPath(`/${item.link}`)} className="underline hover:text-black font-semibold text-2xl block mb-1">{item.title}</Link>
                                     ) : (
                                         <span className="font-semibold text-2xl block mb-1 text-black">{item.title}</span>
                                     )}
@@ -150,7 +152,7 @@ export default async function AudioUpgradesPage({ params }: { params: Promise<{ 
                     </ScrollReveal>
                     <ScrollReveal delay={0.18}>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                            <Link href={`/${lang}/contact`}>
+                            <Link href={localizedPath('/contact')}>
                                 <button className="group relative bg-transparent border-2 border-black text-black hover:bg-black hover:text-white px-14 py-6 text-lg font-semibold rounded-full transition-all duration-300 overflow-hidden flex items-center">
                                     <span className="transition-transform duration-300 group-hover:-translate-x-3 inline-block">{t.cta.button}</span>
                                     <ArrowRight className="absolute right-6 w-5 h-5 opacity-0 translate-x-4 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0" />
@@ -161,9 +163,9 @@ export default async function AudioUpgradesPage({ params }: { params: Promise<{ 
                     <ScrollReveal delay={0.24}>
                         <p className="text-black/70 mt-8">
                             {t.cta.pair_with}{" "}
-                            <Link href={`/${lang}/services/signature-playlists`} className="underline hover:text-black font-semibold">{t.cta.signature_playlists}</Link>{" "}
+                            <Link href={localizedPath('/services/signature-playlists')} className="underline hover:text-black font-semibold">{t.cta.signature_playlists}</Link>{" "}
                             &amp;{" "}
-                            <Link href={`/${lang}/services/sonic-identity`} className="underline hover:text-black font-semibold">{t.cta.sonic_identity}</Link>{" "}
+                            <Link href={localizedPath('/services/sonic-identity')} className="underline hover:text-black font-semibold">{t.cta.sonic_identity}</Link>{" "}
                             {t.cta.complete_identity}
                         </p>
                     </ScrollReveal>

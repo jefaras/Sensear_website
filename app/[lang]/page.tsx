@@ -2,10 +2,12 @@ import { getDictionary } from "@/lib/dictionary";
 import { HeroCarousel } from "@/components/HeroCarousel";
 import { ScrollMouseIcon } from "@/components/ScrollMouseIcon";
 import { ArrowRight } from "lucide-react";
+import StatementCard from "@/components/home/StatementCard";
 import Link from "next/link";
 import Image from "next/image";
 import dynamic from "next/dynamic";
 import { Locale } from "@/lib/i18n";
+import { getLocalizedPath } from "@/lib/localized-path";
 
 // Enable ISR (Incremental Static Regeneration) - regenerate page every hour
 export const revalidate = 3600;
@@ -84,6 +86,7 @@ function SectionSkeleton({ className = "" }: { className?: string }) {
 export default async function Home({ params }: { params: Promise<{ lang: Locale }> }) {
     const { lang } = await params;
     const dict = await getDictionary(lang);
+    const localizedPath = (path: string) => getLocalizedPath(lang, path);
 
     return (
         <div className="bg-[#faebe3]">
@@ -101,7 +104,8 @@ export default async function Home({ params }: { params: Promise<{ lang: Locale 
                     fetchPriority="high"
                     quality={70}
                 />
-                <div className="absolute inset-0 bg-[#faebe3]/30" aria-hidden="true" />
+                <div className="absolute inset-0 bg-[#faebe3]/35" aria-hidden="true" />
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_20%,rgba(255,224,204,0.42),transparent_30%),radial-gradient(circle_at_82%_28%,rgba(255,255,255,0.8),transparent_28%),radial-gradient(circle_at_66%_72%,rgba(209,218,233,0.25),transparent_24%)] ambient-drift-slow" aria-hidden="true" />
                 <div className="relative z-10 max-w-[1440px] mx-auto px-6 md:px-12">
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
                         {/* Text Content */}
@@ -129,7 +133,7 @@ export default async function Home({ params }: { params: Promise<{ lang: Locale 
                                 </div>
 
                                 <div className="flex flex-col sm:flex-row gap-4 mb-12">
-                                    <Link href={`/${lang}/services`}>
+                                    <Link href={localizedPath('/services')}>
                                         <button className="group relative bg-transparent border-2 border-black text-black hover:bg-black hover:text-white px-10 py-6 text-lg font-semibold rounded-full transition-all duration-300 overflow-hidden w-full sm:w-auto flex items-center">
                                             <span className="relative inline-flex items-center mr-2 align-middle">
                                                 <Image src="/images/brand/sensear-logo-color.png" width={40} height={40} sizes="40px" loading="eager" className="w-10 h-10 object-contain opacity-100 scale-100 group-hover:opacity-0 group-hover:scale-0 transition-all duration-300" alt="SensEar logo" />
@@ -157,6 +161,8 @@ export default async function Home({ params }: { params: Promise<{ lang: Locale 
             {/* Who we are Section - Lazy loaded */}
             <WhoWeAre lang={lang} title={dict.home.intro.title} />
 
+            <StatementCard text={dict.home.statement_cards.first} variant="dark" />
+
             {/* Services Section - Lazy loaded */}
             <Services 
                 lang={lang}
@@ -183,6 +189,8 @@ export default async function Home({ params }: { params: Promise<{ lang: Locale 
                 items={dict.home.enhance.items}
                 cta={dict.home.enhance.cta}
             />
+
+            <StatementCard text={dict.home.statement_cards.second} variant="light" />
 
             {/* Trusted By Section - Lazy loaded */}
             <TrustedBy lang={lang} title={dict.home.clients.title} />

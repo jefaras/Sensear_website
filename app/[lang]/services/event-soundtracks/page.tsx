@@ -5,6 +5,7 @@ import type { Locale } from "@/lib/i18n";
 import { FinalCTA } from "@/components/sections/FinalCTA";
 import { ScrollReveal, StaggerChildren } from "@/components/motion";
 import type { Metadata } from "next";
+import { getLocalizedPath } from "@/lib/localized-path";
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: Locale }> }): Promise<Metadata> {
     const { lang } = await params;
@@ -25,6 +26,7 @@ export default async function EventSoundtracksPage({
     const { lang } = await params;
     const dict = await getDictionary(lang);
     const t = dict.event_soundtracks;
+    const localizedPath = (path: string) => getLocalizedPath(lang, path);
 
     return (
         <div className="bg-[#faebe3]">
@@ -104,7 +106,7 @@ export default async function EventSoundtracksPage({
                         <StaggerChildren className="space-y-8 text-lg text-black/70" staggerDelay={0.1}>
                             {t.perfect_for.items.map((item: any, index: number) => (
                                 <div key={index}>
-                                    <Link href={`/${lang}/${item.link}`} className="underline hover:text-black font-semibold text-2xl block mb-1">{item.title}</Link>
+                                    <Link href={localizedPath(`/${item.link}`)} className="underline hover:text-black font-semibold text-2xl block mb-1">{item.title}</Link>
                                     <span>{item.description}</span>
                                 </div>
                             ))}

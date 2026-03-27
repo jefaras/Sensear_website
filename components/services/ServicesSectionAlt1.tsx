@@ -10,6 +10,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
+import { getLocalizedPath } from "@/lib/localized-path";
 
 interface ServicesSectionAlt1Props {
     content: {
@@ -34,6 +35,8 @@ interface ServicesSectionAlt1Props {
 }
 
 export function ServicesSectionAlt1({ content, lang }: ServicesSectionAlt1Props) {
+    const localizedPath = (path: string) => getLocalizedPath(lang === 'en' ? 'en' : 'el', path);
+
     return (
         <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
             {/* Sonic Strategy Card */}
@@ -49,7 +52,7 @@ export function ServicesSectionAlt1({ content, lang }: ServicesSectionAlt1Props)
                 <p className="text-base font-medium text-black/50 mb-4">{content.services.strategy.subtitle}</p>
                 <p className="text-sm text-black/60 leading-relaxed mb-4">{content.services.strategy.desc}</p>
                 <p className="text-sm text-black/50 leading-relaxed mb-6" dangerouslySetInnerHTML={{ __html: content.services.strategy.ideal_for }} />
-                <Link href={`/${lang}/contact?interest=sonic-identity`}>
+                <Link href={localizedPath('/contact?interest=sonic-identity')}>
                     <Button
                         variant="outline"
                         className="group w-full bg-transparent border border-black/30 text-black hover:bg-black hover:text-white px-5 py-3 text-sm font-medium rounded-full transition-all duration-300"
@@ -73,7 +76,7 @@ export function ServicesSectionAlt1({ content, lang }: ServicesSectionAlt1Props)
                 <p className="text-base font-medium text-black/50 mb-4">{content.services.upgrades.subtitle}</p>
                 <p className="text-sm text-black/60 leading-relaxed mb-4">{content.services.upgrades.desc}</p>
                 <p className="text-sm text-black/50 leading-relaxed mb-6" dangerouslySetInnerHTML={{ __html: content.services.upgrades.ideal_for }} />
-                <Link href={`/${lang}/contact?interest=audio-upgrades`}>
+                <Link href={localizedPath('/contact?interest=audio-upgrades')}>
                     <Button
                         variant="outline"
                         className="group w-full bg-transparent border border-black/30 text-black hover:bg-black hover:text-white px-5 py-3 text-sm font-medium rounded-full transition-all duration-300"

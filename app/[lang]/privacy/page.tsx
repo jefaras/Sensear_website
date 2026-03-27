@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Locale } from '@/lib/i18n';
 import { parseMarkdownBold } from '@/lib/utils';
+import { getLocalizedPath } from '@/lib/localized-path';
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: Locale }> }): Promise<Metadata> {
     const { lang } = await params;
@@ -196,6 +197,7 @@ You can instruct your browser to refuse all cookies or to indicate when a cookie
 export default async function PrivacyPage({ params }: { params: Promise<{ lang: Locale }> }) {
     const { lang } = await params;
     const t = content[lang];
+    const localizedPath = (path: string) => getLocalizedPath(lang, path);
 
     return (
         <div className="bg-[#faebe3] min-h-screen pt-32 pb-24">
@@ -234,7 +236,7 @@ export default async function PrivacyPage({ params }: { params: Promise<{ lang: 
                 {/* Back Link */}
                 <div className="mt-16 pt-8 border-t border-black/10">
                     <Link 
-                        href={`/${lang}`}
+                        href={localizedPath('/')}
                         className="text-black/60 hover:text-black transition-colors inline-flex items-center gap-2"
                     >
                         ← {lang === 'el' ? 'Επιστροφή στην αρχική' : 'Back to home'}

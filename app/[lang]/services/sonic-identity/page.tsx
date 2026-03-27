@@ -5,6 +5,7 @@ import type { Locale } from "@/lib/i18n";
 import { FinalCTA } from "@/components/sections/FinalCTA";
 import { ScrollReveal, StaggerChildren } from "@/components/motion";
 import type { Metadata } from "next";
+import { getLocalizedPath } from "@/lib/localized-path";
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: Locale }> }): Promise<Metadata> {
     const { lang } = await params;
@@ -21,6 +22,7 @@ export default async function SonicIdentityPage({ params }: { params: Promise<{ 
     const { lang } = await params;
     const dict = await getDictionary(lang);
     const t = dict.sonic_identity;
+    const localizedPath = (path: string) => getLocalizedPath(lang, path);
 
     return (
         <div className="bg-[#faebe3]">
@@ -110,7 +112,7 @@ export default async function SonicIdentityPage({ params }: { params: Promise<{ 
                             {t.perfect_for.items.map((item: any, index: number) => (
                                 <li key={index} className="block list-none">
                                     {item.link ? (
-                                        <Link href={`/${lang}/${item.link}`} className="underline hover:text-black font-semibold text-2xl block mb-1">{item.title}</Link>
+                                        <Link href={localizedPath(`/${item.link}`)} className="underline hover:text-black font-semibold text-2xl block mb-1">{item.title}</Link>
                                     ) : (
                                         <span className="font-semibold text-2xl block mb-1 text-black">{item.title}</span>
                                     )}

@@ -6,6 +6,7 @@ import Image from "next/image";
 import { Metadata } from "next";
 import { FinalCTA } from "@/components/sections/FinalCTA";
 import { ScrollReveal, StaggerChildren } from "@/components/motion";
+import { getLocalizedPath } from "@/lib/localized-path";
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: Locale }> }): Promise<Metadata> {
     const { lang } = await params;
@@ -24,6 +25,7 @@ export default async function Services({
     const { lang } = await params;
     const dict = await getDictionary(lang);
     const content = dict.services_page;
+    const localizedPath = (path: string) => getLocalizedPath(lang, path);
 
     return (
         <div className="bg-[#faebe3]">
@@ -151,7 +153,7 @@ export default async function Services({
                                             <p className="text-lg md:text-xl text-black/60 leading-relaxed" dangerouslySetInnerHTML={{ __html: content.services.playlists.ideal_for }} />
                                         </div>
 
-                                        <Link href={`/${lang}/services/signature-playlists`}>
+                                        <Link href={localizedPath('/services/signature-playlists')}>
                                             <button className="group relative bg-transparent border-2 border-black text-black hover:bg-black hover:text-white px-8 py-6 text-lg font-semibold rounded-full transition-all duration-300 overflow-hidden flex items-center">
                                                 <span className="relative inline-flex items-center mr-2 align-middle">
                                                     <Image src="/images/brand/sensear-logo-color.png" width={32} height={32} sizes="32px" loading="eager" className="w-8 h-8 object-contain opacity-100 scale-100 group-hover:opacity-0 group-hover:scale-0 transition-all duration-300" alt="SensEar logo" />
@@ -183,7 +185,7 @@ export default async function Services({
                                             <p className="text-lg md:text-xl text-black/60 leading-relaxed" dangerouslySetInnerHTML={{ __html: content.services.events.ideal_for }} />
                                         </div>
 
-                                        <Link href={`/${lang}/services/event-soundtracks`}>
+                                        <Link href={localizedPath('/services/event-soundtracks')}>
                                             <button className="group relative bg-transparent border-2 border-black text-black hover:bg-black hover:text-white px-8 py-6 text-lg font-semibold rounded-full transition-all duration-300 overflow-hidden flex items-center">
                                                 <span className="relative inline-flex items-center mr-2 align-middle">
                                                     <Image src="/images/brand/sensear-logo-color.png" width={32} height={32} sizes="32px" loading="eager" className="w-8 h-8 object-contain opacity-100 scale-100 group-hover:opacity-0 group-hover:scale-0 transition-all duration-300" alt="SensEar logo" />
@@ -225,7 +227,7 @@ export default async function Services({
                                 <p className="text-lg font-medium text-black/50 mb-4">{content.services.strategy.subtitle}</p>
                                 <p className="text-base text-black/60 leading-relaxed mb-4">{content.services.strategy.desc}</p>
                                 <p className="text-base text-black/50 leading-relaxed mb-6" dangerouslySetInnerHTML={{ __html: content.services.strategy.ideal_for }} />
-                                <Link href={`/${lang}/services/sonic-identity`}>
+                                <Link href={localizedPath('/services/sonic-identity')}>
                                     <button className="group relative bg-transparent border-2 border-black text-black hover:bg-black hover:text-white px-6 py-4 text-base font-semibold rounded-full transition-all duration-300 overflow-hidden flex items-center">
                                         <span className="relative inline-flex items-center mr-2 align-middle">
                                             <Image src="/images/brand/sensear-logo-color.png" width={28} height={28} sizes="28px" loading="eager" className="w-7 h-7 object-contain opacity-100 scale-100 group-hover:opacity-0 group-hover:scale-0 transition-all duration-300" alt="SensEar logo" />
@@ -252,7 +254,7 @@ export default async function Services({
                                 <p className="text-lg font-medium text-black/50 mb-4">{content.services.upgrades.subtitle}</p>
                                 <p className="text-base text-black/60 leading-relaxed mb-4">{content.services.upgrades.desc}</p>
                                 <p className="text-base text-black/50 leading-relaxed mb-6" dangerouslySetInnerHTML={{ __html: content.services.upgrades.ideal_for }} />
-                                <Link href={`/${lang}/services/audio-upgrades`}>
+                                <Link href={localizedPath('/services/audio-upgrades')}>
                                     <button className="group relative bg-transparent border-2 border-black text-black hover:bg-black hover:text-white px-6 py-4 text-base font-semibold rounded-full transition-all duration-300 overflow-hidden flex items-center">
                                         <span className="relative inline-flex items-center mr-2 align-middle">
                                             <Image src="/images/brand/sensear-logo-color.png" width={28} height={28} sizes="28px" loading="eager" className="w-7 h-7 object-contain opacity-100 scale-100 group-hover:opacity-0 group-hover:scale-0 transition-all duration-300" alt="SensEar logo" />
@@ -294,7 +296,7 @@ export default async function Services({
                             <StaggerChildren className="space-y-8" staggerDelay={0.1}>
                                 {content.delivery.points.map((point, index) => (
                                     <div key={index}>
-                                        <Link href={`/${lang}/${point.link}`} className="text-2xl font-bold text-black block mb-1 group w-fit">
+                                        <Link href={localizedPath(`/${point.link}`)} className="text-2xl font-bold text-black block mb-1 group w-fit">
                                             <span className="group-hover:translate-x-1 group-hover:underline transition-transform inline-block decoration-1 underline-offset-4">{point.link_text}</span>{" "}
                                             <ArrowRight className="inline ml-2 w-5 h-5 opacity-0 group-hover:opacity-100 transition-opacity" />
                                         </Link>

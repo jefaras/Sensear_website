@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import { Locale } from "@/lib/i18n";
 import { ScrollReveal, StaggerChildren } from '@/components/motion';
+import { getLocalizedPath } from '@/lib/localized-path';
 
 interface BlogArticle {
     title: string;
@@ -23,6 +24,8 @@ interface BlogSectionProps {
 }
 
 export default function BlogSection({ lang, title, subtitle, articles, read_more, cta }: BlogSectionProps) {
+    const localizedPath = (path: string) => getLocalizedPath(lang, path);
+
     return (
         <section className="py-24" style={{ backgroundImage: "url('/images/backgrounds/background-texture-warm-silver.jpg')", backgroundSize: 'cover', backgroundPosition: 'center' }}>
             <div className="max-w-[1440px] mx-auto px-6 md:px-12">
@@ -35,7 +38,7 @@ export default function BlogSection({ lang, title, subtitle, articles, read_more
 
                 <StaggerChildren className="grid md:grid-cols-3 gap-8" staggerDelay={0.15}>
                     {articles.map((article, idx) => (
-                        <Link key={idx} href={`/${lang}/blog/${article.link}`} className="block">
+                        <Link key={idx} href={localizedPath(`/blog/${article.link}`)} className="block">
                             <div className="bg-white rounded-xl overflow-hidden hover:shadow-xl transition-all duration-300 group cursor-pointer border border-black/5 h-full flex flex-col">
                                 <div className="relative aspect-[4/3] overflow-hidden">
                                     <Image
@@ -71,7 +74,7 @@ export default function BlogSection({ lang, title, subtitle, articles, read_more
                 </StaggerChildren>
 
                 <div className="mt-16 flex justify-center">
-                    <Link href={`/${lang}/blog`}>
+                    <Link href={localizedPath('/blog')}>
                         <button className="group relative bg-transparent border-2 border-black text-black hover:bg-black hover:text-white px-14 py-6 text-lg font-semibold rounded-full transition-all duration-300 overflow-hidden flex items-center">
                             <span className="transition-transform duration-300 group-hover:-translate-x-3 inline-block">
                                 {cta}

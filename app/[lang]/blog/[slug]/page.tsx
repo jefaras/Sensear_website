@@ -9,6 +9,7 @@ import { ArticleJsonLd } from "@/components/JsonLd";
 import { headers } from "next/headers";
 import Image from "next/image";
 import { ScrollReveal, StaggerChildren } from "@/components/motion";
+import { getLocalizedPath } from "@/lib/localized-path";
 
 const BLOG_PUBLISHED_DATES: Record<string, string> = {
     "how-top-hospitality-brands-design-sound": "2025-01-20",
@@ -59,6 +60,7 @@ export default async function BlogPost({
     const backButtonText = (dict.blog as any).back_button || "Back to Insights";
     const cta = (dict.blog as any).blog_cta || {};
     const publishedDate = BLOG_PUBLISHED_DATES[article.link];
+    const localizedPath = (path: string) => getLocalizedPath(lang, path);
 
     const titleParts = article.title.split('|');
     let sourceCounter = 0;
@@ -115,7 +117,7 @@ export default async function BlogPost({
             <ArticleJsonLd
                 title={article.title}
                 description={article.desc}
-                url={`/${lang}/blog/${article.link}`}
+                url={localizedPath(`/blog/${article.link}`)}
                 image={article.image}
                 datePublished={publishedDate}
                 dateModified={publishedDate}
@@ -130,7 +132,7 @@ export default async function BlogPost({
                         {/* Hero Text */}
                         <div className="lg:col-span-7">
                             <ScrollReveal>
-                                <Link href={`/${lang}/blog`} className="inline-flex items-center text-black/40 hover:text-black mb-12 transition-colors group">
+                                <Link href={localizedPath('/blog')} className="inline-flex items-center text-black/40 hover:text-black mb-12 transition-colors group">
                                     <ArrowLeft className="w-4 h-4 mr-2 transition-transform group-hover:-translate-x-1" />
                                     <span className="text-sm font-bold tracking-widest uppercase font-jakarta">{backButtonText}</span>
                                 </Link>
@@ -265,7 +267,7 @@ export default async function BlogPost({
                             {/* Article Footer Button */}
                             <ScrollReveal delay={0.12}>
                                 <div className="mt-24 pt-16 border-t border-gray-100 text-center">
-                                    <Link href={`/${lang}/blog`}>
+                                    <Link href={localizedPath('/blog')}>
                                         <Button variant="outline" size="lg" className="rounded-full px-12 py-8 border-2 border-black text-black hover:bg-black hover:text-white transition-all duration-500 font-bold tracking-widest uppercase text-sm group">
                                             <ArrowLeft className="w-4 h-4 mr-3 transition-transform group-hover:-translate-x-1" />
                                             {backButtonText}

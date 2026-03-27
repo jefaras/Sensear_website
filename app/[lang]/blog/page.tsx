@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Metadata } from "next";
 import Image from "next/image";
 import { ScrollReveal, StaggerChildren } from "@/components/motion";
+import { getLocalizedPath } from "@/lib/localized-path";
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: Locale }> }): Promise<Metadata> {
     const { lang } = await params;
@@ -23,6 +24,7 @@ export default async function Blog({
     const { lang } = await params;
     const dict = await getDictionary(lang);
     const content = dict.blog;
+    const localizedPath = (path: string) => getLocalizedPath(lang, path);
 
     const featuredArticle = content.articles[0];
     const recentArticles = content.articles.slice(1);
@@ -59,7 +61,7 @@ export default async function Blog({
                         <ScrollReveal delay={0.2} className="w-full flex justify-end">
                             <div className="w-full max-w-[740px]">
                                 {featuredArticle ? (
-                                    <Link href={`/${lang}/blog/${featuredArticle.link}`} className="group block">
+                                    <Link href={localizedPath(`/blog/${featuredArticle.link}`)} className="group block">
                                         <div className="relative overflow-hidden rounded-2xl shadow-2xl bg-white aspect-square">
                                             <Image
                                                 src={featuredArticle.image}
@@ -112,7 +114,7 @@ export default async function Blog({
                         {gridArticles.map((article) => (
                             <Link
                                 key={article.link}
-                                href={`/${lang}/blog/${article.link}`}
+                                href={localizedPath(`/blog/${article.link}`)}
                                 className="group flex flex-col bg-white/80 backdrop-blur-md rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
                             >
                                 <div className="overflow-hidden aspect-[4/3] relative">

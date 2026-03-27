@@ -1,5 +1,6 @@
 import { MetadataRoute } from 'next'
 import { getSiteUrl } from '@/lib/site-url'
+import { getLocalizedPath } from '@/lib/localized-path'
 
 const BASE_URL = getSiteUrl()
 
@@ -37,14 +38,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
         '/sitemap-page',
     ]
 
-    const locales = ['en', 'el']
+    const locales = ['el', 'en'] as const
 
     const sitemapEntries: MetadataRoute.Sitemap = []
 
     routes.forEach((route) => {
         locales.forEach((locale) => {
             sitemapEntries.push({
-                url: `${BASE_URL}/${locale}${route}`,
+                url: `${BASE_URL}${getLocalizedPath(locale, route || '/')}`,
                 lastModified: new Date(),
                 changeFrequency: route === '' ? 'daily' : 'weekly',
                 priority: route === '' ? 1 : route.includes('/services/') || route.includes('/industries/') ? 0.9 : 0.8,

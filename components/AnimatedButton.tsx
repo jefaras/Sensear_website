@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
+import { getLocalizedPath } from "@/lib/localized-path";
 
 interface AnimatedButtonProps {
     children: React.ReactNode;
@@ -11,7 +12,7 @@ interface AnimatedButtonProps {
 }
 
 export const AnimatedButton = ({ children, href, lang, variant = "outline", className }: AnimatedButtonProps) => (
-    <Link href={`/${lang}/${href}`}>
+    <Link href={getLocalizedPath(lang === 'en' ? 'en' : 'el', `/${href}`)}>
         <Button
             variant={variant === "dark" ? "outline" : variant}
             className={`group/btn relative px-12 py-7 text-lg font-semibold rounded-full transition-all duration-500 overflow-hidden flex items-center border-2 ${variant === "outline"
