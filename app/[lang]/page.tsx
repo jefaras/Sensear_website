@@ -2,7 +2,6 @@ import { getDictionary } from "@/lib/dictionary";
 import { HeroCarousel } from "@/components/HeroCarousel";
 import { ScrollMouseIcon } from "@/components/ScrollMouseIcon";
 import { ArrowRight } from "lucide-react";
-import StatementCard from "@/components/home/StatementCard";
 import Link from "next/link";
 import Image from "next/image";
 import dynamic from "next/dynamic";
@@ -161,8 +160,6 @@ export default async function Home({ params }: { params: Promise<{ lang: Locale 
             {/* Who we are Section - Lazy loaded */}
             <WhoWeAre lang={lang} title={dict.home.intro.title} />
 
-            <StatementCard text={dict.home.statement_cards.first} variant="dark" />
-
             {/* Services Section - Lazy loaded */}
             <Services 
                 lang={lang}
@@ -189,8 +186,6 @@ export default async function Home({ params }: { params: Promise<{ lang: Locale 
                 items={dict.home.enhance.items}
                 cta={dict.home.enhance.cta}
             />
-
-            <StatementCard text={dict.home.statement_cards.second} variant="light" />
 
             {/* Trusted By Section - Lazy loaded */}
             <TrustedBy lang={lang} title={dict.home.clients.title} />
