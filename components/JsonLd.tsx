@@ -3,11 +3,7 @@ import { getSiteUrl } from "@/lib/site-url";
 
 const baseUrl = getSiteUrl();
 
-interface JsonLdProps {
-    nonce?: string;
-}
-
-export function OrganizationJsonLd({ nonce }: JsonLdProps) {
+export function OrganizationJsonLd() {
     const organization = {
         '@context': 'https://schema.org',
         '@type': 'Organization',
@@ -36,13 +32,12 @@ export function OrganizationJsonLd({ nonce }: JsonLdProps) {
     return (
         <script
             type="application/ld+json"
-            nonce={nonce}
             dangerouslySetInnerHTML={{ __html: JSON.stringify(organization) }}
         />
     )
 }
 
-export function LocalBusinessJsonLd({ nonce }: JsonLdProps) {
+export function LocalBusinessJsonLd() {
     const business = {
         '@context': 'https://schema.org',
         '@type': 'LocalBusiness',
@@ -66,13 +61,12 @@ export function LocalBusinessJsonLd({ nonce }: JsonLdProps) {
     return (
         <script
             type="application/ld+json"
-            nonce={nonce}
             dangerouslySetInnerHTML={{ __html: JSON.stringify(business) }}
         />
     )
 }
 
-export function WebSiteJsonLd({ nonce }: JsonLdProps) {
+export function WebSiteJsonLd() {
     const website = {
         '@context': 'https://schema.org',
         '@type': 'WebSite',
@@ -92,7 +86,6 @@ export function WebSiteJsonLd({ nonce }: JsonLdProps) {
     return (
         <script
             type="application/ld+json"
-            nonce={nonce}
             dangerouslySetInnerHTML={{ __html: JSON.stringify(website) }}
         />
     )
@@ -103,7 +96,7 @@ interface BreadcrumbItem {
     url: string
 }
 
-export function BreadcrumbJsonLd({ items, nonce }: { items: BreadcrumbItem[]; nonce?: string }) {
+export function BreadcrumbJsonLd({ items }: { items: BreadcrumbItem[] }) {
     const breadcrumb = {
         '@context': 'https://schema.org',
         '@type': 'BreadcrumbList',
@@ -118,7 +111,6 @@ export function BreadcrumbJsonLd({ items, nonce }: { items: BreadcrumbItem[]; no
     return (
         <script
             type="application/ld+json"
-            nonce={nonce}
             dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }}
         />
     )
@@ -128,10 +120,9 @@ interface ServiceJsonLdProps {
     name: string
     description: string
     url: string
-    nonce?: string
 }
 
-export function ServiceJsonLd({ name, description, url, nonce }: ServiceJsonLdProps) {
+export function ServiceJsonLd({ name, description, url }: ServiceJsonLdProps) {
     const service = {
         '@context': 'https://schema.org',
         '@type': 'Service',
@@ -148,7 +139,6 @@ export function ServiceJsonLd({ name, description, url, nonce }: ServiceJsonLdPr
     return (
         <script
             type="application/ld+json"
-            nonce={nonce}
             dangerouslySetInnerHTML={{ __html: JSON.stringify(service) }}
         />
     )
@@ -162,7 +152,6 @@ interface ArticleJsonLdProps {
     datePublished?: string
     dateModified?: string
     author?: string
-    nonce?: string
 }
 
 export function ArticleJsonLd({ 
@@ -172,8 +161,7 @@ export function ArticleJsonLd({
     image, 
     datePublished, 
     dateModified,
-    author = 'SensEar Music',
-    nonce
+    author = 'SensEar Music'
 }: ArticleJsonLdProps) {
     const article = {
         '@context': 'https://schema.org',
@@ -207,7 +195,6 @@ export function ArticleJsonLd({
     return (
         <script
             type="application/ld+json"
-            nonce={nonce}
             dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }}
         />
     )

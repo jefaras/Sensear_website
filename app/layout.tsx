@@ -97,15 +97,14 @@ export default async function RootLayout({
     const requestHeaders = await headers()
     const pathname = requestHeaders.get('x-pathname') ?? '/'
     const lang = getPathLocale(pathname)
-    const nonce = requestHeaders.get('x-nonce') ?? undefined
     const dict = await getDictionary(lang)
 
     return (
         <html lang={lang} className={fontVariables}>
             <head>
-                <OrganizationJsonLd nonce={nonce} />
-                <LocalBusinessJsonLd nonce={nonce} />
-                <WebSiteJsonLd nonce={nonce} />
+                <OrganizationJsonLd />
+                <LocalBusinessJsonLd />
+                <WebSiteJsonLd />
             </head>
             <body className="antialiased min-h-screen flex flex-col" suppressHydrationWarning>
                 <MotionProvider>

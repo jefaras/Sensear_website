@@ -92,4 +92,4 @@ Located in `components/motion/`:
 - `next.config.mjs` — Next.js configuration (proxy, headers, images)
 - `app/globals.css` — global styles + CSS variables + keyframes
 - `app/fonts.ts` — font configuration
-- `proxy.ts` — Next.js middleware (i18n routing, nonce, headers)
+- `proxy.ts` — Next.js proxy for request header propagation

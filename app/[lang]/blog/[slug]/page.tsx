@@ -6,7 +6,6 @@ import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import { notFound } from "next/navigation";
 import { ArticleJsonLd } from "@/components/JsonLd";
-import { headers } from "next/headers";
 import Image from "next/image";
 import { ScrollReveal, StaggerChildren } from "@/components/motion";
 import { getLocalizedPath } from "@/lib/localized-path";
@@ -47,7 +46,6 @@ export default async function BlogPost({
     params: Promise<{ lang: Locale; slug: string }>;
 }) {
     const { lang, slug } = await params;
-    const nonce = (await headers()).get("x-nonce") ?? undefined;
     const dict = await getDictionary(lang);
 
     // Find article from dictionary
@@ -122,7 +120,6 @@ export default async function BlogPost({
                 datePublished={publishedDate}
                 dateModified={publishedDate}
                 author={article.author}
-                nonce={nonce}
             />
             
             {/* Hero Section */}
