@@ -1,8 +1,10 @@
 import type { Metadata } from 'next'
 import { headers } from 'next/headers'
+import { Suspense } from 'react'
 
 import '@/app/globals.css'
 
+import { GtmPageview } from '@/components/analytics/GtmPageview'
 import { ClientEnhancements } from '@/components/ClientEnhancements'
 import { OrganizationJsonLd, LocalBusinessJsonLd, WebSiteJsonLd } from '@/components/JsonLd'
 import { Footer } from '@/components/Footer'
@@ -137,6 +139,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                         {children}
                     </main>
                     <Footer lang={lang} dict={dict} />
+                    <Suspense fallback={null}>
+                        <GtmPageview />
+                    </Suspense>
                     <ClientEnhancements />
                 </MotionProvider>
             </body>
