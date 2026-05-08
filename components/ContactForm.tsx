@@ -5,6 +5,7 @@ import { CheckCircle, ArrowRight } from "lucide-react";
 import TransparentSelect from "./TransparentSelect";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import { executeRecaptcha } from "@/lib/recaptcha-client";
 
 interface ContactFormLabels {
     name: string;
@@ -102,7 +103,9 @@ export function ContactForm({ labels, variant = "default" }: ContactFormProps) {
         }
     }
 
-    const handleSubmit = useCallback((e: React.FormEvent<HTMLFormElement>) => {
+    const handleSubmit = useCallback(async (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+
         const nextErrors: Record<string, string[]> = {};
         const phoneDigits = formData.phone.replace(/\D/g, "");
         const preferredCallTimeOptions = ["10:00 - 13:00", "13:00 - 16:00", "16:00 - 19:00", "19:00 - 21:00"];
@@ -136,7 +139,6 @@ export function ContactForm({ labels, variant = "default" }: ContactFormProps) {
         }
 
         if (Object.keys(nextErrors).length > 0) {
-            e.preventDefault();
             setPending(false);
             setErrors(nextErrors);
             return;
@@ -144,6 +146,58 @@ export function ContactForm({ labels, variant = "default" }: ContactFormProps) {
 
         setErrors({});
         setPending(true);
+
+        try {
+            const recaptchaToken = await executeRecaptcha("contact");
+            const payload = new globalThis.FormData(e.currentTarget);
+
+            payload.set("g-recaptcha-response", recaptchaToken);
+            payload.set("country_code", formData.country_code);
+            payload.set("preferred_call_time", formData.preferred_call_time);
+            payload.set("venue_type", formData.venue_type);
+            payload.set("service_interest", formData.service_interest);
+
+            const response = await fetch(e.currentTarget.action, {
+                method: "POST",
+                headers: {
+                    Accept: "application/json",
+                },
+                body: payload,
+            });
+
+            const result = await response.json().catch(() => null) as null | {
+                success?: boolean;
+                message?: string;
+                errors?: Record<string, string[]>;
+            };
+
+            if (!response.ok || !result?.success) {
+                setErrors(result?.errors || {
+                    _form: [result?.message || "Failed to send your message. Please try again."],
+                });
+                return;
+            }
+
+            setSuccess(true);
+            setFormData({
+                name: "",
+                surname: "",
+                business_name: "",
+                email: "",
+                phone: "",
+                country_code: "+30",
+                venue_type: "",
+                service_interest: "",
+                preferred_call_time: "",
+                message: "",
+            });
+        } catch (error) {
+            setErrors({
+                _form: [error instanceof Error ? error.message : "Failed to send your message. Please try again."],
+            });
+        } finally {
+            setPending(false);
+        }
     }, [formData]);
 
     // Styles based on variant
@@ -407,14 +461,11 @@ export function ContactForm({ labels, variant = "default" }: ContactFormProps) {
                 )}
             </button>
 
-            {/* TEMP: reCAPTCHA client execution is currently disabled. Re-enable disclosure when frontend token generation returns. */}
-            {/*
             <p className={`text-xs text-center mt-3 ${isVinyl ? 'text-white/30' : 'text-black/40'}`}>
                 This site is protected by reCAPTCHA and the Google{" "}
                 <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" aria-label={isGreek ? "Πολιτική Απορρήτου Google" : "Google Privacy Policy"} className={`underline ${isVinyl ? 'hover:text-white/50' : 'hover:text-black/60'}`}>{isGreek ? "Πολιτική Απορρήτου Google" : "Google Privacy Policy"}</a> and{" "}
                 <a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer" aria-label={isGreek ? "Όροι Χρήσης Google" : "Google Terms of Service"} className={`underline ${isVinyl ? 'hover:text-white/50' : 'hover:text-black/60'}`}>{isGreek ? "Όροι Χρήσης Google" : "Google Terms of Service"}</a> apply.
             </p>
-            */}
         </form>
     )
 }

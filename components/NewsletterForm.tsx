@@ -3,6 +3,7 @@
 import { useState, useCallback } from "react";
 import { ArrowRight } from "lucide-react";
 import { usePathname } from "next/navigation";
+import { executeRecaptcha } from "@/lib/recaptcha-client";
 
 interface NewsletterFormProps {
     placeholder: string;
@@ -25,9 +26,45 @@ export function NewsletterForm({
         /\/(faq|privacy|terms|sitemap-page)$/.test(pathname) ||
         /\/blog\/[^/]+$/.test(pathname);
 
-    const handleSubmit = useCallback(() => {
+    const handleSubmit = useCallback(async (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+
         setStatus("loading");
         setErrorMessage("");
+
+        try {
+            const recaptchaToken = await executeRecaptcha("newsletter");
+            const payload = new globalThis.FormData(e.currentTarget);
+            payload.set("g-recaptcha-response", recaptchaToken);
+            payload.set("source", source);
+
+            const response = await fetch(e.currentTarget.action, {
+                method: "POST",
+                headers: {
+                    Accept: "application/json",
+                },
+                body: payload,
+            });
+
+            const result = await response.json().catch(() => null) as null | {
+                success?: boolean;
+                message?: string;
+                errors?: Record<string, string[]>;
+            };
+
+            if (!response.ok || !result?.success) {
+                const fieldError = result?.errors?.email?.[0] || result?.errors?._form?.[0];
+                setStatus("error");
+                setErrorMessage(fieldError || result?.message || "Subscription failed. Please try again.");
+                return;
+            }
+
+            setEmail("");
+            setStatus("success");
+        } catch (error) {
+            setStatus("error");
+            setErrorMessage(error instanceof Error ? error.message : "Subscription failed. Please try again.");
+        }
     }, [email, source]);
 
     if (status === "success") {
@@ -79,14 +116,11 @@ export function NewsletterForm({
                 {status === "error" && (
                     <p className="text-red-500 text-sm w-full text-center">{errorMessage}</p>
                 )}
-                {/* TEMP: reCAPTCHA client execution is currently disabled. Re-enable disclosure when frontend token generation returns. */}
-                {/*
                 <p className="text-xs text-black/40 text-center w-full mt-1">
                     Protected by reCAPTCHA —{" "}
                     <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="underline">Privacy</a> &amp;{" "}
                     <a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer" className="underline">Terms</a>
                 </p>
-                */}
             </form>
         );
     }
@@ -139,14 +173,11 @@ export function NewsletterForm({
             {status === "error" && (
                 <p className="text-red-400 text-xs">{errorMessage}</p>
             )}
-            {/* TEMP: reCAPTCHA client execution is currently disabled. Re-enable disclosure when frontend token generation returns. */}
-            {/*
             <p className="text-xs text-white/30 mt-1">
                 Protected by reCAPTCHA —{" "}
                 <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="underline">Privacy</a> &amp;{" "}
                 <a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer" className="underline">Terms</a>
             </p>
-            */}
         </form>
     );
 }
