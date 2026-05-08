@@ -1,5 +1,3 @@
-export { revalidate } from '@/app/[lang]/page'
-
 import Home from '@/app/[lang]/page'
 
 export default function GreekHomePage() {

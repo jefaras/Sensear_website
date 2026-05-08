@@ -21,6 +21,13 @@ const BLOG_PUBLISHED_DATES: Record<string, string> = {
     "service-environment-shapes-wait-time": "2025-03-15",
 };
 
+export const dynamicParams = false;
+export const BLOG_SLUGS = Object.keys(BLOG_PUBLISHED_DATES);
+
+export async function generateStaticParams() {
+    return BLOG_SLUGS.map((slug) => ({ lang: "en" as const, slug }));
+}
+
 export async function generateMetadata({ params }: { params: Promise<{ lang: Locale; slug: string }> }) {
     const { lang, slug } = await params;
     const dict = await getDictionary(lang);

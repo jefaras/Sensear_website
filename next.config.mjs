@@ -6,10 +6,12 @@ const withBundleAnalyzer = analyzer({
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    output: 'standalone',
+    output: 'export',
+    trailingSlash: true,
     images: {
         qualities: [70, 75],
         remotePatterns: [],
+        unoptimized: true,
     },
 
     // Disable ES Lint and Typescript checks during build to prevent out-of-memory errors
@@ -23,7 +25,9 @@ const nextConfig = {
     // Keep empty config for dev mode, but use --no-turbopack for production builds
     turbopack: {},
 
-    // Redirects to fix Google Search Console indexing issues
+    // TODO: move redirect rules to `.htaccess` for static export deployment.
+    // `redirects()` is not supported with `output: 'export'`.
+    /*
     async redirects() {
         return [
             // Fix redirect errors for trailing slash on locale routes
@@ -147,8 +151,11 @@ const nextConfig = {
             },
         ];
     },
+    */
 
-    // Caching headers for better performance
+    // TODO: move response headers to `.htaccess` for static export deployment.
+    // `headers()` is not supported with `output: 'export'`.
+    /*
     headers: async () => [
         {
             // Apply to all routes
@@ -180,6 +187,7 @@ const nextConfig = {
             ],
         },
     ],
+    */
 
     // Enable experimental features for package import optimization
     experimental: {

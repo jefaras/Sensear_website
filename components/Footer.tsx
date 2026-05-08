@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import { Instagram, Facebook, Mail, Phone, Linkedin } from "lucide-react";
 import { Locale } from "@/lib/i18n";

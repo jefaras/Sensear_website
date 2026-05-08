@@ -2,6 +2,8 @@ import { MetadataRoute } from 'next'
 import { getSiteUrl } from '@/lib/site-url'
 import { getLocalizedPath } from '@/lib/localized-path'
 
+export const dynamic = 'force-static'
+
 const BASE_URL = getSiteUrl()
 
 export default function sitemap(): MetadataRoute.Sitemap {

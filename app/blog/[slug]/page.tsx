@@ -1,4 +1,10 @@
-import BlogPostPage, { generateMetadata as generateBlogPostMetadata } from '@/app/[lang]/blog/[slug]/page'
+import BlogPostPage, { BLOG_SLUGS, generateMetadata as generateBlogPostMetadata } from '@/app/[lang]/blog/[slug]/page'
+
+export const dynamicParams = false
+
+export async function generateStaticParams() {
+    return BLOG_SLUGS.map((slug) => ({ slug }))
+}
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
     const { slug } = await params

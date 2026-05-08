@@ -8,9 +8,6 @@ import dynamic from "next/dynamic";
 import { Locale } from "@/lib/i18n";
 import { getLocalizedPath } from "@/lib/localized-path";
 
-// Enable ISR (Incremental Static Regeneration) - regenerate page every hour
-export const revalidate = 3600;
-
 // Lazy load below-fold sections for better initial page load performance
 const WhoWeAre = dynamic(
     () => import("@/components/home/WhoWeAre"),

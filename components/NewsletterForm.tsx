@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useCallback } from "react";
-import { submitNewsletterForm } from "@/app/actions";
 import { ArrowRight } from "lucide-react";
 import { usePathname } from "next/navigation";
 
@@ -26,32 +25,9 @@ export function NewsletterForm({
         /\/(faq|privacy|terms|sitemap-page)$/.test(pathname) ||
         /\/blog\/[^/]+$/.test(pathname);
 
-    const handleSubmit = useCallback(async (e: React.FormEvent) => {
-        e.preventDefault();
+    const handleSubmit = useCallback(() => {
         setStatus("loading");
         setErrorMessage("");
-
-        const recaptchaToken = "";
-
-        const formData = new FormData();
-        formData.append("g-recaptcha-response", recaptchaToken);
-        formData.append("email", email);
-        formData.append("source", source);
-
-        const result = await submitNewsletterForm(formData);
-
-        if (result.success) {
-            setStatus("success");
-            setEmail("");
-        } else if (result.errors) {
-            setStatus("error");
-            const errors = result.errors as Record<string, string[]>;
-            setErrorMessage(
-                errors._form?.[0] ||
-                errors.email?.[0] ||
-                "Something went wrong. Please try again."
-            );
-        }
     }, [email, source]);
 
     if (status === "success") {
@@ -64,8 +40,11 @@ export function NewsletterForm({
 
     if (variant === "cta") {
         return (
-            <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4 w-full max-w-lg mx-auto">
+            <form action="/newsletter.php" method="POST" encType="application/x-www-form-urlencoded" onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4 w-full max-w-lg mx-auto">
+                <input type="hidden" name="g-recaptcha-response" value="" />
+                <input type="hidden" name="source" value={source} />
                 <input
+                    name="email"
                     type="email"
                     aria-label={placeholder}
                     value={email}
@@ -114,9 +93,12 @@ export function NewsletterForm({
 
     // Footer variant
     return (
-        <form onSubmit={handleSubmit} className="flex flex-col gap-2">
+        <form action="/newsletter.php" method="POST" encType="application/x-www-form-urlencoded" onSubmit={handleSubmit} className="flex flex-col gap-2">
+            <input type="hidden" name="g-recaptcha-response" value="" />
+            <input type="hidden" name="source" value={source} />
             <div className="flex gap-2">
                 <input
+                    name="email"
                     type="email"
                     aria-label={placeholder}
                     value={email}

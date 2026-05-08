@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useCallback } from "react";
-import { submitContactForm } from "@/app/actions";
 import { CheckCircle, ArrowRight } from "lucide-react";
 import TransparentSelect from "./TransparentSelect";
 import Image from "next/image";
@@ -103,48 +102,49 @@ export function ContactForm({ labels, variant = "default" }: ContactFormProps) {
         }
     }
 
-    const handleSubmit = useCallback(async (e: React.FormEvent) => {
-        e.preventDefault();
-        setPending(true);
-        setErrors({});
+    const handleSubmit = useCallback((e: React.FormEvent<HTMLFormElement>) => {
+        const nextErrors: Record<string, string[]> = {};
+        const phoneDigits = formData.phone.replace(/\D/g, "");
+        const preferredCallTimeOptions = ["10:00 - 13:00", "13:00 - 16:00", "16:00 - 19:00", "19:00 - 21:00"];
 
-        const recaptchaToken = "";
-
-        const submitData = new FormData();
-        submitData.append("g-recaptcha-response", recaptchaToken);
-        submitData.append("name", formData.name);
-        submitData.append("surname", formData.surname);
-        submitData.append("business_name", formData.business_name);
-        submitData.append("email", formData.email);
-        submitData.append("phone", formData.phone);
-        submitData.append("country_code", formData.country_code);
-        submitData.append("venue_type", formData.venue_type);
-        submitData.append("service_interest", formData.service_interest);
-        submitData.append("preferred_call_time", formData.preferred_call_time);
-        submitData.append("message", formData.message);
-
-        const res = await submitContactForm(submitData);
-
-        setPending(false);
-
-        if (res?.errors) {
-            setErrors(res.errors as Record<string, string[]>);
-        } else if (res?.success) {
-            setSuccess(true);
-            setFormData({
-                name: "",
-                surname: "",
-                business_name: "",
-                email: "",
-                phone: "",
-                country_code: "+30",
-                venue_type: "",
-                service_interest: "",
-                preferred_call_time: "",
-                message: "",
-            });
+        if (formData.name.trim().length < 2) {
+            nextErrors.name = ["Name must be at least 2 characters"];
         }
-    }, [formData, labels]);
+
+        if (formData.surname.trim().length < 2) {
+            nextErrors.surname = ["Surname must be at least 2 characters"];
+        }
+
+        if (phoneDigits.length !== 10) {
+            nextErrors.phone = ["Phone number must contain exactly 10 digits"];
+        }
+
+        if (!formData.venue_type) {
+            nextErrors.venue_type = ["Please select a venue type"];
+        }
+
+        if (!formData.service_interest) {
+            nextErrors.service_interest = ["Please select a service interest"];
+        }
+
+        if (!preferredCallTimeOptions.includes(formData.preferred_call_time)) {
+            nextErrors.preferred_call_time = ["Please select a valid preferred call time"];
+        }
+
+        if (formData.message.trim().length < 10) {
+            nextErrors.message = ["Message must be at least 10 characters"];
+        }
+
+        if (Object.keys(nextErrors).length > 0) {
+            e.preventDefault();
+            setPending(false);
+            setErrors(nextErrors);
+            return;
+        }
+
+        setErrors({});
+        setPending(true);
+    }, [formData]);
 
     // Styles based on variant
     const inputClass = isVinyl
@@ -175,13 +175,19 @@ export function ContactForm({ labels, variant = "default" }: ContactFormProps) {
     }
 
     return (
-        <form onSubmit={handleSubmit} className="space-y-5">
+        <form action="/contact.php" method="POST" encType="application/x-www-form-urlencoded" onSubmit={handleSubmit} className="space-y-5">
             {/* Form-level errors */}
             {errors._form && (
                 <div className={`px-4 py-3 rounded-lg ${isVinyl ? 'bg-red-500/20 border border-red-500/30 text-red-300' : 'bg-red-50 border border-red-200 text-red-700'}`}>
                     {errors._form[0]}
                 </div>
             )}
+
+            <input type="hidden" name="g-recaptcha-response" value="" />
+            <input type="hidden" name="country_code" value={formData.country_code} />
+            <input type="hidden" name="preferred_call_time" value={formData.preferred_call_time} />
+            <input type="hidden" name="venue_type" value={formData.venue_type} />
+            <input type="hidden" name="service_interest" value={formData.service_interest} />
 
             <div className="grid md:grid-cols-2 gap-4 relative z-50">
                 <div>
