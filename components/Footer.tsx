@@ -95,6 +95,7 @@ export function Footer({ lang, dict }: { lang: Locale, dict: any }) {
                                 buttonText={footer.newsletter.button}
                                 source="Footer"
                                 variant="footer"
+                                successText={footer.newsletter.success}
                             />
                         </div>
                     </div>

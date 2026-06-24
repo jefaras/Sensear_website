@@ -3,7 +3,7 @@ import { test, expect } from '@playwright/test';
 test.describe('Navbar scroll state on reload', () => {
   test('should maintain black background when page is reloaded while scrolled down', async ({ page }) => {
     // Navigate to a page with enough content to scroll
-    await page.goto('/en/industries/music-for-hotels-and-resorts');
+    await page.goto('/en/industries/music-for-hotels-and-resorts/');
 
     // Wait for page to fully load
     await page.waitForLoadState('networkidle');
@@ -54,7 +54,7 @@ test.describe('Navbar scroll state on reload', () => {
 
   test('should be transparent at top of page on initial load', async ({ page }) => {
     // Navigate to a page
-    await page.goto('/en/industries/music-for-hotels-and-resorts');
+    await page.goto('/en/industries/music-for-hotels-and-resorts/');
 
     // Wait for page to fully load
     await page.waitForLoadState('networkidle');

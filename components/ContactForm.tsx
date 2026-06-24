@@ -106,6 +106,10 @@ export function ContactForm({ labels, variant = "default" }: ContactFormProps) {
     const handleSubmit = useCallback(async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
+        // Capture the form element synchronously: `e.currentTarget` becomes null
+        // after the first `await` below, once event dispatch has finished.
+        const form = e.currentTarget;
+
         const nextErrors: Record<string, string[]> = {};
         const phoneDigits = formData.phone.replace(/\D/g, "");
         const preferredCallTimeOptions = ["10:00 - 13:00", "13:00 - 16:00", "16:00 - 19:00", "19:00 - 21:00"];
@@ -149,7 +153,7 @@ export function ContactForm({ labels, variant = "default" }: ContactFormProps) {
 
         try {
             const recaptchaToken = await executeRecaptcha("contact");
-            const payload = new globalThis.FormData(e.currentTarget);
+            const payload = new globalThis.FormData(form);
 
             payload.set("g-recaptcha-response", recaptchaToken);
             payload.set("country_code", formData.country_code);
@@ -157,7 +161,7 @@ export function ContactForm({ labels, variant = "default" }: ContactFormProps) {
             payload.set("venue_type", formData.venue_type);
             payload.set("service_interest", formData.service_interest);
 
-            const response = await fetch(e.currentTarget.action, {
+            const response = await fetch(form.action, {
                 method: "POST",
                 headers: {
                     Accept: "application/json",

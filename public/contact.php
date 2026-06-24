@@ -80,7 +80,7 @@ if (empty($recipients)) {
 
 try {
     foreach ($recipients as $recipient) {
-        sensear_send_email($config, $recipient, '[SensEar] New Contact Form Submission from ' . $data['name'], $html);
+        sensear_send_email($config, $recipient, '[SensEar] New Contact Form Submission from ' . $data['name'], $html, $data['email']);
     }
 } catch (Exception $e) {
     sensear_respond(false, 'Failed to send email. Server Error: ' . $e->getMessage(), 500, ['errors' => ['_form' => ['Failed to send email. Server Error: ' . $e->getMessage()]]]);

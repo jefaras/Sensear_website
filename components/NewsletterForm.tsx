@@ -10,13 +10,15 @@ interface NewsletterFormProps {
     buttonText: string;
     source?: string;
     variant?: "footer" | "cta";
+    successText?: string;
 }
 
 export function NewsletterForm({
     placeholder,
     buttonText,
     source = "Website",
-    variant = "footer"
+    variant = "footer",
+    successText = "✓ Thank you for subscribing!"
 }: NewsletterFormProps) {
     const [email, setEmail] = useState("");
     const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
@@ -29,16 +31,20 @@ export function NewsletterForm({
     const handleSubmit = useCallback(async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
+        // Capture the form element synchronously: `e.currentTarget` becomes null
+        // after the first `await` below, once event dispatch has finished.
+        const form = e.currentTarget;
+
         setStatus("loading");
         setErrorMessage("");
 
         try {
             const recaptchaToken = await executeRecaptcha("newsletter");
-            const payload = new globalThis.FormData(e.currentTarget);
+            const payload = new globalThis.FormData(form);
             payload.set("g-recaptcha-response", recaptchaToken);
             payload.set("source", source);
 
-            const response = await fetch(e.currentTarget.action, {
+            const response = await fetch(form.action, {
                 method: "POST",
                 headers: {
                     Accept: "application/json",
@@ -70,7 +76,7 @@ export function NewsletterForm({
     if (status === "success") {
         return (
             <div className={`text-lg ${variant === "footer" ? "text-white/70" : "text-black/70"}`}>
-                ✓ Thank you for subscribing!
+                {successText}
             </div>
         );
     }

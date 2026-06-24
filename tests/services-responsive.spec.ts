@@ -12,7 +12,7 @@ test.describe('Services page responsive layout test', () => {
   for (const viewport of viewports) {
     test(`services page at ${viewport.name} (${viewport.width}x${viewport.height})`, async ({ page }) => {
       await page.setViewportSize({ width: viewport.width, height: viewport.height });
-      await page.goto('http://localhost:3001/en/services');
+      await page.goto('http://localhost:3001/en/services/');
       await page.waitForLoadState('networkidle');
       
       // Take full page screenshot

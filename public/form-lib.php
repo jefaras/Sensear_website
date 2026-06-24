@@ -245,7 +245,7 @@ function sensear_smtp_command($socket, $command, $expectedCodes)
     return sensear_smtp_read($socket, $expectedCodes);
 }
 
-function sensear_send_email($config, $to, $subject, $html, $text = '')
+function sensear_send_email($config, $to, $subject, $html, $replyTo = '', $text = '')
 {
     $smtp = isset($config['smtp']) && is_array($config['smtp']) ? $config['smtp'] : [];
     $host = sensear_clean_smtp_host(isset($smtp['host']) ? $smtp['host'] : 'mail.sensear.music');
@@ -309,6 +309,9 @@ function sensear_send_email($config, $to, $subject, $html, $text = '')
         $headers = [];
         $headers[] = 'Date: ' . $date;
         $headers[] = 'From: ' . sensear_encode_header($fromName) . ' <' . $fromEmail . '>';
+        if ($replyTo !== '' && filter_var($replyTo, FILTER_VALIDATE_EMAIL)) {
+            $headers[] = 'Reply-To: <' . $replyTo . '>';
+        }
         $headers[] = 'To: <' . $to . '>';
         $headers[] = 'Subject: ' . sensear_encode_header($subject);
         $headers[] = 'Message-ID: ' . $messageId;
@@ -363,5 +366,5 @@ function sensear_generate_newsletter_email_html($data)
     $source = sensear_escape($data['source']);
     $receivedAt = (new DateTime('now', new DateTimeZone('Europe/Athens')))->format('n/j/Y, g:i:s A') . ' (Athens Time)';
 
-    return '<!DOCTYPE html><html><head><meta charset="utf-8"><style>body{font-family:Arial,sans-serif;line-height:1.6;color:#333}.container{max-width:600px;margin:0 auto;padding:20px}.header{background:#000;color:#fff;padding:20px;text-align:center}.content{background:#f9f9f9;padding:30px;border-radius:8px;margin-top:20px}.field{margin-bottom:20px}.field-label{font-weight:bold;color:#000;margin-bottom:5px}.field-value{color:#555}.footer{text-align:center;margin-top:30px;color:#999;font-size:12px}</style></head><body><div class="container"><div class="header"><h1>SENSEAR</h1><p>New Newsletter Subscription</p></div><div class="content"><div class="field"><div class="field-label">📧 Subscriber Email:</div><div class="field-value"><a href="mailto:' . rawurlencode($data['email']) . '">' . $email . '</a></div></div><div class="field"><div class="field-label">📍 Subscription Source:</div><div class="field-value">' . $source . '</div></div></div><div class="footer"><p>This email was sent from the SensEar newsletter subscription form</p><p>Received at: ' . sensear_escape($receivedAt) . '</p></div></div></body></html>';
+    return '<!DOCTYPE html><html><head><meta charset="utf-8"><style>body{font-family:Arial,sans-serif;line-height:1.6;color:#333}.container{max-width:600px;margin:0 auto;padding:20px}.header{background:#000;color:#fff;padding:20px;text-align:center}.content{background:#f9f9f9;padding:30px;border-radius:8px;margin-top:20px}.intro{margin:0 0 24px;color:#333}.field{margin-bottom:20px}.field-label{font-weight:bold;color:#000;margin-bottom:5px}.field-value{color:#555}.footer{text-align:center;margin-top:30px;color:#999;font-size:12px}</style></head><body><div class="container"><div class="header"><h1>SENSEAR</h1><p>New Newsletter Subscription</p></div><div class="content"><p class="intro">Hello SensEar team,</p><p class="intro">A new visitor has signed up to receive the SensEar Curation Journal. Their details are below so you can add them to your mailing list and follow up if appropriate. You can reply directly to this email to reach the subscriber.</p><div class="field"><div class="field-label">📧 Subscriber Email:</div><div class="field-value"><a href="mailto:' . rawurlencode($data['email']) . '">' . $email . '</a></div></div><div class="field"><div class="field-label">📍 Subscription Source:</div><div class="field-value">' . $source . '</div></div></div><div class="footer"><p>This email was sent automatically from the SensEar newsletter subscription form at sensear.music</p><p>Received at: ' . sensear_escape($receivedAt) . '</p></div></div></body></html>';
 }

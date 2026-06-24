@@ -9,14 +9,18 @@ function normalizePath(path: string | null | undefined): string {
     return withoutTrailingSlash || '/'
 }
 
+function withTrailingSlash(path: string): string {
+    return path === '/' ? path : `${path}/`
+}
+
 export function getLocalizedPath(lang: Locale, path: string = '/'): string {
     const normalizedPath = normalizePath(path)
 
     if (lang === 'en') {
-        return normalizedPath === '/' ? '/en' : `/en${normalizedPath}`
+        return withTrailingSlash(normalizedPath === '/' ? '/en' : `/en${normalizedPath}`)
     }
 
-    return normalizedPath
+    return withTrailingSlash(normalizedPath)
 }
 
 export function getPathLocale(pathname: string | null | undefined): Locale {

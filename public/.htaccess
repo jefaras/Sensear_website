@@ -1,0 +1,43 @@
+DirectoryIndex index.html
+ErrorDocument 404 /404.html
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+# Legacy Greek default-locale URLs. Greek pages are exported without the /el prefix.
+RewriteRule ^el/?$ / [R=301,L]
+RewriteRule ^el/(sonic-identity|signature-playlists)/?$ /services/$1/ [R=301,L]
+RewriteRule ^el/music-for-hotels-and-resorts/?$ /industries/music-for-hotels-and-resorts/ [R=301,L]
+RewriteRule ^el/music-for-restaurants-and-bars/?$ /industries/music-for-restaurants-and-bars/ [R=301,L]
+RewriteRule ^el/services/services/([^/]+)/?$ /services/$1/ [R=301,L]
+RewriteRule ^el/industries/industries/([^/]+)/?$ /industries/$1/ [R=301,L]
+RewriteRule ^el/industries/hotels-resorts/?$ /industries/music-for-hotels-and-resorts/ [R=301,L]
+RewriteRule ^el/(klouvi-bar|beach-house-antiparos)/?$ /case-studies/ [R=301,L]
+RewriteRule ^el/(.+[^/])$ /$1/ [R=301,L,NE]
+RewriteRule ^el/(.+)/$ /$1/ [R=301,L,NE]
+
+# English legacy route cleanup.
+RewriteRule ^en/industries/hotels-resorts/?$ /en/industries/music-for-hotels-and-resorts/ [R=301,L]
+RewriteRule ^en/services/services/([^/]+)/?$ /en/services/$1/ [R=301,L]
+RewriteRule ^en/industries/industries/([^/]+)/?$ /en/industries/$1/ [R=301,L]
+RewriteRule ^en/(sonic-identity|signature-playlists)/?$ /en/services/$1/ [R=301,L]
+RewriteRule ^en/music-for-hotels-and-resorts/?$ /en/industries/music-for-hotels-and-resorts/ [R=301,L]
+RewriteRule ^en/music-for-restaurants-and-bars/?$ /en/industries/music-for-restaurants-and-bars/ [R=301,L]
+RewriteRule ^en/(klouvi-bar|beach-house-antiparos)/?$ /en/case-studies/ [R=301,L]
+
+# Default-locale legacy route cleanup.
+RewriteRule ^home/?$ / [R=301,L]
+RewriteRule ^(klouvi-bar|beach-house-antiparos)/?$ /case-studies/ [R=301,L]
+RewriteRule ^(sonic-identity|signature-playlists)/?$ /services/$1/ [R=301,L]
+RewriteRule ^music-for-hotels-and-resorts/?$ /industries/music-for-hotels-and-resorts/ [R=301,L]
+RewriteRule ^music-for-restaurants-and-bars/?$ /industries/music-for-restaurants-and-bars/ [R=301,L]
+RewriteRule ^services/services/([^/]+)/?$ /services/$1/ [R=301,L]
+RewriteRule ^industries/industries/([^/]+)/?$ /industries/$1/ [R=301,L]
+RewriteRule ^industries/hotels-resorts/?$ /industries/music-for-hotels-and-resorts/ [R=301,L]
+
+# Canonical trailing slash for exported extensionless page routes.
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_URI} !/$
+RewriteCond %{REQUEST_URI} !\.[A-Za-z0-9]{2,5}$
+RewriteRule ^(.+)$ /$1/ [R=301,L,NE]
+</IfModule>

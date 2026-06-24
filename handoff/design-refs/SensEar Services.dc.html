@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#0b0a0a"/><text x="50" y="58" font-family="Georgia,serif" font-style="italic" font-size="34" fill="#f0bd95" text-anchor="middle">Se</text></svg></template>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,500&family=GFS+Didot:ital@1&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{background:#0b0a0a;}
+  ::selection{background:var(--accent,#f0bd95);color:#0b0a0a;}
+  :root{--accent:#f0bd95;--peach:#faebe3;--ink:#0b0a0a;--paper:#faf6f1;--gold:linear-gradient(100deg,#f0cdb8 0%,#f7ddd0 15%,#fcefe7 29%,#ffffff 44%,#efeeec 58%,#dad8d6 72%,#d2cec9 84%,#e4d9c4 100%);--gold-text:linear-gradient(100deg,#edc4ac 0%,#f6dccd 19%,#fffaf6 42%,#eae8e4 60%,#d3cfc9 77%,#e2d6bf 100%);}
+  @keyframes se-marq{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+  @keyframes se-spin{to{transform:rotate(360deg);}}
+  @keyframes se-drift{0%,100%{transform:translate(0,0) scale(1);}50%{transform:translate(4%,-3%) scale(1.08);}}
+  @keyframes se-grad{0%{background-position:0% 50%;}50%{background-position:100% 50%;}100%{background-position:0% 50%;}}
+</style>
+</helmet>
+
+<div id="sensear-root" style="background:#0b0a0a;color:#faf6f1;font-family:'Montserrat',system-ui,sans-serif;overflow-x:hidden;-webkit-font-smoothing:antialiased;position:relative;">
+
+  <!-- NAV -->
+  <nav id="se-nav" style="position:fixed;top:0;left:0;right:0;z-index:100;transition:background .4s ease,border-color .4s ease,padding .4s ease;border-bottom:1px solid rgba(250,246,241,0);padding:22px 0;">
+    <div style="max-width:1380px;margin:0 auto;padding:0 32px;display:flex;align-items:center;justify-content:space-between;gap:24px;">
+      <a href="SensEar Homepage.dc.html#hero" style="display:flex;align-items:center;gap:12px;text-decoration:none;">
+        <img src="images/brand/sensear-logo-white.png" alt="SensEar" style="width:38px;height:38px;object-fit:contain;">
+        <span style="font-family:'Montserrat',sans-serif;font-weight:800;letter-spacing:.22em;font-size:20px;color:#faf6f1;">SENSEAR</span>
+      </a>
+      <div style="display:flex;align-items:center;gap:32px;">
+        <a href="#services" class="se-navlink" style="font-size:13px;letter-spacing:.08em;font-weight:700;color:#faf6f1;text-decoration:none;background-image:var(--gold-text);background-repeat:no-repeat;background-position:0 100%;background-size:100% 2px;padding-bottom:5px;transition:background-size .35s cubic-bezier(.16,1,.3,1),color .3s ease;">Υπηρεσίες</a>
+        <a href="SensEar Industries.dc.html#industries" class="se-navlink" style="font-size:13px;letter-spacing:.08em;font-weight:600;color:rgba(250,246,241,.72);text-decoration:none;background-image:var(--gold-text);background-repeat:no-repeat;background-position:0 100%;background-size:0% 2px;padding-bottom:5px;transition:background-size .35s cubic-bezier(.16,1,.3,1),color .3s ease;" onMouseEnter="{{ onNavEnter }}" onMouseLeave="{{ onNavLeave }}">Κλάδοι</a>
+        <a href="SensEar Case Studies.dc.html" class="se-navlink" style="font-size:13px;letter-spacing:.08em;font-weight:600;color:rgba(250,246,241,.72);text-decoration:none;background-image:var(--gold-text);background-repeat:no-repeat;background-position:0 100%;background-size:0% 2px;padding-bottom:5px;transition:background-size .35s cubic-bezier(.16,1,.3,1),color .3s ease;" onMouseEnter="{{ onNavEnter }}" onMouseLeave="{{ onNavLeave }}">Case Studies</a>
+        <a href="SensEar Journal.dc.html" class="se-navlink" style="font-size:13px;letter-spacing:.08em;font-weight:600;color:rgba(250,246,241,.72);text-decoration:none;background-image:var(--gold-text);background-repeat:no-repeat;background-position:0 100%;background-size:0% 2px;padding-bottom:5px;transition:background-size .35s cubic-bezier(.16,1,.3,1),color .3s ease;" onMouseEnter="{{ onNavEnter }}" onMouseLeave="{{ onNavLeave }}">Journal</a>
+        <a href="SensEar About.dc.html#team" class="se-navlink" style="font-size:13px;letter-spacing:.08em;font-weight:600;color:rgba(250,246,241,.72);text-decoration:none;background-image:var(--gold-text);background-repeat:no-repeat;background-position:0 100%;background-size:0% 2px;padding-bottom:5px;transition:background-size .35s cubic-bezier(.16,1,.3,1),color .3s ease;" onMouseEnter="{{ onNavEnter }}" onMouseLeave="{{ onNavLeave }}">Σχετικά</a>
+        <a href="SensEar Contact.dc.html" style="font-size:13px;letter-spacing:.08em;font-weight:700;color:#0b0a0a;background:var(--gold);text-decoration:none;padding:11px 22px;border-radius:100px;transition:transform .3s ease;" onMouseEnter="{{ onPillEnter }}" onMouseLeave="{{ onPillLeave }}">Επικοινωνία</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="top" style="position:relative;min-height:92vh;display:flex;align-items:center;padding:150px 0 80px;overflow:hidden;">
+    <div aria-hidden="true" style="position:absolute;top:-12%;right:-6%;width:60vw;height:60vw;max-width:760px;max-height:760px;background:radial-gradient(circle,rgba(240,189,149,.17),rgba(240,189,149,0) 62%);filter:blur(20px);animation:se-drift 16s ease-in-out infinite;pointer-events:none;"></div>
+    <div aria-hidden="true" style="position:absolute;bottom:-16%;left:-10%;width:48vw;height:48vw;max-width:600px;max-height:600px;background:radial-gradient(circle,rgba(250,235,227,.06),rgba(250,235,227,0) 60%);filter:blur(10px);animation:se-drift 22s ease-in-out infinite reverse;pointer-events:none;"></div>
+
+    <div style="position:absolute;left:32px;top:50%;transform:translateY(-50%) rotate(180deg);writing-mode:vertical-rl;display:flex;align-items:center;gap:18px;">
+      <span style="font-size:11px;letter-spacing:.42em;font-weight:600;color:rgba(250,246,241,.4);">SERVICES — SONIC STRATEGY</span>
+    </div>
+
+    <div style="max-width:1380px;margin:0 auto;padding:0 32px 0 84px;width:100%;display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center;">
+      <div>
+        <div data-reveal style="opacity:0;transform:translateY(28px);transition:all .9s cubic-bezier(.16,1,.3,1);display:flex;align-items:center;gap:14px;margin-bottom:30px;">
+          <span style="width:34px;height:1px;background:var(--gold);display:inline-block;"></span>
+          <span style="font-size:12px;letter-spacing:.34em;font-weight:700;background:var(--gold-text);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;">ΟΙ ΥΠΗΡΕΣΙΕΣ ΜΑΣ</span>
+        </div>
+        <h1 data-reveal style="opacity:0;transform:translateY(34px);transition:all 1s cubic-bezier(.16,1,.3,1) .08s;font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(2.6rem,5.4vw,4.9rem);line-height:1.02;letter-spacing:-.022em;margin-bottom:30px;">
+          Στρατηγική μουσική<br>&amp; ήχος, <span style="font-family:'GFS Didot',serif;font-style:italic;font-size:1.1em;background:var(--gold-text);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;">τέσσερις</span><br>πρακτικές προσεγγίσεις
+        </h1>
+        <div data-reveal style="opacity:0;transform:translateY(28px);transition:all 1s cubic-bezier(.16,1,.3,1) .16s;max-width:540px;margin-bottom:42px;">
+          <p style="font-size:clamp(1.05rem,1.5vw,1.28rem);font-weight:500;line-height:1.55;color:rgba(250,246,241,.72);">Premium υπηρεσίες μουσικής &amp; ήχου, σχεδιασμένες να ταιριάζουν στον τρόπο που ένας χώρος λειτουργεί και βιώνεται.</p>
+        </div>
+        <div data-reveal style="opacity:0;transform:translateY(24px);transition:all 1s cubic-bezier(.16,1,.3,1) .24s;display:flex;align-items:center;gap:28px;flex-wrap:wrap;">
+          <a href="#services" class="se-cta" style="position:relative;overflow:hidden;display:inline-flex;align-items:center;gap:10px;background:var(--gold);color:#0b0a0a;font-weight:700;font-size:15px;letter-spacing:.01em;padding:17px 32px;border-radius:100px;text-decoration:none;transition:background .35s ease,color .35s ease,box-shadow .35s ease;" onMouseEnter="{{ onCtaEnter }}" onMouseLeave="{{ onCtaLeave }}">
+            <img class="se-cta-ico" src="images/brand/sensear-logo-color.png" alt="" style="width:20px;height:20px;object-fit:contain;transition:opacity .35s ease,transform .35s ease,width .35s ease,margin .35s ease;">
+            <span class="se-cta-label" style="transition:transform .35s cubic-bezier(.16,1,.3,1);">Εξερευνήστε τις υπηρεσίες</span>
+            <span class="se-cta-arrow" style="display:inline-flex;align-items:center;max-width:0;opacity:0;overflow:hidden;transition:max-width .35s cubic-bezier(.16,1,.3,1),opacity .3s ease,margin-left .35s ease;font-size:17px;">→</span>
+          </a>
+          <a href="#cta" style="font-size:14px;font-weight:600;color:#faf6f1;text-decoration:none;border-bottom:1px solid rgba(250,246,241,.3);padding-bottom:3px;">Κλείστε ραντεβού</a>
+        </div>
+      </div>
+
+      <div data-reveal style="opacity:0;transform:translateY(40px);transition:all 1.1s cubic-bezier(.16,1,.3,1) .2s;position:relative;">
+        <div style="position:relative;border-radius:8px;overflow:hidden;aspect-ratio:1/1;box-shadow:0 40px 90px -30px rgba(0,0,0,.8);">
+          <img src="images/services/services-hero-strategic-music.jpg" alt="Strategic music services" style="width:100%;height:100%;object-fit:cover;">
+          <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,10,10,0) 48%,rgba(11,10,10,.55));"></div>
+        </div>
+        <div style="position:absolute;bottom:22px;left:22px;right:22px;">
+          <div style="font-size:10px;letter-spacing:.3em;background:var(--gold-text);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;font-weight:700;margin-bottom:4px;">FOUR APPROACHES</div>
+          <div style="font-family:'GFS Didot',serif;font-style:italic;font-size:1.5rem;color:#faf6f1;">Sound, by design.</div>
+        </div>
+        <div style="position:absolute;top:-18px;right:-18px;width:96px;height:96px;border-radius:50%;border:1px solid rgba(250,246,241,.25);display:flex;align-items:center;justify-content:center;background:rgba(11,10,10,.55);backdrop-filter:blur(4px);animation:se-spin 24s linear infinite;" data-spin>
+          <span style="font-size:9px;letter-spacing:.18em;font-weight:700;color:rgba(250,246,241,.6);text-align:center;line-height:1.5;">★ SENSEAR ★<br>EST · ATH</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATEMENT -->
+  <section style="padding:120px 0;background:#0e0d0c;border-top:1px solid rgba(250,246,241,.08);position:relative;overflow:hidden;">
+    <div aria-hidden="true" style="position:absolute;top:-8%;left:30%;width:46vw;max-width:560px;height:46vw;max-height:560px;background:radial-gradient(circle,rgba(240,189,149,.10),rgba(240,189,149,0) 62%);filter:blur(24px);pointer-events:none;z-index:0;animation:se-drift 21s ease-in-out infinite;"></div>
+    <div style="max-width:1080px;margin:0 auto;padding:0 32px;position:relative;z-index:1;text-align:center;">
+      <div data-reveal style="opacity:0;transform:translateY(24px);transition:all .9s cubic-bezier(.16,1,.3,1);display:inline-flex;align-items:center;gap:14px;margin-bottom:34px;">
+        <span style="font-size:12px;letter-spacing:.34em;font-weight:700;color:rgba(250,246,241,.6);">ΓΙΑΤΙ ΕΧΕΙ ΣΗΜΑΣΙΑ</span>
+      </div>
+      <h2 data-reveal style="opacity:0;transform:translateY(28px);transition:all 1s cubic-bezier(.16,1,.3,1) .06s;font-weight:800;font-size:clamp(1.9rem,4vw,3.2rem);line-height:1.08;letter-spacing:-.02em;margin-bottom:34px;">Η μουσική ήδη διαμορφώνει την <span style="font-family:'GFS Didot',serif;font-style:italic;font-size:1.1em;background:var(--gold-text);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;">επιχείρησή</span> σας</h2>
+      <p data-reveal style="opacity:0;transform:translateY(24px);transition:all 1s cubic-bezier(.16,1,.3,1) .12s;font-size:clamp(1.2rem,2vw,1.6rem);line-height:1.5;color:#faf6f1;max-width:840px;margin:0 auto 20px;">Κάθε χώρος έχει το δικό του soundtrack, είτε το σχεδιάσατε είτε όχι. Η SensEar φροντίζει να λέει τη σωστή ιστορία.</p>
+      <p data-reveal style="opacity:0;transform:translateY(24px);transition:all 1s cubic-bezier(.16,1,.3,1) .18s;font-size:clamp(1.02rem,1.5vw,1.22rem);line-height:1.65;color:rgba(250,246,241,.58);max-width:760px;margin:0 auto;">Σχεδιάζουμε ήχο για χώρους και εκδηλώσεις όπου η ατμόσφαιρα έχει σημασία. Καθοδηγούμε το πώς νιώθουν οι επισκέπτες, πόσο μένουν και τι θυμούνται από εσάς.</p>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" style="padding:130px 0 110px;position:relative;">
+    <div aria-hidden="true" style="position:absolute;top:14%;right:-6%;width:46vw;max-width:560px;height:46vw;max-height:560px;background:radial-gradient(circle,rgba(240,189,149,.10),rgba(240,189,149,0) 62%);filter:blur(24px);pointer-events:none;z-index:0;animation:se-drift 24s ease-in-out infinite reverse;"></div>
+    <div style="max-width:1380px;margin:0 auto;padding:0 32px;position:relative;z-index:1;">
+      <div style="text-align:center;max-width:780px;margin:0 auto 90px;">
+        <div data-reveal style="opacity:0;transform:translateY(24px);transition:all .9s cubic-bezier(.16,1,.3,1);display:inline-flex;align-items:center;gap:14px;margin-bottom:18px;">
+          <span style="font-size:12px;letter-spacing:.34em;font-weight:700;color:rgba(250,246,241,.6);">ΥΠΗΡΕΣΙΕΣ</span>
+        </div>
+        <h2 data-reveal style="opacity:0;transform:translateY(28px);transition:all 1s cubic-bezier(.16,1,.3,1) .06s;font-weight:800;font-size:clamp(2rem,4vw,3.4rem);line-height:1.05;letter-spacing:-.02em;margin-bottom:18px;">Επιλέξτε το σημείο <span style="font-family:'GFS Didot',serif;font-style:italic;font-size:1.1em;background:var(--gold-text);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;">εκκίνησής</span> σας</h2>
+        <p data-reveal style="opacity:0;transform:translateY(24px);transition:all 1s cubic-bezier(.16,1,.3,1) .12s;font-size:1.1rem;color:rgba(250,246,241,.6);">Χρησιμοποιήστε τον παρακάτω οδηγό για να δείτε ποια υπηρεσία ταιριάζει καλύτερα στις ανάγκες σας.</p>
+      </div>
+
+      <!-- Service 01 — Signature Playlists (image left) -->
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;margin-bottom:120px;">
+        <div data-reveal style="opacity:0;transform:translateY(40px);transition:all 1.1s cubic-bezier(.16,1,.3,1);border-radius:8px;overflow:hidden;aspect-ratio:4/3;position:relative;">
+          <img src="images/services/service-signature-playlists.jpg" alt="Signature Playlists" style="width:100%;height:100%;object-fit:cover;">
+          <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,10,10,0) 60%,rgba(11,10,10,.35));"></div>
+        </div>
+        <div>
+          <h3 data-reveal style="opacity:0;transform:translateY(24px);transition:all 1s cubic-bezier(.16,1,.3,1) .05s;font-weight:800;font-size:clamp(1.9rem,3.4vw,3rem);line-height:1.04;letter-spacing:-.02em;margin-bottom:10px;">Signature Playlists</h3>
+          <p data-reveal style="opacity:0;transform:translateY(22px);transition:all 1s cubic-bezier(.16,1,.3,1) .1s;font-family:'GFS Didot',serif;font-style:italic;font-size:1.4rem;background:var(--gold-text);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;margin-bottom:26px;">Το καθημερινό σας soundtrack</p>
+          <p data-reveal style="opacity:0;transform:translateY(22px);transition:all 1s cubic-bezier(.16,1,.3,1) .14s;font-size:1.12rem;line-height:1.65;color:rgba(250,246,241,.66);margin-bottom:22px;max-width:520px;">Επιμελημένα playlists που εξελίσσονται μέσα στη μέρα, με μηνιαίες ενημερώσεις και απομακρυσμένη διαχείριση.</p>
+          <p data-reveal style="opacity:0;transform:translateY(22px);transition:all 1s cubic-bezier(.16,1,.3,1) .18s;font-size:1rem;line-height:1.6;color:rgba(250,246,241,.55);margin-bottom:34px;max-width:520px;"><span style="font-weight:700;background:var(--gold-text);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;">Ιδανικό για:</span> Χώρους που θέλουν να αφήσουν πίσω τη γενική, απρόσωπη μουσική υπόκρουση.</p>
+          <a href="#cta" data-reveal class="se-cta" style="opacity:0;transform:translateY(20px);transition:all 1s cubic-bezier(.16,1,.3,1) .22s;position:relative;overflow:hidden;display:inline-flex;align-items:center;gap:10px;background:var(--gold);color:#0b0a0a;font-weight:700;font-size:15px;padding:15px 30px;border-radius:100px;text-decoration:none;" onMouseEnter="{{ onCtaEnter }}" onMouseLeave="{{ onCtaLeave }}"><img class="se-cta-ico" src="images/brand/sensear-logo-color.png" alt="" style="width:20px;height:20px;object-fit:contain;transition:opacity .35s ease,transform .35s ease,width .35s ease,margin .35s ease;"><span class="se-cta-label" style="transition:transform .35s cubic-bezier(.16,1,.3,1);">Ανακαλύψτε τα Signature Playlists</span><span class="se-cta-arrow" style="display:inline-flex;align-items:center;max-width:0;opacity:0;overflow:hidden;transition:max-width .35s cubic-bezier(.16,1,.3,1),opacity .3s ease,margin-left .35s ease;font-size:17px;">→</span></a>
+        </div>
+      </div>
+
+      <!-- Service 02 — Μουσική Εκδηλώσεων (image right) -->
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;margin-bottom:120px;">
+        <div style="order:2;">
+          <h3 data-reveal style="opacity:0;transform:translateY(24px);transition:all 1s cubic-bezier(.16,1,.3,1) .05s;font-weight:800;font-size:clamp(1.9rem,3.4vw,3rem);line-height:1.04;letter-spacing:-.02em;margin-bottom:10px;">Μουσική Εκδηλώσεων</h3>
+          <p data-reveal style="opacity:0;transform:translateY(22px);transition:all 1s cubic-bezier(.16,1,.3,1) .1s;font-family:'GFS Didot',serif;font-style:italic;font-size:1.4rem;background:var(--gold-text);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;margin-bottom:26px;">Μουσική για σημαντικές στιγμές</p>
+          <p data-reveal style="opacity:0;transform:translateY(22px);transition:all 1s cubic-bezier(.16,1,.3,1) .14s;font-size:1.12rem;line-height:1.65;color:rgba(250,246,241,.66);margin-bottom:22px;max-width:520px;">Μελετημένος ήχος για κάθε στάδιο της εκδήλωσης, με κατεύθυνση και υποστήριξη AV.</p>
+          <p data-reveal style="opacity:0;transform:translateY(22px);transition:all 1s cubic-bezier(.16,1,.3,1) .18s;font-size:1rem;line-height:1.6;color:rgba(250,246,241,.55);margin-bottom:34px;max-width:520px;"><span style="font-weight:700;background:var(--gold-text);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;">Ιδανικό για:</span> Συνέδρια, παρουσιάσεις, γάμους και ξεχωριστές διοργανώσεις.</p>
+          <a href="#cta" data-reveal class="se-cta" style="opacity:0;transform:translateY(20px);transition:all 1s cubic-bezier(.16,1,.3,1) .22s;position:relative;overflow:hidden;display:inline-flex;align-items:center;gap:10px;background:var(--gold);color:#0b0a0a;font-weight:700;font-size:15px;padding:15px 30px;border-radius:100px;text-decoration:none;" onMouseEnter="{{ onCtaEnter }}" onMouseLeave="{{ onCtaLeave }}"><img class="se-cta-ico" src="images/brand/sensear-logo-color.png" alt="" style="width:20px;height:20px;object-fit:contain;transition:opacity .35s ease,transform .35s ease,width .35s ease,margin .35s ease;"><span class="se-cta-label" style="transition:transform .35s cubic-bezier(.16,1,.3,1);">Ανακαλύψτε τη Μουσική Εκδηλώσεων</span><span class="se-cta-arrow" style="display:inline-flex;align-items:center;max-width:0;opacity:0;overflow:hidden;transition:max-width .35s cubic-bezier(.16,1,.3,1),opacity .3s ease,margin-left .35s ease;font-size:17px;">→</span></a>
+        </div>
+        <div data-reveal style="opacity:0;transform:translateY(40px);transition:all 1.1s cubic-bezier(.16,1,.3,1);order:1;border-radius:8px;overflow:hidden;aspect-ratio:4/3;position:relative;">
+          <img src="images/services/service-event-soundtracks.jpg" alt="Μουσική Εκδηλώσεων" style="width:100%;height:100%;object-fit:cover;">
+          <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,10,10,0) 60%,rgba(11,10,10,.35));"></div>
+        </div>
+      </div>
+
+      <!-- Service 03 & 04 — cards -->
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:30px;">
+        <div data-reveal class="se-svccard" style="opacity:0;transform:translateY(36px);transition:opacity .9s ease,transform .9s cubic-bezier(.16,1,.3,1);background:#0e0d0c;border:1px solid rgba(250,246,241,.1);border-radius:10px;overflow:hidden;display:flex;flex-direction:column;">
+          <div style="position:relative;aspect-ratio:16/9;overflow:hidden;">
+            <img src="images/services/service-sonic-strategy.jpg" alt="Ηχητική Ταυτότητα" class="se-svccard-img" style="width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.16,1,.3,1);">
+          </div>
+          <div style="padding:34px;display:flex;flex-direction:column;flex:1;">
+            <h3 style="font-weight:800;font-size:1.7rem;letter-spacing:-.01em;margin-bottom:8px;">Ηχητική Ταυτότητα</h3>
+            <p style="font-family:'GFS Didot',serif;font-style:italic;font-size:1.18rem;background:var(--gold-text);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;margin-bottom:20px;">Το ηχητικό DNA του brand σας</p>
+            <p style="font-size:1.02rem;line-height:1.6;color:rgba(250,246,241,.62);margin-bottom:14px;">Κατευθυντήριες γραμμές και οδικός χάρτης εφαρμογής για συνεπή ήχο, παντού.</p>
+            <p style="font-size:.96rem;line-height:1.6;color:rgba(250,246,241,.5);margin-bottom:28px;"><span style="font-weight:700;background:var(--gold-text);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;">Ιδανικό για:</span> Brands με πολλαπλούς χώρους ή κανάλια επικοινωνίας.</p>
+            <a href="#cta" class="se-cta" style="margin-top:auto;align-self:flex-start;position:relative;overflow:hidden;display:inline-flex;align-items:center;gap:10px;background:var(--gold);color:#0b0a0a;font-weight:700;font-size:14px;padding:13px 26px;border-radius:100px;text-decoration:none;" onMouseEnter="{{ onCtaEnter }}" onMouseLeave="{{ onCtaLeave }}"><img class="se-cta-ico" src="images/brand/sensear-logo-color.png" alt="" style="width:18px;height:18px;object-fit:contain;transition:opacity .35s ease,transform .35s ease,width .35s ease,margin .35s ease;"><span class="se-cta-label" style="transition:transform .35s cubic-bezier(.16,1,.3,1);">Ανακαλύψτε την Ηχητική Ταυτότητα</span><span class="se-cta-arrow" style="display:inline-flex;align-items:center;max-width:0;opacity:0;overflow:hidden;transition:max-width .35s cubic-bezier(.16,1,.3,1),opacity .3s ease,margin-left .35s ease;font-size:16px;">→</span></a>
+          </div>
+        </div>
+        <div data-reveal class="se-svccard" style="opacity:0;transform:translateY(36px);transition:opacity .9s ease .08s,transform .9s cubic-bezier(.16,1,.3,1) .08s;background:#0e0d0c;border:1px solid rgba(250,246,241,.1);border-radius:10px;overflow:hidden;display:flex;flex-direction:column;">
+          <div style="position:relative;aspect-ratio:16/9;overflow:hidden;">
+            <img src="images/services/service-audio-upgrades.jpg" alt="Ακουστική Αναβάθμιση" class="se-svccard-img" style="width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.16,1,.3,1);">
+          </div>
+          <div style="padding:34px;display:flex;flex-direction:column;flex:1;">
+            <h3 style="font-weight:800;font-size:1.7rem;letter-spacing:-.01em;margin-bottom:8px;">Ακουστική Αναβάθμιση</h3>
+            <p style="font-family:'GFS Didot',serif;font-style:italic;font-size:1.18rem;background:var(--gold-text);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;margin-bottom:20px;">Ακουστική αρτιότητα</p>
+            <p style="font-size:1.02rem;line-height:1.6;color:rgba(250,246,241,.62);margin-bottom:14px;">Καθοδήγηση για ακουστική, εξοπλισμό και ρυθμίσεις, με υποστήριξη εγκατάστασης.</p>
+            <p style="font-size:.96rem;line-height:1.6;color:rgba(250,246,241,.5);margin-bottom:28px;"><span style="font-weight:700;background:var(--gold-text);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;">Ιδανικό για:</span> Χώρους όπου η ποιότητα του ήχου χρειάζεται αναβάθμιση.</p>
+            <a href="#cta" class="se-cta" style="margin-top:auto;align-self:flex-start;position:relative;overflow:hidden;display:inline-flex;align-items:center;gap:10px;background:var(--gold);color:#0b0a0a;font-weight:700;font-size:14px;padding:13px 26px;border-radius:100px;text-decoration:none;" onMouseEnter="{{ onCtaEnter }}" onMouseLeave="{{ onCtaLeave }}"><img class="se-cta-ico" src="images/brand/sensear-logo-color.png" alt="" style="width:18px;height:18px;object-fit:contain;transition:opacity .35s ease,transform .35s ease,width .35s ease,margin .35s ease;"><span class="se-cta-label" style="transition:transform .35s cubic-bezier(.16,1,.3,1);">Ανακαλύψτε την Ακουστική Αναβάθμιση</span><span class="se-cta-arrow" style="display:inline-flex;align-items:center;max-width:0;opacity:0;overflow:hidden;transition:max-width .35s cubic-bezier(.16,1,.3,1),opacity .3s ease,margin-left .35s ease;font-size:16px;">→</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section style="padding:120px 0;background:#0e0d0c;border-top:1px solid rgba(250,246,241,.08);position:relative;">
+    <div aria-hidden="true" style="position:absolute;bottom:4%;left:-6%;width:44vw;max-width:540px;height:44vw;max-height:540px;background:radial-gradient(circle,rgba(250,235,227,.07),rgba(250,235,227,0) 62%);filter:blur(22px);pointer-events:none;z-index:0;animation:se-drift 19s ease-in-out infinite;"></div>
+    <div style="max-width:1380px;margin:0 auto;padding:0 32px;position:relative;z-index:1;">
+      <div style="display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:center;">
+        <div data-reveal style="opacity:0;transform:translateY(36px);transition:all 1.1s cubic-bezier(.16,1,.3,1);border-radius:8px;overflow:hidden;aspect-ratio:4/4.2;position:relative;">
+          <img src="images/services/services-delivery-process.jpg" alt="Πώς λειτουργούν οι υπηρεσίες" style="width:100%;height:100%;object-fit:cover;">
+          <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,10,10,0) 55%,rgba(11,10,10,.5));"></div>
+        </div>
+        <div>
+          <div data-reveal style="opacity:0;transform:translateY(24px);transition:all .9s cubic-bezier(.16,1,.3,1);display:flex;align-items:center;gap:14px;margin-bottom:18px;">
+            <span style="font-size:12px;letter-spacing:.34em;font-weight:700;color:rgba(250,246,241,.6);">Η ΣΥΝΕΡΓΑΣΙΑ</span>
+          </div>
+          <h2 data-reveal style="opacity:0;transform:translateY(28px);transition:all 1s cubic-bezier(.16,1,.3,1) .06s;font-weight:800;font-size:clamp(2rem,4vw,3.4rem);line-height:1.05;letter-spacing:-.02em;margin-bottom:18px;">Πώς <span style="font-family:'GFS Didot',serif;font-style:italic;font-size:1.1em;background:var(--gold-text);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;">λειτουργούν</span> οι υπηρεσίες μας</h2>
+          <p data-reveal style="opacity:0;transform:translateY(24px);transition:all 1s cubic-bezier(.16,1,.3,1) .12s;font-size:1.1rem;color:rgba(250,246,241,.6);max-width:560px;margin-bottom:42px;">Οι υπηρεσίες μας λειτουργούν αυτόνομα ή συνδυαστικά, προσαρμοσμένες στις ακριβείς ανάγκες σας.</p>
+          <div style="display:flex;flex-direction:column;">
+            <div data-reveal style="opacity:0;transform:translateY(20px);transition:all .8s cubic-bezier(.16,1,.3,1);display:flex;gap:22px;padding:22px 0;border-top:1px solid rgba(250,246,241,.12);">
+              <span style="font-size:13px;font-weight:700;color:rgba(250,246,241,.4);width:34px;flex:none;">01</span>
+              <div><div style="font-weight:700;font-size:1.25rem;margin-bottom:6px;">Signature Playlists</div><p style="font-size:1rem;color:rgba(250,246,241,.55);line-height:1.55;">Χτίζουν την καθημερινή ατμόσφαιρα του χώρου σας.</p></div>
+            </div>
+            <div data-reveal style="opacity:0;transform:translateY(20px);transition:all .8s cubic-bezier(.16,1,.3,1) .06s;display:flex;gap:22px;padding:22px 0;border-top:1px solid rgba(250,246,241,.12);">
+              <span style="font-size:13px;font-weight:700;color:rgba(250,246,241,.4);width:34px;flex:none;">02</span>
+              <div><div style="font-weight:700;font-size:1.25rem;margin-bottom:6px;">Ηχητική Ταυτότητα</div><p style="font-size:1rem;color:rgba(250,246,241,.55);line-height:1.55;">Ενοποιούν τον ήχο του brand σας σε χώρους και κανάλια.</p></div>
+            </div>
+            <div data-reveal style="opacity:0;transform:translateY(20px);transition:all .8s cubic-bezier(.16,1,.3,1) .12s;display:flex;gap:22px;padding:22px 0;border-top:1px solid rgba(250,246,241,.12);">
+              <span style="font-size:13px;font-weight:700;color:rgba(250,246,241,.4);width:34px;flex:none;">03</span>
+              <div><div style="font-weight:700;font-size:1.25rem;margin-bottom:6px;">Μουσική Εκδηλώσεων</div><p style="font-size:1rem;color:rgba(250,246,241,.55);line-height:1.55;">Χορογραφούν τις ξεχωριστές στιγμές μιας εκδήλωσης.</p></div>
+            </div>
+            <div data-reveal style="opacity:0;transform:translateY(20px);transition:all .8s cubic-bezier(.16,1,.3,1) .18s;display:flex;gap:22px;padding:22px 0;border-top:1px solid rgba(250,246,241,.12);border-bottom:1px solid rgba(250,246,241,.12);">
+              <span style="font-size:13px;font-weight:700;color:rgba(250,246,241,.4);width:34px;flex:none;">04</span>
+              <div><div style="font-weight:700;font-size:1.25rem;margin-bottom:6px;">Ακουστική Αναβάθμιση</div><p style="font-size:1rem;color:rgba(250,246,241,.55);line-height:1.55;">Βελτιστοποιούν την ακουστική ποιότητα και την καθαρότητα του ήχου.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="cta" style="position:relative;padding:150px 0;overflow:hidden;">
+    <img src="images/services/services-hero-strategic-music.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+    <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,10,10,.82),rgba(11,10,10,.93));"></div>
+    <div style="position:relative;max-width:1380px;margin:0 auto;padding:0 32px;text-align:center;">
+      <div data-reveal style="opacity:0;transform:translateY(22px);transition:all .9s cubic-bezier(.16,1,.3,1);font-size:12px;letter-spacing:.34em;font-weight:700;background:var(--gold-text);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;margin-bottom:26px;">ΑΣ ΣΥΝΕΡΓΑΣΤΟΥΜΕ</div>
+      <h2 data-reveal style="opacity:0;transform:translateY(30px);transition:all 1s cubic-bezier(.16,1,.3,1) .08s;font-weight:800;font-size:clamp(2.4rem,5.5vw,4.4rem);line-height:1.04;letter-spacing:-.025em;margin-bottom:28px;max-width:920px;margin-left:auto;margin-right:auto;">Ας βρούμε την ιδανική <span style="font-family:'GFS Didot',serif;font-style:italic;font-size:1.1em;background:var(--gold-text);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;">αφετηρία</span></h2>
+      <p data-reveal style="opacity:0;transform:translateY(24px);transition:all 1s cubic-bezier(.16,1,.3,1) .16s;font-size:1.18rem;color:rgba(250,246,241,.68);max-width:660px;margin:0 auto 44px;line-height:1.6;">Ποια υπηρεσία ταιριάζει στο όραμά σας; Αξιολογούμε την τωρινή σας ατμόσφαιρα και σας προτείνουμε την ιδανική αφετηρία.</p>
+      <div data-reveal style="opacity:0;transform:translateY(20px);transition:all 1s cubic-bezier(.16,1,.3,1) .24s;display:flex;gap:18px;justify-content:center;align-items:center;flex-wrap:wrap;margin-bottom:30px;">
+        <a href="mailto:hello@sensear.music" class="se-cta" style="position:relative;overflow:hidden;display:inline-flex;align-items:center;gap:10px;background:var(--gold);color:#0b0a0a;font-weight:700;font-size:15px;padding:18px 36px;border-radius:100px;text-decoration:none;transition:background .35s ease,color .35s ease,box-shadow .35s ease;" onMouseEnter="{{ onCtaEnter }}" onMouseLeave="{{ onCtaLeave }}"><img class="se-cta-ico" src="images/brand/sensear-logo-color.png" alt="" style="width:20px;height:20px;object-fit:contain;transition:opacity .35s ease,transform .35s ease,width .35s ease,margin .35s ease;"><span class="se-cta-label" style="transition:transform .35s cubic-bezier(.16,1,.3,1);">Μιλήστε μας για τον χώρο σας</span><span class="se-cta-arrow" style="display:inline-flex;align-items:center;max-width:0;opacity:0;overflow:hidden;transition:max-width .35s cubic-bezier(.16,1,.3,1),opacity .3s ease,margin-left .35s ease;font-size:17px;">→</span></a>
+        <a href="SensEar Homepage.dc.html#industries" class="se-ghost" style="display:inline-flex;align-items:center;gap:10px;font-size:15px;font-weight:700;color:#faf6f1;text-decoration:none;border:1.5px solid rgba(250,246,241,.35);padding:16px 32px;border-radius:100px;transition:background .35s ease,color .35s ease,border-color .35s ease;" onMouseEnter="{{ onGhostEnter }}" onMouseLeave="{{ onGhostLeave }}">Δείτε τους κλάδους που εξυπηρετούμε</a>
+      </div>
+      <div data-reveal style="opacity:0;transition:opacity 1s ease .3s;font-size:14px;color:rgba(250,246,241,.45);letter-spacing:.04em;"><a href="tel:+306976994212" style="color:inherit;text-decoration:none;transition:color .3s ease;" style-hover="color:#e3992f;">+30 697 699 4212</a> &nbsp;·&nbsp; Αθήνα, Ελλάδα</div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="background:#0b0a0a;border-top:1px solid rgba(250,246,241,.1);padding:80px 0 0;">
+    <div style="max-width:1380px;margin:0 auto;padding:0 32px;display:grid;grid-template-columns:1.5fr 1fr 1.15fr 0.95fr 1.15fr;gap:40px;">
+      <div>
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px;">
+          <img src="images/brand/sensear-logo-white.png" alt="SensEar" style="width:46px;height:46px;object-fit:contain;">
+          <div>
+            <div style="font-weight:800;letter-spacing:.18em;font-size:20px;">SENSEAR</div>
+            <div style="font-family:'GFS Didot',serif;font-style:italic;font-size:13px;color:rgba(250,246,241,.55);">Soundtracking Unique Experiences</div>
+          </div>
+        </div>
+        <p style="font-size:.95rem;color:rgba(250,246,241,.5);line-height:1.6;max-width:300px;">Μουσική επιμέλεια &amp; ηχητική ταυτότητα για χώρους, εκδηλώσεις και brands.</p>
+        <div style="display:flex;gap:16px;margin-top:24px;margin-bottom:24px;">
+          <a href="https://www.facebook.com/61575909304249/" target="_blank" rel="noopener" aria-label="Facebook" style="color:rgba(250,246,241,.7);transition:color .3s ease;" style-hover="color:#e3992f;"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+          <a href="https://www.instagram.com/sensear.music" target="_blank" rel="noopener" aria-label="Instagram" style="color:rgba(250,246,241,.7);transition:color .3s ease;" style-hover="color:#e3992f;"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg></a>
+          <a href="https://www.linkedin.com/company/sensear-music/" target="_blank" rel="noopener" aria-label="LinkedIn" style="color:rgba(250,246,241,.7);transition:color .3s ease;" style-hover="color:#e3992f;"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:12px;">
+          <a href="#" class="se-email" data-u="hello" data-d="sensear.music" style="display:flex;align-items:center;gap:10px;color:rgba(250,246,241,.7);text-decoration:none;font-size:.95rem;transition:color .3s ease;" style-hover="color:#e3992f;"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="flex:none;opacity:.85;"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg><span class="se-email-txt"></span></a>
+          <a href="tel:+306976994212" style="display:flex;align-items:center;gap:10px;color:rgba(250,246,241,.7);text-decoration:none;font-size:.95rem;transition:color .3s ease;" style-hover="color:#e3992f;"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="flex:none;opacity:.85;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>(+30) 6976.994.212</a>
+        </div>
+      </div>
+      <div>
+        <div style="font-size:11px;letter-spacing:.22em;font-weight:700;background:var(--gold-text);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;margin-bottom:18px;">ΥΠΗΡΕΣΙΕΣ</div>
+        <div style="display:flex;flex-direction:column;gap:11px;">
+          <a href="#services" style="font-size:.95rem;color:rgba(250,246,241,.62);text-decoration:none;">Signature Playlists</a>
+          <a href="#services" style="font-size:.95rem;color:rgba(250,246,241,.62);text-decoration:none;">Μουσική Εκδηλώσεων</a>
+          <a href="#services" style="font-size:.95rem;color:rgba(250,246,241,.62);text-decoration:none;">Ηχητική Ταυτότητα</a>
+          <a href="#services" style="font-size:.95rem;color:rgba(250,246,241,.62);text-decoration:none;">Ακουστική Αναβάθμιση</a>
+        </div>
+      </div>
+      <div>
+        <div style="font-size:11px;letter-spacing:.22em;font-weight:700;background:var(--gold-text);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;margin-bottom:18px;">ΚΛΑΔΟΙ</div>
+        <div style="display:flex;flex-direction:column;gap:11px;">
+          <a href="SensEar Homepage.dc.html#industries" style="font-size:.95rem;color:rgba(250,246,241,.62);text-decoration:none;">Ξενοδοχεία &amp; Θέρετρα</a>
+          <a href="SensEar Homepage.dc.html#industries" style="font-size:.95rem;color:rgba(250,246,241,.62);text-decoration:none;">Εστιατόρια &amp; Bar</a>
+          <a href="SensEar Homepage.dc.html#industries" style="font-size:.95rem;color:rgba(250,246,241,.62);text-decoration:none;">Εκδηλώσεις &amp; Εμπειρίες</a>
+          <a href="SensEar Homepage.dc.html#industries" style="font-size:.95rem;color:rgba(250,246,241,.62);text-decoration:none;">Καταστήματα Λιανικής</a>
+          <a href="SensEar Homepage.dc.html#industries" style="font-size:.95rem;color:rgba(250,246,241,.62);text-decoration:none;">Wellness &amp; Γυμναστήρια</a>
+          <a href="SensEar Homepage.dc.html#industries" style="font-size:.95rem;color:rgba(250,246,241,.62);text-decoration:none;">Τέχνη, Μουσεία &amp; Μόδα</a>
+        </div>
+      </div>
+      <div>
+        <div style="font-size:11px;letter-spacing:.22em;font-weight:700;background:var(--gold-text);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;margin-bottom:18px;">ΕΤΑΙΡΕΙΑ</div>
+        <div style="display:flex;flex-direction:column;gap:11px;">
+          <a href="SensEar Homepage.dc.html#venues" style="font-size:.95rem;color:rgba(250,246,241,.62);text-decoration:none;">Έργα</a>
+          <a href="SensEar Homepage.dc.html#journal" style="font-size:.95rem;color:rgba(250,246,241,.62);text-decoration:none;">Journal</a>
+          <a href="SensEar Homepage.dc.html#about" style="font-size:.95rem;color:rgba(250,246,241,.62);text-decoration:none;">Σχετικά</a>
+          <a href="#cta" style="font-size:.95rem;color:rgba(250,246,241,.62);text-decoration:none;">Επικοινωνία</a>
+        </div>
+      </div>
+      <div>
+        <div style="font-size:11px;letter-spacing:.22em;font-weight:700;background:var(--gold-text);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;margin-bottom:18px;">ΕΓΓΡΑΦΗ ΣΤΟ JOURNAL</div>
+        <p style="font-size:.9rem;color:rgba(250,246,241,.5);line-height:1.55;margin-bottom:16px;">Σκέψεις για μουσική, ατμόσφαιρα &amp; sonic branding.</p>
+        <form onSubmit="{{ onSubmit }}" style="display:flex;gap:8px;">
+          <input type="email" required placeholder="Το email σας" style="flex:1;background:rgba(250,246,241,.06);border:1px solid rgba(250,246,241,.16);border-radius:100px;padding:12px 18px;color:#faf6f1;font-size:.9rem;font-family:'Montserrat',sans-serif;outline:none;">
+          <button type="submit" class="se-sub" style="position:relative;overflow:hidden;flex:none;background:var(--gold);color:#0b0a0a;border:none;border-radius:100px;padding:12px 22px;font-weight:700;font-size:1rem;cursor:pointer;transition:box-shadow .35s ease,background .35s ease,color .35s ease;" onMouseEnter="{{ onSubEnter }}" onMouseLeave="{{ onSubLeave }}"><span class="se-sub-arrow" style="display:inline-block;transition:transform .35s cubic-bezier(.16,1,.3,1);">→</span></button>
+        </form>
+      </div>
+    </div>
+    <div style="max-width:1380px;margin:48px auto 0;padding:24px 32px;border-top:1px solid rgba(250,246,241,.1);display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;">
+      <span style="font-size:12px;color:rgba(250,246,241,.4);">© 2026 SensEar Music. Με την επιφύλαξη παντός δικαιώματος.</span>
+      <div style="display:flex;gap:20px;">
+        <a href="#" style="font-size:12px;color:rgba(250,246,241,.4);text-decoration:none;">Πολιτική Απορρήτου</a>
+        <a href="#" style="font-size:12px;color:rgba(250,246,241,.4);text-decoration:none;">Όροι Χρήσης</a>
+      </div>
+    </div>
+    <div style="overflow:hidden;line-height:.8;padding:30px 0 24px;">
+      <div style="font-weight:900;letter-spacing:-.02em;font-size:clamp(4rem,15.5vw,15rem);text-align:center;color:transparent;-webkit-text-stroke:1px rgba(250,246,241,.14);">SENSEAR</div>
+    </div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440,&quot;height&quot;:1000},&quot;accentColor&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#f0bd95&quot;,&quot;options&quot;:[&quot;#f0bd95&quot;,&quot;#faebe3&quot;,&quot;#e8a87c&quot;,&quot;#c9b8a8&quot;],&quot;tsType&quot;:&quot;string&quot;},&quot;reduceMotion&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;}}">
+class Component extends DCLogic {
+  componentDidMount() {
+    const root = document.getElementById('sensear-root') || document;
+
+    const accent = this.props.accentColor;
+    if (accent) {
+      document.documentElement.style.setProperty('--accent', accent);
+      root.style.setProperty('--accent', accent);
+    }
+
+    const reduce = !!this.props.reduceMotion;
+    const els = Array.prototype.slice.call(root.querySelectorAll('[data-reveal]'));
+
+    if (reduce) {
+      els.forEach(e => { e.style.opacity = 1; e.style.transform = 'none'; });
+      root.querySelectorAll('[data-spin]').forEach(e => { e.style.animationPlayState = 'paused'; });
+    } else {
+      // Reveal each element as it scrolls into view (matches the live site's
+      // whileInView behaviour). Trigger ~12% before the element fully enters.
+      const show = (e) => { e.style.opacity = 1; e.style.transform = 'none'; };
+
+      if ('IntersectionObserver' in window) {
+        const io = new IntersectionObserver((entries, obs) => {
+          entries.forEach(en => {
+            if (en.isIntersecting) { show(en.target); obs.unobserve(en.target); }
+          });
+        }, { root: null, rootMargin: '0px 0px -12% 0px', threshold: 0.05 });
+        els.forEach(e => io.observe(e));
+        this._io = io;
+      }
+
+      // Scroll fallback (covers frames where IO is throttled/unavailable).
+      // Only reveals elements actually in the viewport — never below the fold.
+      const reveal = () => {
+        const vh = window.innerHeight || document.documentElement.clientHeight;
+        els.forEach(e => {
+          if (getComputedStyle(e).opacity === '1') return;
+          const r = e.getBoundingClientRect();
+          if (r.top < vh * 0.92 && r.bottom > 0) show(e);
+        });
+      };
+      this._onReveal = reveal;
+      window.addEventListener('scroll', reveal, { passive: true });
+      window.addEventListener('resize', reveal, { passive: true });
+      reveal();
+    }
+
+    const nav = document.getElementById('se-nav');
+    this._onScroll = () => {
+      if (!nav) return;
+      if (window.scrollY > 60) {
+        nav.style.background = 'rgba(11,10,10,.82)';
+        nav.style.backdropFilter = 'blur(12px)';
+        nav.style.borderBottomColor = 'rgba(250,246,241,.1)';
+        nav.style.padding = '14px 0';
+      } else {
+        nav.style.background = 'transparent';
+        nav.style.backdropFilter = 'none';
+        nav.style.borderBottomColor = 'rgba(250,246,241,0)';
+        nav.style.padding = '22px 0';
+      }
+    };
+    window.addEventListener('scroll', this._onScroll, { passive: true });
+    this._onScroll();
+
+    // image zoom on service cards
+    root.querySelectorAll('.se-svccard').forEach(card => {
+      const img = card.querySelector('.se-svccard-img');
+      if (!img) return;
+      card.addEventListener('mouseenter', () => { img.style.transform = 'scale(1.06)'; });
+      card.addEventListener('mouseleave', () => { img.style.transform = 'none'; });
+    });
+
+    // footer nav underline
+    const footer = root.querySelector('footer');
+    if (footer) {
+      footer.querySelectorAll('a').forEach(a => {
+        if (a.classList.contains('se-email')) return;
+        if (!/(#|\.dc\.html)/.test(a.getAttribute('href') || '')) return;
+        a.style.backgroundImage = 'var(--gold-text)';
+        a.style.backgroundRepeat = 'no-repeat';
+        a.style.backgroundPosition = '0 100%';
+        a.style.backgroundSize = '0% 1.5px';
+        a.style.paddingBottom = '3px';
+        a.style.display = 'inline-block';
+        a.style.alignSelf = 'flex-start';
+        a.style.transition = 'background-size .35s cubic-bezier(.16,1,.3,1),color .3s ease';
+        a.addEventListener('mouseenter', () => { a.style.backgroundSize = '100% 1.5px'; a.style.color = '#faf6f1'; });
+        a.addEventListener('mouseleave', () => { a.style.backgroundSize = '0% 1.5px'; a.style.color = 'rgba(250,246,241,.62)'; });
+      });
+    }
+
+    root.querySelectorAll('.se-email').forEach(a => {
+      const addr = (a.dataset.u || '') + '@' + (a.dataset.d || '');
+      a.href = 'mailto:' + addr;
+      const t = a.querySelector('.se-email-txt');
+      if (t) t.textContent = addr;
+    });
+  }
+
+  componentWillUnmount() {
+    if (this._onScroll) window.removeEventListener('scroll', this._onScroll);
+    if (this._io) this._io.disconnect();
+    if (this._onReveal) {
+      window.removeEventListener('scroll', this._onReveal);
+      window.removeEventListener('resize', this._onReveal);
+    }
+  }
+
+  renderVals() {
+    return {
+      onCtaEnter: (e) => {
+        const a = e.currentTarget;
+        a.style.background = '#0b0a0a'; a.style.color = '#faf6f1'; a.style.boxShadow = 'inset 0 0 0 1.5px rgba(227,153,47,.85)';
+        const ico = a.querySelector('.se-cta-ico'); if (ico) { ico.style.opacity = '0'; ico.style.width = '0'; ico.style.transform = 'scale(0)'; ico.style.marginRight = '-10px'; }
+        const arr = a.querySelector('.se-cta-arrow'); if (arr) { arr.style.maxWidth = '22px'; arr.style.opacity = '1'; arr.style.marginLeft = '9px'; }
+      },
+      onCtaLeave: (e) => {
+        const a = e.currentTarget;
+        a.style.background = 'var(--gold)'; a.style.color = '#0b0a0a'; a.style.boxShadow = 'none';
+        const ico = a.querySelector('.se-cta-ico'); if (ico) { ico.style.opacity = '1'; ico.style.width = ico.style.height || '20px'; ico.style.transform = 'scale(1)'; ico.style.marginRight = '0'; }
+        const arr = a.querySelector('.se-cta-arrow'); if (arr) { arr.style.maxWidth = '0'; arr.style.opacity = '0'; arr.style.marginLeft = '0'; }
+      },
+      onGhostEnter: (e) => { const a = e.currentTarget; a.style.background = 'var(--gold)'; a.style.color = '#0b0a0a'; a.style.borderColor = 'transparent'; },
+      onGhostLeave: (e) => { const a = e.currentTarget; a.style.background = 'transparent'; a.style.color = '#faf6f1'; a.style.borderColor = 'rgba(250,246,241,.35)'; },
+      onNavEnter: (e) => { e.currentTarget.style.backgroundSize = '100% 2px'; e.currentTarget.style.color = '#faf6f1'; },
+      onNavLeave: (e) => { e.currentTarget.style.backgroundSize = '0% 2px'; e.currentTarget.style.color = 'rgba(250,246,241,.72)'; },
+      onPillEnter: (e) => { e.currentTarget.style.transform = 'translateY(-3px)'; },
+      onPillLeave: (e) => { e.currentTarget.style.transform = 'translateY(0)'; },
+      onSubEnter: (e) => { const b = e.currentTarget; b.style.boxShadow = '0 6px 22px -6px rgba(220,162,81,.6)'; const a = b.querySelector('.se-sub-arrow'); if (a) a.style.transform = 'translateX(4px)'; },
+      onSubLeave: (e) => { const b = e.currentTarget; b.style.boxShadow = 'none'; const a = b.querySelector('.se-sub-arrow'); if (a) a.style.transform = 'none'; },
+      onSubmit: (e) => { e.preventDefault(); const i = e.currentTarget.querySelector('input'); if (i) { i.value = ''; i.placeholder = 'Ευχαριστούμε! ✦'; } }
+    };
+  }
+}
+</script>
+</body>
+</html>
