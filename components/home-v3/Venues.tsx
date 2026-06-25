@@ -71,7 +71,7 @@ function ClientCard({ client }: { client: Client }) {
 }
 
 export function Venues({ lang, kicker, title }: VenuesProps) {
-    const emWord = lang === 'el' ? 'εμπιστεύονται' : 'trust';
+    const emWord = lang === 'el' ? 'εμπιστεύονται' : 'Greece';
 
     const Row = () => (
         <div className="flex gap-7 pr-7">

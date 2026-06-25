@@ -7,4 +7,5 @@ export { DriftOrb } from './DriftOrb';
 export { SpinningBadge } from './SpinningBadge';
 export { SideRail } from './SideRail';
 export { MorphCTA } from './MorphCTA';
-export { emphasize } from './emphasize';
+export { FooterV3 } from './FooterV3';
+export { emphasize, emphasizeHeadline } from './emphasize';

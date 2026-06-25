@@ -19,6 +19,9 @@ interface ContactCTAProps {
 
 export function ContactCTA({ lang, cta }: ContactCTAProps) {
     const localizedPath = (path: string) => getLocalizedPath(lang, path);
+    const [phoneNumber, ...phoneRest] = cta.phone_line.split(' · ');
+    const phoneTel = `tel:+${phoneNumber.replace(/[^0-9]/g, '')}`;
+    const phoneSuffix = phoneRest.length ? ` · ${phoneRest.join(' · ')}` : '';
 
     return (
         <section className="relative overflow-hidden py-[150px]">
@@ -57,7 +60,15 @@ export function ContactCTA({ lang, cta }: ContactCTAProps) {
                     </div>
                 </ScrollReveal>
                 <ScrollReveal delay={0.3}>
-                    <div className="text-[14px] tracking-[0.04em] text-[#faf6f1]/45">{cta.phone_line}</div>
+                    <div className="text-[14px] tracking-[0.04em] text-[#faf6f1]/45">
+                        <a
+                            href={phoneTel}
+                            className="text-inherit no-underline transition-colors hover:text-[#e3992f]"
+                        >
+                            {phoneNumber}
+                        </a>
+                        {phoneSuffix}
+                    </div>
                 </ScrollReveal>
             </div>
         </section>

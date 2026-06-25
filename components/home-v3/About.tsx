@@ -41,7 +41,7 @@ export function About({ kicker, p1, p2 }: AboutProps) {
                         </ScrollReveal>
                     </div>
                     <ScrollReveal direction="right" delay={0.15}>
-                        <div className="aspect-[3/3.7] overflow-hidden rounded-lg">
+                        <div className="relative aspect-[3/3.7] overflow-hidden rounded-lg">
                             <Image
                                 src="/images/carousel/carousel-venue-atmosphere-1.jpg"
                                 alt={p1 ? 'Curated venue atmosphere' : ''}

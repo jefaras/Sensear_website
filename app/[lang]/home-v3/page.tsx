@@ -1,6 +1,6 @@
 import { getDictionary } from '@/lib/dictionary';
 import { type Locale } from '@/lib/i18n';
-import { V3Root } from '@/components/v3';
+import { FooterV3, V3Root } from '@/components/v3';
 import {
     About,
     Approach,
@@ -15,7 +15,8 @@ import {
 
 export default async function HomeV3({ params }: { params: Promise<{ lang: Locale }> }) {
     const { lang } = await params;
-    const home = (await getDictionary(lang)).home;
+    const dict = await getDictionary(lang);
+    const home = dict.home;
 
     return (
         <V3Root>
@@ -50,11 +51,20 @@ export default async function HomeV3({ params }: { params: Promise<{ lang: Local
             <Journal
                 lang={lang}
                 kicker={home.blog.kicker}
-                subtitle={home.blog.subtitle}
+                headline={home.blog.headline}
                 allArticles={home.blog.all_articles}
                 articles={home.blog.articles}
             />
             <ContactCTA lang={lang} cta={home.contact_cta} />
+            <FooterV3
+                lang={lang}
+                footer={home.footer}
+                navigation={dict.navigation}
+                services={home.services.items}
+                industries={home.expertise.items}
+                email={home.contact_cta.secondary_email_label}
+                phoneLine={home.contact_cta.phone_line}
+            />
         </V3Root>
     );
 }

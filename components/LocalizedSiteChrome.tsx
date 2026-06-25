@@ -27,6 +27,9 @@ export function LocalizedSiteChrome({ children, navigation, footer }: LocalizedS
     const pathname = usePathname() || "/";
     const lang: Locale = pathname === "/en" || pathname.startsWith("/en/") ? "en" : "el";
     const isHomepageConcept = pathname === "/homepage-concept";
+    // v3 demo routes render their own dark editorial footer (FooterV3), so the
+    // global light footer is suppressed there. Legacy routes are unaffected.
+    const isV3 = pathname.includes("/home-v3");
 
     useEffect(() => {
         document.documentElement.lang = lang;
@@ -41,7 +44,7 @@ export function LocalizedSiteChrome({ children, navigation, footer }: LocalizedS
             <main id="main-content" className="flex-grow">
                 {children}
             </main>
-            {!isHomepageConcept && <Footer lang={lang} dict={{ footer: footer[lang] }} />}
+            {!isHomepageConcept && !isV3 && <Footer lang={lang} dict={{ footer: footer[lang] }} />}
         </>
     );
 }

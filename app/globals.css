@@ -168,6 +168,15 @@
    v3 Dark Editorial — GFS Didot accent + motion
    ============================================ */
 
+/* Gold gradients exposed at :root so v3 chrome rendered OUTSIDE the V3Root
+   wrapper (the route-aware Navbar) can reference them. Defining custom
+   properties here has no visual effect on legacy routes (nothing references
+   them there); V3Root still re-declares them locally for its own subtree. */
+:root {
+  --gold: linear-gradient(100deg, #f0cdb8 0%, #f7ddd0 15%, #fcefe7 29%, #ffffff 44%, #efeeec 58%, #dad8d6 72%, #d2cec9 84%, #e4d9c4 100%);
+  --gold-text: linear-gradient(100deg, #edc4ac 0%, #f6dccd 19%, #fffaf6 42%, #eae8e4 60%, #d3cfc9 77%, #e2d6bf 100%);
+}
+
 /* Italic display accent used by the v3 redesign (Latin + Greek subsets) */
 .font-didot {
   font-family: var(--font-didot), 'GFS Didot', serif;
@@ -235,6 +244,38 @@
   max-width: 22px;
   opacity: 1;
   margin-left: 9px;
+}
+
+/* Services list rows — title slides + gold-fills, arrow slides on row hover. */
+.se-svc-title {
+  transition: transform .4s cubic-bezier(.16, 1, .3, 1), color .4s ease;
+}
+.se-svc:hover .se-svc-title {
+  transform: translateX(10px);
+  background-image: var(--gold-text);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+.se-svc-arrow {
+  transition: transform .4s ease;
+}
+.se-svc:hover .se-svc-arrow {
+  transform: translateX(6px);
+}
+
+/* v3 nav links — sliding gold underline (used by the dark-hero Navbar variant). */
+.se-navlink {
+  background-image: var(--gold-text);
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  background-size: 0% 2px;
+  padding-bottom: 5px;
+  transition: background-size .35s cubic-bezier(.16, 1, .3, 1), color .3s ease;
+}
+.se-navlink:hover {
+  background-size: 100% 2px;
 }
 
 @keyframes se-eq {

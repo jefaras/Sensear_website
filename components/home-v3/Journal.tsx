@@ -15,7 +15,7 @@ interface BlogArticle {
 interface JournalProps {
     lang: Locale;
     kicker: string;
-    subtitle: string;
+    headline: string;
     allArticles: string;
     articles: BlogArticle[];
 }
@@ -26,7 +26,7 @@ const ARTICLE_IMAGES = [
     '/images/homepage/blog-music-hospitality-brand.jpg',
 ];
 
-export function Journal({ lang, kicker, subtitle, allArticles, articles }: JournalProps) {
+export function Journal({ lang, kicker, headline, allArticles, articles }: JournalProps) {
     const localizedPath = (path: string) => getLocalizedPath(lang, path);
     const emWord = lang === 'el' ? 'διαμορφώνει' : 'shapes';
 
@@ -51,7 +51,7 @@ export function Journal({ lang, kicker, subtitle, allArticles, articles }: Journ
                         </ScrollReveal>
                         <ScrollReveal delay={0.06}>
                             <h2 className="max-w-[680px] text-[clamp(1.9rem,3.6vw,3rem)] font-extrabold leading-[1.05] tracking-[-0.02em]">
-                                {emphasize(subtitle, emWord)}
+                                {emphasize(headline, emWord)}
                             </h2>
                         </ScrollReveal>
                     </div>
@@ -67,7 +67,7 @@ export function Journal({ lang, kicker, subtitle, allArticles, articles }: Journ
                             href={localizedPath(`/blog/${article.link}`)}
                             className="group flex flex-col no-underline"
                         >
-                            <div className="mb-[22px] aspect-[4/3] overflow-hidden rounded-lg">
+                            <div className="relative mb-[22px] aspect-[4/3] overflow-hidden rounded-lg">
                                 <Image
                                     src={ARTICLE_IMAGES[i] ?? ARTICLE_IMAGES[0]}
                                     alt={article.title}

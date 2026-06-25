@@ -56,6 +56,23 @@ export function Navbar({ lang, navigation }: NavbarProps) {
     const targetLangLabel = lang === "en" ? "GR" : "EN";
     const localizedPath = (path: string) => getLocalizedPath(lang, path);
 
+    // v3 demo routes render a dark editorial hero — the global nav adopts a
+    // light-on-dark transparent state there. Legacy routes are unaffected.
+    const isV3 = (pathname || "").includes("/home-v3");
+    const lightText = scrolled || isOpen || isV3;
+
+    const linkClass = (active: boolean) =>
+        isV3
+            ? cn(
+                  "se-navlink font-sans text-sm font-semibold tracking-[0.08em]",
+                  active ? "text-[#faf6f1]" : "text-[#faf6f1]/70 hover:text-[#faf6f1]"
+              )
+            : cn(
+                  "font-jakarta text-base font-bold tracking-wide transition-all hover:underline decoration-1 underline-offset-4",
+                  scrolled || isOpen ? "text-white/90 hover:text-white" : "text-black/80 hover:text-black",
+                  active && "underline"
+              );
+
     const links = [
         { href: localizedPath('/'), label: navigation.home },
         { href: localizedPath('/services'), label: navigation.services },
@@ -70,8 +87,12 @@ export function Navbar({ lang, navigation }: NavbarProps) {
             suppressHydrationWarning
             className={cn(
                 "fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-1",
-                scrolled || isOpen ? "bg-black lg:bg-black/95 shadow-lg" : "bg-transparent",
-                !scrolled && !isOpen ? "text-black" : "text-white"
+                scrolled || isOpen
+                    ? isV3
+                        ? "bg-[#0b0a0a]/85 backdrop-blur-md border-b border-[#faf6f1]/10"
+                        : "bg-black lg:bg-black/95 shadow-lg"
+                    : "bg-transparent",
+                lightText ? "text-white" : "text-black"
             )}
         >
             <div className="max-w-[1440px] mx-auto px-6 md:px-12 flex items-center justify-between">
@@ -79,7 +100,7 @@ export function Navbar({ lang, navigation }: NavbarProps) {
                 <Link href={localizedPath('/')} className="group flex items-center gap-3 shrink-0">
                     <div className="relative w-16 h-16">
                         <Image
-                            src={scrolled || isOpen
+                            src={lightText
                                 ? "/images/brand/sensear-logo-white.png"
                                 : "/images/brand/sensear-logo-color.png"
                             }
@@ -91,8 +112,9 @@ export function Navbar({ lang, navigation }: NavbarProps) {
                         />
                     </div>
                     <span className={cn(
-                        "font-syne text-3xl font-bold tracking-wide transition-colors",
-                        scrolled || isOpen ? "text-white" : "text-black"
+                        "text-3xl tracking-wide transition-colors",
+                        isV3 ? "font-sans font-extrabold tracking-[0.18em]" : "font-syne font-bold",
+                        lightText ? "text-white" : "text-black"
                     )}>
                         SENSEAR
                     </span>
@@ -104,50 +126,42 @@ export function Navbar({ lang, navigation }: NavbarProps) {
                         <Link
                             key={link.href}
                             href={link.href}
-                            className={cn(
-                                "font-jakarta text-base font-bold tracking-wide transition-all hover:underline decoration-1 underline-offset-4",
-                                scrolled || isOpen ? "text-white/90 hover:text-white" : "text-black/80 hover:text-black",
-                                isActive(link.href) && "underline"
-                            )}
+                            className={linkClass(isActive(link.href))}
                         >
                             {link.label}
                         </Link>
                     ))}
 
-                    <Link
-                        href={localizedPath('/blog')}
-                        className={cn(
-                            "font-jakarta text-base font-bold tracking-wide transition-all hover:underline decoration-1 underline-offset-4",
-                            scrolled || isOpen ? "text-white/90 hover:text-white" : "text-black/80 hover:text-black",
-                            isActive(localizedPath('/blog')) && "underline"
-                        )}
-                    >
+                    <Link href={localizedPath('/blog')} className={linkClass(isActive(localizedPath('/blog')))}>
                         {navigation.blog}
                     </Link>
 
-                    <Link
-                        href={localizedPath('/about')}
-                        className={cn(
-                            "font-jakarta text-base font-bold tracking-wide transition-all hover:underline decoration-1 underline-offset-4",
-                            scrolled || isOpen ? "text-white/90 hover:text-white" : "text-black/80 hover:text-black",
-                            isActive(localizedPath('/about')) && "underline"
-                        )}
-                    >
+                    <Link href={localizedPath('/about')} className={linkClass(isActive(localizedPath('/about')))}>
                         {navigation.about}
                     </Link>
 
-                    <Link
-                        href={localizedPath('/contact')}
-                        className={cn(
-                            "rounded-full px-6 py-2 border font-jakarta text-base font-bold tracking-wide transition-all hover:underline decoration-1 underline-offset-4",
-                            scrolled || isOpen
-                                ? "border-white/30 text-white/90 hover:text-white hover:border-white/50"
-                                : "border-black/30 text-black/80 hover:text-black hover:border-black/50",
-                            isActive(localizedPath('/contact')) && "underline"
-                        )}
-                    >
-                        {navigation.contact}
-                    </Link>
+                    {isV3 ? (
+                        <Link
+                            href={localizedPath('/contact')}
+                            className="rounded-full px-6 py-2.5 font-sans text-sm font-bold tracking-[0.08em] text-[#0b0a0a] transition-transform hover:-translate-y-0.5"
+                            style={{ background: 'var(--gold)' }}
+                        >
+                            {navigation.contact}
+                        </Link>
+                    ) : (
+                        <Link
+                            href={localizedPath('/contact')}
+                            className={cn(
+                                "rounded-full px-6 py-2 border font-jakarta text-base font-bold tracking-wide transition-all hover:underline decoration-1 underline-offset-4",
+                                scrolled || isOpen
+                                    ? "border-white/30 text-white/90 hover:text-white hover:border-white/50"
+                                    : "border-black/30 text-black/80 hover:text-black hover:border-black/50",
+                                isActive(localizedPath('/contact')) && "underline"
+                            )}
+                        >
+                            {navigation.contact}
+                        </Link>
+                    )}
 
                     {/* Lang Switcher */}
                     <Link
@@ -155,7 +169,7 @@ export function Navbar({ lang, navigation }: NavbarProps) {
                         aria-label={`Switch to ${targetLangLabel}`}
                         className={cn(
                             "flex items-center gap-1 text-sm font-medium px-3 py-1 border rounded-full transition-colors",
-                            scrolled || isOpen
+                            lightText
                                 ? "border-white/20 text-white hover:bg-white/10"
                                 : "border-black/20 text-black hover:bg-black/5"
                         )}
@@ -171,7 +185,7 @@ export function Navbar({ lang, navigation }: NavbarProps) {
                     aria-expanded={isOpen}
                     className={cn(
                         "lg:hidden p-2 transition-colors",
-                        scrolled || isOpen ? "text-white" : "text-black"
+                        lightText ? "text-white" : "text-black"
                     )}
                     onClick={() => setIsOpen(!isOpen)}
                 >

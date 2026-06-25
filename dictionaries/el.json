@@ -150,6 +150,7 @@
             "cta": "Ανακαλύψτε περισσότερα άρθρα",
             "kicker": "THE CURATION JOURNAL",
             "all_articles": "Όλα τα άρθρα →",
+            "headline": "Πώς ο ήχος διαμορφώνει την αντίληψη",
             "articles": [
                 {
                     "title": "Τρεις λόγοι που η μουσική έχει σημασία στη φιλοξενία",
@@ -179,6 +180,21 @@
             "secondary_email_label": "hello@sensear.music",
             "phone_line": "+30 697 699 4212 · Αθήνα, Ελλάδα",
             "background_image": "/images/homepage/sensear-signature-playlist-service.jpg"
+        },
+        "footer": {
+            "tagline": "Soundtracking Unique Experiences",
+            "intro": "Μουσική επιμέλεια & ηχητική ταυτότητα για χώρους, εκδηλώσεις και brands.",
+            "col_services": "ΥΠΗΡΕΣΙΕΣ",
+            "col_industries": "ΚΛΑΔΟΙ",
+            "col_company": "ΕΤΑΙΡΕΙΑ",
+            "col_newsletter": "ΕΓΓΡΑΦΗ ΣΤΟ JOURNAL",
+            "newsletter_blurb": "Σκέψεις για μουσική, ατμόσφαιρα & sonic branding.",
+            "newsletter_placeholder": "Το email σας",
+            "newsletter_thanks": "Ευχαριστούμε! ✦",
+            "copyright": "© 2026 SensEar Music. Με την επιφύλαξη παντός δικαιώματος.",
+            "privacy": "Πολιτική Απορρήτου",
+            "terms": "Όροι Χρήσης",
+            "wordmark": "SENSEAR"
         }
     },
     "contact": {

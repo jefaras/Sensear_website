@@ -12,7 +12,7 @@ export const syne = Syne({
 // Commissioner - unified primary font for critical path (Latin + Greek)
 export const commissioner = Commissioner({
     subsets: ['latin', 'greek'],
-    weight: ['400', '700'],
+    weight: ['400', '700', '800'],
     variable: '--font-commissioner',
     display: 'swap',
     preload: true,

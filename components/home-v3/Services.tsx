@@ -73,18 +73,18 @@ export function Services({ lang, kicker, title, subtitle, items, previewPlacehol
                                 href={localizedPath(`/${item.link}`)}
                                 onMouseEnter={() => setHovered(i)}
                                 onMouseLeave={() => setHovered(null)}
-                                className="flex items-baseline gap-6 border-b border-[#faf6f1]/12 py-[34px] text-[#faf6f1] no-underline transition-colors hover:text-[#faf6f1]"
+                                className="se-svc flex items-baseline gap-6 border-b border-[#faf6f1]/12 py-[34px] text-[#faf6f1] no-underline"
                             >
                                 <span className="w-[34px] shrink-0 text-[13px] font-bold tabular-nums text-[#faf6f1]/40">
                                     {String(i + 1).padStart(2, '0')}
                                 </span>
                                 <div className="flex-1">
-                                    <div className="text-[clamp(1.4rem,2.4vw,2.1rem)] font-bold tracking-[-0.01em]">
+                                    <div className="se-svc-title text-[clamp(1.4rem,2.4vw,2.1rem)] font-bold tracking-[-0.01em]">
                                         {item.title}
                                     </div>
                                     <p className="mt-2 max-w-[560px] text-[1rem] text-[#faf6f1]/55">{item.desc}</p>
                                 </div>
-                                <span className="se-gold-text self-center text-[20px]">→</span>
+                                <span className="se-svc-arrow se-gold-text self-center text-[20px]">→</span>
                             </Link>
                         ))}
                     </div>

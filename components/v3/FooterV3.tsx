@@ -1,0 +1,187 @@
+import Image from 'next/image';
+import Link from 'next/link';
+import { Locale } from '@/lib/i18n';
+import { getLocalizedPath } from '@/lib/localized-path';
+import { NewsletterForm } from '@/components/NewsletterForm';
+
+interface FooterLink {
+    title: string;
+    link: string;
+}
+
+interface FooterV3Props {
+    lang: Locale;
+    footer: {
+        tagline: string;
+        intro: string;
+        col_services: string;
+        col_industries: string;
+        col_company: string;
+        col_newsletter: string;
+        newsletter_blurb: string;
+        newsletter_placeholder: string;
+        newsletter_thanks: string;
+        copyright: string;
+        privacy: string;
+        terms: string;
+        wordmark: string;
+    };
+    navigation: {
+        case_studies: string;
+        about: string;
+        blog: string;
+        contact: string;
+    };
+    services: FooterLink[];
+    industries: FooterLink[];
+    email: string;
+    phoneLine: string;
+}
+
+const colLabel = 'se-gold-text mb-[18px] text-[11px] font-bold tracking-[0.22em]';
+const colLink =
+    'text-[0.95rem] text-[#faf6f1]/62 no-underline transition-colors hover:text-[#faf6f1]';
+
+export function FooterV3({ lang, footer, navigation, services, industries, email, phoneLine }: FooterV3Props) {
+    const localizedPath = (path: string) => getLocalizedPath(lang, path);
+    const [phoneNumber, ...phoneRest] = phoneLine.split(' · ');
+    const phoneTel = `tel:+${phoneNumber.replace(/[^0-9]/g, '')}`;
+    const phoneDisplay = phoneRest.length ? `${phoneNumber} · ${phoneRest.join(' · ')}` : phoneNumber;
+
+    const company = [
+        { label: navigation.case_studies, href: localizedPath('/case-studies') },
+        { label: navigation.blog, href: localizedPath('/blog') },
+        { label: navigation.about, href: localizedPath('/about') },
+        { label: navigation.contact, href: localizedPath('/contact') },
+    ];
+
+    return (
+        <footer className="border-t border-[#faf6f1]/10 bg-[#0b0a0a] pt-20">
+            <div className="mx-auto grid max-w-[1380px] grid-cols-1 gap-10 px-6 sm:grid-cols-2 sm:px-8 lg:grid-cols-[1.5fr_1fr_1.15fr_0.95fr_1.15fr]">
+                {/* Brand */}
+                <div className="sm:col-span-2 lg:col-span-1">
+                    <div className="mb-5 flex items-center gap-3">
+                        <Image
+                            src="/images/brand/sensear-logo-white.png"
+                            alt="SensEar"
+                            width={46}
+                            height={46}
+                            className="h-[46px] w-[46px] object-contain"
+                        />
+                        <div>
+                            <div className="font-sans text-xl font-extrabold tracking-[0.18em]">{footer.wordmark}</div>
+                            <div className="font-didot text-[13px] text-[#faf6f1]/55">{footer.tagline}</div>
+                        </div>
+                    </div>
+                    <p className="max-w-[300px] text-[0.95rem] leading-[1.6] text-[#faf6f1]/50">{footer.intro}</p>
+                    <div className="mb-6 mt-6 flex gap-4">
+                        <a
+                            href="https://www.facebook.com/61575909304249/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Facebook"
+                            className="text-[#faf6f1]/70 transition-colors hover:text-[#e3992f]"
+                        >
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" /></svg>
+                        </a>
+                        <a
+                            href="https://www.instagram.com/sensear.music"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Instagram"
+                            className="text-[#faf6f1]/70 transition-colors hover:text-[#e3992f]"
+                        >
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5" /><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" /><line x1="17.5" x2="17.51" y1="6.5" y2="6.5" /></svg>
+                        </a>
+                        <a
+                            href="https://www.linkedin.com/company/sensear-music/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="LinkedIn"
+                            className="text-[#faf6f1]/70 transition-colors hover:text-[#e3992f]"
+                        >
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" /><rect width="4" height="12" x="2" y="9" /><circle cx="4" cy="4" r="2" /></svg>
+                        </a>
+                    </div>
+                    <div className="flex flex-col gap-2 text-[0.95rem]">
+                        <a href={`mailto:${email}`} className="w-fit text-[#faf6f1]/70 no-underline transition-colors hover:text-[#e3992f]">
+                            {email}
+                        </a>
+                        <a href={phoneTel} className="w-fit text-[#faf6f1]/70 no-underline transition-colors hover:text-[#e3992f]">
+                            {phoneDisplay}
+                        </a>
+                    </div>
+                </div>
+
+                {/* Services */}
+                <div>
+                    <div className={colLabel}>{footer.col_services}</div>
+                    <div className="flex flex-col gap-[11px]">
+                        {services.map((item) => (
+                            <Link key={item.link} href={localizedPath(`/${item.link}`)} className={colLink}>
+                                {item.title}
+                            </Link>
+                        ))}
+                    </div>
+                </div>
+
+                {/* Industries */}
+                <div>
+                    <div className={colLabel}>{footer.col_industries}</div>
+                    <div className="flex flex-col gap-[11px]">
+                        {industries.map((item) => (
+                            <Link key={item.link} href={localizedPath(`/${item.link}`)} className={colLink}>
+                                {item.title}
+                            </Link>
+                        ))}
+                    </div>
+                </div>
+
+                {/* Company */}
+                <div>
+                    <div className={colLabel}>{footer.col_company}</div>
+                    <div className="flex flex-col gap-[11px]">
+                        {company.map((item) => (
+                            <Link key={item.href} href={item.href} className={colLink}>
+                                {item.label}
+                            </Link>
+                        ))}
+                    </div>
+                </div>
+
+                {/* Newsletter */}
+                <div>
+                    <div className={colLabel}>{footer.col_newsletter}</div>
+                    <p className="mb-4 text-[0.9rem] leading-[1.55] text-[#faf6f1]/50">{footer.newsletter_blurb}</p>
+                    <NewsletterForm
+                        placeholder={footer.newsletter_placeholder}
+                        buttonText=""
+                        source="Footer v3"
+                        variant="footer"
+                        successText={footer.newsletter_thanks}
+                    />
+                </div>
+            </div>
+
+            {/* Bottom bar */}
+            <div className="mx-auto mt-12 flex max-w-[1380px] flex-wrap items-center justify-between gap-4 border-t border-[#faf6f1]/10 px-6 py-6 sm:px-8">
+                <span className="text-[12px] text-[#faf6f1]/40">{footer.copyright}</span>
+                <div className="flex gap-5">
+                    <Link href={localizedPath('/privacy')} className="text-[12px] text-[#faf6f1]/40 no-underline transition-colors hover:text-[#faf6f1]">
+                        {footer.privacy}
+                    </Link>
+                    <Link href={localizedPath('/terms')} className="text-[12px] text-[#faf6f1]/40 no-underline transition-colors hover:text-[#faf6f1]">
+                        {footer.terms}
+                    </Link>
+                </div>
+            </div>
+
+            {/* Oversized stroked wordmark */}
+            <div className="overflow-hidden pb-6 pt-8 leading-[0.8]">
+                <div className="text-center font-sans font-black tracking-[-0.02em] text-[clamp(4rem,15.5vw,15rem)] text-transparent [-webkit-text-stroke:1px_rgba(250,246,241,0.14)]">
+                    {footer.wordmark}
+                </div>
+            </div>
+        </footer>
+    );
+}

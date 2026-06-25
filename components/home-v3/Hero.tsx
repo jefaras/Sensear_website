@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { Locale } from '@/lib/i18n';
 import { getLocalizedPath } from '@/lib/localized-path';
 import { ScrollReveal } from '@/components/motion';
-import { DriftOrb, GhostButton, Kicker, MorphCTA, SideRail, SpinningBadge, emphasize } from '@/components/v3';
+import { DriftOrb, GhostButton, Kicker, MorphCTA, SideRail, SpinningBadge, emphasizeHeadline } from '@/components/v3';
 import { EQWidget } from './EQWidget';
 
 interface HeroProps {
@@ -66,7 +66,7 @@ export function Hero({ lang, hero }: HeroProps) {
 
                         <ScrollReveal delay={0.15}>
                             <h1 className="mb-[30px] text-[clamp(2.9rem,6vw,5.4rem)] font-extrabold leading-[0.98] tracking-[-0.022em]">
-                                {emphasize(hero.title, emWord, true)}
+                                {emphasizeHeadline(hero.title, emWord)}
                             </h1>
                         </ScrollReveal>
 

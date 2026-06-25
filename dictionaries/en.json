@@ -150,6 +150,7 @@
             "cta": "Discover more insights",
             "kicker": "THE CURATION JOURNAL",
             "all_articles": "All articles →",
+            "headline": "How sound shapes perception",
             "articles": [
                 {
                     "title": "Three reasons music matters in hospitality",
@@ -179,6 +180,21 @@
             "secondary_email_label": "hello@sensear.music",
             "phone_line": "+30 697 699 4212 · Athens, Greece",
             "background_image": "/images/homepage/sensear-signature-playlist-service.jpg"
+        },
+        "footer": {
+            "tagline": "Soundtracking Unique Experiences",
+            "intro": "Music curation & sonic identity for venues, events and brands.",
+            "col_services": "SERVICES",
+            "col_industries": "INDUSTRIES",
+            "col_company": "COMPANY",
+            "col_newsletter": "JOIN THE JOURNAL",
+            "newsletter_blurb": "Notes on music, atmosphere & sonic branding.",
+            "newsletter_placeholder": "Your email",
+            "newsletter_thanks": "Thank you! ✦",
+            "copyright": "© 2026 SensEar Music. All rights reserved.",
+            "privacy": "Privacy Policy",
+            "terms": "Terms of Service",
+            "wordmark": "SENSEAR"
         }
     },
     "contact": {
