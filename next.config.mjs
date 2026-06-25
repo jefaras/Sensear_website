@@ -22,8 +22,15 @@ const nextConfig = {
     },
 
     // Turbopack configuration (Next.js 16 default bundler)
-    // Keep empty config for dev mode, but use --no-turbopack for production builds
-    turbopack: {},
+    // resolveAlias bypasses the package.json exports-field resolution for
+    // lucide-react, which Turbopack fails on because lucide-react 0.474.0 has a
+    // non-standard `"main": "dist/esm/lucide-react.js"` (ESM, not CJS). Pointing
+    // directly to the ESM barrel makes Turbopack resolve it consistently.
+    turbopack: {
+        resolveAlias: {
+            'lucide-react': './node_modules/lucide-react/dist/esm/lucide-react.js',
+        },
+    },
 
     // TODO: move redirect rules to `.htaccess` for static export deployment.
     // `redirects()` is not supported with `output: 'export'`.
@@ -196,9 +203,13 @@ const nextConfig = {
         // Limit worker threads to prevent process spawn issues on shared hosting
         workerThreads: false,
         cpus: 1,
-        // Optimize imports from these packages to reduce bundle size
+        // Optimize imports from these packages to reduce bundle size.
+        // NOTE: lucide-react is intentionally excluded — Turbopack 16 fails to
+        // resolve its per-icon files because optimizePackageImports attempts
+        // PascalCase paths (ArrowRight.js) while the package ships kebab-case
+        // (arrow-right.js). The webpack production build handles lucide-react
+        // via its own split-chunks 'lucide-icons' cacheGroup instead.
         optimizePackageImports: [
-            'lucide-react',
             '@radix-ui/react-accordion',
             '@radix-ui/react-dialog',
             '@radix-ui/react-dropdown-menu',
