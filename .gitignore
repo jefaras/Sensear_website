@@ -54,3 +54,8 @@ static-export-test.zip
 # agent working files - audits, diagnostics, and screenshots
 /.agent/
 /screenshots/
+
+# v3 demo local artifacts - screenshots + throwaway verification scripts
+/output/
+/_v3*.mjs
+/_v3*.log
