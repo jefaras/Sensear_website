@@ -20,12 +20,30 @@
                 "Let music tell yours.",
                 "Sophisticated music curation services for places and experiences that \"refuse\" to sound generic."
             ],
-            "cta": "Explore our services"
+            "cta": "Explore our services",
+            "side_label": "ATHENS · GR — SONIC BRANDING",
+            "kicker": "MUSIC CURATION & SONIC IDENTITY",
+            "secondary_cta": "Book a call",
+            "now_playing_label": "NOW PLAYING",
+            "now_playing_track": "The SensEar Sessions — Vol. 04",
+            "featured_kicker": "FEATURED SPACE",
+            "featured_caption": "After-hours, scored.",
+            "badge": ["★ SENSEAR ★", "EST · ATH"],
+            "scroll_label": "SCROLL"
         },
         "intro": {
             "title": "Who we are",
-            "p1": "We are a team of passionate music experts who create soundtracks for venues through music that is intentional, immersive & memorable.",
-            "p2": "Our core belief is that music shapes atmosphere, influences behaviour and builds lasting connections with guests."
+            "p1": "We are a team of passionate <em>music experts</em> who create <em>soundtracks for venues</em> through music that is intentional, immersive & <em>memorable</em>.",
+            "p2": "Our core belief is that music shapes <strong>atmosphere</strong>, influences <strong>behaviour</strong> and builds lasting <strong>connections</strong> with guests."
+        },
+        "marquee": [
+            "Signature Playlists",
+            "Event Soundtracks",
+            "Sonic Identity",
+            "Audio Upgrades"
+        ],
+        "about": {
+            "kicker": "WHO WE ARE"
         },
         "services": {
             "title": "Four ways we reimagine venues",
@@ -52,9 +70,18 @@
                     "link": "services/audio-upgrades"
                 }
             ],
-            "cta": "Explore all services"
+            "cta": "Explore all services",
+            "kicker": "SERVICES",
+            "preview_placeholder": "Hover over a service",
+            "previews": [
+                { "img": "/images/services/service-signature-playlists.jpg", "cap": "Your daily venue soundtrack" },
+                { "img": "/images/services/service-event-soundtracks.jpg", "cap": "Bespoke DJ sets & acoustic experiences" },
+                { "img": "/images/services/service-sonic-strategy.jpg", "cap": "Your brand's sonic DNA" },
+                { "img": "/images/services/service-audio-upgrades.jpg", "cap": "Crystal-clear, balanced sound" }
+            ]
         },
         "expertise": {
+            "kicker": "INDUSTRIES",
             "title": "Your world, our expertise",
             "subtitle": "We understand how rhythm, energy & atmosphere influence the hospitality experience.",
             "items": [
@@ -92,6 +119,7 @@
             "cta": "Find your industry"
         },
         "enhance": {
+            "kicker": "OUR APPROACH",
             "title": "How we redefine your venue",
             "subtitle": "Innovative sound design that works as intentionally as every other aspect of your business.",
             "items": [
@@ -111,6 +139,7 @@
             "cta": "View Case Studies"
         },
         "clients": {
+            "kicker": "WORK & COLLABORATIONS",
             "title": "Now playing in venues across Greece",
             "subtitle": ""
         },
@@ -119,6 +148,8 @@
             "subtitle": "Read how music shapes perception, emotion and brand identity through sound.",
             "read_more": "Read More",
             "cta": "Discover more insights",
+            "kicker": "THE CURATION JOURNAL",
+            "all_articles": "All articles →",
             "articles": [
                 {
                     "title": "Three reasons music matters in hospitality",
@@ -139,6 +170,15 @@
                     "link": "what-exactly-does-music-curator-do"
                 }
             ]
+        },
+        "contact_cta": {
+            "kicker": "LET'S COLLABORATE",
+            "title": "Let's design the <em>soundtrack</em> for your space",
+            "subtitle": "Tell us about your venue and we'll craft its sonic identity together.",
+            "primary_cta": "Book a call",
+            "secondary_email_label": "hello@sensear.music",
+            "phone_line": "+30 697 699 4212 · Athens, Greece",
+            "background_image": "/images/homepage/sensear-signature-playlist-service.jpg"
         }
     },
     "contact": {

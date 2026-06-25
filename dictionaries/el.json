@@ -20,12 +20,30 @@
                 "Αφήστε τη μουσική να την αφηγηθεί σωστά.",
                 "Μουσική επιμέλεια υψηλής αισθητικής για χώρους, εμπειρίες & brands που αρνούνται να ηχούν \"συνηθισμένα\"."
             ],
-            "cta": "Εξερευνήστε τις υπηρεσίες μας"
+            "cta": "Εξερευνήστε τις υπηρεσίες μας",
+            "side_label": "ATHENS · GR — SONIC BRANDING",
+            "kicker": "ΜΟΥΣΙΚΗ ΕΠΙΜΕΛΕΙΑ & ΗΧΗΤΙΚΗ ΤΑΥΤΟΤΗΤΑ",
+            "secondary_cta": "Κλείστε ραντεβού",
+            "now_playing_label": "NOW PLAYING",
+            "now_playing_track": "The SensEar Sessions — Vol. 04",
+            "featured_kicker": "FEATURED SPACE",
+            "featured_caption": "After-hours, scored.",
+            "badge": ["★ SENSEAR ★", "EST · ATH"],
+            "scroll_label": "SCROLL"
         },
         "intro": {
             "title": "Ποιοι είμαστε",
-            "p1": "Είμαστε μια ομάδα εξειδικευμένων music curators που σχεδιάζουν soundtracks για χώρους και εκδηλώσεις, με πρόθεση, βάθος και χαρακτήρα.",
-            "p2": "Για εμάς, η σωστή μουσική δεν είναι απλό υπόβαθρο. Είναι ένα εργαλείο που <strong>επηρεάζει άμεσα τον χρόνο παραμονής</strong> των επισκεπτών, την <strong>αποδοτικότητα</strong> της ομάδας σας και τη συνολική <strong>αντίληψη</strong> του brand."
+            "p1": "Είμαστε μια ομάδα <em>ειδικών στον ήχο</em> με <em>βαθιά μουσική κουλτούρα</em>, που επενδύει χώρους και εκδηλώσεις με στοχευμένη, βιωματική μουσική που <em>μένει στη μνήμη</em>.",
+            "p2": "Η μουσική, για εμάς, διαμορφώνει την <strong>ατμόσφαιρα</strong>, επηρεάζει τη <strong>συμπεριφορά</strong> και ενισχύει τη <strong>σύνδεση</strong> με τους επισκέπτες."
+        },
+        "marquee": [
+            "Signature Playlists",
+            "Μουσική Εκδηλώσεων",
+            "Ηχητική Ταυτότητα",
+            "Ακουστική Αναβάθμιση"
+        ],
+        "about": {
+            "kicker": "ΠΟΙΟΙ ΕΙΜΑΣΤΕ"
         },
         "services": {
             "title": "Τέσσερις τρόποι που αναβαθμίζουμε τον χώρο σας",
@@ -52,9 +70,18 @@
                     "link": "services/audio-upgrades"
                 }
             ],
-            "cta": "Εξερευνήστε όλες τις υπηρεσίες"
+            "cta": "Εξερευνήστε όλες τις υπηρεσίες",
+            "kicker": "ΥΠΗΡΕΣΙΕΣ",
+            "preview_placeholder": "Περάστε τον δείκτη πάνω από μια υπηρεσία",
+            "previews": [
+                { "img": "/images/services/service-signature-playlists.jpg", "cap": "Το καθημερινό soundtrack του χώρου σας" },
+                { "img": "/images/services/service-event-soundtracks.jpg", "cap": "DJ sets & ακουστικές εμπειρίες κατά παραγγελία" },
+                { "img": "/images/services/service-sonic-strategy.jpg", "cap": "Το ηχητικό DNA του brand σας" },
+                { "img": "/images/services/service-audio-upgrades.jpg", "cap": "Πεντακάθαρος, ισορροπημένος ήχος" }
+            ]
         },
         "expertise": {
+            "kicker": "ΚΛΑΔΟΙ",
             "title": "Ο κόσμος σας, η εξειδίκευσή μας",
             "subtitle": "Κατανοούμε απόλυτα πώς ο ρυθμός, η ενέργεια και η ατμόσφαιρα απογειώνουν την εμπειρία φιλοξενίας.",
             "items": [
@@ -92,6 +119,7 @@
             "cta": "Δείτε τον κλάδο που σας αφορά"
         },
         "enhance": {
+            "kicker": "Η ΠΡΟΣΕΓΓΙΣΗ ΜΑΣ",
             "title": "Πώς επαναπροσδιορίζουμε τον χώρο σας",
             "subtitle": "Καινοτόμος μουσικός σχεδιασμός, με την ίδια φροντίδα που δίνετε σε κάθε άλλη πτυχή της επιχείρησής σας.",
             "items": [
@@ -111,6 +139,7 @@
             "cta": "Δείτε τα Case Studies"
         },
         "clients": {
+            "kicker": "ΕΡΓΑ & ΣΥΝΕΡΓΑΣΙΕΣ",
             "title": "Venues που μας εμπιστεύονται τον ήχο τους",
             "subtitle": "Premium χώροι σε Αθήνα και Αιγαίο μας εμπιστεύονται, επιλέγοντας ήχο με χαρακτήρα και συνέπεια."
         },
@@ -119,6 +148,8 @@
             "subtitle": "Διαβάστε πώς ο ήχος διαμορφώνει την αντίληψη, το συναίσθημα και την ταυτότητα ενός brand.",
             "read_more": "Διαβάστε περισσότερα",
             "cta": "Ανακαλύψτε περισσότερα άρθρα",
+            "kicker": "THE CURATION JOURNAL",
+            "all_articles": "Όλα τα άρθρα →",
             "articles": [
                 {
                     "title": "Τρεις λόγοι που η μουσική έχει σημασία στη φιλοξενία",
@@ -139,6 +170,15 @@
                     "link": "what-exactly-does-music-curator-do"
                 }
             ]
+        },
+        "contact_cta": {
+            "kicker": "ΑΣ ΣΥΝΕΡΓΑΣΤΟΥΜΕ",
+            "title": "Ας σχεδιάσουμε το <em>soundtrack</em> του χώρου σας",
+            "subtitle": "Πείτε μας για τον χώρο σας και θα σχεδιάσουμε μαζί την ηχητική του ταυτότητα.",
+            "primary_cta": "Κλείστε ραντεβού",
+            "secondary_email_label": "hello@sensear.music",
+            "phone_line": "+30 697 699 4212 · Αθήνα, Ελλάδα",
+            "background_image": "/images/homepage/sensear-signature-playlist-service.jpg"
         }
     },
     "contact": {
