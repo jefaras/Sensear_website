@@ -55,10 +55,11 @@ export function ContactCTA({ lang, cta }: ContactCTAProps) {
                         <MorphCTA href={localizedPath('/contact')}>{cta.primary_cta}</MorphCTA>
                         <a
                             href="tel:+306976994212"
-                            className="inline-flex items-center gap-2 rounded-full border border-[#faf6f1]/30 px-8 py-[17px] text-[15px] font-bold text-[#faf6f1] no-underline transition-colors hover:border-[#faf6f1]/60"
+                            className="se-call group relative inline-flex items-center gap-2.5 overflow-hidden rounded-full px-8 py-[17px] text-[15px] font-bold no-underline"
                         >
-                            <Phone className="h-4 w-4" strokeWidth={2.2} />
-                            {cta.call_label}
+                            <Phone className="se-cta-ico h-5 w-5 shrink-0" strokeWidth={2.2} />
+                            <span className="se-cta-label">{cta.call_label}</span>
+                            <span className="se-cta-arrow text-[17px]">→</span>
                         </a>
                     </div>
                 </ScrollReveal>

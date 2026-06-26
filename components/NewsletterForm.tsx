@@ -168,7 +168,7 @@ export function NewsletterForm({
                         ) : (
                             <>
                                 {buttonText && <span>{buttonText}</span>}
-                                <ArrowRight className="h-4 w-4" />
+                                <ArrowRight className="h-4 w-4 transition-transform duration-300 ease-out group-hover:translate-x-1 group-focus-visible:translate-x-1" />
                             </>
                         )}
                     </button>
