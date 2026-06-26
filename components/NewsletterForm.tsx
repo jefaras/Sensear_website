@@ -154,7 +154,7 @@ export function NewsletterForm({
                         }}
                         placeholder={placeholder}
                         required
-                        className={`bg-[#faf6f1]/8 border text-[#faf6f1] placeholder:text-[#faf6f1]/40 flex-1 text-sm h-9 max-w-[200px] rounded-full px-4 focus:outline-none ${status === "error" ? 'border-red-500' : 'border-[#faf6f1]/15 focus:border-[#faf6f1]/40'
+                        className={`bg-[rgba(250,246,241,0.05)] border text-[#faf6f1] placeholder:text-[rgba(250,246,241,0.55)] flex-1 text-sm h-9 max-w-[200px] rounded-full px-4 focus:outline-none ${status === "error" ? 'border-red-500' : 'border-[rgba(250,246,241,0.18)] focus:border-[rgba(250,246,241,0.45)]'
                             }`}
                     />
                     <button
