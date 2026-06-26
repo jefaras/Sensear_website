@@ -59,3 +59,4 @@ static-export-test.zip
 /output/
 /_v3*.mjs
 /_v3*.log
+/v3-*.png
