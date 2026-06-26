@@ -15,11 +15,14 @@ interface ContactCTAProps {
         phone_line: string;
         background_image: string;
     };
+    secondaryLabel?: string;
+    secondaryHref?: string;
 }
 
-export function ContactCTA({ lang, cta }: ContactCTAProps) {
+export function ContactCTA({ lang, cta, secondaryLabel, secondaryHref }: ContactCTAProps) {
     const localizedPath = (path: string) => getLocalizedPath(lang, path);
     const phoneTel = `tel:+${cta.phone_line.replace(/[^0-9]/g, '')}`;
+    const useSecondaryOverride = Boolean(secondaryLabel && secondaryHref);
 
     return (
         <section className="relative overflow-hidden py-[150px]">
@@ -52,9 +55,13 @@ export function ContactCTA({ lang, cta }: ContactCTAProps) {
                 <ScrollReveal delay={0.24}>
                     <div className="mb-[30px] flex flex-wrap items-center justify-center gap-[18px]">
                         <MorphCTA href={localizedPath('/contact')}>{cta.primary_cta}</MorphCTA>
-                        <GhostButton href="mailto:hello@sensear.music" external>
-                            {cta.secondary_email_label}
-                        </GhostButton>
+                        {useSecondaryOverride ? (
+                            <GhostButton href={secondaryHref as string}>{secondaryLabel}</GhostButton>
+                        ) : (
+                            <GhostButton href="mailto:hello@sensear.music" external>
+                                {cta.secondary_email_label}
+                            </GhostButton>
+                        )}
                     </div>
                 </ScrollReveal>
                 <ScrollReveal delay={0.3}>

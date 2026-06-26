@@ -1737,8 +1737,14 @@
         },
         "hero": {
             "title": "Understanding how it works",
-            "subtitle": "Answers to common questions about sound, licensing & our services."
+            "subtitle": "Answers to common questions about sound, licensing & our services.",
+            "side_label": "SUPPORT — FAQ",
+            "kicker": "FREQUENTLY ASKED",
+            "image_kicker": "HOW IT WORKS",
+            "image_caption": "Sound, licensing & service.",
+            "badge": ["★ SENSEAR ★", "EST · ATH"]
         },
+        "section_kicker": "FAQ",
         "title": "Your Questions, Answered",
         "items": [
             {
@@ -1781,7 +1787,9 @@
         "cta": {
             "title": "Still Have Questions? Let's Talk",
             "subtitle": "Let's talk about how we can elevate your brand's sound.",
-            "button": "Contact us"
+            "button": "Contact us",
+            "kicker": "LET'S TALK",
+            "secondary_cta": "See our services"
         }
     },
     "signature_playlists": {

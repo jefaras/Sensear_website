@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import { Footer } from "@/components/Footer";
 import { Navbar } from "@/components/Navbar";
 import type { Locale } from "@/lib/i18n";
+import { isV3Route } from "@/lib/v3-route";
 
 type NavigationLabels = {
     home: string;
@@ -29,7 +30,7 @@ export function LocalizedSiteChrome({ children, navigation, footer }: LocalizedS
     const isHomepageConcept = pathname === "/homepage-concept";
     // v3 demo routes render their own dark editorial footer (FooterV3), so the
     // global light footer is suppressed there. Legacy routes are unaffected.
-    const isV3 = pathname.includes("/home-v3");
+    const isV3 = isV3Route(pathname);
 
     useEffect(() => {
         document.documentElement.lang = lang;
