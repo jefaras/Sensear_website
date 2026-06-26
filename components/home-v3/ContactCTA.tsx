@@ -1,8 +1,10 @@
 import Image from 'next/image';
+import Link from 'next/link';
+import { Phone } from 'lucide-react';
 import { Locale } from '@/lib/i18n';
 import { getLocalizedPath } from '@/lib/localized-path';
 import { ScrollReveal } from '@/components/motion';
-import { GhostButton, Kicker, MorphCTA } from '@/components/v3';
+import { Kicker, MorphCTA } from '@/components/v3';
 
 interface ContactCTAProps {
     lang: Locale;
@@ -11,18 +13,14 @@ interface ContactCTAProps {
         title: string;
         subtitle: string;
         primary_cta: string;
-        secondary_email_label: string;
-        phone_line: string;
+        call_label: string;
+        services_link: string;
         background_image: string;
     };
-    secondaryLabel?: string;
-    secondaryHref?: string;
 }
 
-export function ContactCTA({ lang, cta, secondaryLabel, secondaryHref }: ContactCTAProps) {
+export function ContactCTA({ lang, cta }: ContactCTAProps) {
     const localizedPath = (path: string) => getLocalizedPath(lang, path);
-    const phoneTel = `tel:+${cta.phone_line.replace(/[^0-9]/g, '')}`;
-    const useSecondaryOverride = Boolean(secondaryLabel && secondaryHref);
 
     return (
         <section className="relative overflow-hidden py-[150px]">
@@ -55,24 +53,24 @@ export function ContactCTA({ lang, cta, secondaryLabel, secondaryHref }: Contact
                 <ScrollReveal delay={0.24}>
                     <div className="mb-[30px] flex flex-wrap items-center justify-center gap-[18px]">
                         <MorphCTA href={localizedPath('/contact')}>{cta.primary_cta}</MorphCTA>
-                        {useSecondaryOverride ? (
-                            <GhostButton href={secondaryHref as string}>{secondaryLabel}</GhostButton>
-                        ) : (
-                            <GhostButton href="mailto:hello@sensear.music" external>
-                                {cta.secondary_email_label}
-                            </GhostButton>
-                        )}
+                        <a
+                            href="tel:+306976994212"
+                            className="inline-flex items-center gap-2 rounded-full border border-[#faf6f1]/30 px-8 py-[17px] text-[15px] font-bold text-[#faf6f1] no-underline transition-colors hover:border-[#faf6f1]/60"
+                        >
+                            <Phone className="h-4 w-4" strokeWidth={2.2} />
+                            {cta.call_label}
+                        </a>
                     </div>
                 </ScrollReveal>
                 <ScrollReveal delay={0.3}>
-                        <div className="text-[14px] tracking-[0.04em] text-[#faf6f1]/45">
-                            <a
-                                href={phoneTel}
-                                className="text-inherit no-underline transition-colors hover:text-[#e3992f]"
-                            >
-                                {cta.phone_line}
-                            </a>
-                        </div>
+                    <div className="text-[14px] tracking-[0.04em] text-[#faf6f1]/45">
+                        <Link
+                            href={localizedPath('/services')}
+                            className="text-inherit no-underline transition-colors hover:text-[#e3992f]"
+                        >
+                            {cta.services_link}
+                        </Link>
+                    </div>
                 </ScrollReveal>
             </div>
         </section>

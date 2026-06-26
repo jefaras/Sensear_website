@@ -9,7 +9,7 @@ interface NewsletterFormProps {
     placeholder: string;
     buttonText: string;
     source?: string;
-    variant?: "footer" | "cta";
+    variant?: "footer" | "cta" | "footerV3";
     successText?: string;
 }
 
@@ -123,6 +123,60 @@ export function NewsletterForm({
                     <p className="text-red-500 text-sm w-full text-center">{errorMessage}</p>
                 )}
                 <p className="text-xs text-black/40 text-center w-full mt-1">
+                    Protected by reCAPTCHA —{" "}
+                    <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="underline">Privacy</a> &amp;{" "}
+                    <a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer" className="underline">Terms</a>
+                </p>
+            </form>
+        );
+    }
+
+    // Footer v3 variant — dark-editorial gold-pill submit used only by FooterV3.
+    // The legacy bordered footer button collapses to an empty pill when buttonText
+    // is ""; this renders a filled gold pill with a visible arrow instead.
+    if (variant === "footerV3") {
+        return (
+            <form action="/newsletter.php" method="POST" encType="application/x-www-form-urlencoded" onSubmit={handleSubmit} className="flex flex-col gap-2">
+                <input type="hidden" name="g-recaptcha-response" value="" />
+                <input type="hidden" name="source" value={source} />
+                <div className="flex gap-2">
+                    <input
+                        name="email"
+                        type="email"
+                        aria-label={placeholder}
+                        value={email}
+                        onChange={(e) => {
+                            setEmail(e.target.value);
+                            if (status === "error") {
+                                setStatus("idle");
+                                setErrorMessage("");
+                            }
+                        }}
+                        placeholder={placeholder}
+                        required
+                        className={`bg-[#faf6f1]/8 border text-[#faf6f1] placeholder:text-[#faf6f1]/40 flex-1 text-sm h-9 max-w-[200px] rounded-full px-4 focus:outline-none ${status === "error" ? 'border-red-500' : 'border-[#faf6f1]/15 focus:border-[#faf6f1]/40'
+                            }`}
+                    />
+                    <button
+                        type="submit"
+                        disabled={status === "loading"}
+                        className="se-cta group inline-flex h-9 shrink-0 items-center justify-center gap-1.5 rounded-full px-5 text-[13px] font-bold no-underline disabled:opacity-50 disabled:cursor-not-allowed"
+                        aria-label={buttonText || "Subscribe"}
+                    >
+                        {status === "loading" ? (
+                            "..."
+                        ) : (
+                            <>
+                                {buttonText && <span>{buttonText}</span>}
+                                <ArrowRight className="h-4 w-4" />
+                            </>
+                        )}
+                    </button>
+                </div>
+                {status === "error" && (
+                    <p className="text-red-400 text-xs">{errorMessage}</p>
+                )}
+                <p className="text-xs text-[#faf6f1]/30 mt-1">
                     Protected by reCAPTCHA —{" "}
                     <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="underline">Privacy</a> &amp;{" "}
                     <a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer" className="underline">Terms</a>

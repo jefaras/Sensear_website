@@ -17,6 +17,8 @@ interface FooterV3Props {
         col_services: string;
         col_industries: string;
         col_company: string;
+        link_faq: string;
+        link_sitemap: string;
         col_newsletter: string;
         newsletter_blurb: string;
         newsletter_placeholder: string;
@@ -53,6 +55,8 @@ export function FooterV3({ lang, footer, navigation, services, industries, email
         { label: navigation.blog, href: localizedPath('/blog') },
         { label: navigation.about, href: localizedPath('/about') },
         { label: navigation.contact, href: localizedPath('/contact') },
+        { label: footer.link_faq, href: localizedPath('/faq') },
+        { label: footer.link_sitemap, href: localizedPath('/sitemap-page') },
     ];
 
     return (
@@ -159,7 +163,7 @@ export function FooterV3({ lang, footer, navigation, services, industries, email
                         placeholder={footer.newsletter_placeholder}
                         buttonText=""
                         source="Footer v3"
-                        variant="footer"
+                        variant="footerV3"
                         successText={footer.newsletter_thanks}
                     />
                 </div>

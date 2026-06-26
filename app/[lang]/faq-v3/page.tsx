@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import { getDictionary } from '@/lib/dictionary';
 import { type Locale } from '@/lib/i18n';
-import { getLocalizedPath } from '@/lib/localized-path';
 import { V3Root, Kicker, DriftOrb, emphasize, FooterV3 } from '@/components/v3';
 import { ScrollReveal } from '@/components/motion';
 import { Hero, Accordion } from '@/components/faq-v3';
@@ -55,13 +54,11 @@ export default async function FaqV3({ params }: { params: Promise<{ lang: Locale
                     kicker: content.cta.kicker,
                     title: ctaTitleHtml,
                     subtitle: content.cta.subtitle,
-                    primary_cta: content.cta.button,
-                    secondary_email_label: home.contact_cta.secondary_email_label,
-                    phone_line: home.contact_cta.phone_line,
+                    primary_cta: home.contact_cta.primary_cta,
+                    call_label: home.contact_cta.call_label,
+                    services_link: home.contact_cta.services_link,
                     background_image: '/images/contact/contact-hero-venue-consultation.jpg',
                 }}
-                secondaryLabel={content.cta.secondary_cta}
-                secondaryHref={getLocalizedPath(lang, '/services')}
             />
 
             <FooterV3
