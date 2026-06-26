@@ -82,7 +82,7 @@ export function Venues({ lang, kicker, title }: VenuesProps) {
     );
 
     return (
-        <section className="overflow-hidden border-y border-[#faf6f1]/8 bg-[#0b0a0a] py-[110px]">
+        <section className="border-y border-[#faf6f1]/8 bg-[#0b0a0a] py-[110px]">
             <div className="mx-auto max-w-[1380px] px-6 sm:px-8">
                 <ScrollReveal>
                     <Kicker className="mb-[18px]">{kicker}</Kicker>
@@ -92,15 +92,20 @@ export function Venues({ lang, kicker, title }: VenuesProps) {
                         {emphasize(title, emWord)}
                     </h2>
                 </ScrollReveal>
-            </div>
-            <ScrollReveal>
-                <div className="flex w-max animate-[se-marq_40s_linear_infinite]">
-                    <Row />
-                    <div aria-hidden="true">
-                        <Row />
-                    </div>
+                {/* Marquee clipped at content boundary with gradient fades */}
+                <div className="relative -mx-6 overflow-hidden sm:-mx-8">
+                    <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-20 bg-gradient-to-r from-[#0b0a0a] to-transparent" />
+                    <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-20 bg-gradient-to-l from-[#0b0a0a] to-transparent" />
+                    <ScrollReveal>
+                        <div className="flex w-max animate-[se-marq_40s_linear_infinite]">
+                            <Row />
+                            <div aria-hidden="true">
+                                <Row />
+                            </div>
+                        </div>
+                    </ScrollReveal>
                 </div>
-            </ScrollReveal>
+            </div>
         </section>
     );
 }
