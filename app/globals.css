@@ -204,6 +204,14 @@
   background-clip: text;
   -webkit-text-fill-color: transparent;
   color: transparent;
+  /* Faux-italic (GFS Didot has no italic face) skews glyph ink beyond the inline
+     padding box; with transparent text-fill the gradient paints only inside
+     glyph ∩ padding-box, so overflowing ink reads as clipped. Expand the painting
+     box with padding. Vertical padding doesn't affect inline line-box height
+     (line-height governs) so cadence is preserved; horizontal padding is cancelled
+     by the matching negative horizontal margin so wrapping is unchanged. */
+  padding: 0.14em 0.1em;
+  margin: 0 -0.1em;
 }
 
 /* Bold light-weight <strong> inside .se-html containers (About body). */
