@@ -7,6 +7,7 @@ import { Footer } from "@/components/Footer";
 import { Navbar } from "@/components/Navbar";
 import type { Locale } from "@/lib/i18n";
 import { isV3Route } from "@/lib/v3-route";
+import { getPathLocale } from "@/lib/localized-path";
 
 type NavigationLabels = {
     home: string;
@@ -26,7 +27,7 @@ interface LocalizedSiteChromeProps {
 
 export function LocalizedSiteChrome({ children, navigation, footer }: LocalizedSiteChromeProps) {
     const pathname = usePathname() || "/";
-    const lang: Locale = pathname === "/en" || pathname.startsWith("/en/") ? "en" : "el";
+    const lang: Locale = getPathLocale(pathname);
     const isHomepageConcept = pathname === "/homepage-concept";
     // v3 demo routes render their own dark editorial footer (FooterV3), so the
     // global light footer is suppressed there. Legacy routes are unaffected.

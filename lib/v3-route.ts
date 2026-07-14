@@ -5,7 +5,7 @@
  * (light-on-dark Navbar + suppression of the global light footer, which
  * each v3 page replaces with its own `FooterV3`).
  *
- * Matches: `/faq-v3`, `/en/faq-v3`, `/home-v3`, `/en/home-v3`,
+ * Matches: `/faq-v3`, `/el/faq-v3`, `/home-v3`, `/el/home-v3`,
  * `/services-v3/<slug>`, `/blog-v3/<slug>`, etc.
  * False for: `/faq`, `/`, `/services`, and every non-`-v3` path.
  */

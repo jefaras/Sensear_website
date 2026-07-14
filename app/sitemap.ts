@@ -40,7 +40,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         '/sitemap-page',
     ]
 
-    const locales = ['el', 'en'] as const
+    const locales = ['en', 'el'] as const
 
     const sitemapEntries: MetadataRoute.Sitemap = []
 

@@ -5,10 +5,10 @@ import { type Locale } from '@/lib/i18n'
 export const dynamicParams = false
 
 export async function generateStaticParams() {
-    return [{ lang: 'en' }]
+    return [{ lang: 'el' }]
 }
 
-export default async function EnglishOnlyLayout({
+export default async function GreekOnlyLayout({
     children,
     params,
 }: {
@@ -17,7 +17,7 @@ export default async function EnglishOnlyLayout({
 }) {
     const { lang } = await params
 
-    if ((lang as Locale) !== 'en') {
+    if ((lang as Locale) !== 'el') {
         notFound()
     }
 

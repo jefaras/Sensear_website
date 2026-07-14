@@ -25,7 +25,7 @@ export const dynamicParams = false;
 export const BLOG_SLUGS = Object.keys(BLOG_PUBLISHED_DATES);
 
 export async function generateStaticParams() {
-    return BLOG_SLUGS.map((slug) => ({ lang: "en" as const, slug }));
+    return BLOG_SLUGS.map((slug) => ({ lang: "el" as const, slug }));
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: Locale; slug: string }> }) {
