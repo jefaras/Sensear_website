@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import { Footer } from "@/components/Footer";
 import { Navbar } from "@/components/Navbar";
 import type { Locale } from "@/lib/i18n";
+import { getPathLocale } from "@/lib/localized-path";
 
 type NavigationLabels = {
     home: string;
@@ -25,7 +26,7 @@ interface LocalizedSiteChromeProps {
 
 export function LocalizedSiteChrome({ children, navigation, footer }: LocalizedSiteChromeProps) {
     const pathname = usePathname() || "/";
-    const lang: Locale = pathname === "/en" || pathname.startsWith("/en/") ? "en" : "el";
+    const lang: Locale = getPathLocale(pathname);
     const isHomepageConcept = pathname === "/homepage-concept";
 
     useEffect(() => {

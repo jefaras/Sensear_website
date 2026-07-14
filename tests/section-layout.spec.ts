@@ -9,7 +9,7 @@ test.describe('Services Page Section Layout Tests', () => {
   test.use({ viewport: { width: 1280, height: 720 } });
 
   test('Signature Playlists section has image on left, text on right', async ({ page }) => {
-    await page.goto('/en/services/');
+    await page.goto('/services/');
     await page.waitForLoadState('networkidle');
 
     // Find the Signature Playlists section by its title
@@ -40,7 +40,7 @@ test.describe('Services Page Section Layout Tests', () => {
   });
 
   test('Event Soundtracks section has text on left, image on right', async ({ page }) => {
-    await page.goto('/en/services/');
+    await page.goto('/services/');
     await page.waitForLoadState('networkidle');
 
     // Find the Event Soundtracks section by its title
@@ -75,7 +75,7 @@ test.describe('Home Page Section Layout Tests', () => {
   test.use({ viewport: { width: 1280, height: 720 } });
 
   test('Services section (Four ways) has image on left, text on right', async ({ page }) => {
-    await page.goto('/en');
+    await page.goto('/');
     await page.waitForLoadState('networkidle');
 
     // Scroll to the Services section
@@ -95,7 +95,7 @@ test.describe('Home Page Section Layout Tests', () => {
     await expect(firstColumnImage).toBeVisible();
 
     // Second column should contain the CTA button
-    const secondColumnButton = secondColumn.locator('a[href="/en/services/"] button');
+    const secondColumnButton = secondColumn.locator('a[href="/services/"] button');
     await expect(secondColumnButton).toBeVisible();
 
     // Take screenshot for visual verification
@@ -106,7 +106,7 @@ test.describe('Home Page Section Layout Tests', () => {
   });
 
   test('Expertise section (Your world) has text on left, image on right', async ({ page }) => {
-    await page.goto('/en');
+    await page.goto('/');
     await page.waitForLoadState('networkidle');
 
     // Scroll to the Expertise section
@@ -122,7 +122,7 @@ test.describe('Home Page Section Layout Tests', () => {
     const secondColumn = columns.nth(1);
 
     // First column should contain the CTA button
-    const firstColumnButton = firstColumn.locator('a[href="/en/industries/"] button');
+    const firstColumnButton = firstColumn.locator('a[href="/industries/"] button');
     await expect(firstColumnButton).toBeVisible();
 
     // Second column should contain the image
@@ -137,7 +137,7 @@ test.describe('Home Page Section Layout Tests', () => {
   });
 
   test('Enhance section has correct image dimensions (800x600)', async ({ page }) => {
-    await page.goto('/en');
+    await page.goto('/');
     await page.waitForLoadState('networkidle');
 
     // Scroll to the Enhance section
@@ -168,7 +168,7 @@ test.describe('Mobile Responsive Layout Tests', () => {
   test.use({ viewport: { width: 375, height: 667 } });
 
   test('Services page sections stack properly on mobile', async ({ page }) => {
-    await page.goto('/en/services/');
+    await page.goto('/services/');
     await page.waitForLoadState('networkidle');
 
     // On mobile, sections should stack vertically
@@ -186,7 +186,7 @@ test.describe('Mobile Responsive Layout Tests', () => {
   });
 
   test('Home page sections stack properly on mobile', async ({ page }) => {
-    await page.goto('/en');
+    await page.goto('/');
     await page.waitForLoadState('networkidle');
 
     // Scroll down to load lazy-loaded sections

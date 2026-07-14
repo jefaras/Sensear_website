@@ -88,7 +88,7 @@ export default async function RootLayout({
     ])
 
     return (
-        <html lang="el" className={fontVariables}>
+        <html lang="en" className={fontVariables}>
             <head>
                 {/* Google Tag Manager */}
                 <script

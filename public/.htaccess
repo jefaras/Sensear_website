@@ -4,26 +4,27 @@ ErrorDocument 404 /404.html
 <IfModule mod_rewrite.c>
 RewriteEngine On
 
-# Legacy Greek default-locale URLs. Greek pages are exported without the /el prefix.
-RewriteRule ^el/?$ / [R=301,L]
-RewriteRule ^el/(sonic-identity|signature-playlists)/?$ /services/$1/ [R=301,L]
-RewriteRule ^el/music-for-hotels-and-resorts/?$ /industries/music-for-hotels-and-resorts/ [R=301,L]
-RewriteRule ^el/music-for-restaurants-and-bars/?$ /industries/music-for-restaurants-and-bars/ [R=301,L]
-RewriteRule ^el/services/services/([^/]+)/?$ /services/$1/ [R=301,L]
-RewriteRule ^el/industries/industries/([^/]+)/?$ /industries/$1/ [R=301,L]
-RewriteRule ^el/industries/hotels-resorts/?$ /industries/music-for-hotels-and-resorts/ [R=301,L]
-RewriteRule ^el/(klouvi-bar|beach-house-antiparos)/?$ /case-studies/ [R=301,L]
-RewriteRule ^el/(.+[^/])$ /$1/ [R=301,L,NE]
-RewriteRule ^el/(.+)/$ /$1/ [R=301,L,NE]
+# Greek legacy route cleanup. Greek pages are now exported under the /el prefix.
+# Specific legacy rules must come before the English catch-alls below.
+RewriteRule ^el/(sonic-identity|signature-playlists)/?$ /el/services/$1/ [R=301,L]
+RewriteRule ^el/music-for-hotels-and-resorts/?$ /el/industries/music-for-hotels-and-resorts/ [R=301,L]
+RewriteRule ^el/music-for-restaurants-and-bars/?$ /el/industries/music-for-restaurants-and-bars/ [R=301,L]
+RewriteRule ^el/services/services/([^/]+)/?$ /el/services/$1/ [R=301,L]
+RewriteRule ^el/industries/industries/([^/]+)/?$ /el/industries/$1/ [R=301,L]
+RewriteRule ^el/industries/hotels-resorts/?$ /el/industries/music-for-hotels-and-resorts/ [R=301,L]
+RewriteRule ^el/(klouvi-bar|beach-house-antiparos)/?$ /el/case-studies/ [R=301,L]
 
-# English legacy route cleanup.
-RewriteRule ^en/industries/hotels-resorts/?$ /en/industries/music-for-hotels-and-resorts/ [R=301,L]
-RewriteRule ^en/services/services/([^/]+)/?$ /en/services/$1/ [R=301,L]
-RewriteRule ^en/industries/industries/([^/]+)/?$ /en/industries/$1/ [R=301,L]
-RewriteRule ^en/(sonic-identity|signature-playlists)/?$ /en/services/$1/ [R=301,L]
-RewriteRule ^en/music-for-hotels-and-resorts/?$ /en/industries/music-for-hotels-and-resorts/ [R=301,L]
-RewriteRule ^en/music-for-restaurants-and-bars/?$ /en/industries/music-for-restaurants-and-bars/ [R=301,L]
-RewriteRule ^en/(klouvi-bar|beach-house-antiparos)/?$ /en/case-studies/ [R=301,L]
+# Legacy English default-locale URLs. English now serves at unprefixed root URLs.
+# Specific legacy cleanups first, then generic /en/* -> root catch-alls.
+RewriteRule ^en/industries/hotels-resorts/?$ /industries/music-for-hotels-and-resorts/ [R=301,L]
+RewriteRule ^en/services/services/([^/]+)/?$ /services/$1/ [R=301,L]
+RewriteRule ^en/industries/industries/([^/]+)/?$ /industries/$1/ [R=301,L]
+RewriteRule ^en/(sonic-identity|signature-playlists)/?$ /services/$1/ [R=301,L]
+RewriteRule ^en/music-for-hotels-and-resorts/?$ /industries/music-for-hotels-and-resorts/ [R=301,L]
+RewriteRule ^en/music-for-restaurants-and-bars/?$ /industries/music-for-restaurants-and-bars/ [R=301,L]
+RewriteRule ^en/(klouvi-bar|beach-house-antiparos)/?$ /case-studies/ [R=301,L]
+RewriteRule ^en/?$ / [R=301,L]
+RewriteRule ^en/(.+?)/?$ /$1/ [R=301,L,NE]
 
 # Default-locale legacy route cleanup.
 RewriteRule ^home/?$ / [R=301,L]

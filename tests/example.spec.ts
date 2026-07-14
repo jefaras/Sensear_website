@@ -49,11 +49,11 @@ test.describe('About Page', () => {
 test.describe('Language Switching', () => {
   test('should switch between English and Greek', async ({ page }) => {
     // Visit English version
-    await page.goto('/en');
+    await page.goto('/');
     await page.waitForLoadState('networkidle');
     
     // Visit Greek version
-    await page.goto('/el');
+    await page.goto('/el/');
     await page.waitForLoadState('networkidle');
     
     // Verify Greek version loaded

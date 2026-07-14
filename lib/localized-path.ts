@@ -16,8 +16,8 @@ function withTrailingSlash(path: string): string {
 export function getLocalizedPath(lang: Locale, path: string = '/'): string {
     const normalizedPath = normalizePath(path)
 
-    if (lang === 'en') {
-        return withTrailingSlash(normalizedPath === '/' ? '/en' : `/en${normalizedPath}`)
+    if (lang === 'el') {
+        return withTrailingSlash(normalizedPath === '/' ? '/el' : `/el${normalizedPath}`)
     }
 
     return withTrailingSlash(normalizedPath)
@@ -26,10 +26,10 @@ export function getLocalizedPath(lang: Locale, path: string = '/'): string {
 export function getPathLocale(pathname: string | null | undefined): Locale {
     const normalizedPath = normalizePath(pathname)
 
-    return normalizedPath === '/en' || normalizedPath.startsWith('/en/') ? 'en' : 'el'
+    return normalizedPath === '/el' || normalizedPath.startsWith('/el/') ? 'el' : 'en'
 }
 
-export function getGreekPath(pathname: string | null | undefined): string {
+export function getBasePath(pathname: string | null | undefined): string {
     const normalizedPath = normalizePath(pathname)
 
     if (normalizedPath === '/en' || normalizedPath === '/el') {
@@ -44,7 +44,7 @@ export function getGreekPath(pathname: string | null | undefined): string {
 }
 
 export function getAlternatePath(pathname: string | null | undefined, targetLang: Locale): string {
-    const greekPath = getGreekPath(pathname)
+    const basePath = getBasePath(pathname)
 
-    return getLocalizedPath(targetLang, greekPath)
+    return getLocalizedPath(targetLang, basePath)
 }
