@@ -6,11 +6,13 @@ import Link from "next/link";
 import Image from "next/image";
 import { Metadata } from "next";
 import { FinalCTA } from "@/components/sections/FinalCTA";
+import { localeAlternates } from "@/lib/seo";
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: Locale }> }): Promise<Metadata> {
     const { lang } = await params;
     const dict = await getDictionary(lang);
     return {
+        alternates: localeAlternates(lang, "/case-studies"),
         title: dict.case_studies.meta.title,
         description: dict.case_studies.meta.description,
     };

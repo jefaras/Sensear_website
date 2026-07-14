@@ -7,6 +7,13 @@ import Image from "next/image";
 import dynamic from "next/dynamic";
 import { Locale } from "@/lib/i18n";
 import { getLocalizedPath } from "@/lib/localized-path";
+import { localeAlternates } from "@/lib/seo";
+import type { Metadata } from "next";
+
+export async function generateMetadata({ params }: { params: Promise<{ lang: Locale }> }): Promise<Metadata> {
+    const { lang } = await params;
+    return { alternates: localeAlternates(lang, "/") };
+}
 
 // Lazy load below-fold sections for better initial page load performance
 const WhoWeAre = dynamic(

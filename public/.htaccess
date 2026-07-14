@@ -4,6 +4,10 @@ ErrorDocument 404 /404.html
 <IfModule mod_rewrite.c>
 RewriteEngine On
 
+# Canonical host: redirect www to the apex domain over HTTPS.
+RewriteCond %{HTTP_HOST} ^www\.sensear\.music$ [NC]
+RewriteRule ^(.*)$ https://sensear.music/$1 [R=301,L]
+
 # Greek legacy route cleanup. Greek pages are now exported under the /el prefix.
 # Specific legacy rules must come before the English catch-alls below.
 RewriteRule ^el/(sonic-identity|signature-playlists)/?$ /el/services/$1/ [R=301,L]

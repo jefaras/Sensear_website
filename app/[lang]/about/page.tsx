@@ -6,6 +6,7 @@ import Image from "next/image";
 import { ArrowRight, Lightbulb, Building2, SlidersHorizontal, Heart } from "lucide-react";
 import { AnimatedButton } from "@/components/AnimatedButton";
 import { FinalCTA } from "@/components/sections/FinalCTA";
+import { localeAlternates } from "@/lib/seo";
 
 // Simple markdown bold parser: converts **text** to <strong>text</strong>
 function parseMarkdownBold(text: string): string {
@@ -16,6 +17,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: Loc
     const { lang } = await params;
     const dict = await getDictionary(lang);
     return {
+        alternates: localeAlternates(lang, "/about"),
         title: dict.about_page.meta.title,
         description: dict.about_page.meta.description,
     };

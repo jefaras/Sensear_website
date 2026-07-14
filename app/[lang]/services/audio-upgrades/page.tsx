@@ -6,6 +6,7 @@ import type { Locale } from "@/lib/i18n";
 import { ScrollReveal, StaggerChildren } from "@/components/motion";
 import type { Metadata } from "next";
 import { getLocalizedPath } from "@/lib/localized-path";
+import { localeAlternates } from "@/lib/seo";
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: Locale }> }): Promise<Metadata> {
     const { lang } = await params;
@@ -13,6 +14,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: Loc
     const t = dict.audio_upgrades;
 
     return {
+        alternates: localeAlternates(lang, "/services/audio-upgrades"),
         title: t.meta?.title ?? "Audio Upgrades",
         description: t.meta?.description ?? "Expert acoustic solutions for venues. We optimize sound quality and clarity.",
     };

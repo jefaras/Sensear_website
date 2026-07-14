@@ -13,11 +13,13 @@ import { AnimatedButton } from "@/components/AnimatedButton";
 import { FinalCTA } from "@/components/sections/FinalCTA";
 import Image from "next/image";
 import { ScrollReveal } from "@/components/motion";
+import { localeAlternates } from "@/lib/seo";
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: Locale }> }): Promise<Metadata> {
     const { lang } = await params;
     const dict = await getDictionary(lang);
     return {
+        alternates: localeAlternates(lang, "/faq"),
         title: dict.faq_page.meta.title,
         description: dict.faq_page.meta.description,
     };

@@ -5,6 +5,7 @@
     "scripts": {
         "dev": "next dev --turbopack",
         "build": "next build --webpack",
+        "postbuild": "node scripts/set-el-lang.mjs",
         "start": "next start",
         "lint": "cross-env ESLINT_USE_FLAT_CONFIG=false eslint . --ext .js,.jsx,.ts,.tsx,.mjs",
         "test-email": "tsx test-email.ts",

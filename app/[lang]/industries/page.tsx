@@ -7,11 +7,13 @@ import { Metadata } from "next";
 import { FinalCTA } from "@/components/sections/FinalCTA";
 import { ScrollReveal, StaggerChildren } from "@/components/motion";
 import { getLocalizedPath } from "@/lib/localized-path";
+import { localeAlternates } from "@/lib/seo";
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: Locale }> }): Promise<Metadata> {
     const { lang } = await params;
     const dict = await getDictionary(lang);
     return {
+        alternates: localeAlternates(lang, "/industries"),
         title: dict.industries_page.meta.title,
         description: dict.industries_page.meta.description,
     };

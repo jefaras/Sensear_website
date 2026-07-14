@@ -6,6 +6,7 @@ import { FinalCTA } from "@/components/sections/FinalCTA";
 import { ScrollReveal, StaggerChildren } from "@/components/motion";
 import type { Metadata } from "next";
 import { getLocalizedPath } from "@/lib/localized-path";
+import { localeAlternates } from "@/lib/seo";
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: Locale }> }): Promise<Metadata> {
     const { lang } = await params;
@@ -13,6 +14,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: Loc
     const t = dict.sonic_identity;
 
     return {
+        alternates: localeAlternates(lang, "/services/sonic-identity"),
         title: t.meta?.title ?? "Sonic Identity",
         description: t.meta?.description ?? "Strategic sonic identity design for brands. We create consistent sound across all locations and communication channels.",
     };

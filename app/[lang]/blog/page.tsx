@@ -6,11 +6,13 @@ import { Metadata } from "next";
 import Image from "next/image";
 import { ScrollReveal, StaggerChildren } from "@/components/motion";
 import { getLocalizedPath } from "@/lib/localized-path";
+import { localeAlternates } from "@/lib/seo";
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: Locale }> }): Promise<Metadata> {
     const { lang } = await params;
     const dict = await getDictionary(lang);
     return {
+        alternates: localeAlternates(lang, "/blog"),
         title: dict.blog.meta.title,
         description: dict.blog.meta.description,
     };

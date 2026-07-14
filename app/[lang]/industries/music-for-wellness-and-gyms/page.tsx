@@ -4,6 +4,7 @@ import { FinalCTA } from "@/components/sections/FinalCTA";
 import { ScrollReveal, StaggerChildren } from "@/components/motion";
 import Image from "next/image";
 import { Metadata } from "next";
+import { localeAlternates } from "@/lib/seo";
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: Locale }> }): Promise<Metadata> {
     const { lang } = await params;
@@ -14,6 +15,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: Loc
         : "Bespoke music curation for spas and gyms. We craft your venue's unique sonic identity for wellness experiences.");
 
     return {
+        alternates: localeAlternates(lang, "/industries/music-for-wellness-and-gyms"),
         title: t.meta?.title || "Music for Spas & Gyms | SensEar",
         description,
         openGraph: {

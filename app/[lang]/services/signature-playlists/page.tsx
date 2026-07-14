@@ -6,6 +6,7 @@ import { FinalCTA } from "@/components/sections/FinalCTA";
 import { ScrollReveal, StaggerChildren } from "@/components/motion";
 import type { Metadata } from "next";
 import { getLocalizedPath } from "@/lib/localized-path";
+import { localeAlternates } from "@/lib/seo";
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: Locale }> }): Promise<Metadata> {
     const { lang } = await params;
@@ -13,6 +14,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: Loc
     const t = dict.signature_playlists;
 
     return {
+        alternates: localeAlternates(lang, "/services/signature-playlists"),
         title: t.meta?.title ?? "Signature Playlists",
         description: t.meta?.description ?? "Expert music curation for venues that want to stand out. We create playlists that reflect your brand identity.",
     };

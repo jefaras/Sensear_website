@@ -6,6 +6,7 @@ import { FinalCTA } from "@/components/sections/FinalCTA";
 import { ScrollReveal, StaggerChildren } from "@/components/motion";
 import type { Metadata } from "next";
 import { getLocalizedPath } from "@/lib/localized-path";
+import { localeAlternates } from "@/lib/seo";
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: Locale }> }): Promise<Metadata> {
     const { lang } = await params;
@@ -13,6 +14,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: Loc
     const t = dict.event_soundtracks;
 
     return {
+        alternates: localeAlternates(lang, "/services/event-soundtracks"),
         title: t.meta?.title ?? "Event Soundtracks",
         description: t.meta?.description ?? "Expert music curation for events. We create soundtracks that follow the flow of the event.",
     };

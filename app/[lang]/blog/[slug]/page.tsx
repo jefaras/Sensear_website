@@ -9,6 +9,7 @@ import { ArticleJsonLd } from "@/components/JsonLd";
 import Image from "next/image";
 import { ScrollReveal, StaggerChildren } from "@/components/motion";
 import { getLocalizedPath } from "@/lib/localized-path";
+import { localeAlternates } from "@/lib/seo";
 
 const BLOG_PUBLISHED_DATES: Record<string, string> = {
     "how-top-hospitality-brands-design-sound": "2025-01-20",
@@ -36,6 +37,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: Loc
     if (!article) return { title: "Article Not Found" };
 
     return {
+        alternates: localeAlternates(lang, `/blog/${slug}`),
         title: article.title,
         description: article.desc,
         openGraph: {

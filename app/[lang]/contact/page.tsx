@@ -6,11 +6,13 @@ import Image from "next/image";
 import { AnimatedButton } from "@/components/AnimatedButton";
 import { Instagram, Facebook, Linkedin, ThumbsUp } from "lucide-react";
 import { ScrollReveal, StaggerChildren } from "@/components/motion";
+import { localeAlternates } from "@/lib/seo";
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: Locale }> }): Promise<Metadata> {
     const { lang } = await params;
     const dict = await getDictionary(lang);
     return {
+        alternates: localeAlternates(lang, "/contact"),
         title: dict.contact.meta.title,
         description: dict.contact.meta.description,
     };

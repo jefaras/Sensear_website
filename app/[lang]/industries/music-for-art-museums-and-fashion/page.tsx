@@ -5,6 +5,7 @@ import { FinalCTA } from "@/components/sections/FinalCTA";
 import { ScrollReveal, StaggerChildren } from "@/components/motion";
 import Image from "next/image";
 import { Metadata } from "next";
+import { localeAlternates } from "@/lib/seo";
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: Locale }> }): Promise<Metadata> {
     const { lang } = await params;
@@ -12,6 +13,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: Loc
     const t = dict.art_museums_fashion;
 
     return {
+        alternates: localeAlternates(lang, "/industries/music-for-art-museums-and-fashion"),
         title: t.meta?.title || "Music for Art, Museums & Fashion | SensEar",
         description: lang === "el"
             ? "Εξειδικευμένη μουσική επιμέλεια για μουσεία, γκαλερί και εκδηλώσεις μόδας. Δημιουργούμε τη μοναδική ηχητική ταυτότητα του χώρου σας."
