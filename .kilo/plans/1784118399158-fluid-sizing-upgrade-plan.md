@@ -123,3 +123,27 @@ Implement these as an assertion self-test inside the script (run on hard-coded s
 - Any change under `app/`, `components/`, `lib/`, `dictionaries/`, `/out`.
 - `handoff/design-refs/` refresh.
 - Content/copy/markup changes in the prototypes beyond style-attribute values.
+
+
+---
+
+## Execution results (2026-07-15) — COMPLETE
+
+**Root cause of prior failure:** the calibration table's `font-size:1.15rem` row asserted `clamp(0.92rem,1.05vw,1.15rem)` (V = unscaled original, copied verbatim from the source spec) while the plan's own Step-1 rule scales rem by 1.15 (V = 1.32). The mandated self-test could never pass, aborting every run before touching a file. Fixed via Option A (line 84 corrected to `clamp(1.06rem,1.2vw,1.32rem)`); rounding hardened to exact-decimal BigInt arithmetic (half away from zero) so `4.7×1.15 = 5.404999…` (IEEE-754) still rounds to `5.41`.
+
+**Commits:**
+- `53daa75` handoff: baseline before fluid sizing upgrade (45 files — rollback point)
+- `29da317` chore: fluid upgrade prep (spec → `plans/fluid-sizing-upgrade.md`, unique `v4-creative-direction-cinematic.md` preserved → `plans/`, stray `handoff/handoff/` removed after hash-verifying all 13 other files as byte-identical duplicates)
+- `0e206dd` handoff: fluid sizing — FAQ (pilot) + fluid-upgrade/verify tools
+- `d64381c` handoff: fluid sizing — all remaining pages
+
+**Per-file counts (tokens scaled / clamped / font-clamps rescaled / containers):**
+About 294/204/13/8 · Article 161/121/8/3 · Audio Upgrades 246/171/11/8 · Case Studies 235/159/12/6 · Contact 307/226/7/5 · Event Soundtracks 243/169/11/8 · FAQ 157/113/5/5 · Homepage 465/307/14/11 · Hotels & Resorts 285/191/12/8 · Industries 318/217/15/7 · Journal 234/187/6/6 · Restaurants & Bars 281/188/12/8 · Services 280/198/11/7 · Signature Playlists 251/173/11/11 → corrected: 251/173/11/8 · Sitemap 262/154/5/5 · Sonic Identity 243/169/11/8. Nav overrides hit exactly 6/1/1/1/1 (link-fs ×6 incl. pill / group-gap / nav-gap / side-pad / pill-pad) in all 16 files.
+
+**Verification:** 48/48 Playwright checks passed (16 pages × 1760/1280/900): no horizontal overflow (≤1px), nav single-line, pill unclipped. Computed-style probe: FAQ nav pixel-identical to Homepage XL at all three widths (nav padding, container max-width/padding, wordmark, navlink font-size, pill padding + nowrap). Screenshots: `handoff/screenshots/fluid/` (48 files, full-page).
+
+**Manual deviations:** none required. The known XL deviation (hero EQ bars) self-resolved: old Homepage bars were originally 4px/42px, and ×1.15 lands exactly on XL's hand-kept 5px/48px/gap:5px.
+
+**Deliberate rule-over-XL difference:** nav container gap forced to `clamp(14px,2.5vw,37px)` per Step-3 (XL itself has `clamp(14px,2vw,28px)` there); visually inert since the container uses `justify-content:space-between`.
+
+**Guards confirmed:** re-run on upgraded file → `SKIP (already upgraded)`; excluded file passed explicitly → `REFUSE (excluded file)`.
