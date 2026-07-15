@@ -48,8 +48,9 @@ next-env.d.ts
 deploy-*.zip
 static-export-test.zip
 
-# server-only static form secrets
+# server-only static form secrets (real file lives in /private on the server, one level above httpdocs)
 /public/form-config.php
+/private/form-config.php
 
 # agent working files - audits, diagnostics, and screenshots
 /.agent/
