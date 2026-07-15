@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,500&family=GFS+Didot:ital@1&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{background:#0b0a0a;}
+  ::selection{background:var(--accent,#f0bd95);color:#0b0a0a;}
+  :root{--accent:#f0bd95;--peach:#faebe3;--ink:#0b0a0a;--paper:#faf6f1;--gold:linear-gradient(100deg,#f0cdb8 0%,#f7ddd0 15%,#fcefe7 29%,#ffffff 44%,#efeeec 58%,#dad8d6 72%,#d2cec9 84%,#e4d9c4 100%);--gold-text:linear-gradient(100deg,#edc4ac 0%,#f6dccd 19%,#fffaf6 42%,#eae8e4 60%,#d3cfc9 77%,#e2d6bf 100%);}
+  @keyframes se-spin{to{transform:rotate(360deg);}}
+  @keyframes se-drift{0%,100%{transform:translate(0,0) scale(1);}50%{transform:translate(4%,-3%) scale(1.08);}}
+</style>
+</helmet>
+
+<div id="sensear-root" style="background:#0b0a0a;color:#faf6f1;font-family:'Montserrat',system-ui,sans-serif;overflow-x:hidden;-webkit-font-smoothing:antialiased;position:relative;">
+
+  <!-- NAV -->
+  <nav id="se-nav" style="position:fixed;top:0;left:0;right:0;z-index:100;transition:background .4s ease,border-color .4s ease,padding .4s ease;border-bottom:1px solid rgba(250,246,241,0);padding:22px 0;">
+    <div style="max-width:1380px;margin:0 auto;padding:0 32px;display:flex;align-items:center;justify-content:space-between;gap:24px;">
+      <a href="SensEar Homepage.dc.html#hero" style="display:flex;align-items:center;gap:12px;text-decoration:none;">
+        <img src="images/brand/sensear-logo-white.png" alt="SensEar" style="width:38px;height:38px;object-fit:contain;">
+        <span style="font-family:'Montserrat',sans-serif;font-weight:800;letter-spacing:.22em;font-size:20px;color:#faf6f1;">SENSEAR</span>
+      </a>
+      <div style="display:flex;align-items:center;gap:32px;">
+        <a href="SensEar Services.dc.html#services" class="se-navlink" style="font-size:13px;letter-spacing:.08em;font-weight:600;color:rgba(250,246,241,.72);text-decoration:none;background-image:var(--gold-text);background-repeat:no-repeat;background-position:0 100%;background-size:0% 2px;padding-bottom:5px;transition:background-size .35s cubic-bezier(.16,1,.3,1),color .3s ease;" onMouseEnter="{{ onNavEnter }}" onMouseLeave="{{ onNavLeave }}">Υπηρεσίες</a>
+        <a href="SensEar Industries.dc.html#industries" class="se-navlink" style="font-size:13px;letter-spacing:.08em;font-weight:600;color:rgba(250,246,241,.72);text-decoration:none;background-image:var(--gold-text);background-repeat:no-repeat;background-position:0 100%;background-size:0% 2px;padding-bottom:5px;transition:background-size .35s cubic-bezier(.16,1,.3,1),color .3s ease;" onMouseEnter="{{ onNavEnter }}" onMouseLeave="{{ onNavLeave }}">Κλάδοι</a>
+        <a href="SensEar Case Studies.dc.html" class="se-navlink" style="font-size:13px;letter-spacing:.08em;font-weight:600;color:rgba(250,246,241,.72);text-decoration:none;background-image:var(--gold-text);background-repeat:no-repeat;background-position:0 100%;background-size:0% 2px;padding-bottom:5px;transition:background-size .35s cubic-bezier(.16,1,.3,1),color .3s ease;" onMouseEnter="{{ onNavEnter }}" onMouseLeave="{{ onNavLeave }}">Case Studies</a>
+        <a href="SensEar Journal.dc.html" class="se-navlink" style="font-size:13px;letter-spacing:.08em;font-weight:600;color:rgba(250,246,241,.72);text-decoration:none;background-image:var(--gold-text);background-repeat:no-repeat;background-position:0 100%;background-size:0% 2px;padding-bottom:5px;transition:background-size .35s cubic-bezier(.16,1,.3,1),color .3s ease;" onMouseEnter="{{ onNavEnter }}" onMouseLeave="{{ onNavLeave }}">Journal</a>
+        <a href="SensEar About.dc.html#team" class="se-navlink" style="font-size:13px;letter-spacing:.08em;font-weight:600;color:rgba(250,246,241,.72);text-decoration:none;background-image:var(--gold-text);background-repeat:no-repeat;background-position:0 100%;background-size:0% 2px;padding-bottom:5px;transition:background-size .35s cubic-bezier(.16,1,.3,1),color .3s ease;" onMouseEnter="{{ onNavEnter }}" onMouseLeave="{{ onNavLeave }}">Σχετικά</a>
+        <a href="SensEar Contact.dc.html" style="font-size:13px;letter-spacing:.08em;font-weight:700;color:#0b0a0a;background:var(--gold);text-decoration:none;padding:11px 22px;border-radius:100px;transition:transform .3s ease;" onMouseEnter="{{ onPillEnter }}" onMouseLeave="{{ onPillLeave }}">Επικοινωνία</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="top" style="position:relative;min-height:92vh;display:flex;align-items:center;padding:150px 0 80px;overflow:hidden;">
+    <div aria-hidden="true" style="position:absolute;top:-12%;right:-6%;width:60vw;height:60vw;max-width:760px;max-height:760px;background:radial-gradient(circle,rgba(240,189,149,.17),rgba(240,189,149,0) 62%);filter:blur(20px);animation:se-drift 16s ease-in-out infinite;pointer-events:none;"></div>
+    <div aria-hidden="true" style="position:absolute;bottom:-16%;left:-10%;width:48vw;height:48vw;max-width:600px;max-height:600px;background:radial-gradient(circle,rgba(250,235,227,.06),rgba(250,235,227,0) 60%);filter:blur(10px);animation:se-drift 22s ease-in-out infinite reverse;pointer-events:none;"></div>
+
+    <div style="position:absolute;left:32px;top:50%;transform:translateY(-50%) rotate(180deg);writing-mode:vertical-rl;display:flex;align-items:center;gap:18px;">
+      <span style="font-size:11px;letter-spacing:.42em;font-weight:600;color:rgba(250,246,241,.4);">SITEMAP — ΧΑΡΤΗΣ ΙΣΤΟΤΟΠΟΥ</span>
+    </div>
+
+    <div style="max-width:1380px;margin:0 auto;padding:0 32px 0 84px;width:100%;display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center;">
+      <div>
+        <div data-reveal style="opacity:0;transform:translateY(28px);transition:all .9s cubic-bezier(.16,1,.3,1);display:flex;align-items:center;gap:14px;margin-bottom:30px;">
+          <span style="font-size:12px;letter-spacing:.2em;font-weight:600;color:rgba(250,246,241,.5);">ΕΞΕΡΕΥΝΗΣΗ</span>
+          <span style="width:18px;height:1px;background:rgba(250,246,241,.3);display:inline-block;"></span>
+          <span style="font-size:12px;letter-spacing:.2em;font-weight:700;background:var(--gold-text);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;">SITEMAP</span>
+        </div>
+        <h1 data-reveal style="opacity:0;transform:translateY(34px);transition:all 1s cubic-bezier(.16,1,.3,1) .08s;font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(2.4rem,5vw,4.7rem);line-height:1.05;letter-spacing:-.022em;margin-bottom:26px;">Χάρτης Ιστότοπου</h1>
+        <div data-reveal style="opacity:0;transform:translateY(30px);transition:all 1s cubic-bezier(.16,1,.3,1) .14s;max-width:540px;">
+          <p style="font-size:clamp(1.2rem,2vw,1.5rem);font-weight:500;line-height:1.5;color:rgba(250,246,241,.72);">Εξερευνήστε όλες τις σελίδες και τους πόρους του SensEar. Βρείτε τα πάντα, από τις υπηρεσίες μουσικής επιμέλειας μέχρι τα insights του κλάδου.</p>
+        </div>
+      </div>
+
+      <div data-reveal style="opacity:0;transform:translateY(40px);transition:all 1.1s cubic-bezier(.16,1,.3,1) .2s;position:relative;">
+        <div style="position:relative;border-radius:8px;overflow:hidden;aspect-ratio:1/1;box-shadow:0 40px 90px -30px rgba(0,0,0,.8);">
+          <img src="images/sitemap-visual.jpg" alt="Sitemap" style="width:100%;height:100%;object-fit:cover;">
+          <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,10,10,0) 48%,rgba(11,10,10,.55));"></div>
+        </div>
+        <div style="position:absolute;bottom:22px;left:22px;right:22px;">
+          <div style="font-size:10px;letter-spacing:.3em;background:var(--gold-text);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;font-weight:700;margin-bottom:4px;">EXPLORE THE SITE</div>
+          <div style="font-family:'GFS Didot',serif;font-style:italic;font-size:1.5rem;color:#faf6f1;">Everything, in one place.</div>
+        </div>
+        <div style="position:absolute;top:-18px;right:-18px;width:96px;height:96px;border-radius:50%;border:1px solid rgba(250,246,241,.25);display:flex;align-items:center;justify-content:center;background:rgba(11,10,10,.55);backdrop-filter:blur(4px);animation:se-spin 24s linear infinite;" data-spin>
+          <span style="font-size:9px;letter-spacing:.18em;font-weight:700;color:rgba(250,246,241,.6);text-align:center;line-height:1.5;">★ SENSEAR ★<br>EST · ATH</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIRECTORY -->
+  <section style="padding:120px 0 130px;background:#0e0d0c;border-top:1px solid rgba(250,246,241,.08);position:relative;overflow:hidden;">
+    <div aria-hidden="true" style="position:absolute;top:-6%;left:28%;width:46vw;max-width:560px;height:46vw;max-height:560px;background:radial-gradient(circle,rgba(240,189,149,.10),rgba(240,189,149,0) 62%);filter:blur(24px);pointer-events:none;z-index:0;animation:se-drift 21s ease-in-out infinite;"></div>
+    <div style="max-width:1200px;margin:0 auto;padding:0 32px;position:relative;z-index:1;">
+      <div data-reveal style="opacity:0;transform:translateY(24px);transition:all .9s cubic-bezier(.16,1,.3,1);text-align:center;margin-bottom:14px;">
+        <span style="font-size:12px;letter-spacing:.34em;font-weight:700;color:rgba(250,246,241,.6);">ΟΛΟ ΤΟ ΠΕΡΙΕΧΟΜΕΝΟ</span>
+      </div>
+      <h2 data-reveal style="opacity:0;transform:translateY(28px);transition:all 1s cubic-bezier(.16,1,.3,1) .06s;text-align:center;font-weight:800;font-size:clamp(1.9rem,4vw,3rem);line-height:1.08;letter-spacing:-.02em;margin-bottom:56px;">Πλοηγηθείτε σε όλο τον <span style="font-family:'GFS Didot',serif;font-style:italic;font-size:1.1em;background:var(--gold-text);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;">ιστότοπο</span></h2>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:28px;">
+
+        <!-- Card: Κύριες Σελίδες -->
+        <div data-reveal class="se-card" style="opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s cubic-bezier(.16,1,.3,1),border-color .35s ease;background:rgba(250,246,241,.04);border:1px solid rgba(250,246,241,.1);border-radius:16px;padding:38px 36px;">
+          <div style="display:flex;align-items:center;gap:16px;margin-bottom:26px;">
+            <span style="flex:none;width:50px;height:50px;border-radius:50%;border:1px solid rgba(240,189,149,.35);background:rgba(240,189,149,.08);display:flex;align-items:center;justify-content:center;color:#f0bd95;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"></path><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>
+            </span>
+            <h3 style="font-weight:800;font-size:1.4rem;letter-spacing:-.01em;">Κύριες Σελίδες</h3>
+          </div>
+          <div style="display:flex;flex-direction:column;">
+            <a href="SensEar Homepage.dc.html#hero" class="se-maplink" style="display:flex;align-items:center;gap:10px;padding:11px 0;border-top:1px solid rgba(250,246,241,.08);font-size:1.02rem;color:rgba(250,246,241,.68);text-decoration:none;transition:color .3s ease,padding-left .3s cubic-bezier(.16,1,.3,1);"><span class="se-arrow" style="color:#f0bd95;transition:transform .3s cubic-bezier(.16,1,.3,1);">→</span>Αρχική</a>
+            <a href="SensEar Services.dc.html#services" class="se-maplink" style="display:flex;align-items:center;gap:10px;padding:11px 0;border-top:1px solid rgba(250,246,241,.08);font-size:1.02rem;color:rgba(250,246,241,.68);text-decoration:none;transition:color .3s ease,padding-left .3s cubic-bezier(.16,1,.3,1);"><span class="se-arrow" style="color:#f0bd95;transition:transform .3s cubic-bezier(.16,1,.3,1);">→</span>Υπηρεσίες</a>
+            <a href="SensEar Industries.dc.html#industries" class="se-maplink" style="display:flex;align-items:center;gap:10px;padding:11px 0;border-top:1px solid rgba(250,246,241,.08);font-size:1.02rem;color:rgba(250,246,241,.68);text-decoration:none;transition:color .3s ease,padding-left .3s cubic-bezier(.16,1,.3,1);"><span class="se-arrow" style="color:#f0bd95;transition:transform .3s cubic-bezier(.16,1,.3,1);">→</span>Κλάδοι</a>
+            <a href="SensEar Case Studies.dc.html" class="se-maplink" style="display:flex;align-items:center;gap:10px;padding:11px 0;border-top:1px solid rgba(250,246,241,.08);font-size:1.02rem;color:rgba(250,246,241,.68);text-decoration:none;transition:color .3s ease,padding-left .3s cubic-bezier(.16,1,.3,1);"><span class="se-arrow" style="color:#f0bd95;transition:transform .3s cubic-bezier(.16,1,.3,1);">→</span>Case Studies</a>
+            <a href="SensEar About.dc.html#team" class="se-maplink" style="display:flex;align-items:center;gap:10px;padding:11px 0;border-top:1px solid rgba(250,246,241,.08);font-size:1.02rem;color:rgba(250,246,241,.68);text-decoration:none;transition:color .3s ease,padding-left .3s cubic-bezier(.16,1,.3,1);"><span class="se-arrow" style="color:#f0bd95;transition:transform .3s cubic-bezier(.16,1,.3,1);">→</span>Σχετικά</a>
+            <a href="SensEar Contact.dc.html" class="se-maplink" style="display:flex;align-items:center;gap:10px;padding:11px 0;border-top:1px solid rgba(250,246,241,.08);font-size:1.02rem;color:rgba(250,246,241,.68);text-decoration:none;transition:color .3s ease,padding-left .3s cubic-bezier(.16,1,.3,1);"><span class="se-arrow" style="color:#f0bd95;transition:transform .3s cubic-bezier(.16,1,.3,1);">→</span>Επικοινωνία</a>
+            <a href="SensEar Journal.dc.html" class="se-maplink" style="display:flex;align-items:center;gap:10px;padding:11px 0;border-top:1px solid rgba(250,246,241,.08);font-size:1.02rem;color:rgba(250,246,241,.68);text-decoration:none;transition:color .3s ease,padding-left .3s cubic-bezier(.16,1,.3,1);"><span class="se-arrow" style="color:#f0bd95;transition:transform .3s cubic-bezier(.16,1,.3,1);">→</span>Blog</a>
+            <a href="SensEar FAQ.dc.html" class="se-maplink" style="display:flex;align-items:center;gap:10px;padding:11px 0;border-top:1px solid rgba(250,246,241,.08);font-size:1.02rem;color:rgba(250,246,241,.68);text-decoration:none;transition:color .3s ease,padding-left .3s cubic-bezier(.16,1,.3,1);"><span class="se-arrow" style="color:#f0bd95;transition:transform .3s cubic-bezier(.16,1,.3,1);">→</span>Συχνές Ερωτήσεις</a>
+          </div>
+        </div>
+
+        <!-- Card: Υπηρεσίες -->
+        <div data-reveal class="se-card" style="opacity:0;transform:translateY(28px);transition:opacity .8s ease .05s,transform .8s cubic-bezier(.16,1,.3,1) .05s,border-color .35s ease;background:rgba(250,246,241,.04);border:1px solid rgba(250,246,241,.1);border-radius:16px;padding:38px 36px;">
+          <div style="display:flex;align-items:center;gap:16px;margin-bottom:26px;">
+            <span style="flex:none;width:50px;height:50px;border-radius:50%;border:1px solid rgba(240,189,149,.35);background:rgba(240,189,149,.08);display:flex;align-items:center;justify-content:center;color:#f0bd95;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path><rect width="20" height="14" x="2" y="6" rx="2"></rect></svg>
+            </span>
+            <h3 style="font-weight:800;font-size:1.4rem;letter-spacing:-.01em;">Υπηρεσίες</h3>
+          </div>
+          <div style="display:flex;flex-direction:column;">
+            <a href="SensEar Services.dc.html#services" class="se-maplink" style="display:flex;align-items:center;gap:10px;padding:11px 0;border-top:1px solid rgba(250,246,241,.08);font-size:1.02rem;color:rgba(250,246,241,.68);text-decoration:none;transition:color .3s ease,padding-left .3s cubic-bezier(.16,1,.3,1);"><span class="se-arrow" style="color:#f0bd95;transition:transform .3s cubic-bezier(.16,1,.3,1);">→</span>Στρατηγική μουσική &amp; ήχος</a>
+            <a href="SensEar Signature Playlists.dc.html#top" class="se-maplink" style="display:flex;align-items:center;gap:10px;padding:11px 0;border-top:1px solid rgba(250,246,241,.08);font-size:1.02rem;color:rgba(250,246,241,.68);text-decoration:none;transition:color .3s ease,padding-left .3s cubic-bezier(.16,1,.3,1);"><span class="se-arrow" style="color:#f0bd95;transition:transform .3s cubic-bezier(.16,1,.3,1);">→</span>Signature Playlists</a>
+            <a href="SensEar Event Soundtracks.dc.html#top" class="se-maplink" style="display:flex;align-items:center;gap:10px;padding:11px 0;border-top:1px solid rgba(250,246,241,.08);font-size:1.02rem;color:rgba(250,246,241,.68);text-decoration:none;transition:color .3s ease,padding-left .3s cubic-bezier(.16,1,.3,1);"><span class="se-arrow" style="color:#f0bd95;transition:transform .3s cubic-bezier(.16,1,.3,1);">→</span>Μουσική Εκδηλώσεων</a>
+            <a href="SensEar Sonic Identity.dc.html#top" class="se-maplink" style="display:flex;align-items:center;gap:10px;padding:11px 0;border-top:1px solid rgba(250,246,241,.08);font-size:1.02rem;color:rgba(250,246,241,.68);text-decoration:none;transition:color .3s ease,padding-left .3s cubic-bezier(.16,1,.3,1);"><span class="se-arrow" style="color:#f0bd95;transition:transform .3s cubic-bezier(.16,1,.3,1);">→</span>Ηχητική Ταυτότητα</a>
+            <a href="SensEar Audio Upgrades.dc.html#top" class="se-maplink" style="display:flex;align-items:center;gap:10px;padding:11px 0;border-top:1px solid rgba(250,246,241,.08);font-size:1.02rem;color:rgba(250,246,241,.68);text-decoration:none;transition:color .3s ease,padding-left .3s cubic-bezier(.16,1,.3,1);"><span class="se-arrow" style="color:#f0bd95;transition:transform .3s cubic-bezier(.16,1,.3,1);">→</span>Ακουστική Αναβάθμιση</a>
+          </div>
+        </div>
+
+        <!-- Card: Κλάδοι -->
+        <div data-reveal class="se-card" style="opacity:0;transform:translateY(28px);transition:opacity .8s ease .1s,transform .8s cubic-bezier(.16,1,.3,1) .1s,border-color .35s ease;background:rgba(250,246,241,.04);border:1px solid rgba(250,246,241,.1);border-radius:16px;padding:38px 36px;">
+          <div style="display:flex;align-items:center;gap:16px;margin-bottom:26px;">
+            <span style="flex:none;width:50px;height:50px;border-radius:50%;border:1px solid rgba(240,189,149,.35);background:rgba(240,189,149,.08);display:flex;align-items:center;justify-content:center;color:#f0bd95;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"></path><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"></path><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"></path><path d="M10 6h4"></path><path d="M10 10h4"></path><path d="M10 14h4"></path><path d="M10 18h4"></path></svg>
+            </span>
+            <h3 style="font-weight:800;font-size:1.4rem;letter-spacing:-.01em;">Κλάδοι</h3>
+          </div>
+          <div style="display:flex;flex-direction:column;">
+            <a href="SensEar Industries.dc.html#industries" class="se-maplink" style="display:flex;align-items:center;gap:10px;padding:11px 0;border-top:1px solid rgba(250,246,241,.08);font-size:1.02rem;color:rgba(250,246,241,.68);text-decoration:none;transition:color .3s ease,padding-left .3s cubic-bezier(.16,1,.3,1);"><span class="se-arrow" style="color:#f0bd95;transition:transform .3s cubic-bezier(.16,1,.3,1);">→</span>Η μουσική που ταιριάζει στον κλάδο σας</a>
+            <a href="SensEar Hotels &amp; Resorts.dc.html#top" class="se-maplink" style="display:flex;align-items:center;gap:10px;padding:11px 0;border-top:1px solid rgba(250,246,241,.08);font-size:1.02rem;color:rgba(250,246,241,.68);text-decoration:none;transition:color .3s ease,padding-left .3s cubic-bezier(.16,1,.3,1);"><span class="se-arrow" style="color:#f0bd95;transition:transform .3s cubic-bezier(.16,1,.3,1);">→</span>Ξενοδοχεία &amp; Θέρετρα</a>
+            <a href="SensEar Restaurants &amp; Bars.dc.html#top" class="se-maplink" style="display:flex;align-items:center;gap:10px;padding:11px 0;border-top:1px solid rgba(250,246,241,.08);font-size:1.02rem;color:rgba(250,246,241,.68);text-decoration:none;transition:color .3s ease,padding-left .3s cubic-bezier(.16,1,.3,1);"><span class="se-arrow" style="color:#f0bd95;transition:transform .3s cubic-bezier(.16,1,.3,1);">→</span>Εστιατόρια &amp; Bar</a>
+            <a href="SensEar Industries.dc.html#industries" class="se-maplink" style="display:flex;align-items:center;gap:10px;padding:11px 0;border-top:1px solid rgba(250,246,241,.08);font-size:1.02rem;color:rgba(250,246,241,.68);text-decoration:none;transition:color .3s ease,padding-left .3s cubic-bezier(.16,1,.3,1);"><span class="se-arrow" style="color:#f0bd95;transition:transform .3s cubic-bezier(.16,1,.3,1);">→</span>Εκδηλώσεις &amp; Εμπειρίες</a>
+            <a href="SensEar Industries.dc.html#industries" class="se-maplink" style="display:flex;align-items:center;gap:10px;padding:11px 0;border-top:1px solid rgba(250,246,241,.08);font-size:1.02rem;color:rgba(250,246,241,.68);text-decoration:none;transition:color .3s ease,padding-left .3s cubic-bezier(.16,1,.3,1);"><span class="se-arrow" style="color:#f0bd95;transition:transform .3s cubic-bezier(.16,1,.3,1);">→</span>Καταστήματα Λιανικής</a>
+            <a href="SensEar Industries.dc.html#industries" class="se-maplink" style="display:flex;align-items:center;gap:10px;padding:11px 0;border-top:1px solid rgba(250,246,241,.08);font-size:1.02rem;color:rgba(250,246,241,.68);text-decoration:none;transition:color .3s ease,padding-left .3s cubic-bezier(.16,1,.3,1);"><span class="se-arrow" style="color:#f0bd95;transition:transform .3s cubic-bezier(.16,1,.3,1);">→</span>Χώροι ευεξίας &amp; Γυμναστήρια</a>
+            <a href="SensEar Industries.dc.html#industries" class="se-maplink" style="display:flex;align-items:center;gap:10px;padding:11px 0;border-top:1px solid rgba(250,246,241,.08);font-size:1.02rem;color:rgba(250,246,241,.68);text-decoration:none;transition:color .3s ease,padding-left .3s cubic-bezier(.16,1,.3,1);"><span class="se-arrow" style="color:#f0bd95;transition:transform .3s cubic-bezier(.16,1,.3,1);">→</span>Τέχνη, Μουσεία &amp; Μόδα</a>
+          </div>
+        </div>
+
+        <!-- Card: Άρθρα Blog -->
+        <div data-reveal class="se-card" style="opacity:0;transform:translateY(28px);transition:opacity .8s ease .15s,transform .8s cubic-bezier(.16,1,.3,1) .15s,border-color .35s ease;background:rgba(250,246,241,.04);border:1px solid rgba(250,246,241,.1);border-radius:16px;padding:38px 36px;">
+          <div style="display:flex;align-items:center;gap:16px;margin-bottom:26px;">
+            <span style="flex:none;width:50px;height:50px;border-radius:50%;border:1px solid rgba(240,189,149,.35);background:rgba(240,189,149,.08);display:flex;align-items:center;justify-content:center;color:#f0bd95;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 7v14"></path><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"></path></svg>
+            </span>
+            <h3 style="font-weight:800;font-size:1.4rem;letter-spacing:-.01em;">Άρθρα Blog</h3>
+          </div>
+          <div style="display:flex;flex-direction:column;">
+            <a href="SensEar Journal.dc.html" class="se-maplink" style="display:flex;align-items:center;gap:10px;padding:11px 0;border-top:1px solid rgba(250,246,241,.08);font-size:1.02rem;color:rgba(250,246,241,.68);text-decoration:none;transition:color .3s ease,padding-left .3s cubic-bezier(.16,1,.3,1);"><span class="se-arrow" style="color:#f0bd95;transition:transform .3s cubic-bezier(.16,1,.3,1);">→</span>Το Blog της μουσικής επιμέλειας</a>
+            <a href="SensEar Journal.dc.html" class="se-maplink" style="display:flex;align-items:center;gap:10px;padding:11px 0;border-top:1px solid rgba(250,246,241,.08);font-size:1.02rem;color:rgba(250,246,241,.68);text-decoration:none;transition:color .3s ease,padding-left .3s cubic-bezier(.16,1,.3,1);"><span class="se-arrow" style="color:#f0bd95;transition:transform .3s cubic-bezier(.16,1,.3,1);">→</span>Πώς τα Hospitality Brands Σχεδιάζουν τον Ήχο</a>
+            <a href="SensEar Article - Music Hospitality.dc.html" class="se-maplink" style="display:flex;align-items:center;gap:10px;padding:11px 0;border-top:1px solid rgba(250,246,241,.08);font-size:1.02rem;color:rgba(250,246,241,.68);text-decoration:none;transition:color .3s ease,padding-left .3s cubic-bezier(.16,1,.3,1);"><span class="se-arrow" style="color:#f0bd95;transition:transform .3s cubic-bezier(.16,1,.3,1);">→</span>Γιατί η Μουσική Έχει Σημασία στη Φιλοξενία</a>
+            <a href="SensEar Journal.dc.html" class="se-maplink" style="display:flex;align-items:center;gap:10px;padding:11px 0;border-top:1px solid rgba(250,246,241,.08);font-size:1.02rem;color:rgba(250,246,241,.68);text-decoration:none;transition:color .3s ease,padding-left .3s cubic-bezier(.16,1,.3,1);"><span class="se-arrow" style="color:#f0bd95;transition:transform .3s cubic-bezier(.16,1,.3,1);">→</span>Brand-fit music &amp; αύξηση πωλήσεων</a>
+            <a href="SensEar Journal.dc.html" class="se-maplink" style="display:flex;align-items:center;gap:10px;padding:11px 0;border-top:1px solid rgba(250,246,241,.08);font-size:1.02rem;color:rgba(250,246,241,.68);text-decoration:none;transition:color .3s ease,padding-left .3s cubic-bezier(.16,1,.3,1);"><span class="se-arrow" style="color:#f0bd95;transition:transform .3s cubic-bezier(.16,1,.3,1);">→</span>Τι ακριβώς κάνει ο music curator;</a>
+            <a href="SensEar Journal.dc.html" class="se-maplink" style="display:flex;align-items:center;gap:10px;padding:11px 0;border-top:1px solid rgba(250,246,241,.08);font-size:1.02rem;color:rgba(250,246,241,.68);text-decoration:none;transition:color .3s ease,padding-left .3s cubic-bezier(.16,1,.3,1);"><span class="se-arrow" style="color:#f0bd95;transition:transform .3s cubic-bezier(.16,1,.3,1);">→</span>Ο Κύκλος της Μουσικής Επιμέλειας</a>
+            <a href="SensEar Journal.dc.html" class="se-maplink" style="display:flex;align-items:center;gap:10px;padding:11px 0;border-top:1px solid rgba(250,246,241,.08);font-size:1.02rem;color:rgba(250,246,241,.68);text-decoration:none;transition:color .3s ease,padding-left .3s cubic-bezier(.16,1,.3,1);"><span class="se-arrow" style="color:#f0bd95;transition:transform .3s cubic-bezier(.16,1,.3,1);">→</span>Χτίζοντας brands που «ακούγονται»</a>
+            <a href="SensEar Journal.dc.html" class="se-maplink" style="display:flex;align-items:center;gap:10px;padding:11px 0;border-top:1px solid rgba(250,246,241,.08);font-size:1.02rem;color:rgba(250,246,241,.68);text-decoration:none;transition:color .3s ease,padding-left .3s cubic-bezier(.16,1,.3,1);"><span class="se-arrow" style="color:#f0bd95;transition:transform .3s cubic-bezier(.16,1,.3,1);">→</span>Πώς η Μουσική Επηρεάζει τη Συμπεριφορά Πελατών</a>
+            <a href="SensEar Journal.dc.html" class="se-maplink" style="display:flex;align-items:center;gap:10px;padding:11px 0;border-top:1px solid rgba(250,246,241,.08);font-size:1.02rem;color:rgba(250,246,241,.68);text-decoration:none;transition:color .3s ease,padding-left .3s cubic-bezier(.16,1,.3,1);"><span class="se-arrow" style="color:#f0bd95;transition:transform .3s cubic-bezier(.16,1,.3,1);">→</span>Πώς ο χώρος αλλάζει την αναμονή</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="cta" style="position:relative;padding:150px 0;overflow:hidden;">
+    <img src="images/contact/contact-hero-venue-consultation.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+    <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,10,10,.82),rgba(11,10,10,.93));"></div>
+    <div style="position:relative;max-width:1380px;margin:0 auto;padding:0 32px;text-align:center;">
+      <div data-reveal style="opacity:0;transform:translateY(22px);transition:all .9s cubic-bezier(.16,1,.3,1);font-size:12px;letter-spacing:.34em;font-weight:700;background:var(--gold-text);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;margin-bottom:26px;">ΧΡΕΙΑΖΕΣΤΕ ΒΟΗΘΕΙΑ;</div>
+      <h2 data-reveal style="opacity:0;transform:translateY(30px);transition:all 1s cubic-bezier(.16,1,.3,1) .08s;font-weight:800;font-size:clamp(2.4rem,5.5vw,4.4rem);line-height:1.04;letter-spacing:-.025em;margin-bottom:28px;max-width:960px;margin-left:auto;margin-right:auto;">Δεν βρίσκετε αυτό που <span style="font-family:'GFS Didot',serif;font-style:italic;font-size:1.1em;background:var(--gold-text);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;">ψάχνετε</span>;</h2>
+      <p data-reveal style="opacity:0;transform:translateY(24px);transition:all 1s cubic-bezier(.16,1,.3,1) .16s;font-size:1.18rem;color:rgba(250,246,241,.68);max-width:680px;margin:0 auto 44px;line-height:1.6;">Μην ανησυχείτε, έχουμε την απάντηση. Μπορείτε είτε:</p>
+      <div data-reveal style="opacity:0;transform:translateY(20px);transition:all 1s cubic-bezier(.16,1,.3,1) .24s;display:flex;gap:18px;justify-content:center;align-items:center;flex-wrap:wrap;margin-bottom:30px;">
+        <a href="SensEar Contact.dc.html" class="se-cta" style="position:relative;overflow:hidden;display:inline-flex;align-items:center;gap:10px;background:var(--gold);color:#0b0a0a;font-weight:700;font-size:15px;padding:18px 36px;border-radius:100px;text-decoration:none;transition:background .35s ease,color .35s ease,box-shadow .35s ease;" onMouseEnter="{{ onCtaEnter }}" onMouseLeave="{{ onCtaLeave }}"><img class="se-cta-ico" src="images/brand/sensear-logo-color.png" alt="" style="width:20px;height:20px;object-fit:contain;transition:opacity .35s ease,transform .35s ease,width .35s ease,margin .35s ease;"><span class="se-cta-label" style="transition:transform .35s cubic-bezier(.16,1,.3,1);">Επικοινωνία</span><span class="se-cta-arrow" style="display:inline-flex;align-items:center;max-width:0;opacity:0;overflow:hidden;transition:max-width .35s cubic-bezier(.16,1,.3,1),opacity .3s ease,margin-left .35s ease;font-size:17px;">→</span></a>
+        <a href="SensEar FAQ.dc.html" class="se-ghost" style="display:inline-flex;align-items:center;gap:10px;font-size:15px;font-weight:700;color:#faf6f1;text-decoration:none;border:1.5px solid rgba(250,246,241,.35);padding:16px 32px;border-radius:100px;transition:background .35s ease,color .35s ease,border-color .35s ease;" onMouseEnter="{{ onGhostEnter }}" onMouseLeave="{{ onGhostLeave }}">Σελίδα FAQ</a>
+      </div>
+      <div data-reveal style="opacity:0;transition:opacity 1s ease .3s;font-size:14px;color:rgba(250,246,241,.45);letter-spacing:.04em;"><a href="tel:+306976994212" style="color:inherit;text-decoration:none;transition:color .3s ease;" style-hover="color:#e3992f;">+30 697 699 4212</a> &nbsp;·&nbsp; Αθήνα, Ελλάδα</div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="background:#0b0a0a;border-top:1px solid rgba(250,246,241,.1);padding:80px 0 0;">
+    <div style="max-width:1380px;margin:0 auto;padding:0 32px;display:grid;grid-template-columns:1.5fr 1fr 1.15fr 0.95fr 1.15fr;gap:40px;">
+      <div>
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px;">
+          <img src="images/brand/sensear-logo-white.png" alt="SensEar" style="width:46px;height:46px;object-fit:contain;">
+          <div>
+            <div style="font-weight:800;letter-spacing:.18em;font-size:20px;">SENSEAR</div>
+            <div style="font-family:'GFS Didot',serif;font-style:italic;font-size:13px;color:rgba(250,246,241,.55);">Soundtracking Unique Experiences</div>
+          </div>
+        </div>
+        <p style="font-size:.95rem;color:rgba(250,246,241,.5);line-height:1.6;max-width:300px;">Μουσική επιμέλεια &amp; ηχητική ταυτότητα για χώρους, εκδηλώσεις και brands.</p>
+        <div style="display:flex;gap:16px;margin-top:24px;margin-bottom:24px;">
+          <a href="https://www.facebook.com/61575909304249/" target="_blank" rel="noopener" aria-label="Facebook" style="color:rgba(250,246,241,.7);transition:color .3s ease;" style-hover="color:#e3992f;"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+          <a href="https://www.instagram.com/sensear.music" target="_blank" rel="noopener" aria-label="Instagram" style="color:rgba(250,246,241,.7);transition:color .3s ease;" style-hover="color:#e3992f;"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg></a>
+          <a href="https://www.linkedin.com/company/sensear-music/" target="_blank" rel="noopener" aria-label="LinkedIn" style="color:rgba(250,246,241,.7);transition:color .3s ease;" style-hover="color:#e3992f;"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:12px;">
+          <a href="#" class="se-email" data-u="hello" data-d="sensear.music" style="display:flex;align-items:center;gap:10px;color:rgba(250,246,241,.7);text-decoration:none;font-size:.95rem;transition:color .3s ease;" style-hover="color:#e3992f;"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="flex:none;opacity:.85;"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg><span class="se-email-txt"></span></a>
+          <a href="tel:+306976994212" style="display:flex;align-items:center;gap:10px;color:rgba(250,246,241,.7);text-decoration:none;font-size:.95rem;transition:color .3s ease;" style-hover="color:#e3992f;"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="flex:none;opacity:.85;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>(+30) 6976.994.212</a>
+        </div>
+      </div>
+      <div>
+        <div style="font-size:11px;letter-spacing:.22em;font-weight:700;background:var(--gold-text);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;margin-bottom:18px;">ΥΠΗΡΕΣΙΕΣ</div>
+        <div style="display:flex;flex-direction:column;gap:11px;">
+          <a href="SensEar Signature Playlists.dc.html#top" style="font-size:.95rem;color:rgba(250,246,241,.62);text-decoration:none;">Signature Playlists</a>
+          <a href="SensEar Services.dc.html#services" style="font-size:.95rem;color:rgba(250,246,241,.62);text-decoration:none;">Μουσική Εκδηλώσεων</a>
+          <a href="SensEar Sonic Identity.dc.html#top" style="font-size:.95rem;color:rgba(250,246,241,.62);text-decoration:none;">Ηχητική Ταυτότητα</a>
+          <a href="SensEar Services.dc.html#services" style="font-size:.95rem;color:rgba(250,246,241,.62);text-decoration:none;">Ακουστική Αναβάθμιση</a>
+        </div>
+      </div>
+      <div>
+        <div style="font-size:11px;letter-spacing:.22em;font-weight:700;background:var(--gold-text);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;margin-bottom:18px;">ΚΛΑΔΟΙ</div>
+        <div style="display:flex;flex-direction:column;gap:11px;">
+          <a href="SensEar Industries.dc.html#industries" style="font-size:.95rem;color:rgba(250,246,241,.62);text-decoration:none;">Ξενοδοχεία &amp; Θέρετρα</a>
+          <a href="SensEar Industries.dc.html#industries" style="font-size:.95rem;color:rgba(250,246,241,.62);text-decoration:none;">Εστιατόρια &amp; Bar</a>
+          <a href="SensEar Industries.dc.html#industries" style="font-size:.95rem;color:rgba(250,246,241,.62);text-decoration:none;">Εκδηλώσεις &amp; Εμπειρίες</a>
+          <a href="SensEar Industries.dc.html#industries" style="font-size:.95rem;color:rgba(250,246,241,.62);text-decoration:none;">Καταστήματα Λιανικής</a>
+          <a href="SensEar Industries.dc.html#industries" style="font-size:.95rem;color:rgba(250,246,241,.62);text-decoration:none;">Wellness &amp; Γυμναστήρια</a>
+          <a href="SensEar Industries.dc.html#industries" style="font-size:.95rem;color:rgba(250,246,241,.62);text-decoration:none;">Τέχνη, Μουσεία &amp; Μόδα</a>
+        </div>
+      </div>
+      <div>
+        <div style="font-size:11px;letter-spacing:.22em;font-weight:700;background:var(--gold-text);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;margin-bottom:18px;">ΕΤΑΙΡΕΙΑ</div>
+        <div style="display:flex;flex-direction:column;gap:11px;">
+          <a href="SensEar Case Studies.dc.html" style="font-size:.95rem;color:rgba(250,246,241,.62);text-decoration:none;">Έργα</a>
+          <a href="SensEar Journal.dc.html" style="font-size:.95rem;color:rgba(250,246,241,.62);text-decoration:none;">Journal</a>
+          <a href="SensEar About.dc.html#team" style="font-size:.95rem;color:rgba(250,246,241,.62);text-decoration:none;">Σχετικά</a>
+          <a href="SensEar Contact.dc.html" style="font-size:.95rem;color:rgba(250,246,241,.62);text-decoration:none;">Επικοινωνία</a>
+        </div>
+      </div>
+      <div>
+        <div style="font-size:11px;letter-spacing:.22em;font-weight:700;background:var(--gold-text);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;margin-bottom:18px;">ΕΓΓΡΑΦΗ ΣΤΟ JOURNAL</div>
+        <p style="font-size:.9rem;color:rgba(250,246,241,.5);line-height:1.55;margin-bottom:16px;">Σκέψεις για μουσική, ατμόσφαιρα &amp; sonic branding.</p>
+        <form onSubmit="{{ onSubmit }}" style="display:flex;gap:8px;">
+          <input type="email" required placeholder="Το email σας" style="flex:1;background:rgba(250,246,241,.06);border:1px solid rgba(250,246,241,.16);border-radius:100px;padding:12px 18px;color:#faf6f1;font-size:.9rem;font-family:'Montserrat',sans-serif;outline:none;">
+          <button type="submit" class="se-sub" style="position:relative;overflow:hidden;flex:none;background:var(--gold);color:#0b0a0a;border:none;border-radius:100px;padding:12px 22px;font-weight:700;font-size:1rem;cursor:pointer;transition:box-shadow .35s ease,background .35s ease,color .35s ease;" onMouseEnter="{{ onSubEnter }}" onMouseLeave="{{ onSubLeave }}"><span class="se-sub-arrow" style="display:inline-block;transition:transform .35s cubic-bezier(.16,1,.3,1);">→</span></button>
+        </form>
+      </div>
+    </div>
+    <div style="max-width:1380px;margin:48px auto 0;padding:24px 32px;border-top:1px solid rgba(250,246,241,.1);display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;">
+      <span style="font-size:12px;color:rgba(250,246,241,.4);">© 2026 SensEar Music. Με την επιφύλαξη παντός δικαιώματος.</span>
+      <div style="display:flex;gap:20px;">
+        <a href="#" style="font-size:12px;color:rgba(250,246,241,.4);text-decoration:none;">Πολιτική Απορρήτου</a>
+        <a href="#" style="font-size:12px;color:rgba(250,246,241,.4);text-decoration:none;">Όροι Χρήσης</a>
+      </div>
+    </div>
+    <div style="overflow:hidden;line-height:.8;padding:30px 0 24px;">
+      <div style="font-weight:900;letter-spacing:-.02em;font-size:clamp(4rem,15.5vw,15rem);text-align:center;color:transparent;-webkit-text-stroke:1px rgba(250,246,241,.14);">SENSEAR</div>
+    </div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440,&quot;height&quot;:1000},&quot;accentColor&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#f0bd95&quot;,&quot;options&quot;:[&quot;#f0bd95&quot;,&quot;#faebe3&quot;,&quot;#e8a87c&quot;,&quot;#c9b8a8&quot;],&quot;tsType&quot;:&quot;string&quot;},&quot;reduceMotion&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;}}">
+class Component extends DCLogic {
+  componentDidMount() {
+    const root = document.getElementById('sensear-root') || document;
+
+    const accent = this.props.accentColor;
+    if (accent) {
+      document.documentElement.style.setProperty('--accent', accent);
+      root.style.setProperty('--accent', accent);
+    }
+
+    const reduce = !!this.props.reduceMotion;
+    const els = Array.prototype.slice.call(root.querySelectorAll('[data-reveal]'));
+
+    if (reduce) {
+      els.forEach(e => { e.style.opacity = 1; e.style.transform = 'none'; });
+      root.querySelectorAll('[data-spin]').forEach(e => { e.style.animationPlayState = 'paused'; });
+    } else {
+      const show = (e) => { e.style.opacity = 1; e.style.transform = 'none'; };
+      if ('IntersectionObserver' in window) {
+        const io = new IntersectionObserver((entries, obs) => {
+          entries.forEach(en => {
+            if (en.isIntersecting) { show(en.target); obs.unobserve(en.target); }
+          });
+        }, { root: null, rootMargin: '0px 0px -12% 0px', threshold: 0.05 });
+        els.forEach(e => io.observe(e));
+        this._io = io;
+      }
+      const reveal = () => {
+        const vh = window.innerHeight || document.documentElement.clientHeight;
+        els.forEach(e => {
+          if (getComputedStyle(e).opacity === '1') return;
+          const r = e.getBoundingClientRect();
+          if (r.top < vh * 0.92 && r.bottom > 0) show(e);
+        });
+      };
+      this._onReveal = reveal;
+      window.addEventListener('scroll', reveal, { passive: true });
+      window.addEventListener('resize', reveal, { passive: true });
+      reveal();
+    }
+
+    const nav = document.getElementById('se-nav');
+    this._onScroll = () => {
+      if (!nav) return;
+      if (window.scrollY > 60) {
+        nav.style.background = 'rgba(11,10,10,.82)';
+        nav.style.backdropFilter = 'blur(12px)';
+        nav.style.borderBottomColor = 'rgba(250,246,241,.1)';
+        nav.style.padding = '14px 0';
+      } else {
+        nav.style.background = 'transparent';
+        nav.style.backdropFilter = 'none';
+        nav.style.borderBottomColor = 'rgba(250,246,241,0)';
+        nav.style.padding = '22px 0';
+      }
+    };
+    window.addEventListener('scroll', this._onScroll, { passive: true });
+    this._onScroll();
+
+    // sitemap card link hover (matches live site translate-x)
+    root.querySelectorAll('.se-maplink').forEach(a => {
+      const arr = a.querySelector('.se-arrow');
+      a.addEventListener('mouseenter', () => {
+        a.style.color = '#faf6f1';
+        a.style.paddingLeft = '8px';
+        if (arr) arr.style.transform = 'translateX(3px)';
+      });
+      a.addEventListener('mouseleave', () => {
+        a.style.color = 'rgba(250,246,241,.68)';
+        a.style.paddingLeft = '0';
+        if (arr) arr.style.transform = 'none';
+      });
+    });
+
+    // card border glow on hover
+    root.querySelectorAll('.se-card').forEach(card => {
+      card.addEventListener('mouseenter', () => { card.style.borderColor = 'rgba(240,189,149,.35)'; });
+      card.addEventListener('mouseleave', () => { card.style.borderColor = 'rgba(250,246,241,.1)'; });
+    });
+
+    const footer = root.querySelector('footer');
+    if (footer) {
+      footer.querySelectorAll('a').forEach(a => {
+        if (a.classList.contains('se-email')) return;
+        if (!/(#|\.dc\.html)/.test(a.getAttribute('href') || '')) return;
+        a.style.backgroundImage = 'var(--gold-text)';
+        a.style.backgroundRepeat = 'no-repeat';
+        a.style.backgroundPosition = '0 100%';
+        a.style.backgroundSize = '0% 1.5px';
+        a.style.paddingBottom = '3px';
+        a.style.display = 'inline-block';
+        a.style.alignSelf = 'flex-start';
+        a.style.transition = 'background-size .35s cubic-bezier(.16,1,.3,1),color .3s ease';
+        a.addEventListener('mouseenter', () => { a.style.backgroundSize = '100% 1.5px'; a.style.color = '#faf6f1'; });
+        a.addEventListener('mouseleave', () => { a.style.backgroundSize = '0% 1.5px'; a.style.color = 'rgba(250,246,241,.62)'; });
+      });
+    }
+
+    root.querySelectorAll('.se-email').forEach(a => {
+      const addr = (a.dataset.u || '') + '@' + (a.dataset.d || '');
+      a.href = 'mailto:' + addr;
+      const t = a.querySelector('.se-email-txt');
+      if (t) t.textContent = addr;
+    });
+  }
+
+  componentWillUnmount() {
+    if (this._onScroll) window.removeEventListener('scroll', this._onScroll);
+    if (this._io) this._io.disconnect();
+    if (this._onReveal) {
+      window.removeEventListener('scroll', this._onReveal);
+      window.removeEventListener('resize', this._onReveal);
+    }
+  }
+
+  renderVals() {
+    return {
+      onCtaEnter: (e) => {
+        const a = e.currentTarget;
+        a.style.background = '#0b0a0a'; a.style.color = '#faf6f1'; a.style.boxShadow = 'inset 0 0 0 1.5px rgba(227,153,47,.85)';
+        const ico = a.querySelector('.se-cta-ico'); if (ico) { ico.style.opacity = '0'; ico.style.width = '0'; ico.style.transform = 'scale(0)'; ico.style.marginRight = '-10px'; }
+        const arr = a.querySelector('.se-cta-arrow'); if (arr) { arr.style.maxWidth = '22px'; arr.style.opacity = '1'; arr.style.marginLeft = '9px'; }
+      },
+      onCtaLeave: (e) => {
+        const a = e.currentTarget;
+        a.style.background = 'var(--gold)'; a.style.color = '#0b0a0a'; a.style.boxShadow = 'none';
+        const ico = a.querySelector('.se-cta-ico'); if (ico) { ico.style.opacity = '1'; ico.style.width = '20px'; ico.style.transform = 'scale(1)'; ico.style.marginRight = '0'; }
+        const arr = a.querySelector('.se-cta-arrow'); if (arr) { arr.style.maxWidth = '0'; arr.style.opacity = '0'; arr.style.marginLeft = '0'; }
+      },
+      onGhostEnter: (e) => { const a = e.currentTarget; a.style.background = 'var(--gold)'; a.style.color = '#0b0a0a'; a.style.borderColor = 'transparent'; },
+      onGhostLeave: (e) => { const a = e.currentTarget; a.style.background = 'transparent'; a.style.color = '#faf6f1'; a.style.borderColor = 'rgba(250,246,241,.35)'; },
+      onNavEnter: (e) => { e.currentTarget.style.backgroundSize = '100% 2px'; e.currentTarget.style.color = '#faf6f1'; },
+      onNavLeave: (e) => { e.currentTarget.style.backgroundSize = '0% 2px'; e.currentTarget.style.color = 'rgba(250,246,241,.72)'; },
+      onPillEnter: (e) => { e.currentTarget.style.transform = 'translateY(-3px)'; },
+      onPillLeave: (e) => { e.currentTarget.style.transform = 'translateY(0)'; },
+      onSubEnter: (e) => { const b = e.currentTarget; b.style.boxShadow = '0 6px 22px -6px rgba(220,162,81,.6)'; const a = b.querySelector('.se-sub-arrow'); if (a) a.style.transform = 'translateX(4px)'; },
+      onSubLeave: (e) => { const b = e.currentTarget; b.style.boxShadow = 'none'; const a = b.querySelector('.se-sub-arrow'); if (a) a.style.transform = 'none'; },
+      onSubmit: (e) => { e.preventDefault(); const i = e.currentTarget.querySelector('input'); if (i) { i.value = ''; i.placeholder = 'Ευχαριστούμε! ✦'; } }
+    };
+  }
+}
+</script>
+</body>
+</html>

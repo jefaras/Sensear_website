@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0;}
+    html,body{height:100%;}
+    body{background:#0b0a0a;font-family:'Montserrat',system-ui,sans-serif;-webkit-font-smoothing:antialiased;}
+  </style>
+</helmet>
+
+<div style="min-height:100vh;width:100%;background:radial-gradient(120% 120% at 50% 30%,#141210 0%,#0b0a0a 60%,#070605 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:46px;padding:48px 24px;overflow:hidden;">
+
+  <div style="display:flex;flex-direction:column;align-items:center;gap:13px;text-align:center;">
+    <span style="font-size:11px;letter-spacing:.42em;font-weight:600;color:rgba(250,246,241,.42);text-transform:uppercase;">Sonic Identity</span>
+    <h1 style="font-size:clamp(1.5rem,3.4vw,2.3rem);font-weight:700;letter-spacing:-.02em;color:#faf6f1;">SensEar</h1>
+  </div>
+
+  <div id="se-stage" style="position:relative;width:min(78vw,540px);aspect-ratio:1/1;cursor:crosshair;touch-action:none;">
+    <canvas id="se-logo-canvas" style="position:absolute;inset:0;width:100%;height:100%;display:block;"></canvas>
+  </div>
+
+  <div style="display:flex;align-items:center;gap:10px;color:rgba(250,246,241,.34);font-size:11px;letter-spacing:.28em;font-weight:600;text-transform:uppercase;">
+    <span id="se-hint-dot" style="width:6px;height:6px;border-radius:50%;background:#f0bd95;box-shadow:0 0 10px #f0bd95;"></span>
+    Move your cursor across the mark
+  </div>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:640,&quot;height&quot;:760},&quot;repelRadius&quot;:{&quot;editor&quot;:&quot;float&quot;,&quot;default&quot;:0.30,&quot;min&quot;:0.12,&quot;max&quot;:0.55,&quot;step&quot;:0.02,&quot;tsType&quot;:&quot;number&quot;},&quot;repelStrength&quot;:{&quot;editor&quot;:&quot;float&quot;,&quot;default&quot;:0.85,&quot;min&quot;:0.2,&quot;max&quot;:2,&quot;step&quot;:0.05,&quot;tsType&quot;:&quot;number&quot;},&quot;springiness&quot;:{&quot;editor&quot;:&quot;float&quot;,&quot;default&quot;:0.055,&quot;min&quot;:0.02,&quot;max&quot;:0.12,&quot;step&quot;:0.005,&quot;tsType&quot;:&quot;number&quot;},&quot;idleShimmer&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;},&quot;glow&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;}}">
+class Component extends DCLogic {
+  componentDidMount() {
+    this.canvas = document.getElementById('se-logo-canvas');
+    this.stage = document.getElementById('se-stage');
+    this.ctx = this.canvas.getContext('2d');
+    this.dots = [];
+    this.size = 0; this.dpr = Math.min(window.devicePixelRatio || 1, 2);
+    // pointer in CSS px relative to canvas; active = engaged
+    this.pt = { x: 0, y: 0, tx: 0, ty: 0, active: 0, taX: 0, px: 0, py: 0, vmag: 0 };
+    this.t0 = performance.now();
+
+    // metallic gradient stops (SensEar gold)
+    this.stops = [
+      [0.00, [240,205,184]], [0.15, [247,221,208]], [0.29, [252,239,231]],
+      [0.44, [255,255,255]], [0.58, [239,238,236]], [0.72, [218,216,214]],
+      [0.84, [210,206,201]], [1.00, [228,217,196]]
+    ];
+
+    this._onMove = (e) => {
+      const r = this.canvas.getBoundingClientRect();
+      const cx = e.touches ? e.touches[0].clientX : e.clientX;
+      const cy = e.touches ? e.touches[0].clientY : e.clientY;
+      this.pt.tx = cx - r.left; this.pt.ty = cy - r.top; this.pt.taX = 1;
+    };
+    this._onLeave = () => { this.pt.taX = 0; };
+    this.stage.addEventListener('pointermove', this._onMove);
+    this.stage.addEventListener('pointerleave', this._onLeave);
+    this.stage.addEventListener('touchmove', this._onMove, { passive: true });
+    this.stage.addEventListener('touchend', this._onLeave);
+
+    this._onResize = () => this._resize();
+    window.addEventListener('resize', this._onResize);
+
+    fetch('images/sensear-dots.json')
+      .then(r => r.json())
+      .then(d => {
+        this.dots = d.dots.map(([x, y, b]) => ({
+          ox: x, oy: y,        // home (field units, -1..1)
+          x, y,                 // current
+          vx: 0, vy: 0,         // velocity
+          b,
+          ang: Math.atan2(y, x),
+          rad: Math.hypot(x, y),
+          ph: Math.random() * Math.PI * 2
+        }));
+        this._resize();
+        this._loop();
+      });
+  }
+
+  componentWillUnmount() {
+    cancelAnimationFrame(this._raf);
+    this.stage.removeEventListener('pointermove', this._onMove);
+    this.stage.removeEventListener('pointerleave', this._onLeave);
+    this.stage.removeEventListener('touchmove', this._onMove);
+    this.stage.removeEventListener('touchend', this._onLeave);
+    window.removeEventListener('resize', this._onResize);
+  }
+
+  _resize() {
+    const rect = this.stage.getBoundingClientRect();
+    this.size = rect.width;
+    this.dpr = Math.min(window.devicePixelRatio || 1, 2);
+    this.canvas.width = this.size * this.dpr;
+    this.canvas.height = this.size * this.dpr;
+    this.ctx.setTransform(this.dpr, 0, 0, this.dpr, 0, 0);
+    // initialise pointer to centre on first sizing
+    if (this.pt.x === 0) { this.pt.x = this.size / 2; this.pt.y = this.size / 2; }
+  }
+
+  _gold(t) {
+    t = Math.max(0, Math.min(1, t));
+    const s = this.stops;
+    for (let i = 1; i < s.length; i++) {
+      if (t <= s[i][0]) {
+        const a = s[i - 1], b = s[i];
+        const k = (t - a[0]) / (b[0] - a[0]);
+        return [
+          a[1][0] + (b[1][0] - a[1][0]) * k,
+          a[1][1] + (b[1][1] - a[1][1]) * k,
+          a[1][2] + (b[1][2] - a[1][2]) * k
+        ];
+      }
+    }
+    return s[s.length - 1][1];
+  }
+
+  _drawTile(ctx, sz) {
+    const r = sz * 0.225;
+    ctx.save();
+    ctx.beginPath();
+    this._rr(ctx, 0, 0, sz, sz, r);
+    const g = ctx.createRadialGradient(sz * 0.5, sz * 0.42, sz * 0.05, sz * 0.5, sz * 0.55, sz * 0.72);
+    g.addColorStop(0, '#19150f');
+    g.addColorStop(0.55, '#0d0b09');
+    g.addColorStop(1, '#070605');
+    ctx.fillStyle = g; ctx.fill();
+    // top inner sheen
+    ctx.beginPath();
+    this._rr(ctx, 0.5, 0.5, sz - 1, sz - 1, r - 0.5);
+    const lg = ctx.createLinearGradient(0, 0, 0, sz);
+    lg.addColorStop(0, 'rgba(255,238,222,0.16)');
+    lg.addColorStop(0.18, 'rgba(255,238,222,0)');
+    lg.addColorStop(1, 'rgba(0,0,0,0)');
+    ctx.strokeStyle = lg; ctx.lineWidth = 1.2; ctx.stroke();
+    ctx.restore();
+    // clip subsequent dots to tile
+    ctx.beginPath();
+    this._rr(ctx, 0, 0, sz, sz, r);
+    ctx.clip();
+  }
+
+  _rr(ctx, x, y, w, h, r) {
+    ctx.moveTo(x + r, y);
+    ctx.arcTo(x + w, y, x + w, y + h, r);
+    ctx.arcTo(x + w, y + h, x, y + h, r);
+    ctx.arcTo(x, y + h, x, y, r);
+    ctx.arcTo(x, y, x + w, y, r);
+    ctx.closePath();
+  }
+
+  _loop() {
+    this._raf = requestAnimationFrame(() => this._loop());
+    const ctx = this.ctx, sz = this.size;
+    if (!sz || !this.dots.length) return;
+    const time = (performance.now() - this.t0) / 1000;
+    const p = this.props || {};
+    const repelFrac = p.repelRadius ?? 0.30;     // cursor influence radius
+    const strength  = p.repelStrength ?? 0.85;   // push force
+    const spring    = p.springiness ?? 0.055;    // return-to-home force
+    const shimmer   = p.idleShimmer ?? true;
+    const glow      = p.glow ?? true;
+
+    // smooth pointer + activation, track speed
+    this.pt.active += (this.pt.taX - this.pt.active) * 0.10;
+    const prevx = this.pt.x, prevy = this.pt.y;
+    this.pt.x += (this.pt.tx - this.pt.x) * 0.20;
+    this.pt.y += (this.pt.ty - this.pt.y) * 0.20;
+    this.pt.vmag = Math.hypot(this.pt.x - prevx, this.pt.y - prevy);
+
+    const cx = sz / 2, cy = sz / 2;
+    const R = sz * 0.37;
+    const act = this.pt.active;
+    const damp = 0.86;
+
+    // pointer in field units
+    const pvx = (this.pt.x - cx) / R, pvy = (this.pt.y - cy) / R;
+    const repelR = repelFrac * (sz * 0.34) / R; // ~repelFrac in field units (≈ repelFrac/0.34*0.34)
+    const rR = repelFrac * 2.4;                  // field-unit radius (full mark spans ~2)
+    const rR2 = rR * rR;
+
+    ctx.clearRect(0, 0, sz, sz);
+    this._drawTile(ctx, sz);
+
+    const baseDot = sz * 0.0042;
+    const px = this.pt.x, py = this.pt.y;
+    let maxDisp = 0;
+
+    for (let i = 0; i < this.dots.length; i++) {
+      const d = this.dots[i];
+
+      // ---- physics (field units) ----
+      // repel from cursor
+      if (act > 0.01) {
+        const dx = d.x - pvx, dy = d.y - pvy;
+        const dist2 = dx * dx + dy * dy;
+        if (dist2 < rR2) {
+          const dist = Math.sqrt(dist2) || 0.0001;
+          const f = (1 - dist / rR);
+          const push = f * f * strength * 0.045 * act;
+          d.vx += (dx / dist) * push;
+          d.vy += (dy / dist) * push;
+        }
+      }
+      // spring back home
+      d.vx += (d.ox - d.x) * spring;
+      d.vy += (d.oy - d.y) * spring;
+      d.vx *= damp; d.vy *= damp;
+      d.x += d.vx; d.y += d.vy;
+
+      // displacement amount (for brightness/size accent)
+      const ddx = d.x - d.ox, ddy = d.y - d.oy;
+      const disp = Math.hypot(ddx, ddy);
+      if (disp > maxDisp) maxDisp = disp;
+      const energy = Math.min(1, disp * 3.2);
+
+      // screen position
+      const sx = cx + d.x * R;
+      const sy = cy + d.y * R;
+
+      // ---- colour ----
+      // base metallic sheen across the mark (home-based, stable)
+      const nrm = d.rad || 0.0001;
+      const sheen = 0.5 + 0.5 * (d.ox / nrm * 0.6 + d.oy / nrm * 0.4);
+      const shim = shimmer ? 0.5 + 0.5 * Math.sin(time * 1.5 - d.rad * 5 + d.ang * 2 + d.ph) : 0;
+      let tg = sheen * 0.7 + d.rad * 0.16 + shim * 0.14;
+      let col = this._gold(tg);
+
+      // displaced dots brighten toward white
+      if (energy > 0.02) {
+        const k = energy * 0.85;
+        col = [col[0] + (255 - col[0]) * k, col[1] + (255 - col[1]) * k, col[2] + (255 - col[2]) * k];
+      }
+
+      let a = 0.34 + d.b * 0.12 + energy * 0.55 + (shimmer ? shim * 0.10 : 0);
+      a = Math.min(1, a);
+      const rad = baseDot * (1 + energy * 1.3);
+
+      ctx.beginPath();
+      ctx.arc(sx, sy, rad, 0, 6.2832);
+      ctx.fillStyle = `rgba(${col[0]|0},${col[1]|0},${col[2]|0},${a})`;
+      ctx.fill();
+    }
+
+    // soft bloom following the cursor
+    if (glow && act > 0.02) {
+      ctx.save();
+      ctx.globalCompositeOperation = 'lighter';
+      const br = sz * (repelFrac + 0.08);
+      const bg = ctx.createRadialGradient(px, py, 0, px, py, br);
+      bg.addColorStop(0, `rgba(255,236,214,${0.10 * act})`);
+      bg.addColorStop(1, 'rgba(255,236,214,0)');
+      ctx.fillStyle = bg;
+      ctx.fillRect(0, 0, sz, sz);
+      ctx.restore();
+    }
+
+    ctx.restore(); // undo tile clip
+  }
+
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

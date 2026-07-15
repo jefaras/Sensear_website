@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,500&family=GFS+Didot:ital@1&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{background:#0b0a0a;}
+  ::selection{background:var(--accent,#f0bd95);color:#0b0a0a;}
+  :root{--accent:#f0bd95;--ink:#0b0a0a;--paper:#faf6f1;--gold:linear-gradient(100deg,#f0cdb8 0%,#f7ddd0 15%,#fcefe7 29%,#ffffff 44%,#efeeec 58%,#dad8d6 72%,#d2cec9 84%,#e4d9c4 100%);--gold-text:linear-gradient(100deg,#edc4ac 0%,#f6dccd 19%,#fffaf6 42%,#eae8e4 60%,#d3cfc9 77%,#e2d6bf 100%);}
+  @keyframes se-eq{0%,100%{transform:scaleY(.22);}50%{transform:scaleY(1);}}
+  @keyframes se-marq{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+  @keyframes se-spin{to{transform:rotate(360deg);}}
+  @keyframes se-cue{0%{transform:translateY(0);opacity:.9;}50%{transform:translateY(9px);opacity:.25;}100%{transform:translateY(0);opacity:.9;}}
+  @keyframes se-ping{0%{transform:scale(1);opacity:.85;}100%{transform:scale(2.8);opacity:0;}}
+  @keyframes se-pulse{0%,100%{opacity:.5;}50%{opacity:1;}}
+  @keyframes se-letterUp{0%{opacity:0;transform:translateY(.62em);}100%{opacity:1;transform:translateY(0);}}
+  @keyframes se-drift{0%,100%{transform:translate(0,0) scale(1);}50%{transform:translate(3%,-2%) scale(1.06);}}
+  @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important;}}
+</style>
+</helmet>
+
+<div id="v4-root" style="background:#0b0a0a;color:#faf6f1;font-family:'Montserrat',system-ui,sans-serif;overflow-x:hidden;-webkit-font-smoothing:antialiased;position:relative;transition:background-color 1.1s ease;">
+
+  <!-- ============ OVERTURE LOADER ============ -->
+  <div id="v4-overture" style="position:fixed;inset:0;z-index:1000;background:#0b0a0a;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:clamp(26px,4vw,40px);">
+    <div style="position:relative;width:12px;height:12px;">
+      <span style="position:absolute;inset:0;border-radius:50%;background:var(--accent);"></span>
+      <span data-ping style="position:absolute;inset:0;border-radius:50%;border:1px solid var(--accent);animation:se-ping 1.9s ease-out infinite;"></span>
+    </div>
+    <div style="display:flex;gap:.13em;font-weight:800;letter-spacing:.2em;font-size:clamp(2rem,7vw,4.6rem);color:#faf6f1;line-height:1;">
+      <span style="display:inline-block;opacity:0;animation:se-letterUp .7s cubic-bezier(.16,1,.3,1) .12s forwards;">S</span>
+      <span style="display:inline-block;opacity:0;animation:se-letterUp .7s cubic-bezier(.16,1,.3,1) .18s forwards;">E</span>
+      <span style="display:inline-block;opacity:0;animation:se-letterUp .7s cubic-bezier(.16,1,.3,1) .24s forwards;">N</span>
+      <span style="display:inline-block;opacity:0;animation:se-letterUp .7s cubic-bezier(.16,1,.3,1) .30s forwards;">S</span>
+      <span style="display:inline-block;opacity:0;animation:se-letterUp .7s cubic-bezier(.16,1,.3,1) .36s forwards;">E</span>
+      <span style="display:inline-block;opacity:0;animation:se-letterUp .7s cubic-bezier(.16,1,.3,1) .42s forwards;">A</span>
+      <span style="display:inline-block;opacity:0;animation:se-letterUp .7s cubic-bezier(.16,1,.3,1) .48s forwards;">R</span>
+    </div>
+    <div style="display:flex;flex-direction:column;align-items:center;gap:11px;">
+      <div style="width:min(280px,62vw);height:11px;position:relative;overflow:hidden;background:repeating-linear-gradient(90deg,rgba(250,246,241,.16) 0 2px,transparent 2px 6px);">
+        <div id="v4-ov-fill" style="position:absolute;inset:0;background:repeating-linear-gradient(90deg,var(--accent) 0 2px,transparent 2px 6px);transform:scaleX(0);transform-origin:left;"></div>
+      </div>
+      <div style="display:flex;justify-content:space-between;width:min(280px,62vw);font-size:10px;letter-spacing:.32em;color:rgba(250,246,241,.5);font-weight:600;">
+        <span>SOUNDTRACKING</span><span><span id="v4-ov-num">00</span>%</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ ROUTE-TRANSITION WIPE ============ -->
+  <div id="v4-wipe" style="position:fixed;inset:0;z-index:900;display:flex;visibility:hidden;pointer-events:none;">
+    <div data-col style="flex:1;background:#0b0a0a;transform:scaleY(0);transform-origin:bottom;"></div>
+    <div data-col style="flex:1;background:#0d0b0a;transform:scaleY(0);transform-origin:bottom;"></div>
+    <div data-col style="flex:1;background:#0b0a0a;transform:scaleY(0);transform-origin:bottom;"></div>
+    <div data-col style="flex:1;background:#0d0b0a;transform:scaleY(0);transform-origin:bottom;"></div>
+    <div data-col style="flex:1;background:#0b0a0a;transform:scaleY(0);transform-origin:bottom;"></div>
+    <div data-col style="flex:1;background:#0d0b0a;transform:scaleY(0);transform-origin:bottom;"></div>
+    <div data-col style="flex:1;background:#0b0a0a;transform:scaleY(0);transform-origin:bottom;"></div>
+    <div id="v4-wipe-dot" style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .3s ease;pointer-events:none;">
+      <div style="position:relative;width:14px;height:14px;">
+        <span style="position:absolute;inset:0;border-radius:50%;background:var(--accent);"></span>
+        <span style="position:absolute;inset:0;border-radius:50%;border:1px solid var(--accent);animation:se-ping 1.6s ease-out infinite;"></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ OVERLAY MENU ============ -->
+  <div id="v4-menu" style="position:fixed;inset:0;z-index:950;opacity:0;visibility:hidden;pointer-events:none;transition:opacity .4s ease;">
+    <div id="v4-menu-panel" style="position:absolute;inset:0;background:rgba(11,10,10,.94);backdrop-filter:blur(22px);-webkit-backdrop-filter:blur(22px);transform:translateX(100%);transition:transform .7s cubic-bezier(.16,1,.3,1);display:flex;flex-direction:column;padding:clamp(24px,5vw,68px);overflow:hidden;">
+      <div id="v4-menu-prev" style="position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;transition:opacity .6s ease;pointer-events:none;filter:grayscale(.2);"></div>
+      <div style="position:absolute;inset:0;background:linear-gradient(120deg,rgba(11,10,10,.86),rgba(11,10,10,.7));pointer-events:none;"></div>
+      <div style="position:relative;display:flex;justify-content:space-between;align-items:center;">
+        <div style="display:flex;align-items:center;gap:12px;">
+          <span style="position:relative;width:9px;height:9px;display:inline-block;"><span style="position:absolute;inset:0;border-radius:50%;background:var(--accent);"></span><span data-ping style="position:absolute;inset:0;border-radius:50%;border:1px solid var(--accent);animation:se-ping 2.2s ease-out infinite;"></span></span>
+          <span style="font-weight:800;letter-spacing:.22em;font-size:18px;">SENSEAR</span>
+        </div>
+        <button id="v4-menu-close" aria-label="Close menu" style="display:flex;align-items:center;gap:10px;background:none;border:none;color:#faf6f1;cursor:pointer;font-family:'Montserrat',sans-serif;font-size:12px;letter-spacing:.28em;font-weight:700;">CLOSE <span style="font-size:18px;line-height:1;">×</span></button>
+      </div>
+      <nav style="position:relative;margin:auto 0;display:flex;flex-direction:column;gap:clamp(6px,1vw,14px);">
+        <a data-mitem data-target="services" data-img="images/services/service-signature-playlists.jpg" href="#services" style="opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s cubic-bezier(.16,1,.3,1);text-decoration:none;color:#faf6f1;display:flex;align-items:baseline;gap:20px;">
+          <span style="font-size:13px;font-weight:700;color:rgba(250,246,241,.4);width:34px;flex:none;">01</span><span class="v4-mlabel" style="font-weight:800;font-size:clamp(2rem,5.5vw,4.2rem);letter-spacing:-.02em;line-height:1.04;transition:transform .4s cubic-bezier(.16,1,.3,1);">Υπηρεσίες</span>
+        </a>
+        <a data-mitem data-target="industries" data-img="images/industries/industry-hotels-resorts.jpg" href="#industries" style="opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s cubic-bezier(.16,1,.3,1);text-decoration:none;color:#faf6f1;display:flex;align-items:baseline;gap:20px;">
+          <span style="font-size:13px;font-weight:700;color:rgba(250,246,241,.4);width:34px;flex:none;">02</span><span class="v4-mlabel" style="font-weight:800;font-size:clamp(2rem,5.5vw,4.2rem);letter-spacing:-.02em;line-height:1.04;transition:transform .4s cubic-bezier(.16,1,.3,1);">Κλάδοι</span>
+        </a>
+        <a data-mitem data-target="venues" data-img="images/carousel/carousel-venue-atmosphere-2.jpg" href="#venues" style="opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s cubic-bezier(.16,1,.3,1);text-decoration:none;color:#faf6f1;display:flex;align-items:baseline;gap:20px;">
+          <span style="font-size:13px;font-weight:700;color:rgba(250,246,241,.4);width:34px;flex:none;">03</span><span class="v4-mlabel" style="font-weight:800;font-size:clamp(2rem,5.5vw,4.2rem);letter-spacing:-.02em;line-height:1.04;transition:transform .4s cubic-bezier(.16,1,.3,1);">Έργα</span>
+        </a>
+        <a data-mitem data-target="journal" data-img="images/homepage/blog-music-curation-venues.jpg" href="#journal" style="opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s cubic-bezier(.16,1,.3,1);text-decoration:none;color:#faf6f1;display:flex;align-items:baseline;gap:20px;">
+          <span style="font-size:13px;font-weight:700;color:rgba(250,246,241,.4);width:34px;flex:none;">04</span><span class="v4-mlabel" style="font-weight:800;font-size:clamp(2rem,5.5vw,4.2rem);letter-spacing:-.02em;line-height:1.04;transition:transform .4s cubic-bezier(.16,1,.3,1);">Journal</span>
+        </a>
+        <a data-mitem data-target="about" data-img="images/carousel/carousel-venue-atmosphere-1.jpg" href="#about" style="opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s cubic-bezier(.16,1,.3,1);text-decoration:none;color:#faf6f1;display:flex;align-items:baseline;gap:20px;">
+          <span style="font-size:13px;font-weight:700;color:rgba(250,246,241,.4);width:34px;flex:none;">05</span><span class="v4-mlabel" style="font-weight:800;font-size:clamp(2rem,5.5vw,4.2rem);letter-spacing:-.02em;line-height:1.04;transition:transform .4s cubic-bezier(.16,1,.3,1);">Σχετικά</span>
+        </a>
+        <a data-mitem data-target="contact" data-img="images/homepage/sensear-signature-playlist-service.jpg" href="#contact" style="opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s cubic-bezier(.16,1,.3,1);text-decoration:none;color:#faf6f1;display:flex;align-items:baseline;gap:20px;">
+          <span style="font-size:13px;font-weight:700;color:rgba(250,246,241,.4);width:34px;flex:none;">06</span><span class="v4-mlabel" style="font-weight:800;font-size:clamp(2rem,5.5vw,4.2rem);letter-spacing:-.02em;line-height:1.04;transition:transform .4s cubic-bezier(.16,1,.3,1);">Επικοινωνία</span>
+        </a>
+      </nav>
+      <div style="position:relative;display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;">
+        <div style="display:flex;flex-direction:column;gap:8px;">
+          <a class="v4-email" data-u="hello" data-d="sensear.music" href="#" style="color:rgba(250,246,241,.75);text-decoration:none;font-size:.95rem;letter-spacing:.02em;"><span class="v4-email-txt"></span></a>
+          <a href="tel:+306976994212" style="color:rgba(250,246,241,.55);text-decoration:none;font-size:.9rem;letter-spacing:.04em;">+30 697 699 4212 · Αθήνα, Ελλάδα</a>
+        </div>
+        <div style="display:flex;align-items:center;gap:18px;">
+          <a href="https://www.instagram.com/sensear.music" target="_blank" rel="noopener" style="color:rgba(250,246,241,.7);font-size:.85rem;letter-spacing:.1em;text-decoration:none;">Instagram</a>
+          <a href="https://www.linkedin.com/company/sensear-music/" target="_blank" rel="noopener" style="color:rgba(250,246,241,.7);font-size:.85rem;letter-spacing:.1em;text-decoration:none;">LinkedIn</a>
+          <span style="font-size:.85rem;letter-spacing:.16em;color:rgba(250,246,241,.5);font-weight:600;"><span style="color:#faf6f1;">EL</span> / EN</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ NAV ============ -->
+  <nav id="v4-nav" style="position:fixed;top:0;left:0;right:0;z-index:800;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:26px clamp(24px,5vw,72px);border-bottom:1px solid rgba(250,246,241,0);transition:background .4s ease,backdrop-filter .4s ease,border-color .4s ease,padding .4s ease;">
+    <a href="#hero" style="display:flex;align-items:center;gap:12px;text-decoration:none;color:#faf6f1;">
+      <span style="position:relative;width:9px;height:9px;display:inline-block;"><span style="position:absolute;inset:0;border-radius:50%;background:var(--accent);"></span><span data-ping style="position:absolute;inset:0;border-radius:50%;border:1px solid var(--accent);animation:se-ping 2.2s ease-out infinite;"></span></span>
+      <span style="font-weight:800;letter-spacing:.22em;font-size:19px;">SENSEAR</span>
+    </a>
+    <div style="display:flex;align-items:center;gap:clamp(14px,2vw,26px);">
+      <span style="font-size:11px;letter-spacing:.16em;color:rgba(250,246,241,.45);font-weight:600;"><span style="color:#faf6f1;">EL</span> / EN</span>
+      <a href="#contact" class="v4-cta" style="position:relative;overflow:hidden;display:inline-flex;align-items:center;gap:9px;background:var(--gold);color:#0b0a0a;font-weight:700;font-size:13px;letter-spacing:.01em;padding:11px 22px;border-radius:100px;text-decoration:none;transition:background .35s ease,color .35s ease,box-shadow .35s ease;">
+        <img class="v4-cta-ico" src="images/brand/sensear-logo-color.png" alt="" style="width:17px;height:17px;object-fit:contain;transition:opacity .35s ease,transform .35s ease,width .35s ease,margin .35s ease;">
+        <span class="v4-cta-label">Επικοινωνία</span>
+        <span class="v4-cta-arrow" style="display:inline-flex;align-items:center;max-width:0;opacity:0;overflow:hidden;transition:max-width .35s cubic-bezier(.16,1,.3,1),opacity .3s ease,margin-left .35s ease;font-size:16px;">→</span>
+      </a>
+      <button id="v4-menu-open" aria-label="Open menu" aria-expanded="false" style="display:flex;align-items:center;gap:11px;background:none;border:none;color:#faf6f1;cursor:pointer;font-family:'Montserrat',sans-serif;font-size:12px;letter-spacing:.26em;font-weight:700;">
+        MENU
+        <span style="display:flex;flex-direction:column;gap:4px;width:22px;"><span style="height:1.5px;background:#faf6f1;width:100%;display:block;"></span><span style="height:1.5px;background:#faf6f1;width:70%;display:block;"></span></span>
+      </button>
+    </div>
+  </nav>
+  <div id="v4-scrub" style="position:fixed;top:0;left:0;height:2px;width:100%;background:var(--gold);transform:scaleX(0);transform-origin:left;z-index:801;"></div>
+
+  <!-- ============ HERO ============ -->
+  <section id="hero" data-scene="ink" data-screen-label="Hero" style="position:relative;min-height:100vh;display:flex;align-items:flex-end;overflow:hidden;">
+    <div style="position:absolute;inset:0;overflow:hidden;">
+      <img data-parallax="0.1" src="images/carousel/carousel-event-venue.jpg" alt="Curated atmosphere — event venue" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.12);will-change:transform;">
+      <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,10,10,.55) 0%,rgba(11,10,10,.2) 38%,rgba(11,10,10,.78) 100%);"></div>
+      <div style="position:absolute;inset:0;background:linear-gradient(100deg,rgba(11,10,10,.6),rgba(11,10,10,0) 55%);"></div>
+    </div>
+
+    <div data-hero style="opacity:0;transition:opacity .9s ease;position:absolute;left:clamp(24px,5vw,72px);top:50%;transform:translateY(-50%) rotate(180deg);writing-mode:vertical-rl;">
+      <span style="font-size:11px;letter-spacing:.42em;font-weight:600;color:rgba(250,246,241,.55);">ATHENS · GR — SONIC BRANDING</span>
+    </div>
+
+    <div style="position:relative;width:100%;max-width:1500px;margin:0 auto;padding:0 clamp(24px,5vw,72px) clamp(90px,12vh,140px) clamp(72px,9vw,128px);">
+      <div data-hero style="opacity:0;transition:opacity .8s ease;display:flex;align-items:center;gap:14px;margin-bottom:26px;">
+        <span style="width:34px;height:1px;background:var(--gold);display:inline-block;"></span>
+        <span style="font-size:12px;letter-spacing:.32em;font-weight:700;background:var(--gold-text);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;">ΜΟΥΣΙΚΗ ΕΠΙΜΕΛΕΙΑ &amp; ΗΧΗΤΙΚΗ ΤΑΥΤΟΤΗΤΑ</span>
+      </div>
+      <h1 data-hero style="opacity:0;transition:opacity .9s ease;font-weight:800;font-size:clamp(3rem,8.4vw,7.4rem);line-height:.92;letter-spacing:-.025em;margin-bottom:34px;">
+        <span style="display:block;overflow:hidden;"><span data-line style="display:block;transform:translateY(110%);transition:transform 1s cubic-bezier(.16,1,.3,1);">Σχεδιάζουμε το</span></span>
+        <span style="display:block;overflow:hidden;"><span data-line style="display:block;transform:translateY(110%);transition:transform 1s cubic-bezier(.16,1,.3,1) .08s;">Soundtrack <span style="font-family:'GFS Didot',serif;font-style:italic;font-weight:400;font-size:1.04em;background:var(--gold-text);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;">Μοναδικών</span></span></span>
+        <span style="display:block;overflow:hidden;"><span data-line style="display:block;transform:translateY(110%);transition:transform 1s cubic-bezier(.16,1,.3,1) .16s;">Εμπειριών</span></span>
+      </h1>
+      <div data-hero style="opacity:0;transition:opacity .8s ease;display:flex;align-items:center;gap:26px;flex-wrap:wrap;margin-bottom:clamp(36px,6vh,64px);">
+        <a href="#services" class="v4-cta v4-scroll" style="position:relative;overflow:hidden;display:inline-flex;align-items:center;gap:10px;background:var(--gold);color:#0b0a0a;font-weight:700;font-size:15px;padding:17px 32px;border-radius:100px;text-decoration:none;transition:background .35s ease,color .35s ease,box-shadow .35s ease;">
+          <img class="v4-cta-ico" src="images/brand/sensear-logo-color.png" alt="" style="width:20px;height:20px;object-fit:contain;transition:opacity .35s ease,transform .35s ease,width .35s ease,margin .35s ease;">
+          <span class="v4-cta-label">Εξερευνήστε τις υπηρεσίες μας</span>
+          <span class="v4-cta-arrow" style="display:inline-flex;align-items:center;max-width:0;opacity:0;overflow:hidden;transition:max-width .35s cubic-bezier(.16,1,.3,1),opacity .3s ease,margin-left .35s ease;font-size:17px;">→</span>
+        </a>
+        <a href="#contact" class="v4-scroll" style="font-size:14px;font-weight:600;color:#faf6f1;text-decoration:none;border-bottom:1px solid rgba(250,246,241,.35);padding-bottom:3px;">Κλείστε ραντεβού</a>
+      </div>
+      <div data-hero style="opacity:0;transition:opacity .8s ease;display:flex;align-items:center;gap:18px;">
+        <button class="v4-eq-btn" aria-label="Toggle equalizer" style="width:48px;height:48px;flex:none;border-radius:50%;border:1px solid rgba(250,246,241,.3);background:rgba(11,10,10,.35);color:#faf6f1;cursor:pointer;display:flex;align-items:center;justify-content:center;backdrop-filter:blur(4px);transition:border-color .3s,background .3s;">
+          <span class="v4-eq-icon" style="font-size:12px;letter-spacing:1px;">❚❚</span>
+        </button>
+        <div style="display:flex;align-items:flex-end;gap:4px;height:38px;">
+          <div data-eqbar style="width:4px;height:38px;background:var(--gold);transform-origin:bottom;transform:scaleY(.5);border-radius:2px;animation:se-eq 1.1s ease-in-out infinite;"></div>
+          <div data-eqbar style="width:4px;height:38px;background:var(--gold);transform-origin:bottom;transform:scaleY(.5);border-radius:2px;animation:se-eq .85s ease-in-out infinite .15s;"></div>
+          <div data-eqbar style="width:4px;height:38px;background:var(--gold);transform-origin:bottom;transform:scaleY(.5);border-radius:2px;animation:se-eq 1.3s ease-in-out infinite .05s;"></div>
+          <div data-eqbar style="width:4px;height:38px;background:var(--gold);transform-origin:bottom;transform:scaleY(.5);border-radius:2px;animation:se-eq .95s ease-in-out infinite .28s;"></div>
+          <div data-eqbar style="width:4px;height:38px;background:var(--gold);transform-origin:bottom;transform:scaleY(.5);border-radius:2px;animation:se-eq 1.15s ease-in-out infinite .12s;"></div>
+          <div data-eqbar style="width:4px;height:38px;background:var(--gold);transform-origin:bottom;transform:scaleY(.5);border-radius:2px;animation:se-eq .8s ease-in-out infinite .22s;"></div>
+          <div data-eqbar style="width:4px;height:38px;background:var(--gold);transform-origin:bottom;transform:scaleY(.5);border-radius:2px;animation:se-eq 1.25s ease-in-out infinite .34s;"></div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:2px;">
+          <span style="font-size:10px;letter-spacing:.3em;color:rgba(250,246,241,.5);font-weight:700;">NOW PLAYING</span>
+          <span style="font-size:13px;font-weight:600;color:rgba(250,246,241,.88);">The SensEar Sessions — Vol. 04</span>
+        </div>
+      </div>
+    </div>
+
+    <div data-hero style="opacity:0;transition:opacity .8s ease;position:absolute;bottom:26px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px;">
+      <span style="font-size:10px;letter-spacing:.3em;color:rgba(250,246,241,.5);font-weight:600;">SCROLL</span>
+      <div style="width:1px;height:30px;background:linear-gradient(rgba(250,246,241,.6),rgba(250,246,241,0));animation:se-cue 1.8s ease-in-out infinite;"></div>
+    </div>
+  </section>
+
+  <!-- ============ MARQUEE SEAM ============ -->
+  <div data-scene="ink" style="border-top:1px solid rgba(250,246,241,.1);border-bottom:1px solid rgba(250,246,241,.1);padding:clamp(26px,4vw,42px) 0;overflow:hidden;background:#0c0b0a;">
+    <div class="v4-marq" style="display:flex;width:max-content;animation:se-marq 38s linear infinite;">
+      <div style="display:flex;align-items:center;gap:52px;padding-right:52px;">
+        <span style="font-family:'GFS Didot',serif;font-style:italic;font-size:clamp(1.7rem,3.4vw,2.6rem);color:rgba(250,246,241,.6);">Signature Playlists</span><span style="background:var(--gold-text);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;font-size:1.4rem;">✦</span>
+        <span style="font-family:'GFS Didot',serif;font-style:italic;font-size:clamp(1.7rem,3.4vw,2.6rem);color:rgba(250,246,241,.6);">Μουσική Εκδηλώσεων</span><span style="background:var(--gold-text);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;font-size:1.4rem;">✦</span>
+        <span style="font-family:'GFS Didot',serif;font-style:italic;font-size:clamp(1.7rem,3.4vw,2.6rem);color:rgba(250,246,241,.6);">Ηχητική Ταυτότητα</span><span style="background:var(--gold-text);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;font-size:1.4rem;">✦</span>
+        <span style="font-family:'GFS Didot',serif;font-style:italic;font-size:clamp(1.7rem,3.4vw,2.6rem);color:rgba(250,246,241,.6);">Ακουστική Αναβάθμιση</span><span style="background:var(--gold-text);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;font-size:1.4rem;">✦</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:52px;padding-right:52px;" aria-hidden="true">
+        <span style="font-family:'GFS Didot',serif;font-style:italic;font-size:clamp(1.7rem,3.4vw,2.6rem);color:rgba(250,246,241,.6);">Signature Playlists</span><span style="background:var(--gold-text);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;font-size:1.4rem;">✦</span>
+        <span style="font-family:'GFS Didot',serif;font-style:italic;font-size:clamp(1.7rem,3.4vw,2.6rem);color:rgba(250,246,241,.6);">Μουσική Εκδηλώσεων</span><span style="background:var(--gold-text);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;font-size:1.4rem;">✦</span>
+        <span style="font-family:'GFS Didot',serif;font-style:italic;font-size:clamp(1.7rem,3.4vw,2.6rem);color:rgba(250,246,241,.6);">Ηχητική Ταυτότητα</span><span style="background:var(--gold-text);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;font-size:1.4rem;">✦</span>
+        <span style="font-family:'GFS Didot',serif;font-style:italic;font-size:clamp(1.7rem,3.4vw,2.6rem);color:rgba(250,246,241,.6);">Ακουστική Αναβάθμιση</span><span style="background:var(--gold-text);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;font-size:1.4rem;">✦</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ ABOUT ============ -->
+  <section id="about" data-scene="wine" data-screen-label="About" style="padding:clamp(90px,13vh,150px) 0;position:relative;overflow:hidden;">
+    <div style="max-width:1500px;margin:0 auto;padding:0 clamp(24px,5vw,72px);display:grid;grid-template-columns:1fr;gap:clamp(40px,5vw,72px);align-items:center;" class="v4-about-grid">
+      <div>
+        <div data-reveal style="opacity:0;transform:translateY(30px);transition:all .9s cubic-bezier(.16,1,.3,1);display:flex;align-items:center;gap:14px;margin-bottom:34px;">
+          <span style="width:34px;height:1px;background:var(--gold);display:inline-block;"></span>
+          <span style="font-size:12px;letter-spacing:.32em;font-weight:700;color:rgba(250,246,241,.6);">ΠΟΙΟΙ ΕΙΜΑΣΤΕ</span>
+        </div>
+        <p data-reveal style="opacity:0;transform:translateY(30px);transition:all 1s cubic-bezier(.16,1,.3,1);font-weight:600;font-size:clamp(1.6rem,3.2vw,2.9rem);line-height:1.26;letter-spacing:-.012em;margin-bottom:32px;">
+          Είμαστε μια ομάδα <span style="font-family:'GFS Didot',serif;font-style:italic;font-weight:400;font-size:1.1em;background:var(--gold-text);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;">ειδικών στον ήχο</span> με <span style="font-family:'GFS Didot',serif;font-style:italic;font-weight:400;font-size:1.1em;background:var(--gold-text);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;">βαθιά μουσική κουλτούρα</span>, που επενδύει χώρους και εκδηλώσεις με βιωματική <span style="font-family:'GFS Didot',serif;font-style:italic;font-weight:400;font-size:1.1em;background:var(--gold-text);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;">μουσική που μένει στη μνήμη</span>.
+        </p>
+        <p data-reveal style="opacity:0;transform:translateY(30px);transition:all 1s cubic-bezier(.16,1,.3,1) .1s;font-size:1.12rem;line-height:1.65;color:rgba(250,246,241,.62);max-width:620px;">
+          Η μουσική, για εμάς, διαμορφώνει την <strong style="color:#faf6f1;font-weight:700;">ατμόσφαιρα</strong>, επηρεάζει τη <strong style="color:#faf6f1;font-weight:700;">συμπεριφορά</strong> και ενισχύει τη <strong style="color:#faf6f1;font-weight:700;">σύνδεση</strong> με τους επισκέπτες.
+        </p>
+      </div>
+      <div data-reveal data-about-img style="opacity:0;transform:translateY(30px) scale(.97);transition:all 1.1s cubic-bezier(.16,1,.3,1) .12s;position:relative;border-radius:6px;overflow:hidden;aspect-ratio:4/4.4;">
+        <img data-parallax="0.06" src="images/carousel/carousel-venue-atmosphere-1.jpg" alt="Curated venue atmosphere" style="width:100%;height:100%;object-fit:cover;transform:scale(1.1);will-change:transform;">
+        <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,10,10,0) 55%,rgba(11,10,10,.5));"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SERVICES ============ -->
+  <section id="services" data-scene="ember" data-screen-label="Services" style="padding:clamp(90px,13vh,150px) 0;position:relative;">
+    <div style="max-width:1500px;margin:0 auto;padding:0 clamp(24px,5vw,72px);">
+      <div data-reveal style="opacity:0;transform:translateY(24px);transition:all .9s cubic-bezier(.16,1,.3,1);display:flex;align-items:center;gap:14px;margin-bottom:18px;">
+        <span style="width:34px;height:1px;background:var(--gold);display:inline-block;"></span>
+        <span style="font-size:12px;letter-spacing:.32em;font-weight:700;color:rgba(250,246,241,.6);">ΥΠΗΡΕΣΙΕΣ</span>
+      </div>
+      <h2 data-reveal style="opacity:0;transform:translateY(28px);transition:all 1s cubic-bezier(.16,1,.3,1) .06s;font-weight:800;font-size:clamp(2.2rem,5vw,4rem);line-height:1.02;letter-spacing:-.02em;max-width:1000px;margin-bottom:54px;">Τέσσερις τρόποι που <span style="font-family:'GFS Didot',serif;font-style:italic;font-weight:400;font-size:1.08em;background:var(--gold-text);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;">αναβαθμίζουμε</span> τον χώρο σας</h2>
+      <div class="v4-svc-grid" style="display:grid;grid-template-columns:1.35fr .65fr;gap:clamp(36px,5vw,64px);align-items:start;">
+        <div id="v4-svc-list" style="border-top:1px solid rgba(250,246,241,.14);">
+          <a href="#contact" class="v4-svc v4-scroll" data-img="images/services/service-signature-playlists.jpg" data-cap="Το καθημερινό soundtrack του χώρου σας" data-reveal style="opacity:0;transform:translateY(20px);transition:opacity .8s ease,transform .8s cubic-bezier(.16,1,.3,1);text-decoration:none;color:#faf6f1;display:flex;align-items:baseline;gap:24px;padding:clamp(26px,3vw,38px) 6px;border-bottom:1px solid rgba(250,246,241,.14);">
+            <span style="font-size:13px;font-weight:700;color:rgba(250,246,241,.4);width:34px;flex:none;">01</span>
+            <div style="flex:1;"><div class="v4-svc-title" style="font-weight:700;font-size:clamp(1.5rem,2.8vw,2.4rem);letter-spacing:-.01em;transition:transform .4s cubic-bezier(.16,1,.3,1);">Signature Playlists</div><p style="font-size:1rem;color:rgba(250,246,241,.55);margin-top:8px;max-width:560px;">Το καθημερινό σας soundtrack, από την πρωινή ενέργεια μέχρι τη βραδινή ατμόσφαιρα.</p></div>
+            <span class="v4-svc-arrow" style="font-size:20px;background:var(--gold-text);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;align-self:center;transition:transform .4s ease;">→</span>
+          </a>
+          <a href="#contact" class="v4-svc v4-scroll" data-img="images/services/service-event-soundtracks.jpg" data-cap="DJ sets &amp; ακουστικές εμπειρίες κατά παραγγελία" data-reveal style="opacity:0;transform:translateY(20px);transition:opacity .8s ease .05s,transform .8s cubic-bezier(.16,1,.3,1) .05s;text-decoration:none;color:#faf6f1;display:flex;align-items:baseline;gap:24px;padding:clamp(26px,3vw,38px) 6px;border-bottom:1px solid rgba(250,246,241,.14);">
+            <span style="font-size:13px;font-weight:700;color:rgba(250,246,241,.4);width:34px;flex:none;">02</span>
+            <div style="flex:1;"><div class="v4-svc-title" style="font-weight:700;font-size:clamp(1.5rem,2.8vw,2.4rem);letter-spacing:-.01em;transition:transform .4s cubic-bezier(.16,1,.3,1);">Μουσική Εκδηλώσεων</div><p style="font-size:1rem;color:rgba(250,246,241,.55);margin-top:8px;max-width:560px;">Αποκλειστικές ακουστικές εμπειρίες &amp; DJ sets για λανσαρίσματα, συνέδρια και γιορτές.</p></div>
+            <span class="v4-svc-arrow" style="font-size:20px;background:var(--gold-text);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;align-self:center;transition:transform .4s ease;">→</span>
+          </a>
+          <a href="#contact" class="v4-svc v4-scroll" data-img="images/services/service-sonic-strategy.jpg" data-cap="Το ηχητικό DNA του brand σας" data-reveal style="opacity:0;transform:translateY(20px);transition:opacity .8s ease .1s,transform .8s cubic-bezier(.16,1,.3,1) .1s;text-decoration:none;color:#faf6f1;display:flex;align-items:baseline;gap:24px;padding:clamp(26px,3vw,38px) 6px;border-bottom:1px solid rgba(250,246,241,.14);">
+            <span style="font-size:13px;font-weight:700;color:rgba(250,246,241,.4);width:34px;flex:none;">03</span>
+            <div style="flex:1;"><div class="v4-svc-title" style="font-weight:700;font-size:clamp(1.5rem,2.8vw,2.4rem);letter-spacing:-.01em;transition:transform .4s cubic-bezier(.16,1,.3,1);">Ηχητική Ταυτότητα</div><p style="font-size:1rem;color:rgba(250,246,241,.55);margin-top:8px;max-width:560px;">Το ηχητικό σας DNA, ενιαίο και αναγνωρίσιμο σε όλους τους χώρους και τα κανάλια σας.</p></div>
+            <span class="v4-svc-arrow" style="font-size:20px;background:var(--gold-text);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;align-self:center;transition:transform .4s ease;">→</span>
+          </a>
+          <a href="#contact" class="v4-svc v4-scroll" data-img="images/services/service-audio-upgrades.jpg" data-cap="Πεντακάθαρος, ισορροπημένος ήχος" data-reveal style="opacity:0;transform:translateY(20px);transition:opacity .8s ease .15s,transform .8s cubic-bezier(.16,1,.3,1) .15s;text-decoration:none;color:#faf6f1;display:flex;align-items:baseline;gap:24px;padding:clamp(26px,3vw,38px) 6px;border-bottom:1px solid rgba(250,246,241,.14);">
+            <span style="font-size:13px;font-weight:700;color:rgba(250,246,241,.4);width:34px;flex:none;">04</span>
+            <div style="flex:1;"><div class="v4-svc-title" style="font-weight:700;font-size:clamp(1.5rem,2.8vw,2.4rem);letter-spacing:-.01em;transition:transform .4s cubic-bezier(.16,1,.3,1);">Ακουστική Αναβάθμιση</div><p style="font-size:1rem;color:rgba(250,246,241,.55);margin-top:8px;max-width:560px;">Ακουστική βελτιστοποίηση για πεντακάθαρο, ισορροπημένο ήχο που αναδεικνύει την ατμόσφαιρα.</p></div>
+            <span class="v4-svc-arrow" style="font-size:20px;background:var(--gold-text);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;align-self:center;transition:transform .4s ease;">→</span>
+          </a>
+        </div>
+        <div class="v4-svc-sticky" style="position:sticky;top:120px;">
+          <div style="position:relative;border-radius:6px;overflow:hidden;aspect-ratio:3/3.9;background:#161412;">
+            <div id="v4-svc-preview" style="position:absolute;inset:0;background-image:url('images/about/about-journey-team-collaboration.jpg');background-size:cover;background-position:center;transition:opacity .5s ease;"></div>
+            <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none;">
+              <div style="width:62px;height:62px;border-radius:50%;border:1px solid rgba(250,246,241,.28);display:flex;align-items:center;justify-content:center;background:rgba(11,10,10,.4);backdrop-filter:blur(4px);"><span style="font-size:14px;background:var(--gold-text);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;">♪</span></div>
+            </div>
+            <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,10,10,0) 55%,rgba(11,10,10,.72));pointer-events:none;"></div>
+            <div id="v4-svc-cap" style="position:absolute;bottom:18px;left:18px;right:18px;font-family:'GFS Didot',serif;font-style:italic;font-size:1.15rem;color:#faf6f1;pointer-events:none;">Περάστε τον δείκτη πάνω από μια υπηρεσία</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ INDUSTRIES (FILMSTRIP) ============ -->
+  <section id="industries" data-scene="midnight" data-screen-label="Industries" style="padding:clamp(90px,13vh,150px) 0;position:relative;overflow:hidden;">
+    <div style="max-width:1500px;margin:0 auto;padding:0 clamp(24px,5vw,72px);">
+      <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:30px;flex-wrap:wrap;margin-bottom:48px;">
+        <div>
+          <div data-reveal style="opacity:0;transform:translateY(24px);transition:all .9s cubic-bezier(.16,1,.3,1);display:flex;align-items:center;gap:14px;margin-bottom:18px;">
+            <span style="width:34px;height:1px;background:var(--gold);display:inline-block;"></span>
+            <span style="font-size:12px;letter-spacing:.32em;font-weight:700;color:rgba(250,246,241,.6);">ΚΛΑΔΟΙ</span>
+          </div>
+          <h2 data-reveal style="opacity:0;transform:translateY(28px);transition:all 1s cubic-bezier(.16,1,.3,1) .06s;font-weight:800;font-size:clamp(2.2rem,5vw,4rem);line-height:1.02;letter-spacing:-.02em;max-width:820px;">Ο κόσμος σας, η <span style="font-family:'GFS Didot',serif;font-style:italic;font-weight:400;font-size:1.08em;background:var(--gold-text);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;">εξειδίκευσή</span> μας</h2>
+        </div>
+        <span data-reveal id="v4-strip-hint" style="opacity:0;transition:opacity .9s ease .2s;font-size:11px;letter-spacing:.26em;font-weight:600;color:rgba(250,246,241,.45);white-space:nowrap;">DRAG / SCROLL →</span>
+      </div>
+    </div>
+    <div id="v4-strip-wrap" style="padding:0 clamp(24px,5vw,72px);">
+      <div id="v4-strip" data-reveal style="opacity:0;transition:opacity 1s ease;display:flex;flex-wrap:nowrap;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:14px;cursor:grab;-webkit-overflow-scrolling:touch;scrollbar-width:none;">
+        <a href="#contact" class="v4-ind v4-scroll" style="scroll-snap-align:start;flex:none;width:clamp(260px,30vw,420px);height:clamp(380px,54vh,560px);text-decoration:none;position:relative;border-radius:6px;overflow:hidden;display:block;">
+          <img class="v4-ind-img" src="images/industries/industry-hotels-resorts.jpg" alt="Ξενοδοχεία &amp; Θέρετρα" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.16,1,.3,1);">
+          <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,10,10,.08) 30%,rgba(11,10,10,.85));"></div>
+          <div style="position:absolute;bottom:0;left:0;right:0;padding:26px;"><div style="font-size:11px;letter-spacing:.2em;font-weight:700;background:var(--gold-text);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;margin-bottom:8px;">01</div><div style="font-weight:700;font-size:1.45rem;color:#faf6f1;margin-bottom:6px;">Ξενοδοχεία &amp; Θέρετρα</div><p style="font-size:.92rem;color:rgba(250,246,241,.64);line-height:1.5;">Μουσικά τοπία μελετημένα για κάθε ώρα της ημέρας και κάθε χώρο.</p></div>
+        </a>
+        <a href="#contact" class="v4-ind v4-scroll" style="scroll-snap-align:start;flex:none;width:clamp(260px,30vw,420px);height:clamp(380px,54vh,560px);text-decoration:none;position:relative;border-radius:6px;overflow:hidden;display:block;">
+          <img class="v4-ind-img" src="images/industries/industry-restaurants-bars.jpg" alt="Εστιατόρια &amp; Bar" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.16,1,.3,1);">
+          <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,10,10,.08) 30%,rgba(11,10,10,.85));"></div>
+          <div style="position:absolute;bottom:0;left:0;right:0;padding:26px;"><div style="font-size:11px;letter-spacing:.2em;font-weight:700;background:var(--gold-text);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;margin-bottom:8px;">02</div><div style="font-weight:700;font-size:1.45rem;color:#faf6f1;margin-bottom:6px;">Εστιατόρια &amp; Bar</div><p style="font-size:.92rem;color:rgba(250,246,241,.64);line-height:1.5;">Ήχος που ακολουθεί το flow του service και «κρατάει» τους επισκέπτες περισσότερο.</p></div>
+        </a>
+        <a href="#contact" class="v4-ind v4-scroll" style="scroll-snap-align:start;flex:none;width:clamp(260px,30vw,420px);height:clamp(380px,54vh,560px);text-decoration:none;position:relative;border-radius:6px;overflow:hidden;display:block;">
+          <img class="v4-ind-img" src="images/industries/industry-events-experiences.jpg" alt="Εκδηλώσεις &amp; Εμπειρίες" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.16,1,.3,1);">
+          <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,10,10,.08) 30%,rgba(11,10,10,.85));"></div>
+          <div style="position:absolute;bottom:0;left:0;right:0;padding:26px;"><div style="font-size:11px;letter-spacing:.2em;font-weight:700;background:var(--gold-text);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;margin-bottom:8px;">03</div><div style="font-weight:700;font-size:1.45rem;color:#faf6f1;margin-bottom:6px;">Εκδηλώσεις &amp; Εμπειρίες</div><p style="font-size:.92rem;color:rgba(250,246,241,.64);line-height:1.5;">Φυσικές, αβίαστες μουσικές μεταβάσεις με απόλυτο συγχρονισμό.</p></div>
+        </a>
+        <a href="#contact" class="v4-ind v4-scroll" style="scroll-snap-align:start;flex:none;width:clamp(260px,30vw,420px);height:clamp(380px,54vh,560px);text-decoration:none;position:relative;border-radius:6px;overflow:hidden;display:block;">
+          <img class="v4-ind-img" src="images/industries/industry-retail-stores.jpg" alt="Καταστήματα Λιανικής" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.16,1,.3,1);">
+          <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,10,10,.08) 30%,rgba(11,10,10,.85));"></div>
+          <div style="position:absolute;bottom:0;left:0;right:0;padding:26px;"><div style="font-size:11px;letter-spacing:.2em;font-weight:700;background:var(--gold-text);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;margin-bottom:8px;">04</div><div style="font-weight:700;font-size:1.45rem;color:#faf6f1;margin-bottom:6px;">Καταστήματα Λιανικής</div><p style="font-size:.92rem;color:rgba(250,246,241,.64);line-height:1.5;">Μουσική που ενθαρρύνει την εξερεύνηση και αναδεικνύει το brand.</p></div>
+        </a>
+        <a href="#contact" class="v4-ind v4-scroll" style="scroll-snap-align:start;flex:none;width:clamp(260px,30vw,420px);height:clamp(380px,54vh,560px);text-decoration:none;position:relative;border-radius:6px;overflow:hidden;display:block;">
+          <img class="v4-ind-img" src="images/industries/industry-wellness-gyms.jpg" alt="Wellness &amp; Γυμναστήρια" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.16,1,.3,1);">
+          <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,10,10,.08) 30%,rgba(11,10,10,.85));"></div>
+          <div style="position:absolute;bottom:0;left:0;right:0;padding:26px;"><div style="font-size:11px;letter-spacing:.2em;font-weight:700;background:var(--gold-text);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;margin-bottom:8px;">05</div><div style="font-weight:700;font-size:1.45rem;color:#faf6f1;margin-bottom:6px;">Wellness &amp; Γυμναστήρια</div><p style="font-size:.92rem;color:rgba(250,246,241,.64);line-height:1.5;">Ήχος σχεδιασμένος για χαλάρωση, συγκέντρωση ή κορύφωση ενέργειας.</p></div>
+        </a>
+        <a href="#contact" class="v4-ind v4-scroll" style="scroll-snap-align:start;flex:none;width:clamp(260px,30vw,420px);height:clamp(380px,54vh,560px);text-decoration:none;position:relative;border-radius:6px;overflow:hidden;display:block;">
+          <img class="v4-ind-img" src="images/industries/industry-art-museums-fashion.jpg" alt="Τέχνη, Μουσεία &amp; Μόδα" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.16,1,.3,1);">
+          <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,10,10,.08) 30%,rgba(11,10,10,.85));"></div>
+          <div style="position:absolute;bottom:0;left:0;right:0;padding:26px;"><div style="font-size:11px;letter-spacing:.2em;font-weight:700;background:var(--gold-text);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;margin-bottom:8px;">06</div><div style="font-weight:700;font-size:1.45rem;color:#faf6f1;margin-bottom:6px;">Τέχνη, Μουσεία &amp; Μόδα</div><p style="font-size:.92rem;color:rgba(250,246,241,.64);line-height:1.5;">Ηχητικές αφηγήσεις που πλαισιώνουν την εμπειρία και το βλέμμα του επισκέπτη.</p></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ APPROACH ============ -->
+  <section id="approach" data-scene="ember" data-screen-label="Approach" style="padding:clamp(90px,13vh,150px) 0;position:relative;overflow:hidden;">
+    <div style="max-width:1500px;margin:0 auto;padding:0 clamp(24px,5vw,72px);display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(40px,5vw,72px);align-items:center;" class="v4-appr-grid">
+      <div data-reveal style="opacity:0;transform:translateY(30px) scale(.97);transition:all 1.1s cubic-bezier(.16,1,.3,1);border-radius:6px;overflow:hidden;aspect-ratio:4/4.6;position:relative;">
+        <img data-parallax="0.06" src="images/homepage/vinyl-records-music-curation.jpg" alt="Μουσικός σχεδιασμός SensEar" style="width:100%;height:100%;object-fit:cover;transform:scale(1.1);will-change:transform;">
+        <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,10,10,0) 55%,rgba(11,10,10,.5));"></div>
+      </div>
+      <div>
+        <div data-reveal style="opacity:0;transform:translateY(24px);transition:all .9s cubic-bezier(.16,1,.3,1);display:flex;align-items:center;gap:14px;margin-bottom:18px;">
+          <span style="width:34px;height:1px;background:var(--gold);display:inline-block;"></span>
+          <span style="font-size:12px;letter-spacing:.32em;font-weight:700;color:rgba(250,246,241,.6);">Η ΠΡΟΣΕΓΓΙΣΗ ΜΑΣ</span>
+        </div>
+        <h2 data-reveal style="opacity:0;transform:translateY(28px);transition:all 1s cubic-bezier(.16,1,.3,1) .06s;font-weight:800;font-size:clamp(2.2rem,5vw,4rem);line-height:1.02;letter-spacing:-.02em;margin-bottom:18px;">Πώς <span style="font-family:'GFS Didot',serif;font-style:italic;font-weight:400;font-size:1.08em;background:var(--gold-text);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;">επαναπροσδιορίζουμε</span> τον χώρο σας</h2>
+        <p data-reveal style="opacity:0;transform:translateY(24px);transition:all 1s cubic-bezier(.16,1,.3,1) .12s;font-size:1.1rem;color:rgba(250,246,241,.6);max-width:560px;margin-bottom:38px;">Καινοτόμος μουσικός σχεδιασμός, με την ίδια φροντίδα που δίνετε σε κάθε άλλη πτυχή της επιχείρησής σας.</p>
+        <div style="display:flex;flex-direction:column;">
+          <div data-reveal style="opacity:0;transform:translateY(20px);transition:all .8s cubic-bezier(.16,1,.3,1);display:flex;gap:22px;padding:24px 0;border-top:1px solid rgba(250,246,241,.14);"><span style="font-size:13px;font-weight:700;color:rgba(250,246,241,.4);width:34px;flex:none;">01</span><div><div style="font-weight:700;font-size:1.3rem;margin-bottom:6px;">Αναβάθμιση του brand</div><p style="font-size:1rem;color:rgba(250,246,241,.55);line-height:1.55;">Βελτιώνουμε την αντίληψη και την αφοσίωση στο brand μέσα από μια αξέχαστη ατμόσφαιρα.</p></div></div>
+          <div data-reveal style="opacity:0;transform:translateY(20px);transition:all .8s cubic-bezier(.16,1,.3,1) .06s;display:flex;gap:22px;padding:24px 0;border-top:1px solid rgba(250,246,241,.14);"><span style="font-size:13px;font-weight:700;color:rgba(250,246,241,.4);width:34px;flex:none;">02</span><div><div style="font-weight:700;font-size:1.3rem;margin-bottom:6px;">Απόλυτος έλεγχος</div><p style="font-size:1rem;color:rgba(250,246,241,.55);line-height:1.55;">Αποκτάτε τον πλήρη έλεγχο στο ύφος, τη ροή και την ένταση του ήχου της επιχείρησής σας.</p></div></div>
+          <div data-reveal style="opacity:0;transform:translateY(20px);transition:all .8s cubic-bezier(.16,1,.3,1) .12s;display:flex;gap:22px;padding:24px 0;border-top:1px solid rgba(250,246,241,.14);border-bottom:1px solid rgba(250,246,241,.14);"><span style="font-size:13px;font-weight:700;color:rgba(250,246,241,.4);width:34px;flex:none;">03</span><div><div style="font-weight:700;font-size:1.3rem;margin-bottom:6px;">Συνεπής εμπειρία</div><p style="font-size:1rem;color:rgba(250,246,241,.55);line-height:1.55;">Εξασφαλίζουμε ένα ενιαίο, αδιάλειπτο ηχητικό ταξίδι σε όλα σας τα locations και κανάλια.</p></div></div>
+        </div>
+        <a href="#venues" data-reveal class="v4-cta v4-scroll" style="opacity:0;transform:translateY(20px);transition:all 1s cubic-bezier(.16,1,.3,1) .18s;position:relative;overflow:hidden;display:inline-flex;align-items:center;gap:10px;margin-top:36px;background:var(--gold);color:#0b0a0a;font-weight:700;font-size:15px;padding:16px 32px;border-radius:100px;text-decoration:none;"><img class="v4-cta-ico" src="images/brand/sensear-logo-color.png" alt="" style="width:20px;height:20px;object-fit:contain;transition:opacity .35s ease,transform .35s ease,width .35s ease,margin .35s ease;"><span class="v4-cta-label">Δείτε τα έργα μας</span><span class="v4-cta-arrow" style="display:inline-flex;align-items:center;max-width:0;opacity:0;overflow:hidden;transition:max-width .35s cubic-bezier(.16,1,.3,1),opacity .3s ease,margin-left .35s ease;font-size:17px;">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ VENUES ============ -->
+  <section id="venues" data-scene="stone" data-screen-label="Venues" style="padding:clamp(80px,11vh,120px) 0;border-top:1px solid rgba(250,246,241,.08);border-bottom:1px solid rgba(250,246,241,.08);overflow:hidden;">
+    <div style="max-width:1500px;margin:0 auto;padding:0 clamp(24px,5vw,72px);">
+      <div data-reveal style="opacity:0;transform:translateY(24px);transition:all .9s cubic-bezier(.16,1,.3,1);display:flex;align-items:center;gap:14px;margin-bottom:18px;">
+        <span style="width:34px;height:1px;background:var(--gold);display:inline-block;"></span>
+        <span style="font-size:12px;letter-spacing:.32em;font-weight:700;color:rgba(250,246,241,.6);">ΕΡΓΑ &amp; ΣΥΝΕΡΓΑΣΙΕΣ</span>
+      </div>
+      <h2 data-reveal style="opacity:0;transform:translateY(28px);transition:all 1s cubic-bezier(.16,1,.3,1) .06s;font-weight:800;font-size:clamp(1.9rem,4vw,3.2rem);line-height:1.04;letter-spacing:-.02em;max-width:760px;margin-bottom:56px;">Venues που μας <span style="font-family:'GFS Didot',serif;font-style:italic;font-weight:400;font-size:1.08em;background:var(--gold-text);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;">εμπιστεύονται</span> τον ήχο τους</h2>
+    </div>
+    <div data-reveal style="opacity:0;transition:opacity 1s ease;overflow:hidden;">
+      <div class="v4-marq" style="display:flex;width:max-content;animation:se-marq 42s linear infinite;gap:24px;">
+        <div style="display:flex;gap:24px;padding-right:24px;">
+          <div style="width:220px;flex:none;background:#16140f;border:1px solid rgba(250,246,241,.08);border-radius:6px;padding:26px;display:flex;flex-direction:column;align-items:center;gap:16px;"><div style="width:92px;height:92px;background:#faf6f1;border-radius:5px;display:flex;align-items:center;justify-content:center;padding:12px;"><img src="images/homepage/clients/client-klouvi-bar-athens.jpg" alt="Klouvi Bar" style="max-width:100%;max-height:100%;object-fit:contain;"></div><div style="text-align:center;"><div style="font-weight:700;letter-spacing:.14em;font-size:.92rem;">KLOUVI BAR</div><div style="font-size:.78rem;color:rgba(250,246,241,.5);margin-top:3px;">Athens</div></div></div>
+          <div style="width:220px;flex:none;background:#16140f;border:1px solid rgba(250,246,241,.08);border-radius:6px;padding:26px;display:flex;flex-direction:column;align-items:center;gap:16px;"><div style="width:92px;height:92px;background:#faf6f1;border-radius:5px;display:flex;align-items:center;justify-content:center;padding:12px;"><img src="images/homepage/clients/client-blue-bamboo-athens-serifos.jpg" alt="Blue Bamboo" style="max-width:100%;max-height:100%;object-fit:contain;"></div><div style="text-align:center;"><div style="font-weight:700;letter-spacing:.14em;font-size:.92rem;">BLUE BAMBOO</div><div style="font-size:.78rem;color:rgba(250,246,241,.5);margin-top:3px;">Athens · Serifos</div></div></div>
+          <div style="width:220px;flex:none;background:#16140f;border:1px solid rgba(250,246,241,.08);border-radius:6px;padding:26px;display:flex;flex-direction:column;align-items:center;gap:16px;"><div style="width:92px;height:92px;background:#faf6f1;border-radius:5px;display:flex;align-items:center;justify-content:center;padding:12px;"><img src="images/homepage/clients/client-beach-house-antiparos.jpg" alt="Beach House" style="max-width:100%;max-height:100%;object-fit:contain;"></div><div style="text-align:center;"><div style="font-weight:700;letter-spacing:.14em;font-size:.92rem;">BEACH HOUSE</div><div style="font-size:.78rem;color:rgba(250,246,241,.5);margin-top:3px;">Antiparos</div></div></div>
+          <div style="width:220px;flex:none;background:#16140f;border:1px solid rgba(250,246,241,.08);border-radius:6px;padding:26px;display:flex;flex-direction:column;align-items:center;gap:16px;"><div style="width:92px;height:92px;background:#faf6f1;border-radius:5px;display:flex;align-items:center;justify-content:center;padding:12px;"><img src="images/homepage/clients/client-pelicanos-sifnos.jpg" alt="Pelicanos" style="max-width:100%;max-height:100%;object-fit:contain;"></div><div style="text-align:center;"><div style="font-weight:700;letter-spacing:.14em;font-size:.92rem;">PELICANOS</div><div style="font-size:.78rem;color:rgba(250,246,241,.5);margin-top:3px;">Sifnos</div></div></div>
+          <div style="width:220px;flex:none;background:#16140f;border:1px solid rgba(250,246,241,.08);border-radius:6px;padding:26px;display:flex;flex-direction:column;align-items:center;gap:16px;"><div style="width:92px;height:92px;background:#faf6f1;border-radius:5px;display:flex;align-items:center;justify-content:center;padding:12px;"><img src="images/homepage/clients/client-yam-antiparos.png" alt="Yam" style="max-width:100%;max-height:100%;object-fit:contain;"></div><div style="text-align:center;"><div style="font-weight:700;letter-spacing:.14em;font-size:.92rem;">YAM</div><div style="font-size:.78rem;color:rgba(250,246,241,.5);margin-top:3px;">Antiparos</div></div></div>
+        </div>
+        <div style="display:flex;gap:24px;padding-right:24px;" aria-hidden="true">
+          <div style="width:220px;flex:none;background:#16140f;border:1px solid rgba(250,246,241,.08);border-radius:6px;padding:26px;display:flex;flex-direction:column;align-items:center;gap:16px;"><div style="width:92px;height:92px;background:#faf6f1;border-radius:5px;display:flex;align-items:center;justify-content:center;padding:12px;"><img src="images/homepage/clients/client-klouvi-bar-athens.jpg" alt="" style="max-width:100%;max-height:100%;object-fit:contain;"></div><div style="text-align:center;"><div style="font-weight:700;letter-spacing:.14em;font-size:.92rem;">KLOUVI BAR</div><div style="font-size:.78rem;color:rgba(250,246,241,.5);margin-top:3px;">Athens</div></div></div>
+          <div style="width:220px;flex:none;background:#16140f;border:1px solid rgba(250,246,241,.08);border-radius:6px;padding:26px;display:flex;flex-direction:column;align-items:center;gap:16px;"><div style="width:92px;height:92px;background:#faf6f1;border-radius:5px;display:flex;align-items:center;justify-content:center;padding:12px;"><img src="images/homepage/clients/client-blue-bamboo-athens-serifos.jpg" alt="" style="max-width:100%;max-height:100%;object-fit:contain;"></div><div style="text-align:center;"><div style="font-weight:700;letter-spacing:.14em;font-size:.92rem;">BLUE BAMBOO</div><div style="font-size:.78rem;color:rgba(250,246,241,.5);margin-top:3px;">Athens · Serifos</div></div></div>
+          <div style="width:220px;flex:none;background:#16140f;border:1px solid rgba(250,246,241,.08);border-radius:6px;padding:26px;display:flex;flex-direction:column;align-items:center;gap:16px;"><div style="width:92px;height:92px;background:#faf6f1;border-radius:5px;display:flex;align-items:center;justify-content:center;padding:12px;"><img src="images/homepage/clients/client-beach-house-antiparos.jpg" alt="" style="max-width:100%;max-height:100%;object-fit:contain;"></div><div style="text-align:center;"><div style="font-weight:700;letter-spacing:.14em;font-size:.92rem;">BEACH HOUSE</div><div style="font-size:.78rem;color:rgba(250,246,241,.5);margin-top:3px;">Antiparos</div></div></div>
+          <div style="width:220px;flex:none;background:#16140f;border:1px solid rgba(250,246,241,.08);border-radius:6px;padding:26px;display:flex;flex-direction:column;align-items:center;gap:16px;"><div style="width:92px;height:92px;background:#faf6f1;border-radius:5px;display:flex;align-items:center;justify-content:center;padding:12px;"><img src="images/homepage/clients/client-pelicanos-sifnos.jpg" alt="" style="max-width:100%;max-height:100%;object-fit:contain;"></div><div style="text-align:center;"><div style="font-weight:700;letter-spacing:.14em;font-size:.92rem;">PELICANOS</div><div style="font-size:.78rem;color:rgba(250,246,241,.5);margin-top:3px;">Sifnos</div></div></div>
+          <div style="width:220px;flex:none;background:#16140f;border:1px solid rgba(250,246,241,.08);border-radius:6px;padding:26px;display:flex;flex-direction:column;align-items:center;gap:16px;"><div style="width:92px;height:92px;background:#faf6f1;border-radius:5px;display:flex;align-items:center;justify-content:center;padding:12px;"><img src="images/homepage/clients/client-yam-antiparos.png" alt="" style="max-width:100%;max-height:100%;object-fit:contain;"></div><div style="text-align:center;"><div style="font-weight:700;letter-spacing:.14em;font-size:.92rem;">YAM</div><div style="font-size:.78rem;color:rgba(250,246,241,.5);margin-top:3px;">Antiparos</div></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ JOURNAL ============ -->
+  <section id="journal" data-scene="stone" data-screen-label="Journal" style="padding:clamp(90px,13vh,150px) 0;position:relative;">
+    <div style="max-width:1500px;margin:0 auto;padding:0 clamp(24px,5vw,72px);">
+      <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:30px;margin-bottom:54px;flex-wrap:wrap;">
+        <div>
+          <div data-reveal style="opacity:0;transform:translateY(24px);transition:all .9s cubic-bezier(.16,1,.3,1);display:flex;align-items:center;gap:14px;margin-bottom:18px;">
+            <span style="width:34px;height:1px;background:var(--gold);display:inline-block;"></span>
+            <span style="font-size:12px;letter-spacing:.32em;font-weight:700;color:rgba(250,246,241,.6);">THE CURATION JOURNAL</span>
+          </div>
+          <h2 data-reveal style="opacity:0;transform:translateY(28px);transition:all 1s cubic-bezier(.16,1,.3,1) .06s;font-weight:800;font-size:clamp(1.9rem,4vw,3.2rem);line-height:1.04;letter-spacing:-.02em;max-width:680px;">Πώς ο ήχος <span style="font-family:'GFS Didot',serif;font-style:italic;font-weight:400;font-size:1.08em;background:var(--gold-text);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;">διαμορφώνει</span> την αντίληψη</h2>
+        </div>
+        <a href="#journal" data-reveal class="v4-scroll" style="opacity:0;transition:opacity .9s ease .2s;font-size:14px;font-weight:600;color:#faf6f1;text-decoration:none;border-bottom:1px solid rgba(250,246,241,.3);padding-bottom:4px;white-space:nowrap;">Όλα τα άρθρα →</a>
+      </div>
+      <div class="v4-journal-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:26px;">
+        <a href="#journal" class="v4-card v4-scroll" data-reveal style="opacity:0;transform:translateY(30px);transition:opacity .8s ease,transform .8s cubic-bezier(.16,1,.3,1);text-decoration:none;color:#faf6f1;display:flex;flex-direction:column;">
+          <div style="border-radius:6px;overflow:hidden;aspect-ratio:4/3;margin-bottom:22px;"><img class="v4-card-img" src="images/homepage/blog-music-branding-tips.webp" alt="" style="width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.16,1,.3,1);"></div>
+          <span style="font-size:11px;letter-spacing:.22em;font-weight:700;background:var(--gold-text);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;margin-bottom:12px;">INSIGHTS</span>
+          <h3 style="font-weight:700;font-size:1.28rem;line-height:1.28;margin-bottom:12px;">Τρεις λόγοι που η μουσική έχει σημασία στη φιλοξενία</h3>
+          <p style="font-size:.96rem;color:rgba(250,246,241,.55);line-height:1.6;">Η επιμελημένη μουσική διαμορφώνει το πώς νιώθουν οι επισκέπτες, τι θυμούνται και πόσο μένουν.</p>
+        </a>
+        <a href="#journal" class="v4-card v4-scroll" data-reveal style="opacity:0;transform:translateY(30px);transition:opacity .8s ease .08s,transform .8s cubic-bezier(.16,1,.3,1) .08s;text-decoration:none;color:#faf6f1;display:flex;flex-direction:column;">
+          <div style="border-radius:6px;overflow:hidden;aspect-ratio:4/3;margin-bottom:22px;"><img class="v4-card-img" src="images/homepage/blog-music-curation-venues.jpg" alt="" style="width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.16,1,.3,1);"></div>
+          <span style="font-size:11px;letter-spacing:.22em;font-weight:700;background:var(--gold-text);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;margin-bottom:12px;">RESEARCH</span>
+          <h3 style="font-weight:700;font-size:1.28rem;line-height:1.28;margin-bottom:12px;">Πώς η μουσική του brand μετατρέπει επισκέπτες σε πελάτες</h3>
+          <p style="font-size:.96rem;color:rgba(250,246,241,.55);line-height:1.6;">Έρευνες δείχνουν πώς ο στρατηγικά μελετημένος ήχος αυξάνει τα έσοδα σε χώρους φιλοξενίας.</p>
+        </a>
+        <a href="#journal" class="v4-card v4-scroll" data-reveal style="opacity:0;transform:translateY(30px);transition:opacity .8s ease .16s,transform .8s cubic-bezier(.16,1,.3,1) .16s;text-decoration:none;color:#faf6f1;display:flex;flex-direction:column;">
+          <div style="border-radius:6px;overflow:hidden;aspect-ratio:4/3;margin-bottom:22px;"><img class="v4-card-img" src="images/homepage/blog-music-hospitality-brand.jpg" alt="" style="width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.16,1,.3,1);"></div>
+          <span style="font-size:11px;letter-spacing:.22em;font-weight:700;background:var(--gold-text);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;margin-bottom:12px;">EDUCATION</span>
+          <h3 style="font-weight:700;font-size:1.28rem;line-height:1.28;margin-bottom:12px;">Τι ακριβώς κάνει ένας music curator;</h3>
+          <p style="font-size:.96rem;color:rgba(250,246,241,.55);line-height:1.6;">Μάθετε πώς χτίζεται μια μουσική ταυτότητα μέσα από στρατηγική επιμέλεια και sonic branding.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT CTA ============ -->
+  <section id="contact" data-scene="ember" data-screen-label="Contact" style="position:relative;padding:clamp(110px,16vh,170px) 0;overflow:hidden;">
+    <img data-parallax="0.08" src="images/homepage/sensear-signature-playlist-service.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.12);will-change:transform;">
+    <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,10,10,.84),rgba(11,10,10,.93));"></div>
+    <div style="position:relative;max-width:1100px;margin:0 auto;padding:0 clamp(24px,5vw,72px);text-align:center;">
+      <div data-reveal style="opacity:0;transform:translateY(22px);transition:all .9s cubic-bezier(.16,1,.3,1);font-size:12px;letter-spacing:.32em;font-weight:700;background:var(--gold-text);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;margin-bottom:26px;">ΑΣ ΣΥΝΕΡΓΑΣΤΟΥΜΕ</div>
+      <h2 data-reveal style="opacity:0;transform:translateY(30px);transition:all 1s cubic-bezier(.16,1,.3,1) .08s;font-weight:800;font-size:clamp(2.6rem,6.5vw,5.4rem);line-height:1;letter-spacing:-.025em;margin-bottom:30px;">Ας σχεδιάσουμε το <span style="font-family:'GFS Didot',serif;font-style:italic;font-weight:400;font-size:1.1em;background:var(--gold-text);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;">soundtrack</span> του χώρου σας</h2>
+      <div data-reveal style="opacity:0;transition:opacity 1s ease .14s;display:flex;justify-content:center;margin-bottom:30px;"><div data-wave style="width:200px;height:14px;background:repeating-linear-gradient(90deg,var(--accent) 0 2px,transparent 2px 7px);transform:scaleX(0);transform-origin:center;transition:transform 1.1s cubic-bezier(.16,1,.3,1);opacity:.85;"></div></div>
+      <p data-reveal style="opacity:0;transform:translateY(24px);transition:all 1s cubic-bezier(.16,1,.3,1) .18s;font-size:1.18rem;color:rgba(250,246,241,.68);max-width:600px;margin:0 auto 44px;line-height:1.6;">Πείτε μας για τον χώρο σας και θα σχεδιάσουμε μαζί την ηχητική του ταυτότητα.</p>
+      <div data-reveal style="opacity:0;transform:translateY(20px);transition:all 1s cubic-bezier(.16,1,.3,1) .26s;display:flex;gap:18px;justify-content:center;align-items:center;flex-wrap:wrap;margin-bottom:28px;">
+        <a class="v4-cta v4-email" data-u="hello" data-d="sensear.music" href="#" style="position:relative;overflow:hidden;display:inline-flex;align-items:center;gap:10px;background:var(--gold);color:#0b0a0a;font-weight:700;font-size:15px;padding:18px 36px;border-radius:100px;text-decoration:none;transition:background .35s ease,color .35s ease,box-shadow .35s ease;"><img class="v4-cta-ico" src="images/brand/sensear-logo-color.png" alt="" style="width:20px;height:20px;object-fit:contain;transition:opacity .35s ease,transform .35s ease,width .35s ease,margin .35s ease;"><span class="v4-cta-label">Κλείστε ραντεβού</span><span class="v4-cta-arrow" style="display:inline-flex;align-items:center;max-width:0;opacity:0;overflow:hidden;transition:max-width .35s cubic-bezier(.16,1,.3,1),opacity .3s ease,margin-left .35s ease;font-size:17px;">→</span></a>
+        <a class="v4-email" data-u="hello" data-d="sensear.music" href="#" style="font-size:15px;font-weight:600;color:#faf6f1;text-decoration:none;border-bottom:1px solid rgba(250,246,241,.35);padding-bottom:4px;"><span class="v4-email-txt"></span></a>
+      </div>
+      <div data-reveal style="opacity:0;transition:opacity 1s ease .32s;font-size:14px;color:rgba(250,246,241,.5);letter-spacing:.04em;"><a href="tel:+306976994212" style="color:inherit;text-decoration:none;">+30 697 699 4212</a> &nbsp;·&nbsp; Αθήνα, Ελλάδα</div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer data-scene="ink" style="background:#0b0a0a;border-top:1px solid rgba(250,246,241,.1);padding:84px 0 0;">
+    <div data-reveal style="opacity:0;transform:translateY(34px);transition:all 1s cubic-bezier(.16,1,.3,1);max-width:1500px;margin:0 auto;padding:0 clamp(24px,5vw,72px);display:grid;grid-template-columns:1.6fr 1fr 1.15fr .95fr 1.2fr;gap:40px;" class="v4-foot-grid">
+      <div>
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px;">
+          <img src="images/brand/sensear-logo-white.png" alt="SensEar" style="width:44px;height:44px;object-fit:contain;">
+          <div><div style="font-weight:800;letter-spacing:.18em;font-size:19px;">SENSEAR</div><div style="font-family:'GFS Didot',serif;font-style:italic;font-size:13px;color:rgba(250,246,241,.55);">Soundtracking Unique Experiences</div></div>
+        </div>
+        <p style="font-size:.95rem;color:rgba(250,246,241,.5);line-height:1.6;max-width:300px;margin-bottom:22px;">Μουσική επιμέλεια &amp; ηχητική ταυτότητα για χώρους, εκδηλώσεις και brands.</p>
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <a class="v4-email" data-u="hello" data-d="sensear.music" href="#" style="color:rgba(250,246,241,.7);text-decoration:none;font-size:.95rem;"><span class="v4-email-txt"></span></a>
+          <a href="tel:+306976994212" style="color:rgba(250,246,241,.7);text-decoration:none;font-size:.95rem;">(+30) 6976.994.212</a>
+        </div>
+      </div>
+      <div>
+        <div style="font-size:11px;letter-spacing:.22em;font-weight:700;background:var(--gold-text);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;margin-bottom:18px;">ΥΠΗΡΕΣΙΕΣ</div>
+        <div style="display:flex;flex-direction:column;gap:11px;"><a href="#services" class="v4-scroll" style="font-size:.95rem;color:rgba(250,246,241,.62);text-decoration:none;">Signature Playlists</a><a href="#services" class="v4-scroll" style="font-size:.95rem;color:rgba(250,246,241,.62);text-decoration:none;">Μουσική Εκδηλώσεων</a><a href="#services" class="v4-scroll" style="font-size:.95rem;color:rgba(250,246,241,.62);text-decoration:none;">Ηχητική Ταυτότητα</a><a href="#services" class="v4-scroll" style="font-size:.95rem;color:rgba(250,246,241,.62);text-decoration:none;">Ακουστική Αναβάθμιση</a></div>
+      </div>
+      <div>
+        <div style="font-size:11px;letter-spacing:.22em;font-weight:700;background:var(--gold-text);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;margin-bottom:18px;">ΚΛΑΔΟΙ</div>
+        <div style="display:flex;flex-direction:column;gap:11px;"><a href="#industries" class="v4-scroll" style="font-size:.95rem;color:rgba(250,246,241,.62);text-decoration:none;">Ξενοδοχεία &amp; Θέρετρα</a><a href="#industries" class="v4-scroll" style="font-size:.95rem;color:rgba(250,246,241,.62);text-decoration:none;">Εστιατόρια &amp; Bar</a><a href="#industries" class="v4-scroll" style="font-size:.95rem;color:rgba(250,246,241,.62);text-decoration:none;">Εκδηλώσεις &amp; Εμπειρίες</a><a href="#industries" class="v4-scroll" style="font-size:.95rem;color:rgba(250,246,241,.62);text-decoration:none;">Καταστήματα Λιανικής</a></div>
+      </div>
+      <div>
+        <div style="font-size:11px;letter-spacing:.22em;font-weight:700;background:var(--gold-text);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;margin-bottom:18px;">ΕΤΑΙΡΕΙΑ</div>
+        <div style="display:flex;flex-direction:column;gap:11px;"><a href="#venues" class="v4-scroll" style="font-size:.95rem;color:rgba(250,246,241,.62);text-decoration:none;">Έργα</a><a href="#journal" class="v4-scroll" style="font-size:.95rem;color:rgba(250,246,241,.62);text-decoration:none;">Journal</a><a href="#about" class="v4-scroll" style="font-size:.95rem;color:rgba(250,246,241,.62);text-decoration:none;">Σχετικά</a><a href="#contact" class="v4-scroll" style="font-size:.95rem;color:rgba(250,246,241,.62);text-decoration:none;">Επικοινωνία</a></div>
+      </div>
+      <div>
+        <div style="font-size:11px;letter-spacing:.22em;font-weight:700;background:var(--gold-text);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;margin-bottom:18px;">ΕΓΓΡΑΦΗ ΣΤΟ JOURNAL</div>
+        <p style="font-size:.9rem;color:rgba(250,246,241,.5);line-height:1.55;margin-bottom:16px;">Σκέψεις για μουσική, ατμόσφαιρα &amp; sonic branding.</p>
+        <form id="v4-news" style="display:flex;gap:8px;">
+          <input type="email" required placeholder="Το email σας" style="flex:1;min-width:0;background:rgba(250,246,241,.06);border:1px solid rgba(250,246,241,.16);border-radius:100px;padding:12px 18px;color:#faf6f1;font-size:.9rem;font-family:'Montserrat',sans-serif;outline:none;">
+          <button type="submit" class="v4-sub" style="flex:none;background:var(--gold);color:#0b0a0a;border:none;border-radius:100px;padding:12px 22px;font-weight:700;font-size:1rem;cursor:pointer;transition:box-shadow .35s ease;"><span class="v4-sub-arrow" style="display:inline-block;transition:transform .35s cubic-bezier(.16,1,.3,1);">→</span></button>
+        </form>
+      </div>
+    </div>
+    <div style="max-width:1500px;margin:48px auto 0;padding:24px clamp(24px,5vw,72px);border-top:1px solid rgba(250,246,241,.1);display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;">
+      <span style="font-size:12px;color:rgba(250,246,241,.4);">© 2026 SensEar Music. Με την επιφύλαξη παντός δικαιώματος.</span>
+      <div style="display:flex;gap:20px;"><a href="#" style="font-size:12px;color:rgba(250,246,241,.4);text-decoration:none;">Πολιτική Απορρήτου</a><a href="#" style="font-size:12px;color:rgba(250,246,241,.4);text-decoration:none;">Όροι Χρήσης</a></div>
+    </div>
+    <div style="overflow:hidden;line-height:.78;padding:34px 0 26px;position:relative;">
+      <div id="v4-monument" style="font-weight:900;letter-spacing:-.02em;font-size:clamp(4rem,16vw,16rem);text-align:center;color:transparent;-webkit-text-stroke:1px rgba(250,246,241,.16);position:relative;">SENSEAR
+        <span id="v4-monument-fill" style="position:absolute;inset:0;color:transparent;background:var(--gold-text);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;-webkit-text-stroke:0;clip-path:inset(0 100% 0 0);transition:clip-path 1.4s cubic-bezier(.16,1,.3,1);">SENSEAR</span>
+      </div>
+    </div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440,&quot;height&quot;:1000},&quot;reduceMotion&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;},&quot;accentColor&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#f0bd95&quot;,&quot;options&quot;:[&quot;#f0bd95&quot;,&quot;#e8a87c&quot;,&quot;#c9a36a&quot;,&quot;#d8b48a&quot;],&quot;tsType&quot;:&quot;string&quot;},&quot;industriesLayout&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;default&quot;:&quot;filmstrip&quot;,&quot;options&quot;:[&quot;filmstrip&quot;,&quot;grid&quot;],&quot;tsType&quot;:&quot;string&quot;}}">
+class Component extends DCLogic {
+  componentDidMount() {
+    const root = document.getElementById('v4-root');
+    if (!root) return;
+    this._cleanup = [];
+    const mq = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)');
+    const reduce = !!this.props.reduceMotion || (mq && mq.matches);
+    this.reduce = reduce;
+    this.playing = true;
+
+    // accent tweak
+    if (this.props.accentColor) {
+      document.documentElement.style.setProperty('--accent', this.props.accentColor);
+      root.style.setProperty('--accent', this.props.accentColor);
+    }
+
+    // ---- scene tones ----
+    const scenes = {
+      ink: '#0b0a0a',
+      wine: 'oklch(0.185 0.035 18)',
+      midnight: 'oklch(0.185 0.03 255)',
+      ember: 'oklch(0.20 0.032 62)',
+      stone: 'oklch(0.205 0.014 85)'
+    };
+    root.style.backgroundColor = scenes.ink;
+    if (reduce) root.style.transition = 'none';
+    const sceneObs = new IntersectionObserver((ents) => {
+      ents.forEach(en => {
+        if (en.isIntersecting) {
+          const s = en.target.getAttribute('data-scene');
+          if (s && scenes[s]) root.style.backgroundColor = scenes[s];
+        }
+      });
+    }, { rootMargin: '-45% 0px -45% 0px', threshold: 0 });
+    root.querySelectorAll('[data-scene]').forEach(s => sceneObs.observe(s));
+    this._cleanup.push(() => sceneObs.disconnect());
+
+    // ---- hero reveal ----
+    const revealHero = (instant) => {
+      const hs = [].slice.call(root.querySelectorAll('[data-hero]'));
+      hs.forEach((el, i) => {
+        const go = () => { el.style.opacity = '1'; el.style.transform = el.hasAttribute('data-hero') && el.style.transform.indexOf('rotate') > -1 ? el.style.transform : 'none'; el.querySelectorAll('[data-line]').forEach(l => l.style.transform = 'none'); };
+        if (instant) go(); else setTimeout(go, 120 + i * 110);
+      });
+    };
+    // preserve the rotated side-label transform
+    const sideLabel = root.querySelector('[data-hero][style*="rotate"]');
+
+    // ---- overture ----
+    const ov = document.getElementById('v4-overture');
+    let seen = false;
+    try { seen = sessionStorage.getItem('se_v4_overture') === '1'; } catch (e) {}
+    const finishOverture = () => {
+      if (!ov) { revealHero(false); return; }
+      ov.style.transition = 'transform .8s cubic-bezier(.65,0,.35,1), opacity .55s ease';
+      ov.style.transform = 'translateY(-100%)';
+      ov.style.opacity = '0';
+      setTimeout(() => { ov.style.display = 'none'; }, 850);
+      revealHero(false);
+    };
+    if (reduce || seen) {
+      if (ov) ov.style.display = 'none';
+      revealHero(true);
+    } else {
+      try { sessionStorage.setItem('se_v4_overture', '1'); } catch (e) {}
+      const fill = document.getElementById('v4-ov-fill');
+      const num = document.getElementById('v4-ov-num');
+      let p = 0; const start = performance.now(); const dur = 1500; let done = false;
+      const complete = () => { if (done) return; done = true; setTimeout(finishOverture, 170); };
+      const skip = () => { p = 100; };
+      if (ov) { ov.addEventListener('click', skip); this._cleanup.push(() => ov.removeEventListener('click', skip)); }
+      const tick = (t) => {
+        const e = Math.min(1, (t - start) / dur);
+        p = Math.max(p, Math.round(e * 100));
+        if (fill) fill.style.transform = 'scaleX(' + (p / 100) + ')';
+        if (num) num.textContent = p < 10 ? ('0' + p) : ('' + p);
+        if (p < 100) { this._ovRaf = requestAnimationFrame(tick); } else { complete(); }
+      };
+      this._ovRaf = requestAnimationFrame(tick);
+      // safety net
+      this._ovGuard = setTimeout(complete, 2600);
+    }
+
+    if (reduce) {
+      // neutralize everything
+      root.querySelectorAll('[data-reveal]').forEach(el => { el.style.opacity = '1'; el.style.transform = 'none'; });
+      root.querySelectorAll('[data-line]').forEach(l => l.style.transform = 'none');
+      root.querySelectorAll('[data-wave]').forEach(w => w.style.transform = 'scaleX(1)');
+      const mf = document.getElementById('v4-monument-fill'); if (mf) mf.style.clipPath = 'inset(0 0 0 0)';
+      root.querySelectorAll('[data-eqbar], .v4-marq, [data-ping]').forEach(e => { e.style.animationPlayState = 'paused'; });
+    } else {
+      // ---- scroll reveals ----
+      const revObs = new IntersectionObserver((ents, obs) => {
+        ents.forEach(en => {
+          if (en.isIntersecting) {
+            const el = en.target;
+            el.style.opacity = '1'; el.style.transform = 'none';
+            el.querySelectorAll('[data-line]').forEach(l => l.style.transform = 'none');
+            const w = el.querySelector('[data-wave]'); if (w) w.style.transform = 'scaleX(1)';
+            obs.unobserve(el);
+          }
+        });
+      }, { rootMargin: '0px 0px -10% 0px', threshold: 0.05 });
+      root.querySelectorAll('[data-reveal]').forEach(el => revObs.observe(el));
+      this._cleanup.push(() => revObs.disconnect());
+
+      // monument fill on enter
+      const mon = document.getElementById('v4-monument-fill');
+      if (mon) {
+        const mObs = new IntersectionObserver((ents, obs) => {
+          ents.forEach(en => { if (en.isIntersecting) { mon.style.clipPath = 'inset(0 0 0 0)'; obs.unobserve(en.target); } });
+        }, { threshold: 0.4 });
+        mObs.observe(mon);
+        this._cleanup.push(() => mObs.disconnect());
+      }
+
+      // ---- parallax ----
+      const px = [].slice.call(root.querySelectorAll('[data-parallax]'));
+      const onPx = () => {
+        const vh = window.innerHeight || document.documentElement.clientHeight;
+        px.forEach(el => {
+          const r = el.getBoundingClientRect();
+          if (r.bottom < -200 || r.top > vh + 200) return;
+          const c = r.top + r.height / 2;
+          const off = (c - vh / 2) / vh;
+          const f = parseFloat(el.getAttribute('data-parallax')) || 0.08;
+          el.style.transform = 'translate3d(0,' + (-off * f * 100) + 'px,0) scale(1.12)';
+        });
+      };
+      window.addEventListener('scroll', onPx, { passive: true });
+      window.addEventListener('resize', onPx, { passive: true });
+      onPx();
+      this._cleanup.push(() => { window.removeEventListener('scroll', onPx); window.removeEventListener('resize', onPx); });
+    }
+
+    // ---- nav scroll state + scrubber ----
+    const nav = document.getElementById('v4-nav');
+    const scrub = document.getElementById('v4-scrub');
+    const onScroll = () => {
+      const y = window.scrollY || window.pageYOffset;
+      if (nav) {
+        if (y > 40) {
+          nav.style.background = 'rgba(11,10,10,.55)';
+          nav.style.backdropFilter = 'blur(14px)';
+          nav.style.webkitBackdropFilter = 'blur(14px)';
+          nav.style.borderBottomColor = 'rgba(250,246,241,.08)';
+          nav.style.paddingTop = '15px'; nav.style.paddingBottom = '15px';
+        } else {
+          nav.style.background = 'transparent';
+          nav.style.backdropFilter = 'none';
+          nav.style.webkitBackdropFilter = 'none';
+          nav.style.borderBottomColor = 'rgba(250,246,241,0)';
+          nav.style.paddingTop = '26px'; nav.style.paddingBottom = '26px';
+        }
+      }
+      if (scrub) {
+        const h = document.documentElement.scrollHeight - window.innerHeight;
+        scrub.style.transform = 'scaleX(' + (h > 0 ? Math.min(1, y / h) : 0) + ')';
+      }
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+    this._cleanup.push(() => window.removeEventListener('scroll', onScroll));
+
+    // ---- route-transition wipe ----
+    const wipe = document.getElementById('v4-wipe');
+    const cols = wipe ? [].slice.call(wipe.querySelectorAll('[data-col]')) : [];
+    const wdot = document.getElementById('v4-wipe-dot');
+    const playWipe = (after) => {
+      if (reduce || !wipe || !cols.length) { if (after) after(); return; }
+      wipe.style.visibility = 'visible';
+      cols.forEach((c, i) => {
+        c.style.transformOrigin = 'bottom';
+        c.style.transition = 'transform .5s cubic-bezier(.65,0,.35,1)';
+        setTimeout(() => { c.style.transform = 'scaleY(1)'; }, i * 42);
+      });
+      if (wdot) setTimeout(() => { wdot.style.opacity = '1'; }, cols.length * 42);
+      const coverT = cols.length * 42 + 500;
+      setTimeout(() => {
+        if (after) after();
+        if (wdot) wdot.style.opacity = '0';
+        cols.forEach((c, i) => {
+          c.style.transformOrigin = 'top';
+          setTimeout(() => { c.style.transform = 'scaleY(0)'; }, i * 42);
+        });
+        setTimeout(() => { wipe.style.visibility = 'hidden'; }, cols.length * 42 + 520);
+      }, coverT + 140);
+    };
+
+    const scrollToId = (id) => {
+      const t = document.getElementById(id);
+      if (t) window.scrollTo({ top: t.getBoundingClientRect().top + (window.scrollY || window.pageYOffset) - 64, behavior: reduce ? 'auto' : 'smooth' });
+    };
+
+    // ---- overlay menu ----
+    const menu = document.getElementById('v4-menu');
+    const panel = document.getElementById('v4-menu-panel');
+    const openBtn = document.getElementById('v4-menu-open');
+    const closeBtn = document.getElementById('v4-menu-close');
+    const prev = document.getElementById('v4-menu-prev');
+    const mItems = menu ? [].slice.call(menu.querySelectorAll('[data-mitem]')) : [];
+    let menuOpen = false;
+    const openMenu = () => {
+      if (!menu) return;
+      menuOpen = true;
+      menu.style.visibility = 'visible'; menu.style.pointerEvents = 'auto'; menu.style.opacity = '1';
+      if (panel) panel.style.transform = 'none';
+      document.body.style.overflow = 'hidden';
+      if (openBtn) openBtn.setAttribute('aria-expanded', 'true');
+      mItems.forEach((it, i) => { setTimeout(() => { it.style.opacity = '1'; it.style.transform = 'none'; }, reduce ? 0 : 130 + i * 60); });
+      setTimeout(() => { if (mItems[0]) mItems[0].focus(); }, reduce ? 0 : 220);
+    };
+    const closeMenu = () => {
+      if (!menu) return;
+      menuOpen = false;
+      if (panel) panel.style.transform = 'translateX(100%)';
+      menu.style.opacity = '0';
+      mItems.forEach(it => { it.style.opacity = '0'; it.style.transform = 'translateY(18px)'; });
+      if (prev) prev.style.opacity = '0';
+      setTimeout(() => { menu.style.visibility = 'hidden'; menu.style.pointerEvents = 'none'; }, 430);
+      document.body.style.overflow = '';
+      if (openBtn) { openBtn.setAttribute('aria-expanded', 'false'); openBtn.focus(); }
+    };
+    if (openBtn) openBtn.addEventListener('click', openMenu);
+    if (closeBtn) closeBtn.addEventListener('click', closeMenu);
+    mItems.forEach(it => {
+      it.addEventListener('mouseenter', () => {
+        if (prev && it.dataset.img) { prev.style.backgroundImage = "url('" + it.dataset.img + "')"; prev.style.opacity = '0.22'; }
+        const lbl = it.querySelector('.v4-mlabel'); if (lbl) lbl.style.transform = 'translateX(12px)';
+      });
+      it.addEventListener('mouseleave', () => {
+        if (prev) prev.style.opacity = '0';
+        const lbl = it.querySelector('.v4-mlabel'); if (lbl) lbl.style.transform = 'none';
+      });
+      it.addEventListener('click', (e) => {
+        e.preventDefault();
+        const id = it.dataset.target;
+        closeMenu();
+        setTimeout(() => { playWipe(() => scrollToId(id)); }, 120);
+      });
+    });
+    if (menu) {
+      const onKey = (e) => {
+        if (!menuOpen) return;
+        if (e.key === 'Escape') { closeMenu(); return; }
+        if (e.key === 'Tab') {
+          const f = [].slice.call(menu.querySelectorAll('a[href], button')).filter(x => x.offsetParent !== null);
+          if (!f.length) return;
+          const first = f[0], last = f[f.length - 1];
+          if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+          else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+        }
+      };
+      document.addEventListener('keydown', onKey);
+      this._cleanup.push(() => document.removeEventListener('keydown', onKey));
+    }
+
+    // ---- in-page anchor links (smooth scroll, no wipe) ----
+    root.querySelectorAll('.v4-scroll').forEach(a => {
+      a.addEventListener('click', (e) => {
+        const href = a.getAttribute('href') || '';
+        if (href.charAt(0) === '#' && href.length > 1) {
+          e.preventDefault();
+          scrollToId(href.slice(1));
+        }
+      });
+    });
+
+    // ---- services sticky preview ----
+    const svcList = document.getElementById('v4-svc-list');
+    const svcPrev = document.getElementById('v4-svc-preview');
+    const svcCap = document.getElementById('v4-svc-cap');
+    if (svcList) {
+      root.querySelectorAll('.v4-svc').forEach(s => {
+        s.addEventListener('mouseenter', () => {
+          if (svcPrev && s.dataset.img) { svcPrev.style.backgroundImage = "url('" + s.dataset.img + "')"; }
+          if (svcCap && s.dataset.cap) svcCap.textContent = s.dataset.cap;
+          const t = s.querySelector('.v4-svc-title'); if (t) t.style.transform = 'translateX(10px)';
+          const ar = s.querySelector('.v4-svc-arrow'); if (ar) ar.style.transform = 'translateX(6px)';
+        });
+        s.addEventListener('mouseleave', () => {
+          const t = s.querySelector('.v4-svc-title'); if (t) t.style.transform = 'none';
+          const ar = s.querySelector('.v4-svc-arrow'); if (ar) ar.style.transform = 'none';
+        });
+      });
+      svcList.addEventListener('mouseleave', () => {
+        if (svcPrev) svcPrev.style.backgroundImage = "url('images/about/about-journey-team-collaboration.jpg')";
+        if (svcCap) svcCap.textContent = 'Περάστε τον δείκτη πάνω από μια υπηρεσία';
+      });
+    }
+
+    // ---- industries layout (filmstrip vs grid) ----
+    const strip = document.getElementById('v4-strip');
+    const hint = document.getElementById('v4-strip-hint');
+    const cards = strip ? [].slice.call(strip.querySelectorAll('.v4-ind')) : [];
+    const setLayout = () => {
+      if (!strip) return;
+      const wantGrid = (this.props.industriesLayout === 'grid') || reduce || window.innerWidth < 760;
+      if (wantGrid) {
+        strip.style.display = 'grid';
+        strip.style.gridTemplateColumns = window.innerWidth < 620 ? '1fr' : 'repeat(3,1fr)';
+        strip.style.overflowX = 'visible';
+        strip.style.gap = '18px';
+        strip.style.cursor = 'default';
+        cards.forEach(c => { c.style.width = 'auto'; c.style.height = 'auto'; c.style.aspectRatio = '1 / 1.04'; });
+        if (hint) hint.style.display = 'none';
+      } else {
+        strip.style.display = 'flex';
+        strip.style.flexWrap = 'nowrap';
+        strip.style.overflowX = 'auto';
+        strip.style.gap = '18px';
+        strip.style.cursor = 'grab';
+        cards.forEach(c => { c.style.width = 'clamp(260px,30vw,420px)'; c.style.height = 'clamp(380px,54vh,560px)'; c.style.aspectRatio = 'auto'; });
+        if (hint) hint.style.display = '';
+      }
+    };
+    setLayout();
+    window.addEventListener('resize', setLayout, { passive: true });
+    this._cleanup.push(() => window.removeEventListener('resize', setLayout));
+    // drag-to-scroll on filmstrip
+    if (strip) {
+      let down = false, sx = 0, sl = 0, moved = false;
+      strip.addEventListener('pointerdown', (e) => { if (strip.style.display === 'grid') return; down = true; moved = false; sx = e.clientX; sl = strip.scrollLeft; strip.style.cursor = 'grabbing'; });
+      strip.addEventListener('pointermove', (e) => { if (!down) return; const dx = e.clientX - sx; if (Math.abs(dx) > 4) moved = true; strip.scrollLeft = sl - dx; });
+      const up = () => { down = false; strip.style.cursor = 'grab'; };
+      strip.addEventListener('pointerup', up);
+      strip.addEventListener('pointerleave', up);
+      cards.forEach(c => c.addEventListener('click', (e) => { if (moved) { e.preventDefault(); e.stopPropagation(); } }));
+      // card image zoom
+      cards.forEach(c => {
+        const img = c.querySelector('.v4-ind-img');
+        if (!img) return;
+        c.addEventListener('mouseenter', () => { img.style.transform = 'scale(1.06)'; });
+        c.addEventListener('mouseleave', () => { img.style.transform = 'none'; });
+      });
+    }
+
+    // ---- journal card image zoom ----
+    root.querySelectorAll('.v4-card').forEach(card => {
+      const img = card.querySelector('.v4-card-img');
+      if (!img) return;
+      card.addEventListener('mouseenter', () => { img.style.transform = 'scale(1.06)'; });
+      card.addEventListener('mouseleave', () => { img.style.transform = 'none'; });
+    });
+
+    // ---- EQ now-playing toggle ----
+    const eqBtn = root.querySelector('.v4-eq-btn');
+    if (eqBtn) {
+      eqBtn.addEventListener('mouseenter', () => { eqBtn.style.borderColor = 'var(--accent)'; eqBtn.style.background = 'rgba(240,189,149,.12)'; });
+      eqBtn.addEventListener('mouseleave', () => { eqBtn.style.borderColor = 'rgba(250,246,241,.3)'; eqBtn.style.background = 'rgba(11,10,10,.35)'; });
+      eqBtn.addEventListener('click', () => {
+        this.playing = !this.playing;
+        const st = this.playing ? 'running' : 'paused';
+        root.querySelectorAll('[data-eqbar]').forEach(b => { b.style.animationPlayState = st; });
+        const ic = eqBtn.querySelector('.v4-eq-icon');
+        if (ic) ic.textContent = this.playing ? '\u275A\u275A' : '\u25B6';
+      });
+    }
+
+    // ---- morph CTA buttons ----
+    root.querySelectorAll('.v4-cta').forEach(a => {
+      a.addEventListener('mouseenter', () => {
+        a.style.background = '#0b0a0a'; a.style.color = '#faf6f1'; a.style.boxShadow = 'inset 0 0 0 1.5px rgba(227,153,47,.85)';
+        const ico = a.querySelector('.v4-cta-ico'); if (ico) { ico.style.opacity = '0'; ico.style.width = '0'; ico.style.transform = 'scale(0)'; ico.style.marginRight = '-9px'; }
+        const arr = a.querySelector('.v4-cta-arrow'); if (arr) { arr.style.maxWidth = '22px'; arr.style.opacity = '1'; arr.style.marginLeft = '8px'; }
+      });
+      a.addEventListener('mouseleave', () => {
+        a.style.background = 'var(--gold)'; a.style.color = '#0b0a0a'; a.style.boxShadow = 'none';
+        const ico = a.querySelector('.v4-cta-ico'); if (ico) { ico.style.opacity = '1'; ico.style.width = '20px'; ico.style.transform = 'scale(1)'; ico.style.marginRight = '0'; }
+        const arr = a.querySelector('.v4-cta-arrow'); if (arr) { arr.style.maxWidth = '0'; arr.style.opacity = '0'; arr.style.marginLeft = '0'; }
+      });
+    });
+
+    // ---- newsletter sub button + mock submit ----
+    const sub = root.querySelector('.v4-sub');
+    if (sub) {
+      sub.addEventListener('mouseenter', () => { sub.style.boxShadow = '0 6px 22px -6px rgba(220,162,81,.6)'; const a = sub.querySelector('.v4-sub-arrow'); if (a) a.style.transform = 'translateX(4px)'; });
+      sub.addEventListener('mouseleave', () => { sub.style.boxShadow = 'none'; const a = sub.querySelector('.v4-sub-arrow'); if (a) a.style.transform = 'none'; });
+    }
+    const news = document.getElementById('v4-news');
+    if (news) news.addEventListener('submit', (e) => { e.preventDefault(); const i = news.querySelector('input'); if (i) { i.value = ''; i.placeholder = 'Ευχαριστούμε! ✦'; } });
+
+    // ---- marquee pause on hover ----
+    root.querySelectorAll('.v4-marq').forEach(m => {
+      m.addEventListener('mouseenter', () => { m.style.animationPlayState = 'paused'; });
+      m.addEventListener('mouseleave', () => { if (!reduce) m.style.animationPlayState = 'running'; });
+    });
+
+    // ---- assemble emails client-side ----
+    root.querySelectorAll('.v4-email').forEach(a => {
+      const addr = (a.dataset.u || '') + '@' + (a.dataset.d || '');
+      a.href = 'mailto:' + addr;
+      const t = a.querySelector('.v4-email-txt');
+      if (t) t.textContent = addr;
+    });
+  }
+
+  componentWillUnmount() {
+    if (this._ovRaf) cancelAnimationFrame(this._ovRaf);
+    if (this._ovGuard) clearTimeout(this._ovGuard);
+    if (this._cleanup) this._cleanup.forEach(fn => { try { fn(); } catch (e) {} });
+  }
+
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

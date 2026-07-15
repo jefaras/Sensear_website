@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{background:#16140f;}
+  .se-frame-wrap::-webkit-scrollbar{width:8px;height:8px;}
+  .se-frame-wrap::-webkit-scrollbar-thumb{background:rgba(240,189,149,.3);border-radius:8px;}
+</style>
+</helmet>
+
+<div style="min-height:100vh;background:#16140f;color:#faf6f1;font-family:'Montserrat',system-ui,sans-serif;padding:40px 36px 80px;">
+
+  <div style="max-width:1600px;margin:0 auto 40px;">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.18em;color:rgba(240,189,149,.7);margin-bottom:10px;">RESPONSIVE CHECK · SCALED +25%</div>
+    <h1 style="font-size:30px;font-weight:800;letter-spacing:-.01em;margin-bottom:10px;">SensEar Homepage_125 — across screens</h1>
+    <p style="font-size:14px;line-height:1.6;color:rgba(250,246,241,.6);max-width:760px;">Each frame loads <strong style="color:rgba(250,246,241,.85);">SensEar Homepage_125.dc.html</strong> at a real device width. Scroll inside any frame. Watch for horizontal overflow, nav crowding, and a cramped hero — the spots flagged below.</p>
+  </div>
+
+  <div style="display:flex;gap:36px;align-items:flex-start;overflow-x:auto;padding-bottom:20px;" class="se-frame-wrap">
+
+    <!-- PHONE -->
+    <div style="flex:0 0 auto;">
+      <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:12px;">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:500;color:#f0bd95;">PHONE</span>
+        <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:rgba(250,246,241,.45);">390 × 844</span>
+      </div>
+      <div style="width:390px;height:844px;border-radius:14px;overflow:hidden;border:1px solid rgba(250,246,241,.12);box-shadow:0 30px 70px rgba(0,0,0,.5);background:#0b0a0a;">
+        <iframe src="SensEar%20Homepage_125.dc.html" title="Phone 390" style="width:390px;height:844px;border:0;display:block;"></iframe>
+      </div>
+    </div>
+
+    <!-- TABLET -->
+    <div style="flex:0 0 auto;">
+      <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:12px;">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:500;color:#f0bd95;">TABLET</span>
+        <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:rgba(250,246,241,.45);">834 × 1000</span>
+      </div>
+      <div style="width:834px;height:1000px;border-radius:14px;overflow:hidden;border:1px solid rgba(250,246,241,.12);box-shadow:0 30px 70px rgba(0,0,0,.5);background:#0b0a0a;">
+        <iframe src="SensEar%20Homepage_125.dc.html" title="Tablet 834" style="width:834px;height:1000px;border:0;display:block;"></iframe>
+      </div>
+    </div>
+
+    <!-- DESKTOP -->
+    <div style="flex:0 0 auto;">
+      <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:12px;">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:500;color:#f0bd95;">DESKTOP</span>
+        <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:rgba(250,246,241,.45);">1440 × 1000</span>
+      </div>
+      <div style="width:1440px;height:1000px;border-radius:14px;overflow:hidden;border:1px solid rgba(250,246,241,.12);box-shadow:0 30px 70px rgba(0,0,0,.5);background:#0b0a0a;">
+        <iframe src="SensEar%20Homepage_125.dc.html" title="Desktop 1440" style="width:1440px;height:1000px;border:0;display:block;"></iframe>
+      </div>
+    </div>
+
+  </div>
+</div>
+</x-dc>
+</body>
+</html>

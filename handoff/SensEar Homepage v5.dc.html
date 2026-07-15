@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@300..900&family=GFS+Didot&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#0b0a0a;color:#faf6f1;font-family:'Commissioner',system-ui,sans-serif;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:clip}
+a{color:#f0bd95}
+a:hover{color:#faf6f1}
+::selection{background:#f0bd95;color:#0b0a0a}
+@keyframes se-lineup{from{transform:translateY(112%)}to{transform:translateY(0)}}
+@keyframes se-rise{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:translateY(0)}}
+@keyframes se-fade{from{opacity:0}to{opacity:1}}
+@keyframes se-marquee{to{transform:translateX(-50%)}}
+@keyframes se-eq{0%,100%{transform:scaleY(.3)}50%{transform:scaleY(1)}}
+@keyframes se-cue{0%,100%{transform:translateY(0);opacity:1}50%{transform:translateY(9px);opacity:.3}}
+@keyframes se-spin{to{transform:rotate(360deg)}}
+@keyframes se-orb{0%,100%{transform:translate3d(0,0,0) scale(1)}50%{transform:translate3d(4%,7%,0) scale(1.1)}}
+@keyframes se-imgin{from{transform:scale(1.16)}to{transform:scale(1)}}
+.se-und{padding-bottom:5px;background-image:linear-gradient(100deg,#edc4ac,#e2d6bf);background-repeat:no-repeat;background-position:0 100%;background-size:0% 2px;transition:background-size .35s cubic-bezier(.22,1,.36,1),color .3s}
+.se-und:hover{background-size:100% 2px;color:#faf6f1!important}
+.se-pill{transition:transform .35s cubic-bezier(.22,1,.36,1),box-shadow .35s}
+.se-pill:hover{transform:translateY(-3px);box-shadow:0 22px 44px -18px rgba(240,189,149,.55)}
+.se-gho{transition:border-color .3s,color .3s,background .3s}
+.se-gho:hover{border-color:#f0bd95!important;color:#f0bd95!important;background:rgba(240,189,149,.06)}
+.se-fw{transition:color .3s}
+.se-fw:hover{color:#faf6f1!important}
+.se-fp{transition:color .3s}
+.se-fp:hover{color:#f0bd95!important}
+.se-lnd{transition:border-color .3s}
+.se-lnd:hover{border-color:#0b0a0a!important}
+.se-lnp{transition:border-color .3s,color .3s}
+.se-lnp:hover{border-color:#f0bd95!important;color:#f0bd95!important}
+.se-row{transition:padding-left .4s cubic-bezier(.22,1,.36,1),background .4s}
+.se-row:hover{padding-left:clamp(14px,1.4vw,24px)!important;background:rgba(11,10,10,.035)}
+.se-crc{transition:background .35s,color .35s,transform .35s}
+.se-row:hover .se-crc{background:#0b0a0a;color:#faebe3;transform:rotate(-45deg)}
+.se-gap{transition:gap .3s}
+.se-gap:hover{gap:16px!important}
+.se-zi{transition:transform .8s cubic-bezier(.22,1,.36,1)}
+.se-zw:hover .se-zi{transform:scale(1.045)}
+.se-card{transition:transform .45s cubic-bezier(.22,1,.36,1),box-shadow .45s}
+.se-card:hover{transform:translateY(-8px);box-shadow:0 34px 70px -34px rgba(0,0,0,.65)}
+.se-ci{transition:transform .7s cubic-bezier(.22,1,.36,1)}
+.se-card:hover .se-ci{transform:scale(1.05)}
+.se-nlb{transition:transform .3s}
+.se-nlb:hover{transform:translateX(3px)}
+</style>
+</helmet>
+
+<div style="position:relative;width:100%;max-width:100vw;overflow-x:clip;background:#0b0a0a;color:#faf6f1">
+
+<!-- ══════════ NAV ══════════ -->
+<header data-screen-label="Nav" style="position:fixed;top:0;left:0;right:0;z-index:90;background:rgba(11,10,10,.6);backdrop-filter:blur(16px) saturate(1.3);border-bottom:1px solid rgba(250,246,241,.09)">
+  <div style="width:100%;max-width:min(var(--se-max,1760px),100%);margin:0 auto;padding:10px clamp(24px,4.2vw,84px);min-height:clamp(68px,5vw,88px);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px 22px">
+    <a href="#" style="display:flex;align-items:center;gap:13px;text-decoration:none;color:#faf6f1">
+      <img src="images/brand/sensear-logo-white.png" alt="SensEar logo" style="width:clamp(34px,2.4vw,44px);height:clamp(34px,2.4vw,44px);object-fit:contain">
+      <span style="font-weight:800;letter-spacing:.2em;font-size:clamp(16px,1.05vw,19px)">SENSEAR</span>
+    </a>
+    <nav style="display:flex;align-items:center;gap:clamp(13px,1.9vw,40px)">
+      <a href="#" class="se-und" style="color:rgba(250,246,241,.75);text-decoration:none;font-size:clamp(13.5px,.85vw,16px);font-weight:600;letter-spacing:.02em">Home</a>
+      <a href="#services" class="se-und" style="color:rgba(250,246,241,.75);text-decoration:none;font-size:clamp(13.5px,.85vw,16px);font-weight:600;letter-spacing:.02em">Services</a>
+      <a href="#industries" class="se-und" style="color:rgba(250,246,241,.75);text-decoration:none;font-size:clamp(13.5px,.85vw,16px);font-weight:600;letter-spacing:.02em">Industries</a>
+      <a href="#" class="se-und" style="color:rgba(250,246,241,.75);text-decoration:none;font-size:clamp(13.5px,.85vw,16px);font-weight:600;letter-spacing:.02em">Case Studies</a>
+      <a href="#journal" class="se-und" style="color:rgba(250,246,241,.75);text-decoration:none;font-size:clamp(13.5px,.85vw,16px);font-weight:600;letter-spacing:.02em">Blog</a>
+      <a href="#" class="se-und" style="color:rgba(250,246,241,.75);text-decoration:none;font-size:clamp(13.5px,.85vw,16px);font-weight:600;letter-spacing:.02em">About</a>
+    </nav>
+    <div style="display:flex;align-items:center;gap:14px">
+      <a href="#contact" style="background-image:linear-gradient(100deg,#f0cdb8 0%,#f7ddd0 15%,#fcefe7 29%,#ffffff 44%,#efeeec 58%,#dad8d6 72%,#d2cec9 84%,#e4d9c4 100%);color:#0b0a0a;text-decoration:none;font-weight:800;font-size:clamp(12.5px,.8vw,15px);letter-spacing:.03em;padding:11px 22px;border-radius:999px" class="se-pill">Contact</a>
+      <a href="#" class="se-gho" aria-label="Ελληνικά" style="display:inline-flex;align-items:center;gap:7px;border:1px solid rgba(250,246,241,.25);color:rgba(250,246,241,.8);border-radius:999px;padding:9px 15px;text-decoration:none;font-size:12.5px;font-weight:700;letter-spacing:.06em"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M2 12h20"></path><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>GR</a>
+    </div>
+  </div>
+</header>
+
+<!-- ══════════ HERO ══════════ -->
+<section data-screen-label="Hero" style="position:relative;min-height:100svh;display:grid;align-items:center;overflow:hidden;padding:clamp(120px,12vh,170px) 0 clamp(56px,7vh,90px)">
+  <div style="position:absolute;top:-12%;right:-6%;width:56vw;height:56vw;max-width:820px;max-height:820px;border-radius:999px;background:radial-gradient(circle,rgba(240,189,149,.17),rgba(240,189,149,0) 62%);animation:se-orb 17s ease-in-out infinite;pointer-events:none"></div>
+  <div style="position:absolute;bottom:-18%;left:-12%;width:48vw;height:48vw;max-width:640px;max-height:640px;border-radius:999px;background:radial-gradient(circle,rgba(250,235,227,.07),rgba(250,235,227,0) 60%);animation:se-orb 24s ease-in-out -8s infinite reverse;pointer-events:none"></div>
+
+  <div style="position:absolute;left:clamp(14px,1.6vw,38px);top:50%;transform:translateY(-50%);display:flex;flex-direction:column;align-items:center;gap:16px;z-index:5">
+    <div style="width:1px;height:48px;background:rgba(250,246,241,.2)"></div>
+    <div style="writing-mode:vertical-rl;transform:rotate(180deg);font-size:10px;letter-spacing:.3em;font-weight:700;color:rgba(250,246,241,.38);white-space:nowrap">ATHENS · GR — SONIC BRANDING</div>
+    <div style="width:1px;height:48px;background:rgba(250,246,241,.2)"></div>
+  </div>
+
+  <div style="width:100%;max-width:min(var(--se-max,1760px),100%);margin:0 auto;padding:0 clamp(24px,4.2vw,84px);position:relative;z-index:2">
+    <div style="display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);gap:clamp(48px,5.5vw,110px);align-items:center">
+      <div>
+        <div style="overflow:hidden;margin-bottom:clamp(24px,2.2vw,38px)">
+          <div style="display:flex;align-items:center;gap:14px;animation:se-lineup .9s cubic-bezier(.19,1,.22,1) .05s both">
+            <span style="width:34px;height:1px;background-image:linear-gradient(100deg,#edc4ac,#e2d6bf)"></span>
+            <span style="font-size:clamp(11px,.75vw,14px);font-weight:800;letter-spacing:.28em;background-image:linear-gradient(100deg,#edc4ac 0%,#f6dccd 19%,#fffaf6 42%,#eae8e4 60%,#d3cfc9 77%,#e2d6bf 100%);-webkit-background-clip:text;background-clip:text;color:transparent">MUSIC CURATION &amp; SONIC IDENTITY</span>
+          </div>
+        </div>
+        <h1 style="margin:0 0 clamp(28px,2.6vw,44px);font-size:clamp(3.4rem,7.1vw,8.6rem);line-height:1;letter-spacing:-.03em;font-weight:800">
+          <span style="display:block;animation:se-rise .95s cubic-bezier(.19,1,.22,1) .12s both">Soundtracking</span>
+          <span style="display:block;animation:se-rise .95s cubic-bezier(.19,1,.22,1) .24s both;font-family:'GFS Didot',serif;font-style:italic;font-weight:400;letter-spacing:-.012em;padding-right:.15em;background-image:linear-gradient(100deg,#edc4ac 0%,#f6dccd 19%,#fffaf6 42%,#eae8e4 60%,#d3cfc9 77%,#e2d6bf 100%);-webkit-background-clip:text;background-clip:text;color:transparent">Unique</span>
+          <span style="display:block;animation:se-rise .95s cubic-bezier(.19,1,.22,1) .36s both">Experiences</span>
+        </h1>
+        <div style="max-width:56ch;margin-bottom:clamp(36px,3.4vw,56px);animation:se-fade 1s ease .55s both">
+          <p style="margin:0;font-size:clamp(1.15rem,1.45vw,1.7rem);font-weight:700;line-height:1.4">Every venue has a story. Let music tell yours.</p>
+          <p style="margin:14px 0 0;font-size:clamp(1rem,1.15vw,1.35rem);line-height:1.6;color:rgba(250,246,241,.6);max-width:46ch">Sophisticated music curation services for places and experiences that "refuse" to sound generic.</p>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;align-items:center;gap:clamp(18px,1.8vw,30px);animation:se-fade 1s ease .7s both">
+          <a href="#services" style="display:inline-flex;align-items:center;gap:12px;background-image:linear-gradient(100deg,#f0cdb8 0%,#f7ddd0 15%,#fcefe7 29%,#ffffff 44%,#efeeec 58%,#dad8d6 72%,#d2cec9 84%,#e4d9c4 100%);color:#0b0a0a;text-decoration:none;font-weight:800;font-size:clamp(.95rem,1vw,1.15rem);padding:clamp(16px,1.3vw,21px) clamp(28px,2.3vw,40px);border-radius:999px" class="se-pill"><span>Explore our services</span><span aria-hidden="true">→</span></a>
+          <a href="#contact" style="display:inline-flex;align-items:center;gap:12px;border:1px solid rgba(250,246,241,.28);color:#faf6f1;text-decoration:none;font-weight:700;font-size:clamp(.95rem,1vw,1.15rem);padding:clamp(15px,1.25vw,20px) clamp(26px,2.1vw,38px);border-radius:999px" class="se-gho">Book a call</a>
+        </div>
+        <div onClick="{{toggleSound}}" role="button" aria-label="Toggle ambient sound" style="display:inline-flex;align-items:center;gap:16px;margin-top:clamp(40px,4vw,64px);cursor:pointer;animation:se-fade 1s ease .85s both">
+          <span style="display:flex;align-items:flex-end;gap:3px;height:26px">
+            <span style="width:3px;border-radius:3px;height:100%;background-image:linear-gradient(180deg,#f6dccd,#d3cfc9);transform-origin:bottom;opacity:var(--se-eqo,.55);animation:se-eq 1s ease-in-out -0.12s infinite;animation-duration:var(--se-eqd,1.6s)"></span>
+            <span style="width:3px;border-radius:3px;height:100%;background-image:linear-gradient(180deg,#f6dccd,#d3cfc9);transform-origin:bottom;opacity:var(--se-eqo,.55);animation:se-eq 1s ease-in-out -0.62s infinite;animation-duration:var(--se-eqd,1.6s)"></span>
+            <span style="width:3px;border-radius:3px;height:100%;background-image:linear-gradient(180deg,#f6dccd,#d3cfc9);transform-origin:bottom;opacity:var(--se-eqo,.55);animation:se-eq 1s ease-in-out -0.35s infinite;animation-duration:var(--se-eqd,1.6s)"></span>
+            <span style="width:3px;border-radius:3px;height:100%;background-image:linear-gradient(180deg,#f6dccd,#d3cfc9);transform-origin:bottom;opacity:var(--se-eqo,.55);animation:se-eq 1s ease-in-out -0.8s infinite;animation-duration:var(--se-eqd,1.6s)"></span>
+            <span style="width:3px;border-radius:3px;height:100%;background-image:linear-gradient(180deg,#f6dccd,#d3cfc9);transform-origin:bottom;opacity:var(--se-eqo,.55);animation:se-eq 1s ease-in-out -0.5s infinite;animation-duration:var(--se-eqd,1.6s)"></span>
+          </span>
+          <span style="display:flex;flex-direction:column;gap:3px">
+            <span style="font-size:10px;font-weight:800;letter-spacing:.28em;background-image:linear-gradient(100deg,#edc4ac 0%,#f6dccd 19%,#fffaf6 42%,#eae8e4 60%,#d3cfc9 77%,#e2d6bf 100%);-webkit-background-clip:text;background-clip:text;color:transparent">{{nowLabel}}</span>
+            <span style="font-family:'GFS Didot',serif;font-style:italic;font-size:clamp(1rem,1vw,1.2rem);color:rgba(250,246,241,.88)">The SensEar Sessions — Vol. 04</span>
+          </span>
+        </div>
+      </div>
+
+      <div style="position:relative;animation:se-fade 1.1s ease .5s both">
+        <div style="position:relative;aspect-ratio:4/4.55;overflow:hidden;border-radius:clamp(16px,1.4vw,26px);box-shadow:0 50px 110px -35px rgba(0,0,0,.85)">
+          <img src="images/carousel/carousel-event-venue.jpg" alt="Curated atmosphere — event venue with disco balls" style="width:100%;height:100%;object-fit:cover;animation:se-imgin 1s cubic-bezier(.22,1,.36,1) both;animation-timeline:view();animation-range:entry 0% cover 42%">
+          <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,10,10,0) 45%,rgba(11,10,10,.58))"></div>
+          <div style="position:absolute;left:clamp(20px,1.8vw,32px);right:clamp(20px,1.8vw,32px);bottom:clamp(18px,1.8vw,30px)">
+            <div style="font-size:10px;font-weight:800;letter-spacing:.3em;margin-bottom:6px;background-image:linear-gradient(100deg,#edc4ac 0%,#f6dccd 19%,#fffaf6 42%,#eae8e4 60%,#d3cfc9 77%,#e2d6bf 100%);-webkit-background-clip:text;background-clip:text;color:transparent">FEATURED SPACE</div>
+            <div style="font-family:'GFS Didot',serif;font-style:italic;font-size:clamp(1.4rem,1.7vw,2rem)">After-hours, scored.</div>
+          </div>
+        </div>
+        <div style="position:absolute;top:clamp(-26px,-1.5vw,-18px);right:clamp(-26px,-1.5vw,-18px);width:clamp(100px,8.5vw,148px);aspect-ratio:1;border-radius:999px;background:rgba(11,10,10,.78);border:1px solid rgba(250,246,241,.16);backdrop-filter:blur(8px);display:grid;place-items:center">
+          <svg viewBox="0 0 100 100" style="position:absolute;inset:0;width:100%;height:100%;animation:se-spin 16s linear infinite" aria-hidden="true">
+            <defs><path id="se-cir" d="M50,50 m-37,0 a37,37 0 1,1 74,0 a37,37 0 1,1 -74,0"></path></defs>
+            <text style="font-size:9.5px;letter-spacing:2.6px;font-weight:700;fill:#f0bd95;font-family:Commissioner,sans-serif"><textPath href="#se-cir">★ SENSEAR ★ EST · ATH ★ SENSEAR ★ EST · ATH</textPath></text>
+          </svg>
+          <img src="images/brand/sensear-logo-white.png" alt="" style="width:34%;height:34%;object-fit:contain;opacity:.9">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="position:absolute;bottom:clamp(18px,2.4vh,30px);left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:9px;z-index:5">
+    <span style="font-size:10px;font-weight:700;letter-spacing:.32em;color:rgba(250,246,241,.4)">SCROLL</span>
+    <div style="width:1px;height:32px;background:linear-gradient(rgba(250,246,241,.5),rgba(250,246,241,0));animation:se-cue 1.9s ease-in-out infinite"></div>
+  </div>
+</section>
+
+<!-- ══════════ MARQUEE ══════════ -->
+<section data-screen-label="Marquee" style="border-block:1px solid rgba(250,246,241,.1);padding:clamp(22px,2.2vw,36px) 0;overflow:hidden">
+  <div style="display:flex;width:max-content;gap:clamp(36px,3.4vw,60px);animation:se-marquee 44s linear infinite">
+    <div style="display:flex;align-items:center;gap:clamp(36px,3.4vw,60px);white-space:nowrap">
+      <span style="font-size:clamp(1.5rem,2.5vw,3rem);font-weight:800;letter-spacing:-.02em">Signature Playlists</span>
+      <span aria-hidden="true" style="font-size:clamp(1rem,1.4vw,1.6rem);background-image:linear-gradient(100deg,#edc4ac,#e2d6bf);-webkit-background-clip:text;background-clip:text;color:transparent">✦</span>
+      <span style="font-size:clamp(1.5rem,2.5vw,3rem);font-family:'GFS Didot',serif;font-style:italic;background-image:linear-gradient(100deg,#edc4ac 0%,#f6dccd 19%,#fffaf6 42%,#eae8e4 60%,#d3cfc9 77%,#e2d6bf 100%);-webkit-background-clip:text;background-clip:text;color:transparent">Event Soundtracks</span>
+      <span aria-hidden="true" style="font-size:clamp(1rem,1.4vw,1.6rem);background-image:linear-gradient(100deg,#edc4ac,#e2d6bf);-webkit-background-clip:text;background-clip:text;color:transparent">✦</span>
+      <span style="font-size:clamp(1.5rem,2.5vw,3rem);font-weight:800;letter-spacing:-.02em">Sonic Identity</span>
+      <span aria-hidden="true" style="font-size:clamp(1rem,1.4vw,1.6rem);background-image:linear-gradient(100deg,#edc4ac,#e2d6bf);-webkit-background-clip:text;background-clip:text;color:transparent">✦</span>
+      <span style="font-size:clamp(1.5rem,2.5vw,3rem);font-family:'GFS Didot',serif;font-style:italic;background-image:linear-gradient(100deg,#edc4ac 0%,#f6dccd 19%,#fffaf6 42%,#eae8e4 60%,#d3cfc9 77%,#e2d6bf 100%);-webkit-background-clip:text;background-clip:text;color:transparent">Audio Upgrades</span>
+      <span aria-hidden="true" style="font-size:clamp(1rem,1.4vw,1.6rem);background-image:linear-gradient(100deg,#edc4ac,#e2d6bf);-webkit-background-clip:text;background-clip:text;color:transparent">✦</span>
+    </div>
+    <div aria-hidden="true" style="display:flex;align-items:center;gap:clamp(36px,3.4vw,60px);white-space:nowrap">
+      <span style="font-size:clamp(1.5rem,2.5vw,3rem);font-weight:800;letter-spacing:-.02em">Signature Playlists</span>
+      <span style="font-size:clamp(1rem,1.4vw,1.6rem);background-image:linear-gradient(100deg,#edc4ac,#e2d6bf);-webkit-background-clip:text;background-clip:text;color:transparent">✦</span>
+      <span style="font-size:clamp(1.5rem,2.5vw,3rem);font-family:'GFS Didot',serif;font-style:italic;background-image:linear-gradient(100deg,#edc4ac 0%,#f6dccd 19%,#fffaf6 42%,#eae8e4 60%,#d3cfc9 77%,#e2d6bf 100%);-webkit-background-clip:text;background-clip:text;color:transparent">Event Soundtracks</span>
+      <span style="font-size:clamp(1rem,1.4vw,1.6rem);background-image:linear-gradient(100deg,#edc4ac,#e2d6bf);-webkit-background-clip:text;background-clip:text;color:transparent">✦</span>
+      <span style="font-size:clamp(1.5rem,2.5vw,3rem);font-weight:800;letter-spacing:-.02em">Sonic Identity</span>
+      <span style="font-size:clamp(1rem,1.4vw,1.6rem);background-image:linear-gradient(100deg,#edc4ac,#e2d6bf);-webkit-background-clip:text;background-clip:text;color:transparent">✦</span>
+      <span style="font-size:clamp(1.5rem,2.5vw,3rem);font-family:'GFS Didot',serif;font-style:italic;background-image:linear-gradient(100deg,#edc4ac 0%,#f6dccd 19%,#fffaf6 42%,#eae8e4 60%,#d3cfc9 77%,#e2d6bf 100%);-webkit-background-clip:text;background-clip:text;color:transparent">Audio Upgrades</span>
+      <span style="font-size:clamp(1rem,1.4vw,1.6rem);background-image:linear-gradient(100deg,#edc4ac,#e2d6bf);-webkit-background-clip:text;background-clip:text;color:transparent">✦</span>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ INTRO STATEMENT ══════════ -->
+<section data-screen-label="Intro" style="position:relative;padding:clamp(110px,12vw,210px) 0;overflow:hidden">
+  <div style="position:absolute;top:-30%;right:-14%;width:44vw;height:44vw;max-width:620px;max-height:620px;border-radius:999px;background:radial-gradient(circle,rgba(240,189,149,.09),rgba(240,189,149,0) 62%);animation:se-orb 26s ease-in-out infinite;pointer-events:none"></div>
+  <div style="width:100%;max-width:min(var(--se-max,1760px),100%);margin:0 auto;padding:0 clamp(24px,4.2vw,84px);position:relative">
+    <div style="display:flex;align-items:center;gap:16px;border-top:1px solid rgba(250,246,241,.12);padding-top:clamp(20px,1.8vw,28px);margin-bottom:clamp(40px,4.5vw,80px);animation:se-fade .9s ease both;animation-timeline:view();animation-range:entry 0% entry 45%">
+      <span style="font-size:clamp(11px,.72vw,13px);font-weight:700;letter-spacing:.14em;color:rgba(250,246,241,.42)">(01)</span>
+      <span style="font-size:clamp(11px,.72vw,13px);font-weight:800;letter-spacing:.28em;background-image:linear-gradient(100deg,#edc4ac 0%,#f6dccd 19%,#fffaf6 42%,#eae8e4 60%,#d3cfc9 77%,#e2d6bf 100%);-webkit-background-clip:text;background-clip:text;color:transparent">WHO WE ARE</span>
+    </div>
+    <div style="display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,.85fr);gap:clamp(44px,4.5vw,96px);align-items:center">
+      <div>
+        <p style="margin:0;font-size:clamp(1.9rem,3.2vw,3.9rem);line-height:1.18;letter-spacing:-.02em;font-weight:700;animation:se-rise 1s cubic-bezier(.19,1,.22,1) both;animation-timeline:view();animation-range:entry 5% entry 55%">We are a team of passionate <em style="font-family:'GFS Didot',serif;font-style:italic;font-weight:400;padding-right:.12em;background-image:linear-gradient(100deg,#edc4ac 0%,#f6dccd 19%,#fffaf6 42%,#eae8e4 60%,#d3cfc9 77%,#e2d6bf 100%);-webkit-background-clip:text;background-clip:text;color:transparent">music experts</em> who create <em style="font-family:'GFS Didot',serif;font-style:italic;font-weight:400;padding-right:.12em;background-image:linear-gradient(100deg,#edc4ac 0%,#f6dccd 19%,#fffaf6 42%,#eae8e4 60%,#d3cfc9 77%,#e2d6bf 100%);-webkit-background-clip:text;background-clip:text;color:transparent">soundtracks for venues</em> through music that is intentional, immersive &amp; <em style="font-family:'GFS Didot',serif;font-style:italic;font-weight:400;padding-right:.15em;background-image:linear-gradient(100deg,#edc4ac 0%,#f6dccd 19%,#fffaf6 42%,#eae8e4 60%,#d3cfc9 77%,#e2d6bf 100%);-webkit-background-clip:text;background-clip:text;color:transparent">memorable</em>.</p>
+        <p style="margin:clamp(28px,2.6vw,44px) 0 0;max-width:52ch;font-size:clamp(1.05rem,1.3vw,1.5rem);line-height:1.62;color:rgba(250,246,241,.58);animation:se-rise 1s cubic-bezier(.19,1,.22,1) both;animation-timeline:view();animation-range:entry 10% entry 60%">Our core belief is that music shapes <strong style="color:#faf6f1;font-weight:700">atmosphere</strong>, influences <strong style="color:#faf6f1;font-weight:700">behaviour</strong> and builds lasting <strong style="color:#faf6f1;font-weight:700">connections</strong> with guests.</p>
+      </div>
+      <div class="se-zw" style="overflow:hidden;border-radius:clamp(14px,1.4vw,24px);box-shadow:0 50px 100px -50px rgba(0,0,0,.8);animation:se-fade 1s ease both;animation-timeline:view();animation-range:entry 0% entry 45%">
+        <img class="se-zi" src="images/carousel/carousel-venue-atmosphere-1.jpg" alt="Curated venue atmosphere" style="display:block;width:100%;aspect-ratio:3/3.7;object-fit:cover">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ SERVICES — expanding peach panel ══════════ -->
+<section id="services" data-screen-label="Services" style="position:relative;padding-bottom:clamp(90px,9vw,160px)">
+  <div data-svc-panel style="background:#faebe3;color:#0b0a0a;margin-inline:calc(clamp(18px,4.5vw,88px) * (1 - var(--svc,1)));border-radius:calc(clamp(28px,3.6vw,72px) * (1 - var(--svc,1)));padding:clamp(80px,8.5vw,150px) 0 clamp(70px,7vw,120px)">
+    <div style="width:100%;max-width:min(var(--se-max,1760px),100%);margin:0 auto;padding:0 clamp(24px,4.2vw,84px)">
+      <div style="display:flex;align-items:baseline;justify-content:space-between;gap:24px;border-top:1px solid rgba(11,10,10,.16);padding-top:clamp(20px,1.8vw,28px)">
+        <div style="display:flex;align-items:center;gap:16px">
+          <span style="font-size:clamp(11px,.72vw,13px);font-weight:700;letter-spacing:.14em;color:rgba(11,10,10,.45)">(02)</span>
+          <span style="font-size:clamp(11px,.72vw,13px);font-weight:800;letter-spacing:.28em;color:rgba(11,10,10,.72)">SERVICES</span>
+        </div>
+        <a href="#contact" style="color:#0b0a0a;text-decoration:none;font-weight:700;font-size:clamp(.9rem,.95vw,1.1rem);border-bottom:1px solid rgba(11,10,10,.35);padding-bottom:3px" class="se-lnd">Explore all services →</a>
+      </div>
+      <h2 style="margin:clamp(30px,3vw,52px) 0 clamp(14px,1.4vw,22px);font-size:clamp(2.6rem,4.9vw,5.9rem);line-height:1;letter-spacing:-.028em;font-weight:800;max-width:16ch;animation:se-rise 1s cubic-bezier(.19,1,.22,1) both;animation-timeline:view();animation-range:entry 5% entry 50%">Four ways we <em style="font-family:'GFS Didot',serif;font-style:italic;font-weight:400">reimagine</em> venues</h2>
+      <p style="margin:0 0 clamp(48px,4.6vw,84px);max-width:46ch;font-size:clamp(1.02rem,1.2vw,1.4rem);line-height:1.6;color:rgba(11,10,10,.62);animation:se-rise 1s cubic-bezier(.19,1,.22,1) both;animation-timeline:view();animation-range:entry 8% entry 55%">Our music services shape behaviour, create atmosphere and build loyalty through sound.</p>
+
+      <div style="display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:clamp(44px,4.5vw,90px);align-items:start">
+        <div style="animation:se-rise 1s cubic-bezier(.19,1,.22,1) both;animation-timeline:view();animation-range:entry 5% entry 45%">
+          <div onMouseEnter="{{svcEnter0}}" style="display:grid;grid-template-columns:clamp(48px,4vw,76px) 1fr auto;align-items:center;gap:clamp(16px,1.6vw,28px);padding:clamp(24px,2.4vw,40px) 0;border-top:1px solid rgba(11,10,10,.14)" class="se-row">
+            <span style="font-family:'GFS Didot',serif;font-style:italic;font-size:clamp(1.1rem,1.3vw,1.5rem);color:rgba(11,10,10,.42)">01</span>
+            <span>
+              <span style="display:block;font-size:clamp(1.6rem,2.4vw,2.7rem);font-weight:800;letter-spacing:-.02em;line-height:1.1">Signature Playlists</span>
+              <span style="display:block;margin-top:8px;font-size:clamp(.95rem,1.05vw,1.2rem);line-height:1.55;color:rgba(11,10,10,.6);max-width:42ch">Your daily soundtrack, from morning energy to evening atmosphere.</span>
+            </span>
+            <span aria-hidden="true" style="width:clamp(46px,3.4vw,60px);height:clamp(46px,3.4vw,60px);border:1px solid rgba(11,10,10,.25);border-radius:999px;display:grid;place-items:center;font-size:clamp(17px,1.2vw,22px)" class="se-crc">→</span>
+          </div>
+          <div onMouseEnter="{{svcEnter1}}" style="display:grid;grid-template-columns:clamp(48px,4vw,76px) 1fr auto;align-items:center;gap:clamp(16px,1.6vw,28px);padding:clamp(24px,2.4vw,40px) 0;border-top:1px solid rgba(11,10,10,.14)" class="se-row">
+            <span style="font-family:'GFS Didot',serif;font-style:italic;font-size:clamp(1.1rem,1.3vw,1.5rem);color:rgba(11,10,10,.42)">02</span>
+            <span>
+              <span style="display:block;font-size:clamp(1.6rem,2.4vw,2.7rem);font-weight:800;letter-spacing:-.02em;line-height:1.1">Event Soundtracks</span>
+              <span style="display:block;margin-top:8px;font-size:clamp(.95rem,1.05vw,1.2rem);line-height:1.55;color:rgba(11,10,10,.6);max-width:42ch">Exclusive playlists &amp; DJ sets for launches, conferences &amp; celebrations.</span>
+            </span>
+            <span aria-hidden="true" style="width:clamp(46px,3.4vw,60px);height:clamp(46px,3.4vw,60px);border:1px solid rgba(11,10,10,.25);border-radius:999px;display:grid;place-items:center;font-size:clamp(17px,1.2vw,22px)" class="se-crc">→</span>
+          </div>
+          <div onMouseEnter="{{svcEnter2}}" style="display:grid;grid-template-columns:clamp(48px,4vw,76px) 1fr auto;align-items:center;gap:clamp(16px,1.6vw,28px);padding:clamp(24px,2.4vw,40px) 0;border-top:1px solid rgba(11,10,10,.14)" class="se-row">
+            <span style="font-family:'GFS Didot',serif;font-style:italic;font-size:clamp(1.1rem,1.3vw,1.5rem);color:rgba(11,10,10,.42)">03</span>
+            <span>
+              <span style="display:block;font-size:clamp(1.6rem,2.4vw,2.7rem);font-weight:800;letter-spacing:-.02em;line-height:1.1">Sonic Identity</span>
+              <span style="display:block;margin-top:8px;font-size:clamp(.95rem,1.05vw,1.2rem);line-height:1.55;color:rgba(11,10,10,.6);max-width:42ch">Your music identity, unified across all locations &amp; communication channels.</span>
+            </span>
+            <span aria-hidden="true" style="width:clamp(46px,3.4vw,60px);height:clamp(46px,3.4vw,60px);border:1px solid rgba(11,10,10,.25);border-radius:999px;display:grid;place-items:center;font-size:clamp(17px,1.2vw,22px)" class="se-crc">→</span>
+          </div>
+          <div onMouseEnter="{{svcEnter3}}" style="display:grid;grid-template-columns:clamp(48px,4vw,76px) 1fr auto;align-items:center;gap:clamp(16px,1.6vw,28px);padding:clamp(24px,2.4vw,40px) 0;border-block:1px solid rgba(11,10,10,.14)" class="se-row">
+            <span style="font-family:'GFS Didot',serif;font-style:italic;font-size:clamp(1.1rem,1.3vw,1.5rem);color:rgba(11,10,10,.42)">04</span>
+            <span>
+              <span style="display:block;font-size:clamp(1.6rem,2.4vw,2.7rem);font-weight:800;letter-spacing:-.02em;line-height:1.1">Audio Upgrades</span>
+              <span style="display:block;margin-top:8px;font-size:clamp(.95rem,1.05vw,1.2rem);line-height:1.55;color:rgba(11,10,10,.6);max-width:42ch">Acoustic refinement &amp; support for crystal-clear, memorable sound.</span>
+            </span>
+            <span aria-hidden="true" style="width:clamp(46px,3.4vw,60px);height:clamp(46px,3.4vw,60px);border:1px solid rgba(11,10,10,.25);border-radius:999px;display:grid;place-items:center;font-size:clamp(17px,1.2vw,22px)" class="se-crc">→</span>
+          </div>
+        </div>
+
+        <div style="position:sticky;top:clamp(90px,10vh,130px);animation:se-fade 1s ease both;animation-timeline:view();animation-range:entry 5% entry 45%">
+          <div style="aspect-ratio:4/4.7;overflow:hidden;border-radius:clamp(14px,1.3vw,22px);background:rgba(11,10,10,.07);box-shadow:0 40px 80px -40px rgba(11,10,10,.5)">
+            <img data-svc-img="true" src="images/about/about-journey-team-collaboration.jpg" alt="Service preview" style="width:100%;height:100%;object-fit:cover;transition:opacity .4s ease">
+          </div>
+          <div style="display:flex;align-items:baseline;justify-content:space-between;gap:16px;margin-top:16px">
+            <span style="font-family:'GFS Didot',serif;font-style:italic;font-size:clamp(1.05rem,1.15vw,1.3rem);color:rgba(11,10,10,.72)">{{svcCap}}</span>
+            <span style="font-size:11px;font-weight:800;letter-spacing:.18em;color:rgba(11,10,10,.4)">{{svcNum}} / 04</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ INDUSTRIES — sticky color layers ══════════ -->
+<section id="industries" data-screen-label="Industries">
+  <div style="width:100%;max-width:min(var(--se-max,1760px),100%);margin:0 auto;padding:0 clamp(24px,4.2vw,84px) clamp(70px,7vw,120px)">
+    <div style="display:flex;align-items:baseline;justify-content:space-between;gap:24px;border-top:1px solid rgba(250,246,241,.12);padding-top:clamp(20px,1.8vw,28px)">
+      <div style="display:flex;align-items:center;gap:16px">
+        <span style="font-size:clamp(11px,.72vw,13px);font-weight:700;letter-spacing:.14em;color:rgba(250,246,241,.42)">(03)</span>
+        <span style="font-size:clamp(11px,.72vw,13px);font-weight:800;letter-spacing:.28em;background-image:linear-gradient(100deg,#edc4ac 0%,#f6dccd 19%,#fffaf6 42%,#eae8e4 60%,#d3cfc9 77%,#e2d6bf 100%);-webkit-background-clip:text;background-clip:text;color:transparent">INDUSTRIES</span>
+      </div>
+      <a href="#contact" style="color:#faf6f1;text-decoration:none;font-weight:700;font-size:clamp(.9rem,.95vw,1.1rem);border-bottom:1px solid rgba(250,246,241,.3);padding-bottom:3px" class="se-lnp">Find your industry →</a>
+    </div>
+    <h2 style="margin:clamp(30px,3vw,52px) 0 clamp(14px,1.4vw,22px);font-size:clamp(2.6rem,4.9vw,5.9rem);line-height:1;letter-spacing:-.028em;font-weight:800;animation:se-rise 1s cubic-bezier(.19,1,.22,1) both;animation-timeline:view();animation-range:entry 5% entry 50%">Your world, <em style="font-family:'GFS Didot',serif;font-style:italic;font-weight:400;padding-right:.15em;background-image:linear-gradient(100deg,#edc4ac 0%,#f6dccd 19%,#fffaf6 42%,#eae8e4 60%,#d3cfc9 77%,#e2d6bf 100%);-webkit-background-clip:text;background-clip:text;color:transparent">our expertise</em></h2>
+    <p style="margin:0;max-width:48ch;font-size:clamp(1.02rem,1.2vw,1.4rem);line-height:1.6;color:rgba(250,246,241,.58);animation:se-rise 1s cubic-bezier(.19,1,.22,1) both;animation-timeline:view();animation-range:entry 8% entry 55%">We understand how rhythm, energy &amp; atmosphere influence the hospitality experience.</p>
+  </div>
+
+  <div>
+    <div style="position:sticky;top:0;height:100svh;background:var(--se-l1bg,#faf6f1);color:var(--se-l1fg,#0b0a0a);border-radius:clamp(22px,2.6vw,44px) clamp(22px,2.6vw,44px) 0 0;box-shadow:0 -28px 70px rgba(11,10,10,.28);display:grid;align-items:center;overflow:hidden">
+      <div style="width:100%;max-width:min(var(--se-max,1760px),100%);margin:0 auto;padding:clamp(48px,6vh,80px) clamp(24px,4.2vw,84px)">
+        <div style="display:grid;grid-template-columns:minmax(0,1.02fr) minmax(0,.98fr);gap:clamp(40px,4.5vw,96px);align-items:center">
+          <div>
+            <div style="display:inline-flex;align-items:center;gap:10px;border:1px solid var(--se-l1line,rgba(11,10,10,.28));border-radius:999px;padding:8px 18px;margin-bottom:clamp(28px,3vw,48px)">
+              <span style="font-size:clamp(11px,.75vw,13px);font-weight:800;letter-spacing:.18em">01 / 06</span>
+            </div>
+            <h3 style="margin:0 0 clamp(18px,1.8vw,30px);font-size:clamp(2.5rem,4.6vw,5.6rem);line-height:.99;letter-spacing:-.028em;font-weight:800">Hotels &amp; Resorts</h3>
+            <p style="margin:0 0 clamp(28px,2.8vw,46px);font-size:clamp(1.05rem,1.3vw,1.5rem);line-height:1.55;max-width:38ch;color:var(--se-l1sub,rgba(11,10,10,.62))">Music for every time of day and area.</p>
+            <a href="#contact" class="se-gap" style="display:inline-flex;align-items:center;gap:10px;color:inherit;text-decoration:none;font-weight:800;font-size:clamp(.95rem,1.05vw,1.2rem);border-bottom:1px solid var(--se-l1line,rgba(11,10,10,.28));padding-bottom:5px">Explore <span aria-hidden="true">→</span></a>
+          </div>
+          <div class="se-zw" style="overflow:hidden;border-radius:clamp(14px,1.4vw,24px);box-shadow:0 44px 90px -44px rgba(11,10,10,.6)">
+            <img class="se-zi" src="images/industries/industry-hotels-resorts.jpg" alt="Hotels &amp; Resorts" style="display:block;width:100%;height:min(60svh,640px);object-fit:cover">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="position:sticky;top:0;height:100svh;background:var(--se-l2bg,#faebe3);color:var(--se-l2fg,#0b0a0a);border-radius:clamp(22px,2.6vw,44px) clamp(22px,2.6vw,44px) 0 0;box-shadow:0 -28px 70px rgba(11,10,10,.28);display:grid;align-items:center;overflow:hidden">
+      <div style="width:100%;max-width:min(var(--se-max,1760px),100%);margin:0 auto;padding:clamp(48px,6vh,80px) clamp(24px,4.2vw,84px)">
+        <div style="display:grid;grid-template-columns:minmax(0,1.02fr) minmax(0,.98fr);gap:clamp(40px,4.5vw,96px);align-items:center">
+          <div>
+            <div style="display:inline-flex;align-items:center;gap:10px;border:1px solid var(--se-l2line,rgba(11,10,10,.28));border-radius:999px;padding:8px 18px;margin-bottom:clamp(28px,3vw,48px)">
+              <span style="font-size:clamp(11px,.75vw,13px);font-weight:800;letter-spacing:.18em">02 / 06</span>
+            </div>
+            <h3 style="margin:0 0 clamp(18px,1.8vw,30px);font-size:clamp(2.5rem,4.6vw,5.6rem);line-height:.99;letter-spacing:-.028em;font-weight:800">Restaurants &amp; Bars</h3>
+            <p style="margin:0 0 clamp(28px,2.8vw,46px);font-size:clamp(1.05rem,1.3vw,1.5rem);line-height:1.55;max-width:38ch;color:var(--se-l2sub,rgba(11,10,10,.62))">Match your service flow, keep guests longer.</p>
+            <a href="#contact" class="se-gap" style="display:inline-flex;align-items:center;gap:10px;color:inherit;text-decoration:none;font-weight:800;font-size:clamp(.95rem,1.05vw,1.2rem);border-bottom:1px solid var(--se-l2line,rgba(11,10,10,.28));padding-bottom:5px">Explore <span aria-hidden="true">→</span></a>
+          </div>
+          <div class="se-zw" style="overflow:hidden;border-radius:clamp(14px,1.4vw,24px);box-shadow:0 44px 90px -44px rgba(11,10,10,.6)">
+            <img class="se-zi" src="images/industries/industry-restaurants-bars.jpg" alt="Restaurants &amp; Bars" style="display:block;width:100%;height:min(60svh,640px);object-fit:cover">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="position:sticky;top:0;height:100svh;background:var(--se-l3bg,#f0bd95);color:var(--se-l3fg,#0b0a0a);border-radius:clamp(22px,2.6vw,44px) clamp(22px,2.6vw,44px) 0 0;box-shadow:0 -28px 70px rgba(11,10,10,.28);display:grid;align-items:center;overflow:hidden">
+      <div style="width:100%;max-width:min(var(--se-max,1760px),100%);margin:0 auto;padding:clamp(48px,6vh,80px) clamp(24px,4.2vw,84px)">
+        <div style="display:grid;grid-template-columns:minmax(0,1.02fr) minmax(0,.98fr);gap:clamp(40px,4.5vw,96px);align-items:center">
+          <div>
+            <div style="display:inline-flex;align-items:center;gap:10px;border:1px solid var(--se-l3line,rgba(11,10,10,.3));border-radius:999px;padding:8px 18px;margin-bottom:clamp(28px,3vw,48px)">
+              <span style="font-size:clamp(11px,.75vw,13px);font-weight:800;letter-spacing:.18em">03 / 06</span>
+            </div>
+            <h3 style="margin:0 0 clamp(18px,1.8vw,30px);font-size:clamp(2.5rem,4.6vw,5.6rem);line-height:.99;letter-spacing:-.028em;font-weight:800">Events &amp; Experiences</h3>
+            <p style="margin:0 0 clamp(28px,2.8vw,46px);font-size:clamp(1.05rem,1.3vw,1.5rem);line-height:1.55;max-width:38ch;color:var(--se-l3sub,rgba(11,10,10,.66))">Impactful, time-based, natural track changes.</p>
+            <a href="#contact" class="se-gap" style="display:inline-flex;align-items:center;gap:10px;color:inherit;text-decoration:none;font-weight:800;font-size:clamp(.95rem,1.05vw,1.2rem);border-bottom:1px solid var(--se-l3line,rgba(11,10,10,.3));padding-bottom:5px">Explore <span aria-hidden="true">→</span></a>
+          </div>
+          <div class="se-zw" style="overflow:hidden;border-radius:clamp(14px,1.4vw,24px);box-shadow:0 44px 90px -44px rgba(11,10,10,.6)">
+            <img class="se-zi" src="images/industries/industry-events-experiences.jpg" alt="Events &amp; Experiences" style="display:block;width:100%;height:min(60svh,640px);object-fit:cover">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="position:sticky;top:0;height:100svh;background:var(--se-l4bg,oklch(0.62 0.1 55));color:var(--se-l4fg,#faf6f1);border-radius:clamp(22px,2.6vw,44px) clamp(22px,2.6vw,44px) 0 0;box-shadow:0 -28px 70px rgba(11,10,10,.28);display:grid;align-items:center;overflow:hidden">
+      <div style="width:100%;max-width:min(var(--se-max,1760px),100%);margin:0 auto;padding:clamp(48px,6vh,80px) clamp(24px,4.2vw,84px)">
+        <div style="display:grid;grid-template-columns:minmax(0,1.02fr) minmax(0,.98fr);gap:clamp(40px,4.5vw,96px);align-items:center">
+          <div>
+            <div style="display:inline-flex;align-items:center;gap:10px;border:1px solid var(--se-l4line,rgba(250,246,241,.34));border-radius:999px;padding:8px 18px;margin-bottom:clamp(28px,3vw,48px)">
+              <span style="font-size:clamp(11px,.75vw,13px);font-weight:800;letter-spacing:.18em">04 / 06</span>
+            </div>
+            <h3 style="margin:0 0 clamp(18px,1.8vw,30px);font-size:clamp(2.5rem,4.6vw,5.6rem);line-height:.99;letter-spacing:-.028em;font-weight:800">Retail Stores</h3>
+            <p style="margin:0 0 clamp(28px,2.8vw,46px);font-size:clamp(1.05rem,1.3vw,1.5rem);line-height:1.55;max-width:38ch;color:var(--se-l4sub,rgba(250,246,241,.78))">Promote browsing and brand identity.</p>
+            <a href="#contact" class="se-gap" style="display:inline-flex;align-items:center;gap:10px;color:inherit;text-decoration:none;font-weight:800;font-size:clamp(.95rem,1.05vw,1.2rem);border-bottom:1px solid var(--se-l4line,rgba(250,246,241,.34));padding-bottom:5px">Explore <span aria-hidden="true">→</span></a>
+          </div>
+          <div class="se-zw" style="overflow:hidden;border-radius:clamp(14px,1.4vw,24px);box-shadow:0 44px 90px -44px rgba(11,10,10,.6)">
+            <img class="se-zi" src="images/industries/industry-retail-stores.jpg" alt="Retail Stores" style="display:block;width:100%;height:min(60svh,640px);object-fit:cover">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="position:sticky;top:0;height:100svh;background:var(--se-l5bg,oklch(0.38 0.065 50));color:var(--se-l5fg,#faf6f1);border-radius:clamp(22px,2.6vw,44px) clamp(22px,2.6vw,44px) 0 0;box-shadow:0 -28px 70px rgba(11,10,10,.28);display:grid;align-items:center;overflow:hidden">
+      <div style="width:100%;max-width:min(var(--se-max,1760px),100%);margin:0 auto;padding:clamp(48px,6vh,80px) clamp(24px,4.2vw,84px)">
+        <div style="display:grid;grid-template-columns:minmax(0,1.02fr) minmax(0,.98fr);gap:clamp(40px,4.5vw,96px);align-items:center">
+          <div>
+            <div style="display:inline-flex;align-items:center;gap:10px;border:1px solid var(--se-l5line,rgba(250,246,241,.3));border-radius:999px;padding:8px 18px;margin-bottom:clamp(28px,3vw,48px)">
+              <span style="font-size:clamp(11px,.75vw,13px);font-weight:800;letter-spacing:.18em">05 / 06</span>
+            </div>
+            <h3 style="margin:0 0 clamp(18px,1.8vw,30px);font-size:clamp(2.5rem,4.6vw,5.6rem);line-height:.99;letter-spacing:-.028em;font-weight:800">Wellness &amp; Gyms</h3>
+            <p style="margin:0 0 clamp(28px,2.8vw,46px);font-size:clamp(1.05rem,1.3vw,1.5rem);line-height:1.55;max-width:38ch;color:var(--se-l5sub,rgba(250,246,241,.7))">Calibrated for relaxation, focus or motivation.</p>
+            <a href="#contact" class="se-gap" style="display:inline-flex;align-items:center;gap:10px;color:inherit;text-decoration:none;font-weight:800;font-size:clamp(.95rem,1.05vw,1.2rem);border-bottom:1px solid var(--se-l5line,rgba(250,246,241,.3));padding-bottom:5px">Explore <span aria-hidden="true">→</span></a>
+          </div>
+          <div class="se-zw" style="overflow:hidden;border-radius:clamp(14px,1.4vw,24px);box-shadow:0 44px 90px -44px rgba(11,10,10,.6)">
+            <img class="se-zi" src="images/industries/industry-wellness-gyms.jpg" alt="Wellness &amp; Gyms" style="display:block;width:100%;height:min(60svh,640px);object-fit:cover">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="position:sticky;top:0;height:100svh;background:var(--se-l6bg,#14100e);color:var(--se-l6fg,#faf6f1);border-radius:clamp(22px,2.6vw,44px) clamp(22px,2.6vw,44px) 0 0;box-shadow:0 -28px 70px rgba(11,10,10,.28);display:grid;align-items:center;overflow:hidden">
+      <div style="width:100%;max-width:min(var(--se-max,1760px),100%);margin:0 auto;padding:clamp(48px,6vh,80px) clamp(24px,4.2vw,84px)">
+        <div style="display:grid;grid-template-columns:minmax(0,1.02fr) minmax(0,.98fr);gap:clamp(40px,4.5vw,96px);align-items:center">
+          <div>
+            <div style="display:inline-flex;align-items:center;gap:10px;border:1px solid var(--se-l6line,rgba(250,246,241,.26));border-radius:999px;padding:8px 18px;margin-bottom:clamp(28px,3vw,48px)">
+              <span style="font-size:clamp(11px,.75vw,13px);font-weight:800;letter-spacing:.18em">06 / 06</span>
+            </div>
+            <h3 style="margin:0 0 clamp(18px,1.8vw,30px);font-size:clamp(2.5rem,4.6vw,5.6rem);line-height:.99;letter-spacing:-.028em;font-weight:800">Art, Museums &amp; Fashion</h3>
+            <p style="margin:0 0 clamp(28px,2.8vw,46px);font-size:clamp(1.05rem,1.3vw,1.5rem);line-height:1.55;max-width:38ch;color:var(--se-l6sub,rgba(250,246,241,.62))">Smooth, precise, unobtrusive melodies.</p>
+            <a href="#contact" class="se-gap" style="display:inline-flex;align-items:center;gap:10px;color:inherit;text-decoration:none;font-weight:800;font-size:clamp(.95rem,1.05vw,1.2rem);border-bottom:1px solid var(--se-l6line,rgba(250,246,241,.26));padding-bottom:5px">Explore <span aria-hidden="true">→</span></a>
+          </div>
+          <div class="se-zw" style="overflow:hidden;border-radius:clamp(14px,1.4vw,24px);box-shadow:0 44px 90px -44px rgba(11,10,10,.6)">
+            <img class="se-zi" src="images/industries/industry-art-museums-fashion.jpg" alt="Art, Museums &amp; Fashion" style="display:block;width:100%;height:min(60svh,640px);object-fit:cover">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ APPROACH ══════════ -->
+<section id="approach" data-screen-label="Approach" style="position:relative;padding:clamp(110px,11vw,190px) 0 clamp(90px,9vw,150px);background:#0b0a0a">
+  <div style="width:100%;max-width:min(var(--se-max,1760px),100%);margin:0 auto;padding:0 clamp(24px,4.2vw,84px)">
+    <div style="display:flex;align-items:baseline;justify-content:space-between;gap:24px;border-top:1px solid rgba(250,246,241,.12);padding-top:clamp(20px,1.8vw,28px)">
+      <div style="display:flex;align-items:center;gap:16px">
+        <span style="font-size:clamp(11px,.72vw,13px);font-weight:700;letter-spacing:.14em;color:rgba(250,246,241,.42)">(04)</span>
+        <span style="font-size:clamp(11px,.72vw,13px);font-weight:800;letter-spacing:.28em;background-image:linear-gradient(100deg,#edc4ac 0%,#f6dccd 19%,#fffaf6 42%,#eae8e4 60%,#d3cfc9 77%,#e2d6bf 100%);-webkit-background-clip:text;background-clip:text;color:transparent">OUR APPROACH</span>
+      </div>
+      <a href="#" style="color:#faf6f1;text-decoration:none;font-weight:700;font-size:clamp(.9rem,.95vw,1.1rem);border-bottom:1px solid rgba(250,246,241,.3);padding-bottom:3px" class="se-lnp">View Case Studies →</a>
+    </div>
+    <h2 style="margin:clamp(30px,3vw,52px) 0 clamp(48px,5vw,90px);font-size:clamp(2.6rem,4.9vw,5.9rem);line-height:1;letter-spacing:-.028em;font-weight:800;max-width:18ch;animation:se-rise 1s cubic-bezier(.19,1,.22,1) both;animation-timeline:view();animation-range:entry 5% entry 50%">How we <em style="font-family:'GFS Didot',serif;font-style:italic;font-weight:400;padding-right:.12em;background-image:linear-gradient(100deg,#edc4ac 0%,#f6dccd 19%,#fffaf6 42%,#eae8e4 60%,#d3cfc9 77%,#e2d6bf 100%);-webkit-background-clip:text;background-clip:text;color:transparent">redefine</em> your venue</h2>
+
+    <div style="display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:clamp(44px,4.5vw,96px);align-items:center">
+      <div class="se-zw" style="position:relative;overflow:hidden;border-radius:clamp(14px,1.4vw,24px);box-shadow:0 44px 90px -44px rgba(0,0,0,.55);animation:se-fade 1s ease both;animation-timeline:view();animation-range:entry 0% entry 45%">
+        <img class="se-zi" src="images/homepage/vinyl-records-music-curation.jpg" alt="SensEar music curation — vinyl records" style="display:block;width:100%;aspect-ratio:4/4.4;object-fit:cover">
+        <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,10,10,0) 55%,rgba(11,10,10,.5))"></div>
+      </div>
+      <div style="animation:se-rise 1s cubic-bezier(.19,1,.22,1) both;animation-timeline:view();animation-range:entry 5% entry 45%">
+        <div style="display:grid;grid-template-columns:clamp(44px,3.6vw,68px) 1fr;gap:clamp(14px,1.4vw,24px);padding:clamp(24px,2.4vw,38px) 0;border-top:1px solid rgba(250,246,241,.16)">
+          <div style="font-family:'GFS Didot',serif;font-style:italic;font-size:clamp(1.2rem,1.4vw,1.6rem);background-image:linear-gradient(100deg,#edc4ac 0%,#f6dccd 19%,#fffaf6 42%,#eae8e4 60%,#d3cfc9 77%,#e2d6bf 100%);-webkit-background-clip:text;background-clip:text;color:transparent">01</div>
+          <div>
+            <h3 style="margin:0 0 10px;font-size:clamp(1.4rem,1.8vw,2rem);font-weight:800;letter-spacing:-.015em">Brand elevation</h3>
+            <p style="margin:0;font-size:clamp(.98rem,1.1vw,1.25rem);line-height:1.6;color:rgba(250,246,241,.58)">Improve brand perception &amp; loyalty with a memorable ambiance.</p>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:clamp(44px,3.6vw,68px) 1fr;gap:clamp(14px,1.4vw,24px);padding:clamp(24px,2.4vw,38px) 0;border-top:1px solid rgba(250,246,241,.16)">
+          <div style="font-family:'GFS Didot',serif;font-style:italic;font-size:clamp(1.2rem,1.4vw,1.6rem);background-image:linear-gradient(100deg,#edc4ac 0%,#f6dccd 19%,#fffaf6 42%,#eae8e4 60%,#d3cfc9 77%,#e2d6bf 100%);-webkit-background-clip:text;background-clip:text;color:transparent">02</div>
+          <div>
+            <h3 style="margin:0 0 10px;font-size:clamp(1.4rem,1.8vw,2rem);font-weight:800;letter-spacing:-.015em">Maximum control</h3>
+            <p style="margin:0;font-size:clamp(.98rem,1.1vw,1.25rem);line-height:1.6;color:rgba(250,246,241,.58)">Take full control of your venue's music style, flow &amp; sound levels.</p>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:clamp(44px,3.6vw,68px) 1fr;gap:clamp(14px,1.4vw,24px);padding:clamp(24px,2.4vw,38px) 0;border-block:1px solid rgba(250,246,241,.16)">
+          <div style="font-family:'GFS Didot',serif;font-style:italic;font-size:clamp(1.2rem,1.4vw,1.6rem);background-image:linear-gradient(100deg,#edc4ac 0%,#f6dccd 19%,#fffaf6 42%,#eae8e4 60%,#d3cfc9 77%,#e2d6bf 100%);-webkit-background-clip:text;background-clip:text;color:transparent">03</div>
+          <div>
+            <h3 style="margin:0 0 10px;font-size:clamp(1.4rem,1.8vw,2rem);font-weight:800;letter-spacing:-.015em">Consistent experience</h3>
+            <p style="margin:0;font-size:clamp(.98rem,1.1vw,1.25rem);line-height:1.6;color:rgba(250,246,241,.58)">Ensure a smooth music journey across locations &amp; marketing channels.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ VENUES — clients marquee ══════════ -->
+<section data-screen-label="Venues" style="border-block:1px solid rgba(250,246,241,.08);background:#0b0a0a;padding:clamp(80px,8vw,140px) 0 clamp(90px,9vw,150px);overflow:hidden">
+  <div style="width:100%;max-width:min(var(--se-max,1760px),100%);margin:0 auto;padding:0 clamp(24px,4.2vw,84px)">
+    <div style="display:flex;align-items:center;gap:16px;border-top:1px solid rgba(250,246,241,.12);padding-top:clamp(20px,1.8vw,28px);animation:se-fade .9s ease both;animation-timeline:view();animation-range:entry 0% entry 45%">
+      <span style="font-size:clamp(11px,.72vw,13px);font-weight:700;letter-spacing:.14em;color:rgba(250,246,241,.42)">(05)</span>
+      <span style="font-size:clamp(11px,.72vw,13px);font-weight:800;letter-spacing:.28em;background-image:linear-gradient(100deg,#edc4ac 0%,#f6dccd 19%,#fffaf6 42%,#eae8e4 60%,#d3cfc9 77%,#e2d6bf 100%);-webkit-background-clip:text;background-clip:text;color:transparent">WORK &amp; COLLABORATIONS</span>
+    </div>
+    <h2 style="margin:clamp(30px,3vw,52px) 0 clamp(44px,4.2vw,72px);font-size:clamp(2.2rem,3.9vw,4.6rem);line-height:1.02;letter-spacing:-.025em;font-weight:800;max-width:22ch;animation:se-rise 1s cubic-bezier(.19,1,.22,1) both;animation-timeline:view();animation-range:entry 5% entry 50%">Now playing in venues across <em style="font-family:'GFS Didot',serif;font-style:italic;font-weight:400;padding-right:.15em;background-image:linear-gradient(100deg,#edc4ac 0%,#f6dccd 19%,#fffaf6 42%,#eae8e4 60%,#d3cfc9 77%,#e2d6bf 100%);-webkit-background-clip:text;background-clip:text;color:transparent">Greece</em></h2>
+  </div>
+  <div style="position:relative;overflow:hidden">
+    <div aria-hidden="true" style="position:absolute;top:0;bottom:0;left:0;z-index:2;width:clamp(40px,6vw,110px);background:linear-gradient(90deg,#0b0a0a,rgba(11,10,10,0));pointer-events:none"></div>
+    <div aria-hidden="true" style="position:absolute;top:0;bottom:0;right:0;z-index:2;width:clamp(40px,6vw,110px);background:linear-gradient(270deg,#0b0a0a,rgba(11,10,10,0));pointer-events:none"></div>
+    <div style="display:flex;width:max-content;animation:se-marquee 40s linear infinite">
+      <div style="display:flex;gap:clamp(20px,1.8vw,28px);padding-right:clamp(20px,1.8vw,28px)">
+        <div style="display:flex;width:clamp(210px,15vw,260px);flex-shrink:0;flex-direction:column;align-items:center;gap:18px;border:1px solid rgba(250,246,241,.08);background:#141210;border-radius:clamp(12px,1vw,18px);padding:clamp(24px,2vw,34px)">
+          <div style="display:grid;place-items:center;width:clamp(84px,6.4vw,108px);height:clamp(84px,6.4vw,108px);background:#faf6f1;border-radius:12px;padding:12px;box-sizing:border-box">
+            <img src="images/homepage/clients/client-klouvi-bar-athens.jpg" alt="Klouvi Bar logo" style="max-width:100%;max-height:100%;object-fit:contain">
+          </div>
+          <div style="text-align:center">
+            <div style="font-size:clamp(.9rem,.85vw,1.05rem);font-weight:700;letter-spacing:.14em">KLOUVI BAR</div>
+            <div style="margin-top:3px;font-size:clamp(.78rem,.72vw,.9rem);color:rgba(250,246,241,.5)">Athens</div>
+          </div>
+        </div>
+        <div style="display:flex;width:clamp(210px,15vw,260px);flex-shrink:0;flex-direction:column;align-items:center;gap:18px;border:1px solid rgba(250,246,241,.08);background:#141210;border-radius:clamp(12px,1vw,18px);padding:clamp(24px,2vw,34px)">
+          <div style="display:grid;place-items:center;width:clamp(84px,6.4vw,108px);height:clamp(84px,6.4vw,108px);background:#faf6f1;border-radius:12px;padding:12px;box-sizing:border-box">
+            <img src="images/homepage/clients/client-blue-bamboo-athens-serifos.jpg" alt="Blue Bamboo logo" style="max-width:100%;max-height:100%;object-fit:contain">
+          </div>
+          <div style="text-align:center">
+            <div style="font-size:clamp(.9rem,.85vw,1.05rem);font-weight:700;letter-spacing:.14em">BLUE BAMBOO</div>
+            <div style="margin-top:3px;font-size:clamp(.78rem,.72vw,.9rem);color:rgba(250,246,241,.5)">Athens-Serifos</div>
+          </div>
+        </div>
+        <div style="display:flex;width:clamp(210px,15vw,260px);flex-shrink:0;flex-direction:column;align-items:center;gap:18px;border:1px solid rgba(250,246,241,.08);background:#141210;border-radius:clamp(12px,1vw,18px);padding:clamp(24px,2vw,34px)">
+          <div style="display:grid;place-items:center;width:clamp(84px,6.4vw,108px);height:clamp(84px,6.4vw,108px);background:#faf6f1;border-radius:12px;padding:12px;box-sizing:border-box">
+            <img src="images/homepage/clients/client-beach-house-antiparos.jpg" alt="Beach House logo" style="max-width:100%;max-height:100%;object-fit:contain">
+          </div>
+          <div style="text-align:center">
+            <div style="font-size:clamp(.9rem,.85vw,1.05rem);font-weight:700;letter-spacing:.14em">BEACH HOUSE</div>
+            <div style="margin-top:3px;font-size:clamp(.78rem,.72vw,.9rem);color:rgba(250,246,241,.5)">Antiparos</div>
+          </div>
+        </div>
+        <div style="display:flex;width:clamp(210px,15vw,260px);flex-shrink:0;flex-direction:column;align-items:center;gap:18px;border:1px solid rgba(250,246,241,.08);background:#141210;border-radius:clamp(12px,1vw,18px);padding:clamp(24px,2vw,34px)">
+          <div style="display:grid;place-items:center;width:clamp(84px,6.4vw,108px);height:clamp(84px,6.4vw,108px);background:#faf6f1;border-radius:12px;padding:12px;box-sizing:border-box">
+            <img src="images/homepage/clients/client-pelicanos-sifnos.jpg" alt="Pelicanos logo" style="max-width:100%;max-height:100%;object-fit:contain">
+          </div>
+          <div style="text-align:center">
+            <div style="font-size:clamp(.9rem,.85vw,1.05rem);font-weight:700;letter-spacing:.14em">PELICANOS</div>
+            <div style="margin-top:3px;font-size:clamp(.78rem,.72vw,.9rem);color:rgba(250,246,241,.5)">Sifnos</div>
+          </div>
+        </div>
+        <div style="display:flex;width:clamp(210px,15vw,260px);flex-shrink:0;flex-direction:column;align-items:center;gap:18px;border:1px solid rgba(250,246,241,.08);background:#141210;border-radius:clamp(12px,1vw,18px);padding:clamp(24px,2vw,34px)">
+          <div style="display:grid;place-items:center;width:clamp(84px,6.4vw,108px);height:clamp(84px,6.4vw,108px);background:#faf6f1;border-radius:12px;padding:12px;box-sizing:border-box">
+            <img src="images/homepage/clients/client-yam-antiparos.png" alt="Yam logo" style="max-width:100%;max-height:100%;object-fit:contain">
+          </div>
+          <div style="text-align:center">
+            <div style="font-size:clamp(.9rem,.85vw,1.05rem);font-weight:700;letter-spacing:.14em">YAM</div>
+            <div style="margin-top:3px;font-size:clamp(.78rem,.72vw,.9rem);color:rgba(250,246,241,.5)">Antiparos</div>
+          </div>
+        </div>
+      </div>
+      <div aria-hidden="true" style="display:flex;gap:clamp(20px,1.8vw,28px);padding-right:clamp(20px,1.8vw,28px)">
+        <div style="display:flex;width:clamp(210px,15vw,260px);flex-shrink:0;flex-direction:column;align-items:center;gap:18px;border:1px solid rgba(250,246,241,.08);background:#141210;border-radius:clamp(12px,1vw,18px);padding:clamp(24px,2vw,34px)">
+          <div style="display:grid;place-items:center;width:clamp(84px,6.4vw,108px);height:clamp(84px,6.4vw,108px);background:#faf6f1;border-radius:12px;padding:12px;box-sizing:border-box">
+            <img src="images/homepage/clients/client-klouvi-bar-athens.jpg" alt="" style="max-width:100%;max-height:100%;object-fit:contain">
+          </div>
+          <div style="text-align:center">
+            <div style="font-size:clamp(.9rem,.85vw,1.05rem);font-weight:700;letter-spacing:.14em">KLOUVI BAR</div>
+            <div style="margin-top:3px;font-size:clamp(.78rem,.72vw,.9rem);color:rgba(250,246,241,.5)">Athens</div>
+          </div>
+        </div>
+        <div style="display:flex;width:clamp(210px,15vw,260px);flex-shrink:0;flex-direction:column;align-items:center;gap:18px;border:1px solid rgba(250,246,241,.08);background:#141210;border-radius:clamp(12px,1vw,18px);padding:clamp(24px,2vw,34px)">
+          <div style="display:grid;place-items:center;width:clamp(84px,6.4vw,108px);height:clamp(84px,6.4vw,108px);background:#faf6f1;border-radius:12px;padding:12px;box-sizing:border-box">
+            <img src="images/homepage/clients/client-blue-bamboo-athens-serifos.jpg" alt="" style="max-width:100%;max-height:100%;object-fit:contain">
+          </div>
+          <div style="text-align:center">
+            <div style="font-size:clamp(.9rem,.85vw,1.05rem);font-weight:700;letter-spacing:.14em">BLUE BAMBOO</div>
+            <div style="margin-top:3px;font-size:clamp(.78rem,.72vw,.9rem);color:rgba(250,246,241,.5)">Athens-Serifos</div>
+          </div>
+        </div>
+        <div style="display:flex;width:clamp(210px,15vw,260px);flex-shrink:0;flex-direction:column;align-items:center;gap:18px;border:1px solid rgba(250,246,241,.08);background:#141210;border-radius:clamp(12px,1vw,18px);padding:clamp(24px,2vw,34px)">
+          <div style="display:grid;place-items:center;width:clamp(84px,6.4vw,108px);height:clamp(84px,6.4vw,108px);background:#faf6f1;border-radius:12px;padding:12px;box-sizing:border-box">
+            <img src="images/homepage/clients/client-beach-house-antiparos.jpg" alt="" style="max-width:100%;max-height:100%;object-fit:contain">
+          </div>
+          <div style="text-align:center">
+            <div style="font-size:clamp(.9rem,.85vw,1.05rem);font-weight:700;letter-spacing:.14em">BEACH HOUSE</div>
+            <div style="margin-top:3px;font-size:clamp(.78rem,.72vw,.9rem);color:rgba(250,246,241,.5)">Antiparos</div>
+          </div>
+        </div>
+        <div style="display:flex;width:clamp(210px,15vw,260px);flex-shrink:0;flex-direction:column;align-items:center;gap:18px;border:1px solid rgba(250,246,241,.08);background:#141210;border-radius:clamp(12px,1vw,18px);padding:clamp(24px,2vw,34px)">
+          <div style="display:grid;place-items:center;width:clamp(84px,6.4vw,108px);height:clamp(84px,6.4vw,108px);background:#faf6f1;border-radius:12px;padding:12px;box-sizing:border-box">
+            <img src="images/homepage/clients/client-pelicanos-sifnos.jpg" alt="" style="max-width:100%;max-height:100%;object-fit:contain">
+          </div>
+          <div style="text-align:center">
+            <div style="font-size:clamp(.9rem,.85vw,1.05rem);font-weight:700;letter-spacing:.14em">PELICANOS</div>
+            <div style="margin-top:3px;font-size:clamp(.78rem,.72vw,.9rem);color:rgba(250,246,241,.5)">Sifnos</div>
+          </div>
+        </div>
+        <div style="display:flex;width:clamp(210px,15vw,260px);flex-shrink:0;flex-direction:column;align-items:center;gap:18px;border:1px solid rgba(250,246,241,.08);background:#141210;border-radius:clamp(12px,1vw,18px);padding:clamp(24px,2vw,34px)">
+          <div style="display:grid;place-items:center;width:clamp(84px,6.4vw,108px);height:clamp(84px,6.4vw,108px);background:#faf6f1;border-radius:12px;padding:12px;box-sizing:border-box">
+            <img src="images/homepage/clients/client-yam-antiparos.png" alt="" style="max-width:100%;max-height:100%;object-fit:contain">
+          </div>
+          <div style="text-align:center">
+            <div style="font-size:clamp(.9rem,.85vw,1.05rem);font-weight:700;letter-spacing:.14em">YAM</div>
+            <div style="margin-top:3px;font-size:clamp(.78rem,.72vw,.9rem);color:rgba(250,246,241,.5)">Antiparos</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ JOURNAL — color-blocked cards ══════════ -->
+<section id="journal" data-screen-label="Journal" style="padding:0 0 clamp(110px,11vw,190px);background:#0b0a0a">
+  <div style="width:100%;max-width:min(var(--se-max,1760px),100%);margin:0 auto;padding:0 clamp(24px,4.2vw,84px)">
+    <div style="display:flex;align-items:baseline;justify-content:space-between;gap:24px;border-top:1px solid rgba(250,246,241,.12);padding-top:clamp(20px,1.8vw,28px)">
+      <div style="display:flex;align-items:center;gap:16px">
+        <span style="font-size:clamp(11px,.72vw,13px);font-weight:700;letter-spacing:.14em;color:rgba(250,246,241,.42)">(06)</span>
+        <span style="font-size:clamp(11px,.72vw,13px);font-weight:800;letter-spacing:.28em;background-image:linear-gradient(100deg,#edc4ac 0%,#f6dccd 19%,#fffaf6 42%,#eae8e4 60%,#d3cfc9 77%,#e2d6bf 100%);-webkit-background-clip:text;background-clip:text;color:transparent">THE CURATION JOURNAL</span>
+      </div>
+      <a href="#" style="color:#faf6f1;text-decoration:none;font-weight:700;font-size:clamp(.9rem,.95vw,1.1rem);border-bottom:1px solid rgba(250,246,241,.3);padding-bottom:3px" class="se-lnp">All articles →</a>
+    </div>
+    <h2 style="margin:clamp(30px,3vw,52px) 0 clamp(48px,5vw,90px);font-size:clamp(2.6rem,4.9vw,5.9rem);line-height:1;letter-spacing:-.028em;font-weight:800;animation:se-rise 1s cubic-bezier(.19,1,.22,1) both;animation-timeline:view();animation-range:entry 5% entry 50%">How sound shapes <em style="font-family:'GFS Didot',serif;font-style:italic;font-weight:400;padding-right:.15em;background-image:linear-gradient(100deg,#edc4ac 0%,#f6dccd 19%,#fffaf6 42%,#eae8e4 60%,#d3cfc9 77%,#e2d6bf 100%);-webkit-background-clip:text;background-clip:text;color:transparent">perception</em></h2>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:clamp(20px,2vw,36px);animation:se-rise 1s cubic-bezier(.19,1,.22,1) both;animation-timeline:view();animation-range:entry 5% entry 45%">
+      <a href="#" style="display:flex;flex-direction:column;background:#faebe3;color:#0b0a0a;text-decoration:none;border-radius:clamp(16px,1.5vw,26px);overflow:hidden" class="se-card">
+        <span style="display:block;aspect-ratio:16/10;overflow:hidden">
+          <img src="images/homepage/blog-music-hospitality-brand.jpg" alt="Music in hospitality" style="display:block;width:100%;height:100%;object-fit:cover" class="se-ci"></img>
+        </span>
+        <span style="display:flex;flex-direction:column;flex:1;padding:clamp(22px,2.2vw,36px)">
+          <span style="align-self:flex-start;font-size:10.5px;font-weight:800;letter-spacing:.2em;border:1px solid rgba(11,10,10,.25);border-radius:999px;padding:6px 14px;margin-bottom:clamp(16px,1.6vw,24px)">INSIGHTS</span>
+          <span style="font-size:clamp(1.3rem,1.65vw,1.85rem);font-weight:800;letter-spacing:-.015em;line-height:1.16;margin-bottom:12px">Three reasons music matters in hospitality</span>
+          <span style="font-size:clamp(.95rem,1.02vw,1.15rem);line-height:1.58;color:rgba(11,10,10,.62);margin-bottom:clamp(20px,2vw,30px)">Curated music is a practical way to shape how guests feel, what they remember and how they spend.</span>
+          <span style="margin-top:auto;font-weight:800;font-size:clamp(.92rem,.98vw,1.1rem)">Read More →</span>
+        </span>
+      </a>
+      <a href="#" style="display:flex;flex-direction:column;background:#f0bd95;color:#0b0a0a;text-decoration:none;border-radius:clamp(16px,1.5vw,26px);overflow:hidden" class="se-card">
+        <span style="display:block;aspect-ratio:16/10;overflow:hidden">
+          <img src="images/blog/blog-music-converts-browsers-buyers.jpg" alt="Brand-fit music research" style="display:block;width:100%;height:100%;object-fit:cover" class="se-ci"></img>
+        </span>
+        <span style="display:flex;flex-direction:column;flex:1;padding:clamp(22px,2.2vw,36px)">
+          <span style="align-self:flex-start;font-size:10.5px;font-weight:800;letter-spacing:.2em;border:1px solid rgba(11,10,10,.3);border-radius:999px;padding:6px 14px;margin-bottom:clamp(16px,1.6vw,24px)">RESEARCH</span>
+          <span style="font-size:clamp(1.3rem,1.65vw,1.85rem);font-weight:800;letter-spacing:-.015em;line-height:1.16;margin-bottom:12px">How brand-fit music converts browsers into buyers</span>
+          <span style="font-size:clamp(.95rem,1.02vw,1.15rem);line-height:1.58;color:rgba(11,10,10,.66);margin-bottom:clamp(20px,2vw,30px)">Evidence-based research shows how brand-aligned music boosts revenues in hospitality venues.</span>
+          <span style="margin-top:auto;font-weight:800;font-size:clamp(.92rem,.98vw,1.1rem)">Read More →</span>
+        </span>
+      </a>
+      <a href="#" style="display:flex;flex-direction:column;background:#faf6f1;color:#0b0a0a;text-decoration:none;border-radius:clamp(16px,1.5vw,26px);overflow:hidden" class="se-card">
+        <span style="display:block;aspect-ratio:16/10;overflow:hidden">
+          <img src="images/blog/blog-what-does-music-curator-do.jpg" alt="Music curator at work" style="display:block;width:100%;height:100%;object-fit:cover" class="se-ci"></img>
+        </span>
+        <span style="display:flex;flex-direction:column;flex:1;padding:clamp(22px,2.2vw,36px)">
+          <span style="align-self:flex-start;font-size:10.5px;font-weight:800;letter-spacing:.2em;border:1px solid rgba(11,10,10,.25);border-radius:999px;padding:6px 14px;margin-bottom:clamp(16px,1.6vw,24px)">EDUCATION</span>
+          <span style="font-size:clamp(1.3rem,1.65vw,1.85rem);font-weight:800;letter-spacing:-.015em;line-height:1.16;margin-bottom:12px">What exactly does a music curator do?</span>
+          <span style="font-size:clamp(.95rem,1.02vw,1.15rem);line-height:1.58;color:rgba(11,10,10,.62);margin-bottom:clamp(20px,2vw,30px)">How professional music curators architect brand soundtracks through strategic curation.</span>
+          <span style="margin-top:auto;font-weight:800;font-size:clamp(.92rem,.98vw,1.1rem)">Read More →</span>
+        </span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ CONTACT CTA ══════════ -->
+<section id="contact" data-screen-label="Contact CTA" style="position:relative;padding:clamp(120px,13vw,230px) 0;overflow:hidden;border-top:1px solid rgba(250,246,241,.1)">
+  <img src="images/homepage/sensear-signature-playlist-service.jpg" alt="" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
+  <div aria-hidden="true" style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,10,10,.82),rgba(11,10,10,.92))"></div>
+  <div style="width:100%;max-width:min(var(--se-max,1760px),100%);margin:0 auto;padding:0 clamp(24px,4.2vw,84px);position:relative;text-align:center">
+    <div style="display:flex;align-items:center;justify-content:center;gap:16px;margin-bottom:clamp(28px,2.8vw,44px);animation:se-fade .9s ease both;animation-timeline:view();animation-range:entry 0% entry 45%">
+      <span style="font-size:clamp(11px,.72vw,13px);font-weight:700;letter-spacing:.14em;color:rgba(250,246,241,.42)">(07)</span>
+      <span style="font-size:clamp(11px,.72vw,13px);font-weight:800;letter-spacing:.28em;background-image:linear-gradient(100deg,#edc4ac 0%,#f6dccd 19%,#fffaf6 42%,#eae8e4 60%,#d3cfc9 77%,#e2d6bf 100%);-webkit-background-clip:text;background-clip:text;color:transparent">LET'S COLLABORATE</span>
+    </div>
+    <h2 style="margin:0 auto clamp(22px,2.2vw,36px);max-width:16ch;font-size:clamp(2.8rem,5.7vw,6.8rem);line-height:1.02;letter-spacing:-.03em;font-weight:800;animation:se-rise 1s cubic-bezier(.19,1,.22,1) both;animation-timeline:view();animation-range:entry 5% entry 55%">Let's design the <em style="font-family:'GFS Didot',serif;font-style:italic;font-weight:400;padding-right:.15em;background-image:linear-gradient(100deg,#edc4ac 0%,#f6dccd 19%,#fffaf6 42%,#eae8e4 60%,#d3cfc9 77%,#e2d6bf 100%);-webkit-background-clip:text;background-clip:text;color:transparent">soundtrack</em> for your space</h2>
+    <p style="margin:0 auto clamp(44px,4.2vw,70px);max-width:44ch;font-size:clamp(1.05rem,1.25vw,1.45rem);line-height:1.6;color:rgba(250,246,241,.6);animation:se-rise 1s cubic-bezier(.19,1,.22,1) both;animation-timeline:view();animation-range:entry 8% entry 58%">Tell us about your venue and we'll craft its sonic identity together.</p>
+    <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:clamp(18px,1.8vw,30px);animation:se-rise 1s cubic-bezier(.19,1,.22,1) both;animation-timeline:view();animation-range:entry 10% entry 60%">
+      <a href="#" style="display:inline-flex;align-items:center;gap:12px;background-image:linear-gradient(100deg,#f0cdb8 0%,#f7ddd0 15%,#fcefe7 29%,#ffffff 44%,#efeeec 58%,#dad8d6 72%,#d2cec9 84%,#e4d9c4 100%);color:#0b0a0a;text-decoration:none;font-weight:800;font-size:clamp(.95rem,1vw,1.15rem);padding:clamp(16px,1.3vw,21px) clamp(28px,2.3vw,40px);border-radius:999px" class="se-pill"><span>Send us a message</span><span aria-hidden="true">→</span></a>
+      <a href="tel:+306976994212" style="display:inline-flex;align-items:center;gap:12px;border:1px solid rgba(250,246,241,.28);color:#faf6f1;text-decoration:none;font-weight:700;font-size:clamp(.95rem,1vw,1.15rem);padding:clamp(15px,1.25vw,20px) clamp(26px,2.1vw,38px);border-radius:999px" class="se-gho">Call us (6976 994 212)</a>
+    </div>
+    <a href="#services" class="se-fp" style="display:inline-block;margin-top:clamp(30px,3vw,48px);font-size:14px;letter-spacing:.04em;color:rgba(250,246,241,.45);text-decoration:none">View our services</a>
+  </div>
+</section>
+
+<!-- ══════════ FOOTER ══════════ -->
+<footer data-screen-label="Footer" style="border-top:1px solid rgba(250,246,241,.1);padding-top:clamp(70px,6.5vw,110px);background:#0b0a0a">
+  <div style="width:100%;max-width:min(var(--se-max,1760px),100%);margin:0 auto;padding:0 clamp(24px,4.2vw,84px);display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:clamp(32px,3vw,52px)">
+    <div>
+      <div style="display:flex;align-items:center;gap:13px;margin-bottom:20px">
+        <img src="images/brand/sensear-logo-white.png" alt="SensEar logo" style="width:46px;height:46px;object-fit:contain">
+        <div>
+          <div style="font-weight:800;letter-spacing:.18em;font-size:19px">SENSEAR</div>
+          <div style="font-family:'GFS Didot',serif;font-style:italic;font-size:13px;color:rgba(250,246,241,.55)">Soundtracking Unique Experiences</div>
+        </div>
+      </div>
+      <p style="margin:0 0 24px;max-width:300px;font-size:.96rem;line-height:1.6;color:rgba(250,246,241,.5)">Music curation &amp; sonic identity for venues, events and brands.</p>
+      <div style="display:flex;gap:16px;margin-bottom:24px">
+        <a href="https://www.facebook.com/61575909304249/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" style="color:rgba(250,246,241,.7)" class="se-fp"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+        <a href="https://www.instagram.com/sensear.music" target="_blank" rel="noopener noreferrer" aria-label="Instagram" style="color:rgba(250,246,241,.7)" class="se-fp"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg></a>
+        <a href="https://www.linkedin.com/company/sensear-music/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" style="color:rgba(250,246,241,.7)" class="se-fp"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:8px;font-size:.95rem">
+        <a href="mailto:hello@sensear.music" style="color:rgba(250,246,241,.7);text-decoration:none" class="se-fp">hello@sensear.music</a>
+        <a href="tel:+306976994212" style="color:rgba(250,246,241,.7);text-decoration:none" class="se-fp">+30 697 699 4212</a>
+      </div>
+    </div>
+    <div>
+      <div style="font-size:11px;font-weight:800;letter-spacing:.22em;margin-bottom:18px;background-image:linear-gradient(100deg,#edc4ac 0%,#f6dccd 19%,#fffaf6 42%,#eae8e4 60%,#d3cfc9 77%,#e2d6bf 100%);-webkit-background-clip:text;background-clip:text;color:transparent">SERVICES</div>
+      <div style="display:flex;flex-direction:column;gap:11px">
+        <a href="#services" style="color:rgba(250,246,241,.62);text-decoration:none;font-size:.95rem" class="se-fw">Signature Playlists</a>
+        <a href="#services" style="color:rgba(250,246,241,.62);text-decoration:none;font-size:.95rem" class="se-fw">Event Soundtracks</a>
+        <a href="#services" style="color:rgba(250,246,241,.62);text-decoration:none;font-size:.95rem" class="se-fw">Sonic Identity</a>
+        <a href="#services" style="color:rgba(250,246,241,.62);text-decoration:none;font-size:.95rem" class="se-fw">Audio Upgrades</a>
+      </div>
+    </div>
+    <div>
+      <div style="font-size:11px;font-weight:800;letter-spacing:.22em;margin-bottom:18px;background-image:linear-gradient(100deg,#edc4ac 0%,#f6dccd 19%,#fffaf6 42%,#eae8e4 60%,#d3cfc9 77%,#e2d6bf 100%);-webkit-background-clip:text;background-clip:text;color:transparent">INDUSTRIES</div>
+      <div style="display:flex;flex-direction:column;gap:11px">
+        <a href="#industries" style="color:rgba(250,246,241,.62);text-decoration:none;font-size:.95rem" class="se-fw">Hotels &amp; Resorts</a>
+        <a href="#industries" style="color:rgba(250,246,241,.62);text-decoration:none;font-size:.95rem" class="se-fw">Restaurants &amp; Bars</a>
+        <a href="#industries" style="color:rgba(250,246,241,.62);text-decoration:none;font-size:.95rem" class="se-fw">Events &amp; Experiences</a>
+        <a href="#industries" style="color:rgba(250,246,241,.62);text-decoration:none;font-size:.95rem" class="se-fw">Retail Stores</a>
+        <a href="#industries" style="color:rgba(250,246,241,.62);text-decoration:none;font-size:.95rem" class="se-fw">Wellness &amp; Gyms</a>
+        <a href="#industries" style="color:rgba(250,246,241,.62);text-decoration:none;font-size:.95rem" class="se-fw">Art, Museums &amp; Fashion</a>
+      </div>
+    </div>
+    <div>
+      <div style="font-size:11px;font-weight:800;letter-spacing:.22em;margin-bottom:18px;background-image:linear-gradient(100deg,#edc4ac 0%,#f6dccd 19%,#fffaf6 42%,#eae8e4 60%,#d3cfc9 77%,#e2d6bf 100%);-webkit-background-clip:text;background-clip:text;color:transparent">COMPANY</div>
+      <div style="display:flex;flex-direction:column;gap:11px">
+        <a href="#" style="color:rgba(250,246,241,.62);text-decoration:none;font-size:.95rem" class="se-fw">Case Studies</a>
+        <a href="#journal" style="color:rgba(250,246,241,.62);text-decoration:none;font-size:.95rem" class="se-fw">Blog</a>
+        <a href="#" style="color:rgba(250,246,241,.62);text-decoration:none;font-size:.95rem" class="se-fw">About</a>
+        <a href="#contact" style="color:rgba(250,246,241,.62);text-decoration:none;font-size:.95rem" class="se-fw">Contact</a>
+        <a href="#" style="color:rgba(250,246,241,.62);text-decoration:none;font-size:.95rem" class="se-fw">FAQ</a>
+        <a href="#" style="color:rgba(250,246,241,.62);text-decoration:none;font-size:.95rem" class="se-fw">Sitemap</a>
+      </div>
+    </div>
+    <div>
+      <div style="font-size:11px;font-weight:800;letter-spacing:.22em;margin-bottom:18px;background-image:linear-gradient(100deg,#edc4ac 0%,#f6dccd 19%,#fffaf6 42%,#eae8e4 60%,#d3cfc9 77%,#e2d6bf 100%);-webkit-background-clip:text;background-clip:text;color:transparent">NEWSLETTER</div>
+      <p style="margin:0 0 16px;font-size:.9rem;line-height:1.55;color:rgba(250,246,241,.5)">Subscribe to our Curation journal newsletter.</p>
+      <div style="display:flex;align-items:center;gap:10px;border-bottom:1px solid rgba(250,246,241,.25);padding-bottom:10px">
+        <input type="email" placeholder="Your email" style="flex:1;background:transparent;border:none;outline:none;color:#faf6f1;font-family:'Commissioner',sans-serif;font-size:.95rem;padding:6px 0">
+        <button aria-label="Subscribe" style="width:38px;height:38px;border-radius:999px;border:none;cursor:pointer;background-image:linear-gradient(100deg,#f0cdb8,#e4d9c4);color:#0b0a0a;font-size:16px;font-weight:800;display:grid;place-items:center" class="se-nlb">→</button>
+      </div>
+    </div>
+  </div>
+  <div style="width:100%;max-width:min(var(--se-max,1760px),100%);margin:clamp(44px,4vw,64px) auto 0;padding:22px clamp(24px,4.2vw,84px);border-top:1px solid rgba(250,246,241,.1);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px">
+    <span style="font-size:12px;color:rgba(250,246,241,.4)">© 2026 SensEar Music · All rights reserved.</span>
+    <span style="display:flex;gap:20px">
+      <a href="#" style="font-size:12px;color:rgba(250,246,241,.4);text-decoration:none" class="se-fw">Privacy Policy</a>
+      <a href="#" style="font-size:12px;color:rgba(250,246,241,.4);text-decoration:none" class="se-fw">Terms of Service</a>
+    </span>
+  </div>
+  <div style="overflow:hidden;padding:clamp(20px,2vw,36px) 0 clamp(10px,1vw,20px);line-height:.8">
+    <div style="text-align:center;font-weight:900;letter-spacing:-.02em;font-size:clamp(4rem,15.4vw,17rem);color:transparent;-webkit-text-stroke:1px rgba(250,246,241,.15)">SENSEAR</div>
+  </div>
+</footer>
+
+<sc-if value="{{grainOn}}" hint-placeholder-val="{{ true }}">
+  <div aria-hidden="true" style="position:fixed;inset:0;z-index:40;pointer-events:none;opacity:.05;mix-blend-mode:overlay;background-size:170px 170px;background-image:url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='170' height='170'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='170' height='170' filter='url(%23n)' opacity='0.6'/%3E%3C/svg%3E&quot;)"></div>
+</sc-if>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{
+  &quot;maxWidth&quot;: { &quot;editor&quot;: &quot;range&quot;, &quot;default&quot;: 1760, &quot;min&quot;: 1440, &quot;max&quot;: 2200, &quot;step&quot;: 20, &quot;unit&quot;: &quot;px&quot;, &quot;tsType&quot;: &quot;number&quot;, &quot;section&quot;: &quot;Layout&quot; },
+  &quot;colorJourney&quot;: { &quot;editor&quot;: &quot;enum&quot;, &quot;default&quot;: &quot;dusk&quot;, &quot;options&quot;: [&quot;dusk&quot;, &quot;dawn&quot;], &quot;tsType&quot;: &quot;'dusk' | 'dawn'&quot;, &quot;section&quot;: &quot;Color&quot; },
+  &quot;grain&quot;: { &quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;Texture&quot; }
+}">
+class Component extends DCLogic {
+    state = { soundOn: false, svcIdx: -1 };
+
+    componentDidMount() {
+        this.applyVars();
+        this._raf = null;
+        this._onScroll = () => {
+            if (this._raf) return;
+            this._raf = requestAnimationFrame(() => {
+                this._raf = null;
+                this.updateScroll();
+            });
+        };
+        window.addEventListener('scroll', this._onScroll, { passive: true });
+        window.addEventListener('resize', this._onScroll, { passive: true });
+        // Panel element may render after mount while streaming — retry briefly.
+        this._findTimer = setInterval(() => {
+            if (document.querySelector('[data-svc-panel]')) {
+                clearInterval(this._findTimer);
+                this._findTimer = null;
+                this.updateScroll();
+            }
+        }, 300);
+        this.updateScroll();
+    }
+
+    componentDidUpdate() {
+        this.applyVars();
+        this.syncSvcImg();
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('scroll', this._onScroll);
+        window.removeEventListener('resize', this._onScroll);
+        if (this._raf) cancelAnimationFrame(this._raf);
+        if (this._findTimer) clearInterval(this._findTimer);
+        if (this.au) { try { this.au.C.close(); } catch (e) {} }
+    }
+
+    applyVars() {
+        const r = document.documentElement.style;
+        r.setProperty('--se-max', (this.props.maxWidth ?? 1760) + 'px');
+        r.setProperty('--se-eqd', this.state.soundOn ? '0.62s' : '1.6s');
+        r.setProperty('--se-eqo', this.state.soundOn ? '1' : '0.55');
+        r.setProperty('--se-snd', this.state.soundOn ? '#f0bd95' : 'rgba(250,246,241,.75)');
+        r.setProperty('--se-sndb', this.state.soundOn ? 'rgba(240,189,149,.55)' : 'rgba(250,246,241,.22)');
+        const dusk = [
+            { bg: '#faf6f1', fg: '#0b0a0a', sub: 'rgba(11,10,10,.62)', line: 'rgba(11,10,10,.28)' },
+            { bg: '#faebe3', fg: '#0b0a0a', sub: 'rgba(11,10,10,.62)', line: 'rgba(11,10,10,.28)' },
+            { bg: '#f0bd95', fg: '#0b0a0a', sub: 'rgba(11,10,10,.66)', line: 'rgba(11,10,10,.3)' },
+            { bg: 'oklch(0.62 0.1 55)', fg: '#faf6f1', sub: 'rgba(250,246,241,.78)', line: 'rgba(250,246,241,.34)' },
+            { bg: 'oklch(0.38 0.065 50)', fg: '#faf6f1', sub: 'rgba(250,246,241,.7)', line: 'rgba(250,246,241,.3)' },
+            { bg: '#14100e', fg: '#faf6f1', sub: 'rgba(250,246,241,.62)', line: 'rgba(250,246,241,.26)' },
+        ];
+        const cols = (this.props.colorJourney ?? 'dusk') === 'dawn' ? [...dusk].reverse() : dusk;
+        cols.forEach((c, i) => {
+            const p = '--se-l' + (i + 1);
+            r.setProperty(p + 'bg', c.bg);
+            r.setProperty(p + 'fg', c.fg);
+            r.setProperty(p + 'sub', c.sub);
+            r.setProperty(p + 'line', c.line);
+        });
+    }
+
+    svcData() {
+        return [
+            { img: 'images/services/service-signature-playlists.jpg', cap: 'Your daily venue soundtrack' },
+            { img: 'images/services/service-event-soundtracks.jpg', cap: 'Bespoke DJ sets & acoustic experiences' },
+            { img: 'images/services/service-sonic-strategy.jpg', cap: "Your brand's sonic DNA" },
+            { img: 'images/services/service-audio-upgrades.jpg', cap: 'Crystal-clear, balanced sound' },
+        ];
+    }
+
+    syncSvcImg() {
+        const el = document.querySelector('[data-svc-img]');
+        if (!el) return;
+        const src = this.state.svcIdx >= 0
+            ? this.svcData()[this.state.svcIdx].img
+            : 'images/about/about-journey-team-collaboration.jpg';
+        if (el.getAttribute('src') !== src) el.setAttribute('src', src);
+    }
+
+    updateScroll() {
+        const el = document.querySelector('[data-svc-panel]');
+        if (!el) return;
+        const vh = window.innerHeight;
+        const top = el.getBoundingClientRect().top;
+        const p = Math.max(0, Math.min(1, (vh * 0.96 - top) / (vh * 0.52)));
+        document.documentElement.style.setProperty('--svc', p.toFixed(3));
+    }
+
+    ensureAudio() {
+        if (this.au) return;
+        const AC = window.AudioContext || window.webkitAudioContext;
+        const C = new AC();
+        const master = C.createGain();
+        master.gain.value = 0;
+        const lp = C.createBiquadFilter();
+        lp.type = 'lowpass';
+        lp.frequency.value = 760;
+        lp.Q.value = 0.4;
+        lp.connect(master);
+        master.connect(C.destination);
+        const mk = (f, g, det) => {
+            const o = C.createOscillator();
+            o.type = 'sine';
+            o.frequency.value = f;
+            if (det) o.detune.value = det;
+            const gg = C.createGain();
+            gg.gain.value = g;
+            o.connect(gg);
+            gg.connect(lp);
+            o.start();
+        };
+        // Warm A-major-ish pad: A2, E3, A3(+detune), C#4, E4
+        mk(110, 0.17);
+        mk(164.81, 0.11);
+        mk(220, 0.07, 5);
+        mk(277.18, 0.045);
+        mk(329.63, 0.028);
+        // Slow filter shimmer
+        const lfo = C.createOscillator();
+        lfo.frequency.value = 0.06;
+        const lg = C.createGain();
+        lg.gain.value = 240;
+        lfo.connect(lg);
+        lg.connect(lp.frequency);
+        lfo.start();
+        // Room-air noise (brownish)
+        const len = 2 * C.sampleRate;
+        const buf = C.createBuffer(1, len, C.sampleRate);
+        const d = buf.getChannelData(0);
+        let last = 0;
+        for (let i = 0; i < len; i++) {
+            const w = Math.random() * 2 - 1;
+            last = (last + 0.02 * w) / 1.02;
+            d[i] = last * 3.5;
+        }
+        const src = C.createBufferSource();
+        src.buffer = buf;
+        src.loop = true;
+        const nf = C.createBiquadFilter();
+        nf.type = 'lowpass';
+        nf.frequency.value = 420;
+        const ng = C.createGain();
+        ng.gain.value = 0.05;
+        src.connect(nf);
+        nf.connect(ng);
+        ng.connect(lp);
+        src.start();
+        // Gentle volume breathing
+        const b = C.createOscillator();
+        b.frequency.value = 0.05;
+        const bg = C.createGain();
+        bg.gain.value = 0.018;
+        b.connect(bg);
+        bg.connect(master.gain);
+        b.start();
+        this.au = { C, master };
+    }
+
+    toggleSound = () => {
+        const on = !this.state.soundOn;
+        if (on) {
+            this.ensureAudio();
+            const { C, master } = this.au;
+            C.resume();
+            const t = C.currentTime;
+            master.gain.cancelScheduledValues(t);
+            master.gain.setTargetAtTime(0.085, t, 0.7);
+        } else if (this.au) {
+            const { C, master } = this.au;
+            const t = C.currentTime;
+            master.gain.cancelScheduledValues(t);
+            master.gain.setTargetAtTime(0.0001, t, 0.3);
+        }
+        this.setState({ soundOn: on });
+    };
+
+    renderVals() {
+        const cur = this.state.svcIdx >= 0
+            ? this.svcData()[this.state.svcIdx]
+            : { img: 'images/about/about-journey-team-collaboration.jpg', cap: 'Hover over a service' };
+        return {
+            grainOn: this.props.grain ?? true,
+            nowLabel: this.state.soundOn ? 'NOW PLAYING' : 'NOW PLAYING — TAP FOR SOUND',
+            toggleSound: this.toggleSound,
+            svcEnter0: () => this.setState({ svcIdx: 0 }),
+            svcEnter1: () => this.setState({ svcIdx: 1 }),
+            svcEnter2: () => this.setState({ svcIdx: 2 }),
+            svcEnter3: () => this.setState({ svcIdx: 3 }),
+            svcCap: cur.cap,
+            svcNum: this.state.svcIdx >= 0 ? '0' + (this.state.svcIdx + 1) : '—',
+        };
+    }
+}
+</script>
+</body>
+</html>
