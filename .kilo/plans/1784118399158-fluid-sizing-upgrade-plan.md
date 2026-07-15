@@ -138,7 +138,7 @@ Implement these as an assertion self-test inside the script (run on hard-coded s
 - `d64381c` handoff: fluid sizing — all remaining pages
 
 **Per-file counts (tokens scaled / clamped / font-clamps rescaled / containers):**
-About 294/204/13/8 · Article 161/121/8/3 · Audio Upgrades 246/171/11/8 · Case Studies 235/159/12/6 · Contact 307/226/7/5 · Event Soundtracks 243/169/11/8 · FAQ 157/113/5/5 · Homepage 465/307/14/11 · Hotels & Resorts 285/191/12/8 · Industries 318/217/15/7 · Journal 234/187/6/6 · Restaurants & Bars 281/188/12/8 · Services 280/198/11/7 · Signature Playlists 251/173/11/11 → corrected: 251/173/11/8 · Sitemap 262/154/5/5 · Sonic Identity 243/169/11/8. Nav overrides hit exactly 6/1/1/1/1 (link-fs ×6 incl. pill / group-gap / nav-gap / side-pad / pill-pad) in all 16 files.
+About 294/204/13/8 · Article 161/121/8/3 · Audio Upgrades 246/171/11/8 · Case Studies 235/159/12/6 · Contact 307/226/7/5 · Event Soundtracks 243/169/11/8 · FAQ 157/113/5/5 · Homepage 465/307/14/11 · Hotels & Resorts 285/191/12/8 · Industries 318/217/15/7 · Journal 234/187/6/6 · Restaurants & Bars 281/188/12/8 · Services 280/198/11/7 · Signature Playlists 251/173/11/8 · Sitemap 262/154/5/5 · Sonic Identity 243/169/11/8. Nav overrides hit exactly 6/1/1/1/1 (link-fs ×6 incl. pill / group-gap / nav-gap / side-pad / pill-pad) in all 16 files.
 
 **Verification:** 48/48 Playwright checks passed (16 pages × 1760/1280/900): no horizontal overflow (≤1px), nav single-line, pill unclipped. Computed-style probe: FAQ nav pixel-identical to Homepage XL at all three widths (nav padding, container max-width/padding, wordmark, navlink font-size, pill padding + nowrap). Screenshots: `handoff/screenshots/fluid/` (48 files, full-page).
 
