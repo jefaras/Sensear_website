@@ -51,8 +51,8 @@ interface Client {
 
 function ClientCard({ client }: { client: Client }) {
     return (
-        <div className="flex w-[230px] shrink-0 flex-col items-center gap-4 rounded-lg border border-[#faf6f1]/8 bg-[#141210] p-7">
-            <div className="flex h-24 w-24 items-center justify-center rounded-md bg-[#faf6f1] p-3">
+        <div className="flex w-[260px] shrink-0 flex-col items-center gap-[clamp(13px,1.02vw,18px)] rounded-lg border border-[#faf6f1]/8 bg-[#141210] p-[clamp(23px,1.82vw,32px)]">
+            <div className="flex h-[110px] w-[110px] items-center justify-center rounded-md bg-[#faf6f1] p-3">
                 <Image
                     src={client.logo}
                     alt={client.alt}
@@ -63,8 +63,8 @@ function ClientCard({ client }: { client: Client }) {
                 />
             </div>
             <div className="text-center">
-                <div className="text-[0.95rem] font-bold tracking-[0.14em]">{client.name}</div>
-                <div className="mt-[3px] text-[0.8rem] text-[#faf6f1]/50">{client.location}</div>
+                <div className="text-[clamp(0.87rem,0.99vw,1.09rem)] font-bold tracking-[0.14em]">{client.name}</div>
+                <div className="mt-[3px] text-[clamp(0.74rem,0.84vw,0.92rem)] text-[#faf6f1]/50">{client.location}</div>
             </div>
         </div>
     );
@@ -74,7 +74,7 @@ export function Venues({ lang, kicker, title }: VenuesProps) {
     const emWord = lang === 'el' ? 'εμπιστεύονται' : 'Greece';
 
     const Row = () => (
-        <div className="flex gap-7 pr-7">
+        <div className="flex gap-[clamp(23px,1.82vw,32px)] pr-[clamp(23px,1.82vw,32px)]">
             {clients.map((client) => (
                 <ClientCard key={client.name} client={client} />
             ))}
@@ -82,20 +82,20 @@ export function Venues({ lang, kicker, title }: VenuesProps) {
     );
 
     return (
-        <section className="border-y border-[#faf6f1]/8 bg-[#0b0a0a] py-[110px]">
-            <div className="mx-auto max-w-[1380px] px-6 sm:px-8">
+        <section className="border-y border-[#faf6f1]/8 bg-[#0b0a0a] py-[clamp(94px,7.39vw,130px)]">
+            <div className="mx-auto max-w-[min(1760px,100%)] px-[clamp(20px,1.59vw,28px)] sm:px-[clamp(27px,2.1vw,37px)]">
                 <ScrollReveal>
-                    <Kicker className="mb-[18px]">{kicker}</Kicker>
+                    <Kicker className="mb-[clamp(15px,1.19vw,21px)]">{kicker}</Kicker>
                 </ScrollReveal>
                 <ScrollReveal delay={0.06}>
-                    <h2 className="mb-16 max-w-[760px] text-[clamp(1.9rem,3.6vw,3rem)] font-extrabold leading-[1.05] tracking-[-0.02em]">
+                    <h2 className="mb-[clamp(53px,4.2vw,74px)] max-w-[870px] text-[clamp(2.18rem,4.14vw,3.45rem)] font-extrabold leading-[1.05] tracking-[-0.02em]">
                         {emphasize(title, emWord)}
                     </h2>
                 </ScrollReveal>
                 {/* Marquee clipped at content boundary with gradient fades */}
                 <div className="relative -mx-6 overflow-hidden sm:-mx-8">
-                    <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-20 bg-gradient-to-r from-[#0b0a0a] to-transparent" />
-                    <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-20 bg-gradient-to-l from-[#0b0a0a] to-transparent" />
+                    <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-[92px] bg-gradient-to-r from-[#0b0a0a] to-transparent" />
+                    <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-[92px] bg-gradient-to-l from-[#0b0a0a] to-transparent" />
                     <ScrollReveal>
                         <div className="flex w-max animate-[se-marq_40s_linear_infinite]">
                             <Row />

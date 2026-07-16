@@ -27,20 +27,20 @@ export default async function FaqV3({ params }: { params: Promise<{ lang: Locale
         <V3Root>
             <Hero lang={lang} hero={content.hero} sectionKicker={content.section_kicker} />
 
-            <section className="relative overflow-hidden border-t border-[#faf6f1]/8 bg-[#0e0d0c] py-[120px] pb-[130px]">
+            <section className="relative overflow-hidden border-t border-[#faf6f1]/8 bg-[#0e0d0c] py-[clamp(101px,7.95vw,140px)] pb-[clamp(108px,8.52vw,150px)]">
                 <DriftOrb
-                    className="h-[40vw] max-h-[480px] w-[40vw] max-w-[480px]"
+                    className="h-[40vw] max-h-[550px] w-[40vw] max-w-[550px]"
                     style={{ top: '10%', right: '-8%', background: 'radial-gradient(circle,rgba(240,189,149,0.10),rgba(240,189,149,0) 62%)' }}
                     duration={20}
                 />
-                <div className="relative z-10 mx-auto max-w-[920px] px-6">
+                <div className="relative z-10 mx-auto max-w-[1060px] px-[clamp(20px,1.59vw,28px)]">
                     <ScrollReveal>
-                        <Kicker variant="gold" className="mb-[18px] justify-center">
+                        <Kicker variant="gold" className="mb-[clamp(15px,1.19vw,21px)] justify-center">
                             {content.section_kicker}
                         </Kicker>
                     </ScrollReveal>
                     <ScrollReveal delay={0.08}>
-                        <h2 className="mb-[60px] text-center text-[clamp(2.2rem,4.5vw,3.4rem)] font-extrabold leading-[1.05] tracking-[-0.02em]">
+                        <h2 className="mb-[clamp(50px,3.92vw,69px)] text-center text-[clamp(2.53rem,5.18vw,3.91rem)] font-extrabold leading-[1.05] tracking-[-0.02em]">
                             {emphasize(content.title, titleEmWord)}
                         </h2>
                     </ScrollReveal>

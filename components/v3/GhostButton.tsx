@@ -9,7 +9,7 @@ interface GhostButtonProps {
 }
 
 export function GhostButton({ href, children, className, external = false }: GhostButtonProps) {
-    const cls = `inline-block border-b border-[#faf6f1]/35 pb-1 text-[15px] font-semibold text-[#faf6f1] no-underline transition-colors hover:border-[#faf6f1]/70 ${className ?? ''}`;
+    const cls = `inline-block border-b border-[#faf6f1]/35 pb-1 text-[clamp(14px,0.97vw,17px)] font-semibold text-[#faf6f1] no-underline transition-colors hover:border-[#faf6f1]/70 ${className ?? ''}`;
 
     if (external) {
         return (

@@ -11,7 +11,7 @@ export function SideRail({ children, className }: SideRailProps) {
             className={`absolute left-8 top-1/2 hidden -translate-y-1/2 rotate-180 lg:block ${className ?? ''}`}
             style={{ writingMode: 'vertical-rl' }}
         >
-            <span className="text-[11px] font-semibold tracking-[0.42em] text-[#faf6f1]/40">
+            <span className="text-[clamp(10px,0.74vw,13px)] font-semibold tracking-[0.42em] text-[#faf6f1]/40">
                 {children}
             </span>
         </div>

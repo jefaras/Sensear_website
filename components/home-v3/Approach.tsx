@@ -23,9 +23,9 @@ export function Approach({ lang, kicker, title, subtitle, items, cta }: Approach
     const emWord = lang === 'el' ? 'επαναπροσδιορίζουμε' : 'redefine';
 
     return (
-        <section className="relative bg-[#0e0d0c] py-[130px]">
+        <section className="relative bg-[#0e0d0c] py-[clamp(108px,8.52vw,150px)]">
             <DriftOrb
-                className="h-[42vw] max-h-[520px] w-[42vw] max-w-[520px]"
+                className="h-[42vw] max-h-[600px] w-[42vw] max-w-[600px]"
                 style={{
                     top: '-6%',
                     right: '8%',
@@ -34,8 +34,8 @@ export function Approach({ lang, kicker, title, subtitle, items, cta }: Approach
                 }}
                 duration={21}
             />
-            <div className="relative z-10 mx-auto max-w-[1380px] px-6 sm:px-8">
-                <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
+            <div className="relative z-10 mx-auto max-w-[min(1760px,100%)] px-[clamp(20px,1.59vw,28px)] sm:px-[clamp(27px,2.1vw,37px)]">
+                <div className="grid grid-cols-1 items-center gap-[clamp(40px,3.12vw,55px)] lg:grid-cols-[0.9fr_1.1fr] lg:gap-[clamp(53px,4.2vw,74px)]">
                     <ScrollReveal direction="left">
                         <div className="relative aspect-[4/4.4] overflow-hidden rounded-lg">
                             <Image
@@ -51,27 +51,27 @@ export function Approach({ lang, kicker, title, subtitle, items, cta }: Approach
 
                     <div>
                         <ScrollReveal>
-                            <Kicker className="mb-[18px]">{kicker}</Kicker>
+                            <Kicker className="mb-[clamp(15px,1.19vw,21px)]">{kicker}</Kicker>
                         </ScrollReveal>
                         <ScrollReveal delay={0.06}>
-                            <h2 className="mb-[18px] text-[clamp(2rem,4vw,3.4rem)] font-extrabold leading-[1.04] tracking-[-0.02em]">
+                            <h2 className="mb-[clamp(15px,1.19vw,21px)] text-[clamp(2.3rem,4.6vw,3.91rem)] font-extrabold leading-[1.04] tracking-[-0.02em]">
                                 {emphasize(title, emWord)}
                             </h2>
                         </ScrollReveal>
                         <ScrollReveal delay={0.12}>
-                            <p className="mb-10 max-w-[560px] text-[1.1rem] text-[#faf6f1]/60">{subtitle}</p>
+                            <p className="mb-[clamp(33px,2.61vw,46px)] max-w-[640px] text-[clamp(1.01rem,1.15vw,1.26rem)] text-[#faf6f1]/60">{subtitle}</p>
                         </ScrollReveal>
 
                         <div className="flex flex-col">
                             {items.map((item, i) => (
                                 <ScrollReveal key={i} delay={i * 0.06}>
-                                    <div className="flex gap-[22px] border-t border-[#faf6f1]/12 py-6 last:border-b">
-                                        <span className="w-[34px] shrink-0 text-[13px] font-bold text-[#faf6f1]/40">
+                                    <div className="flex gap-[clamp(18px,1.42vw,25px)] border-t border-[#faf6f1]/12 py-[clamp(20px,1.59vw,28px)] last:border-b">
+                                        <span className="w-[39px] shrink-0 text-[clamp(12px,0.85vw,15px)] font-bold text-[#faf6f1]/40">
                                             {String(i + 1).padStart(2, '0')}
                                         </span>
                                         <div>
-                                            <div className="mb-1.5 text-[1.3rem] font-bold">{item.title}</div>
-                                            <p className="text-[1rem] leading-[1.55] text-[#faf6f1]/55">{item.desc}</p>
+                                            <div className="mb-1.5 text-[clamp(1.2rem,1.36vw,1.5rem)] font-bold">{item.title}</div>
+                                            <p className="text-[clamp(0.92rem,1.05vw,1.15rem)] leading-[1.55] text-[#faf6f1]/55">{item.desc}</p>
                                         </div>
                                     </div>
                                 </ScrollReveal>
@@ -79,7 +79,7 @@ export function Approach({ lang, kicker, title, subtitle, items, cta }: Approach
                         </div>
 
                         <ScrollReveal delay={0.18}>
-                            <div className="mt-9">
+                            <div className="mt-[clamp(30px,2.33vw,41px)]">
                                 <MorphCTA href={localizedPath('/case-studies')}>{cta}</MorphCTA>
                             </div>
                         </ScrollReveal>

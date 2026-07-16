@@ -40,9 +40,9 @@ export function Services({ lang, kicker, title, subtitle, items, previewPlacehol
     const previewCap = activePreview?.cap ?? previewPlaceholder;
 
     return (
-        <section className="relative bg-[#0e0d0c] py-[120px]">
+        <section className="relative bg-[#0e0d0c] py-[clamp(101px,7.95vw,140px)]">
             <DriftOrb
-                className="h-[46vw] max-h-[560px] w-[46vw] max-w-[560px]"
+                className="h-[46vw] max-h-[640px] w-[46vw] max-w-[640px]"
                 style={{
                     bottom: '4%',
                     right: '-6%',
@@ -52,20 +52,20 @@ export function Services({ lang, kicker, title, subtitle, items, previewPlacehol
                 duration={24}
                 reverse
             />
-            <div className="relative z-10 mx-auto max-w-[1380px] px-6 sm:px-8">
+            <div className="relative z-10 mx-auto max-w-[min(1760px,100%)] px-[clamp(20px,1.59vw,28px)] sm:px-[clamp(27px,2.1vw,37px)]">
                 <ScrollReveal>
-                    <Kicker className="mb-[18px]">{kicker}</Kicker>
+                    <Kicker className="mb-[clamp(15px,1.19vw,21px)]">{kicker}</Kicker>
                 </ScrollReveal>
                 <ScrollReveal delay={0.06}>
-                    <h2 className="mb-[18px] max-w-[900px] text-[clamp(2rem,4vw,3.4rem)] font-extrabold leading-[1.04] tracking-[-0.02em]">
+                    <h2 className="mb-[clamp(15px,1.19vw,21px)] max-w-[1040px] text-[clamp(2.3rem,4.6vw,3.91rem)] font-extrabold leading-[1.04] tracking-[-0.02em]">
                         {emphasize(title, emWord)}
                     </h2>
                 </ScrollReveal>
                 <ScrollReveal delay={0.12}>
-                    <p className="mb-[30px] max-w-[680px] text-[1.1rem] text-[#faf6f1]/60">{subtitle}</p>
+                    <p className="mb-[clamp(25px,1.99vw,35px)] max-w-[780px] text-[clamp(1.01rem,1.15vw,1.26rem)] text-[#faf6f1]/60">{subtitle}</p>
                 </ScrollReveal>
 
-                <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-[1.35fr_0.65fr] lg:gap-[50px]">
+                <div className="grid grid-cols-1 items-start gap-[clamp(40px,3.12vw,55px)] lg:grid-cols-[1.35fr_0.65fr] lg:gap-[clamp(41px,3.24vw,57px)]">
                     <div className="border-t border-[#faf6f1]/12">
                         {items.map((item, i) => (
                             <Link
@@ -73,35 +73,35 @@ export function Services({ lang, kicker, title, subtitle, items, previewPlacehol
                                 href={localizedPath(`/${item.link}`)}
                                 onMouseEnter={() => setHovered(i)}
                                 onMouseLeave={() => setHovered(null)}
-                                className="se-svc flex items-baseline gap-6 border-b border-[#faf6f1]/12 py-[34px] text-[#faf6f1] no-underline"
+                                className="se-svc flex items-baseline gap-[clamp(20px,1.59vw,28px)] border-b border-[#faf6f1]/12 py-[clamp(28px,2.22vw,39px)] text-[#faf6f1] no-underline"
                             >
-                                <span className="w-[34px] shrink-0 text-[13px] font-bold tabular-nums text-[#faf6f1]/40">
+                                <span className="w-[39px] shrink-0 text-[clamp(12px,0.85vw,15px)] font-bold tabular-nums text-[#faf6f1]/40">
                                     {String(i + 1).padStart(2, '0')}
                                 </span>
                                 <div className="flex-1">
-                                    <div className="se-svc-title text-[clamp(1.4rem,2.4vw,2.1rem)] font-bold tracking-[-0.01em]">
+                                    <div className="se-svc-title text-[clamp(1.61rem,2.76vw,2.42rem)] font-bold tracking-[-0.01em]">
                                         {item.title}
                                     </div>
-                                    <p className="mt-2 max-w-[560px] text-[1rem] text-[#faf6f1]/55">{item.desc}</p>
+                                    <p className="mt-2 max-w-[640px] text-[clamp(0.92rem,1.05vw,1.15rem)] text-[#faf6f1]/55">{item.desc}</p>
                                 </div>
-                                <span className="se-svc-arrow se-gold-text self-center text-[20px]">→</span>
+                                <span className="se-svc-arrow se-gold-text self-center text-[clamp(18px,1.31vw,23px)]">→</span>
                             </Link>
                         ))}
                     </div>
 
-                    <div className="lg:sticky lg:top-[120px]">
+                    <div className="lg:sticky lg:top-[140px]">
                         <div className="relative aspect-[3/3.8] overflow-hidden rounded-lg bg-[#161412]">
                             <div
                                 className="absolute inset-0 bg-cover bg-center transition-opacity duration-500"
                                 style={{ backgroundImage: `url('${previewImg}')` }}
                             />
-                            <div className="absolute inset-0 flex flex-col items-center justify-center gap-[14px]">
-                                <div className="flex h-16 w-16 items-center justify-center rounded-full border border-[#faf6f1]/25 bg-[#0b0a0a]/40 backdrop-blur-[4px]">
-                                    <span className="se-gold-text text-[14px]">♪</span>
+                            <div className="absolute inset-0 flex flex-col items-center justify-center gap-[clamp(12px,0.91vw,16px)]">
+                                <div className="flex h-[74px] w-[74px] items-center justify-center rounded-full border border-[#faf6f1]/25 bg-[#0b0a0a]/40 backdrop-blur-[4px]">
+                                    <span className="se-gold-text text-[clamp(13px,0.91vw,16px)]">♪</span>
                                 </div>
                             </div>
                             <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(11,10,10,0)_55%,rgba(11,10,10,0.7))]" />
-                            <div className="pointer-events-none absolute bottom-[18px] left-[18px] right-[18px] font-didot text-[1.15rem] text-[#faf6f1]">
+                            <div className="pointer-events-none absolute bottom-[21px] left-[21px] right-[21px] font-didot text-[clamp(1.06rem,1.2vw,1.32rem)] text-[#faf6f1]">
                                 {previewCap}
                             </div>
                         </div>

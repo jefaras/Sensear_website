@@ -19,9 +19,9 @@ interface HeroProps {
 
 export function Hero({ lang, hero, sectionKicker }: HeroProps) {
     return (
-        <section className="relative flex min-h-[92vh] items-center overflow-hidden py-[130px] pb-[70px]">
+        <section className="relative flex min-h-[92vh] items-center overflow-hidden py-[clamp(108px,8.52vw,150px)] pb-[clamp(58px,4.6vw,81px)]">
             <DriftOrb
-                className="h-[60vw] w-[60vw] max-h-[760px] max-w-[760px]"
+                className="h-[60vw] w-[60vw] max-h-[870px] max-w-[870px]"
                 style={{
                     top: '-10%',
                     right: '-5%',
@@ -30,7 +30,7 @@ export function Hero({ lang, hero, sectionKicker }: HeroProps) {
                 duration={16}
             />
             <DriftOrb
-                className="h-[50vw] w-[50vw] max-h-[620px] max-w-[620px]"
+                className="h-[50vw] w-[50vw] max-h-[710px] max-w-[710px]"
                 style={{
                     bottom: '-15%',
                     left: '-10%',
@@ -42,23 +42,23 @@ export function Hero({ lang, hero, sectionKicker }: HeroProps) {
 
             <SideRail>{hero.side_label}</SideRail>
 
-            <div className="mx-auto w-full max-w-[1380px] pl-6 pr-6 sm:px-8 lg:pl-[84px]">
-                <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-14">
+            <div className="mx-auto w-full max-w-[min(1760px,100%)] pl-[clamp(20px,1.59vw,28px)] pr-[clamp(20px,1.59vw,28px)] sm:px-[clamp(27px,2.1vw,37px)] lg:pl-[clamp(70px,5.51vw,97px)]">
+                <div className="grid grid-cols-1 items-center gap-[clamp(40px,3.12vw,55px)] lg:grid-cols-[1.05fr_0.95fr] lg:gap-[clamp(46px,3.64vw,64px)]">
                     <div>
                         <ScrollReveal>
-                            <Kicker variant="hero" className="mb-[30px]">
+                            <Kicker variant="hero" className="mb-[clamp(25px,1.99vw,35px)]">
                                 {hero.kicker} — {sectionKicker}
                             </Kicker>
                         </ScrollReveal>
 
                         <ScrollReveal delay={0.15}>
-                            <h1 className="mb-[30px] text-[clamp(2.9rem,6vw,5.4rem)] font-extrabold leading-[0.98] tracking-[-0.022em]">
+                            <h1 className="mb-[clamp(25px,1.99vw,35px)] text-[clamp(3.33rem,6.9vw,6.21rem)] font-extrabold leading-[0.98] tracking-[-0.022em]">
                                 {hero.title}
                             </h1>
                         </ScrollReveal>
 
                         <ScrollReveal delay={0.3}>
-                            <p className="max-w-[520px] text-[clamp(1.2rem,2vw,1.5rem)] leading-[1.5] text-[#faf6f1]/72">
+                            <p className="max-w-[600px] text-[clamp(1.38rem,2.3vw,1.73rem)] leading-[1.5] text-[#faf6f1]/72">
                                 {hero.subtitle}
                             </p>
                         </ScrollReveal>
@@ -77,13 +77,13 @@ export function Hero({ lang, hero, sectionKicker }: HeroProps) {
                                 />
                                 <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(11,10,10,0)_45%,rgba(11,10,10,0.6))]" />
                             </div>
-                            <div className="absolute bottom-[22px] left-[22px] right-[22px]">
-                                <div className="se-gold-text mb-1 text-[10px] font-bold tracking-[0.3em]">
+                            <div className="absolute bottom-[25px] left-[25px] right-[25px]">
+                                <div className="se-gold-text mb-1 text-[clamp(10px,0.68vw,12px)] font-bold tracking-[0.3em]">
                                     {hero.image_kicker}
                                 </div>
-                                <div className="font-didot text-[1.5rem] text-[#faf6f1]">{hero.image_caption}</div>
+                                <div className="font-didot text-[clamp(1.38rem,1.57vw,1.73rem)] text-[#faf6f1]">{hero.image_caption}</div>
                             </div>
-                            <SpinningBadge lines={hero.badge} className="absolute -right-[18px] -top-[18px] h-24 w-24" />
+                            <SpinningBadge lines={hero.badge} className="absolute -right-[21px] -top-[21px] h-[110px] w-[110px]" />
                         </div>
                     </ScrollReveal>
                 </div>

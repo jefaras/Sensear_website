@@ -14,7 +14,7 @@ interface MorphCTAProps {
 export function MorphCTA({ href, children, external = false, className }: MorphCTAProps) {
     const inner = (
         <span
-            className={`se-cta group relative inline-flex items-center gap-2.5 overflow-hidden rounded-full px-8 py-[17px] text-[15px] font-bold no-underline ${className ?? ''}`}
+            className={`se-cta group relative inline-flex items-center gap-2.5 overflow-hidden rounded-full px-[clamp(27px,2.1vw,37px)] py-[clamp(14px,1.14vw,20px)] text-[clamp(14px,0.97vw,17px)] font-bold no-underline ${className ?? ''}`}
         >
             <Image
                 src="/images/brand/sensear-logo-color.png"
@@ -22,10 +22,10 @@ export function MorphCTA({ href, children, external = false, className }: MorphC
                 width={20}
                 height={20}
                 aria-hidden="true"
-                className="se-cta-ico h-5 w-5 shrink-0 object-contain"
+                className="se-cta-ico h-[23px] w-[23px] shrink-0 object-contain"
             />
             <span className="se-cta-label">{children}</span>
-            <span className="se-cta-arrow text-[17px]">→</span>
+            <span className="se-cta-arrow text-[clamp(16px,1.14vw,20px)]">→</span>
         </span>
     );
 

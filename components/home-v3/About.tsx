@@ -10,9 +10,9 @@ interface AboutProps {
 
 export function About({ kicker, p1, p2 }: AboutProps) {
     return (
-        <section className="relative py-[130px]">
+        <section className="relative py-[clamp(108px,8.52vw,150px)]">
             <DriftOrb
-                className="h-[44vw] max-h-[540px] w-[44vw] max-w-[540px]"
+                className="h-[44vw] max-h-[620px] w-[44vw] max-w-[620px]"
                 style={{
                     top: '6%',
                     left: '-8%',
@@ -21,21 +21,21 @@ export function About({ kicker, p1, p2 }: AboutProps) {
                 }}
                 duration={19}
             />
-            <div className="relative z-10 mx-auto max-w-[1380px] px-6 sm:px-8">
+            <div className="relative z-10 mx-auto max-w-[min(1760px,100%)] px-[clamp(20px,1.59vw,28px)] sm:px-[clamp(27px,2.1vw,37px)]">
                 <ScrollReveal>
-                    <Kicker className="mb-[52px]">{kicker}</Kicker>
+                    <Kicker className="mb-[clamp(43px,3.41vw,60px)]">{kicker}</Kicker>
                 </ScrollReveal>
-                <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-[1.5fr_0.85fr] lg:gap-16">
+                <div className="grid grid-cols-1 items-center gap-[clamp(40px,3.12vw,55px)] lg:grid-cols-[1.5fr_0.85fr] lg:gap-[clamp(53px,4.2vw,74px)]">
                     <div className="se-html">
                         <ScrollReveal>
                             <p
-                                className="mb-[34px] text-[clamp(1.5rem,2.7vw,2.5rem)] font-semibold leading-[1.32] tracking-[-0.01em]"
+                                className="mb-[clamp(28px,2.22vw,39px)] text-[clamp(1.73rem,3.11vw,2.88rem)] font-semibold leading-[1.32] tracking-[-0.01em]"
                                 dangerouslySetInnerHTML={{ __html: p1 }}
                             />
                         </ScrollReveal>
                         <ScrollReveal delay={0.1}>
                             <p
-                                className="max-w-[620px] text-[1.15rem] leading-[1.65] text-[#faf6f1]/62"
+                                className="max-w-[710px] text-[clamp(1.06rem,1.2vw,1.32rem)] leading-[1.65] text-[#faf6f1]/62"
                                 dangerouslySetInnerHTML={{ __html: p2 }}
                             />
                         </ScrollReveal>

@@ -40,9 +40,9 @@ interface FooterV3Props {
     phoneLine: string;
 }
 
-const colLabel = 'se-gold-text mb-[18px] text-[11px] font-bold tracking-[0.22em]';
+const colLabel = 'se-gold-text mb-[clamp(15px,1.19vw,21px)] text-[clamp(10px,0.74vw,13px)] font-bold tracking-[0.22em]';
 const colLink =
-    'se-navlink w-fit text-[0.95rem] text-[#faf6f1]/62 no-underline hover:text-[#faf6f1]';
+    'se-navlink w-fit text-[clamp(0.87rem,0.99vw,1.09rem)] text-[#faf6f1]/62 no-underline hover:text-[#faf6f1]';
 
 export function FooterV3({ lang, footer, navigation, services, industries, email, phoneLine }: FooterV3Props) {
     const localizedPath = (path: string) => getLocalizedPath(lang, path);
@@ -60,25 +60,25 @@ export function FooterV3({ lang, footer, navigation, services, industries, email
     ];
 
     return (
-        <footer className="border-t border-[#faf6f1]/10 bg-[#0b0a0a] pt-20">
-            <div className="mx-auto grid max-w-[1380px] grid-cols-1 gap-10 px-6 sm:grid-cols-2 sm:px-8 lg:grid-cols-[1.5fr_1fr_1.15fr_0.95fr_1.15fr]">
+        <footer className="border-t border-[#faf6f1]/10 bg-[#0b0a0a] pt-[clamp(66px,5.23vw,92px)]">
+            <div className="mx-auto grid max-w-[min(1760px,100%)] grid-cols-1 gap-[clamp(33px,2.61vw,46px)] px-[clamp(20px,1.59vw,28px)] sm:grid-cols-2 sm:px-[clamp(27px,2.1vw,37px)] lg:grid-cols-[1.5fr_1fr_1.15fr_0.95fr_1.15fr]">
                 {/* Brand */}
                 <div className="sm:col-span-2 lg:col-span-1">
-                    <div className="mb-5 flex items-center gap-3">
+                    <div className="mb-[clamp(17px,1.31vw,23px)] flex items-center gap-3">
                         <Image
                             src="/images/brand/sensear-logo-white.png"
                             alt="SensEar"
                             width={46}
                             height={46}
-                            className="h-[46px] w-[46px] object-contain"
+                            className="h-[53px] w-[53px] object-contain"
                         />
                         <div>
-                            <div className="font-sans text-xl font-extrabold tracking-[0.18em]">{footer.wordmark}</div>
-                            <div className="font-didot text-[13px] text-[#faf6f1]/55">{footer.tagline}</div>
+                            <div className="font-sans text-[clamp(18px,1.31vw,23px)] font-extrabold tracking-[0.18em]">{footer.wordmark}</div>
+                            <div className="font-didot text-[clamp(12px,0.85vw,15px)] text-[#faf6f1]/55">{footer.tagline}</div>
                         </div>
                     </div>
-                    <p className="max-w-[300px] text-[0.95rem] leading-[1.6] text-[#faf6f1]/50">{footer.intro}</p>
-                    <div className="mb-6 mt-6 flex gap-4">
+                    <p className="max-w-[350px] text-[clamp(0.87rem,0.99vw,1.09rem)] leading-[1.6] text-[#faf6f1]/50">{footer.intro}</p>
+                    <div className="mb-[clamp(20px,1.59vw,28px)] mt-[clamp(20px,1.59vw,28px)] flex gap-[clamp(13px,1.02vw,18px)]">
                         <a
                             href="https://www.facebook.com/61575909304249/"
                             target="_blank"
@@ -107,7 +107,7 @@ export function FooterV3({ lang, footer, navigation, services, industries, email
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" /><rect width="4" height="12" x="2" y="9" /><circle cx="4" cy="4" r="2" /></svg>
                         </a>
                     </div>
-                    <div className="flex flex-col gap-2 text-[0.95rem]">
+                    <div className="flex flex-col gap-2 text-[clamp(0.87rem,0.99vw,1.09rem)]">
                         <a href={`mailto:${email}`} className="flex w-fit items-center gap-2 text-[#faf6f1]/70 no-underline transition-colors hover:text-[#e3992f]">
                             <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
                             {email}
@@ -122,7 +122,7 @@ export function FooterV3({ lang, footer, navigation, services, industries, email
                 {/* Services */}
                 <div>
                     <div className={colLabel}>{footer.col_services}</div>
-                    <div className="flex flex-col gap-[11px]">
+                    <div className="flex flex-col gap-[13px]">
                         {services.map((item) => (
                             <Link key={item.link} href={localizedPath(`/${item.link}`)} className={colLink}>
                                 {item.title}
@@ -134,7 +134,7 @@ export function FooterV3({ lang, footer, navigation, services, industries, email
                 {/* Industries */}
                 <div>
                     <div className={colLabel}>{footer.col_industries}</div>
-                    <div className="flex flex-col gap-[11px]">
+                    <div className="flex flex-col gap-[13px]">
                         {industries.map((item) => (
                             <Link key={item.link} href={localizedPath(`/${item.link}`)} className={colLink}>
                                 {item.title}
@@ -146,7 +146,7 @@ export function FooterV3({ lang, footer, navigation, services, industries, email
                 {/* Company */}
                 <div>
                     <div className={colLabel}>{footer.col_company}</div>
-                    <div className="flex flex-col gap-[11px]">
+                    <div className="flex flex-col gap-[13px]">
                         {company.map((item) => (
                             <Link key={item.href} href={item.href} className={colLink}>
                                 {item.label}
@@ -158,7 +158,7 @@ export function FooterV3({ lang, footer, navigation, services, industries, email
                 {/* Newsletter */}
                 <div>
                     <div className={colLabel}>{footer.col_newsletter}</div>
-                    <p className="mb-4 text-[0.9rem] leading-[1.55] text-[#faf6f1]/50">{footer.newsletter_blurb}</p>
+                    <p className="mb-[clamp(13px,1.02vw,18px)] text-[clamp(0.82rem,0.94vw,1.03rem)] leading-[1.55] text-[#faf6f1]/50">{footer.newsletter_blurb}</p>
                     <NewsletterForm
                         placeholder={footer.newsletter_placeholder}
                         buttonText=""
@@ -170,21 +170,21 @@ export function FooterV3({ lang, footer, navigation, services, industries, email
             </div>
 
             {/* Bottom bar */}
-            <div className="mx-auto mt-12 flex max-w-[1380px] flex-wrap items-center justify-between gap-4 border-t border-[#faf6f1]/10 px-6 py-6 sm:px-8">
-                <span className="text-[12px] text-[#faf6f1]/40">{footer.copyright}</span>
-                <div className="flex gap-5">
-                    <Link href={localizedPath('/privacy')} className="text-[12px] text-[#faf6f1]/40 no-underline transition-colors hover:text-[#faf6f1]">
+            <div className="mx-auto mt-[clamp(40px,3.12vw,55px)] flex max-w-[min(1760px,100%)] flex-wrap items-center justify-between gap-[clamp(13px,1.02vw,18px)] border-t border-[#faf6f1]/10 px-[clamp(20px,1.59vw,28px)] py-[clamp(20px,1.59vw,28px)] sm:px-[clamp(27px,2.1vw,37px)]">
+                <span className="text-[clamp(11px,0.8vw,14px)] text-[#faf6f1]/40">{footer.copyright}</span>
+                <div className="flex gap-[clamp(17px,1.31vw,23px)]">
+                    <Link href={localizedPath('/privacy')} className="text-[clamp(11px,0.8vw,14px)] text-[#faf6f1]/40 no-underline transition-colors hover:text-[#faf6f1]">
                         {footer.privacy}
                     </Link>
-                    <Link href={localizedPath('/terms')} className="text-[12px] text-[#faf6f1]/40 no-underline transition-colors hover:text-[#faf6f1]">
+                    <Link href={localizedPath('/terms')} className="text-[clamp(11px,0.8vw,14px)] text-[#faf6f1]/40 no-underline transition-colors hover:text-[#faf6f1]">
                         {footer.terms}
                     </Link>
                 </div>
             </div>
 
             {/* Oversized stroked wordmark */}
-            <div className="overflow-hidden pb-6 pt-8 leading-[0.8]">
-                <div className="text-center font-sans font-black tracking-[-0.02em] text-[clamp(4rem,15.5vw,15rem)] text-transparent [-webkit-text-stroke:1px_rgba(250,246,241,0.14)]">
+            <div className="overflow-hidden pb-[clamp(20px,1.59vw,28px)] pt-[clamp(27px,2.1vw,37px)] leading-[0.8]">
+                <div className="text-center font-sans font-black tracking-[-0.02em] text-[clamp(4.6rem,17.83vw,17.25rem)] text-transparent [-webkit-text-stroke:1px_rgba(250,246,241,0.14)]">
                     {footer.wordmark}
                 </div>
             </div>

@@ -31,10 +31,10 @@ export function Journal({ lang, kicker, headline, allArticles, articles }: Journ
     const emWord = lang === 'el' ? 'διαμορφώνει' : 'shapes';
 
     return (
-        <section className="relative py-[130px]">
+        <section className="relative py-[clamp(108px,8.52vw,150px)]">
             <div
                 aria-hidden="true"
-                className="pointer-events-none absolute h-[42vw] max-h-[520px] w-[42vw] max-w-[520px]"
+                className="pointer-events-none absolute h-[42vw] max-h-[600px] w-[42vw] max-w-[600px]"
                 style={{
                     top: '0',
                     left: '42%',
@@ -43,14 +43,14 @@ export function Journal({ lang, kicker, headline, allArticles, articles }: Journ
                     animation: 'se-drift 23s ease-in-out infinite reverse',
                 }}
             />
-            <div className="relative z-10 mx-auto max-w-[1380px] px-6 sm:px-8">
-                <div className="mb-14 flex flex-wrap items-end justify-between gap-[30px]">
+            <div className="relative z-10 mx-auto max-w-[min(1760px,100%)] px-[clamp(20px,1.59vw,28px)] sm:px-[clamp(27px,2.1vw,37px)]">
+                <div className="mb-[clamp(46px,3.64vw,64px)] flex flex-wrap items-end justify-between gap-[clamp(25px,1.99vw,35px)]">
                     <div>
                         <ScrollReveal>
-                            <Kicker className="mb-[18px]">{kicker}</Kicker>
+                            <Kicker className="mb-[clamp(15px,1.19vw,21px)]">{kicker}</Kicker>
                         </ScrollReveal>
                         <ScrollReveal delay={0.06}>
-                            <h2 className="max-w-[680px] text-[clamp(1.9rem,3.6vw,3rem)] font-extrabold leading-[1.05] tracking-[-0.02em]">
+                            <h2 className="max-w-[780px] text-[clamp(2.18rem,4.14vw,3.45rem)] font-extrabold leading-[1.05] tracking-[-0.02em]">
                                 {emphasize(headline, emWord)}
                             </h2>
                         </ScrollReveal>
@@ -60,14 +60,14 @@ export function Journal({ lang, kicker, headline, allArticles, articles }: Journ
                     </ScrollReveal>
                 </div>
 
-                <StaggerChildren className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3" staggerDelay={0.1}>
+                <StaggerChildren className="grid grid-cols-1 gap-[clamp(20px,1.59vw,28px)] sm:grid-cols-2 lg:grid-cols-3" staggerDelay={0.1}>
                     {articles.map((article, i) => (
                         <Link
                             key={i}
                             href={localizedPath(`/blog/${article.link}`)}
                             className="group flex flex-col no-underline"
                         >
-                            <div className="relative mb-[22px] aspect-[4/3] overflow-hidden rounded-lg">
+                            <div className="relative mb-[clamp(18px,1.42vw,25px)] aspect-[4/3] overflow-hidden rounded-lg">
                                 <Image
                                     src={ARTICLE_IMAGES[i] ?? ARTICLE_IMAGES[0]}
                                     alt={article.title}
@@ -76,11 +76,11 @@ export function Journal({ lang, kicker, headline, allArticles, articles }: Journ
                                     className="object-cover transition-transform duration-700 group-hover:scale-105"
                                 />
                             </div>
-                            <span className="se-gold-text mb-3 text-[11px] font-bold tracking-[0.22em]">
+                            <span className="se-gold-text mb-3 text-[clamp(10px,0.74vw,13px)] font-bold tracking-[0.22em]">
                                 {article.tag.toUpperCase()}
                             </span>
-                            <h3 className="mb-3 text-[1.28rem] font-bold leading-[1.28]">{article.title}</h3>
-                            <p className="text-[0.96rem] leading-[1.6] text-[#faf6f1]/55">{article.desc}</p>
+                            <h3 className="mb-3 text-[clamp(1.18rem,1.34vw,1.47rem)] font-bold leading-[1.28]">{article.title}</h3>
+                            <p className="text-[clamp(0.88rem,1vw,1.1rem)] leading-[1.6] text-[#faf6f1]/55">{article.desc}</p>
                         </Link>
                     ))}
                 </StaggerChildren>

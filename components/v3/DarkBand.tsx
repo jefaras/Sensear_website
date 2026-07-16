@@ -11,7 +11,7 @@ export function DarkBand({ children, className, containerClassName, container = 
     return (
         <section className={className}>
             {container ? (
-                <div className={`mx-auto max-w-[1380px] px-6 sm:px-8 ${containerClassName ?? ''}`}>
+                <div className={`mx-auto max-w-[min(1760px,100%)] px-[clamp(20px,1.59vw,28px)] sm:px-[clamp(27px,2.1vw,37px)] ${containerClassName ?? ''}`}>
                     {children}
                 </div>
             ) : (

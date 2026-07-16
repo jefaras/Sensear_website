@@ -33,21 +33,21 @@ export function IndustriesGrid({ lang, kicker, title, subtitle, items }: Industr
     const emWord = lang === 'el' ? 'εξειδίκευσή' : 'expertise';
 
     return (
-        <section className="py-[130px]">
-            <div className="mx-auto max-w-[1380px] px-6 sm:px-8">
+        <section className="py-[clamp(108px,8.52vw,150px)]">
+            <div className="mx-auto max-w-[min(1760px,100%)] px-[clamp(20px,1.59vw,28px)] sm:px-[clamp(27px,2.1vw,37px)]">
                 <ScrollReveal>
-                    <Kicker className="mb-[18px]">{kicker}</Kicker>
+                    <Kicker className="mb-[clamp(15px,1.19vw,21px)]">{kicker}</Kicker>
                 </ScrollReveal>
                 <ScrollReveal delay={0.06}>
-                    <h2 className="mb-[18px] max-w-[820px] text-[clamp(2rem,4vw,3.4rem)] font-extrabold leading-[1.04] tracking-[-0.02em]">
+                    <h2 className="mb-[clamp(15px,1.19vw,21px)] max-w-[940px] text-[clamp(2.3rem,4.6vw,3.91rem)] font-extrabold leading-[1.04] tracking-[-0.02em]">
                         {emphasize(title, emWord)}
                     </h2>
                 </ScrollReveal>
                 <ScrollReveal delay={0.12}>
-                    <p className="mb-[54px] max-w-[680px] text-[1.1rem] text-[#faf6f1]/60">{subtitle}</p>
+                    <p className="mb-[clamp(45px,3.52vw,62px)] max-w-[780px] text-[clamp(1.01rem,1.15vw,1.26rem)] text-[#faf6f1]/60">{subtitle}</p>
                 </ScrollReveal>
 
-                <StaggerChildren className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3" staggerDelay={0.08}>
+                <StaggerChildren className="grid grid-cols-1 gap-[clamp(17px,1.31vw,23px)] sm:grid-cols-2 lg:grid-cols-3" staggerDelay={0.08}>
                     {items.map((item) => {
                         const img = INDUSTRY_IMAGES[item.link];
                         return (
@@ -66,9 +66,9 @@ export function IndustriesGrid({ lang, kicker, title, subtitle, items }: Industr
                                     />
                                 )}
                                 <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(11,10,10,0.1)_30%,rgba(11,10,10,0.82))]" />
-                                <div className="absolute inset-x-0 bottom-0 p-6">
-                                    <div className="mb-1.5 text-[1.35rem] font-bold text-[#faf6f1]">{item.title}</div>
-                                    <p className="text-[0.92rem] leading-[1.5] text-[#faf6f1]/62">{item.desc}</p>
+                                <div className="absolute inset-x-0 bottom-0 p-[clamp(20px,1.59vw,28px)]">
+                                    <div className="mb-1.5 text-[clamp(1.24rem,1.41vw,1.55rem)] font-bold text-[#faf6f1]">{item.title}</div>
+                                    <p className="text-[clamp(0.85rem,0.96vw,1.06rem)] leading-[1.5] text-[#faf6f1]/62">{item.desc}</p>
                                 </div>
                             </Link>
                         );

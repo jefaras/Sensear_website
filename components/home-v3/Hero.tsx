@@ -32,9 +32,9 @@ export function Hero({ lang, hero }: HeroProps) {
     const ledeMuted = hero.subtitle[2];
 
     return (
-        <section className="relative flex min-h-screen items-center overflow-hidden py-[140px] pb-[70px]">
+        <section className="relative flex min-h-screen items-center overflow-hidden py-[clamp(115px,9.09vw,160px)] pb-[clamp(58px,4.6vw,81px)]">
             <DriftOrb
-                className="h-[60vw] w-[60vw] max-h-[760px] max-w-[760px]"
+                className="h-[60vw] w-[60vw] max-h-[870px] max-w-[870px]"
                 style={{
                     top: '-10%',
                     right: '-5%',
@@ -43,7 +43,7 @@ export function Hero({ lang, hero }: HeroProps) {
                 duration={16}
             />
             <DriftOrb
-                className="h-[50vw] w-[50vw] max-h-[620px] max-w-[620px]"
+                className="h-[50vw] w-[50vw] max-h-[710px] max-w-[710px]"
                 style={{
                     bottom: '-15%',
                     left: '-10%',
@@ -55,28 +55,28 @@ export function Hero({ lang, hero }: HeroProps) {
 
             <SideRail>{hero.side_label}</SideRail>
 
-            <div className="mx-auto w-full max-w-[1380px] pl-6 pr-6 sm:px-8 lg:pl-[84px]">
-                <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-14">
+            <div className="mx-auto w-full max-w-[min(1760px,100%)] pl-[clamp(20px,1.59vw,28px)] pr-[clamp(20px,1.59vw,28px)] sm:px-[clamp(27px,2.1vw,37px)] lg:pl-[clamp(70px,5.51vw,97px)]">
+                <div className="grid grid-cols-1 items-center gap-[clamp(40px,3.12vw,55px)] lg:grid-cols-[1.05fr_0.95fr] lg:gap-[clamp(46px,3.64vw,64px)]">
                     <div>
                         <ScrollReveal>
-                            <Kicker variant="hero" className="mb-[30px]">
+                            <Kicker variant="hero" className="mb-[clamp(25px,1.99vw,35px)]">
                                 {hero.kicker}
                             </Kicker>
                         </ScrollReveal>
 
                         <ScrollReveal delay={0.15}>
-                            <h1 className="mb-[30px] text-[clamp(2.9rem,6vw,5.4rem)] font-extrabold leading-[0.98] tracking-[-0.022em]">
+                            <h1 className="mb-[clamp(25px,1.99vw,35px)] text-[clamp(3.33rem,6.9vw,6.21rem)] font-extrabold leading-[0.98] tracking-[-0.022em]">
                                 {emphasizeHeadline(hero.title, emWord)}
                             </h1>
                         </ScrollReveal>
 
                         <ScrollReveal delay={0.3}>
-                            <div className="mb-[42px] max-w-[520px]">
-                                <p className="text-[clamp(1.05rem,1.5vw,1.32rem)] font-semibold leading-[1.45]">
+                            <div className="mb-[clamp(35px,2.73vw,48px)] max-w-[600px]">
+                                <p className="text-[clamp(1.21rem,1.73vw,1.52rem)] font-semibold leading-[1.45]">
                                     {ledeBold}
                                 </p>
                                 {ledeMuted && (
-                                    <p className="mt-[14px] text-[1.02rem] leading-[1.6] text-[#faf6f1]/60">
+                                    <p className="mt-[clamp(12px,0.91vw,16px)] text-[clamp(0.94rem,1.06vw,1.17rem)] leading-[1.6] text-[#faf6f1]/60">
                                         {ledeMuted}
                                     </p>
                                 )}
@@ -84,7 +84,7 @@ export function Hero({ lang, hero }: HeroProps) {
                         </ScrollReveal>
 
                         <ScrollReveal delay={0.45}>
-                            <div className="flex flex-wrap items-center gap-7">
+                            <div className="flex flex-wrap items-center gap-[clamp(23px,1.82vw,32px)]">
                                 <MorphCTA href={localizedPath('/services')}>{hero.cta}</MorphCTA>
                                 <GhostButton href={localizedPath('/contact')}>{hero.secondary_cta}</GhostButton>
                             </div>
@@ -108,21 +108,21 @@ export function Hero({ lang, hero }: HeroProps) {
                                 />
                                 <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(11,10,10,0)_45%,rgba(11,10,10,0.55))]" />
                             </div>
-                            <div className="absolute bottom-[22px] left-[22px] right-[22px]">
-                                <div className="se-gold-text mb-1 text-[10px] font-bold tracking-[0.3em]">
+                            <div className="absolute bottom-[25px] left-[25px] right-[25px]">
+                                <div className="se-gold-text mb-1 text-[clamp(10px,0.68vw,12px)] font-bold tracking-[0.3em]">
                                     {hero.featured_kicker}
                                 </div>
-                                <div className="font-didot text-[1.5rem] text-[#faf6f1]">{hero.featured_caption}</div>
+                                <div className="font-didot text-[clamp(1.38rem,1.57vw,1.73rem)] text-[#faf6f1]">{hero.featured_caption}</div>
                             </div>
-                            <SpinningBadge lines={hero.badge} className="absolute -right-[18px] -top-[18px] h-24 w-24" />
+                            <SpinningBadge lines={hero.badge} className="absolute -right-[21px] -top-[21px] h-[110px] w-[110px]" />
                         </div>
                     </ScrollReveal>
                 </div>
             </div>
 
-            <div className="absolute bottom-[26px] left-1/2 hidden -translate-x-1/2 flex-col items-center gap-2 sm:flex">
-                <span className="text-[10px] font-semibold tracking-[0.3em] text-[#faf6f1]/40">{hero.scroll_label}</span>
-                <div className="h-[30px] w-px animate-[se-cue_1.8s_ease-in-out_infinite] bg-[linear-gradient(rgba(250,246,241,0.5),rgba(250,246,241,0))]" />
+            <div className="absolute bottom-[30px] left-1/2 hidden -translate-x-1/2 flex-col items-center gap-2 sm:flex">
+                <span className="text-[clamp(10px,0.68vw,12px)] font-semibold tracking-[0.3em] text-[#faf6f1]/40">{hero.scroll_label}</span>
+                <div className="h-[35px] w-px animate-[se-cue_1.8s_ease-in-out_infinite] bg-[linear-gradient(rgba(250,246,241,0.5),rgba(250,246,241,0))]" />
             </div>
         </section>
     );
