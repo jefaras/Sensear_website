@@ -28,7 +28,10 @@
             "now_playing_track": "The SensEar Sessions — Vol. 04",
             "featured_kicker": "FEATURED SPACE",
             "featured_caption": "After-hours, scored.",
-            "badge": ["★ SENSEAR ★", "EST · ATH"],
+            "badge": [
+                "★ SENSEAR ★",
+                "EST · ATH"
+            ],
             "scroll_label": "SCROLL"
         },
         "intro": {
@@ -74,10 +77,22 @@
             "kicker": "SERVICES",
             "preview_placeholder": "Hover over a service",
             "previews": [
-                { "img": "/images/services/service-signature-playlists.jpg", "cap": "Your daily venue soundtrack" },
-                { "img": "/images/services/service-event-soundtracks.jpg", "cap": "Bespoke DJ sets & acoustic experiences" },
-                { "img": "/images/services/service-sonic-strategy.jpg", "cap": "Your brand's sonic DNA" },
-                { "img": "/images/services/service-audio-upgrades.jpg", "cap": "Crystal-clear, balanced sound" }
+                {
+                    "img": "/images/services/service-signature-playlists.jpg",
+                    "cap": "Your daily venue soundtrack"
+                },
+                {
+                    "img": "/images/services/service-event-soundtracks.jpg",
+                    "cap": "Bespoke DJ sets & acoustic experiences"
+                },
+                {
+                    "img": "/images/services/service-sonic-strategy.jpg",
+                    "cap": "Your brand's sonic DNA"
+                },
+                {
+                    "img": "/images/services/service-audio-upgrades.jpg",
+                    "cap": "Crystal-clear, balanced sound"
+                }
             ]
         },
         "expertise": {
@@ -427,17 +442,29 @@
             "title": "The people behind your soundtrack",
             "subtitle": "We help venues define how they are heard and felt.",
             "image": "/images/backgrounds/warm-silver-foil-texture.jpg",
-            "image_alt": "The people behind your soundtrack"
+            "image_alt": "The people behind your soundtrack",
+            "side_label": "ABOUT — THE PEOPLE & THE PHILOSOPHY",
+            "kicker": "THE SENSEAR TEAM",
+            "primary_cta": "Meet the team",
+            "secondary_cta": "Get in touch",
+            "image_kicker": "EST · ATHENS",
+            "image_caption": "Soundtracking unique experiences.",
+            "badge": [
+                "★ SENSEAR ★",
+                "EST · ATH"
+            ]
         },
         "vision": {
             "heading": "Our vision",
             "text": "To become the <strong>premier music partner</strong> for <strong>eclectic hospitality brands</strong> & <strong>events</strong> seeking to <strong>express identity</strong>, <strong>elevate atmosphere</strong> & <strong>create lasting guest connections</strong>.",
             "link_text": "sonic identity service",
-            "link": "services/sonic-identity"
+            "link": "services/sonic-identity",
+            "kicker": "OUR VISION"
         },
         "philosophy": {
             "heading": "Our philosophy",
-            "text": "SensEar treats music as a **core part of the experience**: Music is not background, but **atmosphere, memory and emotion** that can **influence how guests feel & behave**."
+            "text": "SensEar treats music as a **core part of the experience**: Music is not background, but **atmosphere, memory and emotion** that can **influence how guests feel & behave**.",
+            "kicker": "OUR PHILOSOPHY"
         },
         "journey": {
             "heading": "Our journey",
@@ -464,7 +491,10 @@
                     "text": "**SensEar launches**. First clients confirm what we believed: venues deserve soundtracks designed with intention and expertise."
                 }
             ],
-            "image": "/images/about/about-journey-team-collaboration.jpg"
+            "image": "/images/about/about-journey-team-collaboration.jpg",
+            "kicker": "OUR JOURNEY",
+            "lede": "Fifteen years of shared love for music, evolved into a strategic sound practice.",
+            "image_alt": "Our journey"
         },
         "team": {
             "heading": "Meet the team",
@@ -503,14 +533,17 @@
                     "image": "/images/about/team-katerina-karali.jpg",
                     "alt": "Katerina Karali"
                 }
-            ]
+            ],
+            "kicker": "THE TEAM",
+            "title": "Meet the <em>team</em>",
+            "closing": "Together, we form SensEar, a team committed to uplifting spaces through compelling, memorable music."
         },
         "differentiators": {
             "heading": "What sets us apart",
             "items": [
                 {
                     "title": "Branding music",
-                    "description": "We translate your vision into music that feels natural and perfectly fits the brand."
+                    "description": "We translate your vision into music that feels natural and completely on-brand."
                 },
                 {
                     "title": "Covering all sectors",
@@ -522,9 +555,13 @@
                 },
                 {
                     "title": "Using music's unique powers",
-                    "description": "We understand how music changes mood, shapes spaces and connects people."
+                    "description": "We understand how music shifts moods, shapes spaces and connects people."
                 }
-            ]
+            ],
+            "kicker": "WHAT SETS US APART",
+            "title": "Four <em>principles</em> that guide us",
+            "subtitle": "Everything we do stems from how we think about sound.",
+            "image_alt": "SensEar unique approach"
         },
         "final_cta": {
             "heading": "Discover your sound path",
@@ -538,8 +575,48 @@
                     "text": "Industries we serve",
                     "link": "industries"
                 }
-            ]
-        }
+            ],
+            "kicker": "LET'S COLLABORATE",
+            "lede": "See how we work with clients or contact us to discuss your project.",
+            "primary_cta": "Read case studies",
+            "secondary_cta": "Get in touch",
+            "location": "Athens, Greece"
+        },
+        "team_members": [
+            {
+                "name": "George Fameliaris",
+                "role": "Co-founder, Chief music curator & AV expert",
+                "image": "/images/about/team-george-fameliaris.jpg",
+                "image_alt": "George Fameliaris - SensEar Co-Founder and Chief Music Curator",
+                "paragraphs": [
+                    "G's lifelong passion for music and record collecting was further shaped by a BA in Media & Communications and an MA in Popular Music in Film.",
+                    "He soon became a regular guest DJ on the Athens scene, holding private parties and long-term residencies at venues such as <strong>Balux</strong>, <strong>Sunset Antiparos</strong>, and <strong>Burger Disco</strong>, while sharing the decks with key DJ figures like <strong>Colleen \"Cosmo\" Murphy</strong>, <strong>Danny Krivit</strong>, and <strong>Gerd Janson</strong>.",
+                    "At SensEar, he shapes each venue's musical identity with precision, creating rhythm and atmosphere that define the brand's signature sound."
+                ]
+            },
+            {
+                "name": "John E. Farazoumis",
+                "role": "Co-founder, Brand strategy, Client service",
+                "image": "/images/about/team-john-farazoumis.png",
+                "image_alt": "John E. Farazoumis - SensEar Co-Founder and Brand Strategy Director",
+                "paragraphs": [
+                    "From his early DJ sets to his studies in Hospitality Management, JEF has always been guided by music's magnetic pull.",
+                    "He is a co-founder of a successful digital agency, with 25 years of experience in <strong>Web Services</strong>, <strong>Sales/Marketing</strong> & <strong>Customer Care</strong> and a degree in <strong>Hospitality Management</strong> and <strong>Experience Design</strong> from the Haaga-Helia University of Applied Science.",
+                    "At SensEar, he shapes the brand's strategic direction & connects creative vision with client experience."
+                ]
+            },
+            {
+                "name": "Katerina Karali",
+                "role": "Contributing associate, DJ, Music curator & Music supervisor",
+                "image": "/images/about/team-katerina-karali.jpg",
+                "image_alt": "Katerina Karali - SensEar Art Director and Music Curator",
+                "paragraphs": [
+                    "Katerina moves between sound and image with a refined curatorial sensibility, blending intuitive selection with a strong sense of atmosphere, narrative and mood.",
+                    "As a music selector, supervisor & DJ, she has shaped soundtracks for documentaries, TV series and special events, while bringing her visual perspective as a graphic designer, collage artist & illustrator into her work with sound. She has played with <strong>Colleen “Cosmo” Murphy</strong>, <strong>Barış K</strong>, <strong>Disco Bambino</strong> and other respected selectors.",
+                    "At SensEar, she brings depth, texture & cultural sensitivity, adding rare selections, cinematic instinct and an unexpected edge to the team's carefully composed listening environments."
+                ]
+            }
+        ]
     },
     "blog": {
         "meta": {
@@ -1746,7 +1823,10 @@
             "kicker": "FREQUENTLY ASKED",
             "image_kicker": "HOW IT WORKS",
             "image_caption": "Sound, licensing & service.",
-            "badge": ["★ SENSEAR ★", "EST · ATH"]
+            "badge": [
+                "★ SENSEAR ★",
+                "EST · ATH"
+            ]
         },
         "section_kicker": "FAQ",
         "title": "Your Questions, Answered",

@@ -28,7 +28,10 @@
             "now_playing_track": "The SensEar Sessions — Vol. 04",
             "featured_kicker": "FEATURED SPACE",
             "featured_caption": "After-hours, scored.",
-            "badge": ["★ SENSEAR ★", "EST · ATH"],
+            "badge": [
+                "★ SENSEAR ★",
+                "EST · ATH"
+            ],
             "scroll_label": "SCROLL"
         },
         "intro": {
@@ -74,10 +77,22 @@
             "kicker": "ΥΠΗΡΕΣΙΕΣ",
             "preview_placeholder": "Περάστε τον δείκτη πάνω από μια υπηρεσία",
             "previews": [
-                { "img": "/images/services/service-signature-playlists.jpg", "cap": "Το καθημερινό soundtrack του χώρου σας" },
-                { "img": "/images/services/service-event-soundtracks.jpg", "cap": "DJ sets & ακουστικές εμπειρίες κατά παραγγελία" },
-                { "img": "/images/services/service-sonic-strategy.jpg", "cap": "Το ηχητικό DNA του brand σας" },
-                { "img": "/images/services/service-audio-upgrades.jpg", "cap": "Πεντακάθαρος, ισορροπημένος ήχος" }
+                {
+                    "img": "/images/services/service-signature-playlists.jpg",
+                    "cap": "Το καθημερινό soundtrack του χώρου σας"
+                },
+                {
+                    "img": "/images/services/service-event-soundtracks.jpg",
+                    "cap": "DJ sets & ακουστικές εμπειρίες κατά παραγγελία"
+                },
+                {
+                    "img": "/images/services/service-sonic-strategy.jpg",
+                    "cap": "Το ηχητικό DNA του brand σας"
+                },
+                {
+                    "img": "/images/services/service-audio-upgrades.jpg",
+                    "cap": "Πεντακάθαρος, ισορροπημένος ήχος"
+                }
             ]
         },
         "expertise": {
@@ -427,15 +442,27 @@
             "title": "Οι άνθρωποι πίσω από το soundtrack σας",
             "subtitle": "Βοηθάμε τους χώρους να διαμορφώσουν το πώς ακούγονται και πώς βιώνονται.",
             "image": "/images/backgrounds/warm-silver-foil-texture.jpg",
-            "image_alt": "Οι άνθρωποι πίσω από το soundtrack σας"
+            "image_alt": "Οι άνθρωποι πίσω από το soundtrack σας",
+            "side_label": "ABOUT — THE PEOPLE & THE PHILOSOPHY",
+            "kicker": "Η ΟΜΑΔΑ ΤΗΣ SENSEAR",
+            "primary_cta": "Γνωρίστε την ομάδα",
+            "secondary_cta": "Επικοινωνήστε μαζί μας",
+            "image_kicker": "EST · ATHENS",
+            "image_caption": "Soundtracking unique experiences.",
+            "badge": [
+                "★ SENSEAR ★",
+                "EST · ATH"
+            ]
         },
         "vision": {
             "heading": "Το όραμά μας",
-            "text": "Να γίνουμε ο <strong>κορυφαίος μουσικός συνεργάτης</strong> για <strong>εκλεκτικά brands φιλοξενίας</strong> & <strong>events</strong> που επιδιώκουν να <strong>εκφράσουν ταυτότητα</strong>, να <strong>αναβαθμίσουν την ατμόσφαιρα</strong> και να <strong>δημιουργήσουν διαρκείς συνδέσεις</strong> με τους επισκέπτες."
+            "text": "Να γίνουμε ο <strong>κορυφαίος συνεργάτης μουσικής</strong> για <strong>brands & εκδηλώσεις με χαρακτήρα</strong>, που θέλουν <strong>ταυτότητα, ατμόσφαιρα</strong> και <strong>ουσιαστική σύνδεση</strong> με τους επισκέπτες τους.",
+            "kicker": "ΤΟ ΟΡΑΜΑ ΜΑΣ"
         },
         "philosophy": {
             "heading": "Η φιλοσοφία μας",
-            "text": "Στη SensEar αντιμετωπίζουμε τη μουσική ως **βασικό στοιχείο της εμπειρίας**. Η μουσική δεν είναι απλό υπόβαθρο, αλλά **ατμόσφαιρα, μνήμη και συναίσθημα**, που **επηρεάζει το πώς νιώθουν και συμπεριφέρονται οι επισκέπτες**."
+            "text": "Στη SensEar αντιμετωπίζουμε τη μουσική ως **βασικό στοιχείο της εμπειρίας**. Η μουσική δεν είναι απλό υπόβαθρο, αλλά **ατμόσφαιρα, μνήμη και συναίσθημα**, που **επηρεάζει το πώς νιώθουν και συμπεριφέρονται οι επισκέπτες**.",
+            "kicker": "Η ΦΙΛΟΣΟΦΙΑ ΜΑΣ"
         },
         "journey": {
             "heading": "Η διαδρομή μας",
@@ -462,11 +489,14 @@
                     "text": "Η **SensEar ξεκινά**. Οι πρώτοι πελάτες επιβεβαιώνουν: οι χώροι αξίζουν **soundtracks σχεδιασμένα με πρόθεση**."
                 }
             ],
-            "image": "/images/about/about-journey-team-collaboration.jpg"
+            "image": "/images/about/about-journey-team-collaboration.jpg",
+            "kicker": "Η ΔΙΑΔΡΟΜΗ ΜΑΣ",
+            "lede": "Δεκαπέντε χρόνια κοινής αγάπης για τη μουσική, που εξελίχθηκαν σε μια στρατηγική πρακτική ήχου.",
+            "image_alt": "Η πορεία μας"
         },
         "team": {
             "heading": "Γνωρίστε την ομάδα",
-            "subtitle": "Εμμονή με τη μουσική, νοοτροπία φιλοξενίας",
+            "subtitle": "Παθιασμένοι με τη μουσική, προσανατολισμένοι στη φιλοξενία",
             "members": [
                 {
                     "name": "Γιώργος Φαμελιάρης",
@@ -501,28 +531,35 @@
                     "image": "/images/about/team-katerina-karali.jpg",
                     "alt": "Κατερίνα Καραλή"
                 }
-            ]
+            ],
+            "kicker": "Η ΟΜΑΔΑ",
+            "title": "Γνωρίστε την <em>ομάδα</em>",
+            "closing": "Μαζί, αποτελούμε τη SensEar. Μια ομάδα αφοσιωμένη στο να αναβαθμίζει χώρους μέσα από ουσιαστική, αξέχαστη μουσική."
         },
         "differentiators": {
             "heading": "Τι μας ξεχωρίζει",
             "items": [
                 {
-                    "title": "Branding μουσική",
-                    "description": "Μεταφράζουμε το όραμά σας σε μουσική που νιώθεται φυσική και απόλυτα on-brand."
+                    "title": "Μουσική ως branding",
+                    "description": "Μεταφράζουμε το όραμά σας σε μουσική που ακούγεται φυσική και απόλυτα ταιριαστή στο brand."
                 },
                 {
-                    "title": "Κάλυψη όλων των τομέων",
-                    "description": "Μουσική σχεδιασμένη να ολοκληρώνει τα ταξίδια των επισκεπτών σε όλους τους χώρους που εκτιμούν την ατμόσφαιρα."
+                    "title": "Κάλυψη όλων των κλάδων",
+                    "description": "Μουσική σχεδιασμένη για να ολοκληρώνει το ταξίδι του επισκέπτη σε κάθε χώρο που δίνει αξία στην ατμόσφαιρα."
                 },
                 {
-                    "title": "Εξατομίκευση υπηρεσιών",
-                    "description": "Η προσέγγισή μας προσαρμόζεται στο στυλ, την ομάδα και τις ανάγκες σας σε πολλαπλές τοποθεσίες."
+                    "title": "Προσαρμοσμένες υπηρεσίες",
+                    "description": "Η προσέγγισή μας προσαρμόζεται στο στυλ, την ομάδα και τις ανάγκες σας, ακόμη και σε πολλαπλές τοποθεσίες."
                 },
                 {
-                    "title": "Χρήση των μοναδικών δυνάμεων της μουσικής",
+                    "title": "Η δύναμη της μουσικής",
                     "description": "Κατανοούμε πώς η μουσική αλλάζει τη διάθεση, διαμορφώνει χώρους και συνδέει ανθρώπους."
                 }
-            ]
+            ],
+            "kicker": "ΤΙ ΜΑΣ ΞΕΧΩΡΙΖΕΙ",
+            "title": "Τέσσερις <em>αρχές</em> που μας καθοδηγούν",
+            "subtitle": "Ό,τι κάνουμε πηγάζει από τον τρόπο που σκεφτόμαστε τον ήχο.",
+            "image_alt": "Η μοναδική προσέγγιση της SensEar"
         },
         "final_cta": {
             "heading": "Ανακαλύψτε τη διαδρομή του ήχου σας",
@@ -536,8 +573,48 @@
                     "text": "Κλάδοι που εξυπηρετούμε",
                     "link": "industries"
                 }
-            ]
-        }
+            ],
+            "kicker": "ΑΣ ΣΥΝΕΡΓΑΣΤΟΥΜΕ",
+            "lede": "Δείτε πώς συνεργαζόμαστε με πελάτες ή επικοινωνήστε μαζί μας για το project σας.",
+            "primary_cta": "Διαβάστε Παραδείγματα",
+            "secondary_cta": "Επικοινωνήστε μαζί μας",
+            "location": "Αθήνα, Ελλάδα"
+        },
+        "team_members": [
+            {
+                "name": "George Fameliaris",
+                "role": "Συνιδρυτής, Επικεφαλής μουσικής επιμέλειας & AV expert",
+                "image": "/images/about/team-george-fameliaris.jpg",
+                "image_alt": "Γιώργος Φαμελιάρης - Συνιδρυτής και Επικεφαλής Μουσικής Επιμέλειας SensEar",
+                "paragraphs": [
+                    "Το πάθος του Γιώργου για τη μουσική και τη συλλογή δίσκων εμπλουτίστηκε περαιτέρω μέσα από τις σπουδές του, με ένα Πτυχίο (BA) στα Μέσα Μαζικής Ενημέρωσης & Επικοινωνίας και ένα Μεταπτυχιακό (MA) στη Δημοφιλή Μουσική στον Κινηματογράφο.",
+                    "Σύντομα καθιερώθηκε ως τακτικός guest DJ στην αθηναϊκή σκηνή, αναλαμβάνοντας ιδιωτικά πάρτι και residencies σε εμβληματικούς χώρους όπως το <strong>Balux</strong>, το <strong>Sunset Antiparos</strong> και το <strong>Burger Disco</strong>. Παράλληλα, έχει μοιραστεί τα decks με κορυφαίες προσωπικότητες του χώρου, όπως η <strong>Colleen \"Cosmo\" Murphy</strong>, ο <strong>Danny Krivit</strong> και ο <strong>Gerd Janson</strong>.",
+                    "Στη SensEar, διαμορφώνει τη μουσική ταυτότητα κάθε χώρου με ακρίβεια, δημιουργώντας τον ρυθμό και την ατμόσφαιρα που ορίζουν τον χαρακτηριστικό ήχο του κάθε brand."
+                ]
+            },
+            {
+                "name": "John E. Farazoumis",
+                "role": "Συνιδρυτής, Στρατηγική & Επικοινωνία",
+                "image": "/images/about/team-john-farazoumis.png",
+                "image_alt": "John E. Farazoumis - Συνιδρυτής και Διευθυντής Brand Strategy SensEar",
+                "paragraphs": [
+                    "Από τα πρώτα DJ sets μέχρι τις σπουδές του στην Ηχοληψία και τώρα στη Διοίκηση Φιλοξενίας, ο ρόλος της μουσικής υπήρξε πάντα καθοριστικός στη ζωή του.",
+                    "Είναι συνιδρυτής μιας επιτυχημένης digital agency, με 25ετή εμπειρία στις <strong>Διαδικτυακές Υπηρεσίες</strong>, τις <strong>Πωλήσεις/Marketing</strong> και την <strong>Εξυπηρέτηση Πελατών</strong>. Είναι κάτοχος πτυχίου στη <strong>Διοίκηση Φιλοξενίας</strong> και στον <strong>Σχεδιασμό Εμπειριών & Υπηρεσιών</strong> (Hospitality Management & Experience Design) από το Πανεπιστήμιο Εφαρμοσμένων Επιστημών Haaga-Helia.",
+                    "Στη SensEar, χαράσσει τη στρατηγική κατεύθυνση του brand και γεφυρώνει το δημιουργικό όραμα με την εμπειρία πελάτη."
+                ]
+            },
+            {
+                "name": "Katerina Karali",
+                "role": "Συνεργάτιδα, DJ, Μουσική Επιμελήτρια & Music Supervisor",
+                "image": "/images/about/team-katerina-karali.jpg",
+                "image_alt": "Κατερίνα Καραλή - Art Director και Music Curator SensEar",
+                "paragraphs": [
+                    "Η Κατερίνα κινείται ανάμεσα στον ήχο και την εικόνα με εκλεπτυσμένη επιμελητική ματιά, συνδυάζοντας το ένστικτο της επιλογής με έντονη αίσθηση ατμόσφαιρας, αφήγησης και διάθεσης.",
+                    "Ως music selector, supervisor & DJ, έχει διαμορφώσει soundtracks για ντοκιμαντέρ, τηλεοπτικές σειρές και ειδικές εκδηλώσεις, ενώ φέρνει και την οπτική της προσέγγιση ως graphic designer, collage artist & illustrator στον τρόπο που δουλεύει με τον ήχο. Έχει βρεθεί στα ίδια lineups με την <strong>Colleen “Cosmo” Murphy</strong>, τον <strong>Barış K</strong>, τον <strong>Disco Bambino</strong> και άλλους καταξιωμένους selectors.",
+                    "Στη SensEar, φέρνει βάθος, υφή & πολιτισμική ευαισθησία, με σπάνιες επιλογές, κινηματογραφικό ένστικτο και μια απρόσμενη αιχμή στον ήχο της ομάδας."
+                ]
+            }
+        ]
     },
     "blog": {
         "meta": {
@@ -1724,7 +1801,10 @@
             "kicker": "ΣΥΧΝΕΣ ΕΡΩΤΗΣΕΙΣ",
             "image_kicker": "HOW IT WORKS",
             "image_caption": "Sound, licensing & service.",
-            "badge": ["★ SENSEAR ★", "EST · ATH"]
+            "badge": [
+                "★ SENSEAR ★",
+                "EST · ATH"
+            ]
         },
         "section_kicker": "FAQ",
         "title": "Οι ερωτήσεις σας, απαντημένες",
