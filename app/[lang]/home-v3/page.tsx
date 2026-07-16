@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import { getDictionary } from '@/lib/dictionary';
 import { type Locale } from '@/lib/i18n';
 import { FooterV3, V3Root } from '@/components/v3';
@@ -12,6 +13,12 @@ import {
     Services,
     Venues,
 } from '@/components/home-v3';
+
+export async function generateMetadata({ params }: { params: Promise<{ lang: Locale }> }): Promise<Metadata> {
+    const { lang } = await params;
+    const dict = await getDictionary(lang);
+    return { title: dict.home.meta.title, description: dict.home.meta.description };
+}
 
 export default async function HomeV3({ params }: { params: Promise<{ lang: Locale }> }) {
     const { lang } = await params;

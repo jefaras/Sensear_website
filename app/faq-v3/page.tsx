@@ -6,6 +6,6 @@ export async function generateMetadata(): Promise<Metadata> {
     return generateFaqV3Metadata({ params: Promise.resolve({ lang: 'en' }) })
 }
 
-export default function GreekFaqV3Page() {
+export default function EnglishFaqV3Page() {
     return <FaqV3 params={Promise.resolve({ lang: 'en' })} />
 }
