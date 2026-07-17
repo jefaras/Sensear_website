@@ -1,55 +1,56 @@
 import Image from 'next/image';
-import { Locale } from '@/lib/i18n';
-import { getLocalizedPath } from '@/lib/localized-path';
 import { ScrollReveal } from '@/components/motion';
-import { GhostButton, Kicker, MorphCTA, emphasize } from '@/components/v3';
+import { GhostButton } from './GhostButton';
+import { Kicker } from './Kicker';
+import { MorphCTA } from './MorphCTA';
+import { emphasize } from './emphasize';
 
-interface AboutCTAProps {
-    lang: Locale;
+interface PageCTAProps {
+    kicker: string;
+    heading: string;
+    /** Per-locale word inside `heading` to render in Didot italic gold. */
     emWord: string;
-    cta: {
-        heading: string;
-        kicker: string;
-        lede: string;
-        primary_cta: string;
-        secondary_cta: string;
-        location: string;
-    };
+    lede: string;
+    primaryLabel: string;
+    /** Already-localized path, or mailto:/tel:/# href. */
+    primaryHref: string;
+    ghostLabel: string;
+    ghostHref: string;
+    bgImage: string;
     phoneLine: string;
+    location: string;
 }
 
-export function AboutCTA({ lang, emWord, cta, phoneLine }: AboutCTAProps) {
+/**
+ * Shared full-bleed dark CTA band (kicker → H2 → lede → primary + ghost →
+ * phone/location line) — the prop-driven ContactCTA primitive from the v3 plan,
+ * reused by the About/Services/... demo pages with per-page copy and links.
+ */
+export function PageCTA({ kicker, heading, emWord, lede, primaryLabel, primaryHref, ghostLabel, ghostHref, bgImage, phoneLine, location }: PageCTAProps) {
     return (
-        <section className="relative overflow-hidden py-[clamp(122px,9.66vw,170px)]">
-            <Image
-                src="/images/about/about-hero.jpg"
-                alt=""
-                fill
-                aria-hidden="true"
-                sizes="100vw"
-                className="object-cover"
-            />
+        <section id="cta" className="relative overflow-hidden py-[clamp(122px,9.66vw,170px)]">
+            <Image src={bgImage} alt="" fill aria-hidden="true" sizes="100vw" className="object-cover" />
             <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(11,10,10,0.82),rgba(11,10,10,0.93))]" />
             <div className="relative z-10 mx-auto max-w-[min(1760px,100%)] px-[clamp(20px,1.59vw,28px)] text-center sm:px-[clamp(27px,2.1vw,37px)]">
                 <ScrollReveal>
                     <Kicker variant="gold" className="mb-[clamp(22px,1.7vw,30px)] justify-center">
-                        {cta.kicker}
+                        {kicker}
                     </Kicker>
                 </ScrollReveal>
                 <ScrollReveal delay={0.08}>
                     <h2 className="mx-auto mb-[clamp(23px,1.82vw,32px)] max-w-[1060px] text-[clamp(2.76rem,6.33vw,5.06rem)] font-extrabold leading-[1.04] tracking-[-0.025em]">
-                        {emphasize(cta.heading, emWord)}
+                        {emphasize(heading, emWord)}
                     </h2>
                 </ScrollReveal>
                 <ScrollReveal delay={0.16}>
                     <p className="mx-auto mb-[clamp(37px,2.9vw,51px)] max-w-[760px] text-[clamp(1.09rem,1.24vw,1.36rem)] leading-[1.6] text-[#faf6f1]/68">
-                        {cta.lede}
+                        {lede}
                     </p>
                 </ScrollReveal>
                 <ScrollReveal delay={0.24}>
                     <div className="mb-[clamp(25px,1.99vw,35px)] flex flex-wrap items-center justify-center gap-[clamp(15px,1.19vw,21px)]">
-                        <MorphCTA href={getLocalizedPath(lang, '/case-studies')}>{cta.primary_cta}</MorphCTA>
-                        <GhostButton href="mailto:hello@sensear.music">{cta.secondary_cta}</GhostButton>
+                        <MorphCTA href={primaryHref}>{primaryLabel}</MorphCTA>
+                        <GhostButton href={ghostHref}>{ghostLabel}</GhostButton>
                     </div>
                 </ScrollReveal>
                 <ScrollReveal delay={0.3}>
@@ -58,7 +59,7 @@ export function AboutCTA({ lang, emWord, cta, phoneLine }: AboutCTAProps) {
                             {phoneLine}
                         </a>
                         {' · '}
-                        {cta.location}
+                        {location}
                     </div>
                 </ScrollReveal>
             </div>

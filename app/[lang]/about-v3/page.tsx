@@ -2,9 +2,10 @@ import type { Metadata } from 'next';
 import { Fragment, type ReactNode } from 'react';
 import { getDictionary } from '@/lib/dictionary';
 import { type Locale } from '@/lib/i18n';
-import { DriftOrb, FooterV3, Kicker, V3Root, emphasize } from '@/components/v3';
+import { DriftOrb, FooterV3, Kicker, PageCTA, V3Root, emphasize } from '@/components/v3';
 import { ScrollReveal } from '@/components/motion';
-import { AboutCTA, Differentiators, Hero, Journey, TeamMember } from '@/components/about-v3';
+import { getLocalizedPath } from '@/lib/localized-path';
+import { Differentiators, Hero, Journey, TeamMember } from '@/components/about-v3';
 
 const stripTags = (html: string) => html.replace(/<[^>]+>/g, '');
 
@@ -148,11 +149,18 @@ export default async function AboutV3({ params }: { params: Promise<{ lang: Loca
 
             <Differentiators content={content.differentiators} />
 
-            <AboutCTA
-                lang={lang}
+            <PageCTA
+                kicker={content.final_cta.kicker}
+                heading={content.final_cta.heading}
                 emWord={em.cta}
-                cta={content.final_cta}
+                lede={content.final_cta.lede}
+                primaryLabel={content.final_cta.primary_cta}
+                primaryHref={getLocalizedPath(lang, '/case-studies')}
+                ghostLabel={content.final_cta.secondary_cta}
+                ghostHref="mailto:hello@sensear.music"
+                bgImage="/images/about/about-hero.jpg"
                 phoneLine={home.contact_cta.phone_line}
+                location={content.final_cta.location}
             />
 
             <FooterV3

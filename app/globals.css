@@ -220,6 +220,18 @@
   font-weight: 700;
 }
 
+/* Variant: gold-gradient <strong> runs (Services statement). Add alongside
+   .se-html so em keeps the Didot treatment; defined after .se-html so the
+   gold strong wins. */
+.se-html-gold strong {
+  background-image: var(--gold-text);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  font-weight: 700;
+}
+
 /* MorphCTA — gold pill that inverts to a dark, gold-outlined pill on hover (pure CSS). */
 .se-cta {
   background: var(--gold);

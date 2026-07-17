@@ -1614,16 +1614,29 @@
         },
         "hero": {
             "title": "Strategic music & sound,<br />four proven approaches",
-            "subtitle": "Premium music & sound services designed to complement the way spaces function and feel."
+            "subtitle": "Premium music & sound services designed to complement the way spaces function and feel.",
+            "side_label": "SERVICES — SONIC STRATEGY",
+            "kicker": "OUR SERVICES",
+            "primary_cta": "Explore the services",
+            "secondary_cta": "Book a call",
+            "image_kicker": "FOUR APPROACHES",
+            "image_caption": "Sound, by design.",
+            "image_alt": "Strategic music services for hospitality and retail venues",
+            "badge": [
+                "★ SENSEAR ★",
+                "EST · ATH"
+            ]
         },
         "intro": {
             "title": "Music is already shaping your business",
             "p1": "Every venue <strong>has a soundtrack</strong>, whether you designed it or not. <strong><em>SensEar</em></strong> helps ensure it tells <strong><em>the right story</em></strong>.",
-            "p2": "We shape sound for venues & events where <strong>atmosphere</strong> matters: guiding how guests <strong>feel</strong>, how long they <strong>stay</strong> and how they <strong>remember</strong> you."
+            "p2": "We shape sound for venues & events where <strong>atmosphere</strong> matters: guiding how guests <strong>feel</strong>, how long they <strong>stay</strong> and how they <strong>remember</strong> you.",
+            "kicker": "WHY IT MATTERS"
         },
         "starting_point": {
             "title": "Choose your starting point",
-            "subtitle": "Use this guide to see which music service fits you."
+            "subtitle": "Use this guide to see which music service fits you.",
+            "kicker": "SERVICES"
         },
         "services": {
             "playlists": {
@@ -1683,13 +1696,16 @@
                     "link_text": "Audio Upgrades",
                     "link": "services/audio-upgrades"
                 }
-            ]
+            ],
+            "kicker": "THE COLLABORATION"
         },
         "cta": {
             "title": "Let's explore your possibilities",
             "subtitle": "Which service aligns with your vision? We will assess your current atmosphere and recommend the ideal starting point.",
             "contact_btn": "Talk to us about your space",
-            "industries_btn": "See Industries we serve"
+            "industries_btn": "See Industries we serve",
+            "kicker": "LET'S COLLABORATE",
+            "location": "Athens, Greece"
         }
     },
     "footer": {
