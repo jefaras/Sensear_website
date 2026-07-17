@@ -14,8 +14,9 @@ interface PageCTAProps {
     primaryLabel: string;
     /** Already-localized path, or mailto:/tel:/# href. */
     primaryHref: string;
-    ghostLabel: string;
-    ghostHref: string;
+    /** Ghost button is optional — omit both to render a single primary CTA. */
+    ghostLabel?: string;
+    ghostHref?: string;
     bgImage: string;
     phoneLine: string;
     location: string;
@@ -27,6 +28,7 @@ interface PageCTAProps {
  * reused by the About/Services/... demo pages with per-page copy and links.
  */
 export function PageCTA({ kicker, heading, emWord, lede, primaryLabel, primaryHref, ghostLabel, ghostHref, bgImage, phoneLine, location }: PageCTAProps) {
+    const hasGhost = Boolean(ghostLabel && ghostHref);
     return (
         <section id="cta" className="relative overflow-hidden py-[clamp(122px,9.66vw,170px)]">
             <Image src={bgImage} alt="" fill aria-hidden="true" sizes="100vw" className="object-cover" />
@@ -50,7 +52,7 @@ export function PageCTA({ kicker, heading, emWord, lede, primaryLabel, primaryHr
                 <ScrollReveal delay={0.24}>
                     <div className="mb-[clamp(25px,1.99vw,35px)] flex flex-wrap items-center justify-center gap-[clamp(15px,1.19vw,21px)]">
                         <MorphCTA href={primaryHref}>{primaryLabel}</MorphCTA>
-                        <GhostButton href={ghostHref}>{ghostLabel}</GhostButton>
+                        {hasGhost && <GhostButton href={ghostHref!}>{ghostLabel}</GhostButton>}
                     </div>
                 </ScrollReveal>
                 <ScrollReveal delay={0.3}>

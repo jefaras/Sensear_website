@@ -1465,6 +1465,10 @@
             "success": "Ευχαριστούμε για την εγγραφή! ✦",
             "location": "Αθήνα, Ελλάδα",
             "background_image": "/images/homepage/sensear-signature-playlist-service.jpg"
+        },
+        "article": {
+            "read_time": "8 MIN READ",
+            "cta_kicker": "ΕΠΟΜΕΝΟ ΒΗΜΑ"
         }
     },
     "case_studies": {

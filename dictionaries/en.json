@@ -1487,6 +1487,10 @@
             "success": "Thanks for subscribing! ✦",
             "location": "Athens, Greece",
             "background_image": "/images/homepage/sensear-signature-playlist-service.jpg"
+        },
+        "article": {
+            "read_time": "8 MIN READ",
+            "cta_kicker": "NEXT STEP"
         }
     },
     "case_studies": {
