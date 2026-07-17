@@ -1970,12 +1970,17 @@
         "hero": {
             "title": "Signature Playlists",
             "subtitle": "A sound that's unmistakably yours.",
-            "description": "Rare, handpicked tracks curated around your concept, guests and your venue's rhythm."
+            "description": "Rare, handpicked tracks curated around your concept, guests and your venue's rhythm.",
+            "side_label": "SERVICES — SIGNATURE PLAYLISTS",
+            "kicker": "SIGNATURE PLAYLISTS",
+            "image_kicker": "DAILY SOUNDTRACK",
+            "image_caption": "Curated, never generic."
         },
         "intro": {
             "title": "Playlist creation for unique venue atmosphere",
             "p1": "We create <strong><em>playlists</em></strong> in tune with your brand's <strong><em>character</em></strong> and space's <strong><em>rhythm</em></strong>, to balance <strong><em>energy</em></strong> for both guests & staff.",
-            "p2": "Your sound <strong><em>becomes intentional</em></strong> & <strong><em>felt</em></strong> in the atmosphere, not lost in the background."
+            "p2": "Your sound <strong><em>becomes intentional</em></strong> & <strong><em>felt</em></strong> in the atmosphere, not lost in the background.",
+            "kicker": "WHY IT MATTERS"
         },
         "what_we_do": {
             "title": "What we do",
@@ -2000,7 +2005,8 @@
                     "title": "Total control & support",
                     "description": "Clear rules, central management & direct access to us when needed."
                 }
-            ]
+            ],
+            "kicker": "B2B CURATION"
         },
         "perfect_for": {
             "title": "Perfect for",
@@ -2030,7 +2036,8 @@
                     "description": "that need engaging but unobtrusive sound.",
                     "link": "industries/music-for-art-museums-and-fashion"
                 }
-            ]
+            ],
+            "kicker": "WHO IT'S FOR"
         },
         "licensed": {
             "title": "Licensed for business use",
@@ -2039,7 +2046,8 @@
                     "title": "On-brand, but also legal playlists",
                     "description": "We provide music cleared for professional use which offers you an extra ease of mind."
                 }
-            ]
+            ],
+            "kicker": "LEGAL PEACE OF MIND"
         },
         "cta": {
             "title": "Let us craft your signature sound",
@@ -2048,7 +2056,9 @@
             "explore": "Explore how our",
             "sonic_identity": "Sonic Identity",
             "audio_upgrades": "Audio Upgrades",
-            "build_on": "build on your playlists."
+            "build_on": "build on your playlists.",
+            "location": "Athens, Greece",
+            "kicker": "LET'S COLLABORATE"
         }
     },
     "event_soundtracks": {
@@ -2059,12 +2069,17 @@
         "hero": {
             "title": "Event Soundtracks:",
             "subtitle": "Music timed to your event's flow.",
-            "description": "Soundtracks designed to support each phase, from arrival to finale."
+            "description": "Soundtracks designed to support each phase, from arrival to finale.",
+            "side_label": "SERVICES — EVENT SOUNDTRACKS",
+            "kicker": "EVENT SOUNDTRACKS",
+            "image_kicker": "EVENT TIMING",
+            "image_caption": "Right moment, right sound."
         },
         "intro": {
             "title": "Music that moves with your event's timeline",
             "p1": "We design soundtracks to <strong><em>follow your event's plan</em></strong>, so energy always <strong><em>matches</em></strong> the moment.",
-            "p2": "Music <strong><em>carries the event forward</em></strong>, turning interactions into something guests <strong><em>enjoy & remember</em></strong>."
+            "p2": "Music <strong><em>carries the event forward</em></strong>, turning interactions into something guests <strong><em>enjoy & remember</em></strong>.",
+            "kicker": "WHY IT MATTERS"
         },
         "what_we_do": {
             "title": "What we do",
@@ -2085,7 +2100,8 @@
                     "title": "Optional venue audit",
                     "description": "Inspection of your space for coverage & clarity issues or upgrade needs."
                 }
-            ]
+            ],
+            "kicker": "THE DESIGN"
         },
         "perfect_for": {
             "title": "Perfect for",
@@ -2115,7 +2131,8 @@
                     "description": "that want music to shape how guests feel, share & remember.",
                     "link": "blog"
                 }
-            ]
+            ],
+            "kicker": "WHO IT'S FOR"
         },
         "staging": {
             "title": "Professionally managed staging",
@@ -2124,7 +2141,8 @@
                     "title": "Creative, but also precise",
                     "description": "We manage or supervise scheduling, sound checks and live adjustments so key moments land as planned and you focus on hosting."
                 }
-            ]
+            ],
+            "kicker": "THE COLLABORATION"
         },
         "cta": {
             "title": "Let us design your event's sonic journey",
@@ -2133,7 +2151,9 @@
             "explore": "Explore how our",
             "signature_playlists": "Signature Playlists",
             "audio_upgrades": "Audio Upgrades",
-            "support": "support event experiences."
+            "support": "support event experiences.",
+            "location": "Athens, Greece",
+            "kicker": "LET'S COLLABORATE"
         }
     },
     "sonic_identity": {
@@ -2144,12 +2164,17 @@
         "hero": {
             "title": "Sonic Identity:",
             "subtitle": "Defining how your brand sounds.",
-            "description": "A practical audio blueprint that keeps your label distinct & consistent."
+            "description": "A practical audio blueprint that keeps your label distinct & consistent.",
+            "side_label": "SERVICES — SONIC IDENTITY",
+            "kicker": "SONIC IDENTITY",
+            "image_kicker": "SONIC DNA",
+            "image_caption": "A signature you can hear."
         },
         "intro": {
             "title": "Sonic action plan for consistent brand identity",
             "p1": "We translate your brand vision into a <strong><em>practical audio guide</em></strong> that works for <strong><em>every space & channel</em></strong>.",
-            "p2": "Your firm gains a <strong><em>clear sonic identity</em></strong>, consistent across <strong><em>spaces</em></strong>, <strong><em>social media</em></strong> & <strong><em>ads</em></strong>."
+            "p2": "Your firm gains a <strong><em>clear sonic identity</em></strong>, consistent across <strong><em>spaces</em></strong>, <strong><em>social media</em></strong> & <strong><em>ads</em></strong>.",
+            "kicker": "WHY IT MATTERS"
         },
         "what_we_do": {
             "title": "What we do",
@@ -2171,7 +2196,8 @@
                     "title": "Implementation roadmap",
                     "description": "Practical path from current sound to new identity, aligned with your brand calendar and rollout timeline."
                 }
-            ]
+            ],
+            "kicker": "THE STRATEGY"
         },
         "perfect_for": {
             "title": "Perfect for",
@@ -2201,7 +2227,8 @@
                     "description": "with brand vision but no in-house audio expertise.",
                     "link": ""
                 }
-            ]
+            ],
+            "kicker": "WHO IT'S FOR"
         },
         "identity": {
             "title": "Strategically defined identity",
@@ -2210,7 +2237,8 @@
                     "title": "Coherent, but also flexible",
                     "description": "Your brand sounds recognizable at all locations & media while respecting what makes each space unique."
                 }
-            ]
+            ],
+            "kicker": "STRATEGIC IDENTITY"
         },
         "cta": {
             "title": "Let us define your brand's sonic identity",
@@ -2219,7 +2247,9 @@
             "explore": "Explore how our",
             "signature_playlists": "Signature Playlists",
             "audio_upgrades": "Audio Upgrades",
-            "bring_to_life": "bring your strategy to life."
+            "bring_to_life": "bring your strategy to life.",
+            "location": "Athens, Greece",
+            "kicker": "LET'S COLLABORATE"
         }
     },
     "audio_upgrades": {
@@ -2230,12 +2260,17 @@
         "hero": {
             "title": "Audio Upgrades:",
             "subtitle": "Clear, balanced sound for your space.",
-            "description": "Optimization designed to support atmosphere & conversations."
+            "description": "Optimization designed to support atmosphere & conversations.",
+            "side_label": "SERVICES — AUDIO UPGRADES",
+            "kicker": "AUDIO UPGRADES",
+            "image_kicker": "AUDIO CLARITY",
+            "image_caption": "Sound, perfected."
         },
         "intro": {
             "title": "Audio optimization<br />for an inviting atmosphere",
             "p1": "We <strong><em>refine</em></strong> your audio system, to achieve <strong><em>clear, balanced sound</em></strong> allover your space.",
-            "p2": "Optimised audio <strong><em>elevates your design</em></strong>, letting people <strong><em>enjoy</em></strong> their <strong><em>conversations</em></strong> & <strong><em>music</em></strong> comfortably."
+            "p2": "Optimised audio <strong><em>elevates your design</em></strong>, letting people <strong><em>enjoy</em></strong> their <strong><em>conversations</em></strong> & <strong><em>music</em></strong> comfortably.",
+            "kicker": "WHY IT MATTERS"
         },
         "what_we_do": {
             "title": "What we do",
@@ -2257,7 +2292,8 @@
                     "title": "System tuning & training",
                     "description": "Calibration under live conditions plus guidance, so your team runs it confidently day to day."
                 }
-            ]
+            ],
+            "kicker": "THE SERVICE"
         },
         "perfect_for": {
             "title": "Perfect for",
@@ -2287,7 +2323,8 @@
                     "description": "that invested in interiors but feel sound lowers the experience.",
                     "link": ""
                 }
-            ]
+            ],
+            "kicker": "WHO IT'S FOR"
         },
         "clarity": {
             "title": "Designed for clarity",
@@ -2296,7 +2333,8 @@
                     "title": "Balanced coverage, not just volume",
                     "description": "Guests talk comfortably, move naturally through spaces & remember atmosphere instead of loudness."
                 }
-            ]
+            ],
+            "kicker": "THE RESULT"
         },
         "cta": {
             "title": "Let us upgrade your venue's sound",
@@ -2305,7 +2343,9 @@
             "pair_with": "Pair with our",
             "signature_playlists": "Signature Playlists",
             "sonic_identity": "Sonic Identity",
-            "complete_identity": "for complete audio identity."
+            "complete_identity": "for complete audio identity.",
+            "location": "Athens, Greece",
+            "kicker": "LET'S COLLABORATE"
         }
     },
     "hotels_resorts": {
