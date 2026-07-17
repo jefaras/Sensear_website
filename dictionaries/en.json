@@ -1527,12 +1527,24 @@
         },
         "hero": {
             "title": "Curated music tailored to your sector",
-            "subtitle": "Distinct spaces require unique sound experiences."
+            "subtitle": "Distinct spaces require unique sound experiences.",
+            "side_label": "INDUSTRIES — SONIC FIT",
+            "kicker": "THE SECTORS WE SERVE",
+            "primary_cta": "Find your industry",
+            "secondary_cta": "Book a call",
+            "image_kicker": "SIX WORLDS",
+            "image_caption": "A sound for every space.",
+            "image_alt": "Industries we serve with music curation",
+            "badge": [
+                "★ SENSEAR ★",
+                "EST · ATH"
+            ]
         },
         "intro": {
             "title": "The right atmosphere for every space",
             "p1": "Hotels, restaurants, retail, gyms & culture all ask for their own atmosphere.",
-            "p2": "The right music turns spaces into unique experiences."
+            "p2": "The right music turns spaces into unique experiences.",
+            "kicker": "WHY IT MATTERS"
         },
         "expertise": {
             "title": "Your industry, our expertise",
@@ -1544,7 +1556,8 @@
                     "desc1": "Music that shapes the complete guest journey: from morning coffee to midnight cocktails.",
                     "desc2": "Result: The atmosphere reinforces what guests already love about your property.",
                     "cta": "Create your signature atmosphere",
-                    "link": "industries/music-for-hotels-and-resorts"
+                    "link": "industries/music-for-hotels-and-resorts",
+                    "image": "/images/industries/industry-hotels-resorts.jpg"
                 },
                 {
                     "title": "Restaurants & Bars",
@@ -1552,7 +1565,8 @@
                     "desc1": "Sound that flows with your rhythms, encouraging conversation and longer visits.",
                     "desc2": "Result: Service flows more smoothly and guests settle in for the complete experience.",
                     "cta": "Upgrade your dining atmosphere",
-                    "link": "industries/music-for-restaurants-and-bars"
+                    "link": "industries/music-for-restaurants-and-bars",
+                    "image": "/images/industries/industry-restaurants-bars.jpg"
                 },
                 {
                     "title": "Events & Experiences",
@@ -1560,7 +1574,8 @@
                     "desc1": "Precisely timed music that frames every phase, so your event sounds as good as it looks.",
                     "desc2": "Result: Smooth transitions that guests don't notice but organizers appreciate.",
                     "cta": "Perfect your next event",
-                    "link": "industries/music-for-events-and-experiences"
+                    "link": "industries/music-for-events-and-experiences",
+                    "image": "/images/industries/industry-events-experiences.jpg"
                 },
                 {
                     "title": "Retail Stores",
@@ -1568,7 +1583,8 @@
                     "desc1": "Music that guides customer journeys and helps your space tell its story through sound.",
                     "desc2": "Result: Shoppers slow down, explore more corners & feel guided, not rushed.",
                     "cta": "Transform your retail experience",
-                    "link": "industries/music-for-retail-stores"
+                    "link": "industries/music-for-retail-stores",
+                    "image": "/images/industries/industry-retail-stores.jpg"
                 },
                 {
                     "title": "Wellness Centers",
@@ -1576,7 +1592,8 @@
                     "desc1": "We calibrate music to support each activity, so each space has its optimal atmosphere.",
                     "desc2": "Result: Members consider the atmosphere as part of what makes their practice feel complete.",
                     "cta": "Optimize your wellness space",
-                    "link": "industries/music-for-wellness-and-gyms"
+                    "link": "industries/music-for-wellness-and-gyms",
+                    "image": "/images/industries/industry-wellness-gyms.jpg"
                 },
                 {
                     "title": "Art, Museums & Fashion",
@@ -1584,9 +1601,11 @@
                     "desc1": "We create soundscapes that support without overwhelming and enrich the cultural experience.",
                     "desc2": "Result: Visitors slow down, absorb more and share their experience afterwards.",
                     "cta": "Frame your exhibitions",
-                    "link": "industries/music-for-art-museums-and-fashion"
+                    "link": "industries/music-for-art-museums-and-fashion",
+                    "image": "/images/industries/industry-art-museums-fashion.jpg"
                 }
-            ]
+            ],
+            "kicker": "INDUSTRIES"
         },
         "connect": {
             "title": "What connects these worlds",
@@ -1598,13 +1617,16 @@
                 "Creating memorable experiences that bring people back",
                 "Knowing if your music actually works for your business"
             ],
-            "conclusion": "Different industries express these differently, but strategic sound solves them all."
+            "conclusion": "Different industries express these differently, but strategic sound solves them all.",
+            "kicker": "THE COMMON THREAD"
         },
         "cta": {
             "title": "Discover your sound potential",
             "subtitle": "Every venue has untapped atmospheric potential. Let's explore how strategic sound can transform your specific space and objectives.",
             "contact": "Let's design your venue sound",
-            "services": "Explore our services"
+            "services": "Explore our services",
+            "kicker": "LET'S COLLABORATE",
+            "location": "Athens, Greece"
         }
     },
     "services_page": {

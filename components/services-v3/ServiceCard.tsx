@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { MorphCTA } from '@/components/v3';
-import { goldPrefix } from './gold-prefix';
+import { MorphCTA, goldPrefix } from '@/components/v3';
 
 interface ServiceCardProps {
     service: {
