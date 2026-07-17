@@ -1476,12 +1476,24 @@
         },
         "hero": {
             "title": "Hear how sound shapes real experiences",
-            "subtitle": "Examples of how sound is applied across different environments."
+            "subtitle": "Examples of how sound is applied across different environments.",
+            "side_label": "CASE STUDIES — SOUND IN PLACE",
+            "kicker": "STORIES OF SPACES",
+            "primary_cta": "See the stories",
+            "secondary_cta": "Book a call",
+            "image_kicker": "FROM VISION TO SOUND",
+            "image_caption": "Real spaces, scored.",
+            "image_alt": "Case Studies showcasing music curation projects",
+            "badge": [
+                "★ SENSEAR ★",
+                "EST · ATH"
+            ]
         },
         "intro": {
             "title": "From vision to sound & beyond",
             "p1": "All venues start with a vision; an atmosphere they imagined, a feeling they wanted guests to have.",
-            "p2": "We turn those visions into carefully crafted soundscapes that support your business and respect the space."
+            "p2": "We turn those visions into carefully crafted soundscapes that support your business and respect the space.",
+            "kicker": "FROM VISION TO SOUND"
         },
         "items": [
             {
@@ -1489,35 +1501,47 @@
                 "desc1": "Beach House features traditional island style, the high-end restaurant CoocooVaya and a bar hovering above the sea.",
                 "desc2": "We were delighted when asked to design the music: the stunning setting needed sound that complements and relaxes. Our playlists respect the peaceful atmosphere while keeping perfect energy across beach, restaurant & bar.",
                 "link": "beach-house-antiparos-morning-playlist-sample",
-                "link_text": "Listen to the Beach House atmosphere"
+                "link_text": "Listen to the Beach House atmosphere",
+                "location": "Antiparos"
             },
             {
                 "title": "Pelicanos, Sifnos",
                 "desc1": "Fine dining has taken off on Sifnos, an island known for its culinary tradition. Pelicanos is a sophisticated all-day restaurant that needed music to match its ambition.",
                 "desc2": "We enriched the soundtrack with fresh discoveries & elegant classics, creating a complete dining experience by the sea.",
                 "link": "pelicanos-sifnos-jazzy-playlist",
-                "link_text": "Listen to the Pelicanos atmosphere"
+                "link_text": "Listen to the Pelicanos atmosphere",
+                "location": "Sifnos"
             },
             {
                 "title": "Yam, Antiparos",
                 "desc1": "An iconic Antiparos venue since the late ’90s, with an easy-going vibe and unique setting.",
                 "desc2": "The girls in charge asked us to complement this special setting with music that evolves from lazy lunch to late night hangouts. We created a fine music experience that captures the island's magic.",
                 "link": "yam-antiparos-night-playlist",
-                "link_text": "Listen to the Yam atmosphere"
+                "link_text": "Listen to the Yam atmosphere",
+                "location": "Antiparos"
             },
             {
                 "title": "Levantis, Paros",
                 "desc1": "Neva Bergman assigned us to create atmospheric support for her 'Quiet Testimony' exhibition opening at Levantis restaurant's gallery space in Paros.",
                 "desc2": "The custom ambient soundscape we designed enriched viewing & discussions without distraction. The artist loved how the music matched her work's emotions and kept visitors engaged longer.",
                 "link": "levantis-playlist-sample",
-                "link_text": "Listen to the Levantis atmosphere"
+                "link_text": "Listen to the Levantis atmosphere",
+                "location": "Paros"
             }
         ],
         "cta": {
             "title": "Your venue's sound journey starts here",
             "subtitle": "Let's explore how music can work specifically for your space and goals.",
             "contact": "Start your venue sound journey",
-            "services": "Browse our services"
+            "services": "Browse our services",
+            "kicker": "LET'S COLLABORATE",
+            "location": "Athens, Greece"
+        },
+        "cases": {
+            "kicker": "CASE STUDIES",
+            "title": "Four venues, four different <em>journeys</em>",
+            "subtitle": "Each with its own character, needs and musical solution.",
+            "listen_prefix": "Listen to the atmosphere of"
         }
     },
     "industries_page": {
