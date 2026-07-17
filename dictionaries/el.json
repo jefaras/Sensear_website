@@ -623,15 +623,25 @@
         },
         "hero": {
             "title": "Το περιοδικό της μουσικής επιμέλειας",
-            "subtitle": "Insights, τάσεις και εξειδίκευση από τον κόσμο της πολυτελούς μουσικής επιμέλειας."
+            "subtitle": "Insights, τάσεις και εξειδίκευση από τον κόσμο της πολυτελούς μουσικής επιμέλειας.",
+            "side_label": "JOURNAL — CURATION NOTES",
+            "kicker": "ΤΟ ΠΕΡΙΟΔΙΚΟ ΜΑΣ",
+            "primary_cta": "Δείτε τα άρθρα",
+            "secondary_cta": "Εγγραφή στο newsletter",
+            "badge": [
+                "★ SENSEAR ★",
+                "JOURNAL"
+            ]
         },
         "featured": {
-            "badge": "Featured",
+            "badge": "INSIGHTS · ΠΡΟΤΕΙΝΟΜΕΝΟ",
             "read_more": "Διαβάστε ολόκληρο το άρθρο"
         },
         "recent": {
             "title": "Πρόσφατα άρθρα",
-            "read_more": "Διαβάστε περισσότερα"
+            "read_more": "Διαβάστε περισσότερα",
+            "kicker": "ΠΡΟΣΦΑΤΑ ΑΡΘΡΑ",
+            "headline": "Σκέψεις για τον ήχο που διαμορφώνει την εμπειρία"
         },
         "back_button": "Πίσω στα Άρθρα",
         "newsletter": {
@@ -1445,7 +1455,17 @@
                     }
                 ]
             }
-        ]
+        ],
+        "newsletter_cta": {
+            "kicker": "ΜΗΝ ΧΑΝΕΤΕ ΤΙΠΟΤΑ",
+            "title": "Σκέψεις για τον ήχο, απευθείας σε εσάς",
+            "subtitle": "Εγγραφείτε στο περιοδικό μας και λάβετε νέα insights για μουσική, ατμόσφαιρα & sonic branding.",
+            "placeholder": "Το email σας",
+            "submit": "Εγγραφή",
+            "success": "Ευχαριστούμε για την εγγραφή! ✦",
+            "location": "Αθήνα, Ελλάδα",
+            "background_image": "/images/homepage/sensear-signature-playlist-service.jpg"
+        }
     },
     "case_studies": {
         "meta": {

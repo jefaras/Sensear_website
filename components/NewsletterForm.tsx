@@ -9,7 +9,7 @@ interface NewsletterFormProps {
     placeholder: string;
     buttonText: string;
     source?: string;
-    variant?: "footer" | "cta" | "footerV3";
+    variant?: "footer" | "cta" | "footerV3" | "ctaV3";
     successText?: string;
 }
 
@@ -74,8 +74,9 @@ export function NewsletterForm({
     }, [email, source]);
 
     if (status === "success") {
+        const darkSuccess = variant === "footerV3" || variant === "ctaV3";
         return (
-            <div className={`text-lg ${variant === "footer" ? "text-white/70" : "text-black/70"}`}>
+            <div className={`text-lg ${darkSuccess ? "se-gold-text font-semibold" : variant === "footer" ? "text-white/70" : "text-black/70"}`}>
                 {successText}
             </div>
         );
@@ -123,6 +124,56 @@ export function NewsletterForm({
                     <p className="text-red-500 text-sm w-full text-center">{errorMessage}</p>
                 )}
                 <p className="text-xs text-black/40 text-center w-full mt-1">
+                    Protected by reCAPTCHA —{" "}
+                    <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="underline">Privacy</a> &amp;{" "}
+                    <a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer" className="underline">Terms</a>
+                </p>
+            </form>
+        );
+    }
+
+    // CTA v3 variant — dark-editorial, centered, larger pill input + gold MorphCTA-style
+    // submit. Used by the full-bleed newsletter CTA on the v3 Journal page. Additive
+    // only; preserves the PHP POST + reCAPTCHA flow shared by all variants.
+    if (variant === "ctaV3") {
+        return (
+            <form action="/newsletter.php" method="POST" encType="application/x-www-form-urlencoded" onSubmit={handleSubmit} className="mx-auto w-full max-w-[520px]">
+                <input type="hidden" name="g-recaptcha-response" value="" />
+                <input type="hidden" name="source" value={source} />
+                <div className="flex flex-col gap-3 sm:flex-row">
+                    <input
+                        name="email"
+                        type="email"
+                        aria-label={placeholder}
+                        value={email}
+                        onChange={(e) => {
+                            setEmail(e.target.value);
+                            if (status === "error") {
+                                setStatus("idle");
+                                setErrorMessage("");
+                            }
+                        }}
+                        placeholder={placeholder}
+                        required
+                        className={`h-[clamp(48px,3.8vw,56px)] flex-1 rounded-full border bg-[rgba(250,246,241,0.05)] px-[clamp(20px,1.6vw,28px)] text-[clamp(14px,0.97vw,17px)] text-[#faf6f1] placeholder:text-[rgba(250,246,241,0.5)] focus:outline-none ${status === "error" ? "border-red-500" : "border-[rgba(250,246,241,0.18)] focus:border-[rgba(250,246,241,0.45)]"}`}
+                    />
+                    <button
+                        type="submit"
+                        disabled={status === "loading"}
+                        className="se-cta group inline-flex h-[clamp(48px,3.8vw,56px)] shrink-0 items-center justify-center gap-2 overflow-hidden rounded-full px-[clamp(27px,2.1vw,37px)] text-[clamp(14px,0.97vw,17px)] font-bold no-underline disabled:cursor-not-allowed disabled:opacity-50"
+                    >
+                        {status === "loading" ? (
+                            "..."
+                        ) : (
+                            <>
+                                <span>{buttonText}</span>
+                                <ArrowRight className="h-[18px] w-[18px] transition-transform duration-300 ease-out group-hover:translate-x-1 group-focus-visible:translate-x-1" />
+                            </>
+                        )}
+                    </button>
+                </div>
+                {status === "error" && <p className="mt-3 text-center text-sm text-red-400">{errorMessage}</p>}
+                <p className="mt-3 text-center text-xs text-[#faf6f1]/30">
                     Protected by reCAPTCHA —{" "}
                     <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="underline">Privacy</a> &amp;{" "}
                     <a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer" className="underline">Terms</a>

@@ -625,15 +625,25 @@
         },
         "hero": {
             "title": "The Curation Journal",
-            "subtitle": "Insights, trends, and expertise from the world of luxury music curation."
+            "subtitle": "Insights, trends, and expertise from the world of luxury music curation.",
+            "side_label": "JOURNAL — CURATION NOTES",
+            "kicker": "OUR JOURNAL",
+            "primary_cta": "See the articles",
+            "secondary_cta": "Subscribe to the newsletter",
+            "badge": [
+                "★ SENSEAR ★",
+                "JOURNAL"
+            ]
         },
         "featured": {
-            "badge": "Featured",
+            "badge": "INSIGHTS · FEATURED",
             "read_more": "Read Full Article"
         },
         "recent": {
             "title": "Recent Articles",
-            "read_more": "Read More"
+            "read_more": "Read More",
+            "kicker": "RECENT ARTICLES",
+            "headline": "Notes on the sound that shapes experience"
         },
         "back_button": "Back to Insights",
         "newsletter": {
@@ -1467,7 +1477,17 @@
                     }
                 ]
             }
-        ]
+        ],
+        "newsletter_cta": {
+            "kicker": "NEVER MISS A NOTE",
+            "title": "Notes on sound, straight to you",
+            "subtitle": "Subscribe to our journal for fresh insights on music, atmosphere & sonic branding.",
+            "placeholder": "Your email",
+            "submit": "Subscribe",
+            "success": "Thanks for subscribing! ✦",
+            "location": "Athens, Greece",
+            "background_image": "/images/homepage/sensear-signature-playlist-service.jpg"
+        }
     },
     "case_studies": {
         "meta": {
