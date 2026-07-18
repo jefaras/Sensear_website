@@ -2336,12 +2336,17 @@
             "subtitle": "Ηχοτοπία για κάθε ώρα και χώρο",
             "description": "Στοχευμένος ήχος που συμπληρώνει το service, τον σχεδιασμό και τη διάθεση του χώρου.",
             "image": "/images/industries/hotels-resorts-curated-music-ambiance.jpg",
-            "image_alt": "Πολυτελές resort και ξενοδοχείο με επιμελημένη μουσική ατμόσφαιρα"
+            "image_alt": "Πολυτελές resort και ξενοδοχείο με επιμελημένη μουσική ατμόσφαιρα",
+            "side_label": "INDUSTRIES — HOTELS & RESORTS",
+            "kicker": "HOTELS & RESORTS",
+            "image_kicker": "HOTELS & RESORTS",
+            "image_caption": "A sound for every hour."
         },
         "intro": {
             "title": "Η μουσική ως αναπόσπαστο κομμάτι της φιλοξενίας",
             "p1": "Σε ένα premium ξενοδοχείο, ο ήχος <strong>δεν πρέπει να αφήνεται στην τύχη</strong>. Είναι η πρώτη αίσθηση που <strong>καλωσορίζει</strong> τον επισκέπτη στο lobby και αυτή που τον <strong>χαλαρώνει</strong> στο τέλος της ημέρας.",
-            "p2": "Σχεδιάζουμε μια ενιαία ηχητική στρατηγική που <strong>αγκαλιάζει</strong> τον επισκέπτη σε όλη τη διάρκεια της διαμονής του, <strong>προσαρμοζόμενη αρμονικά</strong> στον ρυθμό και τη χρήση του κάθε χώρου."
+            "p2": "Σχεδιάζουμε μια ενιαία ηχητική στρατηγική που <strong>αγκαλιάζει</strong> τον επισκέπτη σε όλη τη διάρκεια της διαμονής του, <strong>προσαρμοζόμενη αρμονικά</strong> στον ρυθμό και τη χρήση του κάθε χώρου.",
+            "kicker": "Η ΦΙΛΟΣΟΦΙΑ ΜΑΣ"
         },
         "what_we_do": {
             "title": "Πώς αναβαθμίζουμε την εμπειρία",
@@ -2364,7 +2369,8 @@
                     "description": "Αφαιρούμε το άγχος της μουσικής επιλογής από το προσωπικό σας. Το σύστημα αναπαραγωγής ακολουθεί το ιδανικό flow, επιτρέποντας στην ομάδα σας να εστιάσει αποκλειστικά στη φιλοξενία."
                 }
             ],
-            "image": "/images/industries/hotels-resorts-boutique-hotel-music.webp"
+            "image": "/images/industries/hotels-resorts-boutique-hotel-music.webp",
+            "kicker": "Η ΜΕΘΟΔΟΣ ΜΑΣ"
         },
         "ideal_for": {
             "title": "Λύσεις ήχου για premium χώρους φιλοξενίας",
@@ -2390,7 +2396,8 @@
                     "description": "Για γάμους, parties, εταιρικά events/retreats και συνέδρια."
                 }
             ],
-            "image": "/images/industries/hotels-resorts-luxury-hotel-lobby.jpg"
+            "image": "/images/industries/hotels-resorts-luxury-hotel-lobby.jpg",
+            "kicker": "ΓΙΑ ΠΟΙΟΥΣ"
         },
         "how_we_help": {
             "title": "Πώς η στοχευμένη μουσική αναβαθμίζει το ξενοδοχείο σας",
@@ -2416,7 +2423,8 @@
             "cta_title": "Ακούστε τον ήχο του κλάδου σας στην πράξη",
             "cta_description": "Διαβάστε τα case studies μας και ακούστε δείγματα από premium χώρους φιλοξενίας.",
             "cta_button": "Δείτε το Portfolio",
-            "cta_link": "case-studies"
+            "cta_link": "case-studies",
+            "kicker": "ΤΑ ΑΠΟΤΕΛΕΣΜΑΤΑ"
         },
         "cta": {
             "title": "Ας σχεδιάσουμε τον ήχο του καταλύματός σας",
@@ -2426,7 +2434,9 @@
             "signature_playlists": "Signature Playlists",
             "and": "και ο",
             "sonic_strategy": "Σχεδιασμός ηχητικής ταυτότητας",
-            "work_for": "λειτουργούν για ξενοδοχεία & θέρετρα."
+            "work_for": "λειτουργούν για ξενοδοχεία & θέρετρα.",
+            "kicker": "ΑΣ ΣΥΝΕΡΓΑΣΤΟΥΜΕ",
+            "location": "Αθήνα, Ελλάδα"
         }
     },
     "restaurants_bars": {
@@ -2439,12 +2449,17 @@
             "subtitle": "Εναρμονισμένη με τις γεύσεις και το service",
             "description": "Μουσική που συμπληρώνει το φαγητό και το service, αναδεικνύοντας τη ροή του γεύματος, τις συζητήσεις και τη συνολική ατμόσφαιρα.",
             "image": "/images/industries/restaurants-bars-curated-music-atmosphere.jpg",
-            "image_alt": "Κομψός εσωτερικός χώρος εστιατορίου με επιμελημένη μουσική ατμόσφαιρα"
+            "image_alt": "Κομψός εσωτερικός χώρος εστιατορίου με επιμελημένη μουσική ατμόσφαιρα",
+            "side_label": "INDUSTRIES — RESTAURANTS & BARS",
+            "kicker": "RESTAURANTS & BARS",
+            "image_kicker": "RESTAURANTS & BARS",
+            "image_caption": "The invisible guest at the table."
         },
         "intro": {
             "title": "Ο «αόρατος» καλεσμένος στο τραπέζι",
             "p1": "Η γευστική εμπειρία δεν περιορίζεται στο πιάτο ή το ποτήρι. Ο σωστός ήχος <strong>«δένει» απόλυτα με τις γεύσεις</strong>, καθορίζει τον ρυθμό του service και δημιουργεί το ιδανικό περιβάλλον ώστε οι πελάτες να απολαύσουν τη στιγμή και να μείνουν περισσότερο.",
-            "p2": "Σχεδιάζουμε soundtracks που <strong>σέβονται τη δυναμική του χώρου</strong>, από ένα χαλαρό brunch μέχρι την κορύφωση ενός fine dining δείπνου ή την έντονη ενέργεια ενός premium bar."
+            "p2": "Σχεδιάζουμε soundtracks που <strong>σέβονται τη δυναμική του χώρου</strong>, από ένα χαλαρό brunch μέχρι την κορύφωση ενός fine dining δείπνου ή την έντονη ενέργεια ενός premium bar.",
+            "kicker": "Η ΦΙΛΟΣΟΦΙΑ ΜΑΣ"
         },
         "what_we_do": {
             "title": "Μουσική επιμέλεια για τον κλάδο της εστίασης",
@@ -2467,7 +2482,8 @@
                     "description": "Τακτικές αλλαγές που κρατούν τη μουσική φρέσκια για τους τακτικούς πελάτες και το προσωπικό, διατηρώντας τον χαρακτήρα σας."
                 }
             ],
-            "image": "/images/industries/restaurants-bars-dining-music-experience.jpg"
+            "image": "/images/industries/restaurants-bars-dining-music-experience.jpg",
+            "kicker": "Η ΜΕΘΟΔΟΣ ΜΑΣ"
         },
         "ideal_for": {
             "title": "Ιδανικές λύσεις μουσικής για εστιατόρια, καφέ & μπαρ",
@@ -2489,7 +2505,8 @@
                     "description": "Που θέλουν συνεπή ηχητική ταυτότητα σε όλα τους τα σημεία."
                 }
             ],
-            "image": "/images/industries/restaurants-bars-cocktail-bar-atmosphere.jpg"
+            "image": "/images/industries/restaurants-bars-cocktail-bar-atmosphere.jpg",
+            "kicker": "ΓΙΑ ΠΟΙΟΥΣ"
         },
         "how_we_help": {
             "title": "Πώς η σωστή μουσική μεταμορφώνει τον χώρο σας",
@@ -2515,7 +2532,8 @@
             "cta_title": "Ακούστε τον ήχο του κλάδου στην πράξη",
             "cta_description": "Διαβάστε ιστορίες πελατών και ακούστε δείγματα από premium χώρους εστίασης και cafe-bars.",
             "cta_button": "Δείτε το Portfolio",
-            "cta_link": "case-studies"
+            "cta_link": "case-studies",
+            "kicker": "ΤΑ ΑΠΟΤΕΛΕΣΜΑΤΑ"
         },
         "cta": {
             "title": "Αναβαθμίστε την ατμόσφαιρα του εστιατορίου/cafe/bar σας",
@@ -2525,7 +2543,9 @@
             "signature_playlists": "Signature Playlists",
             "and": "και η",
             "audio_upgrades": "Ακουστική αναβάθμιση",
-            "work_for": "λειτουργούν για εστιατόρια, καφέ & μπαρ."
+            "work_for": "λειτουργούν για εστιατόρια, καφέ & μπαρ.",
+            "kicker": "ΑΣ ΣΥΝΕΡΓΑΣΤΟΥΜΕ",
+            "location": "Αθήνα, Ελλάδα"
         }
     },
     "retail_stores": {
@@ -2538,12 +2558,17 @@
             "subtitle": "Σχεδιασμένη να ενισχύει την περιήγηση και την ταυτότητα του brand",
             "description": "Ρυθμός επιμελημένος ώστε να υποστηρίζει την εμπορική δραστηριότητα και την εικόνα του καταστήματος.",
             "image": "/images/industries/retail-stores-curated-music-shopping.jpg",
-            "image_alt": "Σύγχρονος χώρος καταστήματος (retail) με επιμελημένη μουσική ατμόσφαιρα"
+            "image_alt": "Σύγχρονος χώρος καταστήματος (retail) με επιμελημένη μουσική ατμόσφαιρα",
+            "side_label": "INDUSTRIES — RETAIL STORES",
+            "kicker": "RETAIL STORES",
+            "image_kicker": "RETAIL STORES",
+            "image_caption": "The rhythm of discovery."
         },
         "intro": {
             "title": "Μουσική που καθοδηγεί το ταξίδι αγορών",
             "p1": "Η μουσική στο κατάστημά σας <strong><em>επηρεάζει τον χρόνο παραμονής</em></strong>, το τι προσέχουν οι επισκέπτες και το αν θα προχωρήσουν τελικά σε αγορά.",
-            "p2": "Οι μουσικές μας επιλογές <strong>προσαρμόζονται</strong> στη δυναμική του καταστήματος ανάλογα με την ώρα της ημέρας και διαμορφώνουν τον τρόπο με τον οποίο οι πελάτες <strong>αντιλαμβάνονται την αξία του brand σας</strong>."
+            "p2": "Οι μουσικές μας επιλογές <strong>προσαρμόζονται</strong> στη δυναμική του καταστήματος ανάλογα με την ώρα της ημέρας και διαμορφώνουν τον τρόπο με τον οποίο οι πελάτες <strong>αντιλαμβάνονται την αξία του brand σας</strong>.",
+            "kicker": "Η ΦΙΛΟΣΟΦΙΑ ΜΑΣ"
         },
         "what_we_do": {
             "title": "Μουσική επιμέλεια για καταστήματα λιανικής",
@@ -2566,7 +2591,8 @@
                     "description": "Playlists που εξελίσσονται παράλληλα με τις νέες συλλογές και τις περιόδους προσφορών, διατηρώντας ζωντανό τον χαρακτήρα σας."
                 }
             ],
-            "image": "/images/industries/retail-stores-music-strategy-browsing.jpg"
+            "image": "/images/industries/retail-stores-music-strategy-browsing.jpg",
+            "kicker": "Η ΜΕΘΟΔΟΣ ΜΑΣ"
         },
         "ideal_for": {
             "title": "Λύσεις ήχου για σύγχρονα retail brands",
@@ -2592,7 +2618,8 @@
                     "description": "Που πρέπει να αφήσουν ισχυρή εντύπωση και να μεταφέρουν το brand vibe από την πρώτη μέρα."
                 }
             ],
-            "image": "/images/industries/retail-stores-boutique-music-atmosphere.jpg"
+            "image": "/images/industries/retail-stores-boutique-music-atmosphere.jpg",
+            "kicker": "ΓΙΑ ΠΟΙΟΥΣ"
         },
         "how_we_help": {
             "title": "Πώς ο μελετημένος ήχος αναβαθμίζει το κατάστημά σας",
@@ -2614,7 +2641,8 @@
                     "description": "Με κεντρική διαχείριση και νόμιμα αδειοδοτημένη μουσική, το προσωπικό σας εστιάζει αποκλειστικά στις πωλήσεις και την εξυπηρέτηση, χωρίς να αναζητά playlists."
                 }
             ],
-            "image": "/images/industries/retail-stores-customer-journey-sound.jpg"
+            "image": "/images/industries/retail-stores-customer-journey-sound.jpg",
+            "kicker": "ΤΑ ΑΠΟΤΕΛΕΣΜΑΤΑ"
         },
         "cta": {
             "title": "Αναβαθμίστε την εμπειρία του καταστήματός σας",
@@ -2624,7 +2652,9 @@
             "signature_playlists": "Signature Playlists",
             "and": "και ο",
             "sonic_strategy": "Σχεδιασμός ηχητικής ταυτότητας",
-            "work_for": "λειτουργούν για καταστήματα λιανικής."
+            "work_for": "λειτουργούν για καταστήματα λιανικής.",
+            "kicker": "ΑΣ ΣΥΝΕΡΓΑΣΤΟΥΜΕ",
+            "location": "Αθήνα, Ελλάδα"
         }
     },
     "wellness_gyms": {
@@ -2637,12 +2667,17 @@
             "subtitle": "Σχεδιασμένη γύρω από τη δραστηριότητα και την ένταση",
             "description": "Στοχευμένη μουσική που ενισχύει τη συγκέντρωση σε όλους τους χώρους και τις πρακτικές.",
             "image": "/images/industries/wellness-gyms-luxury-spa-ambient-music.jpg",
-            "image_alt": "Εσωτερικός χώρος πολυτελούς spa και κέντρου ευεξίας με επιμελημένη ambient μουσική"
+            "image_alt": "Εσωτερικός χώρος πολυτελούς spa και κέντρου ευεξίας με επιμελημένη ambient μουσική",
+            "side_label": "INDUSTRIES — WELLNESS & GYMS",
+            "kicker": "WELLNESS & GYMS",
+            "image_kicker": "WELLNESS & GYMS",
+            "image_caption": "Sound tuned to the body."
         },
         "intro": {
             "title": "Μουσικά θέματα ρυθμισμένα για σώμα και νου",
             "p1": "Η μουσική σε χώρους ευεξίας και άσκησης <strong>καθοδηγεί</strong> τη συγκέντρωση, τον ρυθμό και τη διάθεση κατά τη διάρκεια των συνεδριών.",
-            "p2": "Οι μίξεις μας <strong>προσαρμόζονται σε κάθε ζώνη και επίπεδο έντασης</strong>, βοηθώντας τους επισκέπτες να <strong>παραμένουν παρόντες και ενεργοί</strong>."
+            "p2": "Οι μίξεις μας <strong>προσαρμόζονται σε κάθε ζώνη και επίπεδο έντασης</strong>, βοηθώντας τους επισκέπτες να <strong>παραμένουν παρόντες και ενεργοί</strong>.",
+            "kicker": "Η ΦΙΛΟΣΟΦΙΑ ΜΑΣ"
         },
         "what_we_do": {
             "title": "Μουσική επιμέλεια για χώρους ευεξίας & γυμναστήρια",
@@ -2665,7 +2700,8 @@
                     "description": "Η υποδοχή, οι χώροι θεραπειών και οι αίθουσες άσκησης αποκτούν τον δικό τους ήχο, διατηρώντας όμως μία κοινή, αναγνωρίσιμη ηχητική ταυτότητα."
                 }
             ],
-            "image": "/images/industries/wellness-gyms-spa-treatment-music.jpg"
+            "image": "/images/industries/wellness-gyms-spa-treatment-music.jpg",
+            "kicker": "Η ΜΕΘΟΔΟΣ ΜΑΣ"
         },
         "ideal_for": {
             "title": "Ιδανικές λύσεις ήχου για premium wellness brands",
@@ -2691,7 +2727,8 @@
                     "description": "Που συνδυάζουν ομαλά τις χαλαρωτικές θεραπείες με την ενεργή άσκηση."
                 }
             ],
-            "image": "/images/industries/wellness-gyms-fitness-music-curation.jpg"
+            "image": "/images/industries/wellness-gyms-fitness-music-curation.jpg",
+            "kicker": "ΓΙΑ ΠΟΙΟΥΣ"
         },
         "how_we_help": {
             "title": "Πώς οι custom μουσικές επιλογές μας αναβαθμίζουν τον χώρο σας",
@@ -2713,7 +2750,8 @@
                     "description": "Το προσωπικό εστιάζει αποκλειστικά στα μέλη, ενώ εμείς αναλαμβάνουμε τις λίστες, τις ανανεώσεις και τη νόμιμη αδειοδότηση."
                 }
             ],
-            "image": "/images/industries/wellness-gyms-yoga-studio-soundscape.jpg"
+            "image": "/images/industries/wellness-gyms-yoga-studio-soundscape.jpg",
+            "kicker": "ΤΑ ΑΠΟΤΕΛΕΣΜΑΤΑ"
         },
         "cta": {
             "title": "Αναβαθμίστε την ατμόσφαιρα του χώρου ευεξίας σας",
@@ -2723,7 +2761,9 @@
             "signature_playlists": "Signature Playlists",
             "and": "και ο",
             "sonic_strategy": "Σχεδιασμός ηχητικής ταυτότητας",
-            "work_for": "λειτουργούν για wellness & γυμναστήρια."
+            "work_for": "λειτουργούν για wellness & γυμναστήρια.",
+            "kicker": "ΑΣ ΣΥΝΕΡΓΑΣΤΟΥΜΕ",
+            "location": "Αθήνα, Ελλάδα"
         }
     },
     "events_experiences": {
@@ -2736,12 +2776,17 @@
             "subtitle": "Ήχος που απογειώνει τη στιγμή",
             "description": "Επιμελημένη μουσική, απόλυτα συγχρονισμένη με τη ροή και το χρονοδιάγραμμα του event σας.",
             "image": "/images/industries/events-experiences-music-curation-event.jpg",
-            "image_alt": "Μουσική επιμέλεια εκδηλώσεων και παραγωγή premium events"
+            "image_alt": "Μουσική επιμέλεια εκδηλώσεων και παραγωγή premium events",
+            "side_label": "INDUSTRIES — EVENTS & EXPERIENCES",
+            "kicker": "EVENTS & EXPERIENCES",
+            "image_kicker": "EVENTS & EXPERIENCES",
+            "image_caption": "Scored, moment by moment."
         },
         "intro": {
             "title": "Μουσική με τον ιδανικό χρονισμό για κάθε φάση της εκδήλωσης",
             "p1": "Στις εκδηλώσεις, η μουσική <strong>αποτελεί τον συνδετικό κρίκο</strong>, ενώνοντας αρμονικά τη στιγμή της άφιξης με το μεγάλο φινάλε.",
-            "p2": "Τα μουσικά μας τοπία <strong>χτίζουν ατμόσφαιρα</strong> και ακολουθούν πιστά το πρόγραμμα, δημιουργώντας στιγμές που οι καλεσμένοι <strong>νιώθουν και θυμούνται</strong>."
+            "p2": "Τα μουσικά μας τοπία <strong>χτίζουν ατμόσφαιρα</strong> και ακολουθούν πιστά το πρόγραμμα, δημιουργώντας στιγμές που οι καλεσμένοι <strong>νιώθουν και θυμούνται</strong>.",
+            "kicker": "Η ΦΙΛΟΣΟΦΙΑ ΜΑΣ"
         },
         "what_we_do": {
             "title": "Μουσική επιμέλεια και σχεδιασμός για εκδηλώσεις",
@@ -2764,7 +2809,8 @@
                     "description": "Συνεργαζόμαστε απευθείας με τον χώρο διεξαγωγής για όλα τα μουσικά και τεχνικά θέματα, απαλλάσσοντάς σας από το βάρος του συντονισμού."
                 }
             ],
-            "image": "/images/industries/events-experiences-branded-event-music.jpg"
+            "image": "/images/industries/events-experiences-branded-event-music.jpg",
+            "kicker": "Η ΜΕΘΟΔΟΣ ΜΑΣ"
         },
         "ideal_for": {
             "title": "Ιδανικές λύσεις μουσικής κάλυψης για events",
@@ -2790,7 +2836,8 @@
                     "description": "Που κατανοούν ότι ο σωστός ήχος και μουσική καθορίζουν την τελική εντύπωση της εκδήλωσης."
                 }
             ],
-            "image": "/images/industries/events-experiences-event-music-planning.jpg"
+            "image": "/images/industries/events-experiences-event-music-planning.jpg",
+            "kicker": "ΓΙΑ ΠΟΙΟΥΣ"
         },
         "how_we_help": {
             "title": "Πώς ο σωστός ρυθμός απογειώνει την εκδήλωσή σας",
@@ -2808,7 +2855,8 @@
                     "description": "Η ομάδα μας εγγυάται την άψογη τεχνική και μουσική ροή, επιτρέποντάς σας να εστιάσετε αποκλειστικά στον ρόλο του οικοδεσπότη."
                 }
             ],
-            "image": "/images/industries/events-experiences-private-event-soundscape.jpg"
+            "image": "/images/industries/events-experiences-private-event-soundscape.jpg",
+            "kicker": "ΤΑ ΑΠΟΤΕΛΕΣΜΑΤΑ"
         },
         "cta": {
             "title": "Αναβαθμίστε την ατμόσφαιρα της επόμενης εκδήλωσής σας",
@@ -2818,7 +2866,9 @@
             "event_soundtracks": "Event Soundtracks",
             "and": "και οι",
             "signature_playlists": "Signature Playlists",
-            "support": "υποστηρίζουν τις premium εκδηλώσεις."
+            "support": "υποστηρίζουν τις premium εκδηλώσεις.",
+            "kicker": "ΑΣ ΣΥΝΕΡΓΑΣΤΟΥΜΕ",
+            "location": "Αθήνα, Ελλάδα"
         }
     },
     "art_museums_fashion": {
@@ -2831,12 +2881,17 @@
             "subtitle": "Διακριτικό ηχητικό υπόβαθρο που αναδεικνύει το έργο",
             "description": "Στοχευμένες μουσικές επιλογές που συμπληρώνουν το επιμελητικό σας όραμα.",
             "image": "/images/industries/art-museums-fashion-gallery-curation.jpg",
-            "image_alt": "Γκαλερί τέχνης με επιμελημένη μουσική ατμόσφαιρα και εγκατάσταση μόδας"
+            "image_alt": "Γκαλερί τέχνης με επιμελημένη μουσική ατμόσφαιρα και εγκατάσταση μόδας",
+            "side_label": "INDUSTRIES — ART, MUSEUMS & FASHION",
+            "kicker": "ART, MUSEUMS & FASHION",
+            "image_kicker": "ART, MUSEUMS & FASHION",
+            "image_caption": "Present, never competing."
         },
         "intro": {
             "title": "Διακριτική ακρίβεια για γκαλερί & πασαρέλες",
             "p1": "Σε χώρους τέχνης και μόδας, το ηχητικό τοπίο οφείλει να είναι <strong>παρόν</strong> χωρίς να <strong>ανταγωνίζεται</strong> το οπτικό ερέθισμα.",
-            "p2": "Σχεδιάζουμε ακουστικές εμπειρίες που <strong>σέβονται κάθε έργο</strong> και <strong>καθοδηγούν αρμονικά</strong> τον τρόπο με τον οποίο οι επισκέπτες <strong>κινούνται και αντιλαμβάνονται</strong> το περιεχόμενο."
+            "p2": "Σχεδιάζουμε ακουστικές εμπειρίες που <strong>σέβονται κάθε έργο</strong> και <strong>καθοδηγούν αρμονικά</strong> τον τρόπο με τον οποίο οι επισκέπτες <strong>κινούνται και αντιλαμβάνονται</strong> το περιεχόμενο.",
+            "kicker": "Η ΦΙΛΟΣΟΦΙΑ ΜΑΣ"
         },
         "what_we_do": {
             "title": "Επιμέλεια μουσικής για πολιτιστικούς χώρους & μόδα",
@@ -2859,7 +2914,8 @@
                     "description": "Μηνιαίες ανανεώσεις στα tracks που διατηρούν φρέσκια την ατμόσφαιρα, με πλήρη κάλυψη εμπορικής αδειοδότησης."
                 }
             ],
-            "image": "/images/industries/art-museums-fashion-cultural-space-music.jpg"
+            "image": "/images/industries/art-museums-fashion-cultural-space-music.jpg",
+            "kicker": "Η ΜΕΘΟΔΟΣ ΜΑΣ"
         },
         "ideal_for": {
             "title": "Ιδανικές ηχητικές λύσεις για τέχνη & μόδα",
@@ -2885,7 +2941,8 @@
                     "description": "Που χρειάζονται άμεση και ισχυρή ηχητική ταυτότητα."
                 }
             ],
-            "image": "/images/industries/art-museums-fashion-museum-soundscape.jpg"
+            "image": "/images/industries/art-museums-fashion-museum-soundscape.jpg",
+            "kicker": "ΓΙΑ ΠΟΙΟΥΣ"
         },
         "how_we_help": {
             "title": "Πώς ο μεθοδευμένος ήχος αναβαθμίζει το event σας",
@@ -2907,7 +2964,8 @@
             "cta_title": "Δείτε την ακουστική εμπειρία στην πράξη",
             "cta_description": "Διαβάστε παραδείγματα και ακούστε δείγματα από χώρους τέχνης, μόδας και μουσεία.",
             "cta_button": "Δείτε τα Παραδείγματα",
-            "cta_link": "case-studies"
+            "cta_link": "case-studies",
+            "kicker": "ΤΑ ΑΠΟΤΕΛΕΣΜΑΤΑ"
         },
         "cta": {
             "title": "Αναβαθμίστε την πολιτιστική σας ατμόσφαιρα",
@@ -2917,7 +2975,9 @@
             "sonic_strategy": "Στρατηγική ήχου",
             "and": "και η",
             "event_soundtracks": "Μουσική επιμέλεια εκδηλώσεων",
-            "work_for": "λειτουργούν για τέχνη, μουσεία και μόδα."
+            "work_for": "λειτουργούν για τέχνη, μουσεία και μόδα.",
+            "kicker": "ΑΣ ΣΥΝΕΡΓΑΣΤΟΥΜΕ",
+            "location": "Αθήνα, Ελλάδα"
         }
     }
 }

@@ -2358,12 +2358,17 @@
             "subtitle": "Soundscapes for every hour and space",
             "description": "Targeted sound that complements service, design, and the mood of the space.",
             "image": "/images/industries/hotels-resorts-curated-music-ambiance.jpg",
-            "image_alt": "Luxury hotel resort with curated music ambiance"
+            "image_alt": "Luxury hotel resort with curated music ambiance",
+            "side_label": "INDUSTRIES — HOTELS & RESORTS",
+            "kicker": "HOTELS & RESORTS",
+            "image_kicker": "HOTELS & RESORTS",
+            "image_caption": "A sound for every hour."
         },
         "intro": {
             "title": "Music for the entire guest journey",
             "p1": "Your hotel's atmosphere becomes <strong><em>felt</em></strong> before the interior design does.",
-            "p2": "Our soundscapes <strong><em>enrich every moment</em></strong> of the day across all spaces and become an integral part of the <a href=\"/en/industries/music-for-hotels-and-resorts/\">hospitality experience</a>."
+            "p2": "Our soundscapes <strong><em>enrich every moment</em></strong> of the day across all spaces and become an integral part of the <a href=\"/en/industries/music-for-hotels-and-resorts/\">hospitality experience</a>.",
+            "kicker": "OUR PHILOSOPHY"
         },
         "what_we_do": {
             "title": "What we offer",
@@ -2386,7 +2391,8 @@
                     "description": "Your team focuses on hospitality, while we handle music, updates, and proper licensing."
                 }
             ],
-            "image": "/images/industries/hotels-resorts-boutique-hotel-music.webp"
+            "image": "/images/industries/hotels-resorts-boutique-hotel-music.webp",
+            "kicker": "OUR METHOD"
         },
         "ideal_for": {
             "title": "Ideal for",
@@ -2412,7 +2418,8 @@
                     "description": "For weddings, retreats, and conferences."
                 }
             ],
-            "image": "/images/industries/hotels-resorts-luxury-hotel-lobby.jpg"
+            "image": "/images/industries/hotels-resorts-luxury-hotel-lobby.jpg",
+            "kicker": "WHO IT'S FOR"
         },
         "how_we_help": {
             "title": "How we help",
@@ -2438,7 +2445,8 @@
             "cta_title": "Hear the industry in action",
             "cta_description": "Read examples and hear samples from hospitality venues.",
             "cta_button": "View Examples",
-            "cta_link": "case-studies"
+            "cta_link": "case-studies",
+            "kicker": "THE RESULTS"
         },
         "cta": {
             "title": "Upgrade your hotel's atmosphere",
@@ -2448,7 +2456,9 @@
             "signature_playlists": "Signature Playlists",
             "and": "and",
             "sonic_strategy": "Sonic Identity Design",
-            "work_for": "work for hotels & resorts."
+            "work_for": "work for hotels & resorts.",
+            "kicker": "LET'S COLLABORATE",
+            "location": "Athens, Greece"
         }
     },
     "restaurants_bars": {
@@ -2461,12 +2471,17 @@
             "subtitle": "Designed to blend with food, drinks and service",
             "description": "Music selections that complement flavor, timing, and environment.",
             "image": "/images/industries/restaurants-bars-curated-music-atmosphere.jpg",
-            "image_alt": "Elegant restaurant interior with curated music atmosphere"
+            "image_alt": "Elegant restaurant interior with curated music atmosphere",
+            "side_label": "INDUSTRIES — RESTAURANTS & BARS",
+            "kicker": "RESTAURANTS & BARS",
+            "image_kicker": "RESTAURANTS & BARS",
+            "image_caption": "The invisible guest at the table."
         },
         "intro": {
             "title": "Curated atmosphere for every service moment",
             "p1": "Music <strong><em>shapes the dining experience</em></strong> as much as decor or lighting.",
-            "p2": "Our sound <strong><em>follows the menu and service rhythm</em></strong> and becomes <strong><em>part of the enjoyment</em></strong>, without distracting from food or conversation."
+            "p2": "Our sound <strong><em>follows the menu and service rhythm</em></strong> and becomes <strong><em>part of the enjoyment</em></strong>, without distracting from food or conversation.",
+            "kicker": "OUR PHILOSOPHY"
         },
         "what_we_do": {
             "title": "What we do",
@@ -2489,7 +2504,8 @@
                     "description": "Regular changes that keep music fresh for regular customers and staff, maintaining your character."
                 }
             ],
-            "image": "/images/industries/restaurants-bars-dining-music-experience.jpg"
+            "image": "/images/industries/restaurants-bars-dining-music-experience.jpg",
+            "kicker": "OUR METHOD"
         },
         "ideal_for": {
             "title": "Ideal for restaurant, bar & cafe music",
@@ -2511,7 +2527,8 @@
                     "description": "That want consistent sonic identity across all locations."
                 }
             ],
-            "image": "/images/industries/restaurants-bars-cocktail-bar-atmosphere.jpg"
+            "image": "/images/industries/restaurants-bars-cocktail-bar-atmosphere.jpg",
+            "kicker": "WHO IT'S FOR"
         },
         "how_we_help": {
             "title": "How we help",
@@ -2537,7 +2554,8 @@
             "cta_title": "Hear the industry in action",
             "cta_description": "Read client stories and hear samples from their playlists.",
             "cta_button": "View Examples",
-            "cta_link": "case-studies"
+            "cta_link": "case-studies",
+            "kicker": "THE RESULTS"
         },
         "cta": {
             "title": "Upgrade your restaurant, cafe or bar's atmosphere",
@@ -2547,7 +2565,9 @@
             "signature_playlists": "Signature Playlists",
             "and": "and",
             "audio_upgrades": "Audio Upgrades",
-            "work_for": "work for restaurants, cafes & bars."
+            "work_for": "work for restaurants, cafes & bars.",
+            "kicker": "LET'S COLLABORATE",
+            "location": "Athens, Greece"
         }
     },
     "retail_stores": {
@@ -2560,12 +2580,17 @@
             "subtitle": "Designed to welcome and inspire discovery",
             "description": "Curated rhythm to support store browsing and brand image.",
             "image": "/images/industries/retail-stores-curated-music-shopping.jpg",
-            "image_alt": "Modern retail store interior with curated music atmosphere"
+            "image_alt": "Modern retail store interior with curated music atmosphere",
+            "side_label": "INDUSTRIES — RETAIL STORES",
+            "kicker": "RETAIL STORES",
+            "image_kicker": "RETAIL STORES",
+            "image_caption": "The rhythm of discovery."
         },
         "intro": {
             "title": "Music that inspires the shopping journey",
             "p1": "Music in your store <strong><em>affects dwell time</em></strong>, what visitors notice, and whether they make a purchase.",
-            "p2": "Our music selections <strong><em>move elegantly</em></strong> with the store's rhythm and shape how customers <strong><em>perceive your brand</em></strong>."
+            "p2": "Our music selections <strong><em>move elegantly</em></strong> with the store's rhythm and shape how customers <strong><em>perceive your brand</em></strong>.",
+            "kicker": "OUR PHILOSOPHY"
         },
         "what_we_do": {
             "title": "What we do",
@@ -2588,7 +2613,8 @@
                     "description": "Playlists that evolve with collections, seasons, and promotional periods, maintaining your character."
                 }
             ],
-            "image": "/images/industries/retail-stores-music-strategy-browsing.jpg"
+            "image": "/images/industries/retail-stores-music-strategy-browsing.jpg",
+            "kicker": "OUR METHOD"
         },
         "ideal_for": {
             "title": "Ideal for retail music",
@@ -2614,7 +2640,8 @@
                     "description": "That need to make a strong impression from day one."
                 }
             ],
-            "image": "/images/industries/retail-stores-boutique-music-atmosphere.jpg"
+            "image": "/images/industries/retail-stores-boutique-music-atmosphere.jpg",
+            "kicker": "WHO IT'S FOR"
         },
         "how_we_help": {
             "title": "How we help",
@@ -2636,7 +2663,8 @@
                     "description": "Licensed and centrally managed playlists allow the team to focus on customers, not songs."
                 }
             ],
-            "image": "/images/industries/retail-stores-customer-journey-sound.jpg"
+            "image": "/images/industries/retail-stores-customer-journey-sound.jpg",
+            "kicker": "THE RESULTS"
         },
         "cta": {
             "title": "Upgrade your store's atmosphere",
@@ -2646,7 +2674,9 @@
             "signature_playlists": "Signature Playlists",
             "and": "and",
             "sonic_strategy": "Sonic Identity Design",
-            "work_for": "work for retail stores."
+            "work_for": "work for retail stores.",
+            "kicker": "LET'S COLLABORATE",
+            "location": "Athens, Greece"
         }
     },
     "wellness_gyms": {
@@ -2659,12 +2689,17 @@
             "subtitle": "Designed around activity and intensity",
             "description": "Targeted music that enhances focus across all spaces and practices.",
             "image": "/images/industries/wellness-gyms-luxury-spa-ambient-music.jpg",
-            "image_alt": "Luxury wellness spa interior with curated ambient music"
+            "image_alt": "Luxury wellness spa interior with curated ambient music",
+            "side_label": "INDUSTRIES — WELLNESS & GYMS",
+            "kicker": "WELLNESS & GYMS",
+            "image_kicker": "WELLNESS & GYMS",
+            "image_caption": "Sound tuned to the body."
         },
         "intro": {
             "title": "Musical themes tuned for body and mind",
             "p1": "Music in wellness and exercise spaces <strong><em>guides focus, rhythm, and mental state</em></strong> during sessions.",
-            "p2": "Our mixes <strong><em>adapt to each zone and intensity level</em></strong>, helping visitors <strong><em>stay present and active</em></strong>."
+            "p2": "Our mixes <strong><em>adapt to each zone and intensity level</em></strong>, helping visitors <strong><em>stay present and active</em></strong>.",
+            "kicker": "OUR PHILOSOPHY"
         },
         "what_we_do": {
             "title": "What we do",
@@ -2687,7 +2722,8 @@
                     "description": "Reception, treatment rooms, and exercise spaces each get their own sound, maintaining a common, recognizable identity."
                 }
             ],
-            "image": "/images/industries/wellness-gyms-spa-treatment-music.jpg"
+            "image": "/images/industries/wellness-gyms-spa-treatment-music.jpg",
+            "kicker": "OUR METHOD"
         },
         "ideal_for": {
             "title": "Ideal for wellness & gym music",
@@ -2713,7 +2749,8 @@
                     "description": "That combine treatments and active exercise."
                 }
             ],
-            "image": "/images/industries/wellness-gyms-fitness-music-curation.jpg"
+            "image": "/images/industries/wellness-gyms-fitness-music-curation.jpg",
+            "kicker": "WHO IT'S FOR"
         },
         "how_we_help": {
             "title": "How we help",
@@ -2735,7 +2772,8 @@
                     "description": "Staff focuses on clients and members, while we handle music selections, updates, and professional licensing."
                 }
             ],
-            "image": "/images/industries/wellness-gyms-yoga-studio-soundscape.jpg"
+            "image": "/images/industries/wellness-gyms-yoga-studio-soundscape.jpg",
+            "kicker": "THE RESULTS"
         },
         "cta": {
             "title": "Upgrade your wellness atmosphere",
@@ -2745,7 +2783,9 @@
             "signature_playlists": "Signature Playlists",
             "and": "and",
             "sonic_strategy": "Sonic Identity Design",
-            "work_for": "work for wellness & gyms."
+            "work_for": "work for wellness & gyms.",
+            "kicker": "LET'S COLLABORATE",
+            "location": "Athens, Greece"
         }
     },
     "events_experiences": {
@@ -2758,12 +2798,17 @@
             "subtitle": "Sound that fits the moment",
             "description": "Curated music aligned with event timing and flow.",
             "image": "/images/industries/events-experiences-music-curation-event.jpg",
-            "image_alt": "Event music curation and entertainment production"
+            "image_alt": "Event music curation and entertainment production",
+            "side_label": "INDUSTRIES — EVENTS & EXPERIENCES",
+            "kicker": "EVENTS & EXPERIENCES",
+            "image_kicker": "EVENTS & EXPERIENCES",
+            "image_caption": "Scored, moment by moment."
         },
         "intro": {
             "title": "Music with right timing for every event moment",
             "p1": "At events, music <strong><em>connects every moment</em></strong>, from arrival to finale.",
-            "p2": "Our soundscapes <strong><em>build atmosphere</em></strong> and follow your event's schedule, creating moments guests <strong><em>feel and remember</em></strong>."
+            "p2": "Our soundscapes <strong><em>build atmosphere</em></strong> and follow your event's schedule, creating moments guests <strong><em>feel and remember</em></strong>.",
+            "kicker": "OUR PHILOSOPHY"
         },
         "what_we_do": {
             "title": "What we do",
@@ -2786,7 +2831,8 @@
                     "description": "We coordinate with the venue for music and technical matters, reducing coordination pressure."
                 }
             ],
-            "image": "/images/industries/events-experiences-branded-event-music.jpg"
+            "image": "/images/industries/events-experiences-branded-event-music.jpg",
+            "kicker": "OUR METHOD"
         },
         "ideal_for": {
             "title": "Ideal for event music",
@@ -2812,7 +2858,8 @@
                     "description": "Who know that sound defines the experience."
                 }
             ],
-            "image": "/images/industries/events-experiences-event-music-planning.jpg"
+            "image": "/images/industries/events-experiences-event-music-planning.jpg",
+            "kicker": "WHO IT'S FOR"
         },
         "how_we_help": {
             "title": "How we help",
@@ -2830,7 +2877,8 @@
                     "description": "Our team handles music and technical execution with ready decisions, so you focus on hospitality."
                 }
             ],
-            "image": "/images/industries/events-experiences-private-event-soundscape.jpg"
+            "image": "/images/industries/events-experiences-private-event-soundscape.jpg",
+            "kicker": "THE RESULTS"
         },
         "cta": {
             "title": "Upgrade your event's atmosphere",
@@ -2840,7 +2888,9 @@
             "event_soundtracks": "Event Soundtracks",
             "and": "and",
             "signature_playlists": "Signature Playlists",
-            "support": "support events and experiences."
+            "support": "support events and experiences.",
+            "kicker": "LET'S COLLABORATE",
+            "location": "Athens, Greece"
         }
     },
     "art_museums_fashion": {
@@ -2853,12 +2903,17 @@
             "subtitle": "Respect for the work, shaping the experience",
             "description": "Subtle sound that complements your curatorial vision.",
             "image": "/images/industries/art-museums-fashion-gallery-curation.jpg",
-            "image_alt": "Art gallery with curated music atmosphere and fashion installation"
+            "image_alt": "Art gallery with curated music atmosphere and fashion installation",
+            "side_label": "INDUSTRIES — ART, MUSEUMS & FASHION",
+            "kicker": "ART, MUSEUMS & FASHION",
+            "image_kicker": "ART, MUSEUMS & FASHION",
+            "image_caption": "Present, never competing."
         },
         "intro": {
             "title": "Subtle precision for galleries & runways",
             "p1": "In galleries and runways, sound must be <strong><em>present</em></strong> without <strong><em>competing</em></strong>.",
-            "p2": "We create soundscapes that <strong><em>respect each work</em></strong> and <strong><em>gently guide</em></strong> how visitors <strong><em>move and perceive</em></strong> the content."
+            "p2": "We create soundscapes that <strong><em>respect each work</em></strong> and <strong><em>gently guide</em></strong> how visitors <strong><em>move and perceive</em></strong> the content.",
+            "kicker": "OUR PHILOSOPHY"
         },
         "what_we_do": {
             "title": "What we do",
@@ -2881,7 +2936,8 @@
                     "description": "Monthly updates that keep interest for visitors and staff, with full commercial licensing compliance."
                 }
             ],
-            "image": "/images/industries/art-museums-fashion-cultural-space-music.jpg"
+            "image": "/images/industries/art-museums-fashion-cultural-space-music.jpg",
+            "kicker": "OUR METHOD"
         },
         "ideal_for": {
             "title": "Ideal for art & fashion music",
@@ -2907,7 +2963,8 @@
                     "description": "That need immediate sonic identity."
                 }
             ],
-            "image": "/images/industries/art-museums-fashion-museum-soundscape.jpg"
+            "image": "/images/industries/art-museums-fashion-museum-soundscape.jpg",
+            "kicker": "WHO IT'S FOR"
         },
         "how_we_help": {
             "title": "How we help",
@@ -2929,7 +2986,8 @@
             "cta_title": "Hear the industry sound in action",
             "cta_description": "Read examples and listen to samples from art, museums, and fashion spaces.",
             "cta_button": "View Examples",
-            "cta_link": "case-studies"
+            "cta_link": "case-studies",
+            "kicker": "THE RESULTS"
         },
         "cta": {
             "title": "Upgrade your cultural atmosphere",
@@ -2939,7 +2997,9 @@
             "sonic_strategy": "Sound Strategy",
             "and": "and",
             "event_soundtracks": "Event Music Curation",
-            "work_for": "work for art, museums, and fashion."
+            "work_for": "work for art, museums, and fashion.",
+            "kicker": "LET'S COLLABORATE",
+            "location": "Athens, Greece"
         }
     }
 }
