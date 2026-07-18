@@ -1876,7 +1876,15 @@
         },
         "hero": {
             "title": "Χάρτης Ιστότοπου",
-            "subtitle": "Εξερευνήστε όλες τις σελίδες και τους πόρους του SensEar. Βρείτε τα πάντα, από τις υπηρεσίες μουσικής επιμέλειας μέχρι τα insights του κλάδου."
+            "subtitle": "Εξερευνήστε όλες τις σελίδες και τους πόρους του SensEar. Βρείτε τα πάντα, από τις υπηρεσίες μουσικής επιμέλειας μέχρι τα insights του κλάδου.",
+            "side_label": "SITEMAP — ΧΑΡΤΗΣ ΙΣΤΟΤΟΠΟΥ",
+            "kicker": "SITEMAP",
+            "image_kicker": "EXPLORE THE SITE",
+            "image_caption": "Everything, in one place.",
+            "badge": [
+                "★ SENSEAR ★",
+                "EST · ATH"
+            ]
         },
         "sections": {
             "main": "Κύριες Σελίδες",
@@ -1889,8 +1897,12 @@
             "text": "Μην ανησυχείτε, έχουμε την απάντηση. Μπορείτε είτε:",
             "or": "ή δείτε",
             "contact_btn": "Επικοινωνία",
-            "faq_btn": "Σελίδα FAQ"
-        }
+            "faq_btn": "Σελίδα FAQ",
+            "location": "Αθήνα, Ελλάδα"
+        },
+        "directory_kicker": "ΟΛΟ ΤΟ ΠΕΡΙΕΧΟΜΕΝΟ",
+        "directory_title": "Πλοηγηθείτε σε όλο τον ιστότοπο",
+        "cta_kicker": "ΧΡΕΙΑΖΕΣΤΕ ΒΟΗΘΕΙΑ;"
     },
     "faq_page": {
         "meta": {

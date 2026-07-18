@@ -1898,7 +1898,15 @@
         },
         "hero": {
             "title": "Sitemap",
-            "subtitle": "Explore all pages and resources on the SensEar website. Find everything from our music curation services to industry insights."
+            "subtitle": "Explore all pages and resources on the SensEar website. Find everything from our music curation services to industry insights.",
+            "side_label": "SITEMAP — SITE DIRECTORY",
+            "kicker": "SITEMAP",
+            "image_kicker": "EXPLORE THE SITE",
+            "image_caption": "Everything, in one place.",
+            "badge": [
+                "★ SENSEAR ★",
+                "EST · ATH"
+            ]
         },
         "sections": {
             "main": "Main Pages",
@@ -1911,8 +1919,12 @@
             "text": "Don't worry, we have the answer. You can either:",
             "or": "or check our",
             "contact_btn": "Contact us",
-            "faq_btn": "FAQ page"
-        }
+            "faq_btn": "FAQ page",
+            "location": "Athens, Greece"
+        },
+        "directory_kicker": "ALL CONTENT",
+        "directory_title": "Browse the entire site",
+        "cta_kicker": "NEED A HAND?"
     },
     "faq_page": {
         "meta": {
