@@ -1,33 +1,29 @@
-import Link from "next/link";
-import { Home, Briefcase, Building2, BookOpen } from "lucide-react";
-import { getDictionary } from "@/lib/dictionary";
-import type { Locale } from "@/lib/i18n";
-import type { Metadata } from "next";
-import { Card } from "@/components/ui/card";
-import { FinalCTA } from "@/components/sections/FinalCTA";
-import Image from "next/image";
-import { ScrollReveal, StaggerChildren } from "@/components/motion";
-import { getLocalizedPath } from "@/lib/localized-path";
+import type { Metadata } from 'next';
+import Image from 'next/image';
+import { Home, Briefcase, Building2, BookOpen } from 'lucide-react';
+import { getDictionary } from '@/lib/dictionary';
+import { type Locale } from '@/lib/i18n';
+import { getLocalizedPath } from '@/lib/localized-path';
+import { DriftOrb, Kicker, PageCTA, SideRail, SpinningBadge, V3Root, emphasize } from '@/components/v3';
+import { ScrollReveal, StaggerChildren } from '@/components/motion';
+import { DirectoryCard } from '@/components/sitemap-v3';
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: Locale }> }): Promise<Metadata> {
     const { lang } = await params;
     const dict = await getDictionary(lang);
-    return {
-        title: dict.sitemap_page.meta.title,
-        description: dict.sitemap_page.meta.description,
-    };
+    return { title: dict.sitemap_page.meta.title, description: dict.sitemap_page.meta.description };
 }
 
-export default async function SitemapPage({
-    params,
-}: {
-    params: Promise<{ lang: Locale }>;
-}) {
+export default async function SitemapPageV3({ params }: { params: Promise<{ lang: Locale }> }) {
     const { lang } = await params;
     const dict = await getDictionary(lang);
     const content = dict.sitemap_page;
+    const home = dict.home;
     const localizedPath = (path: string) => getLocalizedPath(lang, path);
+    const em = lang === 'el' ? { directory: 'ιστότοπο', cta: 'ψάχνετε' } : { directory: 'site', cta: 'looking for' };
 
+    // sitemapSections builder — copied verbatim from app/[lang]/sitemap-page/page.tsx
+    // (real dict data through localizedPath). Do NOT touch app/sitemap.ts (XML).
     const sitemapSections = [
         {
             title: content.sections.main,
@@ -40,19 +36,19 @@ export default async function SitemapPage({
                 { name: dict.navigation.about, path: localizedPath('/about') },
                 { name: dict.navigation.contact, path: localizedPath('/contact') },
                 { name: dict.navigation.blog, path: localizedPath('/blog') },
-                { name: "FAQ", path: localizedPath('/faq') } // FAQ key missing in nav? I'll use dict.footer.nav.company.items find? Or just hardcode logic or add to nav. I added it to footer. I'll use footer label.
-            ]
+                { name: 'FAQ', path: localizedPath('/faq') },
+            ],
         },
         {
             title: content.sections.services,
             icon: Briefcase,
             pages: [
-                { name: dict.services_page.hero.title.split(',')[0], path: localizedPath('/services') }, // Intro
+                { name: dict.services_page.hero.title.split(',')[0], path: localizedPath('/services') },
                 { name: dict.services_page.services.playlists.title, path: localizedPath('/services/signature-playlists') },
                 { name: dict.services_page.services.events.title, path: localizedPath('/services/event-soundtracks') },
                 { name: dict.services_page.services.strategy.title, path: localizedPath('/services/sonic-identity') },
-                { name: dict.services_page.services.upgrades.title, path: localizedPath('/services/audio-upgrades') }
-            ]
+                { name: dict.services_page.services.upgrades.title, path: localizedPath('/services/audio-upgrades') },
+            ],
         },
         {
             title: content.sections.industries,
@@ -61,9 +57,9 @@ export default async function SitemapPage({
                 { name: dict.industries_page.hero.title, path: localizedPath('/industries') },
                 ...dict.industries_page.expertise.items.map((item: any) => ({
                     name: item.title,
-                    path: localizedPath(`/${item.link}`)
-                }))
-            ]
+                    path: localizedPath(`/${item.link}`),
+                })),
+            ],
         },
         {
             title: content.sections.blog,
@@ -72,106 +68,95 @@ export default async function SitemapPage({
                 { name: dict.blog.meta.title, path: localizedPath('/blog') },
                 ...dict.blog.articles.map((article: any) => ({
                     name: article.title,
-                    path: localizedPath(`/blog/${article.link}`)
-                }))
-            ]
-        }
+                    path: localizedPath(`/blog/${article.link}`),
+                })),
+            ],
+        },
     ];
 
-    // FAQ Label Helper
-    const faqLabel = dict.footer.nav.company.items.find((i: any) => i.link === 'faq')?.label || "FAQ";
+    // FAQ Label Helper (verbatim)
+    const faqLabel = dict.footer.nav.company.items.find((i: any) => i.link === 'faq')?.label || 'FAQ';
     sitemapSections[0].pages[7].name = faqLabel;
 
     return (
-        <div className="bg-[#faebe3]">
+        <V3Root>
+            {/* Hero */}
+            <section className="relative flex min-h-[92vh] items-center overflow-hidden py-[clamp(108px,8.52vw,150px)] pb-[clamp(58px,4.6vw,81px)]">
+                <DriftOrb className="h-[60vw] w-[60vw] max-h-[870px] max-w-[870px]" style={{ top: '-10%', right: '-5%', background: 'radial-gradient(circle,rgba(240,189,149,0.17),rgba(240,189,149,0) 62%)' }} duration={16} />
+                <DriftOrb className="h-[50vw] w-[50vw] max-h-[710px] max-w-[710px]" style={{ bottom: '-15%', left: '-10%', background: 'radial-gradient(circle,rgba(250,235,227,0.06),rgba(250,235,227,0) 60%)' }} duration={22} reverse />
+                <SideRail>{content.hero.side_label}</SideRail>
 
-            {/* Hero Section */}
-            <section className="relative pt-20 sm:pt-24 md:pt-28 lg:pt-32 xl:pt-32 pb-8 lg:pb-24 min-h-[90vh] lg:min-h-screen flex flex-col justify-center overflow-hidden">
-                <div
-                    className="absolute inset-0 z-0"
-                    style={{
-                        backgroundImage: "url('/images/backgrounds/background-texture-warm-silver.jpg')",
-                        backgroundSize: 'cover',
-                        backgroundPosition: 'center'
-                    }}
-                />
-
-                <div className="w-full px-6 md:px-12 lg:px-16 relative z-10">
-                    <div className="grid lg:grid-cols-2 gap-12 items-center">
-                        <div className="flex flex-col justify-center text-left">
+                <div className="mx-auto w-full max-w-[min(1760px,100%)] pl-[clamp(20px,1.59vw,28px)] pr-[clamp(20px,1.59vw,28px)] sm:px-[clamp(27px,2.1vw,37px)] lg:pl-[clamp(70px,5.51vw,97px)]">
+                    <div className="grid grid-cols-1 items-center gap-[clamp(40px,3.12vw,55px)] lg:grid-cols-[1.05fr_0.95fr] lg:gap-[clamp(46px,3.64vw,64px)]">
+                        <div>
                             <ScrollReveal>
-                                <h1 className="text-[2.2rem] sm:text-[3.2rem] md:text-[4rem] lg:text-[4.8rem] font-extrabold text-black mb-6 leading-[1.1]">
+                                <Kicker variant="hero" className="mb-[clamp(25px,1.99vw,35px)]">{content.hero.kicker}</Kicker>
+                            </ScrollReveal>
+                            <ScrollReveal delay={0.15}>
+                                <h1 className="mb-[clamp(25px,1.99vw,35px)] text-[clamp(2.99rem,6.21vw,5.64rem)] font-extrabold leading-[1.02] tracking-[-0.022em]">
                                     {content.hero.title}
                                 </h1>
                             </ScrollReveal>
-                            <ScrollReveal delay={0.1}>
-                                <p className="text-xl md:text-2xl text-black/70 leading-relaxed">
+                            <ScrollReveal delay={0.3}>
+                                <p className="max-w-[600px] text-[clamp(1.2rem,2vw,1.5rem)] leading-[1.5] text-[#faf6f1]/72">
                                     {content.hero.subtitle}
                                 </p>
                             </ScrollReveal>
                         </div>
 
-                        <ScrollReveal delay={0.2} className="w-full flex justify-end">
-                            <div className="w-full max-w-[740px]">
-                                <div className="overflow-hidden rounded-2xl shadow-2xl bg-white aspect-square relative">
-                                    <Image
-                                        src="/images/sitemap-visual.jpg"
-                                        alt="Sitemap"
-                                        fill
-                                        className="object-cover"
-                                        sizes="(max-width: 768px) 100vw, (max-width: 1536px) 50vw, 740px"
-                                        priority
-                                    />
+                        <ScrollReveal direction="right" delay={0.4}>
+                            <div className="relative">
+                                <div className="relative aspect-square overflow-hidden rounded-lg shadow-[0_40px_90px_-30px_rgba(0,0,0,0.8)]">
+                                    <Image src="/images/sitemap-visual.jpg" alt={content.hero.title} fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" priority />
+                                    <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(11,10,10,0)_48%,rgba(11,10,10,0.55))]" />
                                 </div>
+                                <div className="absolute bottom-[25px] left-[25px] right-[25px]">
+                                    <div className="se-gold-text mb-1 text-[clamp(10px,0.68vw,12px)] font-bold tracking-[0.3em]">{content.hero.image_kicker}</div>
+                                    <div className="font-didot text-[clamp(1.38rem,1.57vw,1.73rem)] text-[#faf6f1]">{content.hero.image_caption}</div>
+                                </div>
+                                <SpinningBadge lines={content.hero.badge} className="absolute -right-[21px] -top-[21px] h-[110px] w-[110px]" />
                             </div>
                         </ScrollReveal>
                     </div>
                 </div>
             </section>
 
-            {/* Sitemap Content */}
-            <section className="py-20 bg-[#faebe3]">
-                <div className="max-w-7xl mx-auto px-6">
-                    <StaggerChildren className="grid md:grid-cols-2 gap-8" staggerDelay={0.1}>
+            {/* Directory */}
+            <section className="relative overflow-hidden border-t border-[#faf6f1]/8 bg-[#0e0d0c] py-[clamp(101px,7.95vw,140px)] pb-[clamp(108px,8.52vw,150px)]">
+                <DriftOrb className="h-[46vw] max-h-[640px] w-[46vw] max-w-[640px]" style={{ top: '6%', right: '-6%', background: 'radial-gradient(circle,rgba(240,189,149,0.10),rgba(240,189,149,0) 62%)' }} duration={23} />
+                <div className="relative z-10 mx-auto max-w-[1200px] px-[clamp(20px,1.59vw,28px)] sm:px-[clamp(27px,2.1vw,37px)]">
+                    <div className="mx-auto mb-[clamp(46px,3.64vw,64px)] max-w-[920px] text-center">
+                        <ScrollReveal>
+                            <Kicker className="mb-[clamp(15px,1.19vw,21px)] justify-center">{content.directory_kicker}</Kicker>
+                        </ScrollReveal>
+                        <ScrollReveal delay={0.06}>
+                            <h2 className="text-[clamp(2rem,4vw,3.4rem)] font-extrabold leading-[1.08] tracking-[-0.02em]">
+                                {emphasize(content.directory_title, em.directory)}
+                            </h2>
+                        </ScrollReveal>
+                    </div>
+
+                    <StaggerChildren className="grid grid-cols-1 gap-[clamp(20px,1.99vw,28px)] md:grid-cols-2" staggerDelay={0.05}>
                         {sitemapSections.map((section, index) => (
-                            <Card key={index} className="p-8 bg-white shadow-lg">
-                                <div className="flex items-center gap-3 mb-6">
-                                    <div className="w-12 h-12 bg-black/5 rounded-full flex items-center justify-center">
-                                        <section.icon className="w-6 h-6 text-black" />
-                                    </div>
-                                    <h2 className="text-2xl font-bold text-black">{section.title}</h2>
-                                </div>
-                                <ul className="space-y-3">
-                                    {section.pages.map((page, pageIndex) => (
-                                        <li key={pageIndex}>
-                                            <ScrollReveal delay={pageIndex * 0.04}>
-                                                <Link
-                                                    href={page.path}
-                                                    className="text-black/70 hover:text-black hover:translate-x-2 transition-all inline-block"
-                                                >
-                                                    → {page.name}
-                                                </Link>
-                                            </ScrollReveal>
-                                        </li>
-                                    ))}
-                                </ul>
-                            </Card>
+                            <DirectoryCard key={index} title={section.title} icon={section.icon} pages={section.pages} delay={index * 0.05} />
                         ))}
                     </StaggerChildren>
                 </div>
             </section>
 
-            {/* Can't find what you're looking for? */}
-            <FinalCTA
+            <PageCTA
+                kicker={content.cta_kicker}
                 heading={content.cta.title}
-                text={content.cta.text}
-                buttons={[
-                    { text: content.cta.contact_btn, link: "contact" },
-                    { text: content.cta.faq_btn, link: "faq" }
-                ]}
-                lang={lang}
+                emWord={em.cta}
+                lede={content.cta.text}
+                primaryLabel={content.cta.contact_btn}
+                primaryHref={localizedPath('/contact')}
+                ghostLabel={content.cta.faq_btn}
+                ghostHref={localizedPath('/faq')}
+                bgImage="/images/contact/contact-hero-venue-consultation.jpg"
+                phoneLine={home.contact_cta.phone_line}
+                location={content.cta.location}
             />
-        </div>
+        </V3Root>
     );
 }
-

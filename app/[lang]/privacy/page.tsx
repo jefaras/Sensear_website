@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { Locale } from '@/lib/i18n';
 import { parseMarkdownBold } from '@/lib/utils';
 import { getLocalizedPath } from '@/lib/localized-path';
+import { V3Root } from '@/components/v3';
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: Locale }> }): Promise<Metadata> {
     const { lang } = await params;
@@ -200,49 +201,51 @@ export default async function PrivacyPage({ params }: { params: Promise<{ lang: 
     const localizedPath = (path: string) => getLocalizedPath(lang, path);
 
     return (
-        <div className="bg-[#faebe3] min-h-screen pt-32 pb-24">
-            <div className="max-w-4xl mx-auto px-6">
-                {/* Header */}
-                <header className="mb-12">
-                    <h1 className="text-[2.2rem] sm:text-[3.2rem] md:text-[4rem] font-extrabold text-black leading-[1.1] tracking-tight mb-4">
-                        {t.title}
-                    </h1>
-                    <p className="text-black/60 text-lg">{t.lastUpdated}</p>
-                </header>
+        <V3Root>
+            <div className="min-h-screen pt-[clamp(120px,13vw,180px)] pb-[clamp(80px,7vw,120px)]">
+                <div className="mx-auto max-w-[860px] px-[clamp(20px,1.59vw,28px)] sm:px-[clamp(27px,2.1vw,37px)]">
+                    {/* Header */}
+                    <header className="mb-[clamp(35px,2.73vw,48px)]">
+                        <h1 className="mb-4 text-[clamp(2.2rem,5vw,3.6rem)] font-extrabold leading-[1.05] tracking-[-0.02em]">
+                            {t.title}
+                        </h1>
+                        <p className="text-lg text-[#faf6f1]/50">{t.lastUpdated}</p>
+                    </header>
 
-                {/* Introduction */}
-                <div className="prose prose-lg max-w-none mb-12">
-                    <p className="text-xl text-black/80 leading-relaxed">{t.intro}</p>
-                </div>
+                    {/* Introduction */}
+                    <div className="mb-[clamp(35px,2.73vw,48px)]">
+                        <p className="text-[clamp(1.1rem,1.5vw,1.3rem)] leading-[1.7] text-[#faf6f1]/72">{t.intro}</p>
+                    </div>
 
-                {/* Sections */}
-                <div className="space-y-10">
-                    {t.sections.map((section, index) => (
-                        <section key={index} className="border-b border-black/10 pb-8 last:border-0">
-                            <h2 className="text-2xl font-bold text-black mb-4">{section.title}</h2>
-                            <div className="prose prose-lg max-w-none text-black/80">
-                                {section.content.split('\n\n').map((paragraph, pIndex) => (
-                                    <p 
-                                        key={pIndex} 
-                                        className="mb-4 whitespace-pre-line"
-                                        dangerouslySetInnerHTML={{ __html: parseMarkdownBold(paragraph) }}
-                                    />
-                                ))}
-                            </div>
-                        </section>
-                    ))}
-                </div>
+                    {/* Sections */}
+                    <div className="space-y-[clamp(28px,2.5vw,40px)]">
+                        {t.sections.map((section, index) => (
+                            <section key={index} className="border-b border-[#faf6f1]/10 pb-8 last:border-0">
+                                <h2 className="mb-4 text-[clamp(1.35rem,1.8vw,1.6rem)] font-bold">{section.title}</h2>
+                                <div className="se-html text-[clamp(1rem,1.15vw,1.1rem)] leading-[1.7] text-[#faf6f1]/68">
+                                    {section.content.split('\n\n').map((paragraph, pIndex) => (
+                                        <p
+                                            key={pIndex}
+                                            className="mb-4 whitespace-pre-line"
+                                            dangerouslySetInnerHTML={{ __html: parseMarkdownBold(paragraph) }}
+                                        />
+                                    ))}
+                                </div>
+                            </section>
+                        ))}
+                    </div>
 
-                {/* Back Link */}
-                <div className="mt-16 pt-8 border-t border-black/10">
-                    <Link 
-                        href={localizedPath('/')}
-                        className="text-black/60 hover:text-black transition-colors inline-flex items-center gap-2"
-                    >
-                        ← {lang === 'el' ? 'Επιστροφή στην αρχική' : 'Back to home'}
-                    </Link>
+                    {/* Back Link */}
+                    <div className="mt-16 border-t border-[#faf6f1]/10 pt-8">
+                        <Link
+                            href={localizedPath('/')}
+                            className="inline-flex items-center gap-2 text-[#faf6f1]/60 no-underline transition-colors hover:text-[#f0bd95]"
+                        >
+                            ← {lang === 'el' ? 'Επιστροφή στην αρχική' : 'Back to home'}
+                        </Link>
+                    </div>
                 </div>
             </div>
-        </div>
+        </V3Root>
     );
 }

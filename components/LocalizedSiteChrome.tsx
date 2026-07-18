@@ -3,10 +3,9 @@
 import { useEffect, type ReactNode } from "react";
 import { usePathname } from "next/navigation";
 
-import { Footer } from "@/components/Footer";
+import { FooterV3 } from "@/components/v3";
 import { Navbar } from "@/components/Navbar";
 import type { Locale } from "@/lib/i18n";
-import { isV3Route } from "@/lib/v3-route";
 import { getPathLocale } from "@/lib/localized-path";
 
 type NavigationLabels = {
@@ -19,23 +18,30 @@ type NavigationLabels = {
     contact: string;
 };
 
+type FooterV3Data = {
+    footer: any;
+    services: { title: string; link: string }[];
+    industries: { title: string; link: string }[];
+    email: string;
+    phoneLine: string;
+};
+
 interface LocalizedSiteChromeProps {
     children: ReactNode;
     navigation: Record<Locale, NavigationLabels>;
-    footer: Record<Locale, any>;
+    footerV3: Record<Locale, FooterV3Data>;
 }
 
-export function LocalizedSiteChrome({ children, navigation, footer }: LocalizedSiteChromeProps) {
+export function LocalizedSiteChrome({ children, navigation, footerV3 }: LocalizedSiteChromeProps) {
     const pathname = usePathname() || "/";
     const lang: Locale = getPathLocale(pathname);
     const isHomepageConcept = pathname === "/homepage-concept";
-    // v3 demo routes render their own dark editorial footer (FooterV3), so the
-    // global light footer is suppressed there. Legacy routes are unaffected.
-    const isV3 = isV3Route(pathname);
 
     useEffect(() => {
         document.documentElement.lang = lang;
     }, [lang]);
+
+    const f = footerV3[lang];
 
     return (
         <>
@@ -46,7 +52,17 @@ export function LocalizedSiteChrome({ children, navigation, footer }: LocalizedS
             <main id="main-content" className="flex-grow">
                 {children}
             </main>
-            {!isHomepageConcept && !isV3 && <Footer lang={lang} dict={{ footer: footer[lang] }} />}
+            {!isHomepageConcept && (
+                <FooterV3
+                    lang={lang}
+                    navigation={navigation[lang]}
+                    footer={f.footer}
+                    services={f.services}
+                    industries={f.industries}
+                    email={f.email}
+                    phoneLine={f.phoneLine}
+                />
+            )}
         </>
     );
 }

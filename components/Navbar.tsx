@@ -8,7 +8,6 @@ import { Menu, X, Globe } from "lucide-react";
 import { cn } from "@/lib/utils";
 import type { Locale } from "@/lib/i18n";
 import { getAlternatePath, getLocalizedPath } from "@/lib/localized-path";
-import { isV3Route } from "@/lib/v3-route";
 
 interface NavbarProps {
     lang: Locale;
@@ -57,9 +56,9 @@ export function Navbar({ lang, navigation }: NavbarProps) {
     const targetLangLabel = lang === "en" ? "GR" : "EN";
     const localizedPath = (path: string) => getLocalizedPath(lang, path);
 
-    // v3 demo routes render a dark editorial hero — the global nav adopts a
-    // light-on-dark transparent state there. Legacy routes are unaffected.
-    const isV3 = isV3Route(pathname);
+    // Dark editorial is the site-wide default post-cutover: the nav always adopts
+    // the light-on-dark treatment.
+    const isV3 = true;
     const lightText = scrolled || isOpen || isV3;
 
     const linkClass = (active: boolean) =>

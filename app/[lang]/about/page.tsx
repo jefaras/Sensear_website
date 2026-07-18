@@ -1,465 +1,167 @@
-import { getDictionary } from "@/lib/dictionary";
-import { Locale } from "@/lib/i18n";
-import { Metadata } from "next";
-import Link from "next/link";
-import Image from "next/image";
-import { ArrowRight, Lightbulb, Building2, SlidersHorizontal, Heart } from "lucide-react";
-import { AnimatedButton } from "@/components/AnimatedButton";
-import { FinalCTA } from "@/components/sections/FinalCTA";
+import type { Metadata } from 'next';
+import { Fragment, type ReactNode } from 'react';
+import { getDictionary } from '@/lib/dictionary';
+import { type Locale } from '@/lib/i18n';
+import { DriftOrb, Kicker, PageCTA, V3Root, emphasize } from '@/components/v3';
+import { ScrollReveal } from '@/components/motion';
+import { getLocalizedPath } from '@/lib/localized-path';
+import { Differentiators, Hero, Journey, TeamMember } from '@/components/about-v3';
 
-// Simple markdown bold parser: converts **text** to <strong>text</strong>
-function parseMarkdownBold(text: string): string {
-    return text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+const stripTags = (html: string) => html.replace(/<[^>]+>/g, '');
+
+/* The philosophy statement's three **bold** runs get distinct treatments in the
+   v3 design (per the design ref): gold-gradient bold, Didot italic, then plain. */
+function philosophyRuns(text: string): ReactNode {
+    let bold = 0;
+    return text.split(/\*\*(.+?)\*\*/g).map((part, i) => {
+        if (i % 2 === 0) return <Fragment key={i}>{part}</Fragment>;
+        const n = bold++;
+        if (n === 0)
+            return (
+                <span key={i} className="se-gold-text font-bold">
+                    {part}
+                </span>
+            );
+        if (n === 1)
+            return (
+                <span key={i} className="font-didot">
+                    {part}
+                </span>
+            );
+        return <Fragment key={i}>{part}</Fragment>;
+    });
+}
+
+function goldWrap(text: string, word: string): ReactNode {
+    const idx = text.indexOf(word);
+    if (idx === -1) return text;
+    return (
+        <>
+            {text.slice(0, idx)}
+            <span className="se-gold-text">{word}</span>
+            {text.slice(idx + word.length)}
+        </>
+    );
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: Locale }> }): Promise<Metadata> {
     const { lang } = await params;
     const dict = await getDictionary(lang);
-    return {
-        title: dict.about_page.meta.title,
-        description: dict.about_page.meta.description,
-    };
+    return { title: dict.about_page.meta.title, description: dict.about_page.meta.description };
 }
 
-export default async function AboutPage({ params }: { params: Promise<{ lang: Locale }> }) {
+export default async function AboutV3({ params }: { params: Promise<{ lang: Locale }> }) {
     const { lang } = await params;
     const dict = await getDictionary(lang);
     const content = dict.about_page;
+    const home = dict.home;
+    const em = lang === 'el'
+        ? { vision: 'brands & εκδηλώσεις', journey: 'στρατηγικό', cta: 'ήχου' }
+        : { vision: 'brands & events', journey: 'strategic', cta: 'sound' };
+    const imageSides: ('right' | 'left')[] = ['right', 'left', 'right'];
 
     return (
-        <div className="bg-[#faebe3] min-h-screen relative overflow-x-hidden">
+        <V3Root>
+            <Hero lang={lang} hero={content.hero} />
 
-            {/* Hero Section */}
-            <section className="relative pt-20 sm:pt-24 md:pt-28 lg:pt-32 xl:pt-32 pb-8 lg:pb-24 min-h-[90vh] lg:min-h-screen flex flex-col justify-center overflow-hidden">
-                {/* Background - using inline style for arbitrary external URL */}
-                <div
-                    className="absolute inset-0 z-0"
-                    style={{
-                        backgroundImage: "url('/images/backgrounds/background-texture-warm-silver.jpg')",
-                        backgroundSize: 'cover',
-                        backgroundPosition: 'center'
-                    }}
+            {/* Vision */}
+            <section className="relative overflow-hidden border-t border-[#faf6f1]/8 bg-[#0e0d0c] py-[clamp(101px,7.95vw,140px)]">
+                <DriftOrb
+                    className="h-[46vw] max-h-[640px] w-[46vw] max-w-[640px]"
+                    style={{ top: '-8%', left: '30%', background: 'radial-gradient(circle,rgba(240,189,149,0.10),rgba(240,189,149,0) 62%)' }}
+                    duration={21}
                 />
-
-                <div className="w-full px-6 md:px-12 lg:px-16 relative z-10">
-                    <div className="grid lg:grid-cols-2 gap-12 items-center">
-                        {/* Left Column: H1 */}
-                        <div className="flex flex-col justify-center text-left">
-                            <h1 className="text-[2.2rem] sm:text-[3.2rem] md:text-[4rem] lg:text-[4.8rem] font-extrabold text-black mb-6 leading-[1.1] tracking-tight slide-up-1">
-                                {content.hero.title}
-                            </h1>
-                            <p className="text-xl md:text-2xl text-black/70 leading-relaxed slide-up-2">
-                                {content.hero.subtitle}
-                            </p>
-                        </div>
-
-                        {/* Right Column: Square Image */}
-                        <div className="w-full slide-up-4 flex justify-end">
-                            <div className="w-full max-w-[740px]">
-                                <div className="overflow-hidden rounded-2xl shadow-2xl bg-white aspect-square relative">
-                                    <Image
-                                        src="/images/about/about-hero.jpg"
-                                        alt={content.hero.image_alt}
-                                        fill
-                                        className="object-cover"
-                                        sizes="(max-width: 768px) 100vw, (max-width: 1536px) 50vw, 740px"
-                                        priority
-                                    />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* 2. Vision Section */}
-            <section className="bg-black py-24">
-                <div className="max-w-7xl mx-auto px-6">
-                    <div className="flex flex-col items-center text-center">
-                        <h2 className="text-[2rem] md:text-[2.8rem] lg:text-[3.45rem] font-bold text-white leading-tight mb-12">
-                            {content.vision.heading}
+                <div className="relative z-10 mx-auto max-w-[min(1760px,100%)] px-[clamp(20px,1.59vw,28px)] text-center sm:px-[clamp(27px,2.1vw,37px)]">
+                    <ScrollReveal>
+                        <Kicker className="mb-[clamp(28px,2.22vw,39px)] justify-center">{content.vision.kicker}</Kicker>
+                    </ScrollReveal>
+                    <ScrollReveal delay={0.06}>
+                        <h2 className="mx-auto max-w-[1060px] text-[clamp(1.96rem,3.91vw,3.34rem)] font-extrabold leading-[1.18] tracking-[-0.018em]">
+                            {emphasize(stripTags(content.vision.text), em.vision)}
                         </h2>
+                    </ScrollReveal>
+                </div>
+            </section>
 
-                        <div className="w-full text-center">
-                            <p className="text-2xl md:text-3xl lg:text-4xl text-white leading-relaxed mb-6">
-                                {lang === 'el' ? (
-                                    <>Να γίνουμε ο <strong>κορυφαίος συνεργάτης μουσικής</strong> για <strong>brands & εκδηλώσεις με χαρακτήρα</strong>, που θέλουν <strong>ταυτότητα, ατμόσφαιρα</strong> και <strong>ουσιαστική σύνδεση</strong> με τους επισκέπτες τους.</>
-                                ) : (
-                                    <span dangerouslySetInnerHTML={{ __html: parseMarkdownBold(content.vision.text) }} />
-                                )}
+            {/* Philosophy */}
+            <section className="relative overflow-hidden py-[clamp(108px,8.52vw,150px)]">
+                <DriftOrb
+                    className="h-[46vw] max-h-[640px] w-[46vw] max-w-[640px]"
+                    style={{ top: '14%', right: '-6%', background: 'radial-gradient(circle,rgba(240,189,149,0.10),rgba(240,189,149,0) 62%)' }}
+                    duration={24}
+                    reverse
+                />
+                <div className="relative z-10 mx-auto max-w-[1150px] px-[clamp(27px,2.1vw,37px)] text-center">
+                    <ScrollReveal>
+                        <Kicker className="mb-[clamp(25px,1.99vw,35px)] justify-center">{content.philosophy.kicker}</Kicker>
+                    </ScrollReveal>
+                    <ScrollReveal delay={0.06}>
+                        <p className="text-[clamp(1.61rem,2.99vw,2.42rem)] leading-[1.42] text-[#faf6f1]">
+                            {philosophyRuns(content.philosophy.text)}
+                        </p>
+                    </ScrollReveal>
+                </div>
+            </section>
+
+            <Journey emWord={em.journey} journey={content.journey} />
+
+            {/* Team */}
+            <section id="team" className="relative overflow-hidden py-[clamp(108px,8.52vw,150px)] pb-[clamp(94px,7.39vw,130px)]">
+                <DriftOrb
+                    className="h-[46vw] max-h-[640px] w-[46vw] max-w-[640px]"
+                    style={{ top: '8%', right: '-6%', background: 'radial-gradient(circle,rgba(240,189,149,0.10),rgba(240,189,149,0) 62%)' }}
+                    duration={23}
+                />
+                <div className="relative z-10 mx-auto max-w-[min(1760px,100%)] px-[clamp(20px,1.59vw,28px)] sm:px-[clamp(27px,2.1vw,37px)]">
+                    <div className="mx-auto mb-[clamp(72px,5.68vw,100px)] max-w-[900px] text-center">
+                        <ScrollReveal>
+                            <Kicker className="mb-[clamp(15px,1.19vw,21px)] justify-center">{content.team.kicker}</Kicker>
+                        </ScrollReveal>
+                        <ScrollReveal delay={0.06}>
+                            <h2
+                                className="se-html text-[clamp(2.3rem,4.6vw,3.91rem)] font-extrabold leading-[1.05] tracking-[-0.02em]"
+                                dangerouslySetInnerHTML={{ __html: content.team.title }}
+                            />
+                        </ScrollReveal>
+                        <ScrollReveal delay={0.12}>
+                            <p className="mt-[clamp(13px,1.02vw,18px)] text-[clamp(1.02rem,1.15vw,1.27rem)] text-[#faf6f1]/60">
+                                {content.team.subtitle}
                             </p>
-                        </div>
+                        </ScrollReveal>
                     </div>
-                </div>
-            </section>
 
-            {/* 3. Philosophy Section (Animated Gradient) */}
-            <section className="animated-gradient py-24 px-6 relative z-10" style={{
-                backgroundImage: 'linear-gradient(135deg, #f5d4c1, #e8c3b0, #d4c4b0, #c0c0c0, #d3d3d3, #f0d5d0, #e8c3b0, #f5d4c1)'
-            }}>
-                <div className="max-w-5xl mx-auto text-center">
-                    <h2 className="text-[2rem] md:text-[2.8rem] lg:text-[3.45rem] font-bold text-black leading-tight mb-12">
-                        {content.philosophy.heading}
-                    </h2>
-                    <p className="text-xl md:text-2xl lg:text-3xl text-black leading-relaxed max-w-4xl mx-auto">
-                        <span dangerouslySetInnerHTML={{ __html: parseMarkdownBold(content.philosophy.text) }} />
-                    </p>
-                </div>
-            </section>
+                    {content.team_members.map((member: any, i: number) => (
+                        <TeamMember
+                            key={member.name}
+                            member={member}
+                            imageSide={imageSides[i] ?? 'right'}
+                            isLast={i === content.team_members.length - 1}
+                        />
+                    ))}
 
-            {/* 4. Journey Section (White) */}
-            <section className="bg-white py-24 px-6">
-                <div className="max-w-7xl mx-auto">
-                    {/* Header */}
-                    <div className="text-center mb-12">
-                        <h2 className="text-5xl md:text-[3.45rem] font-bold text-black mb-4">
-                            {content.journey.heading}
-                        </h2>
-                        <p className="text-xl text-black/60 font-medium">
-                            {content.journey.subtitle}
+                    <ScrollReveal>
+                        <p className="mx-auto mt-[clamp(79px,6.25vw,110px)] max-w-[1010px] text-center text-[clamp(1.61rem,2.99vw,2.42rem)] font-semibold leading-[1.4]">
+                            {goldWrap(content.team.closing, 'SensEar')}
                         </p>
-                    </div>
-
-                    {/* Content Grid */}
-                    <div className="lg:grid lg:grid-cols-2 lg:gap-12">
-                        {/* Left Column: Timeline */}
-                        <div className="relative">
-                            {/* Vertical line behind markers */}
-                            <div className="absolute left-[47px] top-0 bottom-0 w-[2px] bg-black/20" />
-
-                            <div className="space-y-12">
-                                {content.journey.timeline.map((item: any, idx: number) => (
-                                    <div key={idx} className="relative flex items-start">
-                                        {/* Year Circle */}
-                                        <div className="w-24 h-24 rounded-full bg-black text-white font-bold text-xl flex items-center justify-center shrink-0 shadow-lg z-10">
-                                            {item.year}
-                                        </div>
-
-                                        {/* Text */}
-                                        <div className="ml-6 pt-4">
-                                            <p className="text-xl text-black/60 leading-relaxed">
-                                                <span dangerouslySetInnerHTML={{ __html: parseMarkdownBold(item.text) }} />
-                                            </p>
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-
-                        {/* Right Column: Image */}
-                        <div className="hidden lg:block">
-                            <Image
-                                src={content.journey.image}
-                                alt={lang === 'el' ? 'Η πορεία μας' : 'Our journey'}
-                                width={800}
-                                height={800}
-                                loading="eager"
-                                className="w-full h-auto rounded-2xl shadow-lg"
-                            />
-                        </div>
-                    </div>
+                    </ScrollReveal>
                 </div>
             </section>
 
-            {/* 5. Team Section */}
-            <section className="py-24" style={{ backgroundImage: "url('/images/backgrounds/background-texture-warm-silver.jpg')", backgroundSize: 'cover', backgroundPosition: 'center' }} aria-labelledby="team-heading">
-                <div className="max-w-7xl mx-auto px-6">
-                    <h2 id="team-heading" className="text-[2.7rem] md:text-[3.45rem] font-bold text-center mb-4 text-black leading-heading">
-                        {lang === 'el' ? 'Γνωρίστε την ομάδα' : 'Meet the team'}
-                    </h2>
-                    <p className="text-xl text-black/60 font-medium text-center mb-12">
-                        {lang === 'el' ? 'Παθιασμένοι με τη μουσική, προσανατολισμένοι στη φιλοξενία' : 'Music obsessed, hospitality minded'}
-                    </p>
+            <Differentiators content={content.differentiators} />
 
-                    {/* George Fameliaris - FIRST */}
-                    <div className="mb-8" role="list">
-                        <article role="listitem" className="p-8 rounded-[3rem]" style={{ backgroundImage: "url('/images/backgrounds/background-texture-warm-silver.jpg')", backgroundSize: 'cover', backgroundPosition: 'center' }}>
-                            <div className="grid lg:grid-cols-[1fr_1.2fr] gap-12 items-center">
-                                {/* Left: Text Content */}
-                                <div className="lg:order-1">
-                                    <h3 className="text-[2.7rem] md:text-[48px] font-bold text-black leading-tight mb-2">
-                                        George Fameliaris
-                                    </h3>
-                                    <p className="text-xl font-semibold text-black/70 mb-10">
-                                        {lang === 'el' ? 'Συνιδρυτής, Επικεφαλής μουσικής επιμέλειας & AV expert' : 'Co-founder, Chief music curator & AV expert'}
-                                    </p>
-
-                                    <div>
-                                        <p className="text-lg md:text-xl text-black/60 leading-relaxed mb-4">
-                                            {lang === 'el'
-                                                ? "Το πάθος του Γιώργου για τη μουσική και τη συλλογή δίσκων εμπλουτίστηκε περαιτέρω μέσα από τις σπουδές του, με ένα Πτυχίο (BA) στα Μέσα Μαζικής Ενημέρωσης & Επικοινωνίας και ένα Μεταπτυχιακό (MA) στη Δημοφιλή Μουσική στον Κινηματογράφο."
-                                                : "G's lifelong passion for music and record collecting was further shaped by a BA in Media & Communications and an MA in Popular Music in Film."
-                                            }
-                                        </p>
-                                        <p className="text-lg md:text-xl text-black/60 leading-relaxed mb-4" dangerouslySetInnerHTML={{
-                                            __html: lang === 'el'
-                                                ? 'Σύντομα καθιερώθηκε ως τακτικός guest DJ στην αθηναϊκή σκηνή, αναλαμβάνοντας ιδιωτικά πάρτι και residencies σε εμβληματικούς χώρους όπως το <strong>Balux</strong>, το <strong>Sunset Antiparos</strong> και το <strong>Burger Disco</strong>. Παράλληλα, έχει μοιραστεί τα decks με κορυφαίες προσωπικότητες του χώρου, όπως η <strong>Colleen "Cosmo" Murphy</strong>, ο <strong>Danny Krivit</strong> και ο <strong>Gerd Janson</strong>.'
-                                                : 'He soon became a regular guest DJ on the Athens scene, holding private parties and long-term residencies at venues such as <strong>Balux</strong>, <strong>Sunset Antiparos</strong>, and <strong>Burger Disco</strong>, while sharing the decks with key DJ figures like <strong>Colleen "Cosmo" Murphy</strong>, <strong>Danny Krivit</strong>, and <strong>Gerd Janson</strong>.'
-                                        }} />
-                                        <p className="text-lg md:text-xl text-black/60 leading-relaxed">
-                                            {lang === 'el'
-                                                ? 'Στη SensEar, διαμορφώνει τη μουσική ταυτότητα κάθε χώρου με ακρίβεια, δημιουργώντας τον ρυθμό και την ατμόσφαιρα που ορίζουν τον χαρακτηριστικό ήχο του κάθε brand.'
-                                                : "At SensEar, he shapes each venue's musical identity with precision, creating rhythm and atmosphere that define the brand's signature sound."
-                                            }
-                                        </p>
-                                    </div>
-                                </div>
-
-                                {/* Right: Image */}
-                                <div className="lg:order-2 hidden lg:block">
-                                    <Image
-                                        src="/images/about/team-george-fameliaris.jpg"
-                                        alt={lang === 'el' ? 'Γιώργος Φαμελιάρης - Συνιδρυτής και Επικεφαλής Μουσικής Επιμέλειας SensEar' : 'George Fameliaris - SensEar Co-Founder and Chief Music Curator'}
-                                        width={600}
-                                        height={600}
-                                        loading="eager"
-                                        className="w-full h-auto rounded-2xl shadow-lg"
-                                    />
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-
-                    {/* John E. Farazoumis - SECOND */}
-                    <div className="mb-8" role="list">
-                        <article role="listitem" className="p-8 rounded-[3rem]" style={{ backgroundImage: "url('/images/backgrounds/background-texture-warm-silver.jpg')", backgroundSize: 'cover', backgroundPosition: 'center' }}>
-                            <div className="grid lg:grid-cols-[1.2fr_1fr] gap-12 items-center">
-                                {/* Left: Image */}
-                                <div className="lg:order-1 hidden lg:block">
-                                    <Image
-                                        src="/images/about/team-john-farazoumis.png"
-                                        alt={lang === 'el' ? 'John E. Farazoumis - Συνιδρυτής και Διευθυντής Brand Strategy SensEar' : 'John E. Farazoumis - SensEar Co-Founder and Brand Strategy Director'}
-                                        width={600}
-                                        height={600}
-                                        className="w-full h-auto rounded-2xl shadow-lg"
-                                    />
-                                </div>
-
-                                {/* Right: Text Content */}
-                                <div className="lg:order-2">
-                                    <h3 className="text-[2.7rem] md:text-[48px] font-bold text-black leading-tight mb-2">
-                                        John E. Farazoumis
-                                    </h3>
-                                    <p className="text-xl font-semibold text-black/70 mb-10">
-                                        {lang === 'el' ? 'Συνιδρυτής, Στρατηγική & Επικοινωνία' : 'Co-founder, Brand strategy, Client service'}
-                                    </p>
-
-                                    <div>
-                                        <p className="text-lg md:text-xl text-black/60 leading-relaxed mb-4">
-                                            {lang === 'el'
-                                                ? 'Από τα πρώτα DJ sets μέχρι τις σπουδές του στην Ηχοληψία και τώρα στη Διοίκηση Φιλοξενίας, ο ρόλος της μουσικής υπήρξε πάντα καθοριστικός στη ζωή του.'
-                                                : 'From his early DJ sets to his studies in Hospitality Management, JEF has always been guided by music\'s magnetic pull.'
-                                            }
-                                        </p>
-                                        <p className="text-lg md:text-xl text-black/60 leading-relaxed mb-4" dangerouslySetInnerHTML={{
-                                            __html: lang === 'el'
-                                                ? 'Είναι συνιδρυτής μιας επιτυχημένης digital agency, με 25ετή εμπειρία στις <strong>Διαδικτυακές Υπηρεσίες</strong>, τις <strong>Πωλήσεις/Marketing</strong> και την <strong>Εξυπηρέτηση Πελατών</strong>. Είναι κάτοχος πτυχίου στη <strong>Διοίκηση Φιλοξενίας</strong> και στον <strong>Σχεδιασμό Εμπειριών & Υπηρεσιών</strong> (Hospitality Management & Experience Design) από το Πανεπιστήμιο Εφαρμοσμένων Επιστημών Haaga-Helia.'
-                                                : 'He is a co-founder of a successful digital agency, with 25 years of experience in <strong>Web Services</strong>, <strong>Sales/Marketing</strong> & <strong>Customer Care</strong> and a degree in <strong>Hospitality Management</strong> and <strong>Experience Design</strong> from the Haaga-Helia University of Applied Science.'
-                                        }}>
-                                        </p>
-                                        <p className="text-lg md:text-xl text-black/60 leading-relaxed">
-                                            {lang === 'el'
-                                                ? 'Στη SensEar, χαράσσει τη στρατηγική κατεύθυνση του brand και γεφυρώνει το δημιουργικό όραμα με την εμπειρία πελάτη.'
-                                                : 'At SensEar, he shapes the brand\'s strategic direction & connects creative vision with client experience.'
-                                            }
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-
-                    {/* Katerina Karali - THIRD */}
-                    <div className="mb-8" role="list">
-                        <article role="listitem" className="p-8 rounded-[3rem]" style={{ backgroundImage: "url('/images/backgrounds/background-texture-warm-silver.jpg')", backgroundSize: 'cover', backgroundPosition: 'center' }}>
-                            <div className="grid lg:grid-cols-[1fr_1.2fr] gap-12 items-center">
-                                {/* Left: Text Content */}
-                                <div className="lg:order-1">
-                                    <h3 className="text-[2.7rem] md:text-[48px] font-bold text-black leading-tight mb-2">
-                                        Katerina Karali
-                                    </h3>
-                                    <p className="text-xl font-semibold text-black/70 mb-10">
-                                        {lang === 'el' ? 'Συνεργάτιδα, DJ, Μουσική Επιμελήτρια & Music Supervisor' : 'Contributing associate, DJ, Music curator & Music supervisor'}
-                                    </p>
-
-                                    <div>
-                                        <p className="text-lg md:text-xl text-black/60 leading-relaxed mb-4">
-                                            {lang === 'el'
-                                                ? 'Η Κατερίνα κινείται ανάμεσα στον ήχο και την εικόνα με εκλεπτυσμένη επιμελητική ματιά, συνδυάζοντας το ένστικτο της επιλογής με έντονη αίσθηση ατμόσφαιρας, αφήγησης και διάθεσης.'
-                                                : 'Katerina moves between sound and image with a refined curatorial sensibility, blending intuitive selection with a strong sense of atmosphere, narrative and mood.'
-                                            }
-                                        </p>
-                                        <p className="text-lg md:text-xl text-black/60 leading-relaxed mb-4" dangerouslySetInnerHTML={{
-                                            __html: lang === 'el'
-                                                ? 'Ως music selector, supervisor & DJ, έχει διαμορφώσει soundtracks για ντοκιμαντέρ, τηλεοπτικές σειρές και ειδικές εκδηλώσεις, ενώ φέρνει και την οπτική της προσέγγιση ως graphic designer, collage artist & illustrator στον τρόπο που δουλεύει με τον ήχο. Έχει βρεθεί στα ίδια lineups με την <strong>Colleen “Cosmo” Murphy</strong>, τον <strong>Barış K</strong>, τον <strong>Disco Bambino</strong> και άλλους καταξιωμένους selectors.'
-                                                : 'As a music selector, supervisor & DJ, she has shaped soundtracks for documentaries, TV series and special events, while bringing her visual perspective as a graphic designer, collage artist & illustrator into her work with sound. She has played with <strong>Colleen “Cosmo” Murphy</strong>, <strong>Barış K</strong>, <strong>Disco Bambino</strong> and other respected selectors.'
-                                        }} />
-                                        <p className="text-lg md:text-xl text-black/60 leading-relaxed">
-                                            {lang === 'el'
-                                                ? 'Στη SensEar, φέρνει βάθος, υφή & πολιτισμική ευαισθησία, με σπάνιες επιλογές, κινηματογραφικό ένστικτο και μια απρόσμενη αιχμή στον ήχο της ομάδας.'
-                                                : 'At SensEar, she brings depth, texture & cultural sensitivity, adding rare selections, cinematic instinct and an unexpected edge to the team\'s carefully composed listening environments.'
-                                            }
-                                        </p>
-                                    </div>
-                                </div>
-
-                                {/* Right: Image */}
-                                <div className="lg:order-2 hidden lg:block">
-                                    <Image
-                                        src="/images/about/team-katerina-karali.jpg"
-                                        alt={lang === 'el' ? 'Κατερίνα Καραλή - Art Director και Music Curator SensEar' : 'Katerina Karali - SensEar Art Director and Music Curator'}
-                                        width={600}
-                                        height={600}
-                                        className="w-full h-auto rounded-2xl shadow-lg"
-                                    />
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-
-                    <p className="text-center mt-32 text-2xl md:text-3xl lg:text-4xl max-w-5xl mx-auto text-black leading-relaxed">
-                        {lang === 'el'
-                            ? <>Μαζί, αποτελούμε τη <strong>SensEar</strong>. Μια ομάδα αφοσιωμένη στο να αναβαθμίζει χώρους μέσα από ουσιαστική, αξέχαστη μουσική.</>
-                            : <>Together, we form <strong>SensEar</strong>, a team committed to uplifting spaces through compelling, memorable music.</>
-                        }
-                    </p>
-
-                    <div className="text-center mt-12">
-                        <p className="text-lg max-w-3xl mx-auto text-black/80 mb-8">
-                            {lang === 'el' ? 'Δείτε πώς συνεργαζόμαστε με πελάτες ή επικοινωνήστε μαζί μας για το project σας.' : 'See how we work with clients or contact us to discuss your project.'}
-                        </p>
-                        <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-                            <AnimatedButton href="case-studies" lang={lang}>
-                                {lang === 'el' ? 'Διαβάστε Παραδείγματα' : 'Read case studies'}
-                            </AnimatedButton>
-                            <AnimatedButton href="contact" lang={lang}>
-                                {lang === 'el' ? 'Επικοινωνήστε μαζί μας' : 'Get in touch'}
-                            </AnimatedButton>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* 6. Differentiators Section */}
-            <section className="bg-[#faebe3] text-black py-24" aria-labelledby="differentiators-heading">
-                <div className="max-w-7xl mx-auto px-6">
-                    <h2 id="differentiators-heading" className="text-[2.7rem] md:text-[3.45rem] font-bold text-center mb-4 leading-heading">
-                        {lang === 'el' ? 'Τι μας ξεχωρίζει' : 'What sets us apart'}
-                    </h2>
-                    <p className="text-xl text-black/60 font-medium text-center mb-12">
-                        {lang === 'el' ? 'Τέσσερις αρχές που καθοδηγούν ό,τι κάνουμε' : 'Four principles that guide everything we do'}
-                    </p>
-
-                    <div className="grid lg:grid-cols-2 gap-12 items-center">
-                        {/* Left: Image */}
-                        <div className="hidden lg:block">
-                            <Image
-                                src="/images/about/about-unique-approach.jpg"
-                                alt={lang === 'el' ? 'Η μοναδική προσέγγιση της SensEar' : 'SensEar unique approach'}
-                                width={800}
-                                height={800}
-                                className="w-full h-auto rounded-2xl shadow-lg"
-                            />
-                        </div>
-
-                        {/* Right: Content */}
-                        <div>
-                            <div className="grid md:grid-cols-1 gap-10" role="list">
-                                {/* Branding Music */}
-                                <article role="listitem">
-                                    <div className="flex items-start gap-4">
-                                        <div className="bg-black/10 rounded-full p-3 flex-shrink-0" aria-hidden="true">
-                                            <Lightbulb className="w-6 h-6 text-black" />
-                                        </div>
-                                        <div>
-                                            <h3 className="text-2xl font-bold mb-3 text-black">
-                                                {lang === 'el' ? 'Μουσική ως branding' : 'Branding music'}
-                                            </h3>
-                                            <p className="text-black/70">
-                                                {lang === 'el'
-                                                    ? 'Μεταφράζουμε το όραμά σας σε μουσική που ακούγεται φυσική και απόλυτα ταιριαστή στο brand.'
-                                                    : 'We translate your vision into music that feels natural and completely on-brand.'
-                                                }
-                                            </p>
-                                        </div>
-                                    </div>
-                                </article>
-
-                                {/* Covering All Sectors */}
-                                <article role="listitem">
-                                    <div className="flex items-start gap-4">
-                                        <div className="bg-black/10 rounded-full p-3 flex-shrink-0" aria-hidden="true">
-                                            <Building2 className="w-6 h-6 text-black" />
-                                        </div>
-                                        <div>
-                                            <h3 className="text-2xl font-bold mb-3 text-black">
-                                                {lang === 'el' ? 'Κάλυψη όλων των κλάδων' : 'Covering all sectors'}
-                                            </h3>
-                                            <p className="text-black/70">
-                                                {lang === 'el'
-                                                    ? 'Μουσική σχεδιασμένη για να ολοκληρώνει το ταξίδι του επισκέπτη σε κάθε χώρο που δίνει αξία στην ατμόσφαιρα.'
-                                                    : 'Music designed to complete guest journeys in all spaces that value atmosphere.'
-                                                }
-                                            </p>
-                                        </div>
-                                    </div>
-                                </article>
-
-                                {/* Personalizing Services */}
-                                <article role="listitem">
-                                    <div className="flex items-start gap-4">
-                                        <div className="bg-black/10 rounded-full p-3 flex-shrink-0" aria-hidden="true">
-                                            <SlidersHorizontal className="w-6 h-6 text-black" />
-                                        </div>
-                                        <div>
-                                            <h3 className="text-2xl font-bold mb-3 text-black">
-                                                {lang === 'el' ? 'Προσαρμοσμένες υπηρεσίες' : 'Personalizing services'}
-                                            </h3>
-                                            <p className="text-black/70">
-                                                {lang === 'el'
-                                                    ? 'Η προσέγγισή μας προσαρμόζεται στο στυλ, την ομάδα και τις ανάγκες σας, ακόμη και σε πολλαπλές τοποθεσίες.'
-                                                    : 'Our approach adapts to your style, team & needs across multiple locations.'
-                                                }
-                                            </p>
-                                        </div>
-                                    </div>
-                                </article>
-
-                                {/* Using Music's Unique Powers */}
-                                <article role="listitem">
-                                    <div className="flex items-start gap-4">
-                                        <div className="bg-black/10 rounded-full p-3 flex-shrink-0" aria-hidden="true">
-                                            <Heart className="w-6 h-6 text-black" />
-                                        </div>
-                                        <div>
-                                            <h3 className="text-2xl font-bold mb-3 text-black">
-                                                {lang === 'el' ? 'Η δύναμη της μουσικής' : 'Using music\'s unique powers'}
-                                            </h3>
-                                            <p className="text-black/70">
-                                                {lang === 'el'
-                                                    ? 'Κατανοούμε πώς η μουσική αλλάζει τη διάθεση, διαμορφώνει χώρους και συνδέει ανθρώπους.'
-                                                    : 'We understand how music shifts moods, shapes spaces and connects people.'
-                                                }
-                                            </p>
-                                        </div>
-                                    </div>
-                                </article>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* 7. Final CTA Section (Animated Gradient Background Card) */}
-            <FinalCTA
+            <PageCTA
+                kicker={content.final_cta.kicker}
                 heading={content.final_cta.heading}
-                text={content.final_cta.text}
-                buttons={content.final_cta.buttons}
-                lang={lang}
+                emWord={em.cta}
+                lede={content.final_cta.lede}
+                primaryLabel={content.final_cta.primary_cta}
+                primaryHref={getLocalizedPath(lang, '/case-studies')}
+                ghostLabel={content.final_cta.secondary_cta}
+                ghostHref="mailto:hello@sensear.music"
+                bgImage="/images/about/about-hero.jpg"
+                phoneLine={home.contact_cta.phone_line}
+                location={content.final_cta.location}
             />
-        </div>
+        </V3Root>
     );
 }
-
-
-

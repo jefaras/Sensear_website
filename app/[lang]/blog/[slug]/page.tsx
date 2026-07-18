@@ -1,31 +1,31 @@
+import { getDictionary } from '@/lib/dictionary';
+import { Locale } from '@/lib/i18n';
+import Link from 'next/link';
+import Image from 'next/image';
+import { notFound } from 'next/navigation';
+import { ArticleJsonLd } from '@/components/JsonLd';
+import { getLocalizedPath } from '@/lib/localized-path';
+import { PageCTA, V3Root } from '@/components/v3';
+import { Hero, Prose } from '@/components/article-v3';
 
-import { getDictionary } from "@/lib/dictionary";
-import { Locale } from "@/lib/i18n";
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
-import { ArrowLeft } from "lucide-react";
-import { notFound } from "next/navigation";
-import { ArticleJsonLd } from "@/components/JsonLd";
-import Image from "next/image";
-import { ScrollReveal, StaggerChildren } from "@/components/motion";
-import { getLocalizedPath } from "@/lib/localized-path";
-
+// Preserved verbatim from app/[lang]/blog/[slug]/page.tsx — the static export
+// depends on these. Only the rendered markup is restyled dark.
 const BLOG_PUBLISHED_DATES: Record<string, string> = {
-    "how-top-hospitality-brands-design-sound": "2025-01-20",
-    "three-reasons-make-music-hospitality": "2025-01-15",
-    "brand-music-converts-browsers-buyers": "2025-01-20",
-    "what-exactly-does-music-curator-do": "2025-01-10",
-    "music-curation-cycle-venues": "2025-01-15",
-    "building-brand-people-can-hear": "2025-02-12",
-    "background-music-shapes-customer-behavior": "2025-03-08",
-    "service-environment-shapes-wait-time": "2025-03-15",
+    'how-top-hospitality-brands-design-sound': '2025-01-20',
+    'three-reasons-make-music-hospitality': '2025-01-15',
+    'brand-music-converts-browsers-buyers': '2025-01-20',
+    'what-exactly-does-music-curator-do': '2025-01-10',
+    'music-curation-cycle-venues': '2025-01-15',
+    'building-brand-people-can-hear': '2025-02-12',
+    'background-music-shapes-customer-behavior': '2025-03-08',
+    'service-environment-shapes-wait-time': '2025-03-15',
 };
 
 export const dynamicParams = false;
 export const BLOG_SLUGS = Object.keys(BLOG_PUBLISHED_DATES);
 
 export async function generateStaticParams() {
-    return BLOG_SLUGS.map((slug) => ({ lang: "el" as const, slug }));
+    return BLOG_SLUGS.map((slug) => ({ lang: 'el' as const, slug }));
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: Locale; slug: string }> }) {
@@ -33,7 +33,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: Loc
     const dict = await getDictionary(lang);
     const article = dict.blog.articles.find((a: any) => a.link === slug);
 
-    if (!article) return { title: "Article Not Found" };
+    if (!article) return { title: 'Article Not Found' };
 
     return {
         title: article.title,
@@ -47,36 +47,35 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: Loc
     };
 }
 
-export default async function BlogPost({
-    params,
-}: {
-    params: Promise<{ lang: Locale; slug: string }>;
-}) {
+export default async function BlogPostV3({ params }: { params: Promise<{ lang: Locale; slug: string }> }) {
     const { lang, slug } = await params;
     const dict = await getDictionary(lang);
 
-    // Find article from dictionary
     const article = (dict.blog as any).articles.find((a: any) => a.link === slug);
-
     if (!article) {
         notFound();
     }
 
-    const backButtonText = (dict.blog as any).back_button || "Back to Insights";
+    const home = dict.home;
+    const backButtonText = (dict.blog as any).back_button || 'Back to Insights';
     const cta = (dict.blog as any).blog_cta || {};
+    const articleMeta = (dict.blog as any).article || {};
     const publishedDate = BLOG_PUBLISHED_DATES[article.link];
     const localizedPath = (path: string) => getLocalizedPath(lang, path);
+    const backHref = localizedPath('/blog');
+    // Both locales use the loanword "hospitality" in blog_cta.title.
+    const ctaEmWord = 'hospitality';
 
-    const titleParts = article.title.split('|');
     let sourceCounter = 0;
 
-    // Helper to render text with markdown-style links [text](url)
+    // Preserved verbatim (markdown [text](url) links + external aria-labels +
+    // numbered "Source N" logic); only the link color changes orange -> gold.
     const renderTextWithLinks = (text: string) => {
         const parts = text.split(/(\[.*?\]\(.*?\))/g);
         return parts.map((part, i) => {
             const match = part.match(/\[(.*?)\]\((.*?)\)/);
             if (match) {
-                const originalLabel = match[1]?.trim() || "";
+                const originalLabel = match[1]?.trim() || '';
                 const href = match[2];
                 const isExternal = href.startsWith('http');
                 const isGenericSource = /^(source|πηγή)$/i.test(originalLabel);
@@ -103,9 +102,9 @@ export default async function BlogPost({
                     <Link
                         key={i}
                         href={href}
-                        className="text-orange-500 hover:text-orange-600 underline decoration-orange-500/30 underline-offset-4 font-bold transition-colors"
-                        target={isExternal ? "_blank" : undefined}
-                        rel={isExternal ? "noopener noreferrer" : undefined}
+                        className="font-semibold text-[#f0bd95] underline decoration-[#f0bd95]/40 decoration-[1.5px] underline-offset-4 transition-colors hover:decoration-[#f0bd95]"
+                        target={isExternal ? '_blank' : undefined}
+                        rel={isExternal ? 'noopener noreferrer' : undefined}
                         aria-label={externalAriaLabel}
                     >
                         {visibleLabel}
@@ -116,9 +115,69 @@ export default async function BlogPost({
         });
     };
 
+    const sections: React.ReactNode[] = article.structuredContent
+        ? article.structuredContent.map((section: any, idx: number) => {
+              switch (section.type) {
+                  case 'heading':
+                      if (section.level === 2)
+                          return (
+                              <h2 key={idx} className="mb-[clamp(20px,1.7vw,28px)] mt-[clamp(40px,3.5vw,64px)] text-[clamp(1.6rem,2.7vw,2.3rem)] font-extrabold leading-[1.16] tracking-[-0.015em] text-[#faf6f1] first:mt-0">
+                                  {section.value}
+                              </h2>
+                          );
+                      if (section.level === 3)
+                          return (
+                              <h3 key={idx} className="mb-[clamp(12px,1vw,18px)] mt-[clamp(32px,2.8vw,48px)] text-[clamp(1.25rem,1.8vw,1.4rem)] font-bold leading-[1.25] text-[#faf6f1]">
+                                  {section.value}
+                              </h3>
+                          );
+                      return (
+                          <h4 key={idx} className="mb-3 mt-10 text-[1.2rem] font-bold text-[#faf6f1]">
+                              {section.value}
+                          </h4>
+                      );
+                  case 'paragraph':
+                      return (
+                          <p key={idx} className="mb-[clamp(28px,2.8vw,56px)] text-[clamp(1.05rem,1.35vw,1.16rem)] leading-[1.78] text-[#faf6f1]/78">
+                              {renderTextWithLinks(section.value)}
+                          </p>
+                      );
+                  case 'list':
+                      return (
+                          <ul key={idx} className="mb-[clamp(28px,2.8vw,48px)] list-none space-y-[clamp(14px,1.19vw,21px)] p-0">
+                              {section.items.map((item: string, i: number) => (
+                                  <li key={i} className="flex items-start text-[clamp(1.05rem,1.35vw,1.16rem)] leading-[1.7] text-[#faf6f1]/78">
+                                      <span className="mr-[clamp(14px,1.19vw,21px)] mt-[0.7em] h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[#f0bd95]" />
+                                      <span>{renderTextWithLinks(item)}</span>
+                                  </li>
+                              ))}
+                          </ul>
+                      );
+                  case 'image':
+                      return (
+                          <figure key={idx} className="my-[clamp(40px,3.5vw,64px)]">
+                              <div className="relative aspect-video w-full overflow-hidden rounded-lg">
+                                  <Image src={section.src} alt={section.alt || ''} fill sizes="(max-width: 1024px) 100vw, 760px" className="object-cover" />
+                              </div>
+                              {section.caption && (
+                                  <figcaption className="mt-4 text-center text-[0.8rem] font-bold uppercase italic tracking-[0.18em] text-[#faf6f1]/40">
+                                      {section.caption}
+                                  </figcaption>
+                              )}
+                          </figure>
+                      );
+                  default:
+                      return null;
+              }
+          })
+        : [
+              <p key="fallback" className="text-[clamp(1.05rem,1.35vw,1.16rem)] leading-[1.78] text-[#faf6f1]/78">
+                  {renderTextWithLinks(article.content || 'Content coming soon...')}
+              </p>,
+          ];
+
     return (
-        <div className="bg-[#faebe3] min-h-screen font-sans overflow-x-hidden selection:bg-orange-100">
-            {/* Article Schema for SEO */}
+        <V3Root>
             <ArticleJsonLd
                 title={article.title}
                 description={article.desc}
@@ -128,178 +187,37 @@ export default async function BlogPost({
                 dateModified={publishedDate}
                 author={article.author}
             />
-            
-            {/* Hero Section */}
-            <section className="relative pt-32 pb-16 md:pt-48 md:pb-24">
-                <div className="container mx-auto px-6 max-w-7xl">
-                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                        {/* Hero Text */}
-                        <div className="lg:col-span-7">
-                            <ScrollReveal>
-                                <Link href={localizedPath('/blog')} className="inline-flex items-center text-black/40 hover:text-black mb-12 transition-colors group">
-                                    <ArrowLeft className="w-4 h-4 mr-2 transition-transform group-hover:-translate-x-1" />
-                                    <span className="text-sm font-bold tracking-widest uppercase font-jakarta">{backButtonText}</span>
-                                </Link>
-                            </ScrollReveal>
 
-                            <ScrollReveal delay={0.08}>
-                                <h1 className="flex flex-col mb-8 font-jakarta">
-                                    <span className="text-[2.2rem] sm:text-[3.2rem] md:text-[4rem] lg:text-[4.8rem] font-extrabold text-black leading-[1.1] tracking-tight mb-2">
-                                        {titleParts[0]?.trim()}
-                                    </span>
-                                    {titleParts[1] && (
-                                        <span className="text-4xl md:text-5xl xl:text-6xl font-extrabold italic text-black/70 leading-tight">
-                                            {titleParts[1].trim()}
-                                        </span>
-                                    )}
-                                </h1>
-                            </ScrollReveal>
+            <Hero
+                title={article.title}
+                desc={article.desc}
+                tag={article.tag}
+                author={article.author}
+                displayDate={article.displayDate}
+                publishedDate={publishedDate}
+                readTime={articleMeta.read_time || '8 MIN READ'}
+                image={article.image}
+                alt={article.alt}
+                backHref={backHref}
+                backLabel={backButtonText}
+                badge={['★ SENSEAR ★', 'JOURNAL']}
+            />
 
-                            <ScrollReveal delay={0.16}>
-                                <p className="text-xl md:text-2xl text-black/70 mb-10 leading-relaxed max-w-2xl font-normal">
-                                    {article.desc}
-                                </p>
-                            </ScrollReveal>
+            <Prose backHref={backHref} backLabel={backButtonText}>
+                {sections}
+            </Prose>
 
-                            <ScrollReveal delay={0.24}>
-                                <div className="flex items-center gap-6 text-sm text-black/60 font-jakarta font-medium">
-                                    <div className="flex items-center gap-3">
-                                        <span className="w-8 h-[1px] bg-black/20" />
-                                        <address className="not-italic">
-                                            <span rel="author" className="text-black font-bold uppercase tracking-wider">{article.author}</span>
-                                        </address>
-                                    </div>
-                                    <span className="w-1 h-1 rounded-full bg-black/20" />
-                                    <time dateTime={publishedDate} className="uppercase tracking-wider">{article.displayDate}</time>
-                                    <span className="w-1 h-1 rounded-full bg-black/20" />
-                                    <span className="uppercase tracking-wider">8 MIN READ</span>
-                                </div>
-                            </ScrollReveal>
-                        </div>
-
-                        {/* Hero Image */}
-                        <ScrollReveal delay={0.18} className="lg:col-span-5 relative group">
-                            <div className="aspect-[3/4] rounded-[2.5rem] overflow-hidden shadow-[0_40px_80px_-15px_rgba(0,0,0,0.15)] bg-white border border-white/20">
-                                <Image
-                                    src={article.image || "/images/blog/blog-faq-default.jpg"}
-                                    alt={article.alt || article.title}
-                                    width={900}
-                                    height={1200}
-                                    sizes="(max-width: 1024px) 100vw, 40vw"
-                                    priority
-                                    className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
-                                />
-                            </div>
-                        </ScrollReveal>
-                    </div>
-                </div>
-            </section>
-
-            {/* Content Section */}
-            <section className="pb-24">
-                <div className="container mx-auto px-6 max-w-5xl">
-                    <ScrollReveal>
-                        <div className="bg-white rounded-[3rem] p-10 md:p-20 shadow-[0_32px_120px_-20px_rgba(0,0,0,0.08)]">
-                            <div className="prose prose-xl max-w-none text-black selection:bg-orange-50">
-                            {article.structuredContent ? (
-                                <StaggerChildren className="space-y-12" staggerDelay={0.08}>
-                                    {article.structuredContent.map((section: any, idx: number) => {
-                                        switch (section.type) {
-                                            case "heading":
-                                                if (section.level === 2) return (
-                                                    <h2 key={idx} className="text-3xl md:text-4xl font-extrabold text-black mt-20 mb-8 leading-tight tracking-tight font-jakarta">
-                                                        {section.value}
-                                                    </h2>
-                                                );
-                                                if (section.level === 3) return (
-                                                    <h3 key={idx} className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 leading-tight font-jakarta">
-                                                        {section.value}
-                                                    </h3>
-                                                );
-                                                return <h4 key={idx} className="text-xl font-bold text-black mt-12 mb-4 font-jakarta">{section.value}</h4>;
-                                            case "paragraph":
-                                                return (
-                                                    <p key={idx} className="text-lg md:text-xl text-black/80 leading-relaxed mb-8 font-normal">
-                                                        {renderTextWithLinks(section.value)}
-                                                    </p>
-                                                );
-                                            case "list":
-                                                return (
-                                                    <ul key={idx} className="space-y-6 mb-12 list-none p-0">
-                                                        {section.items.map((item: string, i: number) => (
-                                                            <li key={i} className="flex items-start text-lg md:text-xl text-black/80 leading-relaxed group">
-                                                                <div className="w-1.5 h-1.5 rounded-full bg-orange-400 mt-3.5 mr-6 flex-shrink-0" />
-                                                                <span>{renderTextWithLinks(item)}</span>
-                                                            </li>
-                                                        ))}
-                                                    </ul>
-                                                );
-                                            case "image":
-                                                return (
-                                                    <figure key={idx} className="my-20 -mx-10 md:-mx-20">
-                                                        <div className="aspect-video w-full bg-gray-50 overflow-hidden md:rounded-2xl shadow-lg">
-                                                            <Image
-                                                                src={section.src}
-                                                                alt={section.alt || ""}
-                                                                width={1600}
-                                                                height={900}
-                                                                sizes="(max-width: 1024px) 100vw, 80vw"
-                                                                className="w-full h-full object-cover"
-                                                            />
-                                                        </div>
-                                                        {section.caption && (
-                                                            <figcaption className="mt-6 text-center text-sm text-black/40 font-bold tracking-widest uppercase italic">
-                                                                {section.caption}
-                                                            </figcaption>
-                                                        )}
-                                                    </figure>
-                                                );
-                                            default:
-                                                return null;
-                                        }
-                                    })}
-                                </StaggerChildren>
-                            ) : (
-                                <ScrollReveal>
-                                    <p className="whitespace-pre-wrap leading-relaxed text-lg md:text-xl text-black/80">
-                                        {renderTextWithLinks(article.content || "Content coming soon...")}
-                                    </p>
-                                </ScrollReveal>
-                            )}
-                            </div>
-
-                            {/* Article Footer Button */}
-                            <ScrollReveal delay={0.12}>
-                                <div className="mt-24 pt-16 border-t border-gray-100 text-center">
-                                    <Link href={localizedPath('/blog')}>
-                                        <Button variant="outline" size="lg" className="rounded-full px-12 py-8 border-2 border-black text-black hover:bg-black hover:text-white transition-all duration-500 font-bold tracking-widest uppercase text-sm group">
-                                            <ArrowLeft className="w-4 h-4 mr-3 transition-transform group-hover:-translate-x-1" />
-                                            {backButtonText}
-                                        </Button>
-                                    </Link>
-                                </div>
-                            </ScrollReveal>
-                        </div>
-                    </ScrollReveal>
-                </div>
-            </section>
-
-            {/* CTA Section */}
-            <section className="py-24 bg-transparent text-center">
-                <div className="container mx-auto px-6 max-w-4xl">
-                    <StaggerChildren className="flex flex-col items-center" staggerDelay={0.08}>
-                        <h2 className="text-4xl md:text-5xl font-extrabold text-black mb-6 leading-tight tracking-tight font-jakarta">
-                            {cta.title}
-                        </h2>
-                        <p className="text-xl md:text-2xl text-black/60 mb-12 leading-relaxed max-w-3xl mx-auto font-normal">
-                            {cta.description}
-                        </p>
-                        <Button className="rounded-full px-12 py-8 bg-black text-white hover:bg-black/90 transition-all duration-300 font-bold tracking-tight text-lg shadow-xl shadow-black/10">
-                            {cta.button}
-                        </Button>
-                    </StaggerChildren>
-                </div>
-            </section>
-        </div>
+            <PageCTA
+                kicker={articleMeta.cta_kicker || ''}
+                heading={cta.title || ''}
+                emWord={ctaEmWord}
+                lede={cta.description || ''}
+                primaryLabel={cta.button || ''}
+                primaryHref={localizedPath('/contact')}
+                bgImage="/images/homepage/sensear-signature-playlist-service.jpg"
+                phoneLine={home.contact_cta.phone_line}
+                location={lang === 'el' ? 'Αθήνα, Ελλάδα' : 'Athens, Greece'}
+            />
+        </V3Root>
     );
 }

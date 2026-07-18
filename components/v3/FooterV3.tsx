@@ -60,7 +60,7 @@ export function FooterV3({ lang, footer, navigation, services, industries, email
     ];
 
     return (
-        <footer className="border-t border-[#faf6f1]/10 bg-[#0b0a0a] pt-[clamp(66px,5.23vw,92px)]">
+        <footer className="border-t border-[#faf6f1]/10 bg-[#0b0a0a] text-[#faf6f1] pt-[clamp(66px,5.23vw,92px)]">
             <div className="mx-auto grid max-w-[min(1760px,100%)] grid-cols-1 gap-[clamp(33px,2.61vw,46px)] px-[clamp(20px,1.59vw,28px)] sm:grid-cols-2 sm:px-[clamp(27px,2.1vw,37px)] lg:grid-cols-[1.5fr_1fr_1.15fr_0.95fr_1.15fr]">
                 {/* Brand */}
                 <div className="sm:col-span-2 lg:col-span-1">

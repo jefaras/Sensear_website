@@ -1,158 +1,69 @@
-import { getDictionary } from "@/lib/dictionary";
-import { Locale } from "@/lib/i18n";
-import { ArrowRight } from "lucide-react";
-import Link from "next/link";
-import { Metadata } from "next";
-import Image from "next/image";
-import { ScrollReveal, StaggerChildren } from "@/components/motion";
-import { getLocalizedPath } from "@/lib/localized-path";
+import type { Metadata } from 'next';
+import { getDictionary } from '@/lib/dictionary';
+import { type Locale } from '@/lib/i18n';
+import { getLocalizedPath } from '@/lib/localized-path';
+import { DriftOrb, Kicker, V3Root, emphasize } from '@/components/v3';
+import { ScrollReveal, StaggerChildren } from '@/components/motion';
+import { ArticleCard, Hero, NewsletterCTA } from '@/components/blog-v3';
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: Locale }> }): Promise<Metadata> {
     const { lang } = await params;
     const dict = await getDictionary(lang);
-    return {
-        title: dict.blog.meta.title,
-        description: dict.blog.meta.description,
-    };
+    return { title: dict.blog.meta.title, description: dict.blog.meta.description };
 }
 
-export default async function Blog({
-    params,
-}: {
-    params: Promise<{ lang: Locale }>;
-}) {
+export default async function BlogV3({ params }: { params: Promise<{ lang: Locale }> }) {
     const { lang } = await params;
     const dict = await getDictionary(lang);
     const content = dict.blog;
+    const home = dict.home;
     const localizedPath = (path: string) => getLocalizedPath(lang, path);
 
     const featuredArticle = content.articles[0];
-    const recentArticles = content.articles.slice(1);
-    const gridArticles = featuredArticle ? recentArticles : content.articles;
+    const gridArticles = featuredArticle ? content.articles.slice(1) : content.articles;
+
+    const em = lang === 'el'
+        ? { recent: 'διαμορφώνει', newsletter: 'απευθείας' }
+        : { recent: 'shapes', newsletter: 'straight' };
 
     return (
-        <div className="bg-[#faebe3]">
-            {/* Hero Section */}
-            <section className="relative pt-20 sm:pt-24 md:pt-28 lg:pt-32 xl:pt-32 pb-8 lg:pb-24 min-h-[90vh] lg:min-h-screen flex flex-col justify-center overflow-hidden">
-                <div
-                    className="absolute inset-0 z-0"
-                    style={{
-                        backgroundImage: "url('/images/backgrounds/background-texture-warm-silver.jpg')",
-                        backgroundSize: 'cover',
-                        backgroundPosition: 'center'
-                    }}
+        <V3Root>
+            <Hero
+                lang={lang}
+                hero={content.hero}
+                featured={featuredArticle}
+                featuredBadge={content.featured.badge}
+                readFull={content.featured.read_more}
+            />
+
+            {/* Articles grid */}
+            <section id="journal" className="relative overflow-hidden border-t border-[#faf6f1]/8 bg-[#0e0d0c] py-[clamp(101px,7.95vw,140px)] pb-[clamp(108px,8.52vw,150px)]">
+                <DriftOrb
+                    className="h-[46vw] max-h-[640px] w-[46vw] max-w-[640px]"
+                    style={{ top: '10%', right: '-6%', background: 'radial-gradient(circle,rgba(240,189,149,0.10),rgba(240,189,149,0) 62%)' }}
+                    duration={23}
                 />
-
-                <div className="w-full px-6 md:px-12 lg:px-16 relative z-10">
-                    <div className="grid lg:grid-cols-2 gap-12 items-center">
-                        <div className="flex flex-col justify-center text-left">
-                            <ScrollReveal>
-                                <h1 className="text-[2.2rem] sm:text-[3.2rem] md:text-[4rem] lg:text-[4.8rem] font-extrabold text-black mb-6 leading-[1.1] tracking-tight">
-                                    {content.hero.title}
-                                </h1>
-                            </ScrollReveal>
-                            <ScrollReveal delay={0.1}>
-                                <p className="text-xl md:text-2xl text-black/60 leading-relaxed max-w-2xl">
-                                    {content.hero.subtitle}
-                                </p>
-                            </ScrollReveal>
-                        </div>
-
-                        <ScrollReveal delay={0.2} className="w-full flex justify-end">
-                            <div className="w-full max-w-[740px]">
-                                {featuredArticle ? (
-                                    <Link href={localizedPath(`/blog/${featuredArticle.link}`)} className="group block">
-                                        <div className="relative overflow-hidden rounded-2xl shadow-2xl bg-white aspect-square">
-                                            <Image
-                                                src={featuredArticle.image}
-                                                alt={featuredArticle.alt || featuredArticle.title}
-                                                fill
-                                                sizes="(max-width: 768px) 100vw, (max-width: 1536px) 50vw, 740px"
-                                                className="object-cover transition-transform duration-700 group-hover:scale-105"
-                                                priority
-                                            />
-                                            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent flex flex-col justify-end p-6 md:p-8">
-                                                <span className="inline-block px-3 py-1.5 bg-white/20 backdrop-blur-md text-white text-xs md:text-sm font-semibold rounded-full mb-3 w-fit">
-                                                    {featuredArticle.tag}
-                                                </span>
-                                                <h2 className="text-2xl md:text-4xl font-bold text-white mb-3 leading-tight group-hover:underline decoration-2 underline-offset-4">
-                                                    {featuredArticle.title}
-                                                </h2>
-                                                <p className="text-base md:text-lg text-white/90 mb-4 line-clamp-3">
-                                                    {featuredArticle.desc}
-                                                </p>
-                                                <div className="flex items-center text-white font-semibold">
-                                                    {content.featured.read_more}
-                                                    <ArrowRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </Link>
-                                ) : (
-                                    <div className="relative overflow-hidden rounded-2xl shadow-2xl bg-white aspect-square">
-                                        <Image
-                                            src="/images/blog/blog-faq-default.jpg"
-                                            alt="Blog hero image"
-                                            fill
-                                            sizes="(max-width: 768px) 100vw, (max-width: 1536px) 50vw, 740px"
-                                            className="object-cover" priority />
-                                    </div>
-                                )}
-                            </div>
+                <div className="relative z-10 mx-auto max-w-[min(1760px,100%)] px-[clamp(20px,1.59vw,28px)] sm:px-[clamp(27px,2.1vw,37px)]">
+                    <div className="mb-[clamp(46px,3.64vw,64px)]">
+                        <ScrollReveal>
+                            <Kicker className="mb-[clamp(15px,1.19vw,21px)]">{content.recent.kicker}</Kicker>
+                        </ScrollReveal>
+                        <ScrollReveal delay={0.06}>
+                            <h2 className="max-w-[830px] text-[clamp(2.3rem,4.6vw,3.91rem)] font-extrabold leading-[1.05] tracking-[-0.02em]">
+                                {emphasize(content.recent.headline, em.recent)}
+                            </h2>
                         </ScrollReveal>
                     </div>
-                </div>
-            </section>
 
-            <div className="max-w-7xl mx-auto px-6 pb-24">
-                {/* Recent Articles Grid */}
-                <div className="pt-16 mb-16">
-                    <ScrollReveal>
-                        <h3 className="text-2xl font-bold text-black mb-10">{content.recent.title}</h3>
-                    </ScrollReveal>
-                    <StaggerChildren className="grid md:grid-cols-2 lg:grid-cols-3 gap-8" staggerDelay={0.08}>
-                        {gridArticles.map((article) => (
-                            <Link
-                                key={article.link}
-                                href={localizedPath(`/blog/${article.link}`)}
-                                className="group flex flex-col bg-white/80 backdrop-blur-md rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
-                            >
-                                <div className="overflow-hidden aspect-[4/3] relative">
-                                    <Image
-                                        src={article.image}
-                                        alt={article.alt || article.title}
-                                        fill
-                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 420px"
-                                        loading="lazy"
-                                        className="object-cover transition-transform duration-500 group-hover:scale-105"
-                                    />
-                                </div>
-                                <div className="p-6 flex flex-col flex-grow">
-                                    <span className="inline-block px-3 py-1 bg-black/5 text-black text-xs font-semibold rounded-full mb-4 w-fit">
-                                        {article.tag}
-                                    </span>
-                                    <h4 className="text-xl font-bold text-black mb-3 group-hover:text-black/70 transition-colors line-clamp-2">
-                                        {article.title}
-                                    </h4>
-                                    <p className="text-black/60 mb-4 line-clamp-3 flex-grow text-sm">
-                                        {article.desc}
-                                    </p>
-                                    <div className="flex items-center justify-between text-sm text-black/50 mt-auto pt-4 border-t border-black/10">
-                                        <span>{article.displayDate}</span>
-                                        <span>{article.author}</span>
-                                    </div>
-                                    <div className="flex items-center text-black font-semibold mt-4">
-                                        {content.recent.read_more} <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
-                                    </div>
-                                </div>
-                            </Link>
+                    <StaggerChildren className="grid grid-cols-1 gap-[clamp(25px,1.99vw,35px)] md:grid-cols-2 lg:grid-cols-3" staggerDelay={0.06}>
+                        {gridArticles.map((article: any) => (
+                            <ArticleCard key={article.link} article={article} href={localizedPath(`/blog/${article.link}`)} />
                         ))}
                     </StaggerChildren>
                 </div>
-            </div>
-        </div>
+            </section>
+
+            <NewsletterCTA emWord={em.newsletter} cta={content.newsletter_cta} phoneLine={home.contact_cta.phone_line} />
+        </V3Root>
     );
 }
-
-
-

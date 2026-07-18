@@ -177,6 +177,13 @@
   --gold-text: linear-gradient(100deg, #edc4ac 0%, #f6dccd 19%, #fffaf6 42%, #eae8e4 60%, #d3cfc9 77%, #e2d6bf 100%);
 }
 
+/* Dark editorial is the site-wide surface post-cutover — keep the base dark so
+   overscroll/gaps never flash the old warm/white background behind the chrome. */
+html,
+body {
+  background-color: #0b0a0a;
+}
+
 /* Italic display accent used by the v3 redesign (Latin + Greek subsets) */
 .font-didot {
   font-family: var(--font-didot), 'GFS Didot', serif;

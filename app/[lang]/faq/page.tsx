@@ -1,132 +1,65 @@
-import Link from "next/link";
-import { ArrowRight } from "lucide-react";
-import { getDictionary } from "@/lib/dictionary";
-import type { Locale } from "@/lib/i18n";
-import type { Metadata } from "next";
-import {
-    Accordion,
-    AccordionContent,
-    AccordionItem,
-    AccordionTrigger,
-} from "@/components/ui/accordion";
-import { AnimatedButton } from "@/components/AnimatedButton";
-import { FinalCTA } from "@/components/sections/FinalCTA";
-import Image from "next/image";
-import { ScrollReveal } from "@/components/motion";
+import type { Metadata } from 'next';
+import { getDictionary } from '@/lib/dictionary';
+import { type Locale } from '@/lib/i18n';
+import { V3Root, Kicker, DriftOrb, emphasize } from '@/components/v3';
+import { ScrollReveal } from '@/components/motion';
+import { Hero, Accordion } from '@/components/faq-v3';
+import { ContactCTA } from '@/components/home-v3';
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: Locale }> }): Promise<Metadata> {
     const { lang } = await params;
     const dict = await getDictionary(lang);
-    return {
-        title: dict.faq_page.meta.title,
-        description: dict.faq_page.meta.description,
-    };
+    return { title: dict.faq_page.meta.title, description: dict.faq_page.meta.description };
 }
 
-export default async function FAQPage({
-    params,
-}: {
-    params: Promise<{ lang: Locale }>;
-}) {
+export default async function FaqV3({ params }: { params: Promise<{ lang: Locale }> }) {
     const { lang } = await params;
     const dict = await getDictionary(lang);
     const content = dict.faq_page;
-
-    const faqItems = content.items;
+    const home = dict.home;
+    const titleEmWord = lang === 'el' ? 'απαντημένες' : 'Answered';
+    const ctaEmWord = lang === 'el' ? 'Ας μιλήσουμε' : "Let's Talk";
+    const ctaTitleHtml = content.cta.title.includes(ctaEmWord)
+        ? content.cta.title.replace(ctaEmWord, `<em>${ctaEmWord}</em>`)
+        : content.cta.title;
 
     return (
-        <div className="bg-[#faebe3]">
-            {/* Hero Section */}
-            <section
-                className="relative pt-20 sm:pt-24 md:pt-28 lg:pt-32 xl:pt-32 pb-8 lg:pb-24 min-h-[90vh] lg:min-h-screen flex flex-col justify-center overflow-hidden"
-                style={{
-                    backgroundImage: "url('/images/backgrounds/background-texture-warm-silver.jpg')",
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center'
-                }}
-            >
-                <div className="w-full px-6 md:px-12 lg:px-16">
-                    <div className="grid lg:grid-cols-2 gap-12 items-center">
-                        <div className="flex flex-col justify-center text-left">
-                            <ScrollReveal>
-                                <h1 className="text-[2.2rem] sm:text-[3.2rem] md:text-[4rem] lg:text-[4.8rem] font-extrabold text-black mb-6 leading-[1.1]">
-                                    {content.hero.title}
-                                </h1>
-                            </ScrollReveal>
-                            <ScrollReveal delay={0.1}>
-                                <p className="text-xl md:text-2xl text-black/70 leading-relaxed">
-                                    {content.hero.subtitle}
-                                </p>
-                            </ScrollReveal>
-                        </div>
+        <V3Root>
+            <Hero lang={lang} hero={content.hero} sectionKicker={content.section_kicker} />
 
-                        <ScrollReveal delay={0.2} className="w-full flex justify-end">
-                            <div className="w-full max-w-[740px]">
-                                <div className="overflow-hidden rounded-2xl shadow-2xl">
-                                    <div className="relative aspect-square">
-                                        <Image
-                                            src="/images/blog/blog-faq-default.jpg"
-                                            alt="FAQ"
-                                            fill
-                                            sizes="(max-width: 1024px) 100vw, (max-width: 1536px) 50vw, 740px"
-                                            className="w-full h-full object-cover"
-                                            priority
-                                        />
-                                    </div>
-                                </div>
-                            </div>
-                        </ScrollReveal>
-                    </div>
-                </div>
-            </section>
-
-            {/* FAQ Accordion Section */}
-            <section
-                className="py-20"
-                style={{
-                    backgroundImage: "url('/images/backgrounds/background-texture-warm-silver.jpg')",
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center'
-                }}
-            >
-                <div className="max-w-4xl mx-auto px-6">
+            <section className="relative overflow-hidden border-t border-[#faf6f1]/8 bg-[#0e0d0c] py-[clamp(101px,7.95vw,140px)] pb-[clamp(108px,8.52vw,150px)]">
+                <DriftOrb
+                    className="h-[40vw] max-h-[550px] w-[40vw] max-w-[550px]"
+                    style={{ top: '10%', right: '-8%', background: 'radial-gradient(circle,rgba(240,189,149,0.10),rgba(240,189,149,0) 62%)' }}
+                    duration={20}
+                />
+                <div className="relative z-10 mx-auto max-w-[1060px] px-[clamp(20px,1.59vw,28px)]">
                     <ScrollReveal>
-                        <h2 className="text-4xl font-bold text-center text-black mb-12">
-                            {content.title}
+                        <Kicker variant="gold" className="mb-[clamp(15px,1.19vw,21px)] justify-center">
+                            {content.section_kicker}
+                        </Kicker>
+                    </ScrollReveal>
+                    <ScrollReveal delay={0.08}>
+                        <h2 className="mb-[clamp(50px,3.92vw,69px)] text-center text-[clamp(2.53rem,5.18vw,3.91rem)] font-extrabold leading-[1.05] tracking-[-0.02em]">
+                            {emphasize(content.title, titleEmWord)}
                         </h2>
                     </ScrollReveal>
-
-                    <Accordion type="single" collapsible className="w-full space-y-4">
-                        {faqItems.map((item: any, index: number) => (
-                            <AccordionItem
-                                key={index}
-                                value={`item-${index}`}
-                                className="bg-white/80 border-b-0 rounded-lg shadow-sm px-6"
-                            >
-                                <ScrollReveal delay={index * 0.06}>
-                                    <AccordionTrigger className="text-lg font-semibold text-left hover:no-underline">
-                                        {item.question}
-                                    </AccordionTrigger>
-                                    <AccordionContent className="text-base text-black/70 pt-2 pb-4">
-                                        {item.answer}
-                                    </AccordionContent>
-                                </ScrollReveal>
-                            </AccordionItem>
-                        ))}
-                    </Accordion>
+                    <Accordion items={content.items} />
                 </div>
             </section>
 
-            {/* Final CTA Section */}
-            <FinalCTA
-                heading={content.cta.title}
-                text={content.cta.subtitle}
-                buttons={[
-                    { text: content.cta.button, link: "contact" }
-                ]}
+            <ContactCTA
                 lang={lang}
+                cta={{
+                    kicker: content.cta.kicker,
+                    title: ctaTitleHtml,
+                    subtitle: content.cta.subtitle,
+                    primary_cta: home.contact_cta.primary_cta,
+                    call_label: home.contact_cta.call_label,
+                    services_link: home.contact_cta.services_link,
+                    background_image: '/images/contact/contact-hero-venue-consultation.jpg',
+                }}
             />
-        </div>
+        </V3Root>
     );
 }
-

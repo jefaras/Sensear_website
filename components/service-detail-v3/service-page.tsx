@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { getDictionary } from '@/lib/dictionary';
 import type { Locale } from '@/lib/i18n';
-import { FooterV3, V3Root } from '@/components/v3';
+import { V3Root } from '@/components/v3';
 import { ServiceDetail } from './ServiceDetail';
 
 type EmSet = { statement: string; feature: string; forwhom: string; section5: string; cta: string };
@@ -80,15 +80,6 @@ export async function ServiceDetailPage({ lang, slug }: { lang: Locale; slug: st
                 phoneLine={home.contact_cta.phone_line}
                 servicesNav={dict.navigation.services}
                 servicesLink={home.contact_cta.services_link}
-            />
-            <FooterV3
-                lang={lang}
-                footer={home.footer}
-                navigation={dict.navigation}
-                services={home.services.items}
-                industries={home.expertise.items}
-                email={home.contact_cta.secondary_email_label}
-                phoneLine={home.contact_cta.phone_line}
             />
         </V3Root>
     );

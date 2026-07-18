@@ -87,6 +87,15 @@ export default async function RootLayout({
         getDictionary('en'),
     ])
 
+    // Data for the global dark FooterV3 (mounted once in LocalizedSiteChrome).
+    const footerV3Data = (d: typeof enDict) => ({
+        footer: d.home.footer,
+        services: d.home.services.items,
+        industries: d.home.expertise.items,
+        email: d.home.contact_cta.secondary_email_label,
+        phoneLine: d.home.contact_cta.phone_line,
+    })
+
     return (
         <html lang="en" className={fontVariables}>
             <head>
@@ -119,7 +128,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <MotionProvider>
                     <LocalizedSiteChrome
                         navigation={{ el: elDict.navigation, en: enDict.navigation }}
-                        footer={{ el: elDict.footer, en: enDict.footer }}
+                        footerV3={{ el: footerV3Data(elDict), en: footerV3Data(enDict) }}
                     >
                         {children}
                     </LocalizedSiteChrome>
