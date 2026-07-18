@@ -226,7 +226,17 @@
             "subtitle": "Tell us a bit about your venue and the feeling you want to create.",
             "background_image": "/images/backgrounds/warm-silver-foil-texture.jpg",
             "image": "/images/contact/contact-hero-venue-consultation.jpg",
-            "image_alt": "Contact SensEar"
+            "image_alt": "Contact SensEar",
+            "side_label": "CONTACT — LET'S TALK SOUND",
+            "kicker": "CONTACT",
+            "primary_cta": "Fill out the form",
+            "secondary_cta": "Contact details",
+            "image_kicker": "ATHENS · GR",
+            "image_caption": "Let's design how it sounds.",
+            "badge": [
+                "★ SENSEAR ★",
+                "EST · ATH"
+            ]
         },
         "intro": {
             "title": "Looking for the perfect sound for your space?",
@@ -297,7 +307,10 @@
             "social": {
                 "label": "Social",
                 "note": "Follow and contact us on social media."
-            }
+            },
+            "kicker": "CONTACT DETAILS",
+            "heading": "Find us however suits you",
+            "follow_label": "FOLLOW US"
         },
         "faq": {
             "title": "Frequently Asked Questions",
@@ -320,7 +333,11 @@
                     "question": "How long does it take to receive our first playlist?",
                     "answer": "Typically 1-2 weeks after our initial consultation, depending on the complexity of your needs."
                 }
-            ]
+            ],
+            "kicker": "FAQ"
+        },
+        "form_section": {
+            "kicker": "START HERE"
         }
     },
     "about": {

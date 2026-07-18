@@ -226,7 +226,17 @@
             "subtitle": "Πείτε μας λίγα λόγια για τον χώρο σας και την αίσθηση που θέλετε να δημιουργεί.",
             "background_image": "/images/backgrounds/warm-silver-foil-texture.jpg",
             "image": "/images/contact/contact-hero-venue-consultation.jpg",
-            "image_alt": "Επικοινωνία SensEar"
+            "image_alt": "Επικοινωνία SensEar",
+            "side_label": "CONTACT — LET'S TALK SOUND",
+            "kicker": "ΕΠΙΚΟΙΝΩΝΙΑ",
+            "primary_cta": "Συμπληρώστε τη φόρμα",
+            "secondary_cta": "Στοιχεία επικοινωνίας",
+            "image_kicker": "ATHENS · GR",
+            "image_caption": "Let's design how it sounds.",
+            "badge": [
+                "★ SENSEAR ★",
+                "EST · ATH"
+            ]
         },
         "intro": {
             "title": "Αναζητάτε τον ιδανικό ήχο για τον χώρο σας;",
@@ -297,7 +307,10 @@
             "social": {
                 "label": "Social",
                 "note": "Ακολουθήστε και επικοινωνήστε μαζί μας στα social media."
-            }
+            },
+            "kicker": "ΣΤΟΙΧΕΙΑ ΕΠΙΚΟΙΝΩΝΙΑΣ",
+            "heading": "Βρείτε μας όπως σας βολεύει",
+            "follow_label": "ΑΚΟΛΟΥΘΗΣΤΕ ΜΑΣ"
         },
         "faq": {
             "title": "Συχνές Ερωτήσεις",
@@ -320,7 +333,11 @@
                     "question": "Πόσο χρόνο χρειάζεται για να λάβουμε το πρώτο μας playlist;",
                     "answer": "Συνήθως 1-2 εβδομάδες μετά την αρχική μας συνεννόηση, ανάλογα με την πολυπλοκότητα των αναγκών σας."
                 }
-            ]
+            ],
+            "kicker": "ΣΥΧΝΕΣ ΕΡΩΤΗΣΕΙΣ"
+        },
+        "form_section": {
+            "kicker": "ΞΕΚΙΝΗΣΤΕ ΕΔΩ"
         }
     },
     "about": {

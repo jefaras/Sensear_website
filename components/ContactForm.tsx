@@ -53,7 +53,7 @@ interface ContactFormLabels {
 
 interface ContactFormProps {
     labels: ContactFormLabels;
-    variant?: "default" | "vinyl";
+    variant?: "default" | "vinyl" | "dark";
 }
 
 interface FormData {
@@ -88,6 +88,7 @@ export function ContactForm({ labels, variant = "default" }: ContactFormProps) {
     });
 
     const isVinyl = variant === "vinyl";
+    const isDark = variant === "dark";
     const isEagerLogoPage = /^\/(en|el)\/(contact|services|industries)$/.test(pathname);
     const isGreek = pathname.startsWith('/el');
 
@@ -205,18 +206,41 @@ export function ContactForm({ labels, variant = "default" }: ContactFormProps) {
     }, [formData]);
 
     // Styles based on variant
-    const inputClass = isVinyl
-        ? "w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder:text-white/50 focus:outline-none focus:ring-2 focus:ring-white/30 focus:border-transparent"
-        : "w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-black/20";
+    const inputClass = isDark
+        ? "w-full px-4 py-3.5 rounded-[10px] bg-[rgba(250,246,241,0.05)] border border-[#faf6f1]/16 text-[#faf6f1] text-[15px] placeholder:text-[rgba(250,246,241,0.32)] focus:outline-none focus:border-[rgba(240,189,149,0.6)] focus:bg-[rgba(240,189,149,0.06)] transition-colors"
+        : isVinyl
+            ? "w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder:text-white/50 focus:outline-none focus:ring-2 focus:ring-white/30 focus:border-transparent"
+            : "w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-black/20";
 
-    const selectClass = isVinyl
-        ? "w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-white/30 focus:border-transparent cursor-pointer"
-        : "w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-black/20";
+    const selectClass = isDark
+        ? "w-full px-4 py-3.5 rounded-[10px] bg-[rgba(250,246,241,0.05)] border border-[#faf6f1]/16 text-[#faf6f1] text-[15px] focus:outline-none focus:border-[rgba(240,189,149,0.6)] cursor-pointer transition-colors"
+        : isVinyl
+            ? "w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-white/30 focus:border-transparent cursor-pointer"
+            : "w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-black/20";
 
-    const errorClass = isVinyl ? "text-red-400 text-sm mt-1" : "text-red-500 text-sm mt-1";
-    const labelClass = isVinyl ? "block text-sm font-medium mb-2 text-white/90" : "block text-sm font-medium mb-2";
+    const errorClass = isVinyl || isDark ? "text-red-400 text-sm mt-1" : "text-red-500 text-sm mt-1";
+    const labelClass = isDark
+        ? "block text-xs font-semibold tracking-[0.06em] mb-2 text-[#faf6f1]/66"
+        : isVinyl ? "block text-sm font-medium mb-2 text-white/90" : "block text-sm font-medium mb-2";
 
     if (success) {
+        if (isDark) {
+            return (
+                <div className="flex flex-col items-center justify-center rounded-[14px] border border-[#faf6f1]/10 bg-[rgba(15,13,12,0.72)] p-10 text-center backdrop-blur-[6px]">
+                    <span className="mb-5 flex h-16 w-16 items-center justify-center rounded-full border border-[#f0bd95]/50" aria-hidden="true">
+                        <CheckCircle className="h-8 w-8 text-[#f0bd95]" strokeWidth={1.7} />
+                    </span>
+                    <h3 className="mb-2 text-2xl font-extrabold text-[#faf6f1]">{labels.success}</h3>
+                    <p className="max-w-[420px] text-center text-[#faf6f1]/62">{labels.success_message}</p>
+                    <button
+                        onClick={() => setSuccess(false)}
+                        className="se-cta mt-6 inline-flex items-center gap-2 rounded-full px-8 py-3.5 text-[15px] font-bold no-underline"
+                    >
+                        {labels.send_another}
+                    </button>
+                </div>
+            );
+        }
         return (
             <div className={`flex flex-col items-center justify-center p-8 rounded-xl ${isVinyl ? 'bg-white/10 backdrop-blur-sm' : 'bg-black/5'}`}>
                 <CheckCircle className={`w-16 h-16 mb-4 ${isVinyl ? 'text-green-400' : 'text-green-500'}`} />
@@ -236,7 +260,7 @@ export function ContactForm({ labels, variant = "default" }: ContactFormProps) {
         <form action="/contact.php" method="POST" encType="application/x-www-form-urlencoded" onSubmit={handleSubmit} className="space-y-5">
             {/* Form-level errors */}
             {errors._form && (
-                <div className={`px-4 py-3 rounded-lg ${isVinyl ? 'bg-red-500/20 border border-red-500/30 text-red-300' : 'bg-red-50 border border-red-200 text-red-700'}`}>
+                <div className={`px-4 py-3 rounded-lg ${isVinyl || isDark ? 'bg-red-500/20 border border-red-500/30 text-red-300' : 'bg-red-50 border border-red-200 text-red-700'}`}>
                     {errors._form[0]}
                 </div>
             )}
@@ -311,7 +335,7 @@ export function ContactForm({ labels, variant = "default" }: ContactFormProps) {
             <div className="grid md:grid-cols-2 gap-4 relative z-30">
                 <div>
                     <label htmlFor="input-phone" className={labelClass}>{labels.phone}</label>
-                    <div className={`flex rounded-lg ${isVinyl ? 'bg-white/10 backdrop-blur-sm border border-white/20' : 'bg-gray-50 border border-gray-200'} ${errors.phone ? '!border-red-500' : ''} focus-within:ring-2 ${isVinyl ? 'focus-within:ring-white/30' : 'focus-within:ring-black/20'} focus-within:border-transparent`}>
+                    <div className={`flex ${isDark ? 'rounded-[10px]' : 'rounded-lg'} ${isDark ? 'bg-[rgba(250,246,241,0.05)] border border-[#faf6f1]/16 focus-within:border-[rgba(240,189,149,0.6)]' : isVinyl ? 'bg-white/10 backdrop-blur-sm border border-white/20 focus-within:ring-2 focus-within:ring-white/30 focus-within:border-transparent' : 'bg-gray-50 border border-gray-200 focus-within:ring-2 focus-within:ring-black/20 focus-within:border-transparent'} ${errors.phone ? '!border-red-500' : ''}`}>
                         <label id="input-country-code-label" htmlFor="input-country-code" className="sr-only">{isGreek ? 'Κωδικός χώρας τηλεφώνου' : 'Phone country code'}</label>
                         <TransparentSelect
                             id="input-country-code"
@@ -321,8 +345,9 @@ export function ContactForm({ labels, variant = "default" }: ContactFormProps) {
                             placeholder="Other"
                             hidePlaceholderOption
                             isVinyl={isVinyl}
+                            isDark={isDark}
                             ariaLabelledBy="input-country-code-label"
-                            triggerClassName={`px-3 py-3 w-[120px] rounded-l-lg flex items-center justify-between focus:outline-none font-medium cursor-pointer transition-all ${isVinyl ? 'bg-transparent text-white border-r border-white/20 hover:bg-white/5' : 'bg-gray-200/50 text-gray-700 border-r border-gray-200 hover:bg-gray-200'} text-left`}
+                            triggerClassName={`px-3 py-3 w-[120px] ${isDark ? 'rounded-l-[10px]' : 'rounded-l-lg'} flex items-center justify-between focus:outline-none font-medium cursor-pointer transition-all ${isDark ? 'bg-transparent text-[#faf6f1] border-r border-[#faf6f1]/16 hover:bg-[rgba(250,246,241,0.04)]' : isVinyl ? 'bg-transparent text-white border-r border-white/20 hover:bg-white/5' : 'bg-gray-200/50 text-gray-700 border-r border-gray-200 hover:bg-gray-200'} text-left`}
                             options={[
                                 { value: '+30', label: 'GR (+30)' },
                                 { value: '+357', label: 'CY (+357)' },
@@ -343,7 +368,7 @@ export function ContactForm({ labels, variant = "default" }: ContactFormProps) {
                             value={formData.phone}
                             onChange={handleChange}
                             placeholder={labels.phone_placeholder}
-                            className={`w-full px-4 py-3 rounded-r-lg bg-transparent focus:outline-none ${isVinyl ? 'text-white placeholder:text-white/50' : ''}`}
+                            className={`w-full px-4 py-3 rounded-r-lg bg-transparent focus:outline-none ${isDark ? 'text-[#faf6f1] placeholder:text-[rgba(250,246,241,0.32)]' : isVinyl ? 'text-white placeholder:text-white/50' : ''}`}
                         />
                     </div>
                     {errors.phone && <p className={errorClass}>{errors.phone[0]}</p>}
@@ -357,6 +382,7 @@ export function ContactForm({ labels, variant = "default" }: ContactFormProps) {
                         onChange={handleChange}
                         placeholder={labels.preferred_call_time_options.placeholder}
                         isVinyl={isVinyl}
+                        isDark={isDark}
                         error={!!errors.preferred_call_time}
                         className="w-full"
                         ariaLabel={labels.preferred_call_time}
@@ -382,6 +408,7 @@ export function ContactForm({ labels, variant = "default" }: ContactFormProps) {
                         onChange={handleChange}
                         placeholder={labels.venue_options.placeholder}
                         isVinyl={isVinyl}
+                        isDark={isDark}
                         error={!!errors.venue_type}
                         className="w-full"
                         ariaLabel={labels.venue}
@@ -404,6 +431,7 @@ export function ContactForm({ labels, variant = "default" }: ContactFormProps) {
                         onChange={handleChange}
                         placeholder={labels.interest_options.placeholder}
                         isVinyl={isVinyl}
+                        isDark={isDark}
                         error={!!errors.service_interest}
                         className="w-full"
                         ariaLabel={labels.interest}
@@ -437,9 +465,9 @@ export function ContactForm({ labels, variant = "default" }: ContactFormProps) {
             <button
                 type="submit"
                 disabled={pending}
-                className={`group relative w-full font-bold text-lg py-7 rounded-full transition-all disabled:opacity-50 border-2 overflow-hidden flex items-center justify-center ${isVinyl
-                    ? 'bg-white text-black hover:bg-white/90 border-transparent'
-                    : 'bg-black text-white hover:bg-black/90 border-transparent'
+                className={`group relative w-full overflow-hidden rounded-full text-lg font-bold transition-all disabled:opacity-50 flex items-center justify-center ${isDark
+                    ? 'se-cta py-5 no-underline'
+                    : `py-7 border-2 ${isVinyl ? 'bg-white text-black hover:bg-white/90 border-transparent' : 'bg-black text-white hover:bg-black/90 border-transparent'}`
                     }`}
             >
                 {pending ? (
@@ -465,10 +493,10 @@ export function ContactForm({ labels, variant = "default" }: ContactFormProps) {
                 )}
             </button>
 
-            <p className={`text-xs text-center mt-3 ${isVinyl ? 'text-white/30' : 'text-black/40'}`}>
+            <p className={`text-xs text-center mt-3 ${isVinyl ? 'text-white/30' : isDark ? 'text-[#faf6f1]/30' : 'text-black/40'}`}>
                 This site is protected by reCAPTCHA and the Google{" "}
-                <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" aria-label={isGreek ? "Πολιτική Απορρήτου Google" : "Google Privacy Policy"} className={`underline ${isVinyl ? 'hover:text-white/50' : 'hover:text-black/60'}`}>{isGreek ? "Πολιτική Απορρήτου Google" : "Google Privacy Policy"}</a> and{" "}
-                <a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer" aria-label={isGreek ? "Όροι Χρήσης Google" : "Google Terms of Service"} className={`underline ${isVinyl ? 'hover:text-white/50' : 'hover:text-black/60'}`}>{isGreek ? "Όροι Χρήσης Google" : "Google Terms of Service"}</a> apply.
+                <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" aria-label={isGreek ? "Πολιτική Απορρήτου Google" : "Google Privacy Policy"} className={`underline ${isVinyl ? 'hover:text-white/50' : isDark ? 'hover:text-[#faf6f1]/60' : 'hover:text-black/60'}`}>{isGreek ? "Πολιτική Απορρήτου Google" : "Google Privacy Policy"}</a> and{" "}
+                <a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer" aria-label={isGreek ? "Όροι Χρήσης Google" : "Google Terms of Service"} className={`underline ${isVinyl ? 'hover:text-white/50' : isDark ? 'hover:text-[#faf6f1]/60' : 'hover:text-black/60'}`}>{isGreek ? "Όροι Χρήσης Google" : "Google Terms of Service"}</a> apply.
             </p>
         </form>
     )
