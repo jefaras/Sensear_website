@@ -95,7 +95,7 @@ export function Navbar({ lang, navigation }: NavbarProps) {
                 lightText ? "text-white" : "text-black"
             )}
         >
-            <div className="max-w-[1440px] mx-auto px-6 md:px-12 flex items-center justify-between">
+            <div className="mx-auto flex max-w-[min(1760px,100%)] items-center justify-between px-[clamp(20px,1.59vw,28px)] sm:px-[clamp(27px,2.1vw,37px)]">
                 {/* Logo with SENSEAR text */}
                 <Link href={localizedPath('/')} className="group flex items-center gap-3 shrink-0">
                     <div className="relative w-16 h-16">
@@ -120,26 +120,30 @@ export function Navbar({ lang, navigation }: NavbarProps) {
                     </span>
                 </Link>
 
-                {/* Desktop Menu */}
-                <div className="hidden lg:flex items-center gap-6">
-                    {links.map((link) => (
-                        <Link
-                            key={link.href}
-                            href={link.href}
-                            className={linkClass(isActive(link.href))}
-                        >
-                            {link.label}
+                {/* Desktop Menu — nav links and the Contact/language actions are two
+                    groups, separated by the larger outer gap. */}
+                <div className="hidden lg:flex items-center gap-[clamp(28px,2.6vw,52px)]">
+                    <div className="flex items-center gap-6">
+                        {links.map((link) => (
+                            <Link
+                                key={link.href}
+                                href={link.href}
+                                className={linkClass(isActive(link.href))}
+                            >
+                                {link.label}
+                            </Link>
+                        ))}
+
+                        <Link href={localizedPath('/blog')} className={linkClass(isActive(localizedPath('/blog')))}>
+                            {navigation.blog}
                         </Link>
-                    ))}
 
-                    <Link href={localizedPath('/blog')} className={linkClass(isActive(localizedPath('/blog')))}>
-                        {navigation.blog}
-                    </Link>
+                        <Link href={localizedPath('/about')} className={linkClass(isActive(localizedPath('/about')))}>
+                            {navigation.about}
+                        </Link>
+                    </div>
 
-                    <Link href={localizedPath('/about')} className={linkClass(isActive(localizedPath('/about')))}>
-                        {navigation.about}
-                    </Link>
-
+                    <div className="flex items-center gap-3">
                     {isV3 ? (
                         <Link
                             href={localizedPath('/contact')}
@@ -177,6 +181,7 @@ export function Navbar({ lang, navigation }: NavbarProps) {
                         <Globe className="w-4 h-4" aria-hidden="true" />
                         <span>{targetLangLabel}</span>
                     </Link>
+                    </div>
                 </div>
 
                 {/* Mobile Toggle */}
