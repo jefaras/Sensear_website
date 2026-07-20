@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import type { Locale } from '@/lib/i18n';
-import { DriftOrb, GhostButton, Kicker, MorphCTA, SideRail, SpinningBadge, emphasizeHeadline } from '@/components/v3';
+import { DriftOrb, GhostButton, Kicker, MorphCTA, SpinningBadge, emphasizeHeadline } from '@/components/v3';
 import { ScrollReveal } from '@/components/motion';
 
 interface HeroProps {
@@ -43,8 +43,6 @@ export function Hero({ lang, hero }: HeroProps) {
                 duration={22}
                 reverse
             />
-
-            <SideRail>{hero.side_label}</SideRail>
 
             <div className="mx-auto w-full max-w-[min(1760px,100%)] pl-[clamp(20px,1.59vw,28px)] pr-[clamp(20px,1.59vw,28px)] sm:px-[clamp(27px,2.1vw,37px)] lg:pl-[clamp(70px,5.51vw,97px)]">
                 <div className="grid grid-cols-1 items-center gap-[clamp(40px,3.12vw,55px)] lg:grid-cols-[1.05fr_0.95fr] lg:gap-[clamp(46px,3.64vw,64px)]">

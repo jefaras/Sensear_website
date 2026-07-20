@@ -5,7 +5,7 @@ import { getDictionary } from '@/lib/dictionary';
 import { type Locale } from '@/lib/i18n';
 import { getLocalizedPath } from '@/lib/localized-path';
 import { localeAlternates } from '@/lib/seo';
-import { DriftOrb, Kicker, PageCTA, SideRail, SpinningBadge, V3Root, emphasize } from '@/components/v3';
+import { DriftOrb, Kicker, PageCTA, SpinningBadge, V3Root, emphasize } from '@/components/v3';
 import { ScrollReveal, StaggerChildren } from '@/components/motion';
 import { DirectoryCard } from '@/components/sitemap-v3';
 
@@ -89,8 +89,6 @@ export default async function SitemapPageV3({ params }: { params: Promise<{ lang
             <section className="relative flex min-h-[92vh] items-center overflow-hidden py-[clamp(108px,8.52vw,150px)] pb-[clamp(58px,4.6vw,81px)]">
                 <DriftOrb className="h-[60vw] w-[60vw] max-h-[870px] max-w-[870px]" style={{ top: '-10%', right: '-5%', background: 'radial-gradient(circle,rgba(240,189,149,0.17),rgba(240,189,149,0) 62%)' }} duration={16} />
                 <DriftOrb className="h-[50vw] w-[50vw] max-h-[710px] max-w-[710px]" style={{ bottom: '-15%', left: '-10%', background: 'radial-gradient(circle,rgba(250,235,227,0.06),rgba(250,235,227,0) 60%)' }} duration={22} reverse />
-                <SideRail>{content.hero.side_label}</SideRail>
-
                 <div className="mx-auto w-full max-w-[min(1760px,100%)] pl-[clamp(20px,1.59vw,28px)] pr-[clamp(20px,1.59vw,28px)] sm:px-[clamp(27px,2.1vw,37px)] lg:pl-[clamp(70px,5.51vw,97px)]">
                     <div className="grid grid-cols-1 items-center gap-[clamp(40px,3.12vw,55px)] lg:grid-cols-[1.05fr_0.95fr] lg:gap-[clamp(46px,3.64vw,64px)]">
                         <div>

@@ -86,7 +86,7 @@ export function Navbar({ lang, navigation }: NavbarProps) {
             aria-label="Main navigation"
             suppressHydrationWarning
             className={cn(
-                "fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-1",
+                "fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-3",
                 scrolled || isOpen
                     ? isV3
                         ? "bg-[#0b0a0a]/85 backdrop-blur-md border-b border-[#faf6f1]/10"
