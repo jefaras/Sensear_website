@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { getDictionary } from '@/lib/dictionary';
 import type { Locale } from '@/lib/i18n';
+import { localeAlternates } from '@/lib/seo';
 import { V3Root } from '@/components/v3';
 import { IndustryDetail } from './IndustryDetail';
 
@@ -64,6 +65,7 @@ export async function buildIndustryMetadata(lang: Locale, slug: string): Promise
     const dict = await getDictionary(lang);
     const t = (dict as any)[INDUSTRY_CONFIG[slug].ns];
     return {
+        alternates: localeAlternates(lang, `/industries/${slug}`),
         title: t.meta?.title ?? t.hero.title,
         description: t.meta?.description ?? t.hero.description,
         openGraph: {

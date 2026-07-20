@@ -8,6 +8,8 @@ import { getLocalizedPath } from '@/lib/localized-path';
 import { PageCTA, V3Root } from '@/components/v3';
 import { Hero, Prose } from '@/components/article-v3';
 
+import { localeAlternates } from '@/lib/seo';
+
 // Preserved verbatim from app/[lang]/blog/[slug]/page.tsx — the static export
 // depends on these. Only the rendered markup is restyled dark.
 const BLOG_PUBLISHED_DATES: Record<string, string> = {
@@ -36,6 +38,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: Loc
     if (!article) return { title: 'Article Not Found' };
 
     return {
+        alternates: localeAlternates(lang, `/blog/${slug}`),
         title: article.title,
         description: article.desc,
         openGraph: {

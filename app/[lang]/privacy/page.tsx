@@ -4,6 +4,7 @@ import { Locale } from '@/lib/i18n';
 import { parseMarkdownBold } from '@/lib/utils';
 import { getLocalizedPath } from '@/lib/localized-path';
 import { V3Root } from '@/components/v3';
+import { localeAlternates } from '@/lib/seo';
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: Locale }> }): Promise<Metadata> {
     const { lang } = await params;
@@ -17,6 +18,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: Loc
         : 'Read how SensEar collects, uses, shares and safeguards personal data, including cookies, GDPR rights, security practices and privacy contact options.';
 
     return {
+        alternates: localeAlternates(lang, '/privacy'),
         title,
         description,
         robots: {

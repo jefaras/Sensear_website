@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { getDictionary } from '@/lib/dictionary';
 import { type Locale } from '@/lib/i18n';
 import { getLocalizedPath } from '@/lib/localized-path';
+import { localeAlternates } from '@/lib/seo';
 import { DriftOrb, Kicker, V3Root, emphasize } from '@/components/v3';
 import { ScrollReveal, StaggerChildren } from '@/components/motion';
 import { ArticleCard, Hero, NewsletterCTA } from '@/components/blog-v3';
@@ -9,7 +10,11 @@ import { ArticleCard, Hero, NewsletterCTA } from '@/components/blog-v3';
 export async function generateMetadata({ params }: { params: Promise<{ lang: Locale }> }): Promise<Metadata> {
     const { lang } = await params;
     const dict = await getDictionary(lang);
-    return { title: dict.blog.meta.title, description: dict.blog.meta.description };
+    return {
+        alternates: localeAlternates(lang, '/blog'),
+        title: dict.blog.meta.title,
+        description: dict.blog.meta.description,
+    };
 }
 
 export default async function BlogV3({ params }: { params: Promise<{ lang: Locale }> }) {

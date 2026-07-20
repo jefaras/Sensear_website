@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { getDictionary } from '@/lib/dictionary';
 import { type Locale } from '@/lib/i18n';
 import { getLocalizedPath } from '@/lib/localized-path';
+import { localeAlternates } from '@/lib/seo';
 import { DriftOrb, Kicker, PageCTA, V3Root, emphasize } from '@/components/v3';
 import { ScrollReveal } from '@/components/motion';
 import { Hero, IndustryRow, WhatConnects } from '@/components/industries-v3';
@@ -9,7 +10,11 @@ import { Hero, IndustryRow, WhatConnects } from '@/components/industries-v3';
 export async function generateMetadata({ params }: { params: Promise<{ lang: Locale }> }): Promise<Metadata> {
     const { lang } = await params;
     const dict = await getDictionary(lang);
-    return { title: dict.industries_page.meta.title, description: dict.industries_page.meta.description };
+    return {
+        alternates: localeAlternates(lang, '/industries'),
+        title: dict.industries_page.meta.title,
+        description: dict.industries_page.meta.description,
+    };
 }
 
 export default async function IndustriesV3({ params }: { params: Promise<{ lang: Locale }> }) {

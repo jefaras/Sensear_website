@@ -4,6 +4,7 @@ import { Home, Briefcase, Building2, BookOpen } from 'lucide-react';
 import { getDictionary } from '@/lib/dictionary';
 import { type Locale } from '@/lib/i18n';
 import { getLocalizedPath } from '@/lib/localized-path';
+import { localeAlternates } from '@/lib/seo';
 import { DriftOrb, Kicker, PageCTA, SideRail, SpinningBadge, V3Root, emphasize } from '@/components/v3';
 import { ScrollReveal, StaggerChildren } from '@/components/motion';
 import { DirectoryCard } from '@/components/sitemap-v3';
@@ -11,7 +12,11 @@ import { DirectoryCard } from '@/components/sitemap-v3';
 export async function generateMetadata({ params }: { params: Promise<{ lang: Locale }> }): Promise<Metadata> {
     const { lang } = await params;
     const dict = await getDictionary(lang);
-    return { title: dict.sitemap_page.meta.title, description: dict.sitemap_page.meta.description };
+    return {
+        alternates: localeAlternates(lang, '/sitemap-page'),
+        title: dict.sitemap_page.meta.title,
+        description: dict.sitemap_page.meta.description,
+    };
 }
 
 export default async function SitemapPageV3({ params }: { params: Promise<{ lang: Locale }> }) {

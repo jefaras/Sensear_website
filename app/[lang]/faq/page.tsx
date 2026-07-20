@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { getDictionary } from '@/lib/dictionary';
 import { type Locale } from '@/lib/i18n';
+import { localeAlternates } from '@/lib/seo';
 import { V3Root, Kicker, DriftOrb, emphasize } from '@/components/v3';
 import { ScrollReveal } from '@/components/motion';
 import { Hero, Accordion } from '@/components/faq-v3';
@@ -9,7 +10,11 @@ import { ContactCTA } from '@/components/home-v3';
 export async function generateMetadata({ params }: { params: Promise<{ lang: Locale }> }): Promise<Metadata> {
     const { lang } = await params;
     const dict = await getDictionary(lang);
-    return { title: dict.faq_page.meta.title, description: dict.faq_page.meta.description };
+    return {
+        alternates: localeAlternates(lang, '/faq'),
+        title: dict.faq_page.meta.title,
+        description: dict.faq_page.meta.description,
+    };
 }
 
 export default async function FaqV3({ params }: { params: Promise<{ lang: Locale }> }) {

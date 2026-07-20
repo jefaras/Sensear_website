@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { getDictionary } from '@/lib/dictionary';
 import { type Locale } from '@/lib/i18n';
 import { getLocalizedPath } from '@/lib/localized-path';
+import { localeAlternates } from '@/lib/seo';
 import { DriftOrb, Kicker, PageCTA, V3Root, emphasize } from '@/components/v3';
 import { ScrollReveal, StaggerChildren } from '@/components/motion';
 import { Hero, HowItWorks, ServiceCard, ServiceRow } from '@/components/services-v3';
@@ -9,7 +10,11 @@ import { Hero, HowItWorks, ServiceCard, ServiceRow } from '@/components/services
 export async function generateMetadata({ params }: { params: Promise<{ lang: Locale }> }): Promise<Metadata> {
     const { lang } = await params;
     const dict = await getDictionary(lang);
-    return { title: dict.services_page.meta.title, description: dict.services_page.meta.description };
+    return {
+        alternates: localeAlternates(lang, '/services'),
+        title: dict.services_page.meta.title,
+        description: dict.services_page.meta.description,
+    };
 }
 
 export default async function ServicesV3({ params }: { params: Promise<{ lang: Locale }> }) {

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { getDictionary } from '@/lib/dictionary';
 import type { Locale } from '@/lib/i18n';
+import { localeAlternates } from '@/lib/seo';
 import { V3Root } from '@/components/v3';
 import { ServiceDetail } from './ServiceDetail';
 
@@ -60,7 +61,11 @@ export const SERVICE_CONFIG: Record<string, SlugConfig> = {
 export async function buildServiceMetadata(lang: Locale, slug: string): Promise<Metadata> {
     const dict = await getDictionary(lang);
     const t = (dict as any)[SERVICE_CONFIG[slug].ns];
-    return { title: t.meta?.title ?? t.hero.title, description: t.meta?.description ?? t.hero.description };
+    return {
+        alternates: localeAlternates(lang, `/services/${slug}`),
+        title: t.meta?.title ?? t.hero.title,
+        description: t.meta?.description ?? t.hero.description,
+    };
 }
 
 export async function ServiceDetailPage({ lang, slug }: { lang: Locale; slug: string }) {

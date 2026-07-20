@@ -46,10 +46,22 @@ function sensear_load_config()
         ],
     ];
 
-    $configFile = __DIR__ . '/form-config.php';
-    $custom = is_file($configFile) ? require $configFile : [];
-    if (!is_array($custom)) {
-        $custom = [];
+    // Look for the private config outside the webroot first, then fall back.
+    $configCandidates = [
+        getenv('SENSEAR_FORM_CONFIG') ?: '',           // optional explicit absolute path
+        dirname(__DIR__) . '/private/form-config.php', // one level above the webroot
+        __DIR__ . '/form-config.php',                  // legacy in-webroot fallback
+    ];
+
+    $custom = [];
+    foreach ($configCandidates as $configFile) {
+        if ($configFile !== '' && is_file($configFile)) {
+            $loaded = require $configFile;
+            if (is_array($loaded)) {
+                $custom = $loaded;
+            }
+            break;
+        }
     }
 
     $config = array_replace_recursive($defaults, $custom);

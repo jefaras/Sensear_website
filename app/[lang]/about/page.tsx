@@ -5,6 +5,7 @@ import { type Locale } from '@/lib/i18n';
 import { DriftOrb, Kicker, PageCTA, V3Root, emphasize } from '@/components/v3';
 import { ScrollReveal } from '@/components/motion';
 import { getLocalizedPath } from '@/lib/localized-path';
+import { localeAlternates } from '@/lib/seo';
 import { Differentiators, Hero, Journey, TeamMember } from '@/components/about-v3';
 
 const stripTags = (html: string) => html.replace(/<[^>]+>/g, '');
@@ -47,7 +48,11 @@ function goldWrap(text: string, word: string): ReactNode {
 export async function generateMetadata({ params }: { params: Promise<{ lang: Locale }> }): Promise<Metadata> {
     const { lang } = await params;
     const dict = await getDictionary(lang);
-    return { title: dict.about_page.meta.title, description: dict.about_page.meta.description };
+    return {
+        alternates: localeAlternates(lang, '/about'),
+        title: dict.about_page.meta.title,
+        description: dict.about_page.meta.description,
+    };
 }
 
 export default async function AboutV3({ params }: { params: Promise<{ lang: Locale }> }) {

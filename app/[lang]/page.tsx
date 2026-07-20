@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { getDictionary } from '@/lib/dictionary';
 import { type Locale } from '@/lib/i18n';
+import { localeAlternates } from '@/lib/seo';
 import { V3Root } from '@/components/v3';
 import {
     About,
@@ -17,7 +18,11 @@ import {
 export async function generateMetadata({ params }: { params: Promise<{ lang: Locale }> }): Promise<Metadata> {
     const { lang } = await params;
     const dict = await getDictionary(lang);
-    return { title: dict.home.meta.title, description: dict.home.meta.description };
+    return {
+        alternates: localeAlternates(lang, '/'),
+        title: dict.home.meta.title,
+        description: dict.home.meta.description,
+    };
 }
 
 export default async function HomeV3({ params }: { params: Promise<{ lang: Locale }> }) {

@@ -5,12 +5,17 @@ import { type Locale } from '@/lib/i18n';
 import { ContactForm } from '@/components/ContactForm';
 import { DriftOrb, Kicker, V3Root, emphasize } from '@/components/v3';
 import { ScrollReveal } from '@/components/motion';
+import { localeAlternates } from '@/lib/seo';
 import { Details, Faq, Hero } from '@/components/contact-v3';
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: Locale }> }): Promise<Metadata> {
     const { lang } = await params;
     const dict = await getDictionary(lang);
-    return { title: dict.contact.meta.title, description: dict.contact.meta.description };
+    return {
+        alternates: localeAlternates(lang, '/contact'),
+        title: dict.contact.meta.title,
+        description: dict.contact.meta.description,
+    };
 }
 
 export default async function ContactV3({ params }: { params: Promise<{ lang: Locale }> }) {

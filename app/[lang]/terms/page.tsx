@@ -4,6 +4,7 @@ import { Locale } from '@/lib/i18n';
 import { parseMarkdownBold } from '@/lib/utils';
 import { getLocalizedPath } from '@/lib/localized-path';
 import { V3Root } from '@/components/v3';
+import { localeAlternates } from '@/lib/seo';
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: Locale }> }): Promise<Metadata> {
     const { lang } = await params;
@@ -17,6 +18,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: Loc
         : 'Review SensEar’s terms for website access and service use, including responsibilities, payments, licensing, confidentiality and dispute resolution.';
 
     return {
+        alternates: localeAlternates(lang, '/terms'),
         title,
         description,
         robots: {

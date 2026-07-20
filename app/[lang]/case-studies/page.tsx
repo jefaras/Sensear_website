@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { getDictionary } from '@/lib/dictionary';
 import { type Locale } from '@/lib/i18n';
 import { getLocalizedPath } from '@/lib/localized-path';
+import { localeAlternates } from '@/lib/seo';
 import { DriftOrb, Kicker, PageCTA, V3Root, emphasize } from '@/components/v3';
 import { ScrollReveal } from '@/components/motion';
 import { CaseRow, Hero } from '@/components/case-studies-v3';
@@ -44,7 +45,11 @@ const assetMap = RAW_ASSETS.map((a) => ({ ...a, scUrl: goldify(a.scUrl) }));
 export async function generateMetadata({ params }: { params: Promise<{ lang: Locale }> }): Promise<Metadata> {
     const { lang } = await params;
     const dict = await getDictionary(lang);
-    return { title: dict.case_studies.meta.title, description: dict.case_studies.meta.description };
+    return {
+        alternates: localeAlternates(lang, '/case-studies'),
+        title: dict.case_studies.meta.title,
+        description: dict.case_studies.meta.description,
+    };
 }
 
 export default async function CaseStudiesV3({ params }: { params: Promise<{ lang: Locale }> }) {
