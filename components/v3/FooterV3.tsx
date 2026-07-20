@@ -74,7 +74,7 @@ export function FooterV3({ lang, footer, navigation, services, industries, email
                             className="h-[53px] w-[53px] object-contain"
                         />
                         <div>
-                            <div className="font-syne text-[clamp(18px,1.31vw,23px)] font-extrabold tracking-[0.18em]">{footer.wordmark}</div>
+                            <div className="font-syne text-[clamp(18px,1.31vw,23px)] font-bold tracking-wide">{footer.wordmark}</div>
                             <div className="font-didot text-[clamp(12px,0.85vw,15px)] text-[#faf6f1]/55">{footer.tagline}</div>
                         </div>
                     </div>
@@ -190,7 +190,7 @@ export function FooterV3({ lang, footer, navigation, services, industries, email
 
             {/* Oversized stroked wordmark */}
             <div className="overflow-hidden pb-[clamp(20px,1.59vw,28px)] pt-[clamp(27px,2.1vw,37px)] leading-[0.8]">
-                <div className="text-center font-syne font-black tracking-[-0.02em] text-[clamp(4.6rem,17.83vw,17.25rem)] text-transparent [-webkit-text-stroke:1px_rgba(250,246,241,0.14)]">
+                <div className="text-center font-syne font-black tracking-[-0.04em] text-[clamp(3rem,11vw,11.5rem)] text-transparent [-webkit-text-stroke:1px_rgba(250,246,241,0.14)]">
                     {footer.wordmark}
                 </div>
             </div>

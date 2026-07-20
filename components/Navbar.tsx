@@ -64,7 +64,7 @@ export function Navbar({ lang, navigation }: NavbarProps) {
     const linkClass = (active: boolean) =>
         isV3
             ? cn(
-                  "se-navlink font-sans text-base font-semibold tracking-[0.08em]",
+                  "se-navlink font-sans text-lg font-semibold tracking-[0.08em]",
                   active ? "text-[#faf6f1]" : "text-[#faf6f1]/70 hover:text-[#faf6f1]"
               )
             : cn(
@@ -113,7 +113,7 @@ export function Navbar({ lang, navigation }: NavbarProps) {
                     </div>
                     <span className={cn(
                         "text-3xl tracking-wide transition-colors",
-                        isV3 ? "font-syne font-extrabold tracking-[0.18em]" : "font-syne font-bold",
+                        "font-syne font-bold",
                         lightText ? "text-white" : "text-black"
                     )}>
                         SENSEAR
