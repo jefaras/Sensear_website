@@ -4,8 +4,9 @@ import Image from 'next/image';
 import { Locale } from '@/lib/i18n';
 import { getLocalizedPath } from '@/lib/localized-path';
 import { ScrollReveal } from '@/components/motion';
-import { DriftOrb, GhostButton, Kicker, MorphCTA, SideRail, SpinningBadge, emphasizeHeadline } from '@/components/v3';
-import { EQWidget } from './EQWidget';
+import { DriftOrb, GhostButton, Kicker, MorphCTA, emphasizeHeadline } from '@/components/v3';
+// import { SideRail, SpinningBadge } from '@/components/v3'; // side-rail removed; spinning badge disabled
+// import { EQWidget } from './EQWidget'; // now-playing pill disabled
 
 interface HeroProps {
     lang: Locale;
@@ -53,8 +54,6 @@ export function Hero({ lang, hero }: HeroProps) {
                 reverse
             />
 
-            <SideRail>{hero.side_label}</SideRail>
-
             <div className="mx-auto w-full max-w-[min(1760px,100%)] pl-[clamp(20px,1.59vw,28px)] pr-[clamp(20px,1.59vw,28px)] sm:px-[clamp(27px,2.1vw,37px)] lg:pl-[clamp(70px,5.51vw,97px)]">
                 <div className="grid grid-cols-1 items-center gap-[clamp(40px,3.12vw,55px)] lg:grid-cols-[1.05fr_0.95fr] lg:gap-[clamp(46px,3.64vw,64px)]">
                     <div>
@@ -90,9 +89,11 @@ export function Hero({ lang, hero }: HeroProps) {
                             </div>
                         </ScrollReveal>
 
+                        {/* Now-playing pill disabled
                         <ScrollReveal delay={0.6}>
                             <EQWidget label={hero.now_playing_label} track={hero.now_playing_track} />
                         </ScrollReveal>
+                        */}
                     </div>
 
                     <ScrollReveal direction="right" delay={0.5}>
@@ -114,7 +115,9 @@ export function Hero({ lang, hero }: HeroProps) {
                                 </div>
                                 <div className="font-didot text-[clamp(1.38rem,1.57vw,1.73rem)] text-[#faf6f1]">{hero.featured_caption}</div>
                             </div>
+                            {/* Spinning badge disabled
                             <SpinningBadge lines={hero.badge} className="absolute -right-[21px] -top-[21px] h-[110px] w-[110px]" />
+                            */}
                         </div>
                     </ScrollReveal>
                 </div>
