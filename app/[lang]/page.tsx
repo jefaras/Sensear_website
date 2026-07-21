@@ -43,6 +43,7 @@ export default async function HomeV3({ params }: { params: Promise<{ lang: Local
                 items={home.services.items}
                 previewPlaceholder={home.services.preview_placeholder}
                 previews={home.services.previews}
+                cta={home.services.cta}
             />
             <IndustriesGrid
                 lang={lang}
@@ -50,6 +51,7 @@ export default async function HomeV3({ params }: { params: Promise<{ lang: Local
                 title={home.expertise.title}
                 subtitle={home.expertise.subtitle}
                 items={home.expertise.items}
+                cta={home.expertise.cta}
             />
             <Approach
                 lang={lang}

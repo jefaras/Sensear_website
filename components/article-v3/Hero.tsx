@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
-import { DriftOrb, Em, Kicker, SpinningBadge } from '@/components/v3';
+import { DriftOrb, Em, Kicker } from '@/components/v3';
 import { ScrollReveal } from '@/components/motion';
 
 interface HeroProps {
@@ -40,7 +40,7 @@ function headline(title: string) {
     );
 }
 
-export function Hero({ title, desc, tag, author, displayDate, publishedDate, readTime, image, alt, backHref, backLabel, badge }: HeroProps) {
+export function Hero({ title, desc, tag, author, displayDate, publishedDate, readTime, image, alt, backHref, backLabel }: HeroProps) {
     return (
         <section className="relative overflow-hidden pt-[clamp(140px,13vw,196px)] pb-[clamp(58px,4.6vw,81px)]">
             <DriftOrb
@@ -106,7 +106,9 @@ export function Hero({ title, desc, tag, author, displayDate, publishedDate, rea
                                 />
                                 <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(11,10,10,0)_55%,rgba(11,10,10,0.5))]" />
                             </div>
+                            {/* Rotating badge — hidden for now
                             <SpinningBadge lines={badge} className="pointer-events-none absolute -right-[21px] -top-[21px] h-[110px] w-[110px]" />
+                            */}
                         </div>
                     </ScrollReveal>
                 </div>

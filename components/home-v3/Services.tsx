@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { Locale } from '@/lib/i18n';
 import { getLocalizedPath } from '@/lib/localized-path';
 import { ScrollReveal } from '@/components/motion';
-import { DriftOrb, Kicker, emphasize } from '@/components/v3';
+import { DriftOrb, Kicker, MorphCTA, emphasize } from '@/components/v3';
 
 interface ServiceItem {
     title: string;
@@ -26,11 +26,12 @@ interface ServicesProps {
     items: ServiceItem[];
     previewPlaceholder: string;
     previews: ServicePreview[];
+    cta: string;
 }
 
 const DEFAULT_PREVIEW_IMG = '/images/about/about-journey-team-collaboration.jpg';
 
-export function Services({ lang, kicker, title, subtitle, items, previewPlaceholder, previews }: ServicesProps) {
+export function Services({ lang, kicker, title, subtitle, items, previewPlaceholder, previews, cta }: ServicesProps) {
     const localizedPath = (path: string) => getLocalizedPath(lang, path);
     const emWord = lang === 'el' ? 'αναβαθμίζουμε' : 'reimagine';
     const [hovered, setHovered] = useState<number | null>(null);
@@ -40,7 +41,7 @@ export function Services({ lang, kicker, title, subtitle, items, previewPlacehol
     const previewCap = activePreview?.cap ?? previewPlaceholder;
 
     return (
-        <section className="relative bg-[#0e0d0c] py-[clamp(101px,7.95vw,140px)]">
+        <section id="services" className="relative scroll-mt-[clamp(90px,7vw,120px)] bg-[#0e0d0c] py-[clamp(101px,7.95vw,140px)]">
             <DriftOrb
                 className="h-[46vw] max-h-[640px] w-[46vw] max-w-[640px]"
                 style={{
@@ -107,6 +108,14 @@ export function Services({ lang, kicker, title, subtitle, items, previewPlacehol
                         </div>
                     </div>
                 </div>
+
+                <ScrollReveal delay={0.18}>
+                    <div className="mt-[clamp(35px,2.73vw,48px)]">
+                        <MorphCTA href={localizedPath('/services')}>
+                            {cta}
+                        </MorphCTA>
+                    </div>
+                </ScrollReveal>
             </div>
         </section>
     );

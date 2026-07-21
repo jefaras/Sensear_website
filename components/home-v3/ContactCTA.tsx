@@ -1,10 +1,9 @@
 import Image from 'next/image';
-import Link from 'next/link';
 import { Phone } from 'lucide-react';
 import { Locale } from '@/lib/i18n';
 import { getLocalizedPath } from '@/lib/localized-path';
 import { ScrollReveal } from '@/components/motion';
-import { Kicker, MorphCTA } from '@/components/v3';
+import { GhostButton, Kicker, MorphCTA } from '@/components/v3';
 
 interface ContactCTAProps {
     lang: Locale;
@@ -55,22 +54,19 @@ export function ContactCTA({ lang, cta }: ContactCTAProps) {
                         <MorphCTA href={localizedPath('/contact')}>{cta.primary_cta}</MorphCTA>
                         <a
                             href="tel:+306976994212"
-                            className="se-call group relative inline-flex items-center gap-2.5 overflow-hidden rounded-full px-[clamp(27px,2.1vw,37px)] py-[clamp(14px,1.14vw,20px)] text-[clamp(14px,0.97vw,17px)] font-bold no-underline"
+                            className="se-call group relative inline-flex items-center gap-2.5 overflow-hidden rounded-full px-[clamp(32px,2.6vw,46px)] py-[clamp(17px,1.4vw,25px)] text-[clamp(15px,1.1vw,19px)] font-bold no-underline"
                         >
-                            <Phone className="se-cta-ico h-[23px] w-[23px] shrink-0" strokeWidth={2.2} />
+                            <Phone className="se-cta-ico h-[26px] w-[26px] shrink-0" strokeWidth={2.2} />
                             <span className="se-cta-label">{cta.call_label}</span>
-                            <span className="se-cta-arrow text-[clamp(16px,1.14vw,20px)]">→</span>
+                            <span className="se-cta-arrow text-[clamp(18px,1.3vw,23px)]">→</span>
                         </a>
                     </div>
                 </ScrollReveal>
                 <ScrollReveal delay={0.3}>
-                    <div className="text-[clamp(13px,0.91vw,16px)] tracking-[0.04em] text-[#faf6f1]/45">
-                        <Link
-                            href={localizedPath('/services')}
-                            className="text-inherit no-underline transition-colors hover:text-[#e3992f]"
-                        >
+                    <div className="flex justify-center">
+                        <GhostButton href={localizedPath('/services')} arrow>
                             {cta.services_link}
-                        </Link>
+                        </GhostButton>
                     </div>
                 </ScrollReveal>
             </div>

@@ -11,6 +11,12 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Smooth in-page anchor scrolling (e.g. hero CTA → #services).
+   The prefers-reduced-motion block below resets this to `auto`. */
+html {
+  scroll-behavior: smooth;
+}
+
 @layer base {
   :root {
 

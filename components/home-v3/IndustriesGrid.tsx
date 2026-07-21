@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { Locale } from '@/lib/i18n';
 import { getLocalizedPath } from '@/lib/localized-path';
 import { ScrollReveal, StaggerChildren } from '@/components/motion';
-import { Kicker, emphasize } from '@/components/v3';
+import { Kicker, MorphCTA, emphasize } from '@/components/v3';
 
 interface IndustryItem {
     title: string;
@@ -17,6 +17,7 @@ interface IndustriesGridProps {
     title: string;
     subtitle: string;
     items: IndustryItem[];
+    cta: string;
 }
 
 const INDUSTRY_IMAGES: Record<string, string> = {
@@ -28,7 +29,7 @@ const INDUSTRY_IMAGES: Record<string, string> = {
     'industries/music-for-art-museums-and-fashion': '/images/industries/industry-art-museums-fashion.jpg',
 };
 
-export function IndustriesGrid({ lang, kicker, title, subtitle, items }: IndustriesGridProps) {
+export function IndustriesGrid({ lang, kicker, title, subtitle, items, cta }: IndustriesGridProps) {
     const localizedPath = (path: string) => getLocalizedPath(lang, path);
     const emWord = lang === 'el' ? 'εξειδίκευσή' : 'expertise';
 
@@ -74,6 +75,14 @@ export function IndustriesGrid({ lang, kicker, title, subtitle, items }: Industr
                         );
                     })}
                 </StaggerChildren>
+
+                <ScrollReveal delay={0.12}>
+                    <div className="mt-[clamp(40px,3.12vw,55px)]">
+                        <MorphCTA href={localizedPath('/industries')}>
+                            {cta}
+                        </MorphCTA>
+                    </div>
+                </ScrollReveal>
             </div>
         </section>
     );

@@ -55,7 +55,7 @@ export function Hero({ lang, hero }: HeroProps) {
             />
 
             <div className="mx-auto w-full max-w-[min(1760px,100%)] pl-[clamp(20px,1.59vw,28px)] pr-[clamp(20px,1.59vw,28px)] sm:px-[clamp(27px,2.1vw,37px)] lg:pl-[clamp(70px,5.51vw,97px)]">
-                <div className="grid grid-cols-1 items-center gap-[clamp(40px,3.12vw,55px)] lg:grid-cols-[1.05fr_0.95fr] lg:gap-[clamp(46px,3.64vw,64px)]">
+                <div className="grid grid-cols-1 items-center gap-[clamp(40px,3.12vw,55px)] lg:grid-cols-[1.15fr_0.85fr] lg:gap-[clamp(46px,3.64vw,64px)]">
                     <div>
                         <ScrollReveal>
                             <Kicker variant="hero" className="mb-[clamp(25px,1.99vw,35px)]">
@@ -64,14 +64,14 @@ export function Hero({ lang, hero }: HeroProps) {
                         </ScrollReveal>
 
                         <ScrollReveal delay={0.15}>
-                            <h1 className="mb-[clamp(25px,1.99vw,35px)] text-[clamp(3.33rem,6.9vw,6.21rem)] font-extrabold leading-[0.98] tracking-[-0.022em]">
+                            <h1 className="mb-[clamp(25px,1.99vw,35px)] text-[clamp(3.8rem,7.7vw,7.1rem)] font-extrabold leading-[0.96] tracking-[-0.024em]">
                                 {emphasizeHeadline(hero.title, emWord)}
                             </h1>
                         </ScrollReveal>
 
                         <ScrollReveal delay={0.3}>
-                            <div className="mb-[clamp(35px,2.73vw,48px)] max-w-[600px]">
-                                <p className="text-[clamp(1.21rem,1.73vw,1.52rem)] font-semibold leading-[1.45]">
+                            <div className="mb-[clamp(35px,2.73vw,48px)] max-w-[640px]">
+                                <p className="text-[clamp(1.28rem,1.85vw,1.62rem)] font-semibold leading-[1.45]">
                                     {ledeBold}
                                 </p>
                                 {ledeMuted && (
@@ -84,7 +84,9 @@ export function Hero({ lang, hero }: HeroProps) {
 
                         <ScrollReveal delay={0.45}>
                             <div className="flex flex-wrap items-center gap-[clamp(23px,1.82vw,32px)]">
-                                <MorphCTA href={localizedPath('/services')}>{hero.cta}</MorphCTA>
+                                {/* Primary CTA scrolls down to the on-page Services overview (#services); the
+                                    full /services page is reached from the CTA inside that section. */}
+                                <MorphCTA href="#services">{hero.cta}</MorphCTA>
                                 <GhostButton href={localizedPath('/contact')}>{hero.secondary_cta}</GhostButton>
                             </div>
                         </ScrollReveal>
@@ -109,12 +111,14 @@ export function Hero({ lang, hero }: HeroProps) {
                                 />
                                 <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(11,10,10,0)_45%,rgba(11,10,10,0.55))]" />
                             </div>
+                            {/* Hero image caption — hidden for now
                             <div className="absolute bottom-[25px] left-[25px] right-[25px]">
                                 <div className="se-gold-text mb-1 text-[clamp(10px,0.68vw,12px)] font-bold tracking-[0.3em]">
                                     {hero.featured_kicker}
                                 </div>
                                 <div className="font-didot text-[clamp(1.38rem,1.57vw,1.73rem)] text-[#faf6f1]">{hero.featured_caption}</div>
                             </div>
+                            */}
                             {/* Spinning badge disabled
                             <SpinningBadge lines={hero.badge} className="absolute -right-[21px] -top-[21px] h-[110px] w-[110px]" />
                             */}

@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import type { Locale } from '@/lib/i18n';
 import { getLocalizedPath } from '@/lib/localized-path';
-import { DriftOrb, GhostButton, Kicker, MorphCTA, SpinningBadge, emphasizeHeadline } from '@/components/v3';
+import { DriftOrb, GhostButton, Kicker, MorphCTA, emphasizeHeadline } from '@/components/v3';
 import { ScrollReveal } from '@/components/motion';
 
 interface Article {
@@ -102,7 +102,9 @@ export function Hero({ lang, hero, featured, featuredBadge, readFull }: HeroProp
                                     </div>
                                 </div>
                             </Link>
+                            {/* Rotating badge — hidden for now
                             <SpinningBadge lines={hero.badge} className="pointer-events-none absolute -right-[21px] -top-[21px] h-[110px] w-[110px]" />
+                            */}
                         </div>
                     </ScrollReveal>
                 </div>

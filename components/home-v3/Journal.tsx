@@ -44,19 +44,14 @@ export function Journal({ lang, kicker, headline, allArticles, articles }: Journ
                 }}
             />
             <div className="relative z-10 mx-auto max-w-[min(1760px,100%)] px-[clamp(20px,1.59vw,28px)] sm:px-[clamp(27px,2.1vw,37px)]">
-                <div className="mb-[clamp(46px,3.64vw,64px)] flex flex-wrap items-end justify-between gap-[clamp(25px,1.99vw,35px)]">
-                    <div>
-                        <ScrollReveal>
-                            <Kicker className="mb-[clamp(15px,1.19vw,21px)]">{kicker}</Kicker>
-                        </ScrollReveal>
-                        <ScrollReveal delay={0.06}>
-                            <h2 className="max-w-[780px] text-[clamp(2.18rem,4.14vw,3.45rem)] font-extrabold leading-[1.05] tracking-[-0.02em]">
-                                {emphasize(headline, emWord)}
-                            </h2>
-                        </ScrollReveal>
-                    </div>
-                    <ScrollReveal delay={0.2}>
-                        <GhostButton href={localizedPath('/blog')}>{allArticles}</GhostButton>
+                <div className="mb-[clamp(46px,3.64vw,64px)]">
+                    <ScrollReveal>
+                        <Kicker className="mb-[clamp(15px,1.19vw,21px)]">{kicker}</Kicker>
+                    </ScrollReveal>
+                    <ScrollReveal delay={0.06}>
+                        <h2 className="max-w-[780px] text-[clamp(2.18rem,4.14vw,3.45rem)] font-extrabold leading-[1.05] tracking-[-0.02em]">
+                            {emphasize(headline, emWord)}
+                        </h2>
                     </ScrollReveal>
                 </div>
 
@@ -84,6 +79,14 @@ export function Journal({ lang, kicker, headline, allArticles, articles }: Journ
                         </Link>
                     ))}
                 </StaggerChildren>
+
+                <ScrollReveal delay={0.15}>
+                    <div className="mt-[clamp(35px,2.73vw,48px)] flex justify-end">
+                        <GhostButton href={localizedPath('/blog')} arrow>
+                            {allArticles}
+                        </GhostButton>
+                    </div>
+                </ScrollReveal>
             </div>
         </section>
     );

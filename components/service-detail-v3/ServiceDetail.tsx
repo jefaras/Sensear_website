@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import type { Locale } from '@/lib/i18n';
 import { getLocalizedPath } from '@/lib/localized-path';
-import { DriftOrb, GhostButton, Kicker, MorphCTA, PageCTA, SpinningBadge, emphasize } from '@/components/v3';
+import { DriftOrb, GhostButton, Kicker, MorphCTA, PageCTA, emphasize } from '@/components/v3';
 import { ScrollReveal, StaggerChildren } from '@/components/motion';
 
 interface Section5 {
@@ -121,11 +121,13 @@ export function ServiceDetail({ lang, content, section5, images, em, phoneLine, 
                                     <Image src={images.hero} alt={content.hero.title} fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" priority />
                                     <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(11,10,10,0)_48%,rgba(11,10,10,0.55))]" />
                                 </div>
+                                {/* Hero image caption & rotating badge — hidden for now
                                 <div className="absolute bottom-[25px] left-[25px] right-[25px]">
                                     <div className="se-gold-text mb-1 text-[clamp(10px,0.68vw,12px)] font-bold tracking-[0.3em]">{content.hero.image_kicker}</div>
                                     <div className="font-didot text-[clamp(1.38rem,1.57vw,1.73rem)] text-[#faf6f1]">{content.hero.image_caption}</div>
                                 </div>
                                 <SpinningBadge lines={['★ SENSEAR ★', 'EST · ATH']} className="absolute -right-[21px] -top-[21px] h-[110px] w-[110px]" />
+                                */}
                             </div>
                         </ScrollReveal>
                     </div>

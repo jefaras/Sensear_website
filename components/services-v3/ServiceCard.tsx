@@ -41,7 +41,7 @@ export function ServiceCard({ service, href, image }: ServiceCardProps) {
                     {goldPrefix(service.ideal_for)}
                 </p>
                 <div className="mt-auto">
-                    <MorphCTA href={href} className="px-[clamp(22px,1.7vw,30px)] py-[clamp(11px,0.85vw,15px)] text-[clamp(13px,0.91vw,16px)]">
+                    <MorphCTA href={href}>
                         {service.cta}
                     </MorphCTA>
                 </div>

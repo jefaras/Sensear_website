@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import type { Locale } from '@/lib/i18n';
 import { getLocalizedPath } from '@/lib/localized-path';
-import { DriftOrb, GhostButton, Kicker, MorphCTA, SpinningBadge, emphasizeHeadline } from '@/components/v3';
+import { DriftOrb, GhostButton, Kicker, MorphCTA, emphasizeHeadline } from '@/components/v3';
 import { ScrollReveal } from '@/components/motion';
 
 interface HeroProps {
@@ -87,6 +87,7 @@ export function Hero({ lang, hero }: HeroProps) {
                                 />
                                 <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(11,10,10,0)_45%,rgba(11,10,10,0.6))]" />
                             </div>
+                            {/* Hero image caption & rotating badge — hidden for now
                             <div className="absolute bottom-[25px] left-[25px] right-[25px]">
                                 <div className="se-gold-text mb-1 text-[clamp(10px,0.68vw,12px)] font-bold tracking-[0.3em]">
                                     {hero.image_kicker}
@@ -94,6 +95,7 @@ export function Hero({ lang, hero }: HeroProps) {
                                 <div className="font-didot text-[clamp(1.38rem,1.57vw,1.73rem)] text-[#faf6f1]">{hero.image_caption}</div>
                             </div>
                             <SpinningBadge lines={hero.badge} className="absolute -right-[21px] -top-[21px] h-[110px] w-[110px]" />
+                            */}
                         </div>
                     </ScrollReveal>
                 </div>
