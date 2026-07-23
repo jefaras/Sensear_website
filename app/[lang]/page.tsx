@@ -8,6 +8,7 @@ import {
     Approach,
     ContactCTA,
     Hero,
+    HeroFlow,
     IndustriesGrid,
     Journal,
     Marquee,
@@ -25,14 +26,25 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: Loc
     };
 }
 
-export default async function HomeV3({ params }: { params: Promise<{ lang: Locale }> }) {
+export default async function HomeV3({
+    params,
+    heroVariant = 'default',
+}: {
+    params: Promise<{ lang: Locale }>;
+    /** 'flow' renders the animated v2 hero (used by the /home-v2 demo route). */
+    heroVariant?: 'default' | 'flow';
+}) {
     const { lang } = await params;
     const dict = await getDictionary(lang);
     const home = dict.home;
 
     return (
         <V3Root>
-            <Hero lang={lang} hero={home.hero} />
+            {heroVariant === 'flow' ? (
+                <HeroFlow lang={lang} hero={home.hero} />
+            ) : (
+                <Hero lang={lang} hero={home.hero} />
+            )}
             <Marquee items={home.marquee} />
             <About kicker={home.about.kicker} p1={home.intro.p1} p2={home.intro.p2} />
             <Services
