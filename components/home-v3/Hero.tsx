@@ -55,7 +55,7 @@ export function Hero({ lang, hero }: HeroProps) {
             />
 
             <div className="mx-auto w-full max-w-[min(1760px,100%)] pl-[clamp(20px,1.59vw,28px)] pr-[clamp(20px,1.59vw,28px)] sm:px-[clamp(27px,2.1vw,37px)] lg:pl-[clamp(70px,5.51vw,97px)]">
-                <div className="grid grid-cols-1 items-center gap-[clamp(40px,3.12vw,55px)] lg:grid-cols-[1.15fr_0.85fr] lg:gap-[clamp(46px,3.64vw,64px)]">
+                <div className="grid grid-cols-1 items-center gap-[clamp(40px,3.12vw,55px)] lg:grid-cols-[1.05fr_0.95fr] lg:gap-[clamp(46px,3.64vw,64px)]">
                     <div>
                         <ScrollReveal>
                             <Kicker variant="hero" className="mb-[clamp(25px,1.99vw,35px)]">
@@ -71,7 +71,7 @@ export function Hero({ lang, hero }: HeroProps) {
 
                         <ScrollReveal delay={0.3}>
                             <div className="mb-[clamp(35px,2.73vw,48px)] max-w-[640px]">
-                                <p className="text-[clamp(1.28rem,1.85vw,1.62rem)] font-semibold leading-[1.45]">
+                                <p className="text-[clamp(1.55rem,2.3vw,2.05rem)] font-semibold leading-[1.35]">
                                     {ledeBold}
                                 </p>
                                 {ledeMuted && (
