@@ -1,12 +1,12 @@
 {
     "navigation": {
         "home": "Αρχική",
-        "services": "Υπηρεσίες",
-        "industries": "Κλάδοι",
-        "case_studies": "Case Studies",
-        "about": "Σχετικά",
-        "blog": "Blog",
-        "contact": "Επικοινωνία"
+        "services": "Τι κάνουμε",
+        "industries": "Για ποιους",
+        "case_studies": "Portfolio",
+        "about": "Εμείς",
+        "blog": "Journal",
+        "contact": "Ακουστείτε"
     },
     "home": {
         "meta": {

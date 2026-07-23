@@ -1,12 +1,12 @@
 {
     "navigation": {
         "home": "Home",
-        "services": "Services",
-        "industries": "Industries",
-        "case_studies": "Case Studies",
-        "blog": "Blog",
+        "services": "What We Do",
+        "industries": "Who We Serve",
+        "case_studies": "Portfolio",
+        "blog": "Journal",
         "about": "About",
-        "contact": "Contact"
+        "contact": "Be Heard"
     },
     "home": {
         "meta": {
