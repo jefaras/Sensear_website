@@ -21,8 +21,10 @@ export default function robots(): MetadataRoute.Robots {
             // Google / Gemini
             { userAgent: 'Googlebot', allow: '/' },
             { userAgent: 'GoogleOther', allow: '/' },
-            { userAgent: 'Google-Extended', allow: '/' },
-            { userAgent: 'VertexAIBot', allow: '/' },
+            // [''] renders a literal empty "Disallow:" line (nothing disallowed);
+            // a plain '' would be dropped as falsy by Next's robots resolver
+            { userAgent: 'Google-Extended', disallow: [''] },
+            { userAgent: 'VertexAIBot', disallow: [''] },
             {
                 userAgent: '*',
                 allow: '/',
