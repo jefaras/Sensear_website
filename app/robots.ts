@@ -24,7 +24,8 @@ export default function robots(): MetadataRoute.Robots {
             // [''] renders a literal empty "Disallow:" line (nothing disallowed);
             // a plain '' would be dropped as falsy by Next's robots resolver
             { userAgent: 'Google-Extended', disallow: [''] },
-            { userAgent: 'VertexAIBot', disallow: [''] },
+            { userAgent: 'Google-CloudVertexBot', allow: '/' },
+            { userAgent: 'VertexAIBot', allow: '/' },
             {
                 userAgent: '*',
                 allow: '/',
