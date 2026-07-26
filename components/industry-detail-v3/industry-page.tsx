@@ -81,7 +81,6 @@ export async function IndustryDetailPage({ lang, slug }: { lang: Locale; slug: s
     const dict = await getDictionary(lang);
     const cfg = INDUSTRY_CONFIG[slug];
     const content = (dict as any)[cfg.ns];
-    const home = dict.home;
 
     return (
         <V3Root>
@@ -89,9 +88,6 @@ export async function IndustryDetailPage({ lang, slug }: { lang: Locale; slug: s
                 lang={lang}
                 content={content}
                 em={cfg.em[lang]}
-                phoneLine={home.contact_cta.phone_line}
-                industriesNav={dict.navigation.industries}
-                servicesLink={home.contact_cta.services_link}
             />
         </V3Root>
     );

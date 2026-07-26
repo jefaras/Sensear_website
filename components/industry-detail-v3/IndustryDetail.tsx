@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import Link from 'next/link';
 import { Check } from 'lucide-react';
 import type { Locale } from '@/lib/i18n';
 import { getLocalizedPath } from '@/lib/localized-path';
@@ -9,7 +8,7 @@ import { ScrollReveal, StaggerChildren } from '@/components/motion';
 interface Item { title: string; description: string }
 
 interface IndustryContent {
-    hero: { title: string; subtitle: string; description: string; image: string; image_alt: string; side_label: string; kicker: string; image_kicker: string; image_caption: string };
+    hero: { title: string; subtitle: string; description: string; image: string; image_alt: string; side_label: string; kicker: string; explore_cta: string; image_kicker: string; image_caption: string };
     intro: { kicker: string; title: string; p1: string; p2: string };
     what_we_do: { kicker: string; title: string; subtitle: string; image: string; items: Item[] };
     ideal_for: { kicker: string; title: string; image: string; items: Item[] };
@@ -26,12 +25,9 @@ interface IndustryDetailProps {
     lang: Locale;
     content: IndustryContent;
     em: EmSet;
-    phoneLine: string;
-    industriesNav: string;
-    servicesLink: string;
 }
 
-export function IndustryDetail({ lang, content, em, phoneLine, industriesNav, servicesLink }: IndustryDetailProps) {
+export function IndustryDetail({ lang, content, em }: IndustryDetailProps) {
     const localizedPath = (path: string) => getLocalizedPath(lang, path);
     const hw = content.how_we_help;
     const hasPortfolio = Boolean(hw.cta_title && hw.cta_button && hw.cta_link);
@@ -45,15 +41,6 @@ export function IndustryDetail({ lang, content, em, phoneLine, industriesNav, se
                 <div className="mx-auto w-full max-w-[min(1760px,100%)] pl-[clamp(20px,1.59vw,28px)] pr-[clamp(20px,1.59vw,28px)] sm:px-[clamp(27px,2.1vw,37px)] lg:pl-[clamp(70px,5.51vw,97px)]">
                     <div className="grid grid-cols-1 items-center gap-[clamp(40px,3.12vw,55px)] lg:grid-cols-[1.05fr_0.95fr] lg:gap-[clamp(46px,3.64vw,64px)]">
                         <div>
-                            <ScrollReveal>
-                                <div className="mb-[clamp(25px,1.99vw,35px)] flex items-center gap-[clamp(12px,0.91vw,16px)]">
-                                    <Link href={localizedPath('/industries')} className="text-[clamp(11px,0.8vw,14px)] font-semibold uppercase tracking-[0.2em] text-[#faf6f1]/50 no-underline transition-colors hover:text-[#faf6f1]">
-                                        {industriesNav}
-                                    </Link>
-                                    <span className="h-px w-[21px] bg-[#faf6f1]/30" />
-                                    <span className="se-gold-text text-[clamp(11px,0.8vw,14px)] font-bold tracking-[0.2em]">{content.hero.kicker}</span>
-                                </div>
-                            </ScrollReveal>
                             <ScrollReveal delay={0.12}>
                                 <h1 className="mb-[clamp(18px,1.4vw,24px)] text-[clamp(2.65rem,5.29vw,4.72rem)] font-extrabold leading-[1.07] tracking-[-0.022em]">
                                     {content.hero.title}
@@ -71,8 +58,8 @@ export function IndustryDetail({ lang, content, em, phoneLine, industriesNav, se
                             </ScrollReveal>
                             <ScrollReveal delay={0.3}>
                                 <div className="flex flex-wrap items-center gap-[clamp(23px,1.82vw,32px)]">
-                                    <MorphCTA href={localizedPath('/contact')}>{content.cta.button}</MorphCTA>
-                                    <GhostButton href={localizedPath('/industries')}>{industriesNav}</GhostButton>
+                                    <MorphCTA href="#overview">{content.hero.explore_cta}</MorphCTA>
+                                    <GhostButton href="#cta">{content.cta.button}</GhostButton>
                                 </div>
                             </ScrollReveal>
                         </div>
@@ -96,8 +83,8 @@ export function IndustryDetail({ lang, content, em, phoneLine, industriesNav, se
                 </div>
             </section>
 
-            {/* 2. Statement */}
-            <section className="relative overflow-hidden border-t border-[#faf6f1]/8 bg-[#0e0d0c] py-[clamp(101px,7.95vw,140px)]">
+            {/* 2. Statement — anchor target for the hero's "explore" CTA */}
+            <section id="overview" className="relative scroll-mt-[clamp(90px,7vw,120px)] overflow-hidden border-t border-[#faf6f1]/8 bg-[#0e0d0c] py-[clamp(101px,7.95vw,140px)]">
                 <DriftOrb className="h-[46vw] max-h-[640px] w-[46vw] max-w-[640px]" style={{ top: '-8%', left: '30%', background: 'radial-gradient(circle,rgba(240,189,149,0.10),rgba(240,189,149,0) 62%)' }} duration={21} />
                 <div className="relative z-10 mx-auto max-w-[1080px] px-[clamp(27px,2.1vw,37px)] text-center">
                     <ScrollReveal delay={0.06}>
@@ -243,11 +230,7 @@ export function IndustryDetail({ lang, content, em, phoneLine, industriesNav, se
                 lede={content.cta.description}
                 primaryLabel={content.cta.button}
                 primaryHref={localizedPath('/contact')}
-                ghostLabel={servicesLink}
-                ghostHref={localizedPath('/services')}
                 bgImage={content.hero.image}
-                phoneLine={phoneLine}
-                location={content.cta.location}
             />
         </>
     );

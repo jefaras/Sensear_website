@@ -2003,6 +2003,7 @@
             "description": "Rare, handpicked tracks curated around your concept, guests and your venue's rhythm.",
             "side_label": "SERVICES — SIGNATURE PLAYLISTS",
             "kicker": "SIGNATURE PLAYLISTS",
+            "explore_cta": "Explore the service",
             "image_kicker": "DAILY SOUNDTRACK",
             "image_caption": "Curated, never generic."
         },
@@ -2102,6 +2103,7 @@
             "description": "Soundtracks designed to support each phase, from arrival to finale.",
             "side_label": "SERVICES — EVENT SOUNDTRACKS",
             "kicker": "EVENT SOUNDTRACKS",
+            "explore_cta": "Explore the service",
             "image_kicker": "EVENT TIMING",
             "image_caption": "Right moment, right sound."
         },
@@ -2197,6 +2199,7 @@
             "description": "A practical audio blueprint that keeps your label distinct & consistent.",
             "side_label": "SERVICES — SONIC IDENTITY",
             "kicker": "SONIC IDENTITY",
+            "explore_cta": "Explore the service",
             "image_kicker": "SONIC DNA",
             "image_caption": "A signature you can hear."
         },
@@ -2293,6 +2296,7 @@
             "description": "Optimization designed to support atmosphere & conversations.",
             "side_label": "SERVICES — AUDIO UPGRADES",
             "kicker": "AUDIO UPGRADES",
+            "explore_cta": "Explore the service",
             "image_kicker": "AUDIO CLARITY",
             "image_caption": "Sound, perfected."
         },
@@ -2391,6 +2395,7 @@
             "image_alt": "Luxury hotel resort with curated music ambiance",
             "side_label": "INDUSTRIES — HOTELS & RESORTS",
             "kicker": "HOTELS & RESORTS",
+            "explore_cta": "Explore your sector",
             "image_kicker": "HOTELS & RESORTS",
             "image_caption": "A sound for every hour."
         },
@@ -2504,6 +2509,7 @@
             "image_alt": "Elegant restaurant interior with curated music atmosphere",
             "side_label": "INDUSTRIES — RESTAURANTS & BARS",
             "kicker": "RESTAURANTS & BARS",
+            "explore_cta": "Explore your sector",
             "image_kicker": "RESTAURANTS & BARS",
             "image_caption": "The invisible guest at the table."
         },
@@ -2613,6 +2619,7 @@
             "image_alt": "Modern retail store interior with curated music atmosphere",
             "side_label": "INDUSTRIES — RETAIL STORES",
             "kicker": "RETAIL STORES",
+            "explore_cta": "Explore your sector",
             "image_kicker": "RETAIL STORES",
             "image_caption": "The rhythm of discovery."
         },
@@ -2722,6 +2729,7 @@
             "image_alt": "Luxury wellness spa interior with curated ambient music",
             "side_label": "INDUSTRIES — WELLNESS & GYMS",
             "kicker": "WELLNESS & GYMS",
+            "explore_cta": "Explore your sector",
             "image_kicker": "WELLNESS & GYMS",
             "image_caption": "Sound tuned to the body."
         },
@@ -2831,6 +2839,7 @@
             "image_alt": "Event music curation and entertainment production",
             "side_label": "INDUSTRIES — EVENTS & EXPERIENCES",
             "kicker": "EVENTS & EXPERIENCES",
+            "explore_cta": "Explore your sector",
             "image_kicker": "EVENTS & EXPERIENCES",
             "image_caption": "Scored, moment by moment."
         },
@@ -2936,6 +2945,7 @@
             "image_alt": "Art gallery with curated music atmosphere and fashion installation",
             "side_label": "INDUSTRIES — ART, MUSEUMS & FASHION",
             "kicker": "ART, MUSEUMS & FASHION",
+            "explore_cta": "Explore your sector",
             "image_kicker": "ART, MUSEUMS & FASHION",
             "image_caption": "Present, never competing."
         },

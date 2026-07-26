@@ -18,6 +18,7 @@ interface ServiceContent {
         description: string;
         side_label: string;
         kicker: string;
+        explore_cta: string;
         image_kicker: string;
         image_caption: string;
     };
@@ -35,11 +36,6 @@ interface ServiceDetailProps {
     images: { hero: string; feature: string; forwhom: string; section5: string };
     /** Per-locale emphasis words already resolved by the route file. Empty string = no emphasis. */
     em: { statement: string; feature: string; forwhom: string; section5: string; cta: string };
-    phoneLine: string;
-    /** Short nav label for the hero breadcrumb (e.g. "Services"). */
-    servicesNav: string;
-    /** Fuller label for the ghost buttons (e.g. "View our services"). */
-    servicesLink: string;
 }
 
 const GoldDotRows = ({ items }: { items: { title: string; description: string }[] }) => (
@@ -59,7 +55,7 @@ const GoldDotRows = ({ items }: { items: { title: string; description: string }[
     </StaggerChildren>
 );
 
-export function ServiceDetail({ lang, content, section5, images, em, phoneLine, servicesNav, servicesLink }: ServiceDetailProps) {
+export function ServiceDetail({ lang, content, section5, images, em }: ServiceDetailProps) {
     const localizedPath = (path: string) => getLocalizedPath(lang, path);
 
     return (
@@ -80,18 +76,6 @@ export function ServiceDetail({ lang, content, section5, images, em, phoneLine, 
                 <div className="mx-auto w-full max-w-[min(1760px,100%)] pl-[clamp(20px,1.59vw,28px)] pr-[clamp(20px,1.59vw,28px)] sm:px-[clamp(27px,2.1vw,37px)] lg:pl-[clamp(70px,5.51vw,97px)]">
                     <div className="grid grid-cols-1 items-center gap-[clamp(40px,3.12vw,55px)] lg:grid-cols-[1.05fr_0.95fr] lg:gap-[clamp(46px,3.64vw,64px)]">
                         <div>
-                            <ScrollReveal>
-                                <div className="mb-[clamp(25px,1.99vw,35px)] flex items-center gap-[clamp(12px,0.91vw,16px)]">
-                                    <Link
-                                        href={localizedPath('/services')}
-                                        className="text-[clamp(11px,0.8vw,14px)] font-semibold uppercase tracking-[0.2em] text-[#faf6f1]/50 no-underline transition-colors hover:text-[#faf6f1]"
-                                    >
-                                        {servicesNav}
-                                    </Link>
-                                    <span className="h-px w-[21px] bg-[#faf6f1]/30" />
-                                    <span className="se-gold-text text-[clamp(11px,0.8vw,14px)] font-bold tracking-[0.2em]">{content.hero.kicker}</span>
-                                </div>
-                            </ScrollReveal>
                             <ScrollReveal delay={0.12}>
                                 <h1 className="mb-[clamp(18px,1.4vw,24px)] text-[clamp(2.65rem,5.29vw,4.72rem)] font-extrabold leading-[1.07] tracking-[-0.022em]">
                                     {content.hero.title}
@@ -109,8 +93,8 @@ export function ServiceDetail({ lang, content, section5, images, em, phoneLine, 
                             </ScrollReveal>
                             <ScrollReveal delay={0.3}>
                                 <div className="flex flex-wrap items-center gap-[clamp(23px,1.82vw,32px)]">
-                                    <MorphCTA href={localizedPath('/contact')}>{content.cta.button}</MorphCTA>
-                                    <GhostButton href={localizedPath('/services')}>{servicesLink}</GhostButton>
+                                    <MorphCTA href="#overview">{content.hero.explore_cta}</MorphCTA>
+                                    <GhostButton href="#cta">{content.cta.button}</GhostButton>
                                 </div>
                             </ScrollReveal>
                         </div>
@@ -134,8 +118,8 @@ export function ServiceDetail({ lang, content, section5, images, em, phoneLine, 
                 </div>
             </section>
 
-            {/* 2. Statement */}
-            <section className="relative overflow-hidden border-t border-[#faf6f1]/8 bg-[#0e0d0c] py-[clamp(101px,7.95vw,140px)]">
+            {/* 2. Statement — anchor target for the hero's "explore" CTA */}
+            <section id="overview" className="relative scroll-mt-[clamp(90px,7vw,120px)] overflow-hidden border-t border-[#faf6f1]/8 bg-[#0e0d0c] py-[clamp(101px,7.95vw,140px)]">
                 <DriftOrb
                     className="h-[46vw] max-h-[640px] w-[46vw] max-w-[640px]"
                     style={{ top: '-8%', left: '30%', background: 'radial-gradient(circle,rgba(240,189,149,0.10),rgba(240,189,149,0) 62%)' }}
@@ -257,11 +241,7 @@ export function ServiceDetail({ lang, content, section5, images, em, phoneLine, 
                 lede={content.cta.description}
                 primaryLabel={content.cta.button}
                 primaryHref={localizedPath('/contact')}
-                ghostLabel={servicesLink}
-                ghostHref={localizedPath('/services')}
                 bgImage={images.hero}
-                phoneLine={phoneLine}
-                location={content.cta.location}
             />
         </>
     );

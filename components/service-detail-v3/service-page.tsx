@@ -72,7 +72,6 @@ export async function ServiceDetailPage({ lang, slug }: { lang: Locale; slug: st
     const dict = await getDictionary(lang);
     const cfg = SERVICE_CONFIG[slug];
     const content = (dict as any)[cfg.ns];
-    const home = dict.home;
 
     return (
         <V3Root>
@@ -82,9 +81,6 @@ export async function ServiceDetailPage({ lang, slug }: { lang: Locale; slug: st
                 section5={content[cfg.section5Key]}
                 images={cfg.images}
                 em={cfg.em[lang]}
-                phoneLine={home.contact_cta.phone_line}
-                servicesNav={dict.navigation.services}
-                servicesLink={home.contact_cta.services_link}
             />
         </V3Root>
     );

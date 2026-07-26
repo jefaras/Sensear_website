@@ -1981,6 +1981,7 @@
             "description": "Σπάνιες μουσικές επιλογές, προσεκτικά δομημένες πάνω στο concept, το κοινό και τον ρυθμό του χώρου σας.",
             "side_label": "SERVICES — SIGNATURE PLAYLISTS",
             "kicker": "SIGNATURE PLAYLISTS",
+            "explore_cta": "Εξερευνήστε την υπηρεσία",
             "image_kicker": "DAILY SOUNDTRACK",
             "image_caption": "Curated, never generic."
         },
@@ -2080,6 +2081,7 @@
             "description": "Soundtracks σχεδιασμένα να υποστηρίζουν κάθε φάση, από την άφιξη των καλεσμένων μέχρι το φινάλε.",
             "side_label": "SERVICES — EVENT SOUNDTRACKS",
             "kicker": "EVENT SOUNDTRACKS",
+            "explore_cta": "Εξερευνήστε την υπηρεσία",
             "image_kicker": "EVENT TIMING",
             "image_caption": "Right moment, right sound."
         },
@@ -2175,6 +2177,7 @@
             "description": "Ένας πρακτικός ηχητικός χάρτης που διατηρεί την ταυτότητά σας ξεχωριστή και απόλυτα συνεπή.",
             "side_label": "SERVICES — SONIC IDENTITY",
             "kicker": "SONIC IDENTITY",
+            "explore_cta": "Εξερευνήστε την υπηρεσία",
             "image_kicker": "SONIC DNA",
             "image_caption": "A signature you can hear."
         },
@@ -2271,6 +2274,7 @@
             "description": "Βελτιστοποίηση σχεδιασμένη να υποστηρίζει την ατμόσφαιρα και τις συζητήσεις.",
             "side_label": "SERVICES — AUDIO UPGRADES",
             "kicker": "AUDIO UPGRADES",
+            "explore_cta": "Εξερευνήστε την υπηρεσία",
             "image_kicker": "AUDIO CLARITY",
             "image_caption": "Sound, perfected."
         },
@@ -2369,6 +2373,7 @@
             "image_alt": "Πολυτελές resort και ξενοδοχείο με επιμελημένη μουσική ατμόσφαιρα",
             "side_label": "INDUSTRIES — HOTELS & RESORTS",
             "kicker": "HOTELS & RESORTS",
+            "explore_cta": "Εξερευνήστε τον κλάδο σας",
             "image_kicker": "HOTELS & RESORTS",
             "image_caption": "A sound for every hour."
         },
@@ -2482,6 +2487,7 @@
             "image_alt": "Κομψός εσωτερικός χώρος εστιατορίου με επιμελημένη μουσική ατμόσφαιρα",
             "side_label": "INDUSTRIES — RESTAURANTS & BARS",
             "kicker": "RESTAURANTS & BARS",
+            "explore_cta": "Εξερευνήστε τον κλάδο σας",
             "image_kicker": "RESTAURANTS & BARS",
             "image_caption": "The invisible guest at the table."
         },
@@ -2591,6 +2597,7 @@
             "image_alt": "Σύγχρονος χώρος καταστήματος (retail) με επιμελημένη μουσική ατμόσφαιρα",
             "side_label": "INDUSTRIES — RETAIL STORES",
             "kicker": "RETAIL STORES",
+            "explore_cta": "Εξερευνήστε τον κλάδο σας",
             "image_kicker": "RETAIL STORES",
             "image_caption": "The rhythm of discovery."
         },
@@ -2700,6 +2707,7 @@
             "image_alt": "Εσωτερικός χώρος πολυτελούς spa και κέντρου ευεξίας με επιμελημένη ambient μουσική",
             "side_label": "INDUSTRIES — WELLNESS & GYMS",
             "kicker": "WELLNESS & GYMS",
+            "explore_cta": "Εξερευνήστε τον κλάδο σας",
             "image_kicker": "WELLNESS & GYMS",
             "image_caption": "Sound tuned to the body."
         },
@@ -2809,6 +2817,7 @@
             "image_alt": "Μουσική επιμέλεια εκδηλώσεων και παραγωγή premium events",
             "side_label": "INDUSTRIES — EVENTS & EXPERIENCES",
             "kicker": "EVENTS & EXPERIENCES",
+            "explore_cta": "Εξερευνήστε τον κλάδο σας",
             "image_kicker": "EVENTS & EXPERIENCES",
             "image_caption": "Scored, moment by moment."
         },
@@ -2914,6 +2923,7 @@
             "image_alt": "Γκαλερί τέχνης με επιμελημένη μουσική ατμόσφαιρα και εγκατάσταση μόδας",
             "side_label": "INDUSTRIES — ART, MUSEUMS & FASHION",
             "kicker": "ART, MUSEUMS & FASHION",
+            "explore_cta": "Εξερευνήστε τον κλάδο σας",
             "image_kicker": "ART, MUSEUMS & FASHION",
             "image_caption": "Present, never competing."
         },
