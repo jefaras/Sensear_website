@@ -1,9 +1,9 @@
 import Image from 'next/image';
-import { Phone } from 'lucide-react';
+import Link from 'next/link';
 import { Locale } from '@/lib/i18n';
 import { getLocalizedPath } from '@/lib/localized-path';
 import { ScrollReveal } from '@/components/motion';
-import { GhostButton, MorphCTA } from '@/components/v3';
+import { MorphCTA } from '@/components/v3';
 
 interface ContactCTAProps {
     lang: Locale;
@@ -11,17 +11,23 @@ interface ContactCTAProps {
         title: string;
         subtitle: string;
         primary_cta: string;
-        call_label: string;
-        services_link: string;
+        /** Sentence with `{services}` / `{industries}` placeholders, each rendered as a link. */
+        explore_template: string;
+        explore_services: string;
+        explore_industries: string;
         background_image: string;
     };
 }
 
+const EXPLORE_LINK =
+    'border-b border-[#faf6f1]/35 font-semibold text-[#faf6f1] no-underline transition-colors hover:border-[#f0bd95] hover:text-[#f0bd95]';
+
 export function ContactCTA({ lang, cta }: ContactCTAProps) {
     const localizedPath = (path: string) => getLocalizedPath(lang, path);
+    const exploreParts = cta.explore_template.split(/(\{services\}|\{industries\})/);
 
     return (
-        <section className="relative overflow-hidden py-[clamp(122px,9.66vw,170px)]">
+        <section id="cta" className="relative overflow-hidden py-[clamp(122px,9.66vw,170px)]">
             <Image
                 src={cta.background_image}
                 alt=""
@@ -46,22 +52,28 @@ export function ContactCTA({ lang, cta }: ContactCTAProps) {
                 <ScrollReveal delay={0.24}>
                     <div className="mb-[clamp(25px,1.99vw,35px)] flex flex-wrap items-center justify-center gap-[clamp(15px,1.19vw,21px)]">
                         <MorphCTA href={localizedPath('/contact')}>{cta.primary_cta}</MorphCTA>
-                        <a
-                            href="tel:+306976994212"
-                            className="se-call group relative inline-flex items-center gap-2.5 overflow-hidden rounded-full px-[clamp(32px,2.6vw,46px)] py-[clamp(17px,1.4vw,25px)] text-[clamp(15px,1.1vw,19px)] font-bold no-underline"
-                        >
-                            <Phone className="se-cta-ico h-[26px] w-[26px] shrink-0" strokeWidth={2.2} />
-                            <span className="se-cta-label">{cta.call_label}</span>
-                            <span className="se-cta-arrow text-[clamp(18px,1.3vw,23px)]">→</span>
-                        </a>
                     </div>
                 </ScrollReveal>
                 <ScrollReveal delay={0.3}>
-                    <div className="flex justify-center">
-                        <GhostButton href={localizedPath('/services')} arrow>
-                            {cta.services_link}
-                        </GhostButton>
-                    </div>
+                    <p className="text-[clamp(15px,1.1vw,19px)] text-[#faf6f1]/68">
+                        {exploreParts.map((part, i) => {
+                            if (part === '{services}') {
+                                return (
+                                    <Link key={i} href={localizedPath('/services')} className={EXPLORE_LINK}>
+                                        {cta.explore_services}
+                                    </Link>
+                                );
+                            }
+                            if (part === '{industries}') {
+                                return (
+                                    <Link key={i} href={localizedPath('/industries')} className={EXPLORE_LINK}>
+                                        {cta.explore_industries}
+                                    </Link>
+                                );
+                            }
+                            return <span key={i}>{part}</span>;
+                        })}
+                    </p>
                 </ScrollReveal>
             </div>
         </section>

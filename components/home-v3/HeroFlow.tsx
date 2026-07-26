@@ -108,7 +108,7 @@ export function HeroFlow({ lang, hero }: HeroProps) {
                             <div className="flex flex-wrap items-center gap-[clamp(23px,1.82vw,32px)]">
                                 {/* Primary CTA scrolls down to the on-page Services overview (#services). */}
                                 <MorphCTA href="#services">{hero.cta}</MorphCTA>
-                                <GhostButton href={localizedPath('/contact')}>{hero.secondary_cta}</GhostButton>
+                                <GhostButton href="#cta">{hero.secondary_cta}</GhostButton>
                             </div>
                         </ScrollReveal>
                     </div>

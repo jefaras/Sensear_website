@@ -23,7 +23,6 @@ export default async function SitemapPageV3({ params }: { params: Promise<{ lang
     const { lang } = await params;
     const dict = await getDictionary(lang);
     const content = dict.sitemap_page;
-    const home = dict.home;
     const localizedPath = (path: string) => getLocalizedPath(lang, path);
     const em = lang === 'el' ? { directory: 'ιστότοπο', cta: 'ψάχνετε' } : { directory: 'site', cta: 'looking for' };
 
@@ -152,8 +151,6 @@ export default async function SitemapPageV3({ params }: { params: Promise<{ lang
                 ghostLabel={content.cta.faq_btn}
                 ghostHref={localizedPath('/faq')}
                 bgImage="/images/contact/contact-hero-venue-consultation.jpg"
-                phoneLine={home.contact_cta.phone_line}
-                location={content.cta.location}
             />
         </V3Root>
     );

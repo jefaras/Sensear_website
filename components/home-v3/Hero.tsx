@@ -81,7 +81,7 @@ export function Hero({ lang, hero }: HeroProps) {
                                 {/* Primary CTA scrolls down to the on-page Services overview (#services); the
                                     full /services page is reached from the CTA inside that section. */}
                                 <MorphCTA href="#services">{hero.cta}</MorphCTA>
-                                <GhostButton href={localizedPath('/contact')}>{hero.secondary_cta}</GhostButton>
+                                <GhostButton href="#cta">{hero.secondary_cta}</GhostButton>
                             </div>
                         </ScrollReveal>
 

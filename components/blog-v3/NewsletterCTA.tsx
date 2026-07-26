@@ -15,10 +15,9 @@ interface NewsletterCTAProps {
         location: string;
         background_image: string;
     };
-    phoneLine: string;
 }
 
-export function NewsletterCTA({ emWord, cta, phoneLine }: NewsletterCTAProps) {
+export function NewsletterCTA({ emWord, cta }: NewsletterCTAProps) {
     return (
         <section id="cta" className="relative overflow-hidden py-[clamp(122px,9.66vw,170px)]">
             <Image src={cta.background_image} alt="" fill aria-hidden="true" sizes="100vw" className="object-cover" />
@@ -42,15 +41,6 @@ export function NewsletterCTA({ emWord, cta, phoneLine }: NewsletterCTAProps) {
                         successText={cta.success}
                         source="Journal v3"
                     />
-                </ScrollReveal>
-                <ScrollReveal delay={0.3}>
-                    <div className="mt-[clamp(33px,2.61vw,46px)] text-[clamp(13px,0.91vw,16px)] tracking-[0.04em] text-[#faf6f1]/45">
-                        <a href="tel:+306976994212" className="text-inherit no-underline transition-colors hover:text-[#e3992f]">
-                            {phoneLine}
-                        </a>
-                        {' · '}
-                        {cta.location}
-                    </div>
                 </ScrollReveal>
             </div>
         </section>

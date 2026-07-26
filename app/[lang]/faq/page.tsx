@@ -54,8 +54,9 @@ export default async function FaqV3({ params }: { params: Promise<{ lang: Locale
                     title: ctaTitleHtml,
                     subtitle: content.cta.subtitle,
                     primary_cta: home.contact_cta.primary_cta,
-                    call_label: home.contact_cta.call_label,
-                    services_link: home.contact_cta.services_link,
+                    explore_template: home.contact_cta.explore_template,
+                    explore_services: home.contact_cta.explore_services,
+                    explore_industries: home.contact_cta.explore_industries,
                     background_image: '/images/contact/contact-hero-venue-consultation.jpg',
                 }}
             />

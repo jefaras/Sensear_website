@@ -21,7 +21,6 @@ export default async function IndustriesV3({ params }: { params: Promise<{ lang:
     const { lang } = await params;
     const dict = await getDictionary(lang);
     const content = dict.industries_page;
-    const home = dict.home;
     const localizedPath = (path: string) => getLocalizedPath(lang, path);
     const em = lang === 'el'
         ? { intro: 'ατμόσφαιρα', expertise: 'προσέγγιση', connect: 'κόσμους', cta: 'δυναμική' }
@@ -99,8 +98,6 @@ export default async function IndustriesV3({ params }: { params: Promise<{ lang:
                 ghostLabel={content.cta.services}
                 ghostHref={localizedPath('/services')}
                 bgImage="/images/industries/industries-hero.jpg"
-                phoneLine={home.contact_cta.phone_line}
-                location={content.cta.location}
             />
         </V3Root>
     );

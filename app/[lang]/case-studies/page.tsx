@@ -56,7 +56,6 @@ export default async function CaseStudiesV3({ params }: { params: Promise<{ lang
     const { lang } = await params;
     const dict = await getDictionary(lang);
     const content = dict.case_studies;
-    const home = dict.home;
     const localizedPath = (path: string) => getLocalizedPath(lang, path);
     const em = lang === 'el'
         ? { intro: 'πέρα', cases: 'διαδρομές', cta: 'ξεκινά εδώ' }
@@ -136,8 +135,6 @@ export default async function CaseStudiesV3({ params }: { params: Promise<{ lang
                 ghostLabel={content.cta.services}
                 ghostHref={localizedPath('/services')}
                 bgImage="/images/case-studies/case-studies-hero.jpg"
-                phoneLine={home.contact_cta.phone_line}
-                location={content.cta.location}
             />
         </V3Root>
     );

@@ -1,11 +1,8 @@
 import Image from 'next/image';
-import type { Locale } from '@/lib/i18n';
-import { getLocalizedPath } from '@/lib/localized-path';
-import { DriftOrb, GhostButton, MorphCTA, emphasizeHeadline } from '@/components/v3';
+import { DriftOrb, MorphCTA, emphasizeHeadline } from '@/components/v3';
 import { ScrollReveal } from '@/components/motion';
 
 interface HeroProps {
-    lang: Locale;
     hero: {
         title: string;
         subtitle: string;
@@ -20,7 +17,7 @@ interface HeroProps {
     };
 }
 
-export function Hero({ lang, hero }: HeroProps) {
+export function Hero({ hero }: HeroProps) {
     const emWord = 'soundtrack';
 
     return (
@@ -63,7 +60,6 @@ export function Hero({ lang, hero }: HeroProps) {
                         <ScrollReveal delay={0.45}>
                             <div className="flex flex-wrap items-center gap-[clamp(23px,1.82vw,32px)]">
                                 <MorphCTA href="#team">{hero.primary_cta}</MorphCTA>
-                                <GhostButton href={getLocalizedPath(lang, '/contact')}>{hero.secondary_cta}</GhostButton>
                             </div>
                         </ScrollReveal>
                     </div>

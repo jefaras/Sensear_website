@@ -21,7 +21,6 @@ export default async function BlogV3({ params }: { params: Promise<{ lang: Local
     const { lang } = await params;
     const dict = await getDictionary(lang);
     const content = dict.blog;
-    const home = dict.home;
     const localizedPath = (path: string) => getLocalizedPath(lang, path);
 
     const featuredArticle = content.articles[0];
@@ -65,7 +64,7 @@ export default async function BlogV3({ params }: { params: Promise<{ lang: Local
                 </div>
             </section>
 
-            <NewsletterCTA emWord={em.newsletter} cta={content.newsletter_cta} phoneLine={home.contact_cta.phone_line} />
+            <NewsletterCTA emWord={em.newsletter} cta={content.newsletter_cta} />
         </V3Root>
     );
 }

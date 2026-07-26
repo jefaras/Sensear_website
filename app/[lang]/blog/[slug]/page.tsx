@@ -59,7 +59,6 @@ export default async function BlogPostV3({ params }: { params: Promise<{ lang: L
         notFound();
     }
 
-    const home = dict.home;
     const backButtonText = (dict.blog as any).back_button || 'Back to Insights';
     const cta = (dict.blog as any).blog_cta || {};
     const articleMeta = (dict.blog as any).article || {};
@@ -217,8 +216,6 @@ export default async function BlogPostV3({ params }: { params: Promise<{ lang: L
                 primaryLabel={cta.button || ''}
                 primaryHref={localizedPath('/contact')}
                 bgImage="/images/homepage/sensear-signature-playlist-service.jpg"
-                phoneLine={home.contact_cta.phone_line}
-                location={lang === 'el' ? 'Αθήνα, Ελλάδα' : 'Athens, Greece'}
             />
         </V3Root>
     );

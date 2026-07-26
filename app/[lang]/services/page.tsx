@@ -21,7 +21,6 @@ export default async function ServicesV3({ params }: { params: Promise<{ lang: L
     const { lang } = await params;
     const dict = await getDictionary(lang);
     const content = dict.services_page;
-    const home = dict.home;
     const localizedPath = (path: string) => getLocalizedPath(lang, path);
     const em = lang === 'el'
         ? { intro: 'επιχείρησή', services: 'εκκίνησής', delivery: 'λειτουργούν', cta: 'αφετηρία' }
@@ -117,8 +116,6 @@ export default async function ServicesV3({ params }: { params: Promise<{ lang: L
                 ghostLabel={content.cta.industries_btn}
                 ghostHref={localizedPath('/industries')}
                 bgImage="/images/services/services-hero-strategic-music.jpg"
-                phoneLine={home.contact_cta.phone_line}
-                location={content.cta.location}
             />
         </V3Root>
     );
