@@ -3,7 +3,7 @@ import { getDictionary } from '@/lib/dictionary';
 import { type Locale } from '@/lib/i18n';
 import { getLocalizedPath } from '@/lib/localized-path';
 import { localeAlternates } from '@/lib/seo';
-import { DriftOrb, Kicker, PageCTA, V3Root, emphasize } from '@/components/v3';
+import { DriftOrb, PageCTA, V3Root, emphasize } from '@/components/v3';
 import { ScrollReveal } from '@/components/motion';
 import { Hero, IndustryRow, WhatConnects } from '@/components/industries-v3';
 
@@ -39,9 +39,6 @@ export default async function IndustriesV3({ params }: { params: Promise<{ lang:
                     duration={21}
                 />
                 <div className="relative z-10 mx-auto max-w-[1240px] px-[clamp(27px,2.1vw,37px)] text-center">
-                    <ScrollReveal>
-                        <Kicker className="mb-[clamp(28px,2.22vw,39px)] justify-center">{content.intro.kicker}</Kicker>
-                    </ScrollReveal>
                     <ScrollReveal delay={0.06}>
                         <h2 className="mb-[clamp(28px,2.22vw,39px)] text-[clamp(2.19rem,4.6vw,3.68rem)] font-extrabold leading-[1.08] tracking-[-0.02em]">
                             {emphasize(content.intro.title, em.intro)}
@@ -69,9 +66,6 @@ export default async function IndustriesV3({ params }: { params: Promise<{ lang:
                 />
                 <div className="relative z-10 mx-auto max-w-[min(1760px,100%)] px-[clamp(20px,1.59vw,28px)] sm:px-[clamp(27px,2.1vw,37px)]">
                     <div className="mx-auto mb-[clamp(72px,5.68vw,100px)] max-w-[900px] text-center">
-                        <ScrollReveal>
-                            <Kicker className="mb-[clamp(15px,1.19vw,21px)] justify-center">{content.expertise.kicker}</Kicker>
-                        </ScrollReveal>
                         <ScrollReveal delay={0.06}>
                             <h2 className="mb-[clamp(15px,1.19vw,21px)] text-[clamp(2.3rem,4.6vw,3.91rem)] font-extrabold leading-[1.05] tracking-[-0.02em]">
                                 {emphasize(content.expertise.title, em.expertise)}
@@ -97,7 +91,6 @@ export default async function IndustriesV3({ params }: { params: Promise<{ lang:
             <WhatConnects emWord={em.connect} connect={content.connect} />
 
             <PageCTA
-                kicker={content.cta.kicker}
                 heading={content.cta.title}
                 emWord={em.cta}
                 lede={content.cta.subtitle}

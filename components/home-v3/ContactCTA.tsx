@@ -3,12 +3,11 @@ import { Phone } from 'lucide-react';
 import { Locale } from '@/lib/i18n';
 import { getLocalizedPath } from '@/lib/localized-path';
 import { ScrollReveal } from '@/components/motion';
-import { GhostButton, Kicker, MorphCTA } from '@/components/v3';
+import { GhostButton, MorphCTA } from '@/components/v3';
 
 interface ContactCTAProps {
     lang: Locale;
     cta: {
-        kicker: string;
         title: string;
         subtitle: string;
         primary_cta: string;
@@ -33,11 +32,6 @@ export function ContactCTA({ lang, cta }: ContactCTAProps) {
             />
             <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(11,10,10,0.82),rgba(11,10,10,0.92))]" />
             <div className="relative z-10 mx-auto max-w-[min(1760px,100%)] px-[clamp(20px,1.59vw,28px)] text-center sm:px-[clamp(27px,2.1vw,37px)]">
-                <ScrollReveal>
-                    <Kicker variant="gold" className="mb-[clamp(22px,1.7vw,30px)] justify-center">
-                        {cta.kicker}
-                    </Kicker>
-                </ScrollReveal>
                 <ScrollReveal delay={0.08}>
                     <h2
                         className="se-html mx-auto mb-[clamp(25px,1.99vw,35px)] max-w-[1130px] text-[clamp(2.76rem,6.32vw,5.29rem)] font-extrabold leading-[1.02] tracking-[-0.025em]"

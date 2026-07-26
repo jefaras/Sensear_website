@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import type { Locale } from '@/lib/i18n';
 import { getLocalizedPath } from '@/lib/localized-path';
-import { DriftOrb, GhostButton, Kicker, MorphCTA, PageCTA, emphasize } from '@/components/v3';
+import { DriftOrb, GhostButton, MorphCTA, PageCTA, emphasize } from '@/components/v3';
 import { ScrollReveal, StaggerChildren } from '@/components/motion';
 
 interface Section5 {
@@ -142,9 +142,6 @@ export function ServiceDetail({ lang, content, section5, images, em, phoneLine, 
                     duration={21}
                 />
                 <div className="relative z-10 mx-auto max-w-[1080px] px-[clamp(27px,2.1vw,37px)] text-center">
-                    <ScrollReveal>
-                        <Kicker className="mb-[clamp(28px,2.22vw,39px)] justify-center">{content.intro.kicker}</Kicker>
-                    </ScrollReveal>
                     <ScrollReveal delay={0.06}>
                         <h2 className="mb-[clamp(28px,2.22vw,39px)] text-[clamp(1.9rem,4vw,3.2rem)] font-extrabold leading-[1.1] tracking-[-0.02em]">
                             {emphasize(content.intro.title, em.statement, true)}
@@ -175,9 +172,6 @@ export function ServiceDetail({ lang, content, section5, images, em, phoneLine, 
                             </div>
                         </ScrollReveal>
                         <div>
-                            <ScrollReveal>
-                                <Kicker className="mb-[clamp(15px,1.19vw,21px)]">{content.what_we_do.kicker}</Kicker>
-                            </ScrollReveal>
                             <ScrollReveal delay={0.06}>
                                 <h2 className="mb-[clamp(28px,2.22vw,39px)] text-[clamp(2rem,3.6vw,3rem)] font-extrabold leading-[1.1] tracking-[-0.02em]">
                                     {emphasize(content.what_we_do.title, em.feature)}
@@ -199,9 +193,6 @@ export function ServiceDetail({ lang, content, section5, images, em, phoneLine, 
                 <div className="relative z-10 mx-auto max-w-[min(1760px,100%)] px-[clamp(20px,1.59vw,28px)] sm:px-[clamp(27px,2.1vw,37px)]">
                     <div className="grid grid-cols-1 items-center gap-[clamp(53px,4.2vw,74px)] lg:grid-cols-[1.05fr_0.95fr]">
                         <div>
-                            <ScrollReveal>
-                                <Kicker className="mb-[clamp(15px,1.19vw,21px)]">{content.perfect_for.kicker}</Kicker>
-                            </ScrollReveal>
                             <ScrollReveal delay={0.06}>
                                 <h2 className="mb-[clamp(28px,2.22vw,39px)] text-[clamp(2rem,3.6vw,3rem)] font-extrabold leading-[1.1] tracking-[-0.02em]">
                                     {emphasize(content.perfect_for.title, em.forwhom)}
@@ -248,9 +239,6 @@ export function ServiceDetail({ lang, content, section5, images, em, phoneLine, 
                             </div>
                         </ScrollReveal>
                         <div>
-                            <ScrollReveal>
-                                <Kicker className="mb-[clamp(15px,1.19vw,21px)]">{section5.kicker}</Kicker>
-                            </ScrollReveal>
                             <ScrollReveal delay={0.06}>
                                 <h2 className="mb-[clamp(28px,2.22vw,39px)] text-[clamp(2rem,3.6vw,3rem)] font-extrabold leading-[1.1] tracking-[-0.02em]">
                                     {emphasize(section5.title, em.section5)}
@@ -264,7 +252,6 @@ export function ServiceDetail({ lang, content, section5, images, em, phoneLine, 
 
             {/* 6. Contact CTA */}
             <PageCTA
-                kicker={content.cta.kicker}
                 heading={content.cta.title}
                 emWord={em.cta}
                 lede={content.cta.description}

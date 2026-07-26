@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { getDictionary } from '@/lib/dictionary';
 import { type Locale } from '@/lib/i18n';
 import { ContactForm } from '@/components/ContactForm';
-import { DriftOrb, Kicker, V3Root, emphasize } from '@/components/v3';
+import { DriftOrb, V3Root, emphasize } from '@/components/v3';
 import { ScrollReveal } from '@/components/motion';
 import { localeAlternates } from '@/lib/seo';
 import { Details, Faq, Hero } from '@/components/contact-v3';
@@ -40,9 +40,6 @@ export default async function ContactV3({ params }: { params: Promise<{ lang: Lo
                 />
                 <div className="relative z-10 mx-auto max-w-[1040px] px-[clamp(20px,1.59vw,28px)] sm:px-[clamp(27px,2.1vw,37px)]">
                     <div className="mx-auto mb-[clamp(40px,3.12vw,55px)] max-w-[760px] text-center">
-                        <ScrollReveal>
-                            <Kicker className="mb-[clamp(15px,1.19vw,21px)] justify-center">{c.form_section.kicker}</Kicker>
-                        </ScrollReveal>
                         <ScrollReveal delay={0.06}>
                             <h2 className="mb-[clamp(15px,1.19vw,21px)] text-[clamp(2rem,4vw,3.2rem)] font-extrabold leading-[1.08] tracking-[-0.02em]">
                                 {emphasize(c.intro.title, em.intro)}

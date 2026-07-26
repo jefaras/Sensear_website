@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { Building2, Heart, Lightbulb, SlidersHorizontal } from 'lucide-react';
-import { DriftOrb, Kicker } from '@/components/v3';
+import { DriftOrb } from '@/components/v3';
 import { ScrollReveal, StaggerChildren } from '@/components/motion';
 
 const ICONS = [Lightbulb, Building2, SlidersHorizontal, Heart];
@@ -40,9 +40,6 @@ export function Differentiators({ content }: DifferentiatorsProps) {
                     </ScrollReveal>
 
                     <div className="order-1 lg:order-2">
-                        <ScrollReveal>
-                            <Kicker className="mb-[clamp(15px,1.19vw,21px)]">{content.kicker}</Kicker>
-                        </ScrollReveal>
                         <ScrollReveal delay={0.06}>
                             <h2
                                 className="se-html mb-[clamp(15px,1.19vw,21px)] text-[clamp(2.3rem,4.6vw,3.91rem)] font-extrabold leading-[1.05] tracking-[-0.02em]"

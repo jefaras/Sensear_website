@@ -3,7 +3,7 @@ import { getDictionary } from '@/lib/dictionary';
 import { type Locale } from '@/lib/i18n';
 import { getLocalizedPath } from '@/lib/localized-path';
 import { localeAlternates } from '@/lib/seo';
-import { DriftOrb, Kicker, V3Root, emphasize } from '@/components/v3';
+import { DriftOrb, V3Root, emphasize } from '@/components/v3';
 import { ScrollReveal, StaggerChildren } from '@/components/motion';
 import { ArticleCard, Hero, NewsletterCTA } from '@/components/blog-v3';
 
@@ -50,9 +50,6 @@ export default async function BlogV3({ params }: { params: Promise<{ lang: Local
                 />
                 <div className="relative z-10 mx-auto max-w-[min(1760px,100%)] px-[clamp(20px,1.59vw,28px)] sm:px-[clamp(27px,2.1vw,37px)]">
                     <div className="mb-[clamp(46px,3.64vw,64px)]">
-                        <ScrollReveal>
-                            <Kicker className="mb-[clamp(15px,1.19vw,21px)]">{content.recent.kicker}</Kicker>
-                        </ScrollReveal>
                         <ScrollReveal delay={0.06}>
                             <h2 className="max-w-[830px] text-[clamp(2.3rem,4.6vw,3.91rem)] font-extrabold leading-[1.05] tracking-[-0.02em]">
                                 {emphasize(content.recent.headline, em.recent)}

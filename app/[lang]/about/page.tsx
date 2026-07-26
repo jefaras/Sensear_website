@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { Fragment, type ReactNode } from 'react';
 import { getDictionary } from '@/lib/dictionary';
 import { type Locale } from '@/lib/i18n';
-import { DriftOrb, Kicker, PageCTA, V3Root, emphasize } from '@/components/v3';
+import { DriftOrb, PageCTA, V3Root, emphasize } from '@/components/v3';
 import { ScrollReveal } from '@/components/motion';
 import { getLocalizedPath } from '@/lib/localized-path';
 import { localeAlternates } from '@/lib/seo';
@@ -77,9 +77,6 @@ export default async function AboutV3({ params }: { params: Promise<{ lang: Loca
                     duration={21}
                 />
                 <div className="relative z-10 mx-auto max-w-[min(1760px,100%)] px-[clamp(20px,1.59vw,28px)] text-center sm:px-[clamp(27px,2.1vw,37px)]">
-                    <ScrollReveal>
-                        <Kicker className="mb-[clamp(28px,2.22vw,39px)] justify-center">{content.vision.kicker}</Kicker>
-                    </ScrollReveal>
                     <ScrollReveal delay={0.06}>
                         <h2 className="mx-auto max-w-[1060px] text-[clamp(1.96rem,3.91vw,3.34rem)] font-extrabold leading-[1.18] tracking-[-0.018em]">
                             {emphasize(stripTags(content.vision.text), em.vision)}
@@ -97,9 +94,6 @@ export default async function AboutV3({ params }: { params: Promise<{ lang: Loca
                     reverse
                 />
                 <div className="relative z-10 mx-auto max-w-[1150px] px-[clamp(27px,2.1vw,37px)] text-center">
-                    <ScrollReveal>
-                        <Kicker className="mb-[clamp(25px,1.99vw,35px)] justify-center">{content.philosophy.kicker}</Kicker>
-                    </ScrollReveal>
                     <ScrollReveal delay={0.06}>
                         <p className="text-[clamp(1.61rem,2.99vw,2.42rem)] leading-[1.42] text-[#faf6f1]">
                             {philosophyRuns(content.philosophy.text)}
@@ -119,9 +113,6 @@ export default async function AboutV3({ params }: { params: Promise<{ lang: Loca
                 />
                 <div className="relative z-10 mx-auto max-w-[min(1760px,100%)] px-[clamp(20px,1.59vw,28px)] sm:px-[clamp(27px,2.1vw,37px)]">
                     <div className="mx-auto mb-[clamp(72px,5.68vw,100px)] max-w-[900px] text-center">
-                        <ScrollReveal>
-                            <Kicker className="mb-[clamp(15px,1.19vw,21px)] justify-center">{content.team.kicker}</Kicker>
-                        </ScrollReveal>
                         <ScrollReveal delay={0.06}>
                             <h2
                                 className="se-html text-[clamp(2.3rem,4.6vw,3.91rem)] font-extrabold leading-[1.05] tracking-[-0.02em]"
@@ -155,7 +146,6 @@ export default async function AboutV3({ params }: { params: Promise<{ lang: Loca
             <Differentiators content={content.differentiators} />
 
             <PageCTA
-                kicker={content.final_cta.kicker}
                 heading={content.final_cta.heading}
                 emWord={em.cta}
                 lede={content.final_cta.lede}

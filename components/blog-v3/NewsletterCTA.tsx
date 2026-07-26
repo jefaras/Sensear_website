@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { NewsletterForm } from '@/components/NewsletterForm';
-import { Kicker, emphasize } from '@/components/v3';
+import { emphasize } from '@/components/v3';
 import { ScrollReveal } from '@/components/motion';
 
 interface NewsletterCTAProps {
@@ -24,11 +24,6 @@ export function NewsletterCTA({ emWord, cta, phoneLine }: NewsletterCTAProps) {
             <Image src={cta.background_image} alt="" fill aria-hidden="true" sizes="100vw" className="object-cover" />
             <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(11,10,10,0.82),rgba(11,10,10,0.93))]" />
             <div className="relative z-10 mx-auto max-w-[min(1760px,100%)] px-[clamp(20px,1.59vw,28px)] text-center sm:px-[clamp(27px,2.1vw,37px)]">
-                <ScrollReveal>
-                    <Kicker variant="gold" className="mb-[clamp(22px,1.7vw,30px)] justify-center">
-                        {cta.kicker}
-                    </Kicker>
-                </ScrollReveal>
                 <ScrollReveal delay={0.08}>
                     <h2 className="mx-auto mb-[clamp(23px,1.82vw,32px)] max-w-[1060px] text-[clamp(2.76rem,6.33vw,5.06rem)] font-extrabold leading-[1.04] tracking-[-0.025em]">
                         {emphasize(cta.title, emWord)}

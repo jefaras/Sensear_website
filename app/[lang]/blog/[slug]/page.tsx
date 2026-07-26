@@ -211,7 +211,6 @@ export default async function BlogPostV3({ params }: { params: Promise<{ lang: L
             </Prose>
 
             <PageCTA
-                kicker={articleMeta.cta_kicker || ''}
                 heading={cta.title || ''}
                 emWord={ctaEmWord}
                 lede={cta.description || ''}

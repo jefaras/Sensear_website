@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { Locale } from '@/lib/i18n';
 import { getLocalizedPath } from '@/lib/localized-path';
 import { ScrollReveal, StaggerChildren } from '@/components/motion';
-import { GhostButton, Kicker, emphasize } from '@/components/v3';
+import { GhostButton, emphasize } from '@/components/v3';
 
 interface BlogArticle {
     title: string;
@@ -14,7 +14,6 @@ interface BlogArticle {
 
 interface JournalProps {
     lang: Locale;
-    kicker: string;
     headline: string;
     allArticles: string;
     articles: BlogArticle[];
@@ -26,7 +25,7 @@ const ARTICLE_IMAGES = [
     '/images/homepage/blog-music-hospitality-brand.jpg',
 ];
 
-export function Journal({ lang, kicker, headline, allArticles, articles }: JournalProps) {
+export function Journal({ lang, headline, allArticles, articles }: JournalProps) {
     const localizedPath = (path: string) => getLocalizedPath(lang, path);
     const emWord = lang === 'el' ? 'διαμορφώνει' : 'shapes';
 
@@ -45,9 +44,6 @@ export function Journal({ lang, kicker, headline, allArticles, articles }: Journ
             />
             <div className="relative z-10 mx-auto max-w-[min(1760px,100%)] px-[clamp(20px,1.59vw,28px)] sm:px-[clamp(27px,2.1vw,37px)]">
                 <div className="mb-[clamp(46px,3.64vw,64px)]">
-                    <ScrollReveal>
-                        <Kicker className="mb-[clamp(15px,1.19vw,21px)]">{kicker}</Kicker>
-                    </ScrollReveal>
                     <ScrollReveal delay={0.06}>
                         <h2 className="max-w-[780px] text-[clamp(2.18rem,4.14vw,3.45rem)] font-extrabold leading-[1.05] tracking-[-0.02em]">
                             {emphasize(headline, emWord)}

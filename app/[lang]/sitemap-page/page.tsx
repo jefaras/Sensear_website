@@ -5,7 +5,7 @@ import { getDictionary } from '@/lib/dictionary';
 import { type Locale } from '@/lib/i18n';
 import { getLocalizedPath } from '@/lib/localized-path';
 import { localeAlternates } from '@/lib/seo';
-import { DriftOrb, Kicker, PageCTA, V3Root, emphasize } from '@/components/v3';
+import { DriftOrb, PageCTA, V3Root, emphasize } from '@/components/v3';
 import { ScrollReveal, StaggerChildren } from '@/components/motion';
 import { DirectoryCard } from '@/components/sitemap-v3';
 
@@ -92,9 +92,6 @@ export default async function SitemapPageV3({ params }: { params: Promise<{ lang
                 <div className="mx-auto w-full max-w-[min(1760px,100%)] pl-[clamp(20px,1.59vw,28px)] pr-[clamp(20px,1.59vw,28px)] sm:px-[clamp(27px,2.1vw,37px)] lg:pl-[clamp(70px,5.51vw,97px)]">
                     <div className="grid grid-cols-1 items-center gap-[clamp(40px,3.12vw,55px)] lg:grid-cols-[1.05fr_0.95fr] lg:gap-[clamp(46px,3.64vw,64px)]">
                         <div>
-                            <ScrollReveal>
-                                <Kicker variant="hero" className="mb-[clamp(25px,1.99vw,35px)]">{content.hero.kicker}</Kicker>
-                            </ScrollReveal>
                             <ScrollReveal delay={0.15}>
                                 <h1 className="mb-[clamp(25px,1.99vw,35px)] text-[clamp(2.99rem,6.21vw,5.64rem)] font-extrabold leading-[1.02] tracking-[-0.022em]">
                                     {content.hero.title}
@@ -131,9 +128,6 @@ export default async function SitemapPageV3({ params }: { params: Promise<{ lang
                 <DriftOrb className="h-[46vw] max-h-[640px] w-[46vw] max-w-[640px]" style={{ top: '6%', right: '-6%', background: 'radial-gradient(circle,rgba(240,189,149,0.10),rgba(240,189,149,0) 62%)' }} duration={23} />
                 <div className="relative z-10 mx-auto max-w-[1200px] px-[clamp(20px,1.59vw,28px)] sm:px-[clamp(27px,2.1vw,37px)]">
                     <div className="mx-auto mb-[clamp(46px,3.64vw,64px)] max-w-[920px] text-center">
-                        <ScrollReveal>
-                            <Kicker className="mb-[clamp(15px,1.19vw,21px)] justify-center">{content.directory_kicker}</Kicker>
-                        </ScrollReveal>
                         <ScrollReveal delay={0.06}>
                             <h2 className="text-[clamp(2rem,4vw,3.4rem)] font-extrabold leading-[1.08] tracking-[-0.02em]">
                                 {emphasize(content.directory_title, em.directory)}
@@ -150,7 +144,6 @@ export default async function SitemapPageV3({ params }: { params: Promise<{ lang
             </section>
 
             <PageCTA
-                kicker={content.cta_kicker}
                 heading={content.cta.title}
                 emWord={em.cta}
                 lede={content.cta.text}

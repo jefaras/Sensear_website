@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { Locale } from '@/lib/i18n';
 import { getLocalizedPath } from '@/lib/localized-path';
 import { ScrollReveal } from '@/components/motion';
-import { DriftOrb, Kicker, MorphCTA, emphasize } from '@/components/v3';
+import { DriftOrb, MorphCTA, emphasize } from '@/components/v3';
 
 interface ServiceItem {
     title: string;
@@ -20,7 +20,6 @@ interface ServicePreview {
 
 interface ServicesProps {
     lang: Locale;
-    kicker: string;
     title: string;
     subtitle: string;
     items: ServiceItem[];
@@ -31,7 +30,7 @@ interface ServicesProps {
 
 const DEFAULT_PREVIEW_IMG = '/images/about/about-journey-team-collaboration.jpg';
 
-export function Services({ lang, kicker, title, subtitle, items, previewPlaceholder, previews, cta }: ServicesProps) {
+export function Services({ lang, title, subtitle, items, previewPlaceholder, previews, cta }: ServicesProps) {
     const localizedPath = (path: string) => getLocalizedPath(lang, path);
     const emWord = lang === 'el' ? 'αναβαθμίζουμε' : 'reimagine';
     const [hovered, setHovered] = useState<number | null>(null);
@@ -54,9 +53,6 @@ export function Services({ lang, kicker, title, subtitle, items, previewPlacehol
                 reverse
             />
             <div className="relative z-10 mx-auto max-w-[min(1760px,100%)] px-[clamp(20px,1.59vw,28px)] sm:px-[clamp(27px,2.1vw,37px)]">
-                <ScrollReveal>
-                    <Kicker className="mb-[clamp(15px,1.19vw,21px)]">{kicker}</Kicker>
-                </ScrollReveal>
                 <ScrollReveal delay={0.06}>
                     <h2 className="mb-[clamp(15px,1.19vw,21px)] max-w-[1040px] text-[clamp(2.3rem,4.6vw,3.91rem)] font-extrabold leading-[1.04] tracking-[-0.02em]">
                         {emphasize(title, emWord)}

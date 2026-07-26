@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import type { Locale } from '@/lib/i18n';
 import { getLocalizedPath } from '@/lib/localized-path';
-import { DriftOrb, Kicker, emphasize } from '@/components/v3';
+import { DriftOrb, emphasize } from '@/components/v3';
 import { ScrollReveal, StaggerChildren } from '@/components/motion';
 
 interface FaqProps {
@@ -37,9 +37,6 @@ export function Faq({ lang, emWord, faq }: FaqProps) {
             <DriftOrb className="h-[44vw] max-h-[620px] w-[44vw] max-w-[620px]" style={{ bottom: '4%', right: '-6%', background: 'radial-gradient(circle,rgba(250,235,227,0.07),rgba(250,235,227,0) 62%)' }} duration={20} reverse />
             <div className="relative z-10 mx-auto max-w-[880px] px-[clamp(20px,1.59vw,28px)] sm:px-[clamp(27px,2.1vw,37px)]">
                 <div className="mb-[clamp(40px,3.12vw,55px)] text-center">
-                    <ScrollReveal>
-                        <Kicker className="mb-[clamp(15px,1.19vw,21px)] justify-center">{faq.kicker}</Kicker>
-                    </ScrollReveal>
                     <ScrollReveal delay={0.06}>
                         <h2 className="mb-[clamp(15px,1.19vw,21px)] text-[clamp(2.2rem,4.5vw,3.4rem)] font-extrabold leading-[1.05] tracking-[-0.02em]">
                             {emphasize(faq.title, emWord)}

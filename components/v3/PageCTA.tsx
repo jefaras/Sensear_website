@@ -1,12 +1,10 @@
 import Image from 'next/image';
 import { ScrollReveal } from '@/components/motion';
 import { GhostButton } from './GhostButton';
-import { Kicker } from './Kicker';
 import { MorphCTA } from './MorphCTA';
 import { emphasize } from './emphasize';
 
 interface PageCTAProps {
-    kicker: string;
     heading: string;
     /** Per-locale word inside `heading` to render in Didot italic gold. */
     emWord: string;
@@ -23,22 +21,17 @@ interface PageCTAProps {
 }
 
 /**
- * Shared full-bleed dark CTA band (kicker → H2 → lede → primary + ghost →
+ * Shared full-bleed dark CTA band (H2 → lede → primary + ghost →
  * phone/location line) — the prop-driven ContactCTA primitive from the v3 plan,
  * reused by the About/Services/... demo pages with per-page copy and links.
  */
-export function PageCTA({ kicker, heading, emWord, lede, primaryLabel, primaryHref, ghostLabel, ghostHref, bgImage, phoneLine, location }: PageCTAProps) {
+export function PageCTA({ heading, emWord, lede, primaryLabel, primaryHref, ghostLabel, ghostHref, bgImage, phoneLine, location }: PageCTAProps) {
     const hasGhost = Boolean(ghostLabel && ghostHref);
     return (
         <section id="cta" className="relative overflow-hidden py-[clamp(122px,9.66vw,170px)]">
             <Image src={bgImage} alt="" fill aria-hidden="true" sizes="100vw" className="object-cover" />
             <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(11,10,10,0.82),rgba(11,10,10,0.93))]" />
             <div className="relative z-10 mx-auto max-w-[min(1760px,100%)] px-[clamp(20px,1.59vw,28px)] text-center sm:px-[clamp(27px,2.1vw,37px)]">
-                <ScrollReveal>
-                    <Kicker variant="gold" className="mb-[clamp(22px,1.7vw,30px)] justify-center">
-                        {kicker}
-                    </Kicker>
-                </ScrollReveal>
                 <ScrollReveal delay={0.08}>
                     <h2 className="mx-auto mb-[clamp(23px,1.82vw,32px)] max-w-[1060px] text-[clamp(2.76rem,6.33vw,5.06rem)] font-extrabold leading-[1.04] tracking-[-0.025em]">
                         {emphasize(heading, emWord)}

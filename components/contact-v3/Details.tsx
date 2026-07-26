@@ -1,7 +1,7 @@
 'use client';
 
 import { Facebook, Instagram, Linkedin, Mail, MapPin, Phone } from 'lucide-react';
-import { DriftOrb, Kicker, emphasize } from '@/components/v3';
+import { DriftOrb, emphasize } from '@/components/v3';
 import { ScrollReveal, StaggerChildren } from '@/components/motion';
 
 interface InfoEntry { label: string; value: string; note: string }
@@ -36,9 +36,6 @@ export function Details({ emWord, contactInfo }: DetailsProps) {
             <DriftOrb className="h-[46vw] max-h-[640px] w-[46vw] max-w-[640px]" style={{ top: '8%', left: '-6%', background: 'radial-gradient(circle,rgba(240,189,149,0.10),rgba(240,189,149,0) 62%)' }} duration={21} />
             <div className="relative z-10 mx-auto max-w-[min(1760px,100%)] px-[clamp(20px,1.59vw,28px)] sm:px-[clamp(27px,2.1vw,37px)]">
                 <div className="mx-auto mb-[clamp(46px,3.64vw,64px)] max-w-[880px] text-center">
-                    <ScrollReveal>
-                        <Kicker className="mb-[clamp(15px,1.19vw,21px)] justify-center">{contactInfo.kicker}</Kicker>
-                    </ScrollReveal>
                     <ScrollReveal delay={0.06}>
                         <h2 className="text-[clamp(2rem,3.8vw,3.2rem)] font-extrabold leading-[1.08] tracking-[-0.02em]">
                             {emphasize(contactInfo.heading, emWord)}

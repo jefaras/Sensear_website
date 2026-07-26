@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { DriftOrb, Kicker, emphasize } from '@/components/v3';
+import { DriftOrb, emphasize } from '@/components/v3';
 import { ScrollReveal, StaggerChildren } from '@/components/motion';
 
 const bold = (text: string) => text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
@@ -27,9 +27,6 @@ export function Journey({ emWord, journey }: JourneyProps) {
             <div className="relative z-10 mx-auto max-w-[min(1760px,100%)] px-[clamp(20px,1.59vw,28px)] sm:px-[clamp(27px,2.1vw,37px)]">
                 <div className="grid grid-cols-1 items-start gap-[clamp(60px,4.72vw,83px)] lg:grid-cols-[1.1fr_0.9fr]">
                     <div>
-                        <ScrollReveal>
-                            <Kicker className="mb-[clamp(15px,1.19vw,21px)]">{journey.kicker}</Kicker>
-                        </ScrollReveal>
                         <ScrollReveal delay={0.06}>
                             <h2 className="mb-[clamp(13px,1.02vw,18px)] text-[clamp(2.3rem,4.6vw,3.91rem)] font-extrabold leading-[1.05] tracking-[-0.02em]">
                                 {emphasize(journey.subtitle, emWord)}

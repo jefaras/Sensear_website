@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import type { Locale } from '@/lib/i18n';
-import { DriftOrb, Kicker } from '@/components/v3';
+import { DriftOrb } from '@/components/v3';
 import { ScrollReveal } from '@/components/motion';
 
 interface HeroProps {
@@ -14,10 +14,9 @@ interface HeroProps {
         image_caption: string;
         badge: string[];
     };
-    sectionKicker: string;
 }
 
-export function Hero({ lang, hero, sectionKicker }: HeroProps) {
+export function Hero({ lang, hero }: HeroProps) {
     return (
         <section className="relative flex min-h-[92vh] items-center overflow-hidden py-[clamp(108px,8.52vw,150px)] pb-[clamp(58px,4.6vw,81px)]">
             <DriftOrb
@@ -43,12 +42,6 @@ export function Hero({ lang, hero, sectionKicker }: HeroProps) {
             <div className="mx-auto w-full max-w-[min(1760px,100%)] pl-[clamp(20px,1.59vw,28px)] pr-[clamp(20px,1.59vw,28px)] sm:px-[clamp(27px,2.1vw,37px)] lg:pl-[clamp(70px,5.51vw,97px)]">
                 <div className="grid grid-cols-1 items-center gap-[clamp(40px,3.12vw,55px)] lg:grid-cols-[1.05fr_0.95fr] lg:gap-[clamp(46px,3.64vw,64px)]">
                     <div>
-                        <ScrollReveal>
-                            <Kicker variant="hero" className="mb-[clamp(25px,1.99vw,35px)]">
-                                {hero.kicker} — {sectionKicker}
-                            </Kicker>
-                        </ScrollReveal>
-
                         <ScrollReveal delay={0.15}>
                             <h1 className="mb-[clamp(25px,1.99vw,35px)] text-[clamp(3.33rem,6.9vw,6.21rem)] font-extrabold leading-[0.98] tracking-[-0.022em]">
                                 {hero.title}

@@ -1,11 +1,10 @@
 import Image from 'next/image';
 import { Locale } from '@/lib/i18n';
 import { ScrollReveal } from '@/components/motion';
-import { Kicker, emphasize } from '@/components/v3';
+import { emphasize } from '@/components/v3';
 
 interface VenuesProps {
     lang: Locale;
-    kicker: string;
     title: string;
 }
 
@@ -70,7 +69,7 @@ function ClientCard({ client }: { client: Client }) {
     );
 }
 
-export function Venues({ lang, kicker, title }: VenuesProps) {
+export function Venues({ lang, title }: VenuesProps) {
     const emWord = lang === 'el' ? 'εμπιστεύονται' : 'Greece';
 
     const Row = () => (
@@ -84,9 +83,6 @@ export function Venues({ lang, kicker, title }: VenuesProps) {
     return (
         <section className="border-y border-[#faf6f1]/8 bg-[#0b0a0a] py-[clamp(94px,7.39vw,130px)]">
             <div className="mx-auto max-w-[min(1760px,100%)] px-[clamp(20px,1.59vw,28px)] sm:px-[clamp(27px,2.1vw,37px)]">
-                <ScrollReveal>
-                    <Kicker className="mb-[clamp(15px,1.19vw,21px)]">{kicker}</Kicker>
-                </ScrollReveal>
                 <ScrollReveal delay={0.06}>
                     <h2 className="mb-[clamp(53px,4.2vw,74px)] max-w-[870px] text-[clamp(2.18rem,4.14vw,3.45rem)] font-extrabold leading-[1.05] tracking-[-0.02em]">
                         {emphasize(title, emWord)}

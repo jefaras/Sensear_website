@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { DriftOrb, GhostButton, Kicker, MorphCTA, emphasizeHeadline } from '@/components/v3';
+import { DriftOrb, GhostButton, MorphCTA, emphasizeHeadline } from '@/components/v3';
 import { ScrollReveal } from '@/components/motion';
 import type { Locale } from '@/lib/i18n';
 
@@ -30,9 +30,6 @@ export function Hero({ lang, hero }: HeroProps) {
             <div className="mx-auto w-full max-w-[min(1760px,100%)] pl-[clamp(20px,1.59vw,28px)] pr-[clamp(20px,1.59vw,28px)] sm:px-[clamp(27px,2.1vw,37px)] lg:pl-[clamp(70px,5.51vw,97px)]">
                 <div className="grid grid-cols-1 items-center gap-[clamp(40px,3.12vw,55px)] lg:grid-cols-[1.05fr_0.95fr] lg:gap-[clamp(46px,3.64vw,64px)]">
                     <div>
-                        <ScrollReveal>
-                            <Kicker variant="hero" className="mb-[clamp(25px,1.99vw,35px)]">{hero.kicker}</Kicker>
-                        </ScrollReveal>
                         <ScrollReveal delay={0.15}>
                             <h1 className="mb-[clamp(25px,1.99vw,35px)] text-[clamp(2.99rem,6.21vw,5.64rem)] font-extrabold leading-[1.02] tracking-[-0.022em]">
                                 {emphasizeHeadline(hero.title, emWord)}

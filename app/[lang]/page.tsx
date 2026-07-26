@@ -46,10 +46,9 @@ export default async function HomeV3({
                 <Hero lang={lang} hero={home.hero} />
             )}
             <Marquee items={home.marquee} />
-            <About kicker={home.about.kicker} p1={home.intro.p1} p2={home.intro.p2} />
+            <About p1={home.intro.p1} p2={home.intro.p2} />
             <Services
                 lang={lang}
-                kicker={home.services.kicker}
                 title={home.services.title}
                 subtitle={home.services.subtitle}
                 items={home.services.items}
@@ -59,7 +58,6 @@ export default async function HomeV3({
             />
             <IndustriesGrid
                 lang={lang}
-                kicker={home.expertise.kicker}
                 title={home.expertise.title}
                 subtitle={home.expertise.subtitle}
                 items={home.expertise.items}
@@ -67,16 +65,14 @@ export default async function HomeV3({
             />
             <Approach
                 lang={lang}
-                kicker={home.enhance.kicker}
                 title={home.enhance.title}
                 subtitle={home.enhance.subtitle}
                 items={home.enhance.items}
                 cta={home.enhance.cta}
             />
-            <Venues lang={lang} kicker={home.clients.kicker} title={home.clients.title} />
+            <Venues lang={lang} title={home.clients.title} />
             <Journal
                 lang={lang}
-                kicker={home.blog.kicker}
                 headline={home.blog.headline}
                 allArticles={home.blog.all_articles}
                 articles={home.blog.articles}

@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import type { Locale } from '@/lib/i18n';
 import { getLocalizedPath } from '@/lib/localized-path';
-import { DriftOrb, Kicker, emphasize } from '@/components/v3';
+import { DriftOrb, emphasize } from '@/components/v3';
 import { ScrollReveal, StaggerChildren } from '@/components/motion';
 
 interface HowItWorksProps {
@@ -40,9 +40,6 @@ export function HowItWorks({ lang, emWord, delivery }: HowItWorksProps) {
                     </ScrollReveal>
 
                     <div className="order-1 lg:order-2">
-                        <ScrollReveal>
-                            <Kicker className="mb-[clamp(15px,1.19vw,21px)]">{delivery.kicker}</Kicker>
-                        </ScrollReveal>
                         <ScrollReveal delay={0.06}>
                             <h2 className="mb-[clamp(15px,1.19vw,21px)] text-[clamp(2.3rem,4.6vw,3.91rem)] font-extrabold leading-[1.05] tracking-[-0.02em]">
                                 {emphasize(delivery.title, emWord)}

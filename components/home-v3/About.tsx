@@ -1,14 +1,13 @@
 import Image from 'next/image';
 import { ScrollReveal } from '@/components/motion';
-import { DriftOrb, Kicker } from '@/components/v3';
+import { DriftOrb } from '@/components/v3';
 
 interface AboutProps {
-    kicker: string;
     p1: string;
     p2: string;
 }
 
-export function About({ kicker, p1, p2 }: AboutProps) {
+export function About({ p1, p2 }: AboutProps) {
     return (
         <section className="relative py-[clamp(108px,8.52vw,150px)]">
             <DriftOrb
@@ -22,9 +21,6 @@ export function About({ kicker, p1, p2 }: AboutProps) {
                 duration={19}
             />
             <div className="relative z-10 mx-auto max-w-[min(1760px,100%)] px-[clamp(20px,1.59vw,28px)] sm:px-[clamp(27px,2.1vw,37px)]">
-                <ScrollReveal>
-                    <Kicker className="mb-[clamp(43px,3.41vw,60px)]">{kicker}</Kicker>
-                </ScrollReveal>
                 <div className="grid grid-cols-1 items-center gap-[clamp(40px,3.12vw,55px)] lg:grid-cols-[1.5fr_0.85fr] lg:gap-[clamp(53px,4.2vw,74px)]">
                     <div className="se-html">
                         <ScrollReveal>

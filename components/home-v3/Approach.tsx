@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { Locale } from '@/lib/i18n';
 import { getLocalizedPath } from '@/lib/localized-path';
 import { ScrollReveal } from '@/components/motion';
-import { DriftOrb, Kicker, MorphCTA, emphasize } from '@/components/v3';
+import { DriftOrb, MorphCTA, emphasize } from '@/components/v3';
 
 interface ApproachItem {
     title: string;
@@ -11,14 +11,13 @@ interface ApproachItem {
 
 interface ApproachProps {
     lang: Locale;
-    kicker: string;
     title: string;
     subtitle: string;
     items: ApproachItem[];
     cta: string;
 }
 
-export function Approach({ lang, kicker, title, subtitle, items, cta }: ApproachProps) {
+export function Approach({ lang, title, subtitle, items, cta }: ApproachProps) {
     const localizedPath = (path: string) => getLocalizedPath(lang, path);
     const emWord = lang === 'el' ? 'επαναπροσδιορίζουμε' : 'redefine';
 
@@ -50,9 +49,6 @@ export function Approach({ lang, kicker, title, subtitle, items, cta }: Approach
                     </ScrollReveal>
 
                     <div>
-                        <ScrollReveal>
-                            <Kicker className="mb-[clamp(15px,1.19vw,21px)]">{kicker}</Kicker>
-                        </ScrollReveal>
                         <ScrollReveal delay={0.06}>
                             <h2 className="mb-[clamp(15px,1.19vw,21px)] text-[clamp(2.3rem,4.6vw,3.91rem)] font-extrabold leading-[1.04] tracking-[-0.02em]">
                                 {emphasize(title, emWord)}
