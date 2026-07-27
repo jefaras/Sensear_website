@@ -278,7 +278,7 @@
                 "placeholder": "Select your interest",
                 "playlists": "Playlists",
                 "events": "Events",
-                "strategy": "Strategy",
+                "strategy": "Sonic Identity",
                 "audio_upgrades": "Audio Upgrades"
             },
             "preferred_call_time_options": {
@@ -520,41 +520,6 @@
         "team": {
             "heading": "Meet the team",
             "subtitle": "Music obsessed, hospitality minded",
-            "members": [
-                {
-                    "name": "George Fameliaris",
-                    "title": "Co-founder, Chief music curator & AV expert",
-                    "bio": [
-                        "His lifelong passion for music was reinforced by studies in Media & Communications and a Master's in Popular Music in Film.",
-                        "Established in Athens as a DJ and music curator for radio, events, and permanent venue collaborations.",
-                        "At SensEar, he shapes the musical identity of each space with precision, rhythm, and atmosphere that define the brand's signature sound."
-                    ],
-                    "image": "/images/about/team-george-fameliaris.jpg",
-                    "alt": "George Fameliaris"
-                },
-                {
-                    "name": "John E. Farazoumis",
-                    "title": "Co-founder, Brand strategy, Client service",
-                    "bio": [
-                        "From early DJ sets to his studies in Hospitality Management, music has always been pivotal.",
-                        "Co-founder of a successful digital agency, with 25 years of experience in web services and understanding client needs.",
-                        "At SensEar, he charts the brand's strategic direction and bridges the creative vision with the client experience."
-                    ],
-                    "image": "/images/about/team-john-farazoumis.png",
-                    "alt": "John E. Farazoumis"
-                },
-                {
-                    "name": "Katerina Karali",
-                    "title": "Contributing associate, DJ, Music curator",
-                    "bio": [
-                        "Combines visual design with sonic storytelling, with a refined artistic eye.",
-                        "Experienced multimedia art director, curating soundscapes for films, exhibitions, and private events.",
-                        "Known for her instinct and love for rare grooves, she adds depth, texture, and unexpected character to SensEar."
-                    ],
-                    "image": "/images/about/team-katerina-karali.jpg",
-                    "alt": "Katerina Karali"
-                }
-            ],
             "kicker": "THE TEAM",
             "title": "Meet the <em>team</em>",
             "closing": "Together, we form SensEar, a team committed to uplifting spaces through compelling, memorable music."

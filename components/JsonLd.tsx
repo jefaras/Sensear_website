@@ -54,7 +54,7 @@ export function LocalBusinessJsonLd() {
             addressCountry: 'GR'
         },
         priceRange: '$$',
-        openingHours: 'Mo-Fr 09:00-18:00',
+        openingHours: 'Mo-Sa 10:00-18:00',
         image: `${baseUrl}/images/brand/sensear-logo-color.png`
     }
 
