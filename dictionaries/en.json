@@ -190,7 +190,7 @@
         "contact_cta": {
             "kicker": "LET'S COLLABORATE",
             "title": "Tell us about your <em>space</em>.",
-            "subtitle": "We reply within 48 hours with first thoughts on its sound and the service that fits.",
+            "subtitle": "We reply within 24 hours with the service that fits and what happens next.",
             "primary_cta": "Send us a message",
             "call_label": "Call us (6976 994 212)",
             "services_link": "View our services",
@@ -252,9 +252,6 @@
             "business_name": "Business Name",
             "email": "Email *",
             "phone": "Phone *",
-            "venue": "Venue Type *",
-            "interest": "Service Interest *",
-            "preferred_call_time": "Preferred call time *",
             "message": "Message *",
             "submit": "Send Message",
             "submitting": "Sending...",
@@ -267,27 +264,6 @@
             "email_placeholder": "your@email.com",
             "phone_placeholder": "xxx xxx xxxx",
             "message_placeholder": "Tell us about your venue, your vision, and how we can help...",
-            "venue_options": {
-                "placeholder": "Select your venue type",
-                "hotel": "Hotel",
-                "restaurant": "Restaurant",
-                "bar": "Bar",
-                "other": "Other"
-            },
-            "interest_options": {
-                "placeholder": "Select your interest",
-                "playlists": "Playlists",
-                "events": "Events",
-                "strategy": "Sonic Identity",
-                "audio_upgrades": "Audio Upgrades"
-            },
-            "preferred_call_time_options": {
-                "placeholder": "Select preferred call time",
-                "slot_10_13": "10:00 - 13:00",
-                "slot_13_16": "13:00 - 16:00",
-                "slot_16_19": "16:00 - 19:00",
-                "slot_19_21": "19:00 - 21:00"
-            },
             "temp_title": "",
             "temp_message": "Send us an email with your contact details, your venue type (hotel, restaurant, bar, or other) and how we can help you, or call us today."
         },

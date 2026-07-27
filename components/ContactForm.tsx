@@ -13,9 +13,6 @@ interface ContactFormLabels {
     business_name: string;
     email: string;
     phone: string;
-    venue: string;
-    interest: string;
-    preferred_call_time: string;
     message: string;
     submit: string;
     submitting: string;
@@ -28,27 +25,6 @@ interface ContactFormLabels {
     email_placeholder: string;
     phone_placeholder: string;
     message_placeholder: string;
-    venue_options: {
-        placeholder: string;
-        hotel: string;
-        restaurant: string;
-        bar: string;
-        other: string;
-    };
-    interest_options: {
-        placeholder: string;
-        playlists: string;
-        events: string;
-        strategy: string;
-        audio_upgrades: string;
-    };
-    preferred_call_time_options: {
-        placeholder: string;
-        slot_10_13: string;
-        slot_13_16: string;
-        slot_16_19: string;
-        slot_19_21: string;
-    };
 }
 
 interface ContactFormProps {
@@ -63,9 +39,6 @@ interface FormData {
     email: string;
     phone: string;
     country_code: string;
-    venue_type: string;
-    service_interest: string;
-    preferred_call_time: string;
     message: string;
 }
 
@@ -81,9 +54,6 @@ export function ContactForm({ labels, variant = "default" }: ContactFormProps) {
         email: "",
         phone: "",
         country_code: "+30",
-        venue_type: "",
-        service_interest: "",
-        preferred_call_time: "",
         message: "",
     });
 
@@ -113,7 +83,6 @@ export function ContactForm({ labels, variant = "default" }: ContactFormProps) {
 
         const nextErrors: Record<string, string[]> = {};
         const phoneDigits = formData.phone.replace(/\D/g, "");
-        const preferredCallTimeOptions = ["10:00 - 13:00", "13:00 - 16:00", "16:00 - 19:00", "19:00 - 21:00"];
 
         if (formData.name.trim().length < 2) {
             nextErrors.name = ["Name must be at least 2 characters"];
@@ -125,18 +94,6 @@ export function ContactForm({ labels, variant = "default" }: ContactFormProps) {
 
         if (phoneDigits.length !== 10) {
             nextErrors.phone = ["Phone number must contain exactly 10 digits"];
-        }
-
-        if (!formData.venue_type) {
-            nextErrors.venue_type = ["Please select a venue type"];
-        }
-
-        if (!formData.service_interest) {
-            nextErrors.service_interest = ["Please select a service interest"];
-        }
-
-        if (!preferredCallTimeOptions.includes(formData.preferred_call_time)) {
-            nextErrors.preferred_call_time = ["Please select a valid preferred call time"];
         }
 
         if (formData.message.trim().length < 10) {
@@ -158,9 +115,6 @@ export function ContactForm({ labels, variant = "default" }: ContactFormProps) {
 
             payload.set("g-recaptcha-response", recaptchaToken);
             payload.set("country_code", formData.country_code);
-            payload.set("preferred_call_time", formData.preferred_call_time);
-            payload.set("venue_type", formData.venue_type);
-            payload.set("service_interest", formData.service_interest);
 
             const response = await fetch(form.action, {
                 method: "POST",
@@ -191,9 +145,6 @@ export function ContactForm({ labels, variant = "default" }: ContactFormProps) {
                 email: "",
                 phone: "",
                 country_code: "+30",
-                venue_type: "",
-                service_interest: "",
-                preferred_call_time: "",
                 message: "",
             });
         } catch (error) {
@@ -267,9 +218,6 @@ export function ContactForm({ labels, variant = "default" }: ContactFormProps) {
 
             <input type="hidden" name="g-recaptcha-response" value="" />
             <input type="hidden" name="country_code" value={formData.country_code} />
-            <input type="hidden" name="preferred_call_time" value={formData.preferred_call_time} />
-            <input type="hidden" name="venue_type" value={formData.venue_type} />
-            <input type="hidden" name="service_interest" value={formData.service_interest} />
 
             <div className="grid md:grid-cols-2 gap-4 relative z-50">
                 <div>
@@ -372,78 +320,6 @@ export function ContactForm({ labels, variant = "default" }: ContactFormProps) {
                         />
                     </div>
                     {errors.phone && <p className={errorClass}>{errors.phone[0]}</p>}
-                </div>
-                <div>
-                    <label id="input-preferred-call-time-label" htmlFor="input-preferred-call-time" className={labelClass}>{labels.preferred_call_time}</label>
-                    <TransparentSelect
-                        id="input-preferred-call-time"
-                        name="preferred_call_time"
-                        value={formData.preferred_call_time}
-                        onChange={handleChange}
-                        placeholder={labels.preferred_call_time_options.placeholder}
-                        isVinyl={isVinyl}
-                        isDark={isDark}
-                        error={!!errors.preferred_call_time}
-                        className="w-full"
-                        ariaLabel={labels.preferred_call_time}
-                        ariaLabelledBy="input-preferred-call-time-label"
-                        options={[
-                            { value: '10:00 - 13:00', label: labels.preferred_call_time_options.slot_10_13 },
-                            { value: '13:00 - 16:00', label: labels.preferred_call_time_options.slot_13_16 },
-                            { value: '16:00 - 19:00', label: labels.preferred_call_time_options.slot_16_19 },
-                            { value: '19:00 - 21:00', label: labels.preferred_call_time_options.slot_19_21 },
-                        ]}
-                    />
-                    {errors.preferred_call_time && <p className={errorClass}>{errors.preferred_call_time[0]}</p>}
-                </div>
-            </div>
-
-            <div className="grid md:grid-cols-2 gap-4 relative z-20">
-                <div>
-                    <label id="input-venue-label" htmlFor="input-venue" className={labelClass}>{labels.venue}</label>
-                    <TransparentSelect
-                        id="input-venue"
-                        name="venue_type"
-                        value={formData.venue_type}
-                        onChange={handleChange}
-                        placeholder={labels.venue_options.placeholder}
-                        isVinyl={isVinyl}
-                        isDark={isDark}
-                        error={!!errors.venue_type}
-                        className="w-full"
-                        ariaLabel={labels.venue}
-                        ariaLabelledBy="input-venue-label"
-                        options={[
-                            { value: 'hotel', label: labels.venue_options.hotel },
-                            { value: 'restaurant', label: labels.venue_options.restaurant },
-                            { value: 'bar', label: labels.venue_options.bar },
-                            { value: 'other', label: labels.venue_options.other },
-                        ]}
-                    />
-                    {errors.venue_type && <p className={errorClass}>{errors.venue_type[0]}</p>}
-                </div>
-                <div>
-                    <label id="input-interest-label" htmlFor="input-interest" className={labelClass}>{labels.interest}</label>
-                    <TransparentSelect
-                        id="input-interest"
-                        name="service_interest"
-                        value={formData.service_interest}
-                        onChange={handleChange}
-                        placeholder={labels.interest_options.placeholder}
-                        isVinyl={isVinyl}
-                        isDark={isDark}
-                        error={!!errors.service_interest}
-                        className="w-full"
-                        ariaLabel={labels.interest}
-                        ariaLabelledBy="input-interest-label"
-                        options={[
-                            { value: 'playlists', label: labels.interest_options.playlists },
-                            { value: 'events', label: labels.interest_options.events },
-                            { value: 'strategy', label: labels.interest_options.strategy },
-                            { value: 'audio_upgrades', label: labels.interest_options.audio_upgrades },
-                        ]}
-                    />
-                    {errors.service_interest && <p className={errorClass}>{errors.service_interest[0]}</p>}
                 </div>
             </div>
 

@@ -31,7 +31,6 @@ $data = [
 ];
 
 $errors = [];
-$preferredCallTimes = ['10:00 - 13:00', '13:00 - 16:00', '16:00 - 19:00', '19:00 - 21:00'];
 
 if (sensear_strlen($data['name']) < 2) {
     $errors['name'] = ['Name must be at least 2 characters'];
@@ -47,18 +46,6 @@ if (!filter_var($data['email'], FILTER_VALIDATE_EMAIL)) {
 
 if (strlen(preg_replace('/\D/', '', $data['phone'])) !== 10) {
     $errors['phone'] = ['Phone number must contain exactly 10 digits'];
-}
-
-if ($data['venue_type'] === '') {
-    $errors['venue_type'] = ['Please select a venue type'];
-}
-
-if ($data['service_interest'] === '') {
-    $errors['service_interest'] = ['Please select a service interest'];
-}
-
-if (!in_array($data['preferred_call_time'], $preferredCallTimes, true)) {
-    $errors['preferred_call_time'] = ['Please select a valid preferred call time'];
 }
 
 if (sensear_strlen($data['message']) < 10) {

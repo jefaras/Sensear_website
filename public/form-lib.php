@@ -360,16 +360,21 @@ function sensear_generate_contact_email_html($data)
     $email = sensear_escape($data['email']);
     $phone = isset($data['phone']) ? sensear_escape($data['phone']) : '';
     $telHref = isset($data['phone']) ? sensear_tel_href($data['phone']) : '';
-    $venueType = sensear_escape($data['venue_type']);
-    $serviceInterest = sensear_escape($data['service_interest']);
-    $preferredCallTime = sensear_escape($data['preferred_call_time']);
+    $venueType = isset($data['venue_type']) ? sensear_escape($data['venue_type']) : '';
+    $serviceInterest = isset($data['service_interest']) ? sensear_escape($data['service_interest']) : '';
+    $preferredCallTime = isset($data['preferred_call_time']) ? sensear_escape($data['preferred_call_time']) : '';
     $message = nl2br(sensear_escape($data['message']));
     $receivedAt = (new DateTime('now', new DateTimeZone('Europe/Athens')))->format('n/j/Y, g:i:s A') . ' (Athens Time)';
 
     $businessBlock = $businessName !== '' ? '<div class="field"><div class="field-label">💼 Business Name:</div><div class="field-value">' . $businessName . '</div></div>' : '';
     $phoneBlock = $phone !== '' ? '<div class="field"><div class="field-label">📱 Phone:</div><div class="field-value"><a href="tel:' . $telHref . '">' . $phone . '</a></div></div>' : '';
+    // These three fields were removed from the contact form. They stay conditional so a
+    // stale cached page that still posts them keeps rendering, and absent values print nothing.
+    $venueBlock = $venueType !== '' ? '<div class="field"><div class="field-label">🏢 Venue Type:</div><div class="field-value">' . $venueType . '</div></div>' : '';
+    $serviceBlock = $serviceInterest !== '' ? '<div class="field"><div class="field-label">🎯 Service Interest:</div><div class="field-value">' . $serviceInterest . '</div></div>' : '';
+    $callTimeBlock = $preferredCallTime !== '' ? '<div class="field"><div class="field-label">🕒 Preferred Call Time:</div><div class="field-value">' . $preferredCallTime . '</div></div>' : '';
 
-    return '<!DOCTYPE html><html><head><meta charset="utf-8"><style>body{font-family:Arial,sans-serif;line-height:1.6;color:#333}.container{max-width:600px;margin:0 auto;padding:20px}.header{background:#000;color:#fff;padding:20px;text-align:center}.content{background:#f9f9f9;padding:30px;border-radius:8px;margin-top:20px}.field{margin-bottom:20px}.field-label{font-weight:bold;color:#000;margin-bottom:5px}.field-value{color:#555}.footer{text-align:center;margin-top:30px;color:#999;font-size:12px}</style></head><body><div class="container"><div class="header"><h1>SENSEAR</h1><p>New Contact Form Submission</p></div><div class="content"><div class="field"><div class="field-label">👤 Name:</div><div class="field-value">' . $name . ' ' . $surname . '</div></div>' . $businessBlock . '<div class="field"><div class="field-label">📧 Email:</div><div class="field-value"><a href="mailto:' . rawurlencode($data['email']) . '">' . $email . '</a></div></div>' . $phoneBlock . '<div class="field"><div class="field-label">🏢 Venue Type:</div><div class="field-value">' . $venueType . '</div></div><div class="field"><div class="field-label">🎯 Service Interest:</div><div class="field-value">' . $serviceInterest . '</div></div><div class="field"><div class="field-label">🕒 Preferred Call Time:</div><div class="field-value">' . $preferredCallTime . '</div></div><div class="field"><div class="field-label">Message:</div><div class="field-value">' . $message . '</div></div></div><div class="footer"><p>This email was sent from the SensEar contact form</p><p>Received at: ' . sensear_escape($receivedAt) . '</p></div></div></body></html>';
+    return '<!DOCTYPE html><html><head><meta charset="utf-8"><style>body{font-family:Arial,sans-serif;line-height:1.6;color:#333}.container{max-width:600px;margin:0 auto;padding:20px}.header{background:#000;color:#fff;padding:20px;text-align:center}.content{background:#f9f9f9;padding:30px;border-radius:8px;margin-top:20px}.field{margin-bottom:20px}.field-label{font-weight:bold;color:#000;margin-bottom:5px}.field-value{color:#555}.footer{text-align:center;margin-top:30px;color:#999;font-size:12px}</style></head><body><div class="container"><div class="header"><h1>SENSEAR</h1><p>New Contact Form Submission</p></div><div class="content"><div class="field"><div class="field-label">👤 Name:</div><div class="field-value">' . $name . ' ' . $surname . '</div></div>' . $businessBlock . '<div class="field"><div class="field-label">📧 Email:</div><div class="field-value"><a href="mailto:' . rawurlencode($data['email']) . '">' . $email . '</a></div></div>' . $phoneBlock . $venueBlock . $serviceBlock . $callTimeBlock . '<div class="field"><div class="field-label">Message:</div><div class="field-value">' . $message . '</div></div></div><div class="footer"><p>This email was sent from the SensEar contact form</p><p>Received at: ' . sensear_escape($receivedAt) . '</p></div></div></body></html>';
 }
 
 function sensear_generate_newsletter_email_html($data)
