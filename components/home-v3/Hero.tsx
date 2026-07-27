@@ -28,8 +28,10 @@ interface HeroProps {
 
 export function Hero({ lang, hero }: HeroProps) {
     const localizedPath = (path: string) => getLocalizedPath(lang, path);
-    const emWord = lang === 'el' ? 'Μοναδικών' : 'Unique';
-    const ledeBold = hero.subtitle[0] + ' ' + hero.subtitle[1];
+    // "soundtrack." is the emphasis word in both locales: emphasizeHeadline breaks the line
+    // before and after it, which lands the two headline sentences on their own lines.
+    const emWord = 'soundtrack.';
+    const ledeBold = [hero.subtitle[0], hero.subtitle[1]].filter(Boolean).join(' ');
     const ledeMuted = hero.subtitle[2];
 
     return (
@@ -58,14 +60,14 @@ export function Hero({ lang, hero }: HeroProps) {
                 <div className="grid grid-cols-1 items-center gap-[clamp(40px,3.12vw,55px)] lg:grid-cols-[1.05fr_0.95fr] lg:gap-[clamp(46px,3.64vw,64px)]">
                     <div>
                         <ScrollReveal delay={0.15}>
-                            <h1 className="mb-[clamp(25px,1.99vw,35px)] text-[clamp(3.8rem,7.7vw,7.1rem)] font-extrabold leading-[0.96] tracking-[-0.024em]">
+                            <h1 className="mb-[clamp(25px,1.99vw,35px)] text-[clamp(2.1rem,3.9vw,3.6rem)] font-extrabold leading-[1.06] tracking-[-0.02em]">
                                 {emphasizeHeadline(hero.title, emWord)}
                             </h1>
                         </ScrollReveal>
 
                         <ScrollReveal delay={0.3}>
                             <div className="mb-[clamp(35px,2.73vw,48px)] max-w-[640px]">
-                                <p className="text-[clamp(1.55rem,2.3vw,2.05rem)] font-semibold leading-[1.35]">
+                                <p className="text-[clamp(1.02rem,1.19vw,1.3rem)] leading-[1.6] text-[#faf6f1]/75">
                                     {ledeBold}
                                 </p>
                                 {ledeMuted && (

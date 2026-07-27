@@ -1,12 +1,12 @@
 {
     "navigation": {
         "home": "Home",
-        "services": "What We Do",
-        "industries": "Who We Serve",
-        "case_studies": "Portfolio",
+        "services": "Services",
+        "industries": "Industries",
+        "case_studies": "Case studies",
         "blog": "Journal",
         "about": "About",
-        "contact": "Be Heard"
+        "contact": "Contact"
     },
     "home": {
         "meta": {
@@ -14,11 +14,11 @@
             "description": "Music curation for hospitality, retail & events that elevates atmosphere, engages guests and builds loyalty. Discover a brand-fit sound for your venue."
         },
         "hero": {
-            "title": "Soundtracking <br />Unique Experiences",
+            "title": "Your venue already has a soundtrack. We make sure it is the right one.",
             "subtitle": [
-                "Every venue has a story.",
-                "Let music tell yours.",
-                "Sophisticated music curation services for places and experiences that \"refuse\" to sound generic."
+                "SensEar is an Athens music curation studio.",
+                "We build playlists, event soundtracks, sonic identity & room acoustics for hospitality, retail & cultural venues.",
+                ""
             ],
             "cta": "Explore our services",
             "side_label": "ATHENS · GR — SONIC BRANDING",
@@ -36,8 +36,8 @@
         },
         "intro": {
             "title": "Who we are",
-            "p1": "We are a team of passionate <em>music experts</em> who create <em>soundtracks for venues</em> through music that is intentional, immersive & <em>memorable</em>.",
-            "p2": "Our core belief is that music shapes <strong>atmosphere</strong>, influences <strong>behaviour</strong> and builds lasting <strong>connections</strong> with guests."
+            "p1": "SensEar is a <em>music curation studio</em> based in Athens, working across Greece and its islands. We curate the music a venue plays through its day, score its events hour by hour, define how a brand sounds across locations, and improve <em>how the room carries it all</em>.",
+            "p2": "Business-use music <strong>licensing</strong>, <strong>scheduling</strong>, updates and support are part of the service, so the sound stays deliberate long after launch."
         },
         "marquee": [
             "Signature Playlists",
@@ -189,9 +189,9 @@
         },
         "contact_cta": {
             "kicker": "LET'S COLLABORATE",
-            "title": "Let's design the <em>soundtrack</em> for your space",
-            "subtitle": "Tell us about your venue and we'll craft its sonic identity together.",
-            "primary_cta": "Send a message or call us",
+            "title": "Tell us about your <em>space</em>.",
+            "subtitle": "We reply within 48 hours with first thoughts on its sound and the service that fits.",
+            "primary_cta": "Send us a message",
             "call_label": "Call us (6976 994 212)",
             "services_link": "View our services",
             "explore_template": "Explore {services} or {industries}",
@@ -202,8 +202,8 @@
             "background_image": "/images/homepage/sensear-signature-playlist-service.jpg"
         },
         "footer": {
-            "tagline": "Soundtracking Unique Experiences",
-            "intro": "Music curation & sonic identity for venues, events and brands.",
+            "tagline": "Music curation for venues, events & brands.",
+            "intro": "Athens, working across Greece and its islands.",
             "col_services": "SERVICES",
             "col_industries": "INDUSTRIES",
             "col_company": "COMPANY",
