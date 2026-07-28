@@ -1476,57 +1476,57 @@
             ]
         },
         "intro": {
-            "title": "From vision to sound & beyond",
-            "p1": "All venues start with a vision; an atmosphere they imagined, a feeling they wanted guests to have.",
-            "p2": "We turn those visions into carefully crafted soundscapes that support your business and respect the space.",
+            "title": "Four venues, four briefs",
+            "p1": "What each place needed, what we built, and what you can listen to.",
+            "p2": "Three are daily music programmes. One was a single night, which makes it the proof point for a different service.",
             "kicker": "FROM VISION TO SOUND"
         },
         "items": [
             {
                 "title": "Beach House, Antiparos",
-                "desc1": "Beach House features traditional island style, the high-end restaurant CoocooVaya and a bar hovering above the sea.",
-                "desc2": "We were delighted when asked to design the music: the stunning setting needed sound that complements and relaxes. Our playlists respect the peaceful atmosphere while keeping perfect energy across beach, restaurant & bar.",
+                "desc1": "Traditional Cycladic architecture, the restaurant CoocooVaya, and a bar over the water: three areas that had to feel like one place at three different volumes.",
+                "desc2": "We built playlists for each area across three parts of the day, morning, midday into evening, and night, so the energy changes as guests move without the character of the sound changing with it. Running for the past two years.",
                 "link": "beach-house-antiparos-morning-playlist-sample",
                 "link_text": "Listen to the Beach House atmosphere",
                 "location": "Antiparos"
             },
             {
                 "title": "Pelicanos, Sifnos",
-                "desc1": "Fine dining has taken off on Sifnos, an island known for its culinary tradition. Pelicanos is a sophisticated all-day restaurant that needed music to match its ambition.",
-                "desc2": "We enriched the soundtrack with fresh discoveries & elegant classics, creating a complete dining experience by the sea.",
+                "desc1": "On an island that takes its food seriously, Pelicanos is an all-day restaurant with ambitions to match.",
+                "desc2": "The music had to hold the same standard as the kitchen and the service: new discoveries next to records that have lasted, and nothing that sounds more ordinary than what arrives at the table. Running for the past two years.",
                 "link": "pelicanos-sifnos-jazzy-playlist",
                 "link_text": "Listen to the Pelicanos atmosphere",
                 "location": "Sifnos"
             },
             {
                 "title": "Yam, Antiparos",
-                "desc1": "An iconic Antiparos venue since the late ’90s, with an easy-going vibe and unique setting.",
-                "desc2": "The girls in charge asked us to complement this special setting with music that evolves from lazy lunch to late night hangouts. We created a fine music experience that captures the island's magic.",
+                "desc1": "A landmark on the island since the late nineties, with a crowd that knows exactly how the place should feel.",
+                "desc2": "We were asked for one continuous line from a slow lunch to late cocktails, so the music moves with the day rather than switching mood at a set hour. Running for the past two years.",
                 "link": "yam-antiparos-night-playlist",
                 "link_text": "Listen to the Yam atmosphere",
                 "location": "Antiparos"
             },
             {
                 "title": "Levantis, Paros",
-                "desc1": "Neva Bergman assigned us to create atmospheric support for her 'Quiet Testimony' exhibition opening at Levantis restaurant's gallery space in Paros.",
-                "desc2": "The custom ambient soundscape we designed enriched viewing & discussions without distraction. The artist loved how the music matched her work's emotions and kept visitors engaged longer.",
+                "desc1": "One night rather than every day: the opening of Neva Bergman’s exhibition “Quiet Testimony” in the gallery space at Levantis.",
+                "desc2": "We curated a discreet ambient playlist for the room and set the level to sit under conversation, so people could look closely and talk without raising their voices.",
                 "link": "levantis-playlist-sample",
                 "link_text": "Listen to the Levantis atmosphere",
                 "location": "Paros"
             }
         ],
         "cta": {
-            "title": "Your venue's sound journey starts here",
-            "subtitle": "Let's explore how music can work specifically for your space and goals.",
-            "contact": "Start your venue sound journey",
-            "services": "Browse our services",
+            "title": "Tell us about your space.",
+            "subtitle": "We reply within 24 hours with the service that fits and what happens next.",
+            "contact": "Send us a message",
+            "services": "See the services",
             "kicker": "LET'S COLLABORATE",
             "location": "Athens, Greece"
         },
         "cases": {
             "kicker": "CASE STUDIES",
-            "title": "Four venues, four different <em>journeys</em>",
-            "subtitle": "Each with its own character, needs and musical solution.",
+            "title": "Four venues, four <em>briefs</em>",
+            "subtitle": "Each with its own hours, areas and pace.",
             "listen_prefix": "Listen to the atmosphere of"
         }
     },
@@ -1674,7 +1674,7 @@
             "playlists": {
                 "title": "Signature Playlists",
                 "subtitle": "Your daily soundtrack",
-                "desc": "Curated playlists that evolve throughout the day, monthly updates, remote management.",
+                "desc": "Curated playlists that follow the day, refreshed monthly by default, managed remotely.",
                 "ideal_for": "For venues ready to move beyond generic background music.",
                 "cta": "Explore Signature Playlists",
                 "link": "services/signature-playlists"
@@ -1952,9 +1952,9 @@
             "image_caption": "Curated, never generic."
         },
         "intro": {
-            "title": "Playlist creation for unique venue atmosphere",
-            "p1": "We create <strong><em>playlists</em></strong> in tune with your brand's <strong><em>character</em></strong> and space's <strong><em>rhythm</em></strong>, to balance <strong><em>energy</em></strong> for both guests & staff.",
-            "p2": "Your sound <strong><em>becomes intentional</em></strong> & <strong><em>felt</em></strong> in the atmosphere, not lost in the background.",
+            "title": "What Signature Playlists are",
+            "p1": "Ongoing curated playlists that follow your venue’s day, <strong>zone by zone</strong>. Rare selections rather than generic background music, scheduled by part of the day and by area, and <strong>managed remotely</strong> with direct support.",
+            "p2": "Refreshed monthly by default, or on whatever rhythm the venue actually needs.",
             "kicker": "WHY IT MATTERS"
         },
         "what_we_do": {
@@ -2018,15 +2018,15 @@
             "title": "Licensed for business use",
             "items": [
                 {
-                    "title": "On-brand, but also legal playlists",
-                    "description": "We provide music cleared for professional use which offers you an extra ease of mind."
+                    "title": "Licensed for commercial use",
+                    "description": "The music we supply is licensed for commercial use, so you are not playing from a personal streaming account. Royalties for public performance are paid separately by the venue to the Greek collecting societies, as they are for any business that plays music."
                 }
             ],
             "kicker": "LEGAL PEACE OF MIND"
         },
         "cta": {
             "title": "Let us craft your signature sound",
-            "description": "Need a perfect soundscape that reflects your brand and captivates your guests?",
+            "description": "After a call and a visit to the space, you receive a written proposal within four days.",
             "button": "Start with curated playlists",
             "explore": "Explore how our",
             "sonic_identity": "Sonic Identity",
@@ -2052,9 +2052,9 @@
             "image_caption": "Right moment, right sound."
         },
         "intro": {
-            "title": "Music that moves with your event's timeline",
-            "p1": "We design soundtracks to <strong><em>follow your event's plan</em></strong>, so energy always <strong><em>matches</em></strong> the moment.",
-            "p2": "Music <strong><em>carries the event forward</em></strong>, turning interactions into something guests <strong><em>enjoy & remember</em></strong>.",
+            "title": "Music built on the run of your event",
+            "p1": "Music planned against the run of your event, from arrival to the last hour. Depending on the event, it can be <strong>curated playlists</strong>, <strong>DJ sets</strong>, or both, with sound checks, playback management and coordination with your AV team on the day.",
+            "p2": "Optionally, we walk the venue before you commit, to check coverage and clarity.",
             "kicker": "WHY IT MATTERS"
         },
         "what_we_do": {
@@ -2122,7 +2122,7 @@
         },
         "cta": {
             "title": "Let us design your event's sonic journey",
-            "description": "Need a soundtrack that feels as curated as everything else?",
+            "description": "After a call and a visit to the space, you receive a written proposal within four days.",
             "button": "Book an event music briefing",
             "explore": "Explore how our",
             "signature_playlists": "Signature Playlists",
@@ -2148,9 +2148,9 @@
             "image_caption": "A signature you can hear."
         },
         "intro": {
-            "title": "Sonic action plan for consistent brand identity",
-            "p1": "We translate your brand vision into a <strong><em>practical audio guide</em></strong> that works for <strong><em>every space & channel</em></strong>.",
-            "p2": "Your firm gains a <strong><em>clear sonic identity</em></strong>, consistent across <strong><em>spaces</em></strong>, <strong><em>social media</em></strong> & <strong><em>ads</em></strong>.",
+            "title": "The rules that keep a brand recognisable in sound",
+            "p1": "A workshop with your team defines the musical direction. You receive <strong>reference playlists</strong>, <strong>written guidelines</strong> and a map of how each space and hour should sound, so a new opening or an agency can follow it without you in the room.",
+            "p2": "Original composition and sonic logos can be scoped into a project on request. They are not part of the standard engagement.",
             "kicker": "WHY IT MATTERS"
         },
         "what_we_do": {
@@ -2208,7 +2208,7 @@
             "kicker": "WHO IT'S FOR"
         },
         "identity": {
-            "title": "Strategically defined identity",
+            "title": "One identity, clearly defined",
             "items": [
                 {
                     "title": "Coherent, but also flexible",
@@ -2219,7 +2219,7 @@
         },
         "cta": {
             "title": "Let us define your brand's sonic identity",
-            "description": "Require a sound strategy as considered as your design?",
+            "description": "After a call and a visit to the space, you receive a written proposal within four days.",
             "button": "Define your brand's sonic DNA",
             "explore": "Explore how our",
             "signature_playlists": "Signature Playlists",
@@ -2245,13 +2245,13 @@
             "image_caption": "Sound, perfected."
         },
         "intro": {
-            "title": "Audio optimization<br />for an inviting atmosphere",
-            "p1": "We <strong><em>refine</em></strong> your audio system, to achieve <strong><em>clear, balanced sound</em></strong> allover your space.",
-            "p2": "Optimised audio <strong><em>elevates your design</em></strong>, letting people <strong><em>enjoy</em></strong> their <strong><em>conversations</em></strong> & <strong><em>music</em></strong> comfortably.",
+            "title": "Acoustic assessment for a room that carries music",
+            "p1": "We walk the space, listen from the seats your guests actually use, and test the system you already have. You get a written proposal of what needs to change, coordination with the specialist partners who carry out the work, then <strong>tuning</strong> of the result and a short <strong>training session</strong> for your team.",
+            "p2": "Installation and any engineering study are carried out by specialist partners. We define the requirement, coordinate the work and tune what is installed.",
             "kicker": "WHY IT MATTERS"
         },
         "what_we_do": {
-            "title": "What we do",
+            "title": "What an acoustic assessment covers",
             "subtitle": "Professional audio assessment and implementation",
             "items": [
                 {
@@ -2316,7 +2316,7 @@
         },
         "cta": {
             "title": "Let us upgrade your venue's sound",
-            "description": "Need audio that matches your design quality?",
+            "description": "After a call and a visit to the space, you receive a written proposal within four days.",
             "button": "Book an acoustic assessment",
             "pair_with": "Pair with our",
             "signature_playlists": "Signature Playlists",
@@ -2917,7 +2917,7 @@
                 },
                 {
                     "title": "Living catalogs",
-                    "description": "Monthly updates that keep interest for visitors and staff, with full commercial licensing compliance."
+                    "description": "Regular updates so the music does not become wallpaper for visitors or staff, using music licensed for commercial use."
                 }
             ],
             "image": "/images/industries/art-museums-fashion-cultural-space-music.jpg",
