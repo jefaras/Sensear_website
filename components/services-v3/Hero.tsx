@@ -20,7 +20,9 @@ interface HeroProps {
 }
 
 export function Hero({ lang, hero }: HeroProps) {
-    const emWord = lang === 'el' ? 'τέσσερις' : 'four';
+    // Mid-sentence word: emphasizeHeadline breaks the line before and after it, so this
+    // yields "Four ways / to shape how your space sounds" and the Greek equivalent.
+    const emWord = lang === 'el' ? 'τρόποι' : 'ways';
 
     return (
         <section className="relative flex min-h-[92vh] items-center overflow-hidden py-[clamp(108px,8.52vw,150px)] pb-[clamp(58px,4.6vw,81px)]">

@@ -49,8 +49,8 @@
             "kicker": "WHO WE ARE"
         },
         "services": {
-            "title": "Four ways we reimagine venues",
-            "subtitle": "Our music services shape behaviour, create atmosphere and build loyalty through sound.",
+            "title": "Four services, one sound.",
+            "subtitle": "",
             "items": [
                 {
                     "title": "Signature Playlists",
@@ -1536,8 +1536,8 @@
             "description": "Explore music solutions for hospitality, retail, wellness, culture & events. Find the approach that fits your sector, atmosphere and guest journey."
         },
         "hero": {
-            "title": "Curated music tailored to your sector",
-            "subtitle": "Distinct spaces require unique sound experiences.",
+            "title": "Your industry sets the brief",
+            "subtitle": "A hotel changes by hour and zone; a restaurant follows service; a store follows its collections.",
             "side_label": "INDUSTRIES — SONIC FIT",
             "kicker": "THE SECTORS WE SERVE",
             "primary_cta": "Find your industry",
@@ -1557,8 +1557,8 @@
             "kicker": "WHY IT MATTERS"
         },
         "expertise": {
-            "title": "Your industry, our expertise",
-            "subtitle": "Potent music selected for the specific needs of your world.",
+            "title": "Choose your sector",
+            "subtitle": "Six sectors, each with its own hours, zones and pace.",
             "items": [
                 {
                     "title": "Hotels & Resorts",
@@ -1627,12 +1627,12 @@
                 "Creating memorable experiences that bring people back",
                 "Knowing if your music actually works for your business"
             ],
-            "conclusion": "Different industries express these differently, but strategic sound solves them all.",
+            "conclusion": "Different rooms, different hours, one way of working: music planned around how each place actually runs.",
             "kicker": "THE COMMON THREAD"
         },
         "cta": {
-            "title": "Discover your sound potential",
-            "subtitle": "Every venue has untapped atmospheric potential. Let's explore how strategic sound can transform your specific space and objectives.",
+            "title": "Tell us about your space.",
+            "subtitle": "We reply within 24 hours with the service that fits and what happens next.",
             "contact": "Let's design your venue sound",
             "services": "Explore our services",
             "kicker": "LET'S COLLABORATE",
@@ -1645,8 +1645,8 @@
             "description": "Explore music curation services for spaces & events, from Signature Playlists to Sonic Identity & Audio Upgrades. Find the solution that fits you."
         },
         "hero": {
-            "title": "Strategic music & sound,<br />four proven approaches",
-            "subtitle": "Premium music & sound services designed to complement the way spaces function and feel.",
+            "title": "Four ways to shape how your space sounds",
+            "subtitle": "Playlists, events, identity, acoustics.",
             "side_label": "SERVICES — SONIC STRATEGY",
             "kicker": "OUR SERVICES",
             "primary_cta": "Explore the services",
@@ -1660,14 +1660,14 @@
             ]
         },
         "intro": {
-            "title": "Music is already shaping your business",
-            "p1": "Every venue <strong>has a soundtrack</strong>, whether you designed it or not. <strong><em>SensEar</em></strong> helps ensure it tells <strong><em>the right story</em></strong>.",
-            "p2": "We shape sound for venues & events where <strong>atmosphere</strong> matters: guiding how guests <strong>feel</strong>, how long they <strong>stay</strong> and how they <strong>remember</strong> you.",
+            "title": "What each service does",
+            "p1": "Signature Playlists set the daily music. <strong>Event Soundtracks</strong> score a single occasion, <strong>Sonic Identity</strong> keeps a brand consistent across places, and <strong>Audio Upgrades</strong> improve how the room carries it all.",
+            "p2": "Each stands alone; they are built to combine.",
             "kicker": "WHY IT MATTERS"
         },
         "starting_point": {
-            "title": "Choose your starting point",
-            "subtitle": "Use this guide to see which music service fits you.",
+            "title": "Where to start",
+            "subtitle": "Start from the need you can already name: the music that plays every day, one event with a schedule, a brand that has to sound the same in three places, or a room that fights the music.",
             "kicker": "SERVICES"
         },
         "services": {
@@ -1705,8 +1705,8 @@
             }
         },
         "delivery": {
-            "title": "How our services deliver",
-            "subtitle": "Working alone or together to meet your specific needs",
+            "title": "How they combine",
+            "subtitle": "Playlists set the daily sound. Sonic Identity keeps it consistent as you grow; events and acoustics complete the system.",
             "points": [
                 {
                     "text": "build your daily atmosphere.",
@@ -1732,8 +1732,8 @@
             "kicker": "THE COLLABORATION"
         },
         "cta": {
-            "title": "Let's explore your possibilities",
-            "subtitle": "Which service aligns with your vision? We will assess your current atmosphere and recommend the ideal starting point.",
+            "title": "Tell us about your space.",
+            "subtitle": "We reply within 24 hours with the service that fits and what happens next.",
             "contact_btn": "Talk to us about your space",
             "industries_btn": "See Industries we serve",
             "kicker": "LET'S COLLABORATE",

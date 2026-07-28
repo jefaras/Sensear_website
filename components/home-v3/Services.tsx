@@ -59,7 +59,9 @@ export function Services({ lang, title, subtitle, items, previewPlaceholder, pre
                     </h2>
                 </ScrollReveal>
                 <ScrollReveal delay={0.12}>
-                    <p className="mb-[clamp(25px,1.99vw,35px)] max-w-[780px] text-[clamp(1.01rem,1.15vw,1.26rem)] text-[#faf6f1]/60">{subtitle}</p>
+                    {subtitle && (
+                        <p className="mb-[clamp(25px,1.99vw,35px)] max-w-[780px] text-[clamp(1.01rem,1.15vw,1.26rem)] text-[#faf6f1]/60">{subtitle}</p>
+                    )}
                 </ScrollReveal>
 
                 <div className="grid grid-cols-1 items-start gap-[clamp(40px,3.12vw,55px)] lg:grid-cols-[1.35fr_0.65fr] lg:gap-[clamp(41px,3.24vw,57px)]">

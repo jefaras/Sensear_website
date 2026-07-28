@@ -20,7 +20,8 @@ interface HeroProps {
 }
 
 export function Hero({ lang, hero }: HeroProps) {
-    const emWord = lang === 'el' ? 'κλάδο' : 'sector';
+    // Final word: yields "Your industry sets / the brief" and «Ο κλάδος σας ορίζει / το ζητούμενο».
+    const emWord = lang === 'el' ? 'ζητούμενο' : 'brief';
 
     return (
         <section className="relative flex min-h-[92vh] items-center overflow-hidden py-[clamp(108px,8.52vw,150px)] pb-[clamp(58px,4.6vw,81px)]">
