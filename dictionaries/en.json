@@ -437,7 +437,7 @@
         },
         "hero": {
             "title": "The people behind your soundtrack",
-            "subtitle": "We help venues define how they are heard and felt.",
+            "subtitle": "Residencies at Balux and Sunset Antiparos. DJ sets alongside Colleen \"Cosmo\" Murphy, Danny Krivit and Gerd Janson. Studies in music, hospitality management and service and experience design.",
             "image": "/images/backgrounds/warm-silver-foil-texture.jpg",
             "image_alt": "The people behind your soundtrack",
             "side_label": "ABOUT — THE PEOPLE & THE PHILOSOPHY",
@@ -445,27 +445,27 @@
             "primary_cta": "Meet the team",
             "secondary_cta": "Get in touch",
             "image_kicker": "EST · ATHENS",
-            "image_caption": "Soundtracking unique experiences.",
+            "image_caption": "The studio, in Athens.",
             "badge": [
                 "★ SENSEAR ★",
                 "EST · ATH"
             ]
         },
         "vision": {
-            "heading": "Our vision",
-            "text": "To become the <strong>premier music partner</strong> for <strong>eclectic hospitality brands</strong> & <strong>events</strong> seeking to <strong>express identity</strong>, <strong>elevate atmosphere</strong> & <strong>create lasting guest connections</strong>.",
+            "heading": "What we are trying to do",
+            "text": "Music in hospitality is usually the last thing anyone chooses and the first thing a guest notices. We want it chosen as carefully as the lighting and the furniture, and then looked after, which is why our work does not end at a playlist.",
             "link_text": "sonic identity service",
             "link": "services/sonic-identity",
             "kicker": "OUR VISION"
         },
         "philosophy": {
             "heading": "Our philosophy",
-            "text": "SensEar treats music as a **core part of the experience**: Music is not background, but **atmosphere, memory and emotion** that can **influence how guests feel & behave**.",
+            "text": "We treat music as part of how a room works, like the lighting or the seating: chosen for that room, maintained, and changed when the room changes. That is why we talk about service flow and not just playlists, and why our services include running the sound rather than only choosing it.",
             "kicker": "OUR PHILOSOPHY"
         },
         "journey": {
             "heading": "Our journey",
-            "subtitle": "From DJ collective & digital services to strategic sound design",
+            "subtitle": "From a DJ collective to a music curation studio",
             "timeline": [
                 {
                     "year": "2010",
@@ -473,7 +473,7 @@
                 },
                 {
                     "year": "2011",
-                    "text": "As **Midnight City**, they host and DJ **exclusive parties** focusing in cross-genre discoveries from the '70s to today, building a devoted following."
+                    "text": "As **Midnight City**, they host and DJ **exclusive parties** focused on cross-genre discoveries from the '70s to today, building a devoted following."
                 },
                 {
                     "year": "2018",
@@ -490,7 +490,7 @@
             ],
             "image": "/images/about/about-journey-team-collaboration.jpg",
             "kicker": "OUR JOURNEY",
-            "lede": "Fifteen years of shared love for music, evolved into a strategic sound practice.",
+            "lede": "Fifteen years as a DJ collective. The work is the same; we do it for more kinds of spaces now.",
             "image_alt": "Our journey"
         },
         "team": {
@@ -504,20 +504,20 @@
             "heading": "What sets us apart",
             "items": [
                 {
-                    "title": "Branding music",
-                    "description": "We translate your vision into music that feels natural and completely on-brand."
+                    "title": "We run it, not just pick it",
+                    "description": "Licensing, scheduling, renewals, tuning and staff training are part of the work, so the sound holds up long after launch."
                 },
                 {
-                    "title": "Covering all sectors",
-                    "description": "Music designed to complete guest journeys in all spaces that value atmosphere."
+                    "title": "Four services, one studio",
+                    "description": "Daily music, events, brand identity and room acoustics, all from the same curation studio."
                 },
                 {
-                    "title": "Personalizing services",
-                    "description": "Our approach adapts to your style, team & needs across multiple locations."
+                    "title": "You can hear the work",
+                    "description": "Named venues with playlists you can listen to before you call us."
                 },
                 {
-                    "title": "Using music's unique powers",
-                    "description": "We understand how music shifts moods, shapes spaces and connects people."
+                    "title": "We know these rooms",
+                    "description": "Athens and the islands, where the season runs longer than people think and the same room works from breakfast to last call."
                 }
             ],
             "kicker": "WHAT SETS US APART",
@@ -1565,7 +1565,7 @@
                     "subtitle": "Soundtracks for every hour & space",
                     "desc1": "Music that shapes the complete guest journey: from morning coffee to midnight cocktails.",
                     "desc2": "Result: The atmosphere reinforces what guests already love about your property.",
-                    "cta": "Create your signature atmosphere",
+                    "cta": "See how we work in hotels",
                     "link": "industries/music-for-hotels-and-resorts",
                     "image": "/images/industries/industry-hotels-resorts.jpg"
                 },
@@ -1574,7 +1574,7 @@
                     "subtitle": "The invisible maître d'",
                     "desc1": "Sound that flows with your rhythms, encouraging conversation and longer visits.",
                     "desc2": "Result: Service flows more smoothly and guests settle in for the complete experience.",
-                    "cta": "Upgrade your dining atmosphere",
+                    "cta": "See how we work in restaurants and bars",
                     "link": "industries/music-for-restaurants-and-bars",
                     "image": "/images/industries/industry-restaurants-bars.jpg"
                 },
@@ -1583,7 +1583,7 @@
                     "subtitle": "Choreographed precision for unforgettable moments",
                     "desc1": "Precisely timed music that frames every phase, so your event sounds as good as it looks.",
                     "desc2": "Result: Smooth transitions that guests don't notice but organizers appreciate.",
-                    "cta": "Perfect your next event",
+                    "cta": "See how we work at events",
                     "link": "industries/music-for-events-and-experiences",
                     "image": "/images/industries/industry-events-experiences.jpg"
                 },
@@ -1592,16 +1592,16 @@
                     "subtitle": "Soundscapes that inspire discovery",
                     "desc1": "Music that guides customer journeys and helps your space tell its story through sound.",
                     "desc2": "Result: Shoppers slow down, explore more corners & feel guided, not rushed.",
-                    "cta": "Transform your retail experience",
+                    "cta": "See how we work in retail",
                     "link": "industries/music-for-retail-stores",
                     "image": "/images/industries/industry-retail-stores.jpg"
                 },
                 {
-                    "title": "Wellness Centers",
+                    "title": "Wellness & Gyms",
                     "subtitle": "The perfect soundtrack for every practice",
                     "desc1": "We calibrate music to support each activity, so each space has its optimal atmosphere.",
                     "desc2": "Result: Members consider the atmosphere as part of what makes their practice feel complete.",
-                    "cta": "Optimize your wellness space",
+                    "cta": "See how we work in wellness and gyms",
                     "link": "industries/music-for-wellness-and-gyms",
                     "image": "/images/industries/industry-wellness-gyms.jpg"
                 },
@@ -1610,7 +1610,7 @@
                     "subtitle": "Subtle atmospheres that deepen appreciation",
                     "desc1": "We create soundscapes that support without overwhelming and enrich the cultural experience.",
                     "desc2": "Result: Visitors slow down, absorb more and share their experience afterwards.",
-                    "cta": "Frame your exhibitions",
+                    "cta": "See how we work in galleries and museums",
                     "link": "industries/music-for-art-museums-and-fashion",
                     "image": "/images/industries/industry-art-museums-fashion.jpg"
                 }
@@ -2332,8 +2332,8 @@
             "description": "Music for hotels and resorts with 24-hour sound design, zone-based scheduling and one clear sonic identity. Request a tailored hotel sound proposal."
         },
         "hero": {
-            "title": "Music for Hotels & Resorts:",
-            "subtitle": "Soundscapes for every hour and space",
+            "title": "Music for hotels and resorts",
+            "subtitle": "Music for every hour and every area",
             "description": "Targeted sound that complements service, design, and the mood of the space.",
             "image": "/images/industries/hotels-resorts-curated-music-ambiance.jpg",
             "image_alt": "Luxury hotel resort with curated music ambiance",
@@ -2344,14 +2344,14 @@
             "image_caption": "A sound for every hour."
         },
         "intro": {
-            "title": "Music for the entire guest journey",
-            "p1": "Your hotel's atmosphere becomes <strong><em>felt</em></strong> before the interior design does.",
+            "title": "A hotel is not one room",
+            "p1": "Breakfast, the pool, the spa and the bar are the same brand at four different volumes, and a guest crosses all of them in a day.",
             "p2": "Our soundscapes <strong><em>enrich every moment</em></strong> of the day across all spaces and become an integral part of the <a href=\"/en/industries/music-for-hotels-and-resorts/\">hospitality experience</a>.",
             "kicker": "OUR PHILOSOPHY"
         },
         "what_we_do": {
             "title": "What we offer",
-            "subtitle": "Design and implementation of music for hotels",
+            "subtitle": "Different music for each area and each part of the day, all recognisably the same hotel.",
             "items": [
                 {
                     "title": "24-hour sound design",
@@ -2428,8 +2428,8 @@
             "kicker": "THE RESULTS"
         },
         "cta": {
-            "title": "Upgrade your hotel's atmosphere",
-            "description": "Let's see how music can support your guest experience and overall hotel image.",
+            "title": "Let's plan your hotel, zone by zone.",
+            "description": "We reply within 24 hours with the service that fits and what happens next.",
             "button": "Request a proposal for your hotel",
             "see_also": "See also how",
             "signature_playlists": "Signature Playlists",
@@ -2446,7 +2446,7 @@
             "description": "Music for Restaurants and Bars that blends naturally with food and service, supporting dining flow, conversation and the overall setting."
         },
         "hero": {
-            "title": "Music for Restaurants, Cafes & Bars:",
+            "title": "Music for restaurants, cafés and bars",
             "subtitle": "Designed to blend with food, drinks and service",
             "description": "Music selections that complement flavor, timing, and environment.",
             "image": "/images/industries/restaurants-bars-curated-music-atmosphere.jpg",
@@ -2458,14 +2458,14 @@
             "image_caption": "The invisible guest at the table."
         },
         "intro": {
-            "title": "Curated atmosphere for every service moment",
-            "p1": "Music <strong><em>shapes the dining experience</em></strong> as much as decor or lighting.",
+            "title": "Service has a curve",
+            "p1": "Prep, the first tables, the rush, then the slow hour before closing. Music that ignores that curve works against the room.",
             "p2": "Our sound <strong><em>follows the menu and service rhythm</em></strong> and becomes <strong><em>part of the enjoyment</em></strong>, without distracting from food or conversation.",
             "kicker": "OUR PHILOSOPHY"
         },
         "what_we_do": {
             "title": "What we do",
-            "subtitle": "Design and implementation of music for restaurants & bars",
+            "subtitle": "Music that follows prep, service and last call.",
             "items": [
                 {
                     "title": "Playlists based on service flow",
@@ -2488,7 +2488,7 @@
             "kicker": "OUR METHOD"
         },
         "ideal_for": {
-            "title": "Ideal for restaurant, bar & cafe music",
+            "title": "Ideal for",
             "items": [
                 {
                     "title": "Casual & fine dining restaurants",
@@ -2514,8 +2514,8 @@
             "title": "How we help",
             "items": [
                 {
-                    "title": "Build energy on quiet days & nights",
-                    "description": "We create atmosphere where energy comes from sound, not just guest count."
+                    "title": "A quiet Tuesday still sounds like your place",
+                    "description": "We programme the slow nights differently rather than leaving the same playlist to fill an empty room."
                 },
                 {
                     "title": "Guide rhythm and orders naturally",
@@ -2526,8 +2526,8 @@
                     "description": "Music, space, and service tell the same story, so the restaurant sounds as authentic as its cuisine."
                 },
                 {
-                    "title": "Remove playlist friction",
-                    "description": "We provide the music, you set the rules and staff focuses on guests, not track selection."
+                    "title": "Less playlist admin for your team",
+                    "description": "We build the music, you set the rules, and your staff deal with guests instead of track selection."
                 }
             ],
             "image": "/images/industries/restaurants-bars-restaurant-dining-room.jpg",
@@ -2538,8 +2538,8 @@
             "kicker": "THE RESULTS"
         },
         "cta": {
-            "title": "Upgrade your restaurant, cafe or bar's atmosphere",
-            "description": "Need better sound for stronger days & nights? We assess your current sound, service flow and concept, and recommend a customized approach.",
+            "title": "Let's hear your room at peak hours.",
+            "description": "We reply within 24 hours with the service that fits and what happens next.",
             "button": "Request a concept-led music plan",
             "see_also": "See how",
             "signature_playlists": "Signature Playlists",
@@ -2556,7 +2556,7 @@
             "description": "Retail store music with customer-journey playlists, brand-fit sound and seasonal updates. Explore an approach that supports browsing and sales."
         },
         "hero": {
-            "title": "Music for Retail Stores:",
+            "title": "Music for retail stores",
             "subtitle": "Designed to welcome and inspire discovery",
             "description": "Curated rhythm to support store browsing and brand image.",
             "image": "/images/industries/retail-stores-curated-music-shopping.jpg",
@@ -2568,14 +2568,14 @@
             "image_caption": "The rhythm of discovery."
         },
         "intro": {
-            "title": "Music that inspires the shopping journey",
-            "p1": "Music in your store <strong><em>affects dwell time</em></strong>, what visitors notice, and whether they make a purchase.",
+            "title": "One playlist cannot serve both halves of the day",
+            "p1": "In a store, music sets the pace of the room. The same tracks that carry a full Saturday make a Tuesday morning sound abandoned, so we choose the tempo and the level for the hours you are busy and the hours you are not.",
             "p2": "Our music selections <strong><em>move elegantly</em></strong> with the store's rhythm and shape how customers <strong><em>perceive your brand</em></strong>.",
             "kicker": "OUR PHILOSOPHY"
         },
         "what_we_do": {
             "title": "What we do",
-            "subtitle": "Strategy and implementation of music for retail stores",
+            "subtitle": "Music that follows opening hours, collections and footfall.",
             "items": [
                 {
                     "title": "Playlists based on customer journey",
@@ -2598,7 +2598,7 @@
             "kicker": "OUR METHOD"
         },
         "ideal_for": {
-            "title": "Ideal for retail music",
+            "title": "Ideal for",
             "items": [
                 {
                     "title": "Fashion & lifestyle boutiques",
@@ -2628,8 +2628,8 @@
             "title": "How we help",
             "items": [
                 {
-                    "title": "Encourage deeper browsing",
-                    "description": "We create calm, properly tuned atmosphere that extends dwell time and exploration."
+                    "title": "Quiet hours that do not sound empty",
+                    "description": "We programme the slow part of the day separately, so a near-empty shop still sounds intentional."
                 },
                 {
                     "title": "Enhance brand recognition",
@@ -2648,8 +2648,8 @@
             "kicker": "THE RESULTS"
         },
         "cta": {
-            "title": "Upgrade your store's atmosphere",
-            "description": "Want music to truly work for your space? We assess your current sound, map the customer journey, and recommend an approach specifically for your brand.",
+            "title": "Let's listen to your store, on a quiet hour and a busy one.",
+            "description": "We reply within 24 hours with the service that fits and what happens next.",
             "button": "Design your store soundtrack",
             "see_also": "See how",
             "signature_playlists": "Signature Playlists",
@@ -2666,7 +2666,7 @@
             "description": "Wellness and gym music with soundscapes for treatment spaces, classes and training, plus schedule-based programming. Design your wellness soundtrack."
         },
         "hero": {
-            "title": "Music for Spas & Gyms:",
+            "title": "Music for wellness and gyms",
             "subtitle": "Designed around activity and intensity",
             "description": "Targeted music that enhances focus across all spaces and practices.",
             "image": "/images/industries/wellness-gyms-luxury-spa-ambient-music.jpg",
@@ -2678,14 +2678,14 @@
             "image_caption": "Sound tuned to the body."
         },
         "intro": {
-            "title": "Musical themes tuned for body and mind",
-            "p1": "Music in wellness and exercise spaces <strong><em>guides focus, rhythm, and mental state</em></strong> during sessions.",
+            "title": "Opposite rooms, often the same building",
+            "p1": "A treatment room and a training floor want opposite things from music, and they are usually in the same building, sometimes on the other side of the wall.",
             "p2": "Our mixes <strong><em>adapt to each zone and intensity level</em></strong>, helping visitors <strong><em>stay present and active</em></strong>.",
             "kicker": "OUR PHILOSOPHY"
         },
         "what_we_do": {
             "title": "What we do",
-            "subtitle": "Strategy and implementation of music for Spas & gyms",
+            "subtitle": "Different music for treatment rooms and training floors.",
             "items": [
                 {
                     "title": "Soundscapes for treatment spaces",
@@ -2708,7 +2708,7 @@
             "kicker": "OUR METHOD"
         },
         "ideal_for": {
-            "title": "Ideal for wellness & gym music",
+            "title": "Ideal for",
             "items": [
                 {
                     "title": "Spa & Wellness Centers",
@@ -2738,8 +2738,8 @@
             "title": "How we help",
             "items": [
                 {
-                    "title": "Support deeper sessions",
-                    "description": "Sound design helps relaxation and focus, creating sessions that stay in memory."
+                    "title": "One level for treatment, another for training",
+                    "description": "Separate programmes and separate volumes, so a massage room and a class floor never share a playlist."
                 },
                 {
                     "title": "Match energy with activity",
@@ -2758,8 +2758,8 @@
             "kicker": "THE RESULTS"
         },
         "cta": {
-            "title": "Upgrade your wellness atmosphere",
-            "description": "Ready to design sound for treatment and training? We assess your current setup, sessions, and member journey, and recommend a customized approach.",
+            "title": "Let's set the pace, room by room.",
+            "description": "We reply within 24 hours with the service that fits and what happens next.",
             "button": "Design your wellness soundtrack",
             "see_also": "See how",
             "signature_playlists": "Signature Playlists",
@@ -2776,7 +2776,7 @@
             "description": "Music for events and experiences with run-of-show sound design, narrative pacing and technical coordination. Explore a soundtrack that fits every moment."
         },
         "hero": {
-            "title": "Music for Events:",
+            "title": "Music for events and experiences",
             "subtitle": "Sound that fits the moment",
             "description": "Curated music aligned with event timing and flow.",
             "image": "/images/industries/events-experiences-music-curation-event.jpg",
@@ -2788,14 +2788,14 @@
             "image_caption": "Scored, moment by moment."
         },
         "intro": {
-            "title": "Music with right timing for every event moment",
-            "p1": "At events, music <strong><em>connects every moment</em></strong>, from arrival to finale.",
-            "p2": "Our soundscapes <strong><em>build atmosphere</em></strong> and follow your event's schedule, creating moments guests <strong><em>feel and remember</em></strong>.",
+            "title": "An event runs to a schedule",
+            "p1": "Someone worked hard on that schedule. Music either supports it or interrupts it, and there is no third option on the night.",
+            "p2": "If you already have a date, see what Event Soundtracks includes.",
             "kicker": "OUR PHILOSOPHY"
         },
         "what_we_do": {
             "title": "What we do",
-            "subtitle": "Strategy and execution of music for events",
+            "subtitle": "Music planned against the run of show, with sound checks on the day.",
             "items": [
                 {
                     "title": "Run-of-show sound design",
@@ -2818,7 +2818,7 @@
             "kicker": "OUR METHOD"
         },
         "ideal_for": {
-            "title": "Ideal for event music",
+            "title": "Ideal for",
             "items": [
                 {
                     "title": "Hotels, Resorts & Restaurants",
@@ -2864,8 +2864,8 @@
             "kicker": "THE RESULTS"
         },
         "cta": {
-            "title": "Upgrade your event's atmosphere",
-            "description": "Ready to design the sound for your next experience? We assess the concept, venue, and schedule, and recommend a customized soundtrack and technical approach.",
+            "title": "Tell us your run of show.",
+            "description": "We reply within 24 hours with the service that fits and what happens next.",
             "button": "Shape the experience atmosphere",
             "see_also": "See how",
             "event_soundtracks": "Event Soundtracks",
@@ -2882,8 +2882,8 @@
             "description": "Music for art galleries, museums & fashion spaces that respects the work, supports focus & complements exhibitions, shows & cultural settings."
         },
         "hero": {
-            "title": "Music for Art, Museums & Fashion:",
-            "subtitle": "Respect for the work, shaping the experience",
+            "title": "Music for art, museums and fashion",
+            "subtitle": "Present, without competing with what you are showing",
             "description": "Subtle sound that complements your curatorial vision.",
             "image": "/images/industries/art-museums-fashion-gallery-curation.jpg",
             "image_alt": "Art gallery with curated music atmosphere and fashion installation",
@@ -2894,14 +2894,14 @@
             "image_caption": "Present, never competing."
         },
         "intro": {
-            "title": "Subtle precision for galleries & runways",
-            "p1": "In galleries and runways, sound must be <strong><em>present</em></strong> without <strong><em>competing</em></strong>.",
+            "title": "The work comes first",
+            "p1": "In a gallery, or on a runway, what you are showing comes first. Sound is there to hold attention on it, not to compete for it, and the difference between the two is a few decibels or the wrong genre.",
             "p2": "We create soundscapes that <strong><em>respect each work</em></strong> and <strong><em>gently guide</em></strong> how visitors <strong><em>move and perceive</em></strong> the content.",
             "kicker": "OUR PHILOSOPHY"
         },
         "what_we_do": {
             "title": "What we do",
-            "subtitle": "Strategy and implementation of music for cultural spaces",
+            "subtitle": "Sound that supports what you are showing, without competing with it.",
             "items": [
                 {
                     "title": "Acoustically tuned sound",
@@ -2924,7 +2924,7 @@
             "kicker": "OUR METHOD"
         },
         "ideal_for": {
-            "title": "Ideal for art & fashion music",
+            "title": "Ideal for",
             "items": [
                 {
                     "title": "Galleries & Museums",
@@ -2974,8 +2974,8 @@
             "kicker": "THE RESULTS"
         },
         "cta": {
-            "title": "Upgrade your cultural atmosphere",
-            "description": "Ready to design the sound for your space? We assess the venue, program, and audience, and recommend a customized approach for exhibitions and events.",
+            "title": "Tell us what you are showing.",
+            "description": "We reply within 24 hours with the service that fits and what happens next.",
             "button": "Design a discreet soundscape",
             "see_also": "See how",
             "sonic_strategy": "Sound Strategy",
