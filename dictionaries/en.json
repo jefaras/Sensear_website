@@ -299,7 +299,7 @@
             "items": [
                 {
                     "question": "How does your music curation service work?",
-                    "answer": "We start with a discovery call to understand your brand, space, and audience. Based on this, we design custom playlists or sonic strategies tailored to your needs."
+                    "answer": "We start with a call and a visit to understand your brand, your space and your audience. Then we recommend the service that fits and, after the visit, send a written proposal within four days."
                 },
                 {
                     "question": "What types of venues do you work with?",
@@ -318,116 +318,6 @@
         },
         "form_section": {
             "kicker": "START HERE"
-        }
-    },
-    "about": {
-        "meta": {
-            "description": "Meet the SensEar team. We are experts in music curation and sonic branding, passionate about creating unique experiences."
-        },
-        "hero": {
-            "title": "The people behind your soundtrack",
-            "subtitle": "We help venues shape how they sound and how they are experienced."
-        },
-        "philosophy": {
-            "title": "Our Philosophy",
-            "p1": "At SensEar, we treat music as a core element of the experience.",
-            "p2": "Music isn't just background; it's atmosphere, memory, and emotion, influencing how guests feel and behave."
-        },
-        "timeline": {
-            "title": "Our Journey",
-            "subtitle": "From DJ collective and digital services to strategic sound design",
-            "items": [
-                {
-                    "year": "2010",
-                    "text": "George and Katerina meet while curating music for an upscale wedding. Their shared love for hidden grooves becomes the start of a creative partnership."
-                },
-                {
-                    "year": "2011",
-                    "text": "As Midnight City, they organize and play at selected parties, focusing on cross-genre discoveries from the '70s to today, building a dedicated following."
-                },
-                {
-                    "year": "2018",
-                    "text": "JEF discovers M.C. at one of their signature events. The vibe and deep selections win him over immediately."
-                },
-                {
-                    "year": "2023",
-                    "text": "JEF and George align on a shared vision: transformative music curation and DJ sets for venues that care about atmosphere."
-                },
-                {
-                    "year": "2025",
-                    "text": "SensEar launches. The first clients confirm what we believed all along: venues deserve soundtracks designed with intention and expertise."
-                }
-            ]
-        },
-        "vision": {
-            "title": "Our Vision",
-            "text": "To become the premier music partner for eclectic hospitality brands and events that want to express their identity, elevate their atmosphere, and create meaningful connections with guests.",
-            "link": "Learn more about Sonic Brand Strategy."
-        },
-        "team": {
-            "title": "Meet the Team",
-            "subtitle": "Passionate about music, oriented towards hospitality",
-            "members": [
-                {
-                    "name": "George Fameliaris",
-                    "role": "Co-founder, Head of Music Curation & AV Expert",
-                    "bio": [
-                        "G's lifelong passion for music and record collecting was further shaped by a BA in Media & Communications and an MA in Popular Music in Film.",
-                        "He soon became a regular guest DJ on the Athens scene, holding private parties and long-term residencies at venues such as Balux, Sunset Antiparos, and Burger Disco, while sharing the decks with key DJ figures like Colleen \"Cosmo\" Murphy, Danny Krivit, and Gerd Janson.",
-                        "At SensEar, he shapes each venue's musical identity with precision, creating rhythm and atmosphere that define the brand's signature sound."
-                    ]
-                },
-                {
-                    "name": "John E. Farazoumis",
-                    "role": "Co-founder, Strategy & Communication",
-                    "bio": [
-                        "From early DJ sets to his studies in Hospitality Management, music has always been pivotal.",
-                        "Co-founder of a successful digital agency, with 25 years of experience in web services and understanding client needs.",
-                        "At SensEar, he charts the brand's strategic direction and bridges the creative vision with the client experience."
-                    ]
-                },
-                {
-                    "name": "Katerina Karali",
-                    "role": "Associate, DJ & Music Curator",
-                    "bio": [
-                        "Combines visual design with sonic storytelling, with a refined artistic eye.",
-                        "Experienced multimedia art director, curating soundscapes for films, exhibitions, and private events.",
-                        "Known for her instinct and love for rare grooves, she adds depth, texture, and unexpected character to SensEar."
-                    ]
-                }
-            ],
-            "conclusion": "Together, we are SensEar. A team dedicated to elevating spaces through meaningful, unforgettable music.",
-            "cta_intro": "See how we collaborate with clients or contact us for your project.",
-            "cta_case_studies": "Read Case Studies",
-            "cta_contact": "Contact Us"
-        },
-        "differentiators": {
-            "title": "What Sets Us Apart",
-            "subtitle": "Four principles that guide everything we do",
-            "items": [
-                {
-                    "title": "Music as Branding",
-                    "desc": "We translate your vision into music that sounds natural and perfectly fits the brand."
-                },
-                {
-                    "title": "Covering All Sectors",
-                    "desc": "Music designed to complete the guest journey in every space that values atmosphere."
-                },
-                {
-                    "title": "Tailored Services",
-                    "desc": "Our approach adapts to your style, team, and needs, even across multiple locations."
-                },
-                {
-                    "title": "The Power of Music",
-                    "desc": "We understand how music changes mood, shapes spaces, and connects people."
-                }
-            ]
-        },
-        "cta": {
-            "title": "Discover Your Sound Journey",
-            "text": "Explore our unique approach through Curated Playlists or see what we do for your industry.",
-            "playlists": "Curated Playlists",
-            "industries": "Industries We Serve"
         }
     },
     "about_page": {
@@ -630,7 +520,7 @@
                 "category": "Insights",
                 "link": "how-top-hospitality-brands-design-sound",
                 "image": "/images/blog/blog-designing-sound-hospitality.jpg",
-                "alt": "Luxury hospitality interior showcasing strategic sound design and music curation",
+                "alt": "Hotel interior where music is planned as part of the brand",
                 "date": "2025-01-20",
                 "displayDate": "January 20, 2025",
                 "author": "SensEar Team",
@@ -786,7 +676,7 @@
                 "category": "Insights",
                 "link": "three-reasons-make-music-hospitality",
                 "image": "/images/blog/blog-why-luxury-hotels-need-music.jpg",
-                "alt": "Luxury hotel interior showcasing music's role in hospitality marketing strategy",
+                "alt": "Hotel lobby where the music is chosen for the hour",
                 "date": "2025-01-15",
                 "displayDate": "January 15, 2025",
                 "author": "SensEar Team",
@@ -1056,8 +946,8 @@
             {
                 "title": "Master the music curation cycle",
                 "desc": "Why music curation is a continuing loop rather than a one-off delivery, and what changes after launch.",
-                "tag": "Strategy",
-                "category": "Strategy",
+                "tag": "Method",
+                "category": "Method",
                 "link": "music-curation-cycle-venues",
                 "image": "/images/blog/blog-master-music-curation-cycle.jpg",
                 "alt": "Music analytics and optimization process for venue soundscapes",
@@ -1158,7 +1048,7 @@
                 "category": "Branding",
                 "link": "building-brand-people-can-hear",
                 "image": "/images/blog/blog-building-brand-people-can-hear.webp",
-                "alt": "Sonic branding strategy building brand identity through music",
+                "alt": "Brand materials laid out beside reference playlists",
                 "date": "2025-02-12",
                 "displayDate": "February 12, 2025",
                 "author": "SensEar Team",
@@ -1446,7 +1336,7 @@
     "case_studies": {
         "meta": {
             "title": "Case studies: music in Greek venues",
-            "description": "See how we have transformed the atmosphere in hotels, restaurants, and events through strategic music curation."
+            "description": "Four venues, four briefs: what each place needed, what we built, and playlists you can listen to."
         },
         "hero": {
             "title": "Hear how sound shapes real experiences",
@@ -1641,7 +1531,7 @@
             "secondary_cta": "Book a call",
             "image_kicker": "FOUR APPROACHES",
             "image_caption": "Sound, by design.",
-            "image_alt": "Strategic music services for hospitality and retail venues",
+            "image_alt": "Music and sound services for hospitality and retail venues",
             "badge": [
                 "★ SENSEAR ★",
                 "EST · ATH"
@@ -1897,23 +1787,23 @@
             },
             {
                 "question": "Is your music fully licensed?",
-                "answer": "Yes. All tracks are properly licensed so you can focus on running your business without any legal concerns."
+                "answer": "The music we supply is licensed for commercial use, so you are not playing from a personal streaming account. Royalties for public performance are paid separately by the venue to the Greek collecting societies, as they are for any business that plays music. See the answer above on public performance licences."
             },
             {
                 "question": "Can I update the music playlists myself?",
-                "answer": "Absolutely. Our user-friendly platform allows you to make quick changes, adjust settings, or schedule different playlists for specific times."
+                "answer": "Yes. Scheduling by time of day and by area is part of the service, and you can ask for changes at any time. If you would rather not touch it, we handle the updates and you tell us when something is not working."
             },
             {
                 "question": "Do I need special equipment for playing your music playlists?",
-                "answer": "Basic sound systems work just fine, but if you want specialized audio-visual solutions, we can provide design, purchase, and installation services. For more info see our AV Design & Integration section."
+                "answer": "A basic system is usually enough to start. If the room itself is the problem, we assess it, tell you what needs to change, and coordinate the specialist partners who carry out the work, then tune the result. See <a href=\"/services/audio-upgrades/\" class=\"se-link\">Audio Upgrades</a>."
             },
             {
                 "question": "Do you offer support after setup?",
                 "answer": "Yes. We are available for ongoing support, updates, and any adjustments you need along the way. Just send us a message and we will talk about it."
             },
             {
-                "question": "What is the difference between background music and bespoke curation?",
-                "answer": "Background Music offers pre-curated, automated playlists for a seamless ambiance, ideal for general business needs. Bespoke Curation is a fully customized music strategy, crafted to reflect a brand's identity and create a unique, immersive experience. It is ideal for luxury venues, boutique spaces, and businesses seeking a signature sound experience."
+                "question": "How is this different from a background music service?",
+                "answer": "A background music service gives you ready-made playlists that thousands of other venues also use. We build the programme around your venue: your areas, your hours, and the way your day runs, and we keep it updated. The tracks are chosen by people who have heard them, not generated from a genre setting."
             }
         ],
         "cta": {
@@ -2123,7 +2013,7 @@
     "sonic_identity": {
         "meta": {
             "title": "Sonic identity design for brands",
-            "description": "Sonic identity design for brands that need one clear sound across locations, media & guest touchpoints. Explore your best-fit sound strategy today."
+            "description": "A musical direction your teams and agencies can follow: references, written guidelines and a map of how each space should sound."
         },
         "hero": {
             "title": "Sonic Identity:",
@@ -2143,7 +2033,7 @@
         },
         "what_we_do": {
             "title": "What we do",
-            "subtitle": "Brand audio strategy and implementation",
+            "subtitle": "From musical direction to rollout",
             "items": [
                 {
                     "title": "Sonic DNA workshop",
@@ -2212,7 +2102,7 @@
             "explore": "Explore how our",
             "signature_playlists": "Signature Playlists",
             "audio_upgrades": "Audio Upgrades",
-            "bring_to_life": "bring your strategy to life.",
+            "bring_to_life": "put it into practice.",
             "location": "Athens, Greece",
             "kicker": "LET'S COLLABORATE"
         }
@@ -2966,7 +2856,7 @@
             "description": "We reply within 24 hours with the service that fits and what happens next.",
             "button": "Design a discreet soundscape",
             "see_also": "See how",
-            "sonic_strategy": "Sound Strategy",
+            "sonic_strategy": "Sonic Identity",
             "and": "and",
             "event_soundtracks": "Event Music Curation",
             "work_for": "work for art, museums, and fashion.",
