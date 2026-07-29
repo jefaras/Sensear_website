@@ -10,7 +10,7 @@
     },
     "home": {
         "meta": {
-            "title": "Music Curation Services for Venues & Events",
+            "title": "Music curation services for venues and events",
             "description": "Music curation for hospitality, retail & events that elevates atmosphere, engages guests and builds loyalty. Discover a brand-fit sound for your venue."
         },
         "hero": {
@@ -97,8 +97,8 @@
         },
         "expertise": {
             "kicker": "INDUSTRIES",
-            "title": "Your world, our expertise",
-            "subtitle": "We understand how rhythm, energy & atmosphere influence the hospitality experience.",
+            "title": "Where we work",
+            "subtitle": "Hotels, restaurants and bars, retail, wellness, events, and cultural spaces. Each one runs differently, which is why the music is planned differently.",
             "items": [
                 {
                     "title": "Hotels & Resorts",
@@ -222,7 +222,7 @@
     },
     "contact": {
         "meta": {
-            "title": "Elevate Your Venue/Event Sound - Contact Us",
+            "title": "Contact SensEar about your venue, event or brand",
             "description": "Get in touch with SensEar. We're here to discuss your music curation and sonic branding needs."
         },
         "hero": {
@@ -432,7 +432,7 @@
     },
     "about_page": {
         "meta": {
-            "title": "Our music curation team & approach",
+            "title": "The SensEar team and how we work",
             "description": "Learn how SensEar approaches music curation with clarity and intent, shaping how spaces are felt through sound."
         },
         "hero": {
@@ -582,12 +582,12 @@
     },
     "blog": {
         "meta": {
-            "title": "The Curation Journal: Luxury Sound Insights",
+            "title": "The Curation Journal: notes on music in venues",
             "description": "The Curation Journal shares luxury music curation insights, sonic branding ideas and customer-experience research. Explore our latest articles today."
         },
         "hero": {
             "title": "The Curation Journal",
-            "subtitle": "Insights, trends, and expertise from the world of luxury music curation.",
+            "subtitle": "Notes on music in commercial spaces: what the research says, what other venues do, and how the work actually gets done.",
             "side_label": "JOURNAL — CURATION NOTES",
             "kicker": "OUR JOURNAL",
             "primary_cta": "See the articles",
@@ -618,9 +618,9 @@
             "subscribe_button": "Subscribe"
         },
         "blog_cta": {
-            "title": "Ready to elevate your hospitality brand?",
-            "description": "Discover how SensEar can help you design a signature sound strategy that defines your brand and delights your guests.",
-            "button": "Start Your Sound Journey"
+            "title": "More from the journal",
+            "description": "Notes on music in commercial spaces: what the research says, what other venues do, and how the work gets done.",
+            "button": "See all articles"
         },
         "articles": [
             {
@@ -1457,7 +1457,7 @@
     },
     "case_studies": {
         "meta": {
-            "title": "Hospitality music case studies",
+            "title": "Case studies: music in Greek venues",
             "description": "See how we have transformed the atmosphere in hotels, restaurants, and events through strategic music curation."
         },
         "hero": {
@@ -1532,7 +1532,7 @@
     },
     "industries_page": {
         "meta": {
-            "title": "Industry-Specific Music Solutions",
+            "title": "Music for hotels, retail, wellness and culture",
             "description": "Explore music solutions for hospitality, retail, wellness, culture & events. Find the approach that fits your sector, atmosphere and guest journey."
         },
         "hero": {
@@ -1641,7 +1641,7 @@
     },
     "services_page": {
         "meta": {
-            "title": "Strategic Music Services for Spaces & Events",
+            "title": "Music and sound services for venues and events",
             "description": "Explore music curation services for spaces & events, from Signature Playlists to Sonic Identity & Audio Upgrades. Find the solution that fits you."
         },
         "hero": {
@@ -1838,7 +1838,7 @@
     },
     "sitemap_page": {
         "meta": {
-            "title": "SensEar Sitemap: Pages, Services & Insights",
+            "title": "Sitemap: every page on the SensEar site",
             "description": "Explore all SensEar pages, from services and industries to blog posts, FAQs and contact details. Find the page, resource or topic you need quickly."
         },
         "hero": {
@@ -1873,7 +1873,7 @@
     },
     "faq_page": {
         "meta": {
-            "title": "Venue Music FAQ: Licensing, Playlists & Support",
+            "title": "Venue music FAQ: licensing, playlists and support",
             "description": "Get answers on music licensing, custom playlists, platform legality and ongoing support for venues. Understand how SensEar works and what to expect."
         },
         "hero": {
@@ -1938,7 +1938,7 @@
     },
     "signature_playlists": {
         "meta": {
-            "title": "Bespoke Signature Playlists for Venues",
+            "title": "Signature Playlists: daily music for venues",
             "description": "Signature playlists for venues curated around your concept, guests & daily rhythm. Replace generic background music with rare, handpicked tracks."
         },
         "hero": {
@@ -2025,7 +2025,7 @@
             "kicker": "LEGAL PEACE OF MIND"
         },
         "cta": {
-            "title": "Let us craft your signature sound",
+            "title": "Tell us what your venue's day looks like.",
             "description": "After a call and a visit to the space, you receive a written proposal within four days.",
             "button": "Start with curated playlists",
             "explore": "Explore how our",
@@ -2038,8 +2038,8 @@
     },
     "event_soundtracks": {
         "meta": {
-            "title": "Curated Event Soundtracks & DJ Sets",
-            "description": "Curated event soundtracks for launches, weddings & branded experiences, with playlists, DJ sets and live coordination. Explore the right setup for your event."
+            "title": "Event Soundtracks: music for a specific date",
+            "description": "Event music planned against your run of show: playlists, DJ sets, sound checks and playback on the day."
         },
         "hero": {
             "title": "Event Soundtracks:",
@@ -2121,7 +2121,7 @@
             "kicker": "THE COLLABORATION"
         },
         "cta": {
-            "title": "Let us design your event's sonic journey",
+            "title": "Tell us your date and your run of show.",
             "description": "After a call and a visit to the space, you receive a written proposal within four days.",
             "button": "Book an event music briefing",
             "explore": "Explore how our",
@@ -2134,7 +2134,7 @@
     },
     "sonic_identity": {
         "meta": {
-            "title": "Strategic Sonic Identity for Brands",
+            "title": "Sonic identity design for brands",
             "description": "Sonic identity design for brands that need one clear sound across locations, media & guest touchpoints. Explore your best-fit sound strategy today."
         },
         "hero": {
@@ -2218,7 +2218,7 @@
             "kicker": "STRATEGIC IDENTITY"
         },
         "cta": {
-            "title": "Let us define your brand's sonic identity",
+            "title": "Tell us where your brand needs to sound the same.",
             "description": "After a call and a visit to the space, you receive a written proposal within four days.",
             "button": "Define your brand's sonic DNA",
             "explore": "Explore how our",
@@ -2231,7 +2231,7 @@
     },
     "audio_upgrades": {
         "meta": {
-            "title": "Venue Audio Upgrades & Acoustic Support",
+            "title": "Audio upgrades and acoustic assessment for venues",
             "description": "Venue audio upgrades with acoustic assessment, AV proposals & system tuning for clear, balanced sound. Explore the right setup for your space."
         },
         "hero": {
@@ -2315,7 +2315,7 @@
             "kicker": "THE RESULT"
         },
         "cta": {
-            "title": "Let us upgrade your venue's sound",
+            "title": "Tell us which room is not working.",
             "description": "After a call and a visit to the space, you receive a written proposal within four days.",
             "button": "Book an acoustic assessment",
             "pair_with": "Pair with our",
@@ -2328,7 +2328,7 @@
     },
     "hotels_resorts": {
         "meta": {
-            "title": "Hotel Music for Every Hour & Zone",
+            "title": "Music for hotels and resorts",
             "description": "Music for hotels and resorts with 24-hour sound design, zone-based scheduling and one clear sonic identity. Request a tailored hotel sound proposal."
         },
         "hero": {
@@ -2442,7 +2442,7 @@
     },
     "restaurants_bars": {
         "meta": {
-            "title": "Music for Restaurants, Cafes & Bars",
+            "title": "Music for restaurants, cafés and bars",
             "description": "Music for Restaurants and Bars that blends naturally with food and service, supporting dining flow, conversation and the overall setting."
         },
         "hero": {
@@ -2552,7 +2552,7 @@
     },
     "retail_stores": {
         "meta": {
-            "title": "Music for Retail Stores That Guide Discovery",
+            "title": "Music for retail stores",
             "description": "Retail store music with customer-journey playlists, brand-fit sound and seasonal updates. Explore an approach that supports browsing and sales."
         },
         "hero": {
@@ -2662,7 +2662,7 @@
     },
     "wellness_gyms": {
         "meta": {
-            "title": "Wellness & Gym Music for Every Practice",
+            "title": "Music for wellness spaces and gyms",
             "description": "Wellness and gym music with soundscapes for treatment spaces, classes and training, plus schedule-based programming. Design your wellness soundtrack."
         },
         "hero": {
@@ -2772,7 +2772,7 @@
     },
     "events_experiences": {
         "meta": {
-            "title": "Music for Events that Fit Every Moment",
+            "title": "Music for events and experiences",
             "description": "Music for events and experiences with run-of-show sound design, narrative pacing and technical coordination. Explore a soundtrack that fits every moment."
         },
         "hero": {
@@ -2878,7 +2878,7 @@
     },
     "art_museums_fashion": {
         "meta": {
-            "title": "Music for Art, Museums & Fashion",
+            "title": "Music for art, museums and fashion",
             "description": "Music for art galleries, museums & fashion spaces that respects the work, supports focus & complements exhibitions, shows & cultural settings."
         },
         "hero": {
