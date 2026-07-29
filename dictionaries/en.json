@@ -169,19 +169,19 @@
             "articles": [
                 {
                     "title": "Three reasons music matters in hospitality",
-                    "desc": "Curated music is a practical way to shape how guests feel, what they remember and how they spend.",
+                    "desc": "Three reasons music earns a budget line in hospitality, and what research says about each.",
                     "tag": "Insights",
                     "link": "three-reasons-make-music-hospitality"
                 },
                 {
                     "title": "How brand-fit music converts browsers into buyers",
-                    "desc": "Evidence-based research shows how brand-aligned music boosts revenues in hospitality venues.",
+                    "desc": "What the retail studies found about brand-fit music, and what it means for bars and hotels.",
                     "tag": "Research",
                     "link": "brand-music-converts-browsers-buyers"
                 },
                 {
                     "title": "What exactly does a music curator do?",
-                    "desc": "Learn how professional music curators architect brand soundtracks through strategic curation and data-driven sonic branding.",
+                    "desc": "What a music curator does: listening, diagnostics, building the programme, keeping it current.",
                     "tag": "Education",
                     "link": "what-exactly-does-music-curator-do"
                 }
@@ -433,7 +433,7 @@
     "about_page": {
         "meta": {
             "title": "The SensEar team and how we work",
-            "description": "Learn how SensEar approaches music curation with clarity and intent, shaping how spaces are felt through sound."
+            "description": "The people behind SensEar: residencies, shared decks, and studies in music and hospitality. How a DJ collective became a curation studio."
         },
         "hero": {
             "title": "The people behind your soundtrack",
@@ -460,7 +460,7 @@
         },
         "philosophy": {
             "heading": "Our philosophy",
-            "text": "We treat music as part of how a room works, like the lighting or the seating: chosen for that room, maintained, and changed when the room changes. That is why we talk about service flow and not just playlists, and why our services include running the sound rather than only choosing it.",
+            "text": "We treat music as part of how a room works, like the lighting or the seating: chosen for that room, maintained, and changed when the room changes. That is why we talk about service flow rather than playlists alone, and why our services include running the sound rather than only choosing it.",
             "kicker": "OUR PHILOSOPHY"
         },
         "journey": {
@@ -504,7 +504,7 @@
             "heading": "What sets us apart",
             "items": [
                 {
-                    "title": "We run it, not just pick it",
+                    "title": "We run it after launch",
                     "description": "Licensing, scheduling, renewals, tuning and staff training are part of the work, so the sound holds up long after launch."
                 },
                 {
@@ -625,7 +625,7 @@
         "articles": [
             {
                 "title": "Designing sound for hospitality",
-                "desc": "Learn how luxury hospitality brands use strategic music curation and sonic branding to create distinctive customer experiences.",
+                "desc": "How eight hotel groups run music as part of their brand, from in-house curators to purpose-built recording spaces.",
                 "tag": "Insights",
                 "category": "Insights",
                 "link": "how-top-hospitality-brands-design-sound",
@@ -774,13 +774,14 @@
                     },
                     {
                         "type": "paragraph",
-                        "value": "Ready to shape your property's sound strategy? [Contact us](/en/contact/) to get started."
+                        "value": "If your property's music was never really decided, that is the usual starting point. [Tell us about the space](/contact/)."
                     }
-                ]
+                ],
+                "standfirst": "Eight hotel groups treat music as part of the brand system, from in-house curators to purpose-built recording studios. Here is what each one actually does."
             },
             {
                 "title": "Why Music Matters in Luxury Hospitality",
-                "desc": "Learn why strategic music influences guest experience, brand identity and team productivity in luxury hotels. Read the three reasons that matter most.",
+                "desc": "Three reasons music earns a budget line in hospitality: guest experience, brand recognition, and what research says about spend.",
                 "tag": "Insights",
                 "category": "Insights",
                 "link": "three-reasons-make-music-hospitality",
@@ -832,17 +833,18 @@
                     },
                     {
                         "type": "paragraph",
-                        "value": "[Music design](/en/services/sonic-identity/) belongs alongside visual and olfactory design in luxury hospitality. It enhances guest experience, can support sales and revenue outcomes, and contributes to higher employee morale and productivity. [Studies in retail and restaurants](https://academic.oup.com/jcr/article-abstract/13/2/286/1846377) show that getting tempo and style right changes pace, time perception, and spend, which translates well to luxury venues when applied with care."
+                        "value": "[Music design](/services/sonic-identity/) belongs alongside visual and olfactory design in luxury hospitality. It enhances guest experience, can support sales and revenue outcomes, and contributes to higher employee morale and productivity. [Studies in retail and restaurants](https://academic.oup.com/jcr/article-abstract/13/2/286/1846377) show that getting tempo and style right changes pace, time perception, and spend, which translates well to luxury venues when applied with care."
                     },
                     {
                         "type": "paragraph",
-                        "value": "See what [curated music](/en/services/signature-playlists/) can do for your brand. [Start here](/en/contact/)."
+                        "value": "If you want the same for your rooms and your restaurant, [tell us how the day runs](/contact/)."
                     }
-                ]
+                ],
+                "standfirst": "Three reasons hotels give music a budget line: what guests feel, what they remember, and what the research says about spend."
             },
             {
                 "title": "How Brand-Fit Music Converts Browsers to Buyers",
-                "desc": "See how brand-aligned music can lift revenue, improve dwell time and guide buyer behavior in bars, hotels and restaurants. Read the full research.",
+                "desc": "What the retail research found about brand-fit music, and what it means for bars, hotels and shops.",
                 "tag": "Research",
                 "category": "Research",
                 "link": "brand-music-converts-browsers-buyers",
@@ -868,7 +870,7 @@
                     },
                     {
                         "type": "paragraph",
-                        "value": "Large-scale [field research](https://ideas.repec.org/p/hhs/huiwps/0121.html) finally moved this question from hunch to hard numbers. In a multi-month experiment spanning 16 high-traffic [restaurants](/en/industries/music-for-restaurants-and-bars/), playlists that matched the brand's personality outperformed random chart hits, lifting [revenues by ~9.1%](https://ideas.repec.org/p/hhs/huiwps/0121.html)."
+                        "value": "Large-scale [field research](https://ideas.repec.org/p/hhs/huiwps/0121.html) finally moved this question from hunch to hard numbers. In a multi-month experiment spanning 16 high-traffic [restaurants](/industries/music-for-restaurants-and-bars/), playlists that matched the brand's personality outperformed random chart hits, lifting [revenues by ~9.1%](https://ideas.repec.org/p/hhs/huiwps/0121.html)."
                     },
                     {
                         "type": "paragraph",
@@ -881,7 +883,7 @@
                     },
                     {
                         "type": "paragraph",
-                        "value": "[Brand fit music](/en/services/signature-playlists/) behaves like your interior palette, only for the ears: it reflects values, tone-of-voice, and desired pace, so the sound \"feels\" unmistakably like you. Customer fit - playing only what you think guests prefer - often dissolves into a beige mix that blurs distinctiveness, especially with diverse audiences."
+                        "value": "[Brand fit music](/services/signature-playlists/) behaves like your interior palette, only for the ears: it reflects values, tone-of-voice, and desired pace, so the sound \"feels\" unmistakably like you. Customer fit - playing only what you think guests prefer - often dissolves into a beige mix that blurs distinctiveness, especially with diverse audiences."
                     },
                     {
                         "type": "heading",
@@ -925,13 +927,14 @@
                     },
                     {
                         "type": "paragraph",
-                        "value": "If you're running a [bar](/en/industries/music-for-restaurants-and-bars/), [hotel](/en/industries/music-for-hotels-and-resorts/), or [restaurant](/en/industries/music-for-restaurants-and-bars/) and want measurable uplift, not just ambience, SensEar can design and operate your [brand-fit music system](/en/services/signature-playlists/) end-to-end. Book a 20-minute [sound audit](/en/contact/) and get a custom audio DNA with quick-win recommendations for your venue today."
+                        "value": "If you run a [bar or restaurant](/industries/music-for-restaurants-and-bars/) or a [hotel](/industries/music-for-hotels-and-resorts/) and the music was never really chosen, [tell us about the room](/contact/)."
                     }
-                ]
+                ],
+                "standfirst": "What \"brand-fit\" music means in practice, and what the retail studies found when the music matched the shop and when it did not."
             },
             {
                 "title": "How Music Curators Build Brand Sound",
-                "desc": "Learn how music curators turn brand voice into living sound through diagnostics, adaptive playlists, governance and measurable sound strategy. Read more.",
+                "desc": "What a music curator does: listening, brand and space diagnostics, building the programme, and keeping it current.",
                 "tag": "Education",
                 "category": "Education",
                 "link": "what-exactly-does-music-curator-do",
@@ -941,10 +944,6 @@
                 "displayDate": "January 10, 2025",
                 "author": "SensEar Team",
                 "structuredContent": [
-                    {
-                        "type": "paragraph",
-                        "value": "The SensEar approach to turning brand voice into living sound"
-                    },
                     {
                         "type": "heading",
                         "level": 2,
@@ -1049,13 +1048,14 @@
                     },
                     {
                         "type": "paragraph",
-                        "value": "If you're designing a new space, refreshing an audio identity, or want measurable uplift from in-store music, SensEar can help; [strategy](https://sensear.music/en/services/sonic-identity/), [curation](https://sensear.music/en/services/signature-playlists/), and governance included. Let's build a sound your customers remember and your team can run every day. Get your [free sonic audit](https://sensear.music/en/contact/) today."
+                        "value": "That is the work: [daily playlists](/services/signature-playlists/), [sonic identity](/services/sonic-identity/), and the [acoustics](/services/audio-upgrades/) they play through. [Hear the work in place](/case-studies/)."
                     }
-                ]
+                ],
+                "standfirst": "What a music curator actually does all day, in four parts: listening, diagnostics, building the programme, and keeping it current."
             },
             {
                 "title": "Master the music curation cycle",
-                "desc": "Learn how continuous music curation optimization enhances venue atmosphere through data-driven refinement and expert human curation.",
+                "desc": "Why music curation is a continuing loop rather than a one-off delivery, and what changes after launch.",
                 "tag": "Strategy",
                 "category": "Strategy",
                 "link": "music-curation-cycle-venues",
@@ -1065,10 +1065,6 @@
                 "displayDate": "January 15, 2025",
                 "author": "SensEar Team",
                 "structuredContent": [
-                    {
-                        "type": "paragraph",
-                        "value": "How continuous music curation optimization enhances venue atmosphere with data-driven strategies."
-                    },
                     {
                         "type": "heading",
                         "level": 2,
@@ -1150,13 +1146,14 @@
                     },
                     {
                         "type": "paragraph",
-                        "value": "Music changes how people move, connect, and remember. We make that power part of your venue's identity. Then we keep improving it, cycle after cycle. Ready to elevate your venue's sound strategy? [Contact us today](https://sensear.music/en/contact/)!"
+                        "value": "Curation does not end at launch, which is why the playlists are renewed rather than delivered. [Hear the work in place](/case-studies/)."
                     }
-                ]
+                ],
+                "standfirst": "Curation is a loop, not a delivery. What changes after launch, who keeps listening, and how a programme stays current."
             },
             {
                 "title": "Building a brand people can hear",
-                "desc": "Strategic guide to sonic branding and audio identity development. Create memorable brand experiences through music and sound design.",
+                "desc": "A six-step framework for deciding how a brand should sound, and which touchpoints to start with.",
                 "tag": "Branding",
                 "category": "Branding",
                 "link": "building-brand-people-can-hear",
@@ -1166,10 +1163,6 @@
                 "displayDate": "February 12, 2025",
                 "author": "SensEar Team",
                 "structuredContent": [
-                    {
-                        "type": "paragraph",
-                        "value": "Strategic guide to sonic branding and audio identity development through music and sound design."
-                    },
                     {
                         "type": "heading",
                         "level": 2,
@@ -1241,13 +1234,14 @@
                     },
                     {
                         "type": "paragraph",
-                        "value": "If you want [playlists that perform](https://sensear.music/en/services/signature-playlists/), a [sound logo people remember](https://sensear.music/en/services/sonic-identity/), and [audio guidelines](https://sensear.music/en/services/) your teams can apply everywhere, SensEar can help. [Book a discovery session](https://sensear.music/en/contact/) and we will map your [customer journey](https://sensear.music/en/industries/), test what your audience responds to, and build a sonic branding system that lifts recognition, improves experience, and drives [measurable results](https://sensear.music/en/case-studies/). Let's design the sound of your brand today."
+                        "value": "If you want a musical direction your teams and agencies can follow without you in the room, that is [sonic identity design](/services/sonic-identity/). [Hear the work in place](/case-studies/)."
                     }
-                ]
+                ],
+                "standfirst": "A six-step framework for deciding how a brand should sound, and which touchpoints are worth the effort first."
             },
             {
                 "title": "How music shapes buyer behavior",
-                "desc": "Field research reveals how strategic background music increases sales and dwell time in retail and hospitality environments.",
+                "desc": "What field studies in real shops and restaurants measured about music, pace and spending, and where the effects held.",
                 "tag": "Research",
                 "category": "Research",
                 "link": "background-music-shapes-customer-behavior",
@@ -1257,10 +1251,6 @@
                 "displayDate": "March 8, 2025",
                 "author": "Research Team",
                 "structuredContent": [
-                    {
-                        "type": "paragraph",
-                        "value": "Field research reveals how strategic background music affects dwell time, pace, and spending in retail and hospitality environments."
-                    },
                     {
                         "type": "heading",
                         "level": 2,
@@ -1351,13 +1341,14 @@
                     },
                     {
                         "type": "paragraph",
-                        "value": "Book a SensEar Sound Audit to benchmark your space, map your crowd by time of day, and launch a playlist plan that grows sales while keeping guests comfortable."
+                        "value": "If you want the music in your space chosen for the hours you are actually busy, [tell us how your day runs](/contact/)."
                     }
-                ]
+                ],
+                "standfirst": "What the field studies measured in real shops and restaurants, where the effects held, and where they did not."
             },
             {
                 "title": "How spaces shape perceived wait time",
-                "desc": "How music and environmental design can transform the waiting experience and improve customer satisfaction.",
+                "desc": "Why waiting feels longer than it is, and how music, light and temperature change the perception.",
                 "tag": "Research",
                 "category": "Research",
                 "link": "service-environment-shapes-wait-time",
@@ -1367,10 +1358,6 @@
                 "displayDate": "March 15, 2025",
                 "author": "Research Team",
                 "structuredContent": [
-                    {
-                        "type": "paragraph",
-                        "value": "How music and environmental design can transform the waiting experience and improve satisfaction."
-                    },
                     {
                         "type": "heading",
                         "level": 2,
@@ -1431,13 +1418,14 @@
                     },
                     {
                         "type": "paragraph",
-                        "value": "Make ambient baselines a management priority. [Calibrate lighting, temperature, music volume, and tempo to the setting and daypart](https://academic.oup.com/jcr/article-abstract/13/2/286/1846377), then validate with guest feedback and metrics. Understand the affective profile of the music you select for your target market, and use [playlists that align with desired mood and pace](https://sensear.music/en/services/signature-playlists/) for each zone and queue type."
+                        "value": "Make ambient baselines a management priority. [Calibrate lighting, temperature, music volume, and tempo to the setting and daypart](https://academic.oup.com/jcr/article-abstract/13/2/286/1846377), then validate with guest feedback and metrics. Understand the affective profile of the music you select for your target market, and use [playlists that align with desired mood and pace](https://sensear.music/services/signature-playlists/) for each zone and queue type."
                     },
                     {
                         "type": "paragraph",
-                        "value": "The right music does more than fill silence. It improves the waiting experience, reduces perceived wait time, and supports higher satisfaction. This is where [professional music curation](https://sensear.music/en/services/) delivers measurable value in [service environments](https://sensear.music/en/industries/)."
+                        "value": "If your guests wait anywhere, the room they wait in is worth a listen. [Tell us which room](/contact/)."
                     }
-                ]
+                ],
+                "standfirst": "Why ten minutes of waiting can feel like twenty, and what music, light and temperature do to the difference."
             }
         ],
         "newsletter_cta": {
@@ -2346,7 +2334,7 @@
         "intro": {
             "title": "A hotel is not one room",
             "p1": "Breakfast, the pool, the spa and the bar are the same brand at four different volumes, and a guest crosses all of them in a day.",
-            "p2": "Our soundscapes <strong><em>enrich every moment</em></strong> of the day across all spaces and become an integral part of the <a href=\"/en/industries/music-for-hotels-and-resorts/\">hospitality experience</a>.",
+            "p2": "Our music <strong><em>follows the day</em></strong> across every area, and becomes part of the <a href=\"/services/sonic-identity/\" class=\"se-link\">sonic identity</a> guests recognise when they return.",
             "kicker": "OUR PHILOSOPHY"
         },
         "what_we_do": {
@@ -2359,7 +2347,7 @@
                 },
                 {
                     "title": "Multi-zone coherence",
-                    "description": "Distinct musical themes for lobby, restaurants, bar, spa, and pool, tied together with <a href=\"/en/blog/how-top-hospitality-brands-design-sound/\">one unified sonic identity</a>."
+                    "description": "Distinct musical themes for lobby, restaurants, bar, spa, and pool, tied together with <a href=\"/blog/how-top-hospitality-brands-design-sound/\">one unified sonic identity</a>."
                 },
                 {
                     "title": "Sound aligned with brand",

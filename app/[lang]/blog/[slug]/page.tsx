@@ -190,9 +190,11 @@ export default async function BlogPostV3({ params }: { params: Promise<{ lang: L
                 author={article.author}
             />
 
+            {/* The standfirst is written for someone who has already clicked; article.desc
+                is written to win the click and stays in metadata and on hub cards. */}
             <Hero
                 title={article.title}
-                desc={article.desc}
+                desc={article.standfirst || article.desc}
                 tag={article.tag}
                 author={article.author}
                 displayDate={article.displayDate}
