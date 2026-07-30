@@ -99,7 +99,7 @@ export function Hero({ lang, hero }: HeroProps) {
                             <div className="relative aspect-[4/4.6] overflow-hidden rounded-lg shadow-[0_40px_90px_-30px_rgba(0,0,0,0.8)]">
                                 <Image
                                     src="/images/carousel/carousel-event-venue.jpg"
-                                    alt={lang === 'el' ? 'Επιμελημένη ατμόσφαιρα — χώρος εκδήλωσης' : 'Curated atmosphere — event venue'}
+                                    alt={lang === 'el' ? 'Επιμελημένη ατμόσφαιρα σε χώρο εκδήλωσης' : 'Curated atmosphere in an event venue'}
                                     fill
                                     sizes="(max-width: 1024px) 100vw, 50vw"
                                     className="object-cover"

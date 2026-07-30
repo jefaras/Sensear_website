@@ -60,7 +60,7 @@ export function Hero({ lang, hero }: HeroProps) {
                             <div className="relative aspect-square overflow-hidden rounded-lg shadow-[0_40px_90px_-30px_rgba(0,0,0,0.8)]">
                                 <Image
                                     src="/images/blog/blog-faq-default.jpg"
-                                    alt={lang === 'el' ? 'Πώς λειτουργεί — ήχος, αδειοδότηση & υπηρεσίες' : 'How it works — sound, licensing & service'}
+                                    alt={lang === 'el' ? 'Πώς λειτουργεί: ήχος, αδειοδότηση και υπηρεσίες' : 'How it works: sound, licensing and service'}
                                     fill
                                     sizes="(max-width: 1024px) 100vw, 50vw"
                                     className="object-cover"

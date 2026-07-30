@@ -56,6 +56,9 @@ export function CaseRow({ item, image, scUrl, scLink, listenPrefix, imageSide, i
                     </p>
                 </ScrollReveal>
                 <ScrollReveal delay={0.22}>
+                    {/* The embed title is built from the localised listen prefix. It previously
+                        read "<venue> — sound sample": English on Greek pages, and using an em
+                        dash, which the voice rules retire. */}
                     <div className="max-w-[600px] overflow-hidden rounded-[12px] border border-[#faf6f1]/10">
                         <iframe
                             width="100%"
@@ -65,7 +68,7 @@ export function CaseRow({ item, image, scUrl, scLink, listenPrefix, imageSide, i
                             allow="autoplay"
                             loading="lazy"
                             src={scUrl}
-                            title={`${item.title} — sound sample`}
+                            title={`${listenPrefix} ${venue}`}
                         />
                     </div>
                 </ScrollReveal>
