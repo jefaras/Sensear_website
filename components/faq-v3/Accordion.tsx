@@ -32,10 +32,23 @@ export function Accordion({ items }: AccordionProps) {
                                 </span>
                             </AccordionPrimitive.Trigger>
                         </AccordionPrimitive.Header>
-                        <AccordionPrimitive.Content className="overflow-hidden data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down">
-                            <div className="px-[clamp(23px,1.82vw,32px)] pb-[clamp(23px,1.82vw,32px)] pr-[clamp(58px,4.6vw,81px)] text-[clamp(0.96rem,1.09vw,1.2rem)] leading-[1.7] text-[#faf6f1]/62">
-                                {item.answer}
-                            </div>
+                        {/* forceMount keeps every answer in the server-rendered HTML instead of
+                            mounting it on first open, so the text is readable by crawlers that do
+                            not execute JavaScript.
+                            forceMount also hands presence back to us, so the closed panel must be
+                            hidden here: without this every answer renders expanded. Keeping the
+                            panel `hidden` when closed is also the correct accessible behaviour,
+                            since collapsed answers stay out of the screen-reader and tab order.
+                            The trade-off is that closing is instant rather than animated; opening
+                            still animates. */}
+                        <AccordionPrimitive.Content
+                            forceMount
+                            className="overflow-hidden data-[state=closed]:hidden data-[state=open]:animate-accordion-down"
+                        >
+                            <div
+                                className="se-html px-[clamp(23px,1.82vw,32px)] pb-[clamp(23px,1.82vw,32px)] pr-[clamp(58px,4.6vw,81px)] text-[clamp(0.96rem,1.09vw,1.2rem)] leading-[1.7] text-[#faf6f1]/62"
+                                dangerouslySetInnerHTML={{ __html: item.answer }}
+                            />
                         </AccordionPrimitive.Content>
                     </AccordionPrimitive.Item>
                 </ScrollReveal>

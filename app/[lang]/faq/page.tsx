@@ -6,6 +6,7 @@ import { V3Root, DriftOrb, emphasize } from '@/components/v3';
 import { ScrollReveal } from '@/components/motion';
 import { Hero, Accordion } from '@/components/faq-v3';
 import { ContactCTA } from '@/components/home-v3';
+import { FaqJsonLd } from '@/components/JsonLd';
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: Locale }> }): Promise<Metadata> {
     const { lang } = await params;
@@ -30,6 +31,10 @@ export default async function FaqV3({ params }: { params: Promise<{ lang: Locale
 
     return (
         <V3Root>
+            {/* Built from the same content.items the accordion renders, so the structured data
+                cannot drift away from the visible copy. */}
+            <FaqJsonLd items={content.items} url={lang === 'el' ? '/el/faq/' : '/faq/'} />
+
             <Hero lang={lang} hero={content.hero} />
 
             <section className="relative overflow-hidden border-t border-[#faf6f1]/8 bg-[#0e0d0c] py-[clamp(101px,7.95vw,140px)] pb-[clamp(108px,8.52vw,150px)]">

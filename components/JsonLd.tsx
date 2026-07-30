@@ -199,3 +199,40 @@ export function ArticleJsonLd({
         />
     )
 }
+
+interface FaqJsonLdItem {
+    question: string
+    answer: string
+}
+
+/**
+ * FAQPage structured data, server-rendered so it is present without executing JavaScript.
+ *
+ * Google restricted FAQ rich results to authoritative government and health sites, so this
+ * will not produce a rich result and is not worth expanding the page for. It is emitted
+ * because it states the questions and answers as data for any consumer that reads
+ * structured data, and because the markup must mirror the visible copy: both come from the
+ * same dictionary entries, so they cannot drift apart.
+ */
+export function FaqJsonLd({ items, url }: { items: FaqJsonLdItem[]; url: string }) {
+    const faq = {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        '@id': `${baseUrl}${url}`,
+        mainEntity: items.map((item) => ({
+            '@type': 'Question',
+            name: item.question,
+            acceptedAnswer: {
+                '@type': 'Answer',
+                text: item.answer
+            }
+        }))
+    }
+
+    return (
+        <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }}
+        />
+    )
+}
