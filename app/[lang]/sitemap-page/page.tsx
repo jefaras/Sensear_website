@@ -19,16 +19,24 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: Loc
     };
 }
 
-export default async function SitemapPageV3({ params }: { params: Promise<{ lang: Locale }> }) {
-    const { lang } = await params;
-    const dict = await getDictionary(lang);
+type SitemapDictionary = Awaited<ReturnType<typeof getDictionary>>;
+
+/**
+ * Builds the four directory sections for one locale.
+ *
+ * Extracted so the page can render the sections twice: once for the current
+ * locale, once for the alternate one. The alternate grid exists for crawl
+ * reasons — before it, the only crawlable link from an English page into the
+ * Greek site was the single hreflang language switcher, which left `/el/*`
+ * effectively reachable only via the XML sitemap. See
+ * docs/seo-gsc-audit-2026-07-27.md §2.1.
+ */
+function buildSitemapSections(dict: SitemapDictionary, lang: Locale) {
     const content = dict.sitemap_page;
     const localizedPath = (path: string) => getLocalizedPath(lang, path);
-    const em = lang === 'el' ? { directory: 'ιστότοπο', cta: 'ψάχνετε' } : { directory: 'site', cta: 'looking for' };
+    const faqLabel = dict.footer.nav.company.items.find((i: any) => i.link === 'faq')?.label || 'FAQ';
 
-    // sitemapSections builder — copied verbatim from app/[lang]/sitemap-page/page.tsx
-    // (real dict data through localizedPath). Do NOT touch app/sitemap.ts (XML).
-    const sitemapSections = [
+    return [
         {
             title: content.sections.main,
             icon: Home,
@@ -40,7 +48,7 @@ export default async function SitemapPageV3({ params }: { params: Promise<{ lang
                 { name: dict.navigation.about, path: localizedPath('/about') },
                 { name: dict.navigation.contact, path: localizedPath('/contact') },
                 { name: dict.navigation.blog, path: localizedPath('/blog') },
-                { name: 'FAQ', path: localizedPath('/faq') },
+                { name: faqLabel, path: localizedPath('/faq') },
             ],
         },
         {
@@ -77,10 +85,23 @@ export default async function SitemapPageV3({ params }: { params: Promise<{ lang
             ],
         },
     ];
+}
 
-    // FAQ Label Helper (verbatim)
-    const faqLabel = dict.footer.nav.company.items.find((i: any) => i.link === 'faq')?.label || 'FAQ';
-    sitemapSections[0].pages[7].name = faqLabel;
+export default async function SitemapPageV3({ params }: { params: Promise<{ lang: Locale }> }) {
+    const { lang } = await params;
+    const dict = await getDictionary(lang);
+    const content = dict.sitemap_page;
+    const localizedPath = (path: string) => getLocalizedPath(lang, path);
+    const em = lang === 'el' ? { directory: 'ιστότοπο', cta: 'ψάχνετε' } : { directory: 'site', cta: 'looking for' };
+
+    const sitemapSections = buildSitemapSections(dict, lang);
+
+    // Alternate locale: the same directory in the other language. Page names come
+    // from that locale's own dictionary so the links read natively.
+    const alternateLang: Locale = lang === 'el' ? 'en' : 'el';
+    const alternateDict = await getDictionary(alternateLang);
+    const alternateSections = buildSitemapSections(alternateDict, alternateLang);
+    const alternateCopy = content.alternate;
 
     return (
         <V3Root>
@@ -139,6 +160,31 @@ export default async function SitemapPageV3({ params }: { params: Promise<{ lang
                             <DirectoryCard key={index} title={section.title} icon={section.icon} pages={section.pages} delay={index * 0.05} />
                         ))}
                     </StaggerChildren>
+
+                    {/* Alternate-locale directory */}
+                    <div
+                        className="mx-auto mb-[clamp(46px,3.64vw,64px)] mt-[clamp(70px,5.51vw,97px)] max-w-[920px] text-center"
+                        lang={alternateLang}
+                    >
+                        <ScrollReveal delay={0.06}>
+                            <h2 className="text-[clamp(2rem,4vw,3.4rem)] font-extrabold leading-[1.08] tracking-[-0.02em]">
+                                {alternateCopy.heading}
+                            </h2>
+                        </ScrollReveal>
+                        <ScrollReveal delay={0.12}>
+                            <p className="mx-auto mt-[clamp(16px,1.3vw,22px)] max-w-[620px] text-[clamp(1.05rem,1.3vw,1.2rem)] leading-[1.5] text-[#faf6f1]/72">
+                                {alternateCopy.lede}
+                            </p>
+                        </ScrollReveal>
+                    </div>
+
+                    <div lang={alternateLang}>
+                        <StaggerChildren className="grid grid-cols-1 gap-[clamp(20px,1.99vw,28px)] md:grid-cols-2" staggerDelay={0.05}>
+                            {alternateSections.map((section, index) => (
+                                <DirectoryCard key={`alt-${index}`} title={section.title} icon={section.icon} pages={section.pages} delay={index * 0.05} />
+                            ))}
+                        </StaggerChildren>
+                    </div>
                 </div>
             </section>
 

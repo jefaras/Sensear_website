@@ -1747,7 +1747,11 @@
         },
         "directory_kicker": "ALL CONTENT",
         "directory_title": "Browse the entire site",
-        "cta_kicker": "NEED A HAND?"
+        "cta_kicker": "NEED A HAND?",
+        "alternate": {
+            "heading": "The site in Greek",
+            "lede": "Every page above also exists in Greek, fully translated rather than machine output. Browse the Greek directory below."
+        }
     },
     "faq_page": {
         "meta": {

@@ -8,37 +8,44 @@ RewriteEngine On
 RewriteCond %{HTTP_HOST} ^www\.sensear\.music$ [NC]
 RewriteRule ^(.*)$ https://sensear.music/$1 [R=301,L]
 
+# Case sensitivity note for all legacy rules below:
+#   `NC` is applied only to rules whose destination is a hardcoded lowercase path.
+#   Rules that interpolate a captured segment ($1) into the destination must stay
+#   case-sensitive: matching `/EN/Faq` case-insensitively would rewrite it to
+#   `/Faq/`, which 404s on a case-sensitive filesystem. A 301 into a 404 is worse
+#   than letting the odd-cased URL 404 directly.
+
 # Greek legacy route cleanup. Greek pages are now exported under the /el prefix.
 # Specific legacy rules must come before the English catch-alls below.
 RewriteRule ^el/(sonic-identity|signature-playlists)/?$ /el/services/$1/ [R=301,L]
-RewriteRule ^el/music-for-hotels-and-resorts/?$ /el/industries/music-for-hotels-and-resorts/ [R=301,L]
-RewriteRule ^el/music-for-restaurants-and-bars/?$ /el/industries/music-for-restaurants-and-bars/ [R=301,L]
+RewriteRule ^el/music-for-hotels-and-resorts/?$ /el/industries/music-for-hotels-and-resorts/ [R=301,L,NC]
+RewriteRule ^el/music-for-restaurants-and-bars/?$ /el/industries/music-for-restaurants-and-bars/ [R=301,L,NC]
 RewriteRule ^el/services/services/([^/]+)/?$ /el/services/$1/ [R=301,L]
 RewriteRule ^el/industries/industries/([^/]+)/?$ /el/industries/$1/ [R=301,L]
-RewriteRule ^el/industries/hotels-resorts/?$ /el/industries/music-for-hotels-and-resorts/ [R=301,L]
-RewriteRule ^el/(klouvi-bar|beach-house-antiparos)/?$ /el/case-studies/ [R=301,L]
+RewriteRule ^el/industries/hotels-resorts/?$ /el/industries/music-for-hotels-and-resorts/ [R=301,L,NC]
+RewriteRule ^el/(klouvi-bar|beach-house-antiparos)/?$ /el/case-studies/ [R=301,L,NC]
 
 # Legacy English default-locale URLs. English now serves at unprefixed root URLs.
 # Specific legacy cleanups first, then generic /en/* -> root catch-alls.
-RewriteRule ^en/industries/hotels-resorts/?$ /industries/music-for-hotels-and-resorts/ [R=301,L]
+RewriteRule ^en/industries/hotels-resorts/?$ /industries/music-for-hotels-and-resorts/ [R=301,L,NC]
 RewriteRule ^en/services/services/([^/]+)/?$ /services/$1/ [R=301,L]
 RewriteRule ^en/industries/industries/([^/]+)/?$ /industries/$1/ [R=301,L]
 RewriteRule ^en/(sonic-identity|signature-playlists)/?$ /services/$1/ [R=301,L]
-RewriteRule ^en/music-for-hotels-and-resorts/?$ /industries/music-for-hotels-and-resorts/ [R=301,L]
-RewriteRule ^en/music-for-restaurants-and-bars/?$ /industries/music-for-restaurants-and-bars/ [R=301,L]
-RewriteRule ^en/(klouvi-bar|beach-house-antiparos)/?$ /case-studies/ [R=301,L]
-RewriteRule ^en/?$ / [R=301,L]
+RewriteRule ^en/music-for-hotels-and-resorts/?$ /industries/music-for-hotels-and-resorts/ [R=301,L,NC]
+RewriteRule ^en/music-for-restaurants-and-bars/?$ /industries/music-for-restaurants-and-bars/ [R=301,L,NC]
+RewriteRule ^en/(klouvi-bar|beach-house-antiparos)/?$ /case-studies/ [R=301,L,NC]
+RewriteRule ^en/?$ / [R=301,L,NC]
 RewriteRule ^en/(.+?)/?$ /$1/ [R=301,L,NE]
 
 # Default-locale legacy route cleanup.
-RewriteRule ^home/?$ / [R=301,L]
-RewriteRule ^(klouvi-bar|beach-house-antiparos)/?$ /case-studies/ [R=301,L]
+RewriteRule ^home/?$ / [R=301,L,NC]
+RewriteRule ^(klouvi-bar|beach-house-antiparos)/?$ /case-studies/ [R=301,L,NC]
 RewriteRule ^(sonic-identity|signature-playlists)/?$ /services/$1/ [R=301,L]
-RewriteRule ^music-for-hotels-and-resorts/?$ /industries/music-for-hotels-and-resorts/ [R=301,L]
-RewriteRule ^music-for-restaurants-and-bars/?$ /industries/music-for-restaurants-and-bars/ [R=301,L]
+RewriteRule ^music-for-hotels-and-resorts/?$ /industries/music-for-hotels-and-resorts/ [R=301,L,NC]
+RewriteRule ^music-for-restaurants-and-bars/?$ /industries/music-for-restaurants-and-bars/ [R=301,L,NC]
 RewriteRule ^services/services/([^/]+)/?$ /services/$1/ [R=301,L]
 RewriteRule ^industries/industries/([^/]+)/?$ /industries/$1/ [R=301,L]
-RewriteRule ^industries/hotels-resorts/?$ /industries/music-for-hotels-and-resorts/ [R=301,L]
+RewriteRule ^industries/hotels-resorts/?$ /industries/music-for-hotels-and-resorts/ [R=301,L,NC]
 
 # Canonical trailing slash for exported extensionless page routes.
 RewriteCond %{REQUEST_FILENAME} !-f

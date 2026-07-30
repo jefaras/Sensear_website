@@ -32,6 +32,8 @@ export default function robots(): MetadataRoute.Robots {
                 disallow: ['/api/', '/private/'],
             },
         ],
-        sitemap: `${baseUrl}/sitemap.xml`,
+        // Both are advertised: /sitemap.xml is the complete list, /sitemap-el.xml is
+        // the Greek subset so Search Console can report Greek indexing separately.
+        sitemap: [`${baseUrl}/sitemap.xml`, `${baseUrl}/sitemap-el.xml`],
     }
 }
