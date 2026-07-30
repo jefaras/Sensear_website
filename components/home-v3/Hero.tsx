@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { Locale } from '@/lib/i18n';
 import { getLocalizedPath } from '@/lib/localized-path';
 import { ScrollReveal } from '@/components/motion';
-import { DriftOrb, GhostButton, MorphCTA, emphasizeHeadline } from '@/components/v3';
+import { DriftOrb, GhostButton, MorphCTA } from '@/components/v3';
 // import { SideRail, SpinningBadge } from '@/components/v3'; // side-rail removed; spinning badge disabled
 // import { EQWidget } from './EQWidget'; // now-playing pill disabled
 
@@ -28,9 +28,6 @@ interface HeroProps {
 
 export function Hero({ lang, hero }: HeroProps) {
     const localizedPath = (path: string) => getLocalizedPath(lang, path);
-    // "soundtrack." is the emphasis word in both locales: emphasizeHeadline breaks the line
-    // before and after it, which lands the two headline sentences on their own lines.
-    const emWord = 'soundtrack.';
     const ledeBold = [hero.subtitle[0], hero.subtitle[1]].filter(Boolean).join(' ');
     const ledeMuted = hero.subtitle[2];
 
@@ -60,9 +57,20 @@ export function Hero({ lang, hero }: HeroProps) {
                 <div className="grid grid-cols-1 items-center gap-[clamp(40px,3.12vw,55px)] lg:grid-cols-[1.05fr_0.95fr] lg:gap-[clamp(46px,3.64vw,64px)]">
                     <div>
                         <ScrollReveal delay={0.15}>
-                            <h1 className="mb-[clamp(25px,1.99vw,35px)] text-[clamp(2.1rem,3.9vw,3.6rem)] font-extrabold leading-[1.06] tracking-[-0.02em]">
-                                {emphasizeHeadline(hero.title, emWord)}
-                            </h1>
+                            {/* Matches the other hero H1s at the top of the scale (5.5rem here,
+                                5.64rem there) and shares their leading and tracking. The vw
+                                coefficient has to be lower than the shared 6.21vw: this headline is
+                                four lines rather than two, and at 6.21vw the intended breaks wrap
+                                into seven lines and push the hero past the viewport. 5vw is the
+                                largest coefficient that holds the four lines, measured at 1280px
+                                where the text column is 589px wide.
+                                The title carries its own breaks and <em> tags because it emphasises
+                                two phrases and emphasizeHeadline handles only one; .se-html gives
+                                those tags the identical Didot italic gold treatment as <Em>. */}
+                            <h1
+                                className="se-html mb-[clamp(25px,1.99vw,35px)] text-[clamp(2.3rem,5vw,5.5rem)] font-extrabold leading-[1.02] tracking-[-0.022em]"
+                                dangerouslySetInnerHTML={{ __html: hero.title }}
+                            />
                         </ScrollReveal>
 
                         <ScrollReveal delay={0.3}>
