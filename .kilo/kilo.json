@@ -1,6 +1,12 @@
 {
   "$schema": "https://app.kilo.ai/config.json",
   "indexing": {
-    "enabled": false
+    "enabled": true
+  },
+  "permission": {
+    "read": {
+      "handoff/screenshots/**": "allow",
+      "handoff/screenshots/**/*.png": "allow"
+    }
   }
 }
