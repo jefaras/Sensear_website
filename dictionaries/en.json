@@ -11,13 +11,13 @@
     "home": {
         "meta": {
             "title": "Music curation services for venues and events",
-            "description": "Music curation for hospitality, retail & events that elevates atmosphere, engages guests and builds loyalty. Discover a brand-fit sound for your venue."
+            "description": "Music curation for hospitality, retail & events that shapes atmosphere, engages guests and builds loyalty. Discover a brand-fit sound for your venue."
         },
         "hero": {
             "title": "Your venue already<br />has a <em>soundtrack.</em><br />We make sure it is<br /><em>the right one.</em>",
             "subtitle": [
                 "You designed the lighting, the layout and the service. Music is usually the one thing left to chance.",
-                "We build playlists, event soundtracks, sonic identity & room acoustics for hospitality, retail & cultural venues.",
+                "",
                 ""
             ],
             "cta": "Explore our services",
@@ -139,7 +139,7 @@
             "subtitle": "Innovative sound design that works as intentionally as every other aspect of your business.",
             "items": [
                 {
-                    "title": "Brand elevation",
+                    "title": "Brand recall",
                     "desc": "Improve brand perception & loyalty with a memorable ambiance."
                 },
                 {
@@ -1812,7 +1812,7 @@
         ],
         "cta": {
             "title": "Still Have Questions? Let's Talk",
-            "subtitle": "Let's talk about how we can elevate your brand's sound.",
+            "subtitle": "Tell us about your venue and we will tell you what we would change.",
             "button": "Contact us",
             "kicker": "LET'S TALK",
             "secondary_cta": "See our services"
