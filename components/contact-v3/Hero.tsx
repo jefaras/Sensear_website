@@ -11,7 +11,6 @@ interface HeroProps {
         image: string;
         image_alt: string;
         side_label: string;
-        kicker: string;
         primary_cta: string;
         secondary_cta: string;
         image_kicker: string;

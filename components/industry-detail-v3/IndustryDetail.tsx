@@ -8,15 +8,15 @@ import { ScrollReveal, StaggerChildren } from '@/components/motion';
 interface Item { title: string; description: string }
 
 interface IndustryContent {
-    hero: { title: string; subtitle: string; description: string; image: string; image_alt: string; side_label: string; kicker: string; explore_cta: string; image_kicker: string; image_caption: string };
-    intro: { kicker: string; title: string; p1: string; p2: string };
-    what_we_do: { kicker: string; title: string; subtitle: string; image: string; items: Item[] };
-    ideal_for: { kicker: string; title: string; image: string; items: Item[] };
+    hero: { title: string; subtitle: string; description: string; image: string; image_alt: string; side_label: string; explore_cta: string; image_kicker: string; image_caption: string };
+    intro: { title: string; p1: string; p2: string };
+    what_we_do: { title: string; subtitle: string; image: string; items: Item[] };
+    ideal_for: { title: string; image: string; items: Item[] };
     how_we_help: {
-        kicker: string; title: string; image: string; items: Item[];
+        title: string; image: string; items: Item[];
         cta_title?: string; cta_description?: string; cta_button?: string; cta_link?: string;
     };
-    cta: { kicker: string; title: string; description: string; button: string; location: string };
+    cta: { title: string; description: string; button: string; location: string };
 }
 
 type EmSet = { intro: string; method: string; forwhom: string; results: string; cta: string; portfolio: string };

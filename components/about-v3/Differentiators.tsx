@@ -7,7 +7,6 @@ const ICONS = [Lightbulb, Building2, SlidersHorizontal, Heart];
 
 interface DifferentiatorsProps {
     content: {
-        kicker: string;
         title: string;
         subtitle: string;
         image_alt: string;

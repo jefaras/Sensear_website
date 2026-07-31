@@ -12,7 +12,6 @@ interface FaqProps {
     lang: Locale;
     emWord: string;
     faq: {
-        kicker: string;
         title: string;
         subtitle: string;
         items: { question: string; answer: string }[];

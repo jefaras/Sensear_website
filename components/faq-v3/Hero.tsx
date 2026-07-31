@@ -9,7 +9,6 @@ interface HeroProps {
         title: string;
         subtitle: string;
         side_label: string;
-        kicker: string;
         image_kicker: string;
         image_caption: string;
         badge: string[];

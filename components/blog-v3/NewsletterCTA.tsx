@@ -6,7 +6,6 @@ import { ScrollReveal } from '@/components/motion';
 interface NewsletterCTAProps {
     emWord: string;
     cta: {
-        kicker: string;
         title: string;
         subtitle: string;
         placeholder: string;

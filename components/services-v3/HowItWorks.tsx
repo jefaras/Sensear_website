@@ -9,7 +9,6 @@ interface HowItWorksProps {
     lang: Locale;
     emWord: string;
     delivery: {
-        kicker: string;
         title: string;
         subtitle: string;
         points: { link: string; link_text: string; text: string }[];

@@ -22,7 +22,6 @@
             ],
             "cta": "Explore our services",
             "side_label": "ATHENS · GR — SONIC BRANDING",
-            "kicker": "MUSIC CURATION & SONIC IDENTITY",
             "secondary_cta": "Send us a message",
             "now_playing_label": "NOW PLAYING",
             "now_playing_track": "The SensEar Sessions — Vol. 04",
@@ -45,9 +44,7 @@
             "Sonic Identity",
             "Audio Upgrades"
         ],
-        "about": {
-            "kicker": "WHO WE ARE"
-        },
+        "about": {},
         "services": {
             "title": "Four services, one sound.",
             "subtitle": "",
@@ -74,7 +71,6 @@
                 }
             ],
             "cta": "Explore all services",
-            "kicker": "SERVICES",
             "preview_placeholder": "Hover over a service",
             "previews": [
                 {
@@ -96,7 +92,6 @@
             ]
         },
         "expertise": {
-            "kicker": "INDUSTRIES",
             "title": "Where we work",
             "subtitle": "Hotels, restaurants and bars, retail, wellness, events, and cultural spaces. Each one runs differently, which is why the music is planned differently.",
             "items": [
@@ -134,7 +129,6 @@
             "cta": "Find your industry"
         },
         "enhance": {
-            "kicker": "OUR APPROACH",
             "title": "How we redefine your venue",
             "subtitle": "Innovative sound design that works as intentionally as every other aspect of your business.",
             "items": [
@@ -154,7 +148,6 @@
             "cta": "View Case Studies"
         },
         "clients": {
-            "kicker": "WORK & COLLABORATIONS",
             "title": "Now playing in venues across Greece",
             "subtitle": ""
         },
@@ -163,7 +156,6 @@
             "subtitle": "Read how music shapes perception, emotion and brand identity through sound.",
             "read_more": "Read More",
             "cta": "Discover more insights",
-            "kicker": "THE CURATION JOURNAL",
             "all_articles": "See all articles",
             "headline": "How sound shapes perception",
             "articles": [
@@ -188,7 +180,6 @@
             ]
         },
         "contact_cta": {
-            "kicker": "LET'S COLLABORATE",
             "title": "Tell us about your <em>space</em>.",
             "subtitle": "We reply within 24 hours with the service that fits and what happens next.",
             "primary_cta": "Send us a message",
@@ -232,7 +223,6 @@
             "image": "/images/contact/contact-hero-venue-consultation.jpg",
             "image_alt": "Contact SensEar",
             "side_label": "CONTACT — LET'S TALK SOUND",
-            "kicker": "CONTACT",
             "primary_cta": "Fill out the form",
             "secondary_cta": "Contact details",
             "image_kicker": "ATHENS · GR",
@@ -288,7 +278,6 @@
                 "label": "Social",
                 "note": "Follow and contact us on social media."
             },
-            "kicker": "CONTACT DETAILS",
             "heading": "Find us however suits you",
             "follow_label": "FOLLOW US"
         },
@@ -313,12 +302,9 @@
                     "question": "How long does it take to receive our first playlist?",
                     "answer": "Typically 1-2 weeks after our initial consultation, depending on the complexity of your needs."
                 }
-            ],
-            "kicker": "FAQ"
+            ]
         },
-        "form_section": {
-            "kicker": "START HERE"
-        }
+        "form_section": {}
     },
     "about_page": {
         "meta": {
@@ -331,7 +317,6 @@
             "image": "/images/backgrounds/warm-silver-foil-texture.jpg",
             "image_alt": "The people behind your soundtrack",
             "side_label": "ABOUT — THE PEOPLE & THE PHILOSOPHY",
-            "kicker": "THE SENSEAR TEAM",
             "primary_cta": "Meet the team",
             "secondary_cta": "Get in touch",
             "image_kicker": "EST · ATHENS",
@@ -379,14 +364,12 @@
                 }
             ],
             "image": "/images/about/about-journey-team-collaboration.jpg",
-            "kicker": "OUR JOURNEY",
             "lede": "Fifteen years as a DJ collective. The work is the same; we do it for more kinds of spaces now.",
             "image_alt": "Our journey"
         },
         "team": {
             "heading": "Meet the team",
             "subtitle": "Music obsessed, hospitality minded",
-            "kicker": "THE TEAM",
             "title": "Meet the <em>team</em>",
             "closing": "Together, we form SensEar, a team committed to uplifting spaces through compelling, memorable music."
         },
@@ -410,7 +393,6 @@
                     "description": "Athens and the islands, where the season runs longer than people think and the same room works from breakfast to last call."
                 }
             ],
-            "kicker": "WHAT SETS US APART",
             "title": "Four <em>principles</em> that guide us",
             "subtitle": "Everything we do stems from how we think about sound.",
             "image_alt": "SensEar unique approach"
@@ -428,7 +410,6 @@
                     "link": "industries"
                 }
             ],
-            "kicker": "LET'S COLLABORATE",
             "lede": "See how we work with clients or contact us to discuss your project.",
             "primary_cta": "Selected works",
             "secondary_cta": "Get in touch",
@@ -479,7 +460,6 @@
             "title": "The Curation Journal",
             "subtitle": "Notes on music in commercial spaces: what the research says, what other venues do, and how the work actually gets done.",
             "side_label": "JOURNAL — CURATION NOTES",
-            "kicker": "OUR JOURNAL",
             "primary_cta": "See the articles",
             "secondary_cta": "Subscribe to the newsletter",
             "badge": [
@@ -494,7 +474,6 @@
         "recent": {
             "title": "Recent Articles",
             "read_more": "Read More",
-            "kicker": "RECENT ARTICLES",
             "headline": "Notes on the sound that shapes experience"
         },
         "back_button": "Back to Insights",
@@ -1319,7 +1298,6 @@
             }
         ],
         "newsletter_cta": {
-            "kicker": "NEVER MISS A NOTE",
             "title": "Notes on sound, straight to you",
             "subtitle": "Subscribe to our journal for fresh insights on music, atmosphere & sonic branding.",
             "placeholder": "Your email",
@@ -1342,7 +1320,6 @@
             "title": "Hear how sound shapes real experiences",
             "subtitle": "Examples of how sound is applied across different environments.",
             "side_label": "CASE STUDIES — SOUND IN PLACE",
-            "kicker": "STORIES OF SPACES",
             "primary_cta": "See the stories",
             "secondary_cta": "Book a call",
             "image_kicker": "FROM VISION TO SOUND",
@@ -1356,8 +1333,7 @@
         "intro": {
             "title": "Four venues, four briefs",
             "p1": "What each place needed, what we built, and what you can listen to.",
-            "p2": "Three are daily music programmes. One was a single night, which makes it the proof point for a different service.",
-            "kicker": "FROM VISION TO SOUND"
+            "p2": "Three are daily music programmes. One was a single night, which makes it the proof point for a different service."
         },
         "items": [
             {
@@ -1398,11 +1374,9 @@
             "subtitle": "We reply within 24 hours with the service that fits and what happens next.",
             "contact": "Send us a message",
             "services": "See the services",
-            "kicker": "LET'S COLLABORATE",
             "location": "Athens, Greece"
         },
         "cases": {
-            "kicker": "CASE STUDIES",
             "title": "Four venues, four <em>briefs</em>",
             "subtitle": "Each with its own hours, areas and pace.",
             "listen_prefix": "Listen to the atmosphere of"
@@ -1417,7 +1391,6 @@
             "title": "Your industry sets the brief",
             "subtitle": "A hotel changes by hour and zone; a restaurant follows service; a store follows its collections.",
             "side_label": "INDUSTRIES — SONIC FIT",
-            "kicker": "THE SECTORS WE SERVE",
             "primary_cta": "Find your industry",
             "secondary_cta": "Book a call",
             "image_kicker": "SIX WORLDS",
@@ -1431,8 +1404,7 @@
         "intro": {
             "title": "The right atmosphere for every space",
             "p1": "Hotels, restaurants, retail, gyms & culture all ask for their own atmosphere.",
-            "p2": "The right music turns spaces into unique experiences.",
-            "kicker": "WHY IT MATTERS"
+            "p2": "The right music turns spaces into unique experiences."
         },
         "expertise": {
             "title": "Choose your sector",
@@ -1492,8 +1464,7 @@
                     "link": "industries/music-for-art-museums-and-fashion",
                     "image": "/images/industries/industry-art-museums-fashion.jpg"
                 }
-            ],
-            "kicker": "INDUSTRIES"
+            ]
         },
         "connect": {
             "title": "What connects these worlds",
@@ -1505,15 +1476,13 @@
                 "Creating memorable experiences that bring people back",
                 "Knowing if your music actually works for your business"
             ],
-            "conclusion": "Different rooms, different hours, one way of working: music planned around how each place actually runs.",
-            "kicker": "THE COMMON THREAD"
+            "conclusion": "Different rooms, different hours, one way of working: music planned around how each place actually runs."
         },
         "cta": {
             "title": "Tell us about your space.",
             "subtitle": "We reply within 24 hours with the service that fits and what happens next.",
             "contact": "Let's design your venue sound",
             "services": "Explore our services",
-            "kicker": "LET'S COLLABORATE",
             "location": "Athens, Greece"
         }
     },
@@ -1526,7 +1495,6 @@
             "title": "Four ways to shape how your space sounds",
             "subtitle": "Playlists, events, identity, acoustics.",
             "side_label": "SERVICES — SONIC STRATEGY",
-            "kicker": "OUR SERVICES",
             "primary_cta": "Explore the services",
             "secondary_cta": "Book a call",
             "image_kicker": "FOUR APPROACHES",
@@ -1540,13 +1508,11 @@
         "intro": {
             "title": "What each service does",
             "p1": "Signature Playlists set the daily music. <strong>Event Soundtracks</strong> score a single occasion, <strong>Sonic Identity</strong> keeps a brand consistent across places, and <strong>Audio Upgrades</strong> improve how the room carries it all.",
-            "p2": "Each stands alone; they are built to combine.",
-            "kicker": "WHY IT MATTERS"
+            "p2": "Each stands alone; they are built to combine."
         },
         "starting_point": {
             "title": "Where to start",
-            "subtitle": "Start from the need you can already name: the music that plays every day, one event with a schedule, a brand that has to sound the same in three places, or a room that fights the music.",
-            "kicker": "SERVICES"
+            "subtitle": "Start from the need you can already name: the music that plays every day, one event with a schedule, a brand that has to sound the same in three places, or a room that fights the music."
         },
         "services": {
             "playlists": {
@@ -1606,15 +1572,13 @@
                     "link_text": "Audio Upgrades",
                     "link": "services/audio-upgrades"
                 }
-            ],
-            "kicker": "THE COLLABORATION"
+            ]
         },
         "cta": {
             "title": "Tell us about your space.",
             "subtitle": "We reply within 24 hours with the service that fits and what happens next.",
             "contact_btn": "Talk to us about your space",
             "industries_btn": "See Industries we serve",
-            "kicker": "LET'S COLLABORATE",
             "location": "Athens, Greece"
         }
     },
@@ -1723,7 +1687,6 @@
             "title": "Sitemap",
             "subtitle": "Explore all pages and resources on the SensEar website. Find everything from our music curation services to industry insights.",
             "side_label": "SITEMAP — SITE DIRECTORY",
-            "kicker": "SITEMAP",
             "image_kicker": "EXPLORE THE SITE",
             "image_caption": "Everything, in one place.",
             "badge": [
@@ -1762,7 +1725,6 @@
             "title": "Understanding how it works",
             "subtitle": "Answers to common questions about sound, licensing & our services.",
             "side_label": "SUPPORT — FAQ",
-            "kicker": "FREQUENTLY ASKED",
             "image_kicker": "HOW IT WORKS",
             "image_caption": "Sound, licensing & service.",
             "badge": [
@@ -1814,7 +1776,6 @@
             "title": "Still have questions?",
             "subtitle": "Tell us about your venue and we will tell you what we would change.",
             "button": "Contact us",
-            "kicker": "LET'S COLLABORATE",
             "secondary_cta": "See our services"
         }
     },
@@ -1828,7 +1789,6 @@
             "subtitle": "A sound that's unmistakably yours.",
             "description": "Rare, handpicked tracks curated around your concept, guests and your venue's rhythm.",
             "side_label": "SERVICES — SIGNATURE PLAYLISTS",
-            "kicker": "SIGNATURE PLAYLISTS",
             "explore_cta": "Explore the service",
             "image_kicker": "DAILY SOUNDTRACK",
             "image_caption": "Curated, never generic."
@@ -1836,8 +1796,7 @@
         "intro": {
             "title": "What Signature Playlists are",
             "p1": "Ongoing curated playlists that follow your venue’s day, <strong>zone by zone</strong>. Rare selections rather than generic background music, scheduled by part of the day and by area, and <strong>managed remotely</strong> with direct support.",
-            "p2": "Refreshed monthly by default, or on whatever rhythm the venue actually needs.",
-            "kicker": "WHY IT MATTERS"
+            "p2": "Refreshed monthly by default, or on whatever rhythm the venue actually needs."
         },
         "what_we_do": {
             "title": "What we do",
@@ -1862,8 +1821,7 @@
                     "title": "Total control & support",
                     "description": "Clear rules, central management & direct access to us when needed."
                 }
-            ],
-            "kicker": "B2B CURATION"
+            ]
         },
         "perfect_for": {
             "title": "Perfect for",
@@ -1893,8 +1851,7 @@
                     "description": "that need engaging but unobtrusive sound.",
                     "link": "industries/music-for-art-museums-and-fashion"
                 }
-            ],
-            "kicker": "WHO IT'S FOR"
+            ]
         },
         "licensed": {
             "title": "Licensed for business use",
@@ -1903,8 +1860,7 @@
                     "title": "Licensed for commercial use",
                     "description": "The music we supply is licensed for commercial use, so you are not playing from a personal streaming account. Royalties for public performance are paid separately by the venue to the Greek collecting societies, as they are for any business that plays music."
                 }
-            ],
-            "kicker": "LEGAL PEACE OF MIND"
+            ]
         },
         "cta": {
             "title": "Tell us what your venue's day looks like.",
@@ -1914,8 +1870,7 @@
             "sonic_identity": "Sonic Identity",
             "audio_upgrades": "Audio Upgrades",
             "build_on": "build on your playlists.",
-            "location": "Athens, Greece",
-            "kicker": "LET'S COLLABORATE"
+            "location": "Athens, Greece"
         }
     },
     "event_soundtracks": {
@@ -1928,7 +1883,6 @@
             "subtitle": "Music timed to your event's flow.",
             "description": "Soundtracks designed to support each phase, from arrival to finale.",
             "side_label": "SERVICES — EVENT SOUNDTRACKS",
-            "kicker": "EVENT SOUNDTRACKS",
             "explore_cta": "Explore the service",
             "image_kicker": "EVENT TIMING",
             "image_caption": "Right moment, right sound."
@@ -1936,8 +1890,7 @@
         "intro": {
             "title": "Music built on the run of your event",
             "p1": "Music planned against the run of your event, from arrival to the last hour. Depending on the event, it can be <strong>curated playlists</strong>, <strong>DJ sets</strong>, or both, with sound checks, playback management and coordination with your AV team on the day.",
-            "p2": "Optionally, we walk the venue before you commit, to check coverage and clarity.",
-            "kicker": "WHY IT MATTERS"
+            "p2": "Optionally, we walk the venue before you commit, to check coverage and clarity."
         },
         "what_we_do": {
             "title": "What we do",
@@ -1958,8 +1911,7 @@
                     "title": "Optional venue audit",
                     "description": "Inspection of your space for coverage & clarity issues or upgrade needs."
                 }
-            ],
-            "kicker": "THE DESIGN"
+            ]
         },
         "perfect_for": {
             "title": "Perfect for",
@@ -1989,8 +1941,7 @@
                     "description": "that want music to shape how guests feel, share & remember.",
                     "link": "blog"
                 }
-            ],
-            "kicker": "WHO IT'S FOR"
+            ]
         },
         "staging": {
             "title": "Professionally managed staging",
@@ -1999,8 +1950,7 @@
                     "title": "Creative, but also precise",
                     "description": "We manage or supervise scheduling, sound checks and live adjustments so key moments land as planned and you focus on hosting."
                 }
-            ],
-            "kicker": "THE COLLABORATION"
+            ]
         },
         "cta": {
             "title": "Tell us your date and your run of show.",
@@ -2010,8 +1960,7 @@
             "signature_playlists": "Signature Playlists",
             "audio_upgrades": "Audio Upgrades",
             "support": "support event experiences.",
-            "location": "Athens, Greece",
-            "kicker": "LET'S COLLABORATE"
+            "location": "Athens, Greece"
         }
     },
     "sonic_identity": {
@@ -2024,7 +1973,6 @@
             "subtitle": "Defining how your brand sounds.",
             "description": "A practical audio blueprint that keeps your label distinct & consistent.",
             "side_label": "SERVICES — SONIC IDENTITY",
-            "kicker": "SONIC IDENTITY",
             "explore_cta": "Explore the service",
             "image_kicker": "SONIC DNA",
             "image_caption": "A signature you can hear."
@@ -2032,8 +1980,7 @@
         "intro": {
             "title": "The rules that keep a brand recognisable in sound",
             "p1": "A workshop with your team defines the musical direction. You receive <strong>reference playlists</strong>, <strong>written guidelines</strong> and a map of how each space and hour should sound, so a new opening or an agency can follow it without you in the room.",
-            "p2": "Original composition and sonic logos can be scoped into a project on request. They are not part of the standard engagement.",
-            "kicker": "WHY IT MATTERS"
+            "p2": "Original composition and sonic logos can be scoped into a project on request. They are not part of the standard engagement."
         },
         "what_we_do": {
             "title": "What we do",
@@ -2055,8 +2002,7 @@
                     "title": "Implementation roadmap",
                     "description": "Practical path from current sound to new identity, aligned with your brand calendar and rollout timeline."
                 }
-            ],
-            "kicker": "THE STRATEGY"
+            ]
         },
         "perfect_for": {
             "title": "Perfect for",
@@ -2086,8 +2032,7 @@
                     "description": "with brand vision but no in-house audio expertise.",
                     "link": ""
                 }
-            ],
-            "kicker": "WHO IT'S FOR"
+            ]
         },
         "identity": {
             "title": "One identity, clearly defined",
@@ -2096,8 +2041,7 @@
                     "title": "Coherent, but also flexible",
                     "description": "Your brand sounds recognizable at all locations & media while respecting what makes each space unique."
                 }
-            ],
-            "kicker": "STRATEGIC IDENTITY"
+            ]
         },
         "cta": {
             "title": "Tell us where your brand needs to sound the same.",
@@ -2107,8 +2051,7 @@
             "signature_playlists": "Signature Playlists",
             "audio_upgrades": "Audio Upgrades",
             "bring_to_life": "put it into practice.",
-            "location": "Athens, Greece",
-            "kicker": "LET'S COLLABORATE"
+            "location": "Athens, Greece"
         }
     },
     "audio_upgrades": {
@@ -2121,7 +2064,6 @@
             "subtitle": "Clear, balanced sound for your space.",
             "description": "Optimization designed to support atmosphere & conversations.",
             "side_label": "SERVICES — AUDIO UPGRADES",
-            "kicker": "AUDIO UPGRADES",
             "explore_cta": "Explore the service",
             "image_kicker": "AUDIO CLARITY",
             "image_caption": "Sound, perfected."
@@ -2129,8 +2071,7 @@
         "intro": {
             "title": "Acoustic assessment for a room that carries music",
             "p1": "We walk the space, listen from the seats your guests actually use, and test the system you already have. You get a written proposal of what needs to change, coordination with the specialist partners who carry out the work, then <strong>tuning</strong> of the result and a short <strong>training session</strong> for your team.",
-            "p2": "Installation and any engineering study are carried out by specialist partners. We define the requirement, coordinate the work and tune what is installed.",
-            "kicker": "WHY IT MATTERS"
+            "p2": "Installation and any engineering study are carried out by specialist partners. We define the requirement, coordinate the work and tune what is installed."
         },
         "what_we_do": {
             "title": "What an acoustic assessment covers",
@@ -2152,8 +2093,7 @@
                     "title": "System tuning & training",
                     "description": "Calibration under live conditions plus guidance, so your team runs it confidently day to day."
                 }
-            ],
-            "kicker": "THE SERVICE"
+            ]
         },
         "perfect_for": {
             "title": "Perfect for",
@@ -2183,8 +2123,7 @@
                     "description": "that invested in interiors but feel sound lowers the experience.",
                     "link": ""
                 }
-            ],
-            "kicker": "WHO IT'S FOR"
+            ]
         },
         "clarity": {
             "title": "Designed for clarity",
@@ -2193,8 +2132,7 @@
                     "title": "Balanced coverage, not just volume",
                     "description": "Guests talk comfortably, move naturally through spaces & remember atmosphere instead of loudness."
                 }
-            ],
-            "kicker": "THE RESULT"
+            ]
         },
         "cta": {
             "title": "Tell us which room is not working.",
@@ -2204,8 +2142,7 @@
             "signature_playlists": "Signature Playlists",
             "sonic_identity": "Sonic Identity",
             "complete_identity": "for complete audio identity.",
-            "location": "Athens, Greece",
-            "kicker": "LET'S COLLABORATE"
+            "location": "Athens, Greece"
         }
     },
     "hotels_resorts": {
@@ -2220,7 +2157,6 @@
             "image": "/images/industries/hotels-resorts-curated-music-ambiance.jpg",
             "image_alt": "Luxury hotel resort with curated music ambiance",
             "side_label": "INDUSTRIES — HOTELS & RESORTS",
-            "kicker": "HOTELS & RESORTS",
             "explore_cta": "Explore your sector",
             "image_kicker": "HOTELS & RESORTS",
             "image_caption": "A sound for every hour."
@@ -2228,8 +2164,7 @@
         "intro": {
             "title": "A hotel is not one room",
             "p1": "Breakfast, the pool, the spa and the bar are the same brand at four different volumes, and a guest crosses all of them in a day.",
-            "p2": "Our music <strong><em>follows the day</em></strong> across every area, and becomes part of the <a href=\"/services/sonic-identity/\" class=\"se-link\">sonic identity</a> guests recognise when they return.",
-            "kicker": "OUR PHILOSOPHY"
+            "p2": "Our music <strong><em>follows the day</em></strong> across every area, and becomes part of the <a href=\"/services/sonic-identity/\" class=\"se-link\">sonic identity</a> guests recognise when they return."
         },
         "what_we_do": {
             "title": "What we offer",
@@ -2252,8 +2187,7 @@
                     "description": "Your team focuses on hospitality, while we handle music, updates, and proper licensing."
                 }
             ],
-            "image": "/images/industries/hotels-resorts-boutique-hotel-music.webp",
-            "kicker": "OUR METHOD"
+            "image": "/images/industries/hotels-resorts-boutique-hotel-music.webp"
         },
         "ideal_for": {
             "title": "Ideal for",
@@ -2279,8 +2213,7 @@
                     "description": "For weddings, retreats, and conferences."
                 }
             ],
-            "image": "/images/industries/hotels-resorts-luxury-hotel-lobby.jpg",
-            "kicker": "WHO IT'S FOR"
+            "image": "/images/industries/hotels-resorts-luxury-hotel-lobby.jpg"
         },
         "how_we_help": {
             "title": "How we help",
@@ -2306,8 +2239,7 @@
             "cta_title": "Hear the industry in action",
             "cta_description": "Read examples and hear samples from hospitality venues.",
             "cta_button": "View Examples",
-            "cta_link": "case-studies",
-            "kicker": "THE RESULTS"
+            "cta_link": "case-studies"
         },
         "cta": {
             "title": "Let's plan your hotel, zone by zone.",
@@ -2318,7 +2250,6 @@
             "and": "and",
             "sonic_strategy": "Sonic Identity Design",
             "work_for": "work for hotels & resorts.",
-            "kicker": "LET'S COLLABORATE",
             "location": "Athens, Greece"
         }
     },
@@ -2334,7 +2265,6 @@
             "image": "/images/industries/restaurants-bars-curated-music-atmosphere.jpg",
             "image_alt": "Elegant restaurant interior with curated music atmosphere",
             "side_label": "INDUSTRIES — RESTAURANTS & BARS",
-            "kicker": "RESTAURANTS & BARS",
             "explore_cta": "Explore your sector",
             "image_kicker": "RESTAURANTS & BARS",
             "image_caption": "The invisible guest at the table."
@@ -2342,8 +2272,7 @@
         "intro": {
             "title": "Service has a curve",
             "p1": "Prep, the first tables, the rush, then the slow hour before closing. Music that ignores that curve works against the room.",
-            "p2": "Our sound <strong><em>follows the menu and service rhythm</em></strong> and becomes <strong><em>part of the enjoyment</em></strong>, without distracting from food or conversation.",
-            "kicker": "OUR PHILOSOPHY"
+            "p2": "Our sound <strong><em>follows the menu and service rhythm</em></strong> and becomes <strong><em>part of the enjoyment</em></strong>, without distracting from food or conversation."
         },
         "what_we_do": {
             "title": "What we do",
@@ -2366,8 +2295,7 @@
                     "description": "Regular changes that keep music fresh for regular customers and staff, maintaining your character."
                 }
             ],
-            "image": "/images/industries/restaurants-bars-dining-music-experience.jpg",
-            "kicker": "OUR METHOD"
+            "image": "/images/industries/restaurants-bars-dining-music-experience.jpg"
         },
         "ideal_for": {
             "title": "Ideal for",
@@ -2389,8 +2317,7 @@
                     "description": "That want consistent sonic identity across all locations."
                 }
             ],
-            "image": "/images/industries/restaurants-bars-cocktail-bar-atmosphere.jpg",
-            "kicker": "WHO IT'S FOR"
+            "image": "/images/industries/restaurants-bars-cocktail-bar-atmosphere.jpg"
         },
         "how_we_help": {
             "title": "How we help",
@@ -2416,8 +2343,7 @@
             "cta_title": "Hear the industry in action",
             "cta_description": "Read client stories and hear samples from their playlists.",
             "cta_button": "View Examples",
-            "cta_link": "case-studies",
-            "kicker": "THE RESULTS"
+            "cta_link": "case-studies"
         },
         "cta": {
             "title": "Let's hear your room at peak hours.",
@@ -2428,7 +2354,6 @@
             "and": "and",
             "audio_upgrades": "Audio Upgrades",
             "work_for": "work for restaurants, cafes & bars.",
-            "kicker": "LET'S COLLABORATE",
             "location": "Athens, Greece"
         }
     },
@@ -2444,7 +2369,6 @@
             "image": "/images/industries/retail-stores-curated-music-shopping.jpg",
             "image_alt": "Modern retail store interior with curated music atmosphere",
             "side_label": "INDUSTRIES — RETAIL STORES",
-            "kicker": "RETAIL STORES",
             "explore_cta": "Explore your sector",
             "image_kicker": "RETAIL STORES",
             "image_caption": "The rhythm of discovery."
@@ -2452,8 +2376,7 @@
         "intro": {
             "title": "One playlist cannot serve both halves of the day",
             "p1": "In a store, music sets the pace of the room. The same tracks that carry a full Saturday make a Tuesday morning sound abandoned, so we choose the tempo and the level for the hours you are busy and the hours you are not.",
-            "p2": "Our music selections <strong><em>move elegantly</em></strong> with the store's rhythm and shape how customers <strong><em>perceive your brand</em></strong>.",
-            "kicker": "OUR PHILOSOPHY"
+            "p2": "Our music selections <strong><em>move elegantly</em></strong> with the store's rhythm and shape how customers <strong><em>perceive your brand</em></strong>."
         },
         "what_we_do": {
             "title": "What we do",
@@ -2476,8 +2399,7 @@
                     "description": "Playlists that evolve with collections, seasons, and promotional periods, maintaining your character."
                 }
             ],
-            "image": "/images/industries/retail-stores-music-strategy-browsing.jpg",
-            "kicker": "OUR METHOD"
+            "image": "/images/industries/retail-stores-music-strategy-browsing.jpg"
         },
         "ideal_for": {
             "title": "Ideal for",
@@ -2503,8 +2425,7 @@
                     "description": "That need to make a strong impression from day one."
                 }
             ],
-            "image": "/images/industries/retail-stores-boutique-music-atmosphere.jpg",
-            "kicker": "WHO IT'S FOR"
+            "image": "/images/industries/retail-stores-boutique-music-atmosphere.jpg"
         },
         "how_we_help": {
             "title": "How we help",
@@ -2526,8 +2447,7 @@
                     "description": "Licensed and centrally managed playlists allow the team to focus on customers, not songs."
                 }
             ],
-            "image": "/images/industries/retail-stores-customer-journey-sound.jpg",
-            "kicker": "THE RESULTS"
+            "image": "/images/industries/retail-stores-customer-journey-sound.jpg"
         },
         "cta": {
             "title": "Let's listen to your store, on a quiet hour and a busy one.",
@@ -2538,7 +2458,6 @@
             "and": "and",
             "sonic_strategy": "Sonic Identity Design",
             "work_for": "work for retail stores.",
-            "kicker": "LET'S COLLABORATE",
             "location": "Athens, Greece"
         }
     },
@@ -2554,7 +2473,6 @@
             "image": "/images/industries/wellness-gyms-luxury-spa-ambient-music.jpg",
             "image_alt": "Luxury wellness spa interior with curated ambient music",
             "side_label": "INDUSTRIES — WELLNESS & GYMS",
-            "kicker": "WELLNESS & GYMS",
             "explore_cta": "Explore your sector",
             "image_kicker": "WELLNESS & GYMS",
             "image_caption": "Sound tuned to the body."
@@ -2562,8 +2480,7 @@
         "intro": {
             "title": "Opposite rooms, often the same building",
             "p1": "A treatment room and a training floor want opposite things from music, and they are usually in the same building, sometimes on the other side of the wall.",
-            "p2": "Our mixes <strong><em>adapt to each zone and intensity level</em></strong>, helping visitors <strong><em>stay present and active</em></strong>.",
-            "kicker": "OUR PHILOSOPHY"
+            "p2": "Our mixes <strong><em>adapt to each zone and intensity level</em></strong>, helping visitors <strong><em>stay present and active</em></strong>."
         },
         "what_we_do": {
             "title": "What we do",
@@ -2586,8 +2503,7 @@
                     "description": "Reception, treatment rooms, and exercise spaces each get their own sound, maintaining a common, recognizable identity."
                 }
             ],
-            "image": "/images/industries/wellness-gyms-spa-treatment-music.jpg",
-            "kicker": "OUR METHOD"
+            "image": "/images/industries/wellness-gyms-spa-treatment-music.jpg"
         },
         "ideal_for": {
             "title": "Ideal for",
@@ -2613,8 +2529,7 @@
                     "description": "That combine treatments and active exercise."
                 }
             ],
-            "image": "/images/industries/wellness-gyms-fitness-music-curation.jpg",
-            "kicker": "WHO IT'S FOR"
+            "image": "/images/industries/wellness-gyms-fitness-music-curation.jpg"
         },
         "how_we_help": {
             "title": "How we help",
@@ -2636,8 +2551,7 @@
                     "description": "Staff focuses on clients and members, while we handle music selections, updates, and professional licensing."
                 }
             ],
-            "image": "/images/industries/wellness-gyms-yoga-studio-soundscape.jpg",
-            "kicker": "THE RESULTS"
+            "image": "/images/industries/wellness-gyms-yoga-studio-soundscape.jpg"
         },
         "cta": {
             "title": "Let's set the pace, room by room.",
@@ -2648,7 +2562,6 @@
             "and": "and",
             "sonic_strategy": "Sonic Identity Design",
             "work_for": "work for wellness & gyms.",
-            "kicker": "LET'S COLLABORATE",
             "location": "Athens, Greece"
         }
     },
@@ -2664,7 +2577,6 @@
             "image": "/images/industries/events-experiences-music-curation-event.jpg",
             "image_alt": "Event music curation and entertainment production",
             "side_label": "INDUSTRIES — EVENTS & EXPERIENCES",
-            "kicker": "EVENTS & EXPERIENCES",
             "explore_cta": "Explore your sector",
             "image_kicker": "EVENTS & EXPERIENCES",
             "image_caption": "Scored, moment by moment."
@@ -2672,8 +2584,7 @@
         "intro": {
             "title": "An event runs to a schedule",
             "p1": "Someone worked hard on that schedule. Music either supports it or interrupts it, and there is no third option on the night.",
-            "p2": "If you already have a date, see what Event Soundtracks includes.",
-            "kicker": "OUR PHILOSOPHY"
+            "p2": "If you already have a date, see what Event Soundtracks includes."
         },
         "what_we_do": {
             "title": "What we do",
@@ -2696,8 +2607,7 @@
                     "description": "We coordinate with the venue for music and technical matters, reducing coordination pressure."
                 }
             ],
-            "image": "/images/industries/events-experiences-branded-event-music.jpg",
-            "kicker": "OUR METHOD"
+            "image": "/images/industries/events-experiences-branded-event-music.jpg"
         },
         "ideal_for": {
             "title": "Ideal for",
@@ -2723,8 +2633,7 @@
                     "description": "Who know that sound defines the experience."
                 }
             ],
-            "image": "/images/industries/events-experiences-event-music-planning.jpg",
-            "kicker": "WHO IT'S FOR"
+            "image": "/images/industries/events-experiences-event-music-planning.jpg"
         },
         "how_we_help": {
             "title": "How we help",
@@ -2742,8 +2651,7 @@
                     "description": "Our team handles music and technical execution with ready decisions, so you focus on hospitality."
                 }
             ],
-            "image": "/images/industries/events-experiences-private-event-soundscape.jpg",
-            "kicker": "THE RESULTS"
+            "image": "/images/industries/events-experiences-private-event-soundscape.jpg"
         },
         "cta": {
             "title": "Tell us your run of show.",
@@ -2754,7 +2662,6 @@
             "and": "and",
             "signature_playlists": "Signature Playlists",
             "support": "support events and experiences.",
-            "kicker": "LET'S COLLABORATE",
             "location": "Athens, Greece"
         }
     },
@@ -2770,7 +2677,6 @@
             "image": "/images/industries/art-museums-fashion-gallery-curation.jpg",
             "image_alt": "Art gallery with curated music atmosphere and fashion installation",
             "side_label": "INDUSTRIES — ART, MUSEUMS & FASHION",
-            "kicker": "ART, MUSEUMS & FASHION",
             "explore_cta": "Explore your sector",
             "image_kicker": "ART, MUSEUMS & FASHION",
             "image_caption": "Present, never competing."
@@ -2778,8 +2684,7 @@
         "intro": {
             "title": "The work comes first",
             "p1": "In a gallery, or on a runway, what you are showing comes first. Sound is there to hold attention on it, not to compete for it, and the difference between the two is a few decibels or the wrong genre.",
-            "p2": "We create soundscapes that <strong><em>respect each work</em></strong> and <strong><em>gently guide</em></strong> how visitors <strong><em>move and perceive</em></strong> the content.",
-            "kicker": "OUR PHILOSOPHY"
+            "p2": "We create soundscapes that <strong><em>respect each work</em></strong> and <strong><em>gently guide</em></strong> how visitors <strong><em>move and perceive</em></strong> the content."
         },
         "what_we_do": {
             "title": "What we do",
@@ -2802,8 +2707,7 @@
                     "description": "Regular updates so the music does not become wallpaper for visitors or staff, using music licensed for commercial use."
                 }
             ],
-            "image": "/images/industries/art-museums-fashion-cultural-space-music.jpg",
-            "kicker": "OUR METHOD"
+            "image": "/images/industries/art-museums-fashion-cultural-space-music.jpg"
         },
         "ideal_for": {
             "title": "Ideal for",
@@ -2829,8 +2733,7 @@
                     "description": "That need immediate sonic identity."
                 }
             ],
-            "image": "/images/industries/art-museums-fashion-museum-soundscape.jpg",
-            "kicker": "WHO IT'S FOR"
+            "image": "/images/industries/art-museums-fashion-museum-soundscape.jpg"
         },
         "how_we_help": {
             "title": "How we help",
@@ -2852,8 +2755,7 @@
             "cta_title": "Hear the industry sound in action",
             "cta_description": "Read examples and listen to samples from art, museums, and fashion spaces.",
             "cta_button": "View Examples",
-            "cta_link": "case-studies",
-            "kicker": "THE RESULTS"
+            "cta_link": "case-studies"
         },
         "cta": {
             "title": "Tell us what you are showing.",
@@ -2864,7 +2766,6 @@
             "and": "and",
             "event_soundtracks": "Event Music Curation",
             "work_for": "work for art, museums, and fashion.",
-            "kicker": "LET'S COLLABORATE",
             "location": "Athens, Greece"
         }
     }

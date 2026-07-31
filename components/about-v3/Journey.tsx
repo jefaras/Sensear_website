@@ -8,7 +8,6 @@ interface JourneyProps {
     emWord: string;
     journey: {
         subtitle: string;
-        kicker: string;
         lede: string;
         timeline: { year: string; text: string }[];
         image: string;

@@ -9,7 +9,6 @@ interface InfoEntry { label: string; value: string; note: string }
 interface DetailsProps {
     emWord: string;
     contactInfo: {
-        kicker: string;
         heading: string;
         follow_label: string;
         phone: InfoEntry;

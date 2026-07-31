@@ -6,7 +6,6 @@ import { ScrollReveal, StaggerChildren } from '@/components/motion';
 interface WhatConnectsProps {
     emWord: string;
     connect: {
-        kicker: string;
         title: string;
         subtitle: string;
         points: string[];

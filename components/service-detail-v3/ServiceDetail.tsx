@@ -6,7 +6,6 @@ import { DriftOrb, GhostButton, MorphCTA, PageCTA, emphasize } from '@/component
 import { ScrollReveal, StaggerChildren } from '@/components/motion';
 
 interface Section5 {
-    kicker: string;
     title: string;
     items: { title: string; description: string }[];
 }
@@ -17,15 +16,14 @@ interface ServiceContent {
         subtitle: string;
         description: string;
         side_label: string;
-        kicker: string;
         explore_cta: string;
         image_kicker: string;
         image_caption: string;
     };
-    intro: { kicker: string; title: string; p1: string; p2: string };
-    what_we_do: { kicker: string; title: string; items: { title: string; description: string }[] };
-    perfect_for: { kicker: string; title: string; items: { title: string; description: string; link: string }[] };
-    cta: { kicker: string; title: string; description: string; button: string; location: string };
+    intro: { title: string; p1: string; p2: string };
+    what_we_do: { title: string; items: { title: string; description: string }[] };
+    perfect_for: { title: string; items: { title: string; description: string; link: string }[] };
+    cta: { title: string; description: string; button: string; location: string };
 }
 
 interface ServiceDetailProps {

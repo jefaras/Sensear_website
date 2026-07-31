@@ -15,7 +15,6 @@ interface HeroProps {
         subtitle: string[];
         cta: string;
         side_label: string;
-        kicker: string;
         secondary_cta: string;
         now_playing_label: string;
         now_playing_track: string;
