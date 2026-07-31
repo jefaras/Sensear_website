@@ -143,7 +143,7 @@
                     "desc": "Improve brand perception & loyalty with a memorable ambiance."
                 },
                 {
-                    "title": "Maximum control",
+                    "title": "Control stays yours",
                     "desc": "Take full control of your venue's music style, flow & sound levels."
                 },
                 {
@@ -1811,10 +1811,10 @@
             }
         ],
         "cta": {
-            "title": "Still Have Questions? Let's Talk",
+            "title": "Still have questions?",
             "subtitle": "Tell us about your venue and we will tell you what we would change.",
             "button": "Contact us",
-            "kicker": "LET'S TALK",
+            "kicker": "LET'S COLLABORATE",
             "secondary_cta": "See our services"
         }
     },
