@@ -24,7 +24,9 @@ export default async function FaqV3({ params }: { params: Promise<{ lang: Locale
     const content = dict.faq_page;
     const home = dict.home;
     const titleEmWord = lang === 'el' ? 'απαντημένες' : 'Answered';
-    const ctaEmWord = lang === 'el' ? 'Ας μιλήσουμε' : "Let's Talk";
+    // Must be a word the CTA title actually contains, or the fallback below drops
+    // the gold emphasis from the heading entirely.
+    const ctaEmWord = lang === 'el' ? 'απορίες' : 'questions';
     const ctaTitleHtml = content.cta.title.includes(ctaEmWord)
         ? content.cta.title.replace(ctaEmWord, `<em>${ctaEmWord}</em>`)
         : content.cta.title;
