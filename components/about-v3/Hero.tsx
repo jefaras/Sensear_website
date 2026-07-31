@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { DriftOrb, MorphCTA, emphasizeHeadline } from '@/components/v3';
+import { DriftOrb, MorphCTA, emphasize } from '@/components/v3';
 import { ScrollReveal } from '@/components/motion';
 
 interface HeroProps {
@@ -46,7 +46,10 @@ export function Hero({ hero }: HeroProps) {
                     <div>
                         <ScrollReveal delay={0.15}>
                             <h1 className="mb-[clamp(25px,1.99vw,35px)] text-[clamp(2.76rem,5.75vw,5.29rem)] font-extrabold leading-[1.04] tracking-[-0.022em]">
-                                {emphasizeHeadline(hero.title, emWord)}
+                                {/* emphasize, not emphasizeHeadline: the latter forces a line break
+                                    after the emphasised word, which stranded the Greek possessive
+                                    on a line of its own. This headline wraps naturally instead. */}
+                                {emphasize(hero.title, emWord)}
                             </h1>
                         </ScrollReveal>
 
