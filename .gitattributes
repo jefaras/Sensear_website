@@ -1,0 +1,48 @@
+# Line-ending policy.
+#
+# Why this file exists: the repo's committed blobs are LF, but the Windows working
+# tree had been checked out / rewritten as CRLF with `core.autocrlf` unset and no
+# .gitattributes. Result: 203 files showed as modified in `git status` when only 5
+# had real changes, making every diff and review unusable.
+#
+# `text=auto eol=lf` tells git to normalise text files to LF in the object store
+# and check them out as LF, so the working tree and the blobs agree. Editors on
+# Windows handle LF fine; this matches what is already committed.
+
+* text=auto eol=lf
+
+# Scripts that must keep CRLF to run on Windows.
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.ps1 text eol=crlf
+
+# Shell scripts must stay LF even on Windows checkouts.
+*.sh text eol=lf
+
+# Binary — never touch, never diff as text.
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.webp binary
+*.avif binary
+*.svg text eol=lf
+*.woff binary
+*.woff2 binary
+*.ttf binary
+*.otf binary
+*.eot binary
+*.pdf binary
+*.zip binary
+*.gz binary
+*.mp3 binary
+*.mp4 binary
+*.wav binary
+*.xlsx binary
+*.xls binary
+*.docx binary
+*.pptx binary
+
+# Lockfiles: text, but suppress them from diff output to keep reviews readable.
+package-lock.json text eol=lf -diff
