@@ -1314,7 +1314,7 @@
     "case_studies": {
         "meta": {
             "title": "Case studies: music in Greek venues",
-            "description": "Four venues, four briefs: what each place needed, what we built, and playlists you can listen to."
+            "description": "Five venues, five briefs: what each place needed, what we built, and playlists you can listen to."
         },
         "hero": {
             "title": "Hear how sound shapes real experiences",
@@ -1331,9 +1331,9 @@
             ]
         },
         "intro": {
-            "title": "Four venues, four briefs",
+            "title": "Five venues, five briefs",
             "p1": "What each place needed, what we built, and what you can listen to.",
-            "p2": "Three are daily music programmes. One was a single night, which makes it the proof point for a different service."
+            "p2": "Four are daily music programmes. One was a single night, which makes it the proof point for a different service."
         },
         "items": [
             {
@@ -1361,6 +1361,14 @@
                 "location": "Antiparos"
             },
             {
+                "title": "Hera Hotel, Athens",
+                "desc1": "Three areas of one hotel, each with its own purpose: a breakfast lounge that eases guests into the day, a dinner restaurant looking out at the Acropolis, and a reception and lounge that carry the hours in between.",
+                "desc2": "We curated a separate playlist for each: light and uplifting at breakfast, more refined and atmospheric at dinner, and discreet enough at reception to accompany the day without asking for attention. The three share not a single song, yet they hold together as one hotel.",
+                "link": "",
+                "link_text": "Listen to the Hera Hotel atmosphere",
+                "location": "Athens"
+            },
+            {
                 "title": "Levantis, Paros",
                 "desc1": "One night rather than every day: the opening of Neva Bergman’s exhibition “Quiet Testimony” in the gallery space at Levantis.",
                 "desc2": "We curated a discreet ambient playlist for the room and set the level to sit under conversation, so people could look closely and talk without raising their voices.",
@@ -1377,9 +1385,10 @@
             "location": "Athens, Greece"
         },
         "cases": {
-            "title": "Four venues, four <em>briefs</em>",
+            "title": "Five venues, five <em>briefs</em>",
             "subtitle": "Each with its own hours, areas and pace.",
-            "listen_prefix": "Listen to the atmosphere of"
+            "listen_prefix": "Listen to the atmosphere of",
+            "coming_soon": "Sound sample coming soon"
         }
     },
     "industries_page": {

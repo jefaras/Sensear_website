@@ -10,14 +10,15 @@ interface CaseRowProps {
         link_text: string;
     };
     image: string;
-    scUrl: string;
-    scLink: string;
+    scUrl?: string;
+    scLink?: string;
     listenPrefix: string;
+    comingSoonLabel: string;
     imageSide: 'left' | 'right';
     isLast?: boolean;
 }
 
-export function CaseRow({ item, image, scUrl, scLink, listenPrefix, imageSide, isLast = false }: CaseRowProps) {
+export function CaseRow({ item, image, scUrl, scLink, listenPrefix, comingSoonLabel, imageSide, isLast = false }: CaseRowProps) {
     // Venue name only (dict title bundles ", <location>"); strip the trailing
     // comma segment so the H3 shows "Beach House" and the location sits in the
     // Didot subtitle. Falls back to the full title if there is no comma.
@@ -59,29 +60,37 @@ export function CaseRow({ item, image, scUrl, scLink, listenPrefix, imageSide, i
                     {/* The embed title is built from the localised listen prefix. It previously
                         read "<venue> — sound sample": English on Greek pages, and using an em
                         dash, which the voice rules retire. */}
-                    <div className="max-w-[600px] overflow-hidden rounded-[12px] border border-[#faf6f1]/10">
-                        <iframe
-                            width="100%"
-                            height="166"
-                            scrolling="no"
-                            frameBorder="0"
-                            allow="autoplay"
-                            loading="lazy"
-                            src={scUrl}
-                            title={`${listenPrefix} ${venue}`}
-                        />
-                    </div>
+                    {scUrl ? (
+                        <div className="max-w-[600px] overflow-hidden rounded-[12px] border border-[#faf6f1]/10">
+                            <iframe
+                                width="100%"
+                                height="166"
+                                scrolling="no"
+                                frameBorder="0"
+                                allow="autoplay"
+                                loading="lazy"
+                                src={scUrl}
+                                title={`${listenPrefix} ${venue}`}
+                            />
+                        </div>
+                    ) : (
+                        <div className="flex h-[166px] max-w-[600px] items-center justify-center rounded-[12px] border border-dashed border-[#faf6f1]/15 text-[clamp(12px,0.85vw,15px)] font-semibold text-[#faf6f1]/45">
+                            {comingSoonLabel}
+                        </div>
+                    )}
                 </ScrollReveal>
-                <ScrollReveal delay={0.26}>
-                    <a
-                        href={scLink}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="mt-[clamp(15px,1.19vw,21px)] inline-flex items-center gap-[9px] border-b border-[#faf6f1]/25 pb-[3px] text-[clamp(12px,0.85vw,15px)] font-semibold text-[#faf6f1]/60 no-underline transition-colors hover:text-[#faf6f1]"
-                    >
-                        {listenPrefix} {venue} →
-                    </a>
-                </ScrollReveal>
+                {scLink && (
+                    <ScrollReveal delay={0.26}>
+                        <a
+                            href={scLink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="mt-[clamp(15px,1.19vw,21px)] inline-flex items-center gap-[9px] border-b border-[#faf6f1]/25 pb-[3px] text-[clamp(12px,0.85vw,15px)] font-semibold text-[#faf6f1]/60 no-underline transition-colors hover:text-[#faf6f1]"
+                        >
+                            {listenPrefix} {venue} →
+                        </a>
+                    </ScrollReveal>
+                )}
             </div>
         </div>
     );
