@@ -8,6 +8,7 @@ import { ScrollReveal, StaggerChildren } from '@/components/motion';
 interface Section5 {
     title: string;
     items: { title: string; description: string }[];
+    image_alt?: string;
 }
 
 interface ServiceContent {
@@ -21,8 +22,12 @@ interface ServiceContent {
         image_caption: string;
     };
     intro: { title: string; p1: string; p2: string };
-    what_we_do: { title: string; items: { title: string; description: string }[] };
-    perfect_for: { title: string; items: { title: string; description: string; link: string }[] };
+    what_we_do: { title: string; items: { title: string; description: string }[]; image_alt?: string };
+    perfect_for: { title: string; items: { title: string; description: string; link: string }[]; image_alt?: string };
+    // Optional blocks: a page shows them only once its dictionary has them (T6, page by page).
+    case_study?: { kicker: string; title: string; paragraphs: string[]; link_label: string; link: string };
+    process?: { title: string; steps: { title: string; description: string }[] };
+    pricing?: { title: string; body: string };
     cta: { title: string; description: string; button: string; location: string };
 }
 
@@ -154,6 +159,35 @@ export function ServiceDetail({ lang, content, section5, images, em }: ServiceDe
                 </div>
             </section>
 
+            {/* 2b. Case (optional): one real venue as proof, linked to the case studies */}
+            {content.case_study && (
+                <section className="relative overflow-hidden border-t border-[#faf6f1]/8 py-[clamp(101px,7.95vw,140px)]">
+                    <div className="relative z-10 mx-auto max-w-[min(1760px,100%)] px-[clamp(20px,1.59vw,28px)] sm:px-[clamp(27px,2.1vw,37px)]">
+                        <div className="grid grid-cols-1 gap-[clamp(28px,2.22vw,39px)] lg:grid-cols-[0.95fr_1.05fr] lg:gap-[clamp(53px,4.2vw,74px)]">
+                            <ScrollReveal delay={0.06}>
+                                <p className="se-gold-text font-didot mb-[clamp(10px,0.8vw,14px)] text-[clamp(1.29rem,1.46vw,1.61rem)]">{content.case_study.kicker}</p>
+                                <h2 className="text-[clamp(2rem,3.6vw,3rem)] font-extrabold leading-[1.1] tracking-[-0.02em]">{content.case_study.title}</h2>
+                            </ScrollReveal>
+                            <div>
+                                {content.case_study.paragraphs.map((paragraph, i) => (
+                                    <ScrollReveal key={i} delay={0.12 + i * 0.06}>
+                                        <p className="mb-[clamp(15px,1.19vw,21px)] max-w-[680px] text-[clamp(1.03rem,1.17vw,1.29rem)] leading-[1.65] text-[#faf6f1]/66">{paragraph}</p>
+                                    </ScrollReveal>
+                                ))}
+                                <ScrollReveal delay={0.3}>
+                                    <Link
+                                        href={localizedPath(`/${content.case_study.link}`)}
+                                        className="mt-[clamp(8px,0.6vw,11px)] inline-flex items-center gap-[9px] border-b border-[#faf6f1]/25 pb-[3px] text-[clamp(13px,0.92vw,16px)] font-semibold text-[#faf6f1]/70 no-underline transition-colors hover:text-[#faf6f1]"
+                                    >
+                                        {content.case_study.link_label}
+                                    </Link>
+                                </ScrollReveal>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            )}
+
             {/* 3. Feature list (what_we_do): image left */}
             <section className="relative overflow-hidden py-[clamp(108px,8.52vw,150px)] pb-[clamp(94px,7.39vw,130px)]">
                 <DriftOrb
@@ -165,7 +199,7 @@ export function ServiceDetail({ lang, content, section5, images, em }: ServiceDe
                     <div className="grid grid-cols-1 items-center gap-[clamp(53px,4.2vw,74px)] lg:grid-cols-[0.95fr_1.05fr]">
                         <ScrollReveal direction="left">
                             <div className="relative aspect-[4/4.4] overflow-hidden rounded-lg">
-                                <Image src={images.feature} alt={content.what_we_do.title} fill sizes="(max-width: 1024px) 100vw, 46vw" className="object-cover" />
+                                <Image src={images.feature} alt={content.what_we_do.image_alt ?? content.what_we_do.title} fill sizes="(max-width: 1024px) 100vw, 46vw" className="object-cover" />
                                 <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(11,10,10,0)_55%,rgba(11,10,10,0.5))]" />
                             </div>
                         </ScrollReveal>
@@ -213,7 +247,7 @@ export function ServiceDetail({ lang, content, section5, images, em }: ServiceDe
                         </div>
                         <ScrollReveal direction="right">
                             <div className="relative aspect-[4/4.6] overflow-hidden rounded-lg">
-                                <Image src={images.forwhom} alt={content.perfect_for.title} fill sizes="(max-width: 1024px) 100vw, 46vw" className="object-cover" />
+                                <Image src={images.forwhom} alt={content.perfect_for.image_alt ?? content.perfect_for.title} fill sizes="(max-width: 1024px) 100vw, 46vw" className="object-cover" />
                                 <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(11,10,10,0)_55%,rgba(11,10,10,0.5))]" />
                             </div>
                         </ScrollReveal>
@@ -232,7 +266,7 @@ export function ServiceDetail({ lang, content, section5, images, em }: ServiceDe
                     <div className="grid grid-cols-1 items-center gap-[clamp(53px,4.2vw,74px)] lg:grid-cols-2">
                         <ScrollReveal direction="left">
                             <div className="relative aspect-[4/3] overflow-hidden rounded-lg">
-                                <Image src={images.section5} alt={section5.title} fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" />
+                                <Image src={images.section5} alt={section5.image_alt ?? section5.title} fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" />
                                 <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(11,10,10,0)_55%,rgba(11,10,10,0.45))]" />
                             </div>
                         </ScrollReveal>
@@ -247,6 +281,40 @@ export function ServiceDetail({ lang, content, section5, images, em }: ServiceDe
                     </div>
                 </div>
             </section>
+
+            {/* 5b. Process and pricing (optional) */}
+            {(content.process || content.pricing) && (
+                <section className="relative overflow-hidden border-t border-[#faf6f1]/8 bg-[#0e0d0c] py-[clamp(101px,7.95vw,140px)]">
+                    <div className="relative z-10 mx-auto max-w-[min(1760px,100%)] px-[clamp(20px,1.59vw,28px)] sm:px-[clamp(27px,2.1vw,37px)]">
+                        {content.process && (
+                            <>
+                                <ScrollReveal delay={0.06}>
+                                    <h2 className="mb-[clamp(36px,3vw,53px)] text-[clamp(2rem,3.6vw,3rem)] font-extrabold leading-[1.1] tracking-[-0.02em]">{content.process.title}</h2>
+                                </ScrollReveal>
+                                <StaggerChildren staggerDelay={0.08} className="grid grid-cols-1 gap-x-[clamp(28px,2.22vw,39px)] sm:grid-cols-2 lg:grid-cols-4">
+                                    {content.process.steps.map((step, i) => (
+                                        <div key={i} className="h-full border-t border-[#faf6f1]/12 py-[clamp(20px,1.59vw,28px)]">
+                                            <span className="se-gold-text font-didot mb-[clamp(10px,0.8vw,14px)] block text-[clamp(1.6rem,2vw,2.2rem)] leading-none">{String(i + 1).padStart(2, '0')}</span>
+                                            <h3 className="mb-1.5 text-[clamp(1.18rem,1.34vw,1.47rem)] font-bold">{step.title}</h3>
+                                            <p className="text-[clamp(0.94rem,1.06vw,1.17rem)] leading-[1.6] text-[#faf6f1]/58">{step.description}</p>
+                                        </div>
+                                    ))}
+                                </StaggerChildren>
+                            </>
+                        )}
+                        {content.pricing && (
+                            <div className={`grid grid-cols-1 gap-[clamp(20px,1.59vw,28px)] lg:grid-cols-[0.95fr_1.05fr] lg:gap-[clamp(53px,4.2vw,74px)] ${content.process ? 'mt-[clamp(70px,5.5vw,97px)]' : ''}`}>
+                                <ScrollReveal delay={0.06}>
+                                    <h2 className="text-[clamp(2rem,3.6vw,3rem)] font-extrabold leading-[1.1] tracking-[-0.02em]">{content.pricing.title}</h2>
+                                </ScrollReveal>
+                                <ScrollReveal delay={0.12}>
+                                    <p className="max-w-[680px] text-[clamp(1.03rem,1.17vw,1.29rem)] leading-[1.65] text-[#faf6f1]/66">{content.pricing.body}</p>
+                                </ScrollReveal>
+                            </div>
+                        )}
+                    </div>
+                </section>
+            )}
 
             {/* 6. Contact CTA */}
             <PageCTA
