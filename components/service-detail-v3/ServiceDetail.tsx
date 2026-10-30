@@ -160,10 +160,11 @@ export function ServiceDetail({ lang, content, section5, images, em }: ServiceDe
                 </div>
             </section>
 
-            {/* 2b. Case (optional): one real venue as proof, linked to the case studies. No divider
-                above it: it continues the statement; the divider sits above section 3 instead. */}
+            {/* 2b. Case (optional): one real venue as proof, linked to the case studies. It continues
+                the statement on the same panel colour, with no divider; the divider sits above
+                section 3 instead, where the colour changes back. */}
             {content.case_study && (
-                <section className="relative overflow-hidden py-[clamp(101px,7.95vw,140px)]">
+                <section className="relative overflow-hidden bg-[#0e0d0c] py-[clamp(101px,7.95vw,140px)]">
                     <div className="relative z-10 mx-auto max-w-[min(1760px,100%)] px-[clamp(20px,1.59vw,28px)] sm:px-[clamp(27px,2.1vw,37px)]">
                         <div className="grid grid-cols-1 items-center gap-[clamp(53px,4.2vw,74px)] lg:grid-cols-[1.05fr_0.95fr]">
                             <div>
@@ -229,8 +230,9 @@ export function ServiceDetail({ lang, content, section5, images, em }: ServiceDe
                 </div>
             </section>
 
-            {/* 4. For whom (perfect_for): text left, image right */}
-            <section className={`relative overflow-hidden bg-[#0e0d0c] py-[clamp(101px,7.95vw,140px)] ${content.case_study ? '' : 'border-t border-[#faf6f1]/8'}`}>
+            {/* 4. For whom (perfect_for): text left, image right. With a case band, sections 3 and 4
+                share the page colour so nothing splits the two lists. */}
+            <section className={`relative overflow-hidden py-[clamp(101px,7.95vw,140px)] ${content.case_study ? '' : 'border-t border-[#faf6f1]/8 bg-[#0e0d0c]'}`}>
                 <DriftOrb
                     className="h-[46vw] max-h-[640px] w-[46vw] max-w-[640px]"
                     style={{ bottom: '4%', left: '-6%', background: 'radial-gradient(circle,rgba(250,235,227,0.07),rgba(250,235,227,0) 62%)' }}
