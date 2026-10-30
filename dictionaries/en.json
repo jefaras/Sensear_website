@@ -1806,19 +1806,20 @@
         },
         "intro": {
             "title": "What Signature Playlists are",
-            "p1": "Signature Playlists are music programmes for your venue, built <strong>zone by zone</strong> and scheduled across the whole day, from opening to closing. We choose every track, and the playlists play on a platform <strong>licensed for business use</strong>.",
-            "p2": "Each zone keeps its own character while the music changes with the hours. We suggest new music every month and a change with each season, so regular guests and your staff are not hearing the same tracks all year."
+            "p1": "<strong>Signature Playlists</strong> are music programmes for your venue, built <strong>zone by zone</strong> and <strong>scheduled</strong> across the whole day, from opening to closing. We choose every track, and the playlists play on a platform <strong>licensed for business use</strong>.",
+            "p2": "Each zone keeps its <strong>own character</strong> while the <strong>music changes</strong> with the hours. We suggest <strong>new music</strong> every month and a change with each season, so regular guests and your staff are not hearing the same tracks all year."
         },
         "case_study": {
             "kicker": "In practice",
             "title": "Hera Hotel, Athens",
             "paragraphs": [
-                "Hera Hotel needed music for three areas with three different jobs: a breakfast lounge that eases guests into the day, a dinner restaurant looking out at the Acropolis, and a reception and lounge that carry the hours in between.",
-                "We built a separate playlist for each zone: light and uplifting at breakfast, more refined at dinner, and discreet enough at reception to accompany the day without asking for attention. Each one follows the time of day. The three share not a single track, yet they sound like one hotel.",
-                "We have run the same approach at Beach House and Yam in Antiparos for the past two years."
+                "<strong>Hera Hotel</strong> needed music for three areas with three different jobs: a breakfast <strong>lounge</strong> that eases guests into the day, a dinner <strong>restaurant</strong> looking out at the Acropolis, and a <strong>reception and lounge</strong> that carry the hours in between.",
+                "We built a separate playlist for each zone: <strong>light and uplifting</strong> at breakfast, more <strong>refined</strong> at dinner, and <strong>discreet</strong> enough at reception to accompany the day without asking for attention. Each one follows the time of day. The three share not a single track, yet <strong>they sound like one hotel</strong>.",
+                "We have run the same approach at Beach House and Yam in Antiparos, amongst many others, for the past two years."
             ],
             "link_label": "See all case studies",
-            "link": "case-studies"
+            "link": "case-studies",
+            "image_alt": "The dinner restaurant at Hera Hotel at night, looking out at the Acropolis"
         },
         "what_we_do": {
             "title": "What's included",
@@ -1926,7 +1927,7 @@
         },
         "pricing": {
             "title": "How pricing works",
-            "body": "There is no fixed package, because the price depends on your venue and how many zones it has. The written proposal sets out the scope and the cost. We start with an initial agreement, and the service then renews every year for an annual fee."
+            "body": "The service is designed around your venue alone: its number of zones, the hours the music covers and how often it is refreshed. The price follows from those choices, and the written proposal sets out the scope and the cost. We start with an initial agreement, and the service then renews every year for an annual fee."
         },
         "cta": {
             "title": "Tell us what your venue's day looks like.",

@@ -10,7 +10,7 @@ type EmSet = { statement: string; feature: string; forwhom: string; section5: st
 interface SlugConfig {
     ns: string;
     section5Key: 'licensed' | 'staging' | 'identity' | 'clarity';
-    images: { hero: string; feature: string; forwhom: string; section5: string };
+    images: { hero: string; feature: string; forwhom: string; section5: string; case?: string };
     em: { el: EmSet; en: EmSet };
 }
 
@@ -23,7 +23,13 @@ export const SERVICE_CONFIG: Record<string, SlugConfig> = {
     'signature-playlists': {
         ns: 'signature_playlists',
         section5Key: 'licensed',
-        images: { hero: img('signature-playlists', 'hero'), feature: img('signature-playlists', 'curation'), forwhom: img('signature-playlists', 'hotel-room'), section5: img('signature-playlists', 'vinyl-collection') },
+        images: {
+            hero: img('signature-playlists', 'hero'),
+            feature: img('signature-playlists', 'curation'),
+            forwhom: img('signature-playlists', 'hotel-room'),
+            section5: img('signature-playlists', 'vinyl-collection'),
+            case: '/images/case-studies/case-study-hera.webp',
+        },
         em: {
             el: { statement: 'ατμόσφαιρα', feature: '', forwhom: 'premium', section5: 'άδειες', cta: 'ήχο' },
             en: { statement: 'atmosphere', feature: '', forwhom: '', section5: 'licensing', cta: 'sound' },

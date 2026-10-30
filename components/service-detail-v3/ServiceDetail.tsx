@@ -25,7 +25,7 @@ interface ServiceContent {
     what_we_do: { title: string; items: { title: string; description: string }[]; image_alt?: string };
     perfect_for: { title: string; items: { title: string; description: string; link: string }[]; image_alt?: string };
     // Optional blocks: a page shows them only once its dictionary has them (T6, page by page).
-    case_study?: { kicker: string; title: string; paragraphs: string[]; link_label: string; link: string };
+    case_study?: { kicker: string; title: string; paragraphs: string[]; link_label: string; link: string; image_alt: string };
     process?: { title: string; steps: { title: string; description: string }[] };
     pricing?: { title: string; body: string };
     cta: { title: string; description: string; button: string; location: string };
@@ -36,7 +36,7 @@ interface ServiceDetailProps {
     content: ServiceContent;
     /** Section 5 object (dict key differs per service: licensed/staging/identity/clarity). */
     section5: Section5;
-    images: { hero: string; feature: string; forwhom: string; section5: string };
+    images: { hero: string; feature: string; forwhom: string; section5: string; case?: string };
     /** Per-locale emphasis words already resolved by the route file. Empty string = no emphasis. */
     em: { statement: string; feature: string; forwhom: string; section5: string; cta: string };
 }
@@ -64,6 +64,7 @@ export function ServiceDetail({ lang, content, section5, images, em }: ServiceDe
     // so both go inside the H1; it looks the same, but the H1 reads as a full phrase.
     const subtitleInH1 = content.hero.title.trim().endsWith(':');
     const heroHeading = subtitleInH1 ? `${content.hero.title} ${content.hero.subtitle}` : content.hero.title;
+    const section5Tall = Array.isArray(section5.items) && section5.items.length > 2;
     const subtitleClass = 'se-gold-text font-didot mb-[clamp(23px,1.82vw,32px)] text-[clamp(1.5rem,2.4vw,2.1rem)] leading-[1.2]';
 
     return (
@@ -163,15 +164,18 @@ export function ServiceDetail({ lang, content, section5, images, em }: ServiceDe
             {content.case_study && (
                 <section className="relative overflow-hidden border-t border-[#faf6f1]/8 py-[clamp(101px,7.95vw,140px)]">
                     <div className="relative z-10 mx-auto max-w-[min(1760px,100%)] px-[clamp(20px,1.59vw,28px)] sm:px-[clamp(27px,2.1vw,37px)]">
-                        <div className="grid grid-cols-1 gap-[clamp(28px,2.22vw,39px)] lg:grid-cols-[0.95fr_1.05fr] lg:gap-[clamp(53px,4.2vw,74px)]">
-                            <ScrollReveal delay={0.06}>
-                                <p className="se-gold-text font-didot mb-[clamp(10px,0.8vw,14px)] text-[clamp(1.29rem,1.46vw,1.61rem)]">{content.case_study.kicker}</p>
-                                <h2 className="text-[clamp(2rem,3.6vw,3rem)] font-extrabold leading-[1.1] tracking-[-0.02em]">{content.case_study.title}</h2>
-                            </ScrollReveal>
+                        <div className="grid grid-cols-1 items-center gap-[clamp(53px,4.2vw,74px)] lg:grid-cols-[1.05fr_0.95fr]">
                             <div>
+                                <ScrollReveal delay={0.06}>
+                                    <p className="se-gold-text font-didot mb-[clamp(10px,0.8vw,14px)] text-[clamp(1.29rem,1.46vw,1.61rem)]">{content.case_study.kicker}</p>
+                                    <h2 className="mb-[clamp(28px,2.22vw,39px)] text-[clamp(2rem,3.6vw,3rem)] font-extrabold leading-[1.1] tracking-[-0.02em]">{content.case_study.title}</h2>
+                                </ScrollReveal>
                                 {content.case_study.paragraphs.map((paragraph, i) => (
                                     <ScrollReveal key={i} delay={0.12 + i * 0.06}>
-                                        <p className="mb-[clamp(15px,1.19vw,21px)] max-w-[680px] text-[clamp(1.03rem,1.17vw,1.29rem)] leading-[1.65] text-[#faf6f1]/66">{paragraph}</p>
+                                        <p
+                                            className="se-html mb-[clamp(15px,1.19vw,21px)] max-w-[680px] text-[clamp(1.03rem,1.17vw,1.29rem)] leading-[1.65] text-[#faf6f1]/66"
+                                            dangerouslySetInnerHTML={{ __html: paragraph }}
+                                        />
                                     </ScrollReveal>
                                 ))}
                                 <ScrollReveal delay={0.3}>
@@ -183,6 +187,14 @@ export function ServiceDetail({ lang, content, section5, images, em }: ServiceDe
                                     </Link>
                                 </ScrollReveal>
                             </div>
+                            {images.case && (
+                                <ScrollReveal direction="right">
+                                    <div className="relative aspect-[4/4.6] overflow-hidden rounded-lg">
+                                        <Image src={images.case} alt={content.case_study.image_alt} fill sizes="(max-width: 1024px) 100vw, 46vw" className="object-cover" />
+                                        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(11,10,10,0)_55%,rgba(11,10,10,0.5))]" />
+                                    </div>
+                                </ScrollReveal>
+                            )}
                         </div>
                     </div>
                 </section>
@@ -263,10 +275,12 @@ export function ServiceDetail({ lang, content, section5, images, em }: ServiceDe
                     duration={22}
                 />
                 <div className="relative z-10 mx-auto max-w-[min(1760px,100%)] px-[clamp(20px,1.59vw,28px)] sm:px-[clamp(27px,2.1vw,37px)]">
-                    <div className="grid grid-cols-1 items-center gap-[clamp(53px,4.2vw,74px)] lg:grid-cols-2">
+                    {/* With a full list beside it, the portrait photo gets the same tall frame as
+                        sections 3 and 4; a single-item section keeps the shorter 4:3 frame. */}
+                    <div className={`grid grid-cols-1 items-center gap-[clamp(53px,4.2vw,74px)] ${section5Tall ? 'lg:grid-cols-[0.95fr_1.05fr]' : 'lg:grid-cols-2'}`}>
                         <ScrollReveal direction="left">
-                            <div className="relative aspect-[4/3] overflow-hidden rounded-lg">
-                                <Image src={images.section5} alt={section5.image_alt ?? section5.title} fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" />
+                            <div className={`relative overflow-hidden rounded-lg ${section5Tall ? 'aspect-[4/4.4]' : 'aspect-[4/3]'}`}>
+                                <Image src={images.section5} alt={section5.image_alt ?? section5.title} fill sizes={section5Tall ? '(max-width: 1024px) 100vw, 46vw' : '(max-width: 1024px) 100vw, 50vw'} className="object-cover" />
                                 <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(11,10,10,0)_55%,rgba(11,10,10,0.45))]" />
                             </div>
                         </ScrollReveal>
