@@ -7,6 +7,7 @@ const sameAs = [
     'https://www.instagram.com/sensear.music',
     'https://www.linkedin.com/company/sensear-music',
     'https://soundcloud.com/sensear_music',
+    'https://www.facebook.com/61575909304249/',
     // Google Business Profile "SensEar.Music"
     'https://maps.google.com/?cid=13226295565397032732'
 ];
