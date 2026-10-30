@@ -45,7 +45,9 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: Loc
             title: article.title,
             description: article.desc,
             type: 'article',
-            ...(article.image && { images: [{ url: article.image }] }),
+            // ogImage is a JPG copy for posts whose on-page image is WebP, which some
+            // share previews (LinkedIn) do not show.
+            ...(article.image && { images: [{ url: article.ogImage ?? article.image }] }),
         },
     };
 }
