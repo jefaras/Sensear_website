@@ -50,7 +50,7 @@ export const metadata: Metadata = {
         description: defaultDescription,
         images: [
             {
-                url: `${baseUrl}/images/brand/sensear-og-image.svg`,
+                url: `${baseUrl}/images/brand/sensear-og-image.jpg`,
                 width: 1200,
                 height: 630,
                 alt: 'SensEar Music - Bespoke Music Curation',
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
         card: 'summary_large_image',
         title: 'SensEar Music',
         description: defaultDescription,
-        images: [`${baseUrl}/images/brand/sensear-og-image.svg`],
+        images: [`${baseUrl}/images/brand/sensear-og-image.jpg`],
         creator: '@sensear_music',
     },
     robots: {
