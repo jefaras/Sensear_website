@@ -3,6 +3,14 @@ import { getSiteUrl } from "@/lib/site-url";
 
 const baseUrl = getSiteUrl();
 
+const sameAs = [
+    'https://www.instagram.com/sensear.music',
+    'https://www.linkedin.com/company/sensear-music',
+    'https://soundcloud.com/sensear_music',
+    // Google Business Profile "SensEar.Music"
+    'https://maps.google.com/?cid=13226295565397032732'
+];
+
 export function OrganizationJsonLd() {
     const organization = {
         '@context': 'https://schema.org',
@@ -18,11 +26,7 @@ export function OrganizationJsonLd() {
             email: 'hello@sensear.music',
             availableLanguage: ['English', 'Greek']
         },
-        sameAs: [
-            'https://www.instagram.com/sensear.music',
-            'https://www.linkedin.com/company/sensear-music',
-            'https://soundcloud.com/sensear_music'
-        ],
+        sameAs,
         address: {
             '@type': 'PostalAddress',
             addressCountry: 'GR'
@@ -46,16 +50,16 @@ export function LocalBusinessJsonLd() {
         url: baseUrl,
         telephone: '+30-697-699-4212',
         email: 'hello@sensear.music',
+        // No street address: the only real one is private (see CLAUDE.md).
         address: {
             '@type': 'PostalAddress',
-            streetAddress: 'Agias Lavras 19',
             addressLocality: 'Athens',
-            postalCode: '11471',
             addressCountry: 'GR'
         },
-        priceRange: '$$',
-        openingHours: 'Mo-Sa 10:00-18:00',
-        image: `${baseUrl}/images/brand/sensear-logo-color.png`
+        // Matches the Google Business Profile hours; Sunday closed.
+        openingHours: ['Mo-Fr 10:00-21:00', 'Sa 10:00-17:00'],
+        image: `${baseUrl}/images/brand/sensear-logo-color.png`,
+        sameAs
     }
 
     return (
