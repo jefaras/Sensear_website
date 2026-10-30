@@ -160,9 +160,10 @@ export function ServiceDetail({ lang, content, section5, images, em }: ServiceDe
                 </div>
             </section>
 
-            {/* 2b. Case (optional): one real venue as proof, linked to the case studies */}
+            {/* 2b. Case (optional): one real venue as proof, linked to the case studies. No divider
+                above it: it continues the statement; the divider sits above section 3 instead. */}
             {content.case_study && (
-                <section className="relative overflow-hidden border-t border-[#faf6f1]/8 py-[clamp(101px,7.95vw,140px)]">
+                <section className="relative overflow-hidden py-[clamp(101px,7.95vw,140px)]">
                     <div className="relative z-10 mx-auto max-w-[min(1760px,100%)] px-[clamp(20px,1.59vw,28px)] sm:px-[clamp(27px,2.1vw,37px)]">
                         <div className="grid grid-cols-1 items-center gap-[clamp(53px,4.2vw,74px)] lg:grid-cols-[1.05fr_0.95fr]">
                             <div>
