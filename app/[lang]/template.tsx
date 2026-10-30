@@ -2,6 +2,7 @@
 
 import { usePathname } from 'next/navigation';
 import { PageTransition } from '@/components/motion';
+import { getBasePath } from '@/lib/localized-path';
 
 /**
  * Template re-renders on every navigation (unlike layout which persists),
@@ -13,6 +14,10 @@ import { PageTransition } from '@/components/motion';
  */
 export default function Template({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
+
+  if (getBasePath(pathname) === '/dorean-axiologisi') {
+    return <>{children}</>;
+  }
 
   return (
     <PageTransition key={pathname}>

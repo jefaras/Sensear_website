@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 import { FooterV3 } from "@/components/v3";
 import { Navbar } from "@/components/Navbar";
 import type { Locale } from "@/lib/i18n";
-import { getPathLocale } from "@/lib/localized-path";
+import { getBasePath, getPathLocale } from "@/lib/localized-path";
 
 type NavigationLabels = {
     home: string;
@@ -36,6 +36,8 @@ export function LocalizedSiteChrome({ children, navigation, footerV3 }: Localize
     const pathname = usePathname() || "/";
     const lang: Locale = getPathLocale(pathname);
     const isHomepageConcept = pathname === "/homepage-concept";
+    const isFocusedLanding = getBasePath(pathname) === "/dorean-axiologisi";
+    const hideGlobalChrome = isHomepageConcept || isFocusedLanding;
 
     useEffect(() => {
         document.documentElement.lang = lang;
@@ -48,11 +50,11 @@ export function LocalizedSiteChrome({ children, navigation, footerV3 }: Localize
             <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-black text-white px-4 py-2 rounded z-50">
                 Skip to main content
             </a>
-            {!isHomepageConcept && <Navbar lang={lang} navigation={navigation[lang]} />}
+            {!hideGlobalChrome && <Navbar lang={lang} navigation={navigation[lang]} />}
             <main id="main-content" className="flex-grow">
                 {children}
             </main>
-            {!isHomepageConcept && (
+            {!hideGlobalChrome && (
                 <FooterV3
                     lang={lang}
                     navigation={navigation[lang]}

@@ -41,6 +41,11 @@ export const SITEMAP_ROUTES = [
     '/sitemap-page',
 ] as const
 
+/** Greek-only conversion pages that have no English equivalent. */
+export const GREEK_ONLY_SITEMAP_ROUTES = [
+    '/dorean-axiologisi',
+] as const
+
 export type SitemapRoute = (typeof SITEMAP_ROUTES)[number]
 
 /** Home is `daily`, everything else `weekly`. */

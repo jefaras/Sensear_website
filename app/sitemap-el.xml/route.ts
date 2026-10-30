@@ -20,7 +20,7 @@
 import { getSiteUrl } from '@/lib/site-url'
 import { getLocalizedPath } from '@/lib/localized-path'
 import { getRouteLastModified } from '@/lib/route-lastmod'
-import { SITEMAP_ROUTES, changeFrequencyForRoute, priorityForRoute } from '@/lib/sitemap-routes'
+import { GREEK_ONLY_SITEMAP_ROUTES, SITEMAP_ROUTES, changeFrequencyForRoute, priorityForRoute } from '@/lib/sitemap-routes'
 
 export const dynamic = 'force-static'
 
@@ -37,7 +37,7 @@ function escapeXml(value: string): string {
 }
 
 function buildGreekSitemap(): string {
-    const entries = SITEMAP_ROUTES.map((route) => {
+    const entries = [...SITEMAP_ROUTES, ...GREEK_ONLY_SITEMAP_ROUTES].map((route) => {
         const loc = `${BASE_URL}${getLocalizedPath('el', route || '/')}`
 
         return [

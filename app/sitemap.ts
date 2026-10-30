@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next'
 import { getSiteUrl } from '@/lib/site-url'
 import { getLocalizedPath } from '@/lib/localized-path'
 import { getRouteLastModified } from '@/lib/route-lastmod'
-import { SITEMAP_ROUTES, changeFrequencyForRoute, priorityForRoute } from '@/lib/sitemap-routes'
+import { GREEK_ONLY_SITEMAP_ROUTES, SITEMAP_ROUTES, changeFrequencyForRoute, priorityForRoute } from '@/lib/sitemap-routes'
 
 export const dynamic = 'force-static'
 
@@ -25,6 +25,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
                 changeFrequency: changeFrequencyForRoute(route),
                 priority: priorityForRoute(route),
             })
+        })
+    })
+
+    GREEK_ONLY_SITEMAP_ROUTES.forEach((route) => {
+        sitemapEntries.push({
+            url: `${BASE_URL}${getLocalizedPath('el', route)}`,
+            lastModified: getRouteLastModified(route),
+            changeFrequency: changeFrequencyForRoute(route),
+            priority: priorityForRoute(route),
         })
     })
 

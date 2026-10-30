@@ -49,6 +49,9 @@ function buildSitemapSections(dict: SitemapDictionary, lang: Locale) {
                 { name: dict.navigation.contact, path: localizedPath('/contact') },
                 { name: dict.navigation.blog, path: localizedPath('/blog') },
                 { name: faqLabel, path: localizedPath('/faq') },
+                // Greek-only campaign page: listed in the Greek directory only, which
+                // both sitemap pages render, so it gets crawlable inlinks from each.
+                ...(lang === 'el' ? [{ name: content.free_assessment, path: localizedPath('/dorean-axiologisi') }] : []),
             ],
         },
         {
