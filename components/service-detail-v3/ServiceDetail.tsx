@@ -200,8 +200,9 @@ export function ServiceDetail({ lang, content, section5, images, em }: ServiceDe
                 </section>
             )}
 
-            {/* 3. Feature list (what_we_do): image left */}
-            <section className="relative overflow-hidden py-[clamp(108px,8.52vw,150px)] pb-[clamp(94px,7.39vw,130px)]">
+            {/* 3. Feature list (what_we_do): image left. With a case band above, the divider
+                sits here, between the case and the service lists, instead of above section 4. */}
+            <section className={`relative overflow-hidden py-[clamp(108px,8.52vw,150px)] pb-[clamp(94px,7.39vw,130px)] ${content.case_study ? 'border-t border-[#faf6f1]/8' : ''}`}>
                 <DriftOrb
                     className="h-[46vw] max-h-[640px] w-[46vw] max-w-[640px]"
                     style={{ top: '6%', right: '-6%', background: 'radial-gradient(circle,rgba(240,189,149,0.10),rgba(240,189,149,0) 62%)' }}
@@ -228,7 +229,7 @@ export function ServiceDetail({ lang, content, section5, images, em }: ServiceDe
             </section>
 
             {/* 4. For whom (perfect_for): text left, image right */}
-            <section className="relative overflow-hidden border-t border-[#faf6f1]/8 bg-[#0e0d0c] py-[clamp(101px,7.95vw,140px)]">
+            <section className={`relative overflow-hidden bg-[#0e0d0c] py-[clamp(101px,7.95vw,140px)] ${content.case_study ? '' : 'border-t border-[#faf6f1]/8'}`}>
                 <DriftOrb
                     className="h-[46vw] max-h-[640px] w-[46vw] max-w-[640px]"
                     style={{ bottom: '4%', left: '-6%', background: 'radial-gradient(circle,rgba(250,235,227,0.07),rgba(250,235,227,0) 62%)' }}
@@ -322,7 +323,10 @@ export function ServiceDetail({ lang, content, section5, images, em }: ServiceDe
                                     <h2 className="text-[clamp(2rem,3.6vw,3rem)] font-extrabold leading-[1.1] tracking-[-0.02em]">{content.pricing.title}</h2>
                                 </ScrollReveal>
                                 <ScrollReveal delay={0.12}>
-                                    <p className="max-w-[680px] text-[clamp(1.03rem,1.17vw,1.29rem)] leading-[1.65] text-[#faf6f1]/66">{content.pricing.body}</p>
+                                    <p
+                                        className="se-html max-w-[680px] text-[clamp(1.03rem,1.17vw,1.29rem)] leading-[1.65] text-[#faf6f1]/66"
+                                        dangerouslySetInnerHTML={{ __html: content.pricing.body }}
+                                    />
                                 </ScrollReveal>
                             </div>
                         )}
