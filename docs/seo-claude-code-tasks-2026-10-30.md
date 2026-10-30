@@ -8,27 +8,24 @@ Everything in section 1 was checked live on 30 Oct 2026, not copied from older n
 
 ---
 
-## 0. Repo state — read before you touch git
+## 0. Status — read before you touch git
 
-| Item | State on 30 Oct |
+**Done 30 Oct 2026:** T1, T2, T3, T8, T9. The 30 Oct build is deployed and verified live.
+Post-deploy steps are also done: IndexNow ping sent 59 URLs; `/sitemap.xml` and
+`/sitemap-el.xml` resubmitted in Google Search Console and Bing Webmaster Tools; indexing
+requested for `/el/dorean-axiologisi/`.
+
+**Open:** T4, T10, T5 (in that order), then T6 (needs JEF's facts first). T7 is dropped:
+Claude (Cowork) sends the IndexNow ping after each deploy.
+
+| Item | State on 30 Oct (after deploy) |
 |---|---|
-| Branch | `feat/case-study-new-client` |
-| Last commit | `5d50d32` (11 Aug 2026) "content: update Hera case study image" |
-| **Stale lock file** | `.git/index.lock`, 0 bytes, dated 11 Aug 2026 14:28 UTC. It blocks `git add` / `git commit`. **Ask JEF, then delete it** before any git write. |
-| Live site build | The 11 Aug build (all files in `httpdocs` dated 11 Aug). Last local `out/` is also from 11 Aug. |
-| `CLAUDE.md` | Out of date: it names branch `redesign/home-v3-dark`, and it still says "NEVER edit `app/sitemap.ts`" although JEF waived that on 30 Jul. Update it (task T9). |
-
-**Uncommitted work in the tree (do not lose it):**
-
-| Path | State | What it is |
-|---|---|---|
-| `public/aa5377a82ff974cd792ee8c680f4c3e0.txt` | untracked | IndexNow key file. Added 30 Oct. Content = the key, no newline. |
-| `public/.htaccess` | modified | 3 new 301 lines for `music-for-art-museums-and-fashion` (root, `/en/`, `/el/`). Added 30 Oct. The **live** `httpdocs/.htaccess` already has the identical change (verified by SHA-256 of the LF text). |
-| `app/[lang]/dorean-axiologisi/page.tsx` | untracked | Greek-only free-assessment landing page (from Aug). Not deployed: `/el/dorean-axiologisi/` returns 404 on live. |
-| `lib/sitemap-routes.ts`, `app/sitemap.ts`, `app/sitemap-el.xml/route.ts`, `app/template.tsx`, `app/[lang]/template.tsx`, `components/LocalizedSiteChrome.tsx` | modified | Wiring for the dorean page. |
-| `public/images/assessment/` (2.1 MB) | untracked | Images for the dorean page. |
-| `public/images/case-studies/Hera-hotel-Acropolis*_orig.jpg` (~1 MB) | untracked | Original photos. **Ask JEF** before committing; they will be deployed if they stay in `public/`. |
-| `docs/seo-gsc-audit-2026-07-27.md`, `playwright-report/index.html` | modified | Docs / test output. |
+| Branch | `feat/case-study-new-client`, pushed to origin |
+| Commits from the 30 Oct session | `a83f3c3` IndexNow key · `ae88eca` art-museums redirects · `6fe2380` docs archive + CLAUDE.md · `df429ed` dorean landing page · `11885c4` schema address/hours fix |
+| `.git/index.lock` | Removed (approved by JEF) |
+| Hera `*_orig.jpg` and the 2.1 MB dorean hero PNG | Moved to `_originals/` (git-ignored, outside `public/`, never deployed) |
+| Old SEO docs | Moved to `docs/archive/` |
+| `CLAUDE.md` | Updated (T9) |
 
 ---
 
@@ -48,11 +45,11 @@ Everything in section 1 was checked live on 30 Oct 2026, not copied from older n
 
 | # | Problem | Evidence |
 |---|---|---|
-| A | **Invented street address in schema.** `LocalBusiness` JSON-LD says `streetAddress: "Agias Lavras 19"`, `postalCode: "11471"`. This is not a real SensEar address. An AI coding agent (Kilo Code) added it on 11 Mar 2026 as an audit "S2 fix", with no source. See `claude-code-handoff/sessions/2026-03-12_1552_…md` line ~2046. | `components/JsonLd.tsx` lines 49–57 |
+| A | **(Fixed 30 Oct, T1.)** **Invented street address in schema.** `LocalBusiness` JSON-LD says `streetAddress: "Agias Lavras 19"`, `postalCode: "11471"`. This is not a real SensEar address. An AI coding agent (Kilo Code) added it on 11 Mar 2026 as an audit "S2 fix", with no source. See `claude-code-handoff/sessions/2026-03-12_1552_…md` line ~2046. | `components/JsonLd.tsx` lines 49–57 |
 | B | **Share image is SVG.** 30 pages use `/images/brand/sensear-og-image.svg`. Facebook, LinkedIn and X do not show SVG previews. | `app/layout.tsx` lines 53 and 64 |
 | C | **3 service H1s end with a colon** in both languages: "Event Soundtracks:", "Sonic Identity:", "Audio Upgrades:" (EL: "Μουσική Εκδηλώσεων:", "Ηχητική ταυτότητα:", "Ακουστική αναβάθμιση:"). The H1 is incomplete on its own; the rest of the line sits outside the H1. Low priority. | `dictionaries/en.json` lines 1891, 1981, 2072; `dictionaries/el.json` lines 1873, 1963, 2054 |
 | D | **Service pages are thin.** Main-content words (nav/header/footer removed), measured live 30 Oct: EN `/services/` 229, signature-playlists 247, event-soundtracks 229, sonic-identity 254, audio-upgrades 252. EL 270–321. | live measurement |
-| E | **Dorean page has zero internal links.** Only the sitemap and template code reference it. | `grep -rn dorean-axiologisi` |
+| E | **(Fixed 30 Oct, T3: linked from the Greek directory on both sitemap pages.)** **Dorean page has zero internal links.** Only the sitemap and template code reference it. | `grep -rn dorean-axiologisi` |
 | F | **Empty `alt=""` on content images.** Bing Site Scan (30 Oct) flags 54 of 58 pages. Most hits: `sensear-logo-color.png` (2 per page), `sensear-signature-playlist-service.jpg`, and the page hero images (`about-hero.jpg`, `*-hero.jpg`, `contact-hero-venue-consultation.jpg`). No `<img>` is missing the attribute; the values are empty. | Bing Site Scan + live check |
 
 **Retracted (not problems):** the "glued H1 words" report. In the rendered page `<br>` gives line breaks, so Google sees separate words.
@@ -85,7 +82,7 @@ Everything in section 1 was checked live on 30 Oct 2026, not copied from older n
 
 Follow the verification gates in `CLAUDE.md` for every code step: `npm run typecheck` (zero new errors) → `npm run lint` → `npm run build` → browser check both locales → mobile. i18n rule: every user-facing string in **both** `dictionaries/en.json` and `dictionaries/el.json`. Greek copy rules: no em dashes "—"; natural, longer Greek sentences, not clipped fragments.
 
-### T1 — Remove the invented address from the schema (high)
+### T1 — Remove the invented address from the schema (high) · DONE 30 Oct
 - File: `components/JsonLd.tsx`, `LocalBusiness` block (lines ~45–58).
 - Remove `streetAddress` and `postalCode`. Keep `addressLocality: 'Athens'` and `addressCountry: 'GR'`.
 - **Do not add any street address.** JEF's real address is a private home address and must not be published.
@@ -94,7 +91,7 @@ Follow the verification gates in `CLAUDE.md` for every code step: `npm run typec
 - Add the Google Business Profile to `sameAs` in both the `Organization` and `LocalBusiness` blocks: `https://maps.google.com/?cid=13226295565397032732`.
 - Check: built `out/index.html` JSON-LD has no `streetAddress` / `postalCode`, hours match the profile, `sameAs` includes the Maps URL; Rich Results Test passes.
 
-### T2 — Commit what is already done (high)
+### T2 — Commit what is already done (high) · DONE 30 Oct
 1. Ask JEF to approve deleting `.git/index.lock`, then delete it.
 2. Commit 1: `seo: add IndexNow key file` → `public/aa5377a82ff974cd792ee8c680f4c3e0.txt`.
 3. Commit 2: `seo: 301 old music-for-art-museums-and-fashion URLs` → `public/.htaccess`.
@@ -102,7 +99,7 @@ Follow the verification gates in `CLAUDE.md` for every code step: `npm run typec
 5. The dorean changeset is T3 (commit after its gates pass).
 6. Ask JEF about the two `*_orig.jpg` files before adding them.
 
-### T3 — Finish and ship the Greek-only page `/el/dorean-axiologisi/` (high)
+### T3 — Finish and ship the Greek-only page `/el/dorean-axiologisi/` (high) · DONE 30 Oct
 - Run the gates on it (never run since 30 Jul — see Aug handoff §4.1).
 - Add at least one crawlable internal link to it from Greek pages (Greek nav, Greek footer, or the Greek services / contact pages). Use dictionary keys in both files.
 - Commit as one changeset, e.g. `feat: add the Greek-only free-assessment landing page`.
@@ -120,11 +117,11 @@ Follow the verification gates in `CLAUDE.md` for every code step: `npm run typec
 - Target 700–1,000 words of distinct copy per page: a real client scenario, what is delivered, licensing / hardware specifics, how pricing works.
 - Draft only. **JEF must approve all copy** before commit. Use real case studies already on the site (e.g. Hera Hotel); invent nothing.
 
-### T7 — IndexNow ping after each deploy (low)
+### T7 — IndexNow ping after each deploy (low) · DROPPED (Cowork pings after each deploy)
 - Add `scripts/indexnow-ping.mjs`: read `out/sitemap.xml` + `out/sitemap-el.xml`, POST the URLs (max 10,000) to `https://api.indexnow.org/IndexNow` with `host: "sensear.music"`, `key: "aa5377a82ff974cd792ee8c680f4c3e0"`, `keyLocation: "https://sensear.music/aa5377a82ff974cd792ee8c680f4c3e0.txt"`.
 - Run it manually after a deploy (there is no CI). Expect HTTP 200 or 202.
 
-### T8 — Build and deploy (after T1–T4, with JEF)
+### T8 — Build and deploy (after T1–T4, with JEF) · DONE 30 Oct (T1–T3 deployed; post-deploy steps done)
 - `npm run typecheck && npm run lint && npm run build`, then JEF's usual upload of `out/` to `httpdocs`. **Do not delete files in `httpdocs`.**
 - Then tell Claude (Cowork) to: resubmit both sitemaps in Google and Bing, run the IndexNow ping, request indexing for `/el/dorean-axiologisi/`, and verify live.
 
@@ -134,7 +131,7 @@ Follow the verification gates in `CLAUDE.md` for every code step: `npm run typec
 - Keep `alt=""` only for purely decorative images.
 - Check: re-run Bing Site Scan (Claude Cowork can do it); warnings should drop well below 54.
 
-### T9 — Update `CLAUDE.md` (low, ask JEF)
+### T9 — Update `CLAUDE.md` (low, ask JEF) · DONE 30 Oct
 - Current branch name. Remove or relax the `app/sitemap.ts` rule (waived 30 Jul). Add: "never publish a street address in schema".
 
 ---
