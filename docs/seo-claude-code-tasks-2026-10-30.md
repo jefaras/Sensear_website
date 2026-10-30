@@ -18,9 +18,9 @@ requested for `/el/dorean-axiologisi/`.
 **Deployed and verified live 30 Oct (second upload):** T4, T5. All 59 pages 200, all 93 images load.
 
 **Committed, not yet deployed:** Facebook page added to the schema `sameAs`; JPG share image for the
-blog post `building-brand-people-can-hear` (its page image is WebP).
+blog post `building-brand-people-can-hear` (its page image is WebP); T6 Signature Playlists (see T6).
 
-**Open:** T6 (Signature Playlists first; JEF's facts received, draft copy awaiting his approval).
+**Open:** T6 (Signature Playlists done; Event Soundtracks, Sonic Identity, Audio Upgrades and the services hub next).
 **Closed:** T10 (option A, see T10). T7 is dropped: Claude (Cowork) sends the IndexNow ping after each deploy.
 
 | Item | State on 30 Oct (after deploy) |
@@ -118,7 +118,16 @@ Follow the verification gates in `CLAUDE.md` for every code step: `npm run typec
 ### T5 — Complete the 3 service H1s (low) · DONE 30 Oct (subtitle moved inside the H1, deployed and verified live)
 - Change the 6 dictionary titles in section 1-C so the H1 reads as a full phrase (for example, merge it with the line that follows it). Keep the visual layout. Both languages.
 
-### T6 — Expand the five English service pages + Greek equivalents (medium, needs JEF)
+### T6 — Expand the five English service pages + Greek equivalents (medium, needs JEF) · Signature Playlists DONE 30 Oct (committed, not yet deployed)
+- **Signature Playlists, 30 Oct:** copy approved by JEF and committed in two parts. `b7c8069` adds optional
+  blocks to the shared service layout (case, process, pricing, `image_alt`); pages without those keys are
+  unchanged. `c92c1c5` is the copy itself (EN + EL), about 675 / 740 words of main content, up from 247.
+  - JEF's extra answers: the yearly fee is billed once a year; "licensed for use in businesses" is the
+    wording; Spotify and YouTube may be named; when a visit is not possible at the time, SensEar walks
+    through the venue in detail with the managers on a video call.
+  - **Rollback** (JEF asked to be ready): `git revert c92c1c5` restores the old copy; the layout commit
+    can stay (it renders nothing without the keys). Then rebuild `out/` and upload.
+  - Next pages reuse the same blocks: add `case_study` / `process` / `pricing` / `image_alt` keys.
 - Target 700–1,000 words of distinct copy per page: a real client scenario, what is delivered, licensing / hardware specifics, how pricing works.
 - Draft only. **JEF must approve all copy** before commit. Use real case studies already on the site (e.g. Hera Hotel); invent nothing.
 - Order: **Signature Playlists first** (JEF, 30 Oct), then the other four. Fix the content images whose alt is a section heading ("What we do", "Perfect for") on each page as part of this task.
