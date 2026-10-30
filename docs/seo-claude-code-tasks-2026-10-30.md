@@ -15,8 +15,13 @@ Post-deploy steps are also done: IndexNow ping sent 59 URLs; `/sitemap.xml` and
 `/sitemap-el.xml` resubmitted in Google Search Console and Bing Webmaster Tools; indexing
 requested for `/el/dorean-axiologisi/`.
 
-**Open:** T10 (on hold, see T10), T6 (needs JEF's facts first). T4 and T5 done 30 Oct, not yet deployed. T7 is dropped:
-Claude (Cowork) sends the IndexNow ping after each deploy.
+**Deployed and verified live 30 Oct (second upload):** T4, T5. All 59 pages 200, all 93 images load.
+
+**Committed, not yet deployed:** Facebook page added to the schema `sameAs`; JPG share image for the
+blog post `building-brand-people-can-hear` (its page image is WebP).
+
+**Open:** T6 (Signature Playlists first; JEF's facts received, draft copy awaiting his approval).
+**Closed:** T10 (option A, see T10). T7 is dropped: Claude (Cowork) sends the IndexNow ping after each deploy.
 
 | Item | State on 30 Oct (after deploy) |
 |---|---|
@@ -50,7 +55,7 @@ Claude (Cowork) sends the IndexNow ping after each deploy.
 | C | **3 service H1s end with a colon** in both languages: "Event Soundtracks:", "Sonic Identity:", "Audio Upgrades:" (EL: "Μουσική Εκδηλώσεων:", "Ηχητική ταυτότητα:", "Ακουστική αναβάθμιση:"). The H1 is incomplete on its own; the rest of the line sits outside the H1. Low priority. | `dictionaries/en.json` lines 1891, 1981, 2072; `dictionaries/el.json` lines 1873, 1963, 2054 |
 | D | **Service pages are thin.** Main-content words (nav/header/footer removed), measured live 30 Oct: EN `/services/` 229, signature-playlists 247, event-soundtracks 229, sonic-identity 254, audio-upgrades 252. EL 270–321. | live measurement |
 | E | **(Fixed 30 Oct, T3: linked from the Greek directory on both sitemap pages.)** **Dorean page has zero internal links.** Only the sitemap and template code reference it. | `grep -rn dorean-axiologisi` |
-| F | **Empty `alt=""` on content images.** Bing Site Scan (30 Oct) flags 54 of 58 pages. Most hits: `sensear-logo-color.png` (2 per page), `sensear-signature-playlist-service.jpg`, and the page hero images (`about-hero.jpg`, `*-hero.jpg`, `contact-hero-venue-consultation.jpg`). No `<img>` is missing the attribute; the values are empty. | Bing Site Scan + live check |
+| F | **(Closed 30 Oct, T10: the empty alts are all decorative; left as is.)** **Empty `alt=""` on content images.** Bing Site Scan (30 Oct) flags 54 of 58 pages. Most hits: `sensear-logo-color.png` (2 per page), `sensear-signature-playlist-service.jpg`, and the page hero images (`about-hero.jpg`, `*-hero.jpg`, `contact-hero-venue-consultation.jpg`). No `<img>` is missing the attribute; the values are empty. | Bing Site Scan + live check |
 
 **Retracted (not problems):** the "glued H1 words" report. In the rendered page `<br>` gives line breaks, so Google sees separate words.
 
@@ -105,17 +110,27 @@ Follow the verification gates in `CLAUDE.md` for every code step: `npm run typec
 - Commit as one changeset, e.g. `feat: add the Greek-only free-assessment landing page`.
 - Check after commit: in `out/sitemap-el.xml` its `<lastmod>` is not `2026-07-30T00:00:00.000Z`.
 
-### T4 — Raster share image (medium) · DONE 30 Oct (`sensear-og-image.jpg`, committed, not yet deployed)
+### T4 — Raster share image (medium) · DONE 30 Oct (`sensear-og-image.jpg`, deployed and verified live)
 - Create `public/images/brand/sensear-og-image.jpg` (or `.png`), **1200×630**, from the existing SVG / brand assets.
 - Point `app/layout.tsx` (both `openGraph.images` and `twitter.images`) to it. Check other `openGraph` blocks use raster images: `app/[lang]/blog/[slug]/page.tsx`, `components/industry-detail-v3/industry-page.tsx`, `app/[lang]/dorean-axiologisi/page.tsx`.
 - Check: no page in `out/` has an `.svg` `og:image`.
 
-### T5 — Complete the 3 service H1s (low) · DONE 30 Oct (subtitle moved inside the H1, committed, not yet deployed)
+### T5 — Complete the 3 service H1s (low) · DONE 30 Oct (subtitle moved inside the H1, deployed and verified live)
 - Change the 6 dictionary titles in section 1-C so the H1 reads as a full phrase (for example, merge it with the line that follows it). Keep the visual layout. Both languages.
 
 ### T6 — Expand the five English service pages + Greek equivalents (medium, needs JEF)
 - Target 700–1,000 words of distinct copy per page: a real client scenario, what is delivered, licensing / hardware specifics, how pricing works.
 - Draft only. **JEF must approve all copy** before commit. Use real case studies already on the site (e.g. Hera Hotel); invent nothing.
+- Order: **Signature Playlists first** (JEF, 30 Oct), then the other four. Fix the content images whose alt is a section heading ("What we do", "Perfect for") on each page as part of this task.
+- JEF's facts (30 Oct), the only facts to use:
+  - Client example: Hera Hotel. Every zone has its own cohesive but distinct sound that adjusts through the day.
+  - Delivered: fully customised to the venue and its number of zones; covers every part of the day, from morning to closing; multiple zones; monthly and seasonal changes suggested. SensEar curates.
+  - Playback: a third-party platform (not named on the site) cleared for business use and public performance. Works offline, schedules playlists, handles several zones; staff control volume and other settings as the owner decides.
+  - Licensing: the venue owner alone pays public-performance licence fees. SensEar's solution is legal for public use, unlike Spotify, YouTube and similar consumer apps.
+  - Hardware: no minimum requirements. SensEar can supply everything (players, speakers) or work with the venue's existing system if it is suitable.
+  - Pricing: customised per venue and zones; an initial agreement, then a yearly recurring fee for renewals. No published price.
+  - Timeline: no more than 2 weeks from the first call to sample playlists; then all agreed playlists, testing and fine-tuning with the client.
+  - Off-limits: none set yet; JEF flags anything on review.
 
 ### T7 — IndexNow ping after each deploy (low) · DROPPED (Cowork pings after each deploy)
 - Add `scripts/indexnow-ping.mjs`: read `out/sitemap.xml` + `out/sitemap-el.xml`, POST the URLs (max 10,000) to `https://api.indexnow.org/IndexNow` with `host: "sensear.music"`, `key: "aa5377a82ff974cd792ee8c680f4c3e0"`, `keyLocation: "https://sensear.music/aa5377a82ff974cd792ee8c680f4c3e0.txt"`.
@@ -125,7 +140,10 @@ Follow the verification gates in `CLAUDE.md` for every code step: `npm run typec
 - `npm run typecheck && npm run lint && npm run build`, then JEF's usual upload of `out/` to `httpdocs`. **Do not delete files in `httpdocs`.**
 - Then tell Claude (Cowork) to: resubmit both sitemaps in Google and Bing, run the IndexNow ping, request indexing for `/el/dorean-axiologisi/`, and verify live.
 
-### T10 — Alt text for content images (low) · ON HOLD: every empty alt is decorative (CTA backgrounds, logo icon in labelled buttons); waiting on JEF
+### T10 — Alt text for content images (low) · CLOSED 30 Oct (option A, JEF)
+- Closed without changes. Every empty alt on the site is decorative: the CTA background images (under an 82–93% dark overlay, already `aria-hidden`) and the logo icon inside CTA links that already have a text label. `alt=""` is the correct markup there, so the Bing warnings stay. They are warnings, not errors.
+- The real weakness, content images whose alt is a section heading ("What we do", "Perfect for"), is fixed page by page with T6.
+- Original task, kept for reference:
 - Give the logo a real alt (e.g. "SensEar") unless its link already has an accessible name; then keep `alt=""` only on the duplicate.
 - Give hero and service images a short descriptive alt, in both languages (dictionary keys in `en.json` and `el.json`).
 - Keep `alt=""` only for purely decorative images.
@@ -152,7 +170,7 @@ Follow the verification gates in `CLAUDE.md` for every code step: `npm run typec
 | Owner | Tasks |
 |---|---|
 | **Claude Code** | T1–T7 above, T8 build, T9, T10 |
-| **Claude (Cowork)** | Weekly read-only SEO check (scheduled task "SensEar weekly SEO check", Tuesdays 09:38 Athens time, phone notification). After each deploy: resubmit sitemaps, IndexNow ping, request indexing for new pages, live verification. Re-run the Bing Site Scan after T10 is deployed. |
+| **Claude (Cowork)** | Weekly read-only SEO check (scheduled task "SensEar weekly SEO check", Tuesdays 09:38 Athens time, phone notification). After each deploy: resubmit sitemaps, IndexNow ping, request indexing for new pages, live verification. No Bing Site Scan re-run for T10 (closed without changes). |
 | **JEF** | Approve deleting `.git/index.lock` and the commits. Decide schema details (no street address; hours; price range). Approve service-page copy. Deploy `out/`. Google Business Profile **"SensEar.Music"** (see section 5; Manager access and profile updates done 30 Oct): ask clients for reviews. Ask Alex for SSL certificates for the 5 alias domains (shared hosting has no Let's Encrypt; reminder set for Mon 2 Nov). Get 3–5 real external links (client sites such as Hera Hotel, Greek hospitality press and directories). |
 
 ---
