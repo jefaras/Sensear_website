@@ -15,7 +15,7 @@ Post-deploy steps are also done: IndexNow ping sent 59 URLs; `/sitemap.xml` and
 `/sitemap-el.xml` resubmitted in Google Search Console and Bing Webmaster Tools; indexing
 requested for `/el/dorean-axiologisi/`.
 
-**Open:** T4, T10, T5 (in that order), then T6 (needs JEF's facts first). T7 is dropped:
+**Open:** T10 (on hold, see T10), T6 (needs JEF's facts first). T4 and T5 done 30 Oct, not yet deployed. T7 is dropped:
 Claude (Cowork) sends the IndexNow ping after each deploy.
 
 | Item | State on 30 Oct (after deploy) |
@@ -105,12 +105,12 @@ Follow the verification gates in `CLAUDE.md` for every code step: `npm run typec
 - Commit as one changeset, e.g. `feat: add the Greek-only free-assessment landing page`.
 - Check after commit: in `out/sitemap-el.xml` its `<lastmod>` is not `2026-07-30T00:00:00.000Z`.
 
-### T4 — Raster share image (medium)
+### T4 — Raster share image (medium) · DONE 30 Oct (`sensear-og-image.jpg`, committed, not yet deployed)
 - Create `public/images/brand/sensear-og-image.jpg` (or `.png`), **1200×630**, from the existing SVG / brand assets.
 - Point `app/layout.tsx` (both `openGraph.images` and `twitter.images`) to it. Check other `openGraph` blocks use raster images: `app/[lang]/blog/[slug]/page.tsx`, `components/industry-detail-v3/industry-page.tsx`, `app/[lang]/dorean-axiologisi/page.tsx`.
 - Check: no page in `out/` has an `.svg` `og:image`.
 
-### T5 — Complete the 3 service H1s (low)
+### T5 — Complete the 3 service H1s (low) · DONE 30 Oct (subtitle moved inside the H1, committed, not yet deployed)
 - Change the 6 dictionary titles in section 1-C so the H1 reads as a full phrase (for example, merge it with the line that follows it). Keep the visual layout. Both languages.
 
 ### T6 — Expand the five English service pages + Greek equivalents (medium, needs JEF)
@@ -125,7 +125,7 @@ Follow the verification gates in `CLAUDE.md` for every code step: `npm run typec
 - `npm run typecheck && npm run lint && npm run build`, then JEF's usual upload of `out/` to `httpdocs`. **Do not delete files in `httpdocs`.**
 - Then tell Claude (Cowork) to: resubmit both sitemaps in Google and Bing, run the IndexNow ping, request indexing for `/el/dorean-axiologisi/`, and verify live.
 
-### T10 — Alt text for content images (low)
+### T10 — Alt text for content images (low) · ON HOLD: every empty alt is decorative (CTA backgrounds, logo icon in labelled buttons); waiting on JEF
 - Give the logo a real alt (e.g. "SensEar") unless its link already has an accessible name; then keep `alt=""` only on the duplicate.
 - Give hero and service images a short descriptive alt, in both languages (dictionary keys in `en.json` and `el.json`).
 - Keep `alt=""` only for purely decorative images.
