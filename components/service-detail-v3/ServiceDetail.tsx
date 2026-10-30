@@ -55,6 +55,11 @@ const GoldDotRows = ({ items }: { items: { title: string; description: string }[
 
 export function ServiceDetail({ lang, content, section5, images, em }: ServiceDetailProps) {
     const localizedPath = (path: string) => getLocalizedPath(lang, path);
+    // A title ending in a colon ("Sonic Identity:") is completed by the subtitle,
+    // so both go inside the H1; it looks the same, but the H1 reads as a full phrase.
+    const subtitleInH1 = content.hero.title.trim().endsWith(':');
+    const heroHeading = subtitleInH1 ? `${content.hero.title} ${content.hero.subtitle}` : content.hero.title;
+    const subtitleClass = 'se-gold-text font-didot mb-[clamp(23px,1.82vw,32px)] text-[clamp(1.5rem,2.4vw,2.1rem)] leading-[1.2]';
 
     return (
         <>
@@ -74,16 +79,27 @@ export function ServiceDetail({ lang, content, section5, images, em }: ServiceDe
                 <div className="mx-auto w-full max-w-[min(1760px,100%)] pl-[clamp(20px,1.59vw,28px)] pr-[clamp(20px,1.59vw,28px)] sm:px-[clamp(27px,2.1vw,37px)] lg:pl-[clamp(70px,5.51vw,97px)]">
                     <div className="grid grid-cols-1 items-center gap-[clamp(40px,3.12vw,55px)] lg:grid-cols-[1.05fr_0.95fr] lg:gap-[clamp(46px,3.64vw,64px)]">
                         <div>
-                            <ScrollReveal delay={0.12}>
-                                <h1 className="mb-[clamp(18px,1.4vw,24px)] text-[clamp(2.65rem,5.29vw,4.72rem)] font-extrabold leading-[1.07] tracking-[-0.022em]">
-                                    {content.hero.title}
-                                </h1>
-                            </ScrollReveal>
-                            <ScrollReveal delay={0.18}>
-                                <p className="se-gold-text font-didot mb-[clamp(23px,1.82vw,32px)] text-[clamp(1.5rem,2.4vw,2.1rem)] leading-[1.2]">
-                                    {content.hero.subtitle}
-                                </p>
-                            </ScrollReveal>
+                            {subtitleInH1 ? (
+                                <ScrollReveal delay={0.12}>
+                                    <h1>
+                                        <span className="mb-[clamp(18px,1.4vw,24px)] block text-[clamp(2.65rem,5.29vw,4.72rem)] font-extrabold leading-[1.07] tracking-[-0.022em]">
+                                            {content.hero.title}
+                                        </span>{' '}
+                                        <span className={`block font-normal ${subtitleClass}`}>{content.hero.subtitle}</span>
+                                    </h1>
+                                </ScrollReveal>
+                            ) : (
+                                <>
+                                    <ScrollReveal delay={0.12}>
+                                        <h1 className="mb-[clamp(18px,1.4vw,24px)] text-[clamp(2.65rem,5.29vw,4.72rem)] font-extrabold leading-[1.07] tracking-[-0.022em]">
+                                            {content.hero.title}
+                                        </h1>
+                                    </ScrollReveal>
+                                    <ScrollReveal delay={0.18}>
+                                        <p className={subtitleClass}>{content.hero.subtitle}</p>
+                                    </ScrollReveal>
+                                </>
+                            )}
                             <ScrollReveal delay={0.24}>
                                 <p className="mb-[clamp(35px,2.73vw,48px)] max-w-[600px] text-[clamp(1.08rem,1.5vw,1.3rem)] leading-[1.6] text-[#faf6f1]/72">
                                     {content.hero.description}
@@ -100,7 +116,7 @@ export function ServiceDetail({ lang, content, section5, images, em }: ServiceDe
                         <ScrollReveal direction="right" delay={0.4}>
                             <div className="relative">
                                 <div className="relative aspect-square overflow-hidden rounded-lg shadow-[0_40px_90px_-30px_rgba(0,0,0,0.8)]">
-                                    <Image src={images.hero} alt={content.hero.title} fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" priority />
+                                    <Image src={images.hero} alt={heroHeading} fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" priority />
                                     <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(11,10,10,0)_48%,rgba(11,10,10,0.55))]" />
                                 </div>
                                 {/* Hero image caption & rotating badge — hidden for now
