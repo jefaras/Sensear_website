@@ -137,6 +137,11 @@ Follow the verification gates in `CLAUDE.md` for every code step: `npm run typec
     the old page; the layout commit `b7c8069` can stay (it renders nothing without the keys). Then
     rebuild `out/` and upload. To undo only the review edits: `git revert 165a660 916127e e9a0282 8e19c91`.
   - Next pages reuse the same blocks: add `case_study` / `process` / `pricing` / `image_alt` keys.
+  - Deployed and verified live by Cowork (30 Oct). Sitemap `lastmod`: the copy lives in the
+    dictionaries, so git dates do not move. `LAST_MODIFIED_OVERRIDES` in `lib/route-lastmod.ts` now has
+    `/services/signature-playlists` = 2026-10-30 (committed, not yet deployed). **Every next T6 page adds
+    its own override in the same commit as its copy.**
+- **Audio Upgrades is next** (JEF, 30 Oct).
 - Target 700–1,000 words of distinct copy per page: a real client scenario, what is delivered, licensing / hardware specifics, how pricing works.
 - Draft only. **JEF must approve all copy** before commit. Use real case studies already on the site (e.g. Hera Hotel); invent nothing.
 - Order: **Signature Playlists first** (JEF, 30 Oct), then the other four. Fix the content images whose alt is a section heading ("What we do", "Perfect for") on each page as part of this task.
