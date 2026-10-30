@@ -1793,7 +1793,7 @@
     "signature_playlists": {
         "meta": {
             "title": "Signature Playlists: daily music for venues",
-            "description": "Signature playlists for venues curated around your concept, guests & daily rhythm. Replace generic background music with rare, handpicked tracks."
+            "description": "Music for every zone of your venue, from opening to closing, chosen by SensEar and played on a platform licensed for business use."
         },
         "hero": {
             "title": "Signature Playlists",
@@ -1806,31 +1806,43 @@
         },
         "intro": {
             "title": "What Signature Playlists are",
-            "p1": "Ongoing curated playlists that follow your venue’s day, <strong>zone by zone</strong>. Rare selections rather than generic background music, scheduled by part of the day and by area, and <strong>managed remotely</strong> with direct support.",
-            "p2": "Refreshed monthly by default, or on whatever rhythm the venue actually needs."
+            "p1": "Signature Playlists are music programmes for your venue, built <strong>zone by zone</strong> and scheduled across the whole day, from opening to closing. We choose every track, and the playlists play on a platform <strong>licensed for business use</strong>.",
+            "p2": "Each zone keeps its own character while the music changes with the hours. We suggest new music every month and a change with each season, so regular guests and your staff are not hearing the same tracks all year."
+        },
+        "case_study": {
+            "kicker": "In practice",
+            "title": "Hera Hotel, Athens",
+            "paragraphs": [
+                "Hera Hotel needed music for three areas with three different jobs: a breakfast lounge that eases guests into the day, a dinner restaurant looking out at the Acropolis, and a reception and lounge that carry the hours in between.",
+                "We built a separate playlist for each zone: light and uplifting at breakfast, more refined at dinner, and discreet enough at reception to accompany the day without asking for attention. Each one follows the time of day. The three share not a single track, yet they sound like one hotel.",
+                "We have run the same approach at Beach House and Yam in Antiparos for the past two years."
+            ],
+            "link_label": "See all case studies",
+            "link": "case-studies"
         },
         "what_we_do": {
-            "title": "What we do",
+            "title": "What's included",
+            "image_alt": "Vinyl records in a clear crate",
             "items": [
                 {
-                    "title": "Your own, unique sound",
-                    "description": "Rare tracks you won't hear on generic playlists, chosen especially for you."
+                    "title": "A playlist for every zone",
+                    "description": "However many zones your venue has, each gets its own playlist, built around what happens there."
                 },
                 {
-                    "title": "Amplify your brand",
-                    "description": "Music designed to echo your aesthetics & tell your brand story"
+                    "title": "Morning to closing",
+                    "description": "Every part of the day is covered, on a schedule that moves the music on as the day changes."
                 },
                 {
-                    "title": "Match your space",
-                    "description": "Tracks arranged to follow your venue's flow, concept & guest profiles."
+                    "title": "Chosen by us, track by track",
+                    "description": "We select every track around your concept, your guests and the pace of each zone, and favour rare finds over the songs heard everywhere."
                 },
                 {
-                    "title": "Keep your vibe fresh",
-                    "description": "Regular updates that keep your sound exciting & recognizable."
+                    "title": "Monthly and seasonal updates",
+                    "description": "We suggest new music every month and a change of direction each season, at a rhythm agreed with you."
                 },
                 {
-                    "title": "Control & support",
-                    "description": "Clear rules, central management & direct access to us when needed."
+                    "title": "Remote management and support",
+                    "description": "We manage the playlists remotely, and you have direct access to us whenever something needs to change."
                 }
             ]
         },
@@ -1862,20 +1874,63 @@
                     "description": "that need engaging but unobtrusive sound.",
                     "link": "industries/music-for-art-museums-and-fashion"
                 }
-            ]
+            ],
+            "image_alt": "Hotel pool terrace with shaded loungers and a sea view"
         },
         "licensed": {
-            "title": "Licensed for business use",
+            "title": "Playback, hardware and licensing",
+            "image_alt": "A black cat among Moog synthesizer modules",
             "items": [
                 {
-                    "title": "Licensed for commercial use",
-                    "description": "The music we supply is licensed for commercial use, so you are not playing from a personal streaming account. Royalties for public performance are paid separately by the venue to the Greek collecting societies, as they are for any business that plays music."
+                    "title": "Licensed for business",
+                    "description": "The playlists play on a third-party platform licensed for use in businesses. Personal Spotify or YouTube accounts are licensed for private listening only."
+                },
+                {
+                    "title": "Offline and on schedule",
+                    "description": "The music keeps playing if the internet connection drops, and every zone runs on its own schedule."
+                },
+                {
+                    "title": "Control for your staff",
+                    "description": "Staff can adjust the volume and other settings, and you decide how much they are allowed to change."
+                },
+                {
+                    "title": "Your equipment or ours",
+                    "description": "There are no minimum requirements. We work with your existing system if it suits the space, or supply everything you need, from players to speakers."
+                },
+                {
+                    "title": "Public-performance fees",
+                    "description": "The venue owner pays the fees for playing music in public to the collecting societies, as any business that plays music does. They are not part of our fee."
                 }
             ]
         },
+        "process": {
+            "title": "From first call to first playlist",
+            "steps": [
+                {
+                    "title": "First call",
+                    "description": "You tell us about your venue, its zones, your opening hours and your guests."
+                },
+                {
+                    "title": "Visit and proposal",
+                    "description": "We visit the space or, if we can't meet in person at the time, go through it in detail with your managers on a video call. A written proposal follows within four days."
+                },
+                {
+                    "title": "Sample playlists",
+                    "description": "Samples arrive no more than two weeks after the first call."
+                },
+                {
+                    "title": "Full playlists and fine-tuning",
+                    "description": "We deliver every agreed playlist, test it with you and adjust it until it fits the space."
+                }
+            ]
+        },
+        "pricing": {
+            "title": "How pricing works",
+            "body": "There is no fixed package, because the price depends on your venue and how many zones it has. The written proposal sets out the scope and the cost. We start with an initial agreement, and the service then renews every year for an annual fee."
+        },
         "cta": {
             "title": "Tell us what your venue's day looks like.",
-            "description": "After a call and a visit to the space, you receive a written proposal within four days.",
+            "description": "We reply within 24 hours, and sample playlists follow within two weeks of the first call.",
             "button": "Start with curated playlists",
             "explore": "Explore how our",
             "sonic_identity": "Sonic Identity",

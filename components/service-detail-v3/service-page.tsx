@@ -25,8 +25,8 @@ export const SERVICE_CONFIG: Record<string, SlugConfig> = {
         section5Key: 'licensed',
         images: { hero: img('signature-playlists', 'hero'), feature: img('signature-playlists', 'curation'), forwhom: img('signature-playlists', 'hotel-room'), section5: img('signature-playlists', 'vinyl-collection') },
         em: {
-            el: { statement: 'ατμόσφαιρα', feature: 'curation', forwhom: 'premium', section5: 'επαγγελματική', cta: 'ήχο' },
-            en: { statement: 'atmosphere', feature: '', forwhom: '', section5: 'business', cta: 'sound' },
+            el: { statement: 'ατμόσφαιρα', feature: '', forwhom: 'premium', section5: 'άδειες', cta: 'ήχο' },
+            en: { statement: 'atmosphere', feature: '', forwhom: '', section5: 'licensing', cta: 'sound' },
         },
     },
     'event-soundtracks': {
