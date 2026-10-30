@@ -1,5 +1,18 @@
 # Google Search Console audit — sensear.music (27 Jul 2026)
 
+> ## ⚠ Status as of 11 Aug 2026 — read `docs/archive/HANDOFF-seo-2026-08-11.md` first
+>
+> The numbers throughout this document are the **27 Jul baseline** and are deliberately left
+> unchanged so the before/after is legible. Current figures, live-verified on 11 Aug:
+>
+> **Indexed 42 → 51 · Not indexed 101 → 97 · Discovered–not-indexed 30 → 19.**
+> **`https://sensear.music/el/` is now INDEXED** (crawled 4 Aug) — the unlock predicted in §2.1
+> happened. Both sitemaps are submitted and reading successfully.
+>
+> Production runs the 30 Jul build and every fix in it is confirmed live. A newer local build
+> (11 Aug) adds a Greek-only page and is **not deployed**. Open items, gotchas and verification
+> commands: **`docs/archive/HANDOFF-seo-2026-08-11.md`**.
+
 > ## Change log — 30 Jul 2026
 >
 > **Shipped in this repo (not yet deployed):**
@@ -36,7 +49,7 @@
 > **wrong** — Greek internal linking is strong. See §2.1 for the corrected Greek diagnosis.
 
 Property: `https://sensear.music/` (URL-prefix). Sitemap: `/sitemap.xml`, 58 URLs, last read 17 Jul 2026.
-**Indexed 42 · Not indexed 101.**
+**Indexed 42 · Not indexed 101.** *(27 Jul baseline — as of 11 Aug: 51 indexed, 97 not. See banner.)*
 
 ---
 
@@ -110,8 +123,11 @@ Re-measured 30 Jul against the current build (median across all 58 pages: **408 
 | Homepage (en / el) | 492 / 587 | 489 / 559 |
 | Blog posts | 392–966 | 395–917 |
 
-The FAQ rewrite worked. **The service pages are still the weak spot** — five pages at 267–360 words
-reading off the same template. On a ~5-month-old domain with little external authority,
+The FAQ rewrite worked. **The service pages are still the weak spot.** Note the 267–360 range above
+spans both locales; measured separately on 11 Aug, the five **English** service pages run
+**266–291 words** (`/services/` 282, event-soundtracks 266, signature-playlists 285, audio-upgrades
+287, sonic-identity 291) and the Greek equivalents 310–360 — all off the same template. On a
+~5-month-old domain with little external authority,
 this is the standard profile for "Crawled/Discovered – currently not indexed": Google fetched it,
 judged it not worth an index slot, and deprioritised the rest of the section.
 
@@ -222,7 +238,7 @@ In order of leverage:
 
 ### Also worth doing — content
 
-15. **Expand the five service pages.** Still 267–360 words off a shared template (§2.2). Target
+15. **Expand the five service pages.** Still 266–291 words in English off a shared template (§2.2). Target
     700–1,000 words of distinct copy each: a real client scenario, what's actually delivered,
     licensing/hardware specifics, pricing framing. This is the remaining on-page weak spot and the
     likeliest reason `/services/` and `/services/audio-upgrades/` show as duplicates.
@@ -233,13 +249,28 @@ In order of leverage:
 ## 4. Realistic expectation
 
 - "Not indexed" will stay near 100 (the 53 legacy URLs are permanent) — **stop tracking that number**.
-- **Track instead:** indexed count (42 today) and Sitemap → "Discovered pages vs indexed".
-  Target 55+ of 58 sitemap URLs indexed.
+- **Track instead:** indexed count (42 on 27 Jul; **51 on 11 Aug**) and Sitemap → "Discovered pages
+  vs indexed". Target 55+ of 58 sitemap URLs indexed (59 once the Greek-only page ships).
 - Once `/el/` is re-crawled and indexed, the rest of the Greek section typically follows over
   2–6 weeks — Google crawls outward from an indexed entry point, and the internal graph is already
   in place to carry it.
 - If `/el/` is re-crawled and *still* declined, the problem is site-level authority (item 14), not
   anything on the page. That's the signal to stop optimising and start earning links.
+
+### Scored against reality, 11 Aug 2026 (12 days later)
+
+| Prediction (27–30 Jul) | Outcome | |
+|---|---|---|
+| "Not indexed" stays near 100 | 101 → 97 | ✅ as predicted — don't chase it |
+| Indexed count rises | 42 → **51** | ✅ |
+| `/el/` gets re-crawled and indexed | **indexed, crawled 4 Aug** | ✅ the unlock landed |
+| Greek section follows over 2–6 weeks | Discovered–not-indexed 30 → **19** | ✅ in progress, ~2 weeks in |
+| "Page with redirect" keeps climbing, ignore it | 37 → 46 | ✅ noise, as called |
+
+What has **not** moved: "Crawled – currently not indexed" is flat at 13, and all 8 Greek blog posts
+are still `Last crawled = N/A`. Both point at the same two unfinished items — **content depth on the
+thin pages (item 15) and external links (item 14)**. The technical work is done; those two are what
+is left.
 
 ---
 

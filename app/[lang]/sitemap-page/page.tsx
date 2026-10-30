@@ -29,7 +29,7 @@ type SitemapDictionary = Awaited<ReturnType<typeof getDictionary>>;
  * reasons — before it, the only crawlable link from an English page into the
  * Greek site was the single hreflang language switcher, which left `/el/*`
  * effectively reachable only via the XML sitemap. See
- * docs/seo-gsc-audit-2026-07-27.md §2.1.
+ * docs/archive/seo-gsc-audit-2026-07-27.md §2.1.
  */
 function buildSitemapSections(dict: SitemapDictionary, lang: Locale) {
     const content = dict.sitemap_page;
