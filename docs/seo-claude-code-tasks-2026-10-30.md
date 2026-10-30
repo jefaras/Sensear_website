@@ -128,9 +128,11 @@ Follow the verification gates in `CLAUDE.md` for every code step: `npm run typec
   - JEF's review edits, 30 Oct (`8e19c91`): Hera text under the title with the Hera photo on the right;
     bold key phrases; "amongst many others" after Beach House and Yam; pricing opens with what the
     service is built around; the licensing photo gets the tall frame when its section has a full list.
-  - **Rollback** (JEF asked to be ready): `git revert 8e19c91 c92c1c5` restores the old page; the layout
-    commit `b7c8069` can stay (it renders nothing without the keys). Then rebuild `out/` and upload. To
-    undo only the review edits: `git revert 8e19c91`.
+  - Second round, 30 Oct (`e9a0282`): bold phrases in the pricing paragraph; on pages with a case band
+    the section divider sits above "What's included" instead of above "Perfect for".
+  - **Rollback** (JEF asked to be ready): `git revert e9a0282 8e19c91 c92c1c5` restores the old page; the
+    layout commit `b7c8069` can stay (it renders nothing without the keys). Then rebuild `out/` and
+    upload. To undo only the review edits: `git revert e9a0282 8e19c91`.
   - Next pages reuse the same blocks: add `case_study` / `process` / `pricing` / `image_alt` keys.
 - Target 700–1,000 words of distinct copy per page: a real client scenario, what is delivered, licensing / hardware specifics, how pricing works.
 - Draft only. **JEF must approve all copy** before commit. Use real case studies already on the site (e.g. Hera Hotel); invent nothing.
