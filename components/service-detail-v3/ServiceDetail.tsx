@@ -25,7 +25,7 @@ interface ServiceContent {
     what_we_do: { title: string; items: { title: string; description: string }[]; image_alt?: string };
     perfect_for: { title: string; items: { title: string; description: string; link: string }[]; image_alt?: string };
     // Optional blocks: a page shows them only once its dictionary has them (T6, page by page).
-    case_study?: { kicker: string; title: string; paragraphs: string[]; link_label: string; link: string; image_alt: string };
+    case_study?: { kicker: string; title: string; paragraphs: string[]; link_label?: string; link?: string; image_alt?: string };
     process?: { title: string; steps: { title: string; description: string }[] };
     pricing?: { title: string; body: string };
     cta: { title: string; description: string; button: string; location: string };
@@ -65,6 +65,37 @@ export function ServiceDetail({ lang, content, section5, images, em }: ServiceDe
     const subtitleInH1 = content.hero.title.trim().endsWith(':');
     const heroHeading = subtitleInH1 ? `${content.hero.title} ${content.hero.subtitle}` : content.hero.title;
     const section5Tall = Array.isArray(section5.items) && section5.items.length > 2;
+
+    // Case band pieces (2b), arranged below with or without a photo.
+    const caseStudy = content.case_study;
+    const caseHeader = caseStudy && (
+        <ScrollReveal delay={0.06}>
+            <p className="se-gold-text font-didot mb-[clamp(10px,0.8vw,14px)] text-[clamp(1.29rem,1.46vw,1.61rem)]">{caseStudy.kicker}</p>
+            <h2 className={`text-[clamp(2rem,3.6vw,3rem)] font-extrabold leading-[1.1] tracking-[-0.02em] ${images.case ? 'mb-[clamp(28px,2.22vw,39px)]' : ''}`}>{caseStudy.title}</h2>
+        </ScrollReveal>
+    );
+    const caseBody = caseStudy && (
+        <>
+            {caseStudy.paragraphs.map((paragraph, i) => (
+                <ScrollReveal key={i} delay={0.12 + i * 0.06}>
+                    <p
+                        className="se-html mb-[clamp(15px,1.19vw,21px)] max-w-[680px] text-[clamp(1.03rem,1.17vw,1.29rem)] leading-[1.65] text-[#faf6f1]/66"
+                        dangerouslySetInnerHTML={{ __html: paragraph }}
+                    />
+                </ScrollReveal>
+            ))}
+            {caseStudy.link && caseStudy.link_label && (
+                <ScrollReveal delay={0.3}>
+                    <Link
+                        href={localizedPath(`/${caseStudy.link}`)}
+                        className="mt-[clamp(8px,0.6vw,11px)] inline-flex items-center gap-[9px] border-b border-[#faf6f1]/25 pb-[3px] text-[clamp(13px,0.92vw,16px)] font-semibold text-[#faf6f1]/70 no-underline transition-colors hover:text-[#faf6f1]"
+                    >
+                        {caseStudy.link_label}
+                    </Link>
+                </ScrollReveal>
+            )}
+        </>
+    );
     const subtitleClass = 'se-gold-text font-didot mb-[clamp(23px,1.82vw,32px)] text-[clamp(1.5rem,2.4vw,2.1rem)] leading-[1.2]';
 
     return (
@@ -166,36 +197,27 @@ export function ServiceDetail({ lang, content, section5, images, em }: ServiceDe
             {content.case_study && (
                 <section className="relative overflow-hidden bg-[#0e0d0c] py-[clamp(101px,7.95vw,140px)]">
                     <div className="relative z-10 mx-auto max-w-[min(1760px,100%)] px-[clamp(20px,1.59vw,28px)] sm:px-[clamp(27px,2.1vw,37px)]">
-                        <div className="grid grid-cols-1 items-center gap-[clamp(53px,4.2vw,74px)] lg:grid-cols-[1.05fr_0.95fr]">
-                            <div>
-                                <ScrollReveal delay={0.06}>
-                                    <p className="se-gold-text font-didot mb-[clamp(10px,0.8vw,14px)] text-[clamp(1.29rem,1.46vw,1.61rem)]">{content.case_study.kicker}</p>
-                                    <h2 className="mb-[clamp(28px,2.22vw,39px)] text-[clamp(2rem,3.6vw,3rem)] font-extrabold leading-[1.1] tracking-[-0.02em]">{content.case_study.title}</h2>
-                                </ScrollReveal>
-                                {content.case_study.paragraphs.map((paragraph, i) => (
-                                    <ScrollReveal key={i} delay={0.12 + i * 0.06}>
-                                        <p
-                                            className="se-html mb-[clamp(15px,1.19vw,21px)] max-w-[680px] text-[clamp(1.03rem,1.17vw,1.29rem)] leading-[1.65] text-[#faf6f1]/66"
-                                            dangerouslySetInnerHTML={{ __html: paragraph }}
-                                        />
-                                    </ScrollReveal>
-                                ))}
-                                <ScrollReveal delay={0.3}>
-                                    <Link
-                                        href={localizedPath(`/${content.case_study.link}`)}
-                                        className="mt-[clamp(8px,0.6vw,11px)] inline-flex items-center gap-[9px] border-b border-[#faf6f1]/25 pb-[3px] text-[clamp(13px,0.92vw,16px)] font-semibold text-[#faf6f1]/70 no-underline transition-colors hover:text-[#faf6f1]"
-                                    >
-                                        {content.case_study.link_label}
-                                    </Link>
-                                </ScrollReveal>
-                            </div>
-                            {images.case && (
-                                <ScrollReveal direction="right">
-                                    <div className="relative aspect-[4/4.6] overflow-hidden rounded-lg">
-                                        <Image src={images.case} alt={content.case_study.image_alt} fill sizes="(max-width: 1024px) 100vw, 46vw" className="object-cover" />
-                                        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(11,10,10,0)_55%,rgba(11,10,10,0.5))]" />
+                        {/* With a photo: text left, photo right. Without one (e.g. a client who cannot
+                            be named yet): title left, text right. */}
+                        <div className={`grid grid-cols-1 items-center gap-[clamp(53px,4.2vw,74px)] ${images.case ? 'lg:grid-cols-[1.05fr_0.95fr]' : 'lg:grid-cols-[0.95fr_1.05fr] lg:items-start'}`}>
+                            {images.case ? (
+                                <>
+                                    <div>
+                                        {caseHeader}
+                                        {caseBody}
                                     </div>
-                                </ScrollReveal>
+                                    <ScrollReveal direction="right">
+                                        <div className="relative aspect-[4/4.6] overflow-hidden rounded-lg">
+                                            <Image src={images.case} alt={content.case_study.image_alt ?? content.case_study.title} fill sizes="(max-width: 1024px) 100vw, 46vw" className="object-cover" />
+                                            <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(11,10,10,0)_55%,rgba(11,10,10,0.5))]" />
+                                        </div>
+                                    </ScrollReveal>
+                                </>
+                            ) : (
+                                <>
+                                    <div>{caseHeader}</div>
+                                    <div>{caseBody}</div>
+                                </>
                             )}
                         </div>
                     </div>
