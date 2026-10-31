@@ -288,7 +288,7 @@
             "items": [
                 {
                     "question": "How does your music curation service work?",
-                    "answer": "We start with a call and a visit to understand your brand, your space and your audience. Then we recommend the service that fits and, after the visit, send a written proposal within four days."
+                    "answer": "We start with a call and a visit to understand your brand, your space and your audience. Then we recommend the service that fits and, after the visit, send a written proposal, usually within 7 to 10 days."
                 },
                 {
                     "question": "What types of venues do you work with?",
@@ -1913,7 +1913,7 @@
                 },
                 {
                     "title": "Visit and proposal",
-                    "description": "We visit the space or, if we can't meet in person at the time, go through it in detail with your managers on a video call. A written proposal follows within four days."
+                    "description": "We visit the space or, if we can't meet in person at the time, go through it in detail with your managers on a video call. A written proposal usually follows within 7 to 10 days."
                 },
                 {
                     "title": "Sample playlists",
@@ -2021,7 +2021,7 @@
         },
         "cta": {
             "title": "Tell us your date and your run of show.",
-            "description": "After a call and a visit to the space, you receive a written proposal within four days.",
+            "description": "After a call and a visit to the space, you usually receive a written proposal within 7 to 10 days.",
             "button": "Book an event music briefing",
             "explore": "Explore how our",
             "signature_playlists": "Signature Playlists",
@@ -2112,7 +2112,7 @@
         },
         "cta": {
             "title": "Tell us where your brand needs to sound the same.",
-            "description": "After a call and a visit to the space, you receive a written proposal within four days.",
+            "description": "After a call and a visit to the space, you usually receive a written proposal within 7 to 10 days.",
             "button": "Define your brand's sonic DNA",
             "explore": "Explore how our",
             "signature_playlists": "Signature Playlists",
@@ -2203,7 +2203,7 @@
         },
         "cta": {
             "title": "Tell us which room is not working.",
-            "description": "After a call and a visit to the space, you receive a written proposal within four days.",
+            "description": "After a call and a visit to the space, you usually receive a written proposal within 7 to 10 days.",
             "button": "Book an acoustic assessment",
             "pair_with": "Pair with our",
             "signature_playlists": "Signature Playlists",
