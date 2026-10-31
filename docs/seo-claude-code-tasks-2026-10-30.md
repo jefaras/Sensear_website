@@ -20,10 +20,10 @@ requested for `/el/dorean-axiologisi/`.
 **Deployed and verified live by Cowork (third upload):** Facebook page in the schema `sameAs`; JPG share
 image for the blog post `building-brand-people-can-hear` (its page image is WebP); T6 Signature Playlists.
 
-**Committed, not yet deployed:** sitemap `lastmod` override for Signature Playlists; the "four days" proposal promise corrected to "usually within 7 to 10 days" on five pages, both languages (see T6).
+**Committed, not yet deployed:** sitemap `lastmod` override for Signature Playlists; the "four days" proposal promise corrected to "usually within 7 to 10 days" on five pages, both languages; T6 Audio Upgrades; the mirrored zig-zag on Signature Playlists and Audio Upgrades (see T6).
 
-**Open:** T6 (Signature Playlists done; Audio Upgrades draft awaiting approval; Event Soundtracks, Sonic
-Identity and the services hub after it). T11 after T6 (low).
+**Open:** T6 (Signature Playlists and Audio Upgrades done; Event Soundtracks, Sonic Identity and the
+services hub next). T11 after T6 (low).
 **Closed:** T10 (option A, see T10). T7 is dropped: Claude (Cowork) sends the IndexNow ping after each deploy.
 
 | Item | State on 30 Oct (after deploy) |
@@ -121,7 +121,7 @@ Follow the verification gates in `CLAUDE.md` for every code step: `npm run typec
 ### T5 — Complete the 3 service H1s (low) · DONE 30 Oct (subtitle moved inside the H1, deployed and verified live)
 - Change the 6 dictionary titles in section 1-C so the H1 reads as a full phrase (for example, merge it with the line that follows it). Keep the visual layout. Both languages.
 
-### T6 — Expand the five English service pages + Greek equivalents (medium, needs JEF) · Signature Playlists DONE 30 Oct (committed, not yet deployed)
+### T6 — Expand the five English service pages + Greek equivalents (medium, needs JEF) · Signature Playlists DONE 30 Oct (live) · Audio Upgrades DONE 31 Oct (committed, not yet deployed)
 - **Signature Playlists, 30 Oct:** copy approved by JEF and committed in two parts. `b7c8069` adds optional
   blocks to the shared service layout (case, process, pricing, `image_alt`); pages without those keys are
   unchanged. `c92c1c5` is the copy itself (EN + EL), about 675 / 740 words of main content, up from 247.
@@ -144,8 +144,17 @@ Follow the verification gates in `CLAUDE.md` for every code step: `npm run typec
     dictionaries, so git dates do not move. `LAST_MODIFIED_OVERRIDES` in `lib/route-lastmod.ts` now has
     `/services/signature-playlists` = 2026-10-30 (committed, not yet deployed). **Every next T6 page adds
     its own override in the same commit as its copy.**
-- **Audio Upgrades is next** (JEF, 30 Oct). Draft written 31 Oct (`docs/drafts/audio-upgrades-copy-draft.md`,
-  not committed), awaiting approval. JEF's facts (31 Oct), the only facts to use:
+- **Layout, 31 Oct (`78985e1`, JEF):** on pages with a case band (Signature Playlists, Audio Upgrades)
+  the zig-zag starts from the left: case photo left, then "What's included" photo right, "Perfect for"
+  photo left, section 5 photo right. Desktop only; phones keep the same order. "Perfect for" items
+  with no industry page are plain text instead of linking to the home page (also on Sonic Identity).
+- **Audio Upgrades, 31 Oct:** copy approved by JEF and committed (`0a28d05`, EN + EL, about 635 / 700
+  words, up from 252), with the case photo `audio-upgrades-case-ear.webp` (JEF's choice; the wrench
+  photo was tried on the Greek page and dropped) and the sitemap override 2026-10-31. Layout for a case
+  without a photo or link: `180f127` (only the optional link is used today).
+  - **Rollback:** `git revert 0a28d05` restores the old Audio Upgrades page; then rebuild `out/` and
+    upload. `git revert 78985e1` undoes the mirrored zig-zag on both pages.
+- Audio Upgrades facts. JEF's facts (31 Oct), the only facts to use:
   - Client example: one client, **not authorised to be named**; the venue is a bar. Sound escaped to the neighbours upstairs
     and outside; the client wanted a warmer, clearer sound with more bass for dance and lounge/mid-tempo
     music, and easy conversation even at high volume. SensEar visited with partners in sound measurement,
