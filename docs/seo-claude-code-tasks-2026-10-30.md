@@ -179,6 +179,23 @@ Follow the verification gates in `CLAUDE.md` for every code step: `npm run typec
     Upgrades closing lines, in both languages. **Fixed 31 Oct (`b12475f`, approved by JEF):** all ten
     lines now say the proposal usually arrives within 7 to 10 days. Committed, not yet deployed. The
     Audio Upgrades closing line changes again with its T6 copy.
+- **Event Soundtracks is next** (JEF, 31 Oct). Draft written 31 Oct (`docs/drafts/event-soundtracks-copy-draft.md`,
+  not committed), awaiting approval. JEF's facts (31 Oct), the only facts to use:
+  - Case: Levantis restaurant, Paros, may be named (already a case study: Neva Bergman's exhibition
+    opening "Quiet Testimony"). About 100 guests; the night went very smoothly and the organiser was very
+    satisfied with how the music tied in with the exhibition.
+  - Event types: all of them: private events, weddings, parties, business dinners and parties, launches,
+    corporate events.
+  - DJs: SensEar's own DJs, George (Yorgos) and Katerina; a partner DJ when more suitable or when they
+    are booked.
+  - On the day: someone from SensEar on site for the whole event when needed. SensEar brings the sound
+    system and DJ equipment, or uses the venue's.
+  - Licensing: the venue or the organiser always pays the public-performance fees.
+  - Pricing: a fee per event, driven by hours, DJ, equipment and any special arrangement. A deposit is
+    required. The venue visit before the offer is free.
+  - Timing: contact SensEar as soon as the event is decided. Last minute only if available and it can be
+    done properly without risking SensEar's reputation.
+  - The client approves the playlist or the type of music before the event.
 - Target 700–1,000 words of distinct copy per page: a real client scenario, what is delivered, licensing / hardware specifics, how pricing works.
 - Draft only. **JEF must approve all copy** before commit. Use real case studies already on the site (e.g. Hera Hotel); invent nothing.
 - Order: **Signature Playlists first** (JEF, 30 Oct), then the other four. Fix the content images whose alt is a section heading ("What we do", "Perfect for") on each page as part of this task.
