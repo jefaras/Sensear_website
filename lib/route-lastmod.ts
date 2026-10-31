@@ -37,6 +37,7 @@ const FALLBACK_LAST_MODIFIED = '2026-07-30T00:00:00.000Z'
 const LAST_MODIFIED_OVERRIDES: Record<string, string> = {
     // T6 service-page rewrites (copy in the dictionaries). Add each page here in its own T6 commit.
     '/services/signature-playlists': '2026-10-30T00:00:00.000Z',
+    '/services/audio-upgrades': '2026-10-31T00:00:00.000Z',
 }
 
 const BLOG_POST_PREFIX = '/blog/'

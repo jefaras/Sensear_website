@@ -2124,43 +2124,58 @@
     "audio_upgrades": {
         "meta": {
             "title": "Audio upgrades and acoustic assessment for venues",
-            "description": "Venue audio upgrades with acoustic assessment, AV proposals & system tuning for clear, balanced sound. Explore the right setup for your space."
+            "description": "Sound system and room acoustics for venues: an on-site assessment with our partners, one quote, installation and final tuning, all managed by SensEar."
         },
         "hero": {
             "title": "Audio Upgrades:",
             "subtitle": "Clear, balanced sound for your space.",
-            "description": "Optimization designed to support atmosphere & conversations.",
+            "description": "Your sound system and the room it plays in, from the first measurement to the final tuning, with all the work managed by us.",
             "side_label": "SERVICES — AUDIO UPGRADES",
             "explore_cta": "Explore the service",
             "image_kicker": "AUDIO CLARITY",
             "image_caption": "Sound, perfected."
         },
         "intro": {
-            "title": "Acoustic assessment for a room that carries music",
-            "p1": "We walk the space, listen from the seats your guests actually use, and test the system you already have. You get a written proposal of what needs to change, coordination with the specialist partners who carry out the work, then <strong>tuning</strong> of the result and a short <strong>training session</strong> for your team.",
-            "p2": "Installation and any engineering study are carried out by specialist partners. We define the requirement, coordinate the work and tune what is installed."
+            "title": "What Audio Upgrades cover",
+            "p1": "<strong>Audio Upgrades</strong> cover both the <strong>sound system</strong> and <strong>your venue</strong> itself. We start by listening to your specific problems and needs, and we write them down carefully. Then we visit with our partners in sound measurement, sound isolation and soundproofing, test what you already have and propose what needs to change.",
+            "p2": "Our partners supply the equipment and carry out the installation and acoustic work. We arrange every visit, supervise the work and run the final tuning, so you deal with <strong>one team</strong> and receive <strong>one invoice</strong>."
+        },
+        "case_study": {
+            "kicker": "In practice",
+            "title": "Music for the bar, quiet for the neighbours",
+            "paragraphs": [
+                "In a bar in the centre of Athens, the music <strong>carried up to the neighbours</strong> on the floor above and out onto the street. The client also wanted a <strong>warmer, clearer sound with more bass</strong>, one that suits dance music as well as lounge and mid-tempo tracks, and lets guests <strong>talk easily even at high volume</strong>.",
+                "We visited with our partners in sound measurement, sound isolation and soundproofing, who ran their tests on site. The visit and the assessment were <strong>free</strong>.",
+                "The work is finished. The sound is now <strong>warmer and crystal clear</strong>, and it <strong>no longer disturbs the neighbours</strong> upstairs or the area around the bar."
+            ],
+            "image_alt": "Close-up of an ear wearing a sculpted silver earring"
         },
         "what_we_do": {
-            "title": "What an acoustic assessment covers",
+            "title": "What's included",
             "subtitle": "Professional audio assessment and implementation",
             "items": [
                 {
-                    "title": "On-site acoustic assessment",
-                    "description": "We walk the space, listen from key seats and test your setup to identify gaps & issues."
+                    "title": "On-site assessment",
+                    "description": "We come with our measurement and acoustics partners, listen from the places your guests sit and test the system you already have."
                 },
                 {
-                    "title": "Tailored AV proposals",
-                    "description": "Clear plan for speakers, zones and control that fits your layout, budget & aesthetic."
+                    "title": "Sound system",
+                    "description": "Speakers, amplification, zones and control, chosen for your layout, your budget and the look of the room."
                 },
                 {
-                    "title": "Coordinated installation",
-                    "description": "We manage equipment sourcing & installation with AV partners, so you avoid multiple suppliers."
+                    "title": "Room acoustics and sound isolation",
+                    "description": "Acoustic treatment for clearer sound and easier conversation, and sound isolation to keep music from reaching neighbours and the street, carried out by acousticians we work with."
                 },
                 {
-                    "title": "System tuning & training",
-                    "description": "Calibration under live conditions plus guidance, so your team runs it confidently day to day."
+                    "title": "One team, one invoice",
+                    "description": "We arrange every visit between the technicians and your manager, and you receive a single invoice for the whole project. Our partners come to us for anything they need."
+                },
+                {
+                    "title": "Tuning and training",
+                    "description": "We lead the measurements, tests and final tuning, working with technicians under our supervision, then show your staff the controls they will use. That usually takes little time."
                 }
-            ]
+            ],
+            "image_alt": "Loudspeakers of several sizes stacked against a wall"
         },
         "perfect_for": {
             "title": "Perfect for",
@@ -2189,21 +2204,65 @@
                     "title": "Venues",
                     "description": "that invested in interiors but feel sound lowers the experience.",
                     "link": ""
+                },
+                {
+                    "title": "Venues with neighbours",
+                    "description": "where music must not travel upstairs or onto the street.",
+                    "link": ""
+                }
+            ],
+            "image_alt": "Red-lit lounge with record shelves and wall-mounted speakers"
+        },
+        "clarity": {
+            "title": "What we fix",
+            "image_alt": "A stack of vintage hi-fi amplifiers and a cassette deck",
+            "items": [
+                {
+                    "title": "Music the neighbours can hear",
+                    "description": "Sound isolation where music reaches the neighbours or the street."
+                },
+                {
+                    "title": "Talking over the music",
+                    "description": "Coverage and acoustic treatment that keep conversation easy, even with the volume up."
+                },
+                {
+                    "title": "Thin or harsh sound",
+                    "description": "A warmer, clearer sound with the bass the music needs, from lounge to dance tracks."
+                },
+                {
+                    "title": "Dead corners and loud spots",
+                    "description": "Even coverage across the room, with no areas where the sound drops away or gets too loud near the speakers."
                 }
             ]
         },
-        "clarity": {
-            "title": "Designed for clarity",
-            "items": [
+        "process": {
+            "title": "From first visit to final tuning",
+            "steps": [
                 {
-                    "title": "Balanced coverage, not just volume",
-                    "description": "Guests talk comfortably, move naturally through spaces & remember atmosphere instead of loudness."
+                    "title": "Call and visit",
+                    "description": "You tell us what is not working, then we visit with our partners, who measure and test on site."
+                },
+                {
+                    "title": "Proposal and quote",
+                    "description": "You receive one written proposal and one quote for the whole project, usually within 7 to 10 days."
+                },
+                {
+                    "title": "Installation and acoustic work",
+                    "description": "Our partners supply the equipment and do the work while we arrange the visits and supervise. The schedule depends on the scope and is agreed with you."
+                },
+                {
+                    "title": "Tuning and handover",
+                    "description": "We run the final measurements and tuning, then show your staff the controls."
                 }
             ]
+        },
+        "pricing": {
+            "title": "How pricing works",
+            "body": "Every project is quoted <strong>for your venue alone</strong>, based on the scope of the work and your budget. You receive <strong>one quote and one invoice</strong> for everything: equipment, installation, acoustic work and tuning. It is a <strong>one-time fee</strong>, and the <strong>equipment is yours</strong>: we do not lease. A recurring fee applies only if you add a maintenance or technical support subscription that the equipment price does not already include. The on-site assessment is normally free; only for very large projects is it charged as well."
         },
         "cta": {
             "title": "Tell us which room is not working.",
-            "description": "After a call and a visit to the space, you usually receive a written proposal within 7 to 10 days.",
+            "description": "The first visit and the assessment are normally free.",
             "button": "Book an acoustic assessment",
             "pair_with": "Pair with our",
             "signature_playlists": "Signature Playlists",

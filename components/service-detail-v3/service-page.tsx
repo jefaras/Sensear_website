@@ -56,10 +56,16 @@ export const SERVICE_CONFIG: Record<string, SlugConfig> = {
     'audio-upgrades': {
         ns: 'audio_upgrades',
         section5Key: 'clarity',
-        images: { hero: img('audio-upgrades', 'hero'), feature: img('audio-upgrades', 'assessment'), forwhom: img('audio-upgrades', 'venue'), section5: img('audio-upgrades', 'clarity') },
+        images: {
+            hero: img('audio-upgrades', 'hero'),
+            feature: img('audio-upgrades', 'assessment'),
+            forwhom: img('audio-upgrades', 'venue'),
+            section5: img('audio-upgrades', 'clarity'),
+            case: '/images/services/audio-upgrades/audio-upgrades-case-ear.webp',
+        },
         em: {
-            el: { statement: 'φιλόξενη', feature: 'αναβάθμισης', forwhom: 'χώρους', section5: 'καθαρότητα', cta: 'ήχο' },
-            en: { statement: 'atmosphere', feature: '', forwhom: '', section5: 'clarity', cta: 'sound' },
+            el: { statement: 'φιλόξενη', feature: '', forwhom: 'χώρους', section5: 'διορθώνουμε', cta: 'ήχο' },
+            en: { statement: 'atmosphere', feature: '', forwhom: '', section5: 'fix', cta: 'sound' },
         },
     },
 };
