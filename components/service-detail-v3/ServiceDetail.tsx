@@ -68,6 +68,9 @@ export function ServiceDetail({ lang, content, section5, images, em }: ServiceDe
 
     // Case band pieces (2b), arranged below with or without a photo.
     const caseStudy = content.case_study;
+    // Pages with a case band run the zig-zag from the other side: case photo left, then right,
+    // left, right for sections 3 to 5. Only desktop columns swap; phones keep the source order.
+    const flip = Boolean(caseStudy);
     const caseHeader = caseStudy && (
         <ScrollReveal delay={0.06}>
             <p className="se-gold-text font-didot mb-[clamp(10px,0.8vw,14px)] text-[clamp(1.29rem,1.46vw,1.61rem)]">{caseStudy.kicker}</p>
@@ -197,16 +200,16 @@ export function ServiceDetail({ lang, content, section5, images, em }: ServiceDe
             {content.case_study && (
                 <section className="relative overflow-hidden bg-[#0e0d0c] py-[clamp(101px,7.95vw,140px)]">
                     <div className="relative z-10 mx-auto max-w-[min(1760px,100%)] px-[clamp(20px,1.59vw,28px)] sm:px-[clamp(27px,2.1vw,37px)]">
-                        {/* With a photo: text left, photo right. Without one (e.g. a client who cannot
-                            be named yet): title left, text right. */}
-                        <div className={`grid grid-cols-1 items-center gap-[clamp(53px,4.2vw,74px)] ${images.case ? 'lg:grid-cols-[1.05fr_0.95fr]' : 'lg:grid-cols-[0.95fr_1.05fr] lg:items-start'}`}>
+                        {/* With a photo: photo left, text right (text first on phones). Without one
+                            (e.g. a client who cannot be named yet): title left, text right. */}
+                        <div className="grid grid-cols-1 items-center gap-[clamp(53px,4.2vw,74px)] lg:grid-cols-[0.95fr_1.05fr]">
                             {images.case ? (
                                 <>
-                                    <div>
+                                    <div className="lg:order-2">
                                         {caseHeader}
                                         {caseBody}
                                     </div>
-                                    <ScrollReveal direction="right">
+                                    <ScrollReveal direction="left" className="lg:order-1">
                                         <div className="relative aspect-[4/4.6] overflow-hidden rounded-lg">
                                             <Image src={images.case} alt={content.case_study.image_alt ?? content.case_study.title} fill sizes="(max-width: 1024px) 100vw, 46vw" className="object-cover" />
                                             <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(11,10,10,0)_55%,rgba(11,10,10,0.5))]" />
@@ -224,8 +227,8 @@ export function ServiceDetail({ lang, content, section5, images, em }: ServiceDe
                 </section>
             )}
 
-            {/* 3. Feature list (what_we_do): image left. With a case band above, the divider
-                sits here, between the case and the service lists, instead of above section 4. */}
+            {/* 3. Feature list (what_we_do): image left (right when flipped). With a case band above,
+                the divider sits here, between the case and the service lists, instead of above section 4. */}
             <section className={`relative overflow-hidden py-[clamp(108px,8.52vw,150px)] pb-[clamp(94px,7.39vw,130px)] ${content.case_study ? 'border-t border-[#faf6f1]/8' : ''}`}>
                 <DriftOrb
                     className="h-[46vw] max-h-[640px] w-[46vw] max-w-[640px]"
@@ -233,8 +236,8 @@ export function ServiceDetail({ lang, content, section5, images, em }: ServiceDe
                     duration={23}
                 />
                 <div className="relative z-10 mx-auto max-w-[min(1760px,100%)] px-[clamp(20px,1.59vw,28px)] sm:px-[clamp(27px,2.1vw,37px)]">
-                    <div className="grid grid-cols-1 items-center gap-[clamp(53px,4.2vw,74px)] lg:grid-cols-[0.95fr_1.05fr]">
-                        <ScrollReveal direction="left">
+                    <div className={`grid grid-cols-1 items-center gap-[clamp(53px,4.2vw,74px)] ${flip ? 'lg:grid-cols-[1.05fr_0.95fr]' : 'lg:grid-cols-[0.95fr_1.05fr]'}`}>
+                        <ScrollReveal direction={flip ? 'right' : 'left'} className={flip ? 'lg:order-2' : undefined}>
                             <div className="relative aspect-[4/4.4] overflow-hidden rounded-lg">
                                 <Image src={images.feature} alt={content.what_we_do.image_alt ?? content.what_we_do.title} fill sizes="(max-width: 1024px) 100vw, 46vw" className="object-cover" />
                                 <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(11,10,10,0)_55%,rgba(11,10,10,0.5))]" />
@@ -252,8 +255,8 @@ export function ServiceDetail({ lang, content, section5, images, em }: ServiceDe
                 </div>
             </section>
 
-            {/* 4. For whom (perfect_for): text left, image right. With a case band, sections 3 and 4
-                share the page colour so nothing splits the two lists. */}
+            {/* 4. For whom (perfect_for): text left, image right (swapped when flipped). With a case
+                band, sections 3 and 4 share the page colour so nothing splits the two lists. */}
             <section className={`relative overflow-hidden py-[clamp(101px,7.95vw,140px)] ${content.case_study ? '' : 'border-t border-[#faf6f1]/8 bg-[#0e0d0c]'}`}>
                 <DriftOrb
                     className="h-[46vw] max-h-[640px] w-[46vw] max-w-[640px]"
@@ -261,29 +264,38 @@ export function ServiceDetail({ lang, content, section5, images, em }: ServiceDe
                     duration={20}
                 />
                 <div className="relative z-10 mx-auto max-w-[min(1760px,100%)] px-[clamp(20px,1.59vw,28px)] sm:px-[clamp(27px,2.1vw,37px)]">
-                    <div className="grid grid-cols-1 items-center gap-[clamp(53px,4.2vw,74px)] lg:grid-cols-[1.05fr_0.95fr]">
-                        <div>
+                    <div className={`grid grid-cols-1 items-center gap-[clamp(53px,4.2vw,74px)] ${flip ? 'lg:grid-cols-[0.95fr_1.05fr]' : 'lg:grid-cols-[1.05fr_0.95fr]'}`}>
+                        <div className={flip ? 'lg:order-2' : undefined}>
                             <ScrollReveal delay={0.06}>
                                 <h2 className="mb-[clamp(28px,2.22vw,39px)] text-[clamp(2rem,3.6vw,3rem)] font-extrabold leading-[1.1] tracking-[-0.02em]">
                                     {emphasize(content.perfect_for.title, em.forwhom)}
                                 </h2>
                             </ScrollReveal>
                             <StaggerChildren staggerDelay={0.08}>
-                                {content.perfect_for.items.map((item, i) => (
-                                    <Link
-                                        key={i}
-                                        href={localizedPath(`/${item.link}`)}
-                                        className={`group block border-t border-[#faf6f1]/12 py-[clamp(20px,1.59vw,28px)] no-underline ${i === content.perfect_for.items.length - 1 ? 'border-b' : ''}`}
-                                    >
-                                        <span className="font-didot mb-1 block text-[clamp(1.35rem,1.6vw,1.55rem)] text-[#faf6f1] transition-colors group-hover:text-[#f0bd95]">
-                                            {item.title}
-                                        </span>
-                                        <span className="block text-[clamp(0.94rem,1.06vw,1.17rem)] leading-[1.55] text-[#faf6f1]/58">{item.description}</span>
-                                    </Link>
-                                ))}
+                                {content.perfect_for.items.map((item, i) => {
+                                    const rowClass = `block border-t border-[#faf6f1]/12 py-[clamp(20px,1.59vw,28px)] no-underline ${i === content.perfect_for.items.length - 1 ? 'border-b' : ''}`;
+                                    const row = (
+                                        <>
+                                            <span className="font-didot mb-1 block text-[clamp(1.35rem,1.6vw,1.55rem)] text-[#faf6f1] transition-colors group-hover:text-[#f0bd95]">
+                                                {item.title}
+                                            </span>
+                                            <span className="block text-[clamp(0.94rem,1.06vw,1.17rem)] leading-[1.55] text-[#faf6f1]/58">{item.description}</span>
+                                        </>
+                                    );
+                                    // An item with no industry page is plain text, not a link to the home page.
+                                    return item.link ? (
+                                        <Link key={i} href={localizedPath(`/${item.link}`)} className={`group ${rowClass}`}>
+                                            {row}
+                                        </Link>
+                                    ) : (
+                                        <div key={i} className={rowClass}>
+                                            {row}
+                                        </div>
+                                    );
+                                })}
                             </StaggerChildren>
                         </div>
-                        <ScrollReveal direction="right">
+                        <ScrollReveal direction={flip ? 'left' : 'right'} className={flip ? 'lg:order-1' : undefined}>
                             <div className="relative aspect-[4/4.6] overflow-hidden rounded-lg">
                                 <Image src={images.forwhom} alt={content.perfect_for.image_alt ?? content.perfect_for.title} fill sizes="(max-width: 1024px) 100vw, 46vw" className="object-cover" />
                                 <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(11,10,10,0)_55%,rgba(11,10,10,0.5))]" />
@@ -293,7 +305,7 @@ export function ServiceDetail({ lang, content, section5, images, em }: ServiceDe
                 </div>
             </section>
 
-            {/* 5. Section 5 (licensed/staging/identity/clarity): image left */}
+            {/* 5. Section 5 (licensed/staging/identity/clarity): image left (right when flipped) */}
             <section className="relative overflow-hidden py-[clamp(108px,8.52vw,150px)]">
                 <DriftOrb
                     className="h-[46vw] max-h-[640px] w-[46vw] max-w-[640px]"
@@ -303,8 +315,8 @@ export function ServiceDetail({ lang, content, section5, images, em }: ServiceDe
                 <div className="relative z-10 mx-auto max-w-[min(1760px,100%)] px-[clamp(20px,1.59vw,28px)] sm:px-[clamp(27px,2.1vw,37px)]">
                     {/* With a full list beside it, the portrait photo gets the same tall frame as
                         sections 3 and 4; a single-item section keeps the shorter 4:3 frame. */}
-                    <div className={`grid grid-cols-1 items-center gap-[clamp(53px,4.2vw,74px)] ${section5Tall ? 'lg:grid-cols-[0.95fr_1.05fr]' : 'lg:grid-cols-2'}`}>
-                        <ScrollReveal direction="left">
+                    <div className={`grid grid-cols-1 items-center gap-[clamp(53px,4.2vw,74px)] ${!section5Tall ? 'lg:grid-cols-2' : flip ? 'lg:grid-cols-[1.05fr_0.95fr]' : 'lg:grid-cols-[0.95fr_1.05fr]'}`}>
+                        <ScrollReveal direction={flip ? 'right' : 'left'} className={flip ? 'lg:order-2' : undefined}>
                             <div className={`relative overflow-hidden rounded-lg ${section5Tall ? 'aspect-[4/4.4]' : 'aspect-[4/3]'}`}>
                                 <Image src={images.section5} alt={section5.image_alt ?? section5.title} fill sizes={section5Tall ? '(max-width: 1024px) 100vw, 46vw' : '(max-width: 1024px) 100vw, 50vw'} className="object-cover" />
                                 <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(11,10,10,0)_55%,rgba(11,10,10,0.45))]" />
