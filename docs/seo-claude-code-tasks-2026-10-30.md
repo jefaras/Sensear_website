@@ -20,7 +20,7 @@ requested for `/el/dorean-axiologisi/`.
 **Deployed and verified live by Cowork (third upload):** Facebook page in the schema `sameAs`; JPG share
 image for the blog post `building-brand-people-can-hear` (its page image is WebP); T6 Signature Playlists.
 
-**Committed, not yet deployed:** sitemap `lastmod` override for Signature Playlists (see T6).
+**Committed, not yet deployed:** sitemap `lastmod` override for Signature Playlists; the "four days" proposal promise corrected to "usually within 7 to 10 days" on five pages, both languages (see T6).
 
 **Open:** T6 (Signature Playlists done; Audio Upgrades draft awaiting approval; Event Soundtracks, Sonic
 Identity and the services hub after it). T11 after T6 (low).
@@ -167,8 +167,9 @@ Follow the verification gates in `CLAUDE.md` for every code step: `npm run typec
     venue owns the equipment; SensEar does not lease.
   - **"Written proposal within four days" is wrong** (added in the 28 Jul copy rewrite, `f41d8a9`). It is
     on Signature Playlists step 2, the contact FAQ, and the Event Soundtracks, Sonic Identity and Audio
-    Upgrades closing lines, in both languages. Replacement wording is in the Audio Upgrades draft,
-    awaiting JEF's approval.
+    Upgrades closing lines, in both languages. **Fixed 31 Oct (`b12475f`, approved by JEF):** all ten
+    lines now say the proposal usually arrives within 7 to 10 days. Committed, not yet deployed. The
+    Audio Upgrades closing line changes again with its T6 copy.
 - Target 700–1,000 words of distinct copy per page: a real client scenario, what is delivered, licensing / hardware specifics, how pricing works.
 - Draft only. **JEF must approve all copy** before commit. Use real case studies already on the site (e.g. Hera Hotel); invent nothing.
 - Order: **Signature Playlists first** (JEF, 30 Oct), then the other four. Fix the content images whose alt is a section heading ("What we do", "Perfect for") on each page as part of this task.
