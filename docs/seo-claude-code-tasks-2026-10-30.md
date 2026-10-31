@@ -20,9 +20,9 @@ requested for `/el/dorean-axiologisi/`.
 **Deployed and verified live by Cowork (third upload):** Facebook page in the schema `sameAs`; JPG share
 image for the blog post `building-brand-people-can-hear` (its page image is WebP); T6 Signature Playlists.
 
-**Committed, not yet deployed:** sitemap `lastmod` override for Signature Playlists; the "four days" proposal promise corrected to "usually within 7 to 10 days" on five pages, both languages; T6 Audio Upgrades; the mirrored zig-zag on Signature Playlists and Audio Upgrades (see T6).
+**Committed, not yet deployed:** sitemap `lastmod` override for Signature Playlists; the "four days" proposal promise corrected to "usually within 7 to 10 days" on five pages, both languages; T6 Audio Upgrades and Event Soundtracks; the mirrored zig-zag on the pages with a case section (see T6).
 
-**Open:** T6 (Signature Playlists and Audio Upgrades done; Event Soundtracks, Sonic Identity and the
+**Open:** T6 (Signature Playlists, Audio Upgrades and Event Soundtracks done; Sonic Identity and the
 services hub next). T11 after T6 (low).
 **Closed:** T10 (option A, see T10). T7 is dropped: Claude (Cowork) sends the IndexNow ping after each deploy.
 
@@ -121,7 +121,7 @@ Follow the verification gates in `CLAUDE.md` for every code step: `npm run typec
 ### T5 — Complete the 3 service H1s (low) · DONE 30 Oct (subtitle moved inside the H1, deployed and verified live)
 - Change the 6 dictionary titles in section 1-C so the H1 reads as a full phrase (for example, merge it with the line that follows it). Keep the visual layout. Both languages.
 
-### T6 — Expand the five English service pages + Greek equivalents (medium, needs JEF) · Signature Playlists DONE 30 Oct (live) · Audio Upgrades DONE 31 Oct (committed, not yet deployed)
+### T6 — Expand the five English service pages + Greek equivalents (medium, needs JEF) · Signature Playlists DONE 30 Oct (live) · Audio Upgrades and Event Soundtracks DONE 31 Oct (committed, not yet deployed)
 - **Signature Playlists, 30 Oct:** copy approved by JEF and committed in two parts. `b7c8069` adds optional
   blocks to the shared service layout (case, process, pricing, `image_alt`); pages without those keys are
   unchanged. `c92c1c5` is the copy itself (EN + EL), about 675 / 740 words of main content, up from 247.
@@ -179,8 +179,12 @@ Follow the verification gates in `CLAUDE.md` for every code step: `npm run typec
     Upgrades closing lines, in both languages. **Fixed 31 Oct (`b12475f`, approved by JEF):** all ten
     lines now say the proposal usually arrives within 7 to 10 days. Committed, not yet deployed. The
     Audio Upgrades closing line changes again with its T6 copy.
-- **Event Soundtracks is next** (JEF, 31 Oct). Draft written 31 Oct (`docs/drafts/event-soundtracks-copy-draft.md`,
-  not committed), awaiting approval. JEF's facts (31 Oct), the only facts to use:
+- **Event Soundtracks, 31 Oct:** copy approved by JEF and committed (`c864f25`, EN + EL, about 635 / 675
+  words, up from 265), with the existing Levantis case-study photo and the sitemap override 2026-10-31.
+  Same layout as the other two pages (case photo left). JEF confirmed: "George and Katerina", "Levantis",
+  offers usually within 7 to 10 days, "a deposit secures your date".
+  - **Rollback:** `git revert c864f25` restores the old page; then rebuild `out/` and upload.
+- Event Soundtracks facts. JEF's facts (31 Oct), the only facts to use:
   - Case: Levantis restaurant, Paros, may be named (already a case study: Neva Bergman's exhibition
     opening "Quiet Testimony"). About 100 guests; the night went very smoothly and the organiser was very
     satisfied with how the music tied in with the exhibition.
