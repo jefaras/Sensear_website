@@ -20,7 +20,7 @@ requested for `/el/dorean-axiologisi/`.
 **Deployed and verified live by Cowork (third upload):** Facebook page in the schema `sameAs`; JPG share
 image for the blog post `building-brand-people-can-hear` (its page image is WebP); T6 Signature Playlists.
 
-**Committed, not yet deployed:** sitemap `lastmod` override for Signature Playlists; the "four days" proposal promise corrected to "usually within 7 to 10 days" on five pages, both languages; T6 Audio Upgrades and Event Soundtracks; the mirrored zig-zag on the pages with a case section (see T6).
+**Committed, not yet deployed:** sitemap `lastmod` override for Signature Playlists; the "four days" proposal promise corrected to "usually within 7 to 10 days" on five pages, both languages; T6 Audio Upgrades and Event Soundtracks; the mirrored zig-zag on the pages with a case section (see T6). Home "who we are" statement: smaller text, two paragraphs, and "SensEar is an Athens-based music curation studio" (EN) (`905c83a`, `e258d2f`).
 
 **Open:** T6 (Signature Playlists, Audio Upgrades and Event Soundtracks done; Sonic Identity and the
 services hub next). T11 after T6 (low).
