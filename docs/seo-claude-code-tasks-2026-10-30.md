@@ -141,7 +141,22 @@ Follow the verification gates in `CLAUDE.md` for every code step: `npm run typec
     dictionaries, so git dates do not move. `LAST_MODIFIED_OVERRIDES` in `lib/route-lastmod.ts` now has
     `/services/signature-playlists` = 2026-10-30 (committed, not yet deployed). **Every next T6 page adds
     its own override in the same commit as its copy.**
-- **Audio Upgrades is next** (JEF, 30 Oct).
+- **Audio Upgrades is next** (JEF, 30 Oct). Draft written 31 Oct (`docs/drafts/audio-upgrades-copy-draft.md`,
+  not committed), awaiting approval. JEF's facts (31 Oct), the only facts to use:
+  - Client example: one client, **not authorised to be named**. Sound escaped to the neighbours upstairs
+    and outside; the client wanted a warmer, clearer sound with more bass for dance and lounge/mid-tempo
+    music, and easy conversation even at high volume. SensEar visited with partners in sound measurement,
+    sound isolation and soundproofing, who ran their tests. The visit and assessment were free.
+  - Scope: the sound system **and** room acoustic treatment. Partners: AV installers and acousticians
+    (not named); they supply the equipment.
+  - Everything runs through SensEar: it arranges the visits between technicians and the venue manager,
+    partners contact SensEar for anything, and SensEar invoices the client. One quote, one invoice.
+  - Tuning, measurements, tests and final touches: by the technicians and experts under SensEar's
+    supervision. Staff training depends on the equipment and is usually minimal.
+  - Assessment normally free; charged only for very large projects. One-time fee; recurring only if
+    service packages are added on top.
+  - Timeline: no projection; depends on scope, budget and extent of the work.
+  - Off-limits: anything not feasible, sensible or legal.
 - Target 700–1,000 words of distinct copy per page: a real client scenario, what is delivered, licensing / hardware specifics, how pricing works.
 - Draft only. **JEF must approve all copy** before commit. Use real case studies already on the site (e.g. Hera Hotel); invent nothing.
 - Order: **Signature Playlists first** (JEF, 30 Oct), then the other four. Fix the content images whose alt is a section heading ("What we do", "Perfect for") on each page as part of this task.
