@@ -1943,7 +1943,7 @@
     "event_soundtracks": {
         "meta": {
             "title": "Event Soundtracks: music for a specific date",
-            "description": "Event music planned against your run of show: playlists, DJ sets, sound checks and playback on the day."
+            "description": "Music for one event, from arrival to the last hour: playlists and sets by our own DJs, sound checks and playback, with a free venue visit before our offer."
         },
         "hero": {
             "title": "Event Soundtracks:",
@@ -1955,30 +1955,47 @@
             "image_caption": "Right moment, right sound."
         },
         "intro": {
-            "title": "Music built on the run of your event",
-            "p1": "Music planned against the run of your event, from arrival to the last hour. Depending on the event, it can be <strong>curated playlists</strong>, <strong>DJ sets</strong>, or both, with sound checks, playback management and coordination with your AV team on the day.",
-            "p2": "Optionally, we walk the venue before you commit, to check coverage and clarity."
+            "title": "What Event Soundtracks cover",
+            "p1": "<strong>Event Soundtracks</strong> are music planned for one specific event, from the first guests to the last hour. Depending on the event, that means <strong>curated playlists</strong>, <strong>DJ sets</strong> by our own DJs, or both.",
+            "p2": "We visit the venue <strong>for free</strong> before we send our offer, and on the day we take care of the <strong>sound checks</strong> and <strong>playback</strong>, with our own equipment or the venue's."
+        },
+        "case_study": {
+            "kicker": "In practice",
+            "title": "Levantis, Paros",
+            "paragraphs": [
+                "One night rather than every day: the opening of Neva Bergman’s exhibition “Quiet Testimony” in the gallery space at <strong>Levantis</strong> restaurant, for around <strong>100 guests</strong>.",
+                "We curated a <strong>discreet ambient playlist</strong> for the room and set the level to sit <strong>under conversation</strong>, so people could look closely at the work and talk without raising their voices.",
+                "The night ran <strong>smoothly</strong>, and the organiser was <strong>very satisfied</strong> with how the music tied in with the exhibition."
+            ],
+            "link_label": "See all case studies",
+            "link": "case-studies",
+            "image_alt": "Drawing of an olive tree on an easel, with prints and glasses on a table"
         },
         "what_we_do": {
-            "title": "What we do",
+            "title": "What's included",
             "items": [
                 {
-                    "title": "Follow your event timeline",
-                    "description": "Custom multi-part music themes that match your event's sequence & happenings."
+                    "title": "Music for each part of the night",
+                    "description": "From arrival to the last hour, the music follows your run of show, with the right mood for each part of the event."
                 },
                 {
                     "title": "Playlists, DJ sets or both",
-                    "description": "Music that fits your concept and audience, delivered as you need it."
+                    "description": "Curated playlists, sets by our own DJs, George and Katerina, or both. When it suits the event better, or our DJs are already booked, we bring in a partner DJ."
                 },
                 {
-                    "title": "Sound confidence",
-                    "description": "AV direction, sound checks, and playback management so nothing is left to chance."
+                    "title": "You approve the music",
+                    "description": "You approve the playlists or the style of music before the event, so the night sounds the way you expect."
                 },
                 {
-                    "title": "Optional venue audit",
-                    "description": "Inspection of your space for coverage & clarity issues or upgrade needs."
+                    "title": "Free venue visit",
+                    "description": "We visit the venue for free before we send our offer, so we can plan the sound and the timing on the spot."
+                },
+                {
+                    "title": "Sound system and DJ equipment",
+                    "description": "We bring the sound system and DJ equipment, or work with the venue's own."
                 }
-            ]
+            ],
+            "image_alt": "Two mirror balls on the floor beside an orange armchair"
         },
         "perfect_for": {
             "title": "Perfect for",
@@ -1990,7 +2007,7 @@
                 },
                 {
                     "title": "Event Organisers & Agencies",
-                    "description": "creating immersive branded experiences.",
+                    "description": "planning launches, corporate events and parties.",
                     "link": "industries/music-for-events-and-experiences"
                 },
                 {
@@ -2005,23 +2022,71 @@
                 },
                 {
                     "title": "Brands",
-                    "description": "that want music to shape how guests feel, share & remember.",
-                    "link": "blog"
+                    "description": "launching a product or hosting a business dinner or party.",
+                    "link": ""
+                },
+                {
+                    "title": "Private events",
+                    "description": "for weddings, parties and celebrations of every kind.",
+                    "link": ""
+                }
+            ],
+            "image_alt": "A full multi-level venue with balconies, seen from above"
+        },
+        "staging": {
+            "title": "On the day",
+            "image_alt": "A DJ at the decks in red light, with guests at the bar",
+            "items": [
+                {
+                    "title": "One of us on site",
+                    "description": "When the event needs it, someone from SensEar stays for the whole event."
+                },
+                {
+                    "title": "Sound checks and timing",
+                    "description": "We run the sound checks before guests arrive and keep the music in step with your run of show."
+                },
+                {
+                    "title": "Live adjustments",
+                    "description": "We adjust levels and mood as the night unfolds, so key moments land as planned and you can focus on your guests."
+                },
+                {
+                    "title": "Working with your AV team",
+                    "description": "If the venue or an AV company runs the sound, we coordinate with them."
+                },
+                {
+                    "title": "Public-performance fees",
+                    "description": "The venue or the organiser pays the public-performance fees to the collecting societies. They are not part of our fee."
                 }
             ]
         },
-        "staging": {
-            "title": "Professionally managed staging",
-            "items": [
+        "process": {
+            "title": "From first call to the event",
+            "steps": [
                 {
-                    "title": "Creative, but also precise",
-                    "description": "We manage or supervise scheduling, sound checks and live adjustments so key moments land as planned and you focus on hosting."
+                    "title": "Call us early",
+                    "description": "Get in touch as soon as you decide to hold the event. Last-minute requests are possible when we are free and can do them properly."
+                },
+                {
+                    "title": "Free visit and offer",
+                    "description": "We visit the venue for free, then send you a written offer, usually within 7 to 10 days."
+                },
+                {
+                    "title": "Music and approval",
+                    "description": "We plan the music against your run of show, and you approve the playlists or the style before the event."
+                },
+                {
+                    "title": "On the night",
+                    "description": "Sound check, playback and DJ sets, with one of us on site when the event needs it."
                 }
             ]
+        },
+        "pricing": {
+            "title": "How pricing works",
+            "body": "Every event is priced <strong>on its own</strong>, based on the hours, the DJ, the equipment and any special arrangements. You receive <strong>one written offer</strong> after the free venue visit, and a <strong>deposit</strong> secures your date."
         },
         "cta": {
             "title": "Tell us your date and your run of show.",
-            "description": "After a call and a visit to the space, you usually receive a written proposal within 7 to 10 days.",
+            "description": "We visit the venue for free before we send our offer.",
             "button": "Book an event music briefing",
             "explore": "Explore how our",
             "signature_playlists": "Signature Playlists",

@@ -38,10 +38,16 @@ export const SERVICE_CONFIG: Record<string, SlugConfig> = {
     'event-soundtracks': {
         ns: 'event_soundtracks',
         section5Key: 'staging',
-        images: { hero: img('event-soundtracks', 'hero'), feature: img('event-soundtracks', 'planning'), forwhom: img('event-soundtracks', 'venue'), section5: img('event-soundtracks', 'process') },
+        images: {
+            hero: img('event-soundtracks', 'hero'),
+            feature: img('event-soundtracks', 'planning'),
+            forwhom: img('event-soundtracks', 'venue'),
+            section5: img('event-soundtracks', 'process'),
+            case: '/images/case-studies/case-study-levantis.webp',
+        },
         em: {
-            el: { statement: 'εκδήλωση', feature: 'premium', forwhom: 'premium', section5: 'Επαγγελματική', cta: 'ταξίδι' },
-            en: { statement: 'timeline', feature: '', forwhom: '', section5: 'staging', cta: 'journey' },
+            el: { statement: 'εκδήλωση', feature: '', forwhom: '', section5: 'ημέρα', cta: 'ταξίδι' },
+            en: { statement: 'timeline', feature: '', forwhom: '', section5: 'day', cta: 'journey' },
         },
     },
     'sonic-identity': {
