@@ -17,10 +17,13 @@ requested for `/el/dorean-axiologisi/`.
 
 **Deployed and verified live 30 Oct (second upload):** T4, T5. All 59 pages 200, all 93 images load.
 
-**Committed, not yet deployed:** Facebook page added to the schema `sameAs`; JPG share image for the
-blog post `building-brand-people-can-hear` (its page image is WebP); T6 Signature Playlists (see T6).
+**Deployed and verified live by Cowork (third upload):** Facebook page in the schema `sameAs`; JPG share
+image for the blog post `building-brand-people-can-hear` (its page image is WebP); T6 Signature Playlists.
 
-**Open:** T6 (Signature Playlists done; Event Soundtracks, Sonic Identity, Audio Upgrades and the services hub next).
+**Committed, not yet deployed:** sitemap `lastmod` override for Signature Playlists (see T6).
+
+**Open:** T6 (Signature Playlists done; Audio Upgrades draft awaiting approval; Event Soundtracks, Sonic
+Identity and the services hub after it). T11 after T6 (low).
 **Closed:** T10 (option A, see T10). T7 is dropped: Claude (Cowork) sends the IndexNow ping after each deploy.
 
 | Item | State on 30 Oct (after deploy) |
@@ -143,7 +146,7 @@ Follow the verification gates in `CLAUDE.md` for every code step: `npm run typec
     its own override in the same commit as its copy.**
 - **Audio Upgrades is next** (JEF, 30 Oct). Draft written 31 Oct (`docs/drafts/audio-upgrades-copy-draft.md`,
   not committed), awaiting approval. JEF's facts (31 Oct), the only facts to use:
-  - Client example: one client, **not authorised to be named**. Sound escaped to the neighbours upstairs
+  - Client example: one client, **not authorised to be named**; the venue is a bar. Sound escaped to the neighbours upstairs
     and outside; the client wanted a warmer, clearer sound with more bass for dance and lounge/mid-tempo
     music, and easy conversation even at high volume. SensEar visited with partners in sound measurement,
     sound isolation and soundproofing, who ran their tests. The visit and assessment were free.
@@ -189,6 +192,14 @@ Follow the verification gates in `CLAUDE.md` for every code step: `npm run typec
 
 ### T9 — Update `CLAUDE.md` (low, ask JEF) · DONE 30 Oct
 - Current branch name. Remove or relax the `app/sitemap.ts` rule (waived 30 Jul). Add: "never publish a street address in schema".
+
+### T11 — Wide share images for the 8 blog posts (low, after T6) · NOT STARTED (JEF, 31 Oct: do not do yet)
+- The blog share images are roughly square (775×768 to 1024×1024), so LinkedIn and Facebook crop them or
+  show a small thumbnail. Make a 1200×630 JPG for each of the 8 posts, both languages, from the existing
+  post images.
+- Point each post's `ogImage` key at its new image (the key already exists for `building-brand-people-can-hear`;
+  add it for the other seven) in `dictionaries/en.json` and `el.json`. The on-page images stay as they are.
+- Check: every blog post in `out/` has a 1200×630 JPG `og:image`.
 
 ---
 
