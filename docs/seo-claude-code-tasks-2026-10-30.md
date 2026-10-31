@@ -160,6 +160,15 @@ Follow the verification gates in `CLAUDE.md` for every code step: `npm run typec
     service packages are added on top.
   - Timeline: no projection; depends on scope, budget and extent of the work.
   - Off-limits: anything not feasible, sensible or legal.
+  - Follow-up answers (31 Oct): the bar is in the centre of Athens; the work is finished and worked (warmer,
+    crystal-clear sound, no longer disturbing the neighbours upstairs or the surroundings). The proposal is
+    sent as soon as it is ready, usually within 7 to 10 days, no commitment. Recurring fee only for a
+    maintenance or technical support subscription when the equipment price does not include it. The
+    venue owns the equipment; SensEar does not lease.
+  - **"Written proposal within four days" is wrong** (added in the 28 Jul copy rewrite, `f41d8a9`). It is
+    on Signature Playlists step 2, the contact FAQ, and the Event Soundtracks, Sonic Identity and Audio
+    Upgrades closing lines, in both languages. Replacement wording is in the Audio Upgrades draft,
+    awaiting JEF's approval.
 - Target 700–1,000 words of distinct copy per page: a real client scenario, what is delivered, licensing / hardware specifics, how pricing works.
 - Draft only. **JEF must approve all copy** before commit. Use real case studies already on the site (e.g. Hera Hotel); invent nothing.
 - Order: **Signature Playlists first** (JEF, 30 Oct), then the other four. Fix the content images whose alt is a section heading ("What we do", "Perfect for") on each page as part of this task.
