@@ -24,10 +24,17 @@ export function About({ p1, p2 }: AboutProps) {
                 <div className="grid grid-cols-1 items-center gap-[clamp(40px,3.12vw,55px)] lg:grid-cols-[1.5fr_0.85fr] lg:gap-[clamp(53px,4.2vw,74px)]">
                     <div className="se-html">
                         <ScrollReveal>
-                            <p
-                                className="mb-[clamp(28px,2.22vw,39px)] text-[clamp(1.73rem,3.11vw,2.88rem)] font-semibold leading-[1.32] tracking-[-0.01em]"
-                                dangerouslySetInnerHTML={{ __html: p1 }}
-                            />
+                            {/* The dictionary separates the statement's sentences with <br />; each
+                                one is set as its own paragraph. */}
+                            <div className="mb-[clamp(28px,2.22vw,39px)]">
+                                {p1.split(/<br\s*\/?>/).map((sentence, i) => (
+                                    <p
+                                        key={i}
+                                        className={`text-[clamp(1.55rem,2.65vw,2.45rem)] font-semibold leading-[1.32] tracking-[-0.01em] ${i > 0 ? 'mt-[0.6em]' : ''}`}
+                                        dangerouslySetInnerHTML={{ __html: sentence }}
+                                    />
+                                ))}
+                            </div>
                         </ScrollReveal>
                         <ScrollReveal delay={0.1}>
                             <p
