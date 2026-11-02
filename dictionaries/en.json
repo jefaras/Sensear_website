@@ -1574,8 +1574,8 @@
             "experience_design": {
                 "title": "Experience Design",
                 "subtitle": "The whole guest journey, designed.",
-                "desc": "We map how guests move through your venue, from the first click to the goodbye. Then we design every touchpoint to work together: sound, light, space, service and digital. We stay with you until the new experience is part of daily operation.",
-                "ideal_for": "For hotels, restaurants and venues that want a consistent guest experience that people remember.",
+                "desc": "We map how guests move through your venue, from the first click to the goodbye. Then we design every touchpoint to work together: sound, light, space, service and digital, so the visit works as one whole.",
+                "ideal_for": "For hotels, restaurants and venues that want a consistent guest experience people remember.",
                 "cta": "Explore Experience Design",
                 "link": "services/experience-design",
                 "image_alt": "Guest experience design workshop with a hospitality team"
@@ -2418,7 +2418,7 @@
             "subtitle": "The whole guest journey, designed.",
             "description": "We design how guests feel in your venue, from the first click to the last goodbye. Sound is where we started. Now we design the rest with you.",
             "explore_cta": "Explore the service",
-            "audit_cta": "Start with an experience audit",
+            "audit_cta": "Start with an Experience Audit",
             "image_alt": "Guest being welcomed at a hotel reception"
         },
         "intro": {
@@ -2439,7 +2439,7 @@
                 },
                 {
                     "title": "The arrival",
-                    "description": "The first minute is planned: who greets the guest, what they hear, what they see and what they are offered."
+                    "description": "We plan the first minute: who greets the guest, what they hear, what they see and what they are offered."
                 },
                 {
                     "title": "The stay",
@@ -2459,7 +2459,7 @@
         },
         "layers": {
             "title": "Four layers we design",
-            "intro": "A lasting experience needs more than nice details. We work on four layers, from the idea down to the objects guests touch.",
+            "intro": "A lasting experience needs more than nice details. The aim is that guests leave a little different from how they came. To get there we work on four layers, from the idea down to the objects guests touch.",
             "items": [
                 {
                     "title": "The story",
@@ -2602,27 +2602,27 @@
             "intro": "Our approach draws on academic training in hospitality management and experience design, and on our daily work with venues across Greece. We use methods that experience designers use worldwide:",
             "items": [
                 {
-                    "title": "Service Design",
-                    "description": "A step-by-step method for understanding guests and designing every part of a service."
+                    "title": "Every step is designed",
+                    "description": "We look at a visit as a service with steps, and we design each step, not only the space it happens in."
                 },
                 {
-                    "title": "The Experience Economy",
-                    "description": "The idea that guests pay for how a visit makes them feel, not only for the room or the meal."
+                    "title": "Guests pay for how they feel",
+                    "description": "The room and the meal are the ticket. The feeling of the visit is what guests remember, review and come back for."
                 },
                 {
-                    "title": "Sensory marketing",
-                    "description": "Research on how sound, light, scent, touch and taste shape what guests notice and remember."
+                    "title": "All five senses",
+                    "description": "Sound, light, scent, touch and taste shape what guests notice and remember. We work on all of them, so none works against the others."
                 },
                 {
-                    "title": "Positive psychology (the PERMA model)",
-                    "description": "A model of wellbeing that helps us design experiences guests feel good about."
+                    "title": "Wellbeing, not only comfort",
+                    "description": "A visit feels good when guests feel welcome, absorbed in the moment, connected to people and glad they came. We design for all of that."
                 },
                 {
-                    "title": "Transformative Experience Design",
-                    "description": "Design on four levels: story, culture, journey and details."
+                    "title": "The guest leaves changed",
+                    "description": "The aim is not only a pleasant visit but a guest who leaves changed: calmer or more excited, more connected, with a story to tell or a new realisation. We get there with a clear story, a team that lives it every day, a journey planned around the guest, and details that all point the same way."
                 }
             ],
-            "closing": "You do not need to know any of these. They are simply how we make sure nothing important is left to chance.",
+            "closing": "Every venue or event needs a different mix, so we choose the methods that suit you best and combine them so that nothing important is left out.",
             "image_alt": "Guest journey map with notes from a venue workshop"
         },
         "sound_fit": {
@@ -2631,22 +2631,22 @@
             "items": [
                 {
                     "title": "Signature Playlists",
-                    "description": "the daily music for every space.",
+                    "description": "The daily music for every space.",
                     "link": "services/signature-playlists"
                 },
                 {
                     "title": "Event Soundtracks",
-                    "description": "music for the moments that matter.",
+                    "description": "Music for the moments that matter.",
                     "link": "services/event-soundtracks"
                 },
                 {
                     "title": "Sonic Identity",
-                    "description": "one consistent sound across all locations and channels.",
+                    "description": "One consistent sound across all locations and channels.",
                     "link": "services/sonic-identity"
                 },
                 {
                     "title": "Audio Upgrades",
-                    "description": "clear sound in spaces that need it.",
+                    "description": "Clear sound in spaces that need it.",
                     "link": "services/audio-upgrades"
                 }
             ]
@@ -2686,8 +2686,8 @@
         },
         "cta": {
             "title": "Tell us how guests experience your venue today.",
-            "description": "We reply within 24 hours with a first view and the best way to start.",
-            "button": "Start with an experience audit"
+            "description": "We reply within 24 hours with our first thoughts and the best way to start.",
+            "button": "Start with an Experience Audit"
         }
     },
     "hotels_resorts": {
