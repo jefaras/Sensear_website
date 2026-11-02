@@ -55,6 +55,7 @@ export default async function HomeV3({
                 previewPlaceholder={home.services.preview_placeholder}
                 previews={home.services.previews}
                 cta={home.services.cta}
+                banner={home.services.experience_banner}
             />
             <IndustriesGrid
                 lang={lang}

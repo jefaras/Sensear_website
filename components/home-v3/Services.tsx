@@ -18,6 +18,13 @@ interface ServicePreview {
     cap: string;
 }
 
+interface ServiceBanner {
+    eyebrow: string;
+    text: string;
+    button: string;
+    link: string;
+}
+
 interface ServicesProps {
     lang: Locale;
     title: string;
@@ -26,11 +33,13 @@ interface ServicesProps {
     previewPlaceholder: string;
     previews: ServicePreview[];
     cta: string;
+    /** Text-only banner under the service list (Experience Design). */
+    banner?: ServiceBanner;
 }
 
 const DEFAULT_PREVIEW_IMG = '/images/about/about-journey-team-collaboration.jpg';
 
-export function Services({ lang, title, subtitle, items, previewPlaceholder, previews, cta }: ServicesProps) {
+export function Services({ lang, title, subtitle, items, previewPlaceholder, previews, cta, banner }: ServicesProps) {
     const localizedPath = (path: string) => getLocalizedPath(lang, path);
     const emWord = lang === 'el' ? 'αναβαθμίζουμε' : 'reimagine';
     const [hovered, setHovered] = useState<number | null>(null);
@@ -65,27 +74,47 @@ export function Services({ lang, title, subtitle, items, previewPlaceholder, pre
                 </ScrollReveal>
 
                 <div className="grid grid-cols-1 items-start gap-[clamp(40px,3.12vw,55px)] lg:grid-cols-[1.35fr_0.65fr] lg:gap-[clamp(41px,3.24vw,57px)]">
-                    <div className="border-t border-[#faf6f1]/12">
-                        {items.map((item, i) => (
-                            <Link
-                                key={i}
-                                href={localizedPath(`/${item.link}`)}
-                                onMouseEnter={() => setHovered(i)}
-                                onMouseLeave={() => setHovered(null)}
-                                className="se-svc flex items-baseline gap-[clamp(20px,1.59vw,28px)] border-b border-[#faf6f1]/12 py-[clamp(28px,2.22vw,39px)] text-[#faf6f1] no-underline"
-                            >
-                                <span className="w-[39px] shrink-0 text-[clamp(12px,0.85vw,15px)] font-bold tabular-nums text-[#faf6f1]/40">
-                                    {String(i + 1).padStart(2, '0')}
-                                </span>
-                                <div className="flex-1">
-                                    <div className="se-svc-title text-[clamp(1.61rem,2.76vw,2.42rem)] font-bold tracking-[-0.01em]">
-                                        {item.title}
+                    <div>
+                        <div className="border-t border-[#faf6f1]/12">
+                            {items.map((item, i) => (
+                                <Link
+                                    key={i}
+                                    href={localizedPath(`/${item.link}`)}
+                                    onMouseEnter={() => setHovered(i)}
+                                    onMouseLeave={() => setHovered(null)}
+                                    className="se-svc flex items-baseline gap-[clamp(20px,1.59vw,28px)] border-b border-[#faf6f1]/12 py-[clamp(28px,2.22vw,39px)] text-[#faf6f1] no-underline"
+                                >
+                                    <span className="w-[39px] shrink-0 text-[clamp(12px,0.85vw,15px)] font-bold tabular-nums text-[#faf6f1]/40">
+                                        {String(i + 1).padStart(2, '0')}
+                                    </span>
+                                    <div className="flex-1">
+                                        <div className="se-svc-title text-[clamp(1.61rem,2.76vw,2.42rem)] font-bold tracking-[-0.01em]">
+                                            {item.title}
+                                        </div>
+                                        <p className="mt-2 max-w-[640px] text-[clamp(0.92rem,1.05vw,1.15rem)] text-[#faf6f1]/55">{item.desc}</p>
                                     </div>
-                                    <p className="mt-2 max-w-[640px] text-[clamp(0.92rem,1.05vw,1.15rem)] text-[#faf6f1]/55">{item.desc}</p>
+                                    <span className="se-svc-arrow se-gold-text self-center text-[clamp(18px,1.31vw,23px)]">→</span>
+                                </Link>
+                            ))}
+                        </div>
+
+                        {/* Banner under the four services: related to the list, but set apart by a tint and a
+                            thin border. Text left, button right on desktop; stacked on phones. */}
+                        {banner && (
+                            <ScrollReveal delay={0.08}>
+                                <div className="mt-[clamp(28px,2.22vw,39px)] flex flex-col items-start gap-[clamp(20px,1.59vw,28px)] rounded-lg border border-[#faf6f1]/12 bg-[rgba(250,246,241,0.04)] p-[clamp(22px,1.82vw,32px)] md:flex-row md:items-center md:justify-between">
+                                    <div className="max-w-[640px]">
+                                        <p className="se-gold-text mb-2 text-[clamp(13px,0.92vw,16px)] font-bold tracking-[0.08em]">{banner.eyebrow}</p>
+                                        <p className="text-[clamp(1.01rem,1.15vw,1.26rem)] leading-[1.55] text-[#faf6f1]/80">{banner.text}</p>
+                                    </div>
+                                    <div className="shrink-0">
+                                        <MorphCTA href={localizedPath(`/${banner.link}`)} size="md">
+                                            {banner.button}
+                                        </MorphCTA>
+                                    </div>
                                 </div>
-                                <span className="se-svc-arrow se-gold-text self-center text-[clamp(18px,1.31vw,23px)]">→</span>
-                            </Link>
-                        ))}
+                            </ScrollReveal>
+                        )}
                     </div>
 
                     <div className="lg:sticky lg:top-[140px]">
