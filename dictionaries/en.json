@@ -89,7 +89,13 @@
                     "img": "/images/services/service-audio-upgrades.jpg",
                     "cap": "Crystal-clear, balanced sound"
                 }
-            ]
+            ],
+            "experience_banner": {
+                "eyebrow": "New service",
+                "text": "Need more than sound? We also design the whole guest experience, from booking to goodbye.",
+                "button": "Discover Experience Design",
+                "link": "services/experience-design"
+            }
         },
         "expertise": {
             "title": "Where we work",
@@ -208,7 +214,11 @@
             "privacy": "Privacy Policy",
             "terms": "Terms of Service",
             "wordmark": "SENSEAR",
-            "legal": "SensEar Music Curation G.P. is a registered company in the E.U. operating in Athens, Greece (Registration No. ELGEMI: 163951803000). The company is authorized and regulated by the Corporate Registry (GEMI) and governed by Greek commercial and corporate law, as handled through the Athens Chamber of Tradesmen. All consulting services provided by SensEar adhere to Greek and E.U. regulations, ensuring compliance and ethical business practices."
+            "legal": "SensEar Music Curation G.P. is a registered company in the E.U. operating in Athens, Greece (Registration No. ELGEMI: 163951803000). The company is authorized and regulated by the Corporate Registry (GEMI) and governed by Greek commercial and corporate law, as handled through the Athens Chamber of Tradesmen. All consulting services provided by SensEar adhere to Greek and E.U. regulations, ensuring compliance and ethical business practices.",
+            "experience_design": {
+                "title": "Experience Design",
+                "link": "services/experience-design"
+            }
         }
     },
     "contact": {
@@ -1560,6 +1570,15 @@
                 "cta": "Explore Audio Upgrades",
                 "link": "services/audio-upgrades",
                 "image_alt": "A woman sitting beside a large floor-standing speaker and a rack of hi-fi equipment"
+            },
+            "experience_design": {
+                "title": "Experience Design",
+                "subtitle": "The whole guest journey, designed.",
+                "desc": "We map how guests move through your venue, from the first click to the goodbye. Then we design every touchpoint to work together: sound, light, space, service and digital. We stay with you until the new experience is part of daily operation.",
+                "ideal_for": "For hotels, restaurants and venues that want a consistent guest experience that people remember.",
+                "cta": "Explore Experience Design",
+                "link": "services/experience-design",
+                "image_alt": "Guest experience design workshop with a hospitality team"
             }
         },
         "delivery": {
@@ -1595,6 +1614,10 @@
             "contact_btn": "Talk to us about your space",
             "industries_btn": "See the industries we serve",
             "location": "Athens, Greece"
+        },
+        "beyond_sound": {
+            "title": "Beyond sound",
+            "intro": "Sound is one layer of what your guests feel. Experience Design covers the rest."
         }
     },
     "footer": {
@@ -2383,6 +2406,288 @@
             "sonic_identity": "Sonic Identity",
             "complete_identity": "for complete audio identity.",
             "location": "Athens, Greece"
+        }
+    },
+    "experience_design": {
+        "meta": {
+            "title": "Experience Design for hotels and venues",
+            "description": "We design the whole guest experience for hotels, restaurants and venues in Greece: journey, service, space and sound, from first idea to launch."
+        },
+        "hero": {
+            "title": "Experience Design",
+            "subtitle": "The whole guest journey, designed.",
+            "description": "We design how guests feel in your venue, from the first click to the last goodbye. Sound is where we started. Now we design the rest with you.",
+            "explore_cta": "Explore the service",
+            "audit_cta": "Start with an experience audit",
+            "image_alt": "Guest being welcomed at a hotel reception"
+        },
+        "intro": {
+            "title": "What Experience Design is",
+            "paragraphs": [
+                "Experience Design is the planning and building of everything a guest meets in your venue. That includes the website and booking, the arrival, the space, the light, the sound, the service and what happens after the visit.",
+                "Most venues design these parts separately, with different people and at different times. Guests notice when the parts do not fit. We look at the whole visit through the guest's eyes, find where it breaks, and design each touchpoint to support the same story.",
+                "We do not stop at a report. We stay with you until the new experience is part of your daily operation."
+            ]
+        },
+        "hotel_moments": {
+            "title": "What it can look like in a hotel",
+            "intro": "A guest's stay has five key moments. We design each one so it connects with the rest.",
+            "items": [
+                {
+                    "title": "Before arrival",
+                    "description": "The website, booking emails and directions tell the same story the guest will find on site."
+                },
+                {
+                    "title": "The arrival",
+                    "description": "The first minute is planned: who greets the guest, what they hear, what they see and what they are offered."
+                },
+                {
+                    "title": "The stay",
+                    "description": "Each space has a clear role and mood, with sound, light and service that change through the day."
+                },
+                {
+                    "title": "Departure",
+                    "description": "The last moment is designed as carefully as the first, so the visit ends on a high point, not just with a bill."
+                },
+                {
+                    "title": "After the stay",
+                    "description": "A small, thoughtful follow-up keeps the connection and gives the guest a reason to return or to recommend you."
+                }
+            ],
+            "closing": "The same method works for restaurants, bars, retail stores, wellness spaces and events.",
+            "image_alt": "Hotel terrace prepared for the evening"
+        },
+        "layers": {
+            "title": "Four layers we design",
+            "intro": "A lasting experience needs more than nice details. We work on four layers, from the idea down to the objects guests touch.",
+            "items": [
+                {
+                    "title": "The story",
+                    "description": "What should guests feel and say about you after the visit? We define this first, because every other decision follows from it."
+                },
+                {
+                    "title": "The team",
+                    "description": "Guests feel the experience through your staff. We shape the habits, words and small rituals that let your team deliver it every day."
+                },
+                {
+                    "title": "The journey",
+                    "description": "We map every step of the visit, before, during and after. Then we plan the moments that matter most: the arrival, the high point and the goodbye."
+                },
+                {
+                    "title": "The details",
+                    "description": "Sound, light, scent, materials, signage, menus and screens. These are the things guests actually hear, see and touch, and we design them to fit the story."
+                }
+            ]
+        },
+        "what_we_do": {
+            "title": "What's included",
+            "items": [
+                {
+                    "title": "Venue visit and guest research",
+                    "description": "We observe the space at different hours and talk with guests, staff and management."
+                },
+                {
+                    "title": "Guest journey map",
+                    "description": "A clear map of the visit today, with its strong moments and its weak points."
+                },
+                {
+                    "title": "Experience concept",
+                    "description": "The story, the mood and the key moments of the new experience, on one page that everyone on your team can understand."
+                },
+                {
+                    "title": "Sensory brief",
+                    "description": "Direction for sound, light, scent, touch and taste, so every sense supports the same idea."
+                },
+                {
+                    "title": "Service blueprint and staff playbook",
+                    "description": "Who does what, when and how, written so your team can use it from the first day."
+                },
+                {
+                    "title": "Launch and training",
+                    "description": "We help you put the changes in place, train the team and adjust after the first weeks."
+                },
+                {
+                    "title": "Measurement",
+                    "description": "We agree simple measures with you, such as guest reviews, time spent, repeat visits and average spend, and we check them after launch."
+                }
+            ]
+        },
+        "perfect_for": {
+            "title": "Perfect for",
+            "items": [
+                {
+                    "title": "Hotels & Resorts",
+                    "description": "One consistent stay, from booking to check-out.",
+                    "link": "industries/music-for-hotels-and-resorts"
+                },
+                {
+                    "title": "Restaurants & Bars",
+                    "description": "A clear mood from the door to the bill.",
+                    "link": "industries/music-for-restaurants-and-bars"
+                },
+                {
+                    "title": "Events & Experiences",
+                    "description": "Moments planned around the guest, not only around the schedule.",
+                    "link": "industries/music-for-events-and-experiences"
+                },
+                {
+                    "title": "Retail stores",
+                    "description": "A store visit that matches the brand.",
+                    "link": "industries/music-for-retail-stores"
+                },
+                {
+                    "title": "Wellness spaces",
+                    "description": "Calm, coherent spaces that support how guests feel.",
+                    "link": "industries/music-for-wellness-and-gyms"
+                },
+                {
+                    "title": "Art & Culture spaces",
+                    "description": "Visits that people remember and talk about.",
+                    "link": "industries/music-for-art-museums-and-fashion"
+                }
+            ]
+        },
+        "process": {
+            "title": "From first call to launch",
+            "steps": [
+                {
+                    "title": "First call",
+                    "description": "You tell us about your venue, your guests and what you want to change."
+                },
+                {
+                    "title": "Understand",
+                    "description": "We visit the venue, observe, and talk with guests and staff."
+                },
+                {
+                    "title": "Define",
+                    "description": "We agree on the goals, the guest profiles and the story of the experience."
+                },
+                {
+                    "title": "Create and choose",
+                    "description": "We develop ideas for each touchpoint. Then we choose with you what to do now and what to keep for later."
+                },
+                {
+                    "title": "Deliver the plan",
+                    "description": "We hand over the journey map, the service blueprint and the staff playbook."
+                },
+                {
+                    "title": "Launch",
+                    "description": "We help you put it in place, train the team and measure the results."
+                }
+            ]
+        },
+        "ways_to_start": {
+            "title": "Ways to start",
+            "items": [
+                {
+                    "title": "Experience Audit",
+                    "description": "A short review of your current guest experience. You get a venue visit, a journey map and a list of priority fixes. It is the easiest first step."
+                },
+                {
+                    "title": "Journey Workshop",
+                    "description": "A half-day session with you and your team. Together we map the guest journey and agree on the first changes."
+                },
+                {
+                    "title": "Full Experience Design",
+                    "description": "The complete process, from research to launch and measurement, with sound included where it fits."
+                }
+            ]
+        },
+        "pricing": {
+            "title": "How pricing works",
+            "body": "Pricing depends on the size of the venue, the number of spaces and how much of the process you need. After the first call and the visit, we send a written proposal with the scope, timeline and cost. The Experience Audit has a fixed price, so you can start small."
+        },
+        "method": {
+            "title": "The method behind it",
+            "intro": "Our approach draws on academic training in hospitality management and experience design, and on our daily work with venues across Greece. We use methods that experience designers use worldwide:",
+            "items": [
+                {
+                    "title": "Service Design",
+                    "description": "A step-by-step method for understanding guests and designing every part of a service."
+                },
+                {
+                    "title": "The Experience Economy",
+                    "description": "The idea that guests pay for how a visit makes them feel, not only for the room or the meal."
+                },
+                {
+                    "title": "Sensory marketing",
+                    "description": "Research on how sound, light, scent, touch and taste shape what guests notice and remember."
+                },
+                {
+                    "title": "Positive psychology (the PERMA model)",
+                    "description": "A model of wellbeing that helps us design experiences guests feel good about."
+                },
+                {
+                    "title": "Transformative Experience Design",
+                    "description": "Design on four levels: story, culture, journey and details."
+                }
+            ],
+            "closing": "You do not need to know any of these. They are simply how we make sure nothing important is left to chance.",
+            "image_alt": "Guest journey map with notes from a venue workshop"
+        },
+        "sound_fit": {
+            "title": "Where sound fits",
+            "intro": "Sound is one of the strongest layers of any experience, and it is where we started. When a project needs it, our sound services become part of the design:",
+            "items": [
+                {
+                    "title": "Signature Playlists",
+                    "description": "the daily music for every space.",
+                    "link": "services/signature-playlists"
+                },
+                {
+                    "title": "Event Soundtracks",
+                    "description": "music for the moments that matter.",
+                    "link": "services/event-soundtracks"
+                },
+                {
+                    "title": "Sonic Identity",
+                    "description": "one consistent sound across all locations and channels.",
+                    "link": "services/sonic-identity"
+                },
+                {
+                    "title": "Audio Upgrades",
+                    "description": "clear sound in spaces that need it.",
+                    "link": "services/audio-upgrades"
+                }
+            ]
+        },
+        "faq": {
+            "title": "Questions we often hear",
+            "items": [
+                {
+                    "question": "What is experience design for a hotel or restaurant?",
+                    "answer": "It is the design of everything a guest meets, from booking and arrival to service, space, sound and the contact after the visit, so that it all works as one whole."
+                },
+                {
+                    "question": "How is it different from interior design or marketing?",
+                    "answer": "Interior design shapes the space, and marketing brings guests in. Experience design connects both with service and the senses, so the visit works well from start to finish."
+                },
+                {
+                    "question": "Do we need to renovate?",
+                    "answer": "Usually not. Most changes are about service, timing, sound, light and small details. We suggest bigger changes only when their value is clear."
+                },
+                {
+                    "question": "How long does a project take?",
+                    "answer": "An Experience Audit usually takes 2 to 3 weeks. A full project takes about 2 to 4 months, depending on the size of the venue."
+                },
+                {
+                    "question": "Do you only work with hotels?",
+                    "answer": "No. We also work with restaurants, bars, retail stores, wellness spaces, cultural spaces and events."
+                },
+                {
+                    "question": "Do you work outside Athens?",
+                    "answer": "Yes. We are based in Athens and work with venues across Greece and its islands."
+                },
+                {
+                    "question": "Is music included?",
+                    "answer": "Sound is part of the sensory brief in every project. If you also want daily music for your venue, our Signature Playlists service covers it."
+                }
+            ]
+        },
+        "cta": {
+            "title": "Tell us how guests experience your venue today.",
+            "description": "We reply within 24 hours with a first view and the best way to start.",
+            "button": "Start with an experience audit"
         }
     },
     "hotels_resorts": {
