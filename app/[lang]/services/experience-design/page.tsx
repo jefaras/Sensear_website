@@ -15,6 +15,9 @@ const ROUTE = '/services/experience-design';
 const IMAGES = {
     hero: '/images/industries/hotels-resorts-luxury-hotel-lobby.jpg',
     hotelMoments: '/images/industries/hotels-resorts-curated-music-ambiance.jpg',
+    // TODO: replace image (ed-included, ed-for-whom). Existing site photos standing in.
+    included: '/images/industries/restaurants-bars-restaurant-dining-room.jpg',
+    forWhom: '/images/industries/industry-restaurants-bars.jpg',
     method: '/images/about/about-unique-approach.jpg',
     cta: '/images/industries/restaurants-bars-restaurant-dining-room.jpg',
 };

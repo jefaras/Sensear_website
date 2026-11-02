@@ -15,8 +15,8 @@ export interface ExperienceDesignContent {
     intro: { title: string; paragraphs: string[] };
     hotel_moments: { title: string; intro: string; items: Item[]; closing: string; image_alt: string };
     layers: { title: string; intro: string; items: Item[] };
-    what_we_do: { title: string; items: Item[] };
-    perfect_for: { title: string; items: LinkedItem[] };
+    what_we_do: { title: string; items: Item[]; image_alt?: string };
+    perfect_for: { title: string; items: LinkedItem[]; image_alt?: string };
     process: { title: string; steps: Item[] };
     ways_to_start: { title: string; items: Item[] };
     pricing: { title: string; body: string };
@@ -29,7 +29,7 @@ export interface ExperienceDesignContent {
 interface ExperienceDesignProps {
     lang: Locale;
     content: ExperienceDesignContent;
-    images: { hero: string; hotelMoments: string; method: string; cta: string };
+    images: { hero: string; hotelMoments: string; included: string; forWhom: string; method: string; cta: string };
     /** Per-locale emphasis words (exact substrings of the headings). */
     em: { statement: string; cta: string };
 }
@@ -42,7 +42,7 @@ const leadClass = 'max-w-[680px] text-[clamp(1.03rem,1.17vw,1.29rem)] leading-[1
 const h3Class = 'mb-1.5 text-[clamp(1.18rem,1.34vw,1.47rem)] font-bold';
 const itemTextClass = 'text-[clamp(0.94rem,1.06vw,1.17rem)] leading-[1.6] text-[#faf6f1]/58';
 
-/** "Perfect for"-style rows, laid out in columns because these sections carry no photo. */
+/** "Perfect for"-style rows, laid out in columns because the section carries no photo. */
 const LinkedRows = ({ items, localizedPath, className }: { items: LinkedItem[]; localizedPath: (path: string) => string; className: string }) => (
     <StaggerChildren staggerDelay={0.08} className={`grid grid-cols-1 gap-x-[clamp(28px,2.22vw,39px)] ${className}`}>
         {items.map((item, i) => (
@@ -188,30 +188,64 @@ export function ExperienceDesign({ lang, content, images, em }: ExperienceDesign
                 </div>
             </section>
 
-            {/* 5. What's included: heading left, list right */}
-            <section className="relative overflow-hidden py-[clamp(108px,8.52vw,150px)]">
+            {/* 5. What's included: image left, list right, as in the service pages' feature list */}
+            <section className="relative overflow-hidden py-[clamp(108px,8.52vw,150px)] pb-[clamp(94px,7.39vw,130px)]">
                 <DriftOrb
                     className="h-[46vw] max-h-[640px] w-[46vw] max-w-[640px]"
-                    style={{ bottom: '4%', left: '-6%', background: 'radial-gradient(circle,rgba(250,235,227,0.07),rgba(250,235,227,0) 62%)' }}
+                    style={{ top: '6%', right: '-6%', background: 'radial-gradient(circle,rgba(240,189,149,0.10),rgba(240,189,149,0) 62%)' }}
                     duration={20}
                 />
                 <div className={container}>
-                    <div className="grid grid-cols-1 gap-[clamp(28px,2.22vw,39px)] lg:grid-cols-[0.95fr_1.05fr] lg:gap-[clamp(53px,4.2vw,74px)]">
-                        <ScrollReveal delay={0.06}>
-                            <h2 className={`lg:sticky lg:top-[140px] ${h2Class}`}>{content.what_we_do.title}</h2>
+                    <div className="grid grid-cols-1 items-center gap-[clamp(53px,4.2vw,74px)] lg:grid-cols-[0.95fr_1.05fr]">
+                        <ScrollReveal direction="left">
+                            <div className="relative aspect-[4/4.6] overflow-hidden rounded-lg">
+                                <Image src={images.included} alt={content.what_we_do.image_alt ?? content.what_we_do.title} fill sizes="(max-width: 1024px) 100vw, 46vw" className="object-cover" />
+                                <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(11,10,10,0)_55%,rgba(11,10,10,0.5))]" />
+                            </div>
                         </ScrollReveal>
-                        <GoldDotRows items={content.what_we_do.items} />
+                        <div>
+                            <ScrollReveal delay={0.06}>
+                                <h2 className={`mb-[clamp(28px,2.22vw,39px)] ${h2Class}`}>{content.what_we_do.title}</h2>
+                            </ScrollReveal>
+                            <GoldDotRows items={content.what_we_do.items} />
+                        </div>
                     </div>
                 </div>
             </section>
 
-            {/* 6. Perfect for */}
+            {/* 6. Perfect for: rows left, image right, as in the service pages' "for whom" block */}
             <section className={`relative overflow-hidden py-[clamp(101px,7.95vw,140px)] ${panel}`}>
+                <DriftOrb
+                    className="h-[46vw] max-h-[640px] w-[46vw] max-w-[640px]"
+                    style={{ bottom: '4%', left: '-6%', background: 'radial-gradient(circle,rgba(250,235,227,0.07),rgba(250,235,227,0) 62%)' }}
+                    duration={21}
+                />
                 <div className={container}>
-                    <ScrollReveal delay={0.06}>
-                        <h2 className={`mb-[clamp(36px,3vw,53px)] ${h2Class}`}>{content.perfect_for.title}</h2>
-                    </ScrollReveal>
-                    <LinkedRows items={content.perfect_for.items} localizedPath={localizedPath} className="sm:grid-cols-2 lg:grid-cols-3" />
+                    <div className="grid grid-cols-1 items-center gap-[clamp(53px,4.2vw,74px)] lg:grid-cols-[1.05fr_0.95fr]">
+                        <div>
+                            <ScrollReveal delay={0.06}>
+                                <h2 className={`mb-[clamp(28px,2.22vw,39px)] ${h2Class}`}>{content.perfect_for.title}</h2>
+                            </ScrollReveal>
+                            <StaggerChildren staggerDelay={0.08}>
+                                {content.perfect_for.items.map((item, i) => (
+                                    <Link
+                                        key={i}
+                                        href={localizedPath(`/${item.link}`)}
+                                        className={`group block border-t border-[#faf6f1]/12 py-[clamp(20px,1.59vw,28px)] no-underline ${i === content.perfect_for.items.length - 1 ? 'border-b' : ''}`}
+                                    >
+                                        <span className="font-didot mb-1 block text-[clamp(1.35rem,1.6vw,1.55rem)] text-[#faf6f1] transition-colors group-hover:text-[#f0bd95]">{item.title}</span>
+                                        <span className="block text-[clamp(0.94rem,1.06vw,1.17rem)] leading-[1.55] text-[#faf6f1]/58">{item.description}</span>
+                                    </Link>
+                                ))}
+                            </StaggerChildren>
+                        </div>
+                        <ScrollReveal direction="right">
+                            <div className="relative aspect-[4/4.6] overflow-hidden rounded-lg">
+                                <Image src={images.forWhom} alt={content.perfect_for.image_alt ?? content.perfect_for.title} fill sizes="(max-width: 1024px) 100vw, 46vw" className="object-cover" />
+                                <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(11,10,10,0)_55%,rgba(11,10,10,0.5))]" />
+                            </div>
+                        </ScrollReveal>
+                    </div>
                 </div>
             </section>
 
