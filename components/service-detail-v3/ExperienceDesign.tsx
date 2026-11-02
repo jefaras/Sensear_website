@@ -119,17 +119,17 @@ export function ExperienceDesign({ lang, content, images, em }: ExperienceDesign
                             {emphasize(content.intro.title, em.statement)}
                         </h2>
                     </ScrollReveal>
+                    {/* Paragraphs carry <strong> runs from the dictionaries, shown in gold as on the services statement. */}
                     {content.intro.paragraphs.map((paragraph, i) => (
                         <ScrollReveal key={i} delay={0.12 + i * 0.06}>
                             <p
-                                className={
+                                className={`se-html se-html-gold ${
                                     i === 0
                                         ? 'mx-auto mb-[clamp(17px,1.31vw,23px)] max-w-[900px] text-[clamp(1.2rem,2vw,1.6rem)] leading-[1.5] text-[#faf6f1]'
                                         : 'mx-auto mb-[clamp(15px,1.19vw,21px)] max-w-[820px] text-[clamp(1.09rem,1.44vw,1.38rem)] leading-[1.65] text-[#faf6f1]/58'
-                                }
-                            >
-                                {paragraph}
-                            </p>
+                                }`}
+                                dangerouslySetInnerHTML={{ __html: paragraph }}
+                            />
                         </ScrollReveal>
                     ))}
                 </div>
