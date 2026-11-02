@@ -124,7 +124,7 @@ export function NewsletterForm({
                     <p className="text-red-500 text-sm w-full text-center">{errorMessage}</p>
                 )}
                 <p className="text-xs text-black/40 text-center w-full mt-1">
-                    Protected by reCAPTCHA —{" "}
+                    Protected by reCAPTCHA.{" "}
                     <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="underline">Privacy</a> &amp;{" "}
                     <a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer" className="underline">Terms</a>
                 </p>
@@ -174,7 +174,7 @@ export function NewsletterForm({
                 </div>
                 {status === "error" && <p className="mt-3 text-center text-sm text-red-400">{errorMessage}</p>}
                 <p className="mt-3 text-center text-xs text-[#faf6f1]/30">
-                    Protected by reCAPTCHA —{" "}
+                    Protected by reCAPTCHA.{" "}
                     <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="underline">Privacy</a> &amp;{" "}
                     <a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer" className="underline">Terms</a>
                 </p>
@@ -228,7 +228,7 @@ export function NewsletterForm({
                     <p className="text-red-400 text-xs">{errorMessage}</p>
                 )}
                 <p className="text-xs text-[#faf6f1]/30 mt-1">
-                    Protected by reCAPTCHA —{" "}
+                    Protected by reCAPTCHA.{" "}
                     <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="underline">Privacy</a> &amp;{" "}
                     <a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer" className="underline">Terms</a>
                 </p>
@@ -285,7 +285,7 @@ export function NewsletterForm({
                 <p className="text-red-400 text-xs">{errorMessage}</p>
             )}
             <p className="text-xs text-white/30 mt-1">
-                Protected by reCAPTCHA —{" "}
+                Protected by reCAPTCHA.{" "}
                 <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="underline">Privacy</a> &amp;{" "}
                 <a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer" className="underline">Terms</a>
             </p>
