@@ -63,6 +63,7 @@ function buildSitemapSections(dict: SitemapDictionary, lang: Locale) {
                 { name: dict.services_page.services.events.title, path: localizedPath('/services/event-soundtracks') },
                 { name: dict.services_page.services.strategy.title, path: localizedPath('/services/sonic-identity') },
                 { name: dict.services_page.services.upgrades.title, path: localizedPath('/services/audio-upgrades') },
+                { name: dict.services_page.services.experience_design.title, path: localizedPath('/services/experience-design') },
             ],
         },
         {

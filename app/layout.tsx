@@ -90,7 +90,8 @@ export default async function RootLayout({
     // Data for the global dark FooterV3 (mounted once in LocalizedSiteChrome).
     const footerV3Data = (d: typeof enDict) => ({
         footer: d.home.footer,
-        services: d.home.services.items,
+        // The four homepage services, then Experience Design (footer only, not a homepage row).
+        services: [...d.home.services.items, d.home.footer.experience_design],
         industries: d.home.expertise.items,
         email: d.home.contact_cta.secondary_email_label,
         phoneLine: d.home.contact_cta.phone_line,
