@@ -92,10 +92,10 @@ export default function FreeAssessmentPage() {
                     <AssessmentBrand />
                     <a
                         href="#axiologisi"
-                        className="hidden text-[12px] font-bold text-[#faf6f1]/68 no-underline hover:text-[#faf6f1] sm:inline-flex sm:items-center sm:gap-2"
+                        className="hidden text-[15px] font-bold text-[#faf6f1]/80 no-underline hover:text-[#faf6f1] sm:inline-flex sm:items-center sm:gap-2 lg:text-[17px]"
                     >
-                        Απάντηση εντός 24 ωρών
-                        <ArrowDown className="h-3.5 w-3.5" aria-hidden="true" />
+                        Ζητήστε δωρεάν αξιολόγηση
+                        <ArrowDown className="h-4 w-4" aria-hidden="true" />
                     </a>
                 </div>
             </header>
