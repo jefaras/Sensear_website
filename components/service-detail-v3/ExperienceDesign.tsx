@@ -253,7 +253,6 @@ export function ExperienceDesign({ lang, content, images, em }: ExperienceDesign
                         ))}
                     </StaggerChildren>
 
-                    {/* JEF: confirm the fixed price for the audit, or remove the pricing body's last sentence (EN + EL). */}
                     <div className="mt-[clamp(70px,5.5vw,97px)] grid grid-cols-1 gap-[clamp(20px,1.59vw,28px)] lg:grid-cols-[0.95fr_1.05fr] lg:gap-[clamp(53px,4.2vw,74px)]">
                         <ScrollReveal delay={0.06}>
                             <h2 className={h2Class}>{content.pricing.title}</h2>
@@ -309,7 +308,7 @@ export function ExperienceDesign({ lang, content, images, em }: ExperienceDesign
                 </div>
             </section>
 
-            {/* 12. Questions we often hear. JEF: confirm the project durations in the fourth answer (EN + EL). */}
+            {/* 12. Questions we often hear */}
             <section className="relative overflow-hidden py-[clamp(108px,8.52vw,150px)]">
                 <div className={container}>
                     <div className="grid grid-cols-1 gap-[clamp(28px,2.22vw,39px)] lg:grid-cols-[0.75fr_1.25fr] lg:gap-[clamp(53px,4.2vw,74px)]">
