@@ -40,6 +40,7 @@ const LAST_MODIFIED_OVERRIDES: Record<string, string> = {
     '/services/audio-upgrades': '2026-10-31T00:00:00.000Z',
     '/services/event-soundtracks': '2026-10-31T00:00:00.000Z',
     '/services/sonic-identity': '2026-11-02T00:00:00.000Z',
+    '/services': '2026-11-02T00:00:00.000Z',
 }
 
 const BLOG_POST_PREFIX = '/blog/'

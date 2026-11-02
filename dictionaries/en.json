@@ -1499,7 +1499,7 @@
     "services_page": {
         "meta": {
             "title": "Music and sound services for venues and events",
-            "description": "Explore music curation services for spaces & events, from Signature Playlists to Sonic Identity & Audio Upgrades. Find the solution that fits you."
+            "description": "Signature Playlists, Event Soundtracks, Sonic Identity and Audio Upgrades: what each service does, how they combine and where to start."
         },
         "hero": {
             "title": "Four ways to shape how your space sounds",
@@ -1517,45 +1517,49 @@
         },
         "intro": {
             "title": "What each service does",
-            "p1": "Signature Playlists set the daily music. <strong>Event Soundtracks</strong> score a single occasion, <strong>Sonic Identity</strong> keeps a brand consistent across places, and <strong>Audio Upgrades</strong> improve how the room carries it all.",
-            "p2": "Each stands alone; they are built to combine."
+            "p1": "<strong>Signature Playlists</strong> set the music your venue plays every day. <strong>Event Soundtracks</strong> plan the music for one specific event, <strong>Sonic Identity</strong> writes down how your brand sounds across places and channels, and <strong>Audio Upgrades</strong> improve the sound system and the room the music plays in.",
+            "p2": "Each service stands on its own, and they are built to work together. Every one starts with a conversation about your space, and <strong>the first call or visit is free</strong>."
         },
         "starting_point": {
             "title": "Where to start",
-            "subtitle": "Start from the need you can already name: the music that plays every day, one event with a schedule, a brand that has to sound the same in three places, or a room that fights the music."
+            "subtitle": "Start from the need you can already name: the music that plays every day, one event with a schedule, a brand that has to sound the same in more than one place, or a room where the music reaches the neighbours or drowns out conversation."
         },
         "services": {
             "playlists": {
                 "title": "Signature Playlists",
-                "subtitle": "Your daily soundtrack",
-                "desc": "Curated playlists that follow the day, refreshed monthly by default, managed remotely.",
-                "ideal_for": "For venues ready to move beyond generic background music.",
+                "subtitle": "The music you play every day",
+                "desc": "A playlist for every zone of your venue, scheduled from opening to closing and <strong>chosen by us, track by track</strong>. We suggest new music every month and a change each season, and everything plays on a platform <strong>licensed for business use</strong>. At Hera Hotel in Athens, each of the three zones has its own playlist. The price is set for your venue alone, and the service renews every year.",
+                "ideal_for": "Ideal for: hotels, restaurants, bars, shops, and wellness and cultural spaces that have outgrown generic background music.",
                 "cta": "Explore Signature Playlists",
-                "link": "services/signature-playlists"
+                "link": "services/signature-playlists",
+                "image_alt": "A woman resting her head against a vinyl record"
             },
             "events": {
                 "title": "Event Soundtracks",
-                "subtitle": "Music for moments that matter",
-                "desc": "Precisely planned music for every moment, AV direction & support.",
-                "ideal_for": "For conferences, launches, weddings and special occasions.",
+                "subtitle": "One event, from arrival to the last hour",
+                "desc": "Music planned for one specific event, with <strong>curated playlists, DJ sets by our own DJs, or both</strong>. We visit the venue for free before we send our offer, you approve the music before the day, and we handle the sound checks and playback. At Levantis in Paros, we set the music for an exhibition opening with around 100 guests. Each event is priced on its own, and <strong>a deposit secures your date</strong>.",
+                "ideal_for": "Ideal for: weddings, private parties, business dinners, launches and corporate events.",
                 "cta": "Explore Event Soundtracks",
-                "link": "services/event-soundtracks"
+                "link": "services/event-soundtracks",
+                "image_alt": "A DJ booth on an outdoor terrace under palm trees at dusk"
             },
             "strategy": {
                 "title": "Sonic Identity",
-                "subtitle": "Your audio DNA",
-                "desc": "Guidelines & roadmap for consistent sound.",
-                "ideal_for": "For brands with multiple locations or marketing channels.",
+                "subtitle": "How your brand sounds, in writing",
+                "desc": "We set your brand's musical direction in a workshop with your marketing and business teams, then deliver <strong>two or three reference playlists and written guidelines</strong>. You own them and can pass them to your agencies and partners. It is a <strong>one-time project</strong>, usually ready in 2 to 3 weeks.",
+                "ideal_for": "Ideal for: hotel groups and brands with several locations, a rebrand or a new opening, and brands that use music in their ads.",
                 "cta": "Explore Sonic Identity",
-                "link": "services/sonic-identity"
+                "link": "services/sonic-identity",
+                "image_alt": "A woman with orange hair wearing a black eye mask"
             },
             "upgrades": {
                 "title": "Audio Upgrades",
-                "subtitle": "Acoustic excellence",
-                "desc": "Acoustic & equipment guidance with installation support.",
-                "ideal_for": "For venues where sound quality needs refinement.",
-                "cta": "Explore audio upgrades",
-                "link": "services/audio-upgrades"
+                "subtitle": "Your sound system and the room itself",
+                "desc": "We visit with our partners in sound measurement, sound isolation and soundproofing, propose what needs to change, then <strong>supervise the installation and run the final tuning</strong>. You deal with <strong>one team and receive one invoice</strong>, and the on-site assessment is normally free. In a bar in central Athens, the music no longer reaches the neighbours upstairs.",
+                "ideal_for": "Ideal for: venues where guests struggle to talk over the music, the sound is thin or uneven, or the music reaches the neighbours.",
+                "cta": "Explore Audio Upgrades",
+                "link": "services/audio-upgrades",
+                "image_alt": "A woman sitting beside a large floor-standing speaker and a rack of hi-fi equipment"
             }
         },
         "delivery": {
@@ -1563,32 +1567,33 @@
             "subtitle": "Playlists set the daily sound. Sonic Identity keeps it consistent as you grow; events and acoustics complete the system.",
             "points": [
                 {
-                    "text": "build your daily atmosphere.",
+                    "text": "<strong>Start here</strong> if you need the music your venue plays every day, zone by zone.",
                     "link_text": "Signature Playlists",
                     "link": "services/signature-playlists"
                 },
                 {
-                    "text": "unifies your brand's sound.",
+                    "text": "If the room or the sound system also needs work, we do it <strong>in parallel</strong> with your playlists, so the music plays through a system tuned for your space.",
+                    "link_text": "Audio Upgrades",
+                    "link": "services/audio-upgrades"
+                },
+                {
+                    "text": "For a brand with several locations or a new opening, <strong>Sonic Identity comes first</strong>: it sets the rules, and Signature Playlists put them into practice in every space.",
                     "link_text": "Sonic Identity",
                     "link": "services/sonic-identity"
                 },
                 {
-                    "text": "choreograph special moments.",
+                    "text": "For a single date, <strong>on its own or alongside</strong> any of the other services.",
                     "link_text": "Event Soundtracks",
                     "link": "services/event-soundtracks"
-                },
-                {
-                    "text": "optimize acoustic quality.",
-                    "link_text": "Audio Upgrades",
-                    "link": "services/audio-upgrades"
                 }
-            ]
+            ],
+            "image_alt": "A hand raising a sparkling cocktail glass against a blue sky"
         },
         "cta": {
             "title": "Tell us about your space.",
             "subtitle": "We reply within 24 hours with the service that fits and what happens next.",
             "contact_btn": "Talk to us about your space",
-            "industries_btn": "See Industries we serve",
+            "industries_btn": "See the industries we serve",
             "location": "Athens, Greece"
         }
     },
