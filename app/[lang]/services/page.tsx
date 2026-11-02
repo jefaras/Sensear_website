@@ -127,11 +127,10 @@ export default async function ServicesV3({ params }: { params: Promise<{ lang: L
                         </ScrollReveal>
                     </div>
 
-                    {/* TODO: replace image (ed-services-block: workshop with a venue team). Placeholder until JEF supplies the photo. */}
                     <ServiceRow
                         service={content.services.experience_design}
                         href={localizedPath('/services/experience-design')}
-                        image="/images/industries/hotels-resorts-luxury-hotel-lobby.jpg"
+                        image="/images/services/experience-design/experience-design-services-block.jpg"
                         imageSide="left"
                     />
                 </div>

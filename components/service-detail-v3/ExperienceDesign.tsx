@@ -14,10 +14,11 @@ export interface ExperienceDesignContent {
     hero: { title: string; subtitle: string; description: string; explore_cta: string; audit_cta: string; image_alt: string };
     intro: { title: string; paragraphs: string[] };
     hotel_moments: { title: string; intro: string; items: Item[]; closing: string; image_alt: string };
+    event_moments: { title: string; intro: string; items: Item[]; closing: string; image_alt?: string };
     layers: { title: string; intro: string; items: Item[] };
     what_we_do: { title: string; items: Item[]; image_alt?: string };
     perfect_for: { title: string; items: LinkedItem[]; image_alt?: string };
-    process: { title: string; steps: Item[] };
+    process: { title: string; steps: Item[]; image_alt?: string };
     ways_to_start: { title: string; items: Item[] };
     pricing: { title: string; body: string };
     method: { title: string; intro: string; items: Item[]; closing: string; image_alt: string };
@@ -29,7 +30,7 @@ export interface ExperienceDesignContent {
 interface ExperienceDesignProps {
     lang: Locale;
     content: ExperienceDesignContent;
-    images: { hero: string; hotelMoments: string; included: string; forWhom: string; method: string; cta: string };
+    images: { hero: string; hotelMoments: string; events: string; included: string; forWhom: string; process: string; method: string; cta: string };
     /** Per-locale emphasis words (exact substrings of the headings). */
     em: { statement: string; cta: string };
 }
@@ -167,6 +168,38 @@ export function ExperienceDesign({ lang, content, images, em }: ExperienceDesign
                 </div>
             </section>
 
+            {/* 3b. What it can look like at an event: moments left, image right (image first on phones).
+                It shares the hotel section's background, so the two examples read as a pair. */}
+            <section className="relative overflow-hidden pt-[clamp(54px,4.26vw,75px)] pb-[clamp(94px,7.39vw,130px)]">
+                <DriftOrb
+                    className="h-[46vw] max-h-[640px] w-[46vw] max-w-[640px]"
+                    style={{ bottom: '6%', left: '-6%', background: 'radial-gradient(circle,rgba(250,235,227,0.07),rgba(250,235,227,0) 62%)' }}
+                    duration={21}
+                />
+                <div className={container}>
+                    <div className="grid grid-cols-1 items-center gap-[clamp(53px,4.2vw,74px)] lg:grid-cols-[1.05fr_0.95fr]">
+                        <ScrollReveal direction="right" className="lg:order-2">
+                            <div className="relative aspect-[4/4.4] overflow-hidden rounded-lg">
+                                <Image src={images.events} alt={content.event_moments.image_alt ?? content.event_moments.title} fill sizes="(max-width: 1024px) 100vw, 46vw" className="object-cover" />
+                                <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(11,10,10,0)_55%,rgba(11,10,10,0.5))]" />
+                            </div>
+                        </ScrollReveal>
+                        <div>
+                            <ScrollReveal delay={0.06}>
+                                <h2 className={`mb-[clamp(17px,1.31vw,23px)] ${h2Class}`}>{content.event_moments.title}</h2>
+                            </ScrollReveal>
+                            <ScrollReveal delay={0.1}>
+                                <p className={`mb-[clamp(28px,2.22vw,39px)] ${leadClass}`}>{content.event_moments.intro}</p>
+                            </ScrollReveal>
+                            <GoldDotRows items={content.event_moments.items} />
+                            <ScrollReveal delay={0.1}>
+                                <p className={`mt-[clamp(24px,1.9vw,33px)] ${leadClass}`}>{content.event_moments.closing}</p>
+                            </ScrollReveal>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             {/* 4. Four layers we design */}
             <section className={`relative overflow-hidden py-[clamp(101px,7.95vw,140px)] ${panel}`}>
                 <div className={container}>
@@ -188,17 +221,17 @@ export function ExperienceDesign({ lang, content, images, em }: ExperienceDesign
                 </div>
             </section>
 
-            {/* 5. What's included: list left, image right (image first on phones). The page's photo
-                sections alternate sides: hotel moments left, this one right, perfect for left, method right. */}
+            {/* 5. What's included: image left, list right. The page's photo sections alternate sides:
+                hotel left, event right, included left, perfect for right, process left, method right. */}
             <section className="relative overflow-hidden py-[clamp(108px,8.52vw,150px)] pb-[clamp(94px,7.39vw,130px)]">
                 <DriftOrb
                     className="h-[46vw] max-h-[640px] w-[46vw] max-w-[640px]"
-                    style={{ top: '6%', left: '-6%', background: 'radial-gradient(circle,rgba(240,189,149,0.10),rgba(240,189,149,0) 62%)' }}
+                    style={{ top: '6%', right: '-6%', background: 'radial-gradient(circle,rgba(240,189,149,0.10),rgba(240,189,149,0) 62%)' }}
                     duration={20}
                 />
                 <div className={container}>
-                    <div className="grid grid-cols-1 items-center gap-[clamp(53px,4.2vw,74px)] lg:grid-cols-[1.05fr_0.95fr]">
-                        <ScrollReveal direction="right" className="lg:order-2">
+                    <div className="grid grid-cols-1 items-center gap-[clamp(53px,4.2vw,74px)] lg:grid-cols-[0.95fr_1.05fr]">
+                        <ScrollReveal direction="left">
                             <div className="relative aspect-[4/4.6] overflow-hidden rounded-lg">
                                 <Image src={images.included} alt={content.what_we_do.image_alt ?? content.what_we_do.title} fill sizes="(max-width: 1024px) 100vw, 46vw" className="object-cover" />
                                 <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(11,10,10,0)_55%,rgba(11,10,10,0.5))]" />
@@ -214,16 +247,16 @@ export function ExperienceDesign({ lang, content, images, em }: ExperienceDesign
                 </div>
             </section>
 
-            {/* 6. Perfect for: image left, rows right (rows first on phones), as in the flipped service pages */}
+            {/* 6. Perfect for: rows left, image right, as in the service pages' "for whom" block */}
             <section className={`relative overflow-hidden py-[clamp(101px,7.95vw,140px)] ${panel}`}>
                 <DriftOrb
                     className="h-[46vw] max-h-[640px] w-[46vw] max-w-[640px]"
-                    style={{ bottom: '4%', right: '-6%', background: 'radial-gradient(circle,rgba(250,235,227,0.07),rgba(250,235,227,0) 62%)' }}
+                    style={{ bottom: '4%', left: '-6%', background: 'radial-gradient(circle,rgba(250,235,227,0.07),rgba(250,235,227,0) 62%)' }}
                     duration={21}
                 />
                 <div className={container}>
-                    <div className="grid grid-cols-1 items-center gap-[clamp(53px,4.2vw,74px)] lg:grid-cols-[0.95fr_1.05fr]">
-                        <div className="lg:order-2">
+                    <div className="grid grid-cols-1 items-center gap-[clamp(53px,4.2vw,74px)] lg:grid-cols-[1.05fr_0.95fr]">
+                        <div>
                             <ScrollReveal delay={0.06}>
                                 <h2 className={`mb-[clamp(28px,2.22vw,39px)] ${h2Class}`}>{content.perfect_for.title}</h2>
                             </ScrollReveal>
@@ -240,7 +273,7 @@ export function ExperienceDesign({ lang, content, images, em }: ExperienceDesign
                                 ))}
                             </StaggerChildren>
                         </div>
-                        <ScrollReveal direction="left" className="lg:order-1">
+                        <ScrollReveal direction="right">
                             <div className="relative aspect-[4/4.6] overflow-hidden rounded-lg">
                                 <Image src={images.forWhom} alt={content.perfect_for.image_alt ?? content.perfect_for.title} fill sizes="(max-width: 1024px) 100vw, 46vw" className="object-cover" />
                                 <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(11,10,10,0)_55%,rgba(11,10,10,0.5))]" />
@@ -250,7 +283,7 @@ export function ExperienceDesign({ lang, content, images, em }: ExperienceDesign
                 </div>
             </section>
 
-            {/* 7. From first call to launch: numbered steps, as in the service pages' process block */}
+            {/* 7. From first call to launch: image left, numbered steps right in two columns */}
             <section className="relative overflow-hidden py-[clamp(108px,8.52vw,150px)]">
                 <DriftOrb
                     className="h-[46vw] max-h-[640px] w-[46vw] max-w-[640px]"
@@ -258,18 +291,28 @@ export function ExperienceDesign({ lang, content, images, em }: ExperienceDesign
                     duration={22}
                 />
                 <div className={container}>
-                    <ScrollReveal delay={0.06}>
-                        <h2 className={`mb-[clamp(36px,3vw,53px)] ${h2Class}`}>{content.process.title}</h2>
-                    </ScrollReveal>
-                    <StaggerChildren staggerDelay={0.08} className="grid grid-cols-1 gap-x-[clamp(28px,2.22vw,39px)] sm:grid-cols-2 lg:grid-cols-3">
-                        {content.process.steps.map((step, i) => (
-                            <div key={i} className="h-full border-t border-[#faf6f1]/12 py-[clamp(20px,1.59vw,28px)]">
-                                <span className="se-gold-text font-didot mb-[clamp(10px,0.8vw,14px)] block text-[clamp(1.6rem,2vw,2.2rem)] leading-none">{String(i + 1).padStart(2, '0')}</span>
-                                <h3 className={h3Class}>{step.title}</h3>
-                                <p className={itemTextClass}>{step.description}</p>
+                    <div className="grid grid-cols-1 items-center gap-[clamp(53px,4.2vw,74px)] lg:grid-cols-[0.95fr_1.05fr]">
+                        <ScrollReveal direction="left">
+                            <div className="relative aspect-[4/4.6] overflow-hidden rounded-lg">
+                                <Image src={images.process} alt={content.process.image_alt ?? content.process.title} fill sizes="(max-width: 1024px) 100vw, 46vw" className="object-cover" />
+                                <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(11,10,10,0)_55%,rgba(11,10,10,0.5))]" />
                             </div>
-                        ))}
-                    </StaggerChildren>
+                        </ScrollReveal>
+                        <div>
+                            <ScrollReveal delay={0.06}>
+                                <h2 className={`mb-[clamp(28px,2.22vw,39px)] ${h2Class}`}>{content.process.title}</h2>
+                            </ScrollReveal>
+                            <StaggerChildren staggerDelay={0.08} className="grid grid-cols-1 gap-x-[clamp(28px,2.22vw,39px)] sm:grid-cols-2">
+                                {content.process.steps.map((step, i) => (
+                                    <div key={i} className="h-full border-t border-[#faf6f1]/12 py-[clamp(20px,1.59vw,28px)]">
+                                        <span className="se-gold-text font-didot mb-[clamp(10px,0.8vw,14px)] block text-[clamp(1.6rem,2vw,2.2rem)] leading-none">{String(i + 1).padStart(2, '0')}</span>
+                                        <h3 className={h3Class}>{step.title}</h3>
+                                        <p className={itemTextClass}>{step.description}</p>
+                                    </div>
+                                ))}
+                            </StaggerChildren>
+                        </div>
+                    </div>
                 </div>
             </section>
 

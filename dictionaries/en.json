@@ -2454,8 +2454,35 @@
                     "description": "A small, thoughtful follow-up keeps the connection and gives the guest a reason to return or to recommend you."
                 }
             ],
-            "closing": "The same method works for restaurants, bars, retail stores, wellness spaces and events.",
+            "closing": "The same method works for restaurants, bars, retail stores and wellness spaces.",
             "image_alt": "Hotel terrace prepared for the evening"
+        },
+        "event_moments": {
+            "title": "What it can look like at an event",
+            "intro": "An event is a whole guest journey in a few hours, so every moment counts. We design private celebrations, corporate events and brand launches as one story, so guests remember them and leave a little different from how they came.",
+            "items": [
+                {
+                    "title": "The invitation",
+                    "description": "The invitation, reminders and directions set the tone before the first guest arrives."
+                },
+                {
+                    "title": "The arrival",
+                    "description": "We plan the first minutes: how guests are welcomed, what they hear and see, and where they go first."
+                },
+                {
+                    "title": "The high point",
+                    "description": "Every event needs one moment people will talk about. We design it and build the rest of the event around it."
+                },
+                {
+                    "title": "The close",
+                    "description": "The last moment is designed as carefully as the first, so the event ends on a high point."
+                },
+                {
+                    "title": "After the event",
+                    "description": "A thoughtful follow-up, such as a photo, a playlist or a small gift, keeps the moment alive."
+                }
+            ],
+            "closing": "For a private celebration, the story is personal. For a corporate event, it brings the company's values to its people. For a brand launch, it lets guests feel the brand, not just see it."
         },
         "layers": {
             "title": "Four layers we design",

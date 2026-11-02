@@ -9,17 +9,16 @@ import { ExperienceDesign } from '@/components/service-detail-v3/ExperienceDesig
 
 const ROUTE = '/services/experience-design';
 
-// TODO: replace image. All four are existing site photos standing in until JEF supplies
-// ed-hero, ed-hotel-moments, ed-method and ed-cta (brief, section 8). Final files go to
-// /images/services/experience-design/experience-design-<name>.jpg, like the other service pages.
+// JEF's chosen photos. A replacement keeps the same file name, so nothing here changes.
 const IMAGES = {
-    hero: '/images/industries/hotels-resorts-luxury-hotel-lobby.jpg',
-    hotelMoments: '/images/industries/hotels-resorts-curated-music-ambiance.jpg',
-    // TODO: replace image (ed-included, ed-for-whom). Existing site photos standing in.
-    included: '/images/industries/restaurants-bars-restaurant-dining-room.jpg',
-    forWhom: '/images/industries/industry-restaurants-bars.jpg',
-    method: '/images/about/about-unique-approach.jpg',
-    cta: '/images/industries/restaurants-bars-restaurant-dining-room.jpg',
+    hero: '/images/services/experience-design/experience-design-hero.jpg',
+    hotelMoments: '/images/services/experience-design/experience-design-hotel-moments.jpg',
+    events: '/images/services/experience-design/experience-design-events.jpg',
+    included: '/images/services/experience-design/experience-design-included.jpg',
+    forWhom: '/images/services/experience-design/experience-design-for-whom.jpg',
+    process: '/images/services/experience-design/experience-design-process.jpg',
+    method: '/images/services/experience-design/experience-design-method.jpg',
+    cta: '/images/services/experience-design/experience-design-cta.jpg',
 };
 
 const EM = {
