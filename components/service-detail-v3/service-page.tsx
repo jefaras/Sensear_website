@@ -55,8 +55,8 @@ export const SERVICE_CONFIG: Record<string, SlugConfig> = {
         section5Key: 'identity',
         images: { hero: img('sonic-identity', 'hero'), feature: img('sonic-identity', 'workshop'), forwhom: img('sonic-identity', 'development'), section5: img('sonic-identity', 'implementation') },
         em: {
-            el: { statement: 'ταυτότητα', feature: 'branding', forwhom: 'brands', section5: 'ταυτότητα', cta: 'ταυτότητα' },
-            en: { statement: 'identity', feature: '', forwhom: '', section5: 'identity', cta: 'identity' },
+            el: { statement: 'ταυτότητα', feature: '', forwhom: '', section5: 'εφαρμόζεται', cta: 'ταυτότητα' },
+            en: { statement: 'identity', feature: '', forwhom: '', section5: 'used', cta: 'identity' },
         },
     },
     'audio-upgrades': {

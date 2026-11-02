@@ -2098,43 +2098,48 @@
     "sonic_identity": {
         "meta": {
             "title": "Sonic identity design for brands",
-            "description": "A musical direction your teams and agencies can follow: references, written guidelines and a map of how each space should sound."
+            "description": "A written musical direction for your brand: one workshop with your team, reference playlists and PDF guidelines your agencies and partners can follow."
         },
         "hero": {
             "title": "Sonic Identity:",
             "subtitle": "Defining how your brand sounds.",
-            "description": "A practical audio blueprint that keeps your label distinct & consistent.",
+            "description": "A written musical direction that keeps your brand recognisable in every space and every channel.",
             "side_label": "SERVICES — SONIC IDENTITY",
             "explore_cta": "Explore the service",
             "image_kicker": "SONIC DNA",
             "image_caption": "A signature you can hear."
         },
         "intro": {
-            "title": "The rules that keep a brand recognisable in sound",
-            "p1": "A workshop with your team defines the musical direction. You receive <strong>reference playlists</strong>, <strong>written guidelines</strong> and a map of how each space and hour should sound, so a new opening or an agency can follow it without you in the room.",
-            "p2": "Original composition and sonic logos can be scoped into a project on request. They are not part of the standard engagement."
+            "title": "What Sonic Identity covers",
+            "p1": "<strong>Sonic Identity</strong> defines how your brand sounds, in your spaces and in every channel where music matters. We set the direction with your <strong>marketing and business teams</strong> and write it down as <strong>guidelines you own</strong>.",
+            "p2": "Your teams, agencies and partners can then follow it at a new opening or in a new campaign, <strong>without you in the room</strong>. Sonic Identity sets the rules once; Signature Playlists are the daily music that follows them."
         },
         "what_we_do": {
-            "title": "What we do",
+            "title": "What's included",
             "subtitle": "From musical direction to rollout",
             "items": [
                 {
-                    "title": "Sonic DNA workshop",
-                    "description": "Guided session exploring brand values, guest profiles, and emotional targets through mood boards and reference tracks."
+                    "title": "One workshop with your team",
+                    "description": "A session of 30 minutes to an hour with your marketing and business teams, ideally in person at your venue or offices."
                 },
                 {
-                    "title": "Space and journey map",
-                    "description": "Clear plan for how each space and time of day should sound, supporting arrivals, service flow, and key touchpoints."
+                    "title": "Reference playlists",
+                    "description": "Two or three sample playlists that show the direction in practice."
                 },
                 {
-                    "title": "Guidelines for teams",
-                    "description": "Concise sonic framework that keeps music choices on brand across internal teams, agencies, and partners."
+                    "title": "Written guidelines",
+                    "description": "A PDF with genres, tempo, volume and clear do's and don'ts, and a map of how each space and hour of the day should sound."
                 },
                 {
-                    "title": "Implementation roadmap",
-                    "description": "Practical path from current sound to new identity, aligned with your brand calendar and rollout timeline."
+                    "title": "Yours to share",
+                    "description": "You own the guidelines and can pass them to your agencies and partners."
+                },
+                {
+                    "title": "Original music on request",
+                    "description": "Original music and sonic logos can be added to the project, composed by our partners under our direction."
                 }
-            ]
+            ],
+            "image_alt": "A row of vinyl records with one album cover facing out"
         },
         "perfect_for": {
             "title": "Perfect for",
@@ -2164,20 +2169,59 @@
                     "description": "with brand vision but no in-house audio expertise.",
                     "link": ""
                 }
-            ]
+            ],
+            "image_alt": "A listening bar with record shelves, a turntable and a large speaker"
         },
         "identity": {
-            "title": "One identity, clearly defined",
+            "title": "Where it is used",
+            "image_alt": "A recording studio control room with a mixing desk and a pink chair",
             "items": [
                 {
-                    "title": "Coherent, but also flexible",
-                    "description": "Your brand sounds recognizable at all locations & media while respecting what makes each space unique."
+                    "title": "In your spaces",
+                    "description": "Through Signature Playlists, the guidelines become the daily music in every location."
+                },
+                {
+                    "title": "In your ads",
+                    "description": "Instagram, TikTok, TV and radio ads use music that sounds like the same brand."
+                },
+                {
+                    "title": "At every new opening",
+                    "description": "A new location starts from the guidelines instead of from scratch."
+                },
+                {
+                    "title": "Reviews and updates",
+                    "description": "How often we review and update the guidelines depends on your contract and your needs."
                 }
             ]
         },
+        "process": {
+            "title": "From first meeting to guidelines",
+            "steps": [
+                {
+                    "title": "Free first call",
+                    "description": "We talk about your brand, your locations and where music matters to you."
+                },
+                {
+                    "title": "Workshop",
+                    "description": "At least one meeting in person at your venue or offices, with more meetings or calls if needed."
+                },
+                {
+                    "title": "Playlists and guidelines",
+                    "description": "We prepare the reference playlists and write the guidelines, usually in 2 to 3 weeks, up to a month for a large project."
+                },
+                {
+                    "title": "Handover and rollout",
+                    "description": "You receive the PDF, and we can put it into practice through Signature Playlists and your other media."
+                }
+            ]
+        },
+        "pricing": {
+            "title": "How pricing works",
+            "body": "Sonic Identity is a <strong>one-time project fee</strong>, set by the number of locations, the workshops and the deliverables. The first call or visit is <strong>free</strong>, and a <strong>deposit</strong> confirms the project. Original music and sonic logos are quoted separately on request, and reviews after handover depend on your contract."
+        },
         "cta": {
             "title": "Tell us where your brand needs to sound the same.",
-            "description": "After a call and a visit to the space, you usually receive a written proposal within 7 to 10 days.",
+            "description": "The first call or visit is free.",
             "button": "Define your brand's sonic DNA",
             "explore": "Explore how our",
             "signature_playlists": "Signature Playlists",
