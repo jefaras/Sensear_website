@@ -188,16 +188,17 @@ export function ExperienceDesign({ lang, content, images, em }: ExperienceDesign
                 </div>
             </section>
 
-            {/* 5. What's included: image left, list right, as in the service pages' feature list */}
+            {/* 5. What's included: list left, image right (image first on phones). The page's photo
+                sections alternate sides: hotel moments left, this one right, perfect for left, method right. */}
             <section className="relative overflow-hidden py-[clamp(108px,8.52vw,150px)] pb-[clamp(94px,7.39vw,130px)]">
                 <DriftOrb
                     className="h-[46vw] max-h-[640px] w-[46vw] max-w-[640px]"
-                    style={{ top: '6%', right: '-6%', background: 'radial-gradient(circle,rgba(240,189,149,0.10),rgba(240,189,149,0) 62%)' }}
+                    style={{ top: '6%', left: '-6%', background: 'radial-gradient(circle,rgba(240,189,149,0.10),rgba(240,189,149,0) 62%)' }}
                     duration={20}
                 />
                 <div className={container}>
-                    <div className="grid grid-cols-1 items-center gap-[clamp(53px,4.2vw,74px)] lg:grid-cols-[0.95fr_1.05fr]">
-                        <ScrollReveal direction="left">
+                    <div className="grid grid-cols-1 items-center gap-[clamp(53px,4.2vw,74px)] lg:grid-cols-[1.05fr_0.95fr]">
+                        <ScrollReveal direction="right" className="lg:order-2">
                             <div className="relative aspect-[4/4.6] overflow-hidden rounded-lg">
                                 <Image src={images.included} alt={content.what_we_do.image_alt ?? content.what_we_do.title} fill sizes="(max-width: 1024px) 100vw, 46vw" className="object-cover" />
                                 <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(11,10,10,0)_55%,rgba(11,10,10,0.5))]" />
@@ -213,16 +214,16 @@ export function ExperienceDesign({ lang, content, images, em }: ExperienceDesign
                 </div>
             </section>
 
-            {/* 6. Perfect for: rows left, image right, as in the service pages' "for whom" block */}
+            {/* 6. Perfect for: image left, rows right (rows first on phones), as in the flipped service pages */}
             <section className={`relative overflow-hidden py-[clamp(101px,7.95vw,140px)] ${panel}`}>
                 <DriftOrb
                     className="h-[46vw] max-h-[640px] w-[46vw] max-w-[640px]"
-                    style={{ bottom: '4%', left: '-6%', background: 'radial-gradient(circle,rgba(250,235,227,0.07),rgba(250,235,227,0) 62%)' }}
+                    style={{ bottom: '4%', right: '-6%', background: 'radial-gradient(circle,rgba(250,235,227,0.07),rgba(250,235,227,0) 62%)' }}
                     duration={21}
                 />
                 <div className={container}>
-                    <div className="grid grid-cols-1 items-center gap-[clamp(53px,4.2vw,74px)] lg:grid-cols-[1.05fr_0.95fr]">
-                        <div>
+                    <div className="grid grid-cols-1 items-center gap-[clamp(53px,4.2vw,74px)] lg:grid-cols-[0.95fr_1.05fr]">
+                        <div className="lg:order-2">
                             <ScrollReveal delay={0.06}>
                                 <h2 className={`mb-[clamp(28px,2.22vw,39px)] ${h2Class}`}>{content.perfect_for.title}</h2>
                             </ScrollReveal>
@@ -239,7 +240,7 @@ export function ExperienceDesign({ lang, content, images, em }: ExperienceDesign
                                 ))}
                             </StaggerChildren>
                         </div>
-                        <ScrollReveal direction="right">
+                        <ScrollReveal direction="left" className="lg:order-1">
                             <div className="relative aspect-[4/4.6] overflow-hidden rounded-lg">
                                 <Image src={images.forWhom} alt={content.perfect_for.image_alt ?? content.perfect_for.title} fill sizes="(max-width: 1024px) 100vw, 46vw" className="object-cover" />
                                 <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(11,10,10,0)_55%,rgba(11,10,10,0.5))]" />
