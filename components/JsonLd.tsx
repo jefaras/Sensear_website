@@ -125,9 +125,11 @@ interface ServiceJsonLdProps {
     name: string
     description: string
     url: string
+    /** Country name, e.g. "Greece". Omitted from the markup when not given. */
+    areaServed?: string
 }
 
-export function ServiceJsonLd({ name, description, url }: ServiceJsonLdProps) {
+export function ServiceJsonLd({ name, description, url, areaServed }: ServiceJsonLdProps) {
     const service = {
         '@context': 'https://schema.org',
         '@type': 'Service',
@@ -138,7 +140,8 @@ export function ServiceJsonLd({ name, description, url }: ServiceJsonLdProps) {
             '@type': 'Organization',
             name: 'SensEar Music',
             url: baseUrl
-        }
+        },
+        ...(areaServed && { areaServed: { '@type': 'Country', name: areaServed } })
     }
 
     return (

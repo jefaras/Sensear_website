@@ -41,7 +41,7 @@ interface ServiceDetailProps {
     em: { statement: string; feature: string; forwhom: string; section5: string; cta: string };
 }
 
-const GoldDotRows = ({ items }: { items: { title: string; description: string }[] }) => (
+export const GoldDotRows = ({ items }: { items: { title: string; description: string }[] }) => (
     <StaggerChildren staggerDelay={0.08}>
         {items.map((item, i) => (
             <div
