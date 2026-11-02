@@ -20,10 +20,9 @@ requested for `/el/dorean-axiologisi/`.
 **Deployed and verified live by Cowork (third upload):** Facebook page in the schema `sameAs`; JPG share
 image for the blog post `building-brand-people-can-hear` (its page image is WebP); T6 Signature Playlists.
 
-**Committed, not yet deployed:** sitemap `lastmod` override for Signature Playlists; the "four days" proposal promise corrected to "usually within 7 to 10 days" on five pages, both languages; T6 Audio Upgrades and Event Soundtracks; the mirrored zig-zag on the pages with a case section (see T6). Home "who we are" statement: smaller text, two paragraphs, and the first sentence now "…with clients across Greece" in both languages (`905c83a`, `e258d2f`, `5fd9148`).
+**Committed, not yet deployed:** sitemap `lastmod` override for Signature Playlists; the "four days" proposal promise corrected to "usually within 7 to 10 days" on five pages, both languages; T6 Audio Upgrades, Event Soundtracks and Sonic Identity; the mirrored zig-zag on the pages with a case section (see T6). Home "who we are" statement: smaller text, two paragraphs, and the first sentence now "…with clients across Greece" in both languages (`905c83a`, `e258d2f`, `5fd9148`).
 
-**Open:** T6 (Signature Playlists, Audio Upgrades and Event Soundtracks done; Sonic Identity and the
-services hub next). T11 after T6 (low).
+**Open:** T6 (all four service pages done; the services hub is last). T11 after T6 (low).
 **Closed:** T10 (option A, see T10). T7 is dropped: Claude (Cowork) sends the IndexNow ping after each deploy.
 
 | Item | State on 30 Oct (after deploy) |
@@ -121,7 +120,7 @@ Follow the verification gates in `CLAUDE.md` for every code step: `npm run typec
 ### T5 — Complete the 3 service H1s (low) · DONE 30 Oct (subtitle moved inside the H1, deployed and verified live)
 - Change the 6 dictionary titles in section 1-C so the H1 reads as a full phrase (for example, merge it with the line that follows it). Keep the visual layout. Both languages.
 
-### T6 — Expand the five English service pages + Greek equivalents (medium, needs JEF) · Signature Playlists DONE 30 Oct (live) · Audio Upgrades and Event Soundtracks DONE 31 Oct (committed, not yet deployed)
+### T6 — Expand the five English service pages + Greek equivalents (medium, needs JEF) · Signature Playlists DONE 30 Oct (live) · Audio Upgrades and Event Soundtracks DONE 31 Oct · Sonic Identity DONE 2 Nov (committed, not yet deployed) · services hub left
 - **Signature Playlists, 30 Oct:** copy approved by JEF and committed in two parts. `b7c8069` adds optional
   blocks to the shared service layout (case, process, pricing, `image_alt`); pages without those keys are
   unchanged. `c92c1c5` is the copy itself (EN + EL), about 675 / 740 words of main content, up from 247.
@@ -184,8 +183,12 @@ Follow the verification gates in `CLAUDE.md` for every code step: `npm run typec
   Same layout as the other two pages (case photo left). JEF confirmed: "George and Katerina", "Levantis",
   offers usually within 7 to 10 days, "a deposit secures your date".
   - **Rollback:** `git revert c864f25` restores the old page; then rebuild `out/` and upload.
-- **Sonic Identity is next** (2 Nov). Draft written 2 Nov (`docs/drafts/sonic-identity-copy-draft.md`, not
-  committed), awaiting approval. JEF's facts (2 Nov), the only facts to use:
+- **Sonic Identity, 2 Nov:** copy approved by JEF and committed (`7197cf4`, EN + EL, about 500 / 570 words,
+  up from 300), sitemap override 2026-11-02. No case section (no project yet), so the page keeps the
+  unmirrored layout; add a `case_study` and a photo when a project exists, and the zig-zag will mirror
+  like the other three pages.
+  - **Rollback:** `git revert 7197cf4` restores the old page; then rebuild `out/` and upload.
+- Sonic Identity facts. JEF's facts (2 Nov), the only facts to use:
   - **No sonic identity project done yet**, and none close to one: no case section on this page.
   - Workshop: the client's marketing and business teams; 30 minutes to an hour; in person preferred,
     online possible; one session is usually enough. At least one meeting in person at the client's venue
