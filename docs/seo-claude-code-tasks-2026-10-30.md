@@ -184,6 +184,21 @@ Follow the verification gates in `CLAUDE.md` for every code step: `npm run typec
   Same layout as the other two pages (case photo left). JEF confirmed: "George and Katerina", "Levantis",
   offers usually within 7 to 10 days, "a deposit secures your date".
   - **Rollback:** `git revert c864f25` restores the old page; then rebuild `out/` and upload.
+- **Sonic Identity is next** (2 Nov). Draft written 2 Nov (`docs/drafts/sonic-identity-copy-draft.md`, not
+  committed), awaiting approval. JEF's facts (2 Nov), the only facts to use:
+  - **No sonic identity project done yet**, and none close to one: no case section on this page.
+  - Workshop: the client's marketing and business teams; 30 minutes to an hour; in person preferred,
+    online possible; one session is usually enough. At least one meeting in person at the client's venue
+    or offices, then more meetings or calls if needed.
+  - Deliverables: two or three reference (sample) playlists; written guidelines (genres, tempo, volume,
+    do's and don'ts) as a PDF. Keep it light.
+  - Original music and sonic logos: on request, composed by partners with SensEar's guidance and ideas.
+  - Rollout: through Signature Playlists and any other media where music matters (Instagram, TikTok, TV
+    and radio ads). Reviews and updates depend on the contract and the client's needs.
+  - Pricing: one-time project fee, driven by number of locations, workshops and deliverables. Deposit
+    required. The first call or visit is free.
+  - Timeline: 2 to 3 weeks, up to a month for a large project.
+  - The client owns the guidelines and can pass them to agencies and partners.
 - Event Soundtracks facts. JEF's facts (31 Oct), the only facts to use:
   - Case: Levantis restaurant, Paros, may be named (already a case study: Neva Bergman's exhibition
     opening "Quiet Testimony"). About 100 guests; the night went very smoothly and the organiser was very
