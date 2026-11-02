@@ -23,8 +23,8 @@ export default async function ServicesV3({ params }: { params: Promise<{ lang: L
     const content = dict.services_page;
     const localizedPath = (path: string) => getLocalizedPath(lang, path);
     const em = lang === 'el'
-        ? { intro: 'επιχείρησή', services: 'εκκίνησής', delivery: 'λειτουργούν', cta: 'αφετηρία' }
-        : { intro: 'business', services: 'starting', delivery: 'deliver', cta: 'possibilities' };
+        ? { intro: 'υπηρεσία', services: 'ξεκινάτε', delivery: 'συνδυάζονται', cta: 'χώρο' }
+        : { intro: 'service', services: 'start', delivery: 'combine', cta: 'space' };
 
     return (
         <V3Root>

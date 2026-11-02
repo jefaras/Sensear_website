@@ -12,6 +12,7 @@ interface HowItWorksProps {
         title: string;
         subtitle: string;
         points: { link: string; link_text: string; text: string }[];
+        image_alt?: string;
     };
 }
 
@@ -29,7 +30,7 @@ export function HowItWorks({ lang, emWord, delivery }: HowItWorksProps) {
                         <div className="relative aspect-[4/4.2] overflow-hidden rounded-lg">
                             <Image
                                 src="/images/services/services-delivery-process.jpg"
-                                alt={delivery.title}
+                                alt={delivery.image_alt ?? delivery.title}
                                 fill
                                 sizes="(max-width: 1024px) 100vw, 45vw"
                                 className="object-cover"
@@ -65,7 +66,10 @@ export function HowItWorks({ lang, emWord, delivery }: HowItWorksProps) {
                                         >
                                             {point.link_text}
                                         </Link>
-                                        <p className="text-[clamp(0.92rem,1.05vw,1.15rem)] leading-[1.55] text-[#faf6f1]/55">{point.text}</p>
+                                        <p
+                                            className="se-html text-[clamp(0.92rem,1.05vw,1.15rem)] leading-[1.55] text-[#faf6f1]/55"
+                                            dangerouslySetInnerHTML={{ __html: point.text }}
+                                        />
                                     </div>
                                 </div>
                             ))}

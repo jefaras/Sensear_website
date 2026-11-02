@@ -9,6 +9,7 @@ interface ServiceCardProps {
         desc: string;
         ideal_for: string;
         cta: string;
+        image_alt?: string;
     };
     href: string;
     image: string;
@@ -20,7 +21,7 @@ export function ServiceCard({ service, href, image }: ServiceCardProps) {
             <Link href={href} className="relative block aspect-[16/9] overflow-hidden" tabIndex={-1} aria-hidden="true">
                 <Image
                     src={image}
-                    alt={service.title}
+                    alt={service.image_alt ?? service.title}
                     fill
                     sizes="(max-width: 768px) 100vw, 50vw"
                     className="object-cover transition-transform duration-700 group-hover:scale-[1.06]"
@@ -34,9 +35,10 @@ export function ServiceCard({ service, href, image }: ServiceCardProps) {
                 <p className="se-gold-text font-didot mb-[clamp(13px,1.02vw,18px)] text-[clamp(1.06rem,1.2vw,1.32rem)]">
                     {service.subtitle}
                 </p>
-                <p className="mb-[clamp(13px,1.02vw,18px)] text-[clamp(0.92rem,1.05vw,1.15rem)] leading-[1.6] text-[#faf6f1]/62">
-                    {service.desc}
-                </p>
+                <p
+                    className="se-html mb-[clamp(13px,1.02vw,18px)] text-[clamp(0.92rem,1.05vw,1.15rem)] leading-[1.6] text-[#faf6f1]/62"
+                    dangerouslySetInnerHTML={{ __html: service.desc }}
+                />
                 <p className="mb-[clamp(20px,1.59vw,28px)] text-[clamp(0.88rem,1vw,1.1rem)] leading-[1.55] text-[#faf6f1]/50">
                     {goldPrefix(service.ideal_for)}
                 </p>
