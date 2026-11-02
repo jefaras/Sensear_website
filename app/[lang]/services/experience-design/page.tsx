@@ -14,6 +14,12 @@ const IMAGES = {
     hero: '/images/services/experience-design/experience-design-hero.jpg',
     hotelMoments: '/images/services/experience-design/experience-design-hotel-moments.jpg',
     events: '/images/services/experience-design/experience-design-events.jpg',
+    layers: [
+        '/images/services/experience-design/experience-design-layer-story.jpg',
+        '/images/services/experience-design/experience-design-layer-team.jpg',
+        '/images/services/experience-design/experience-design-layer-journey.jpg',
+        '/images/services/experience-design/experience-design-layer-details.jpg',
+    ],
     included: '/images/services/experience-design/experience-design-included.jpg',
     forWhom: '/images/services/experience-design/experience-design-for-whom.jpg',
     process: '/images/services/experience-design/experience-design-process.jpg',

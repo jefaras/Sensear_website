@@ -30,7 +30,8 @@ export interface ExperienceDesignContent {
 interface ExperienceDesignProps {
     lang: Locale;
     content: ExperienceDesignContent;
-    images: { hero: string; hotelMoments: string; events: string; included: string; forWhom: string; process: string; method: string; cta: string };
+    /** `layers` holds one image per layer card, in the dictionary's order. */
+    images: { hero: string; hotelMoments: string; events: string; layers: string[]; included: string; forWhom: string; process: string; method: string; cta: string };
     /** Per-locale emphasis words (exact substrings of the headings). */
     em: { statement: string; cta: string };
 }
@@ -209,11 +210,15 @@ export function ExperienceDesign({ lang, content, images, em }: ExperienceDesign
                     <ScrollReveal delay={0.1}>
                         <p className={`mb-[clamp(36px,3vw,53px)] ${leadClass}`}>{content.layers.intro}</p>
                     </ScrollReveal>
-                    <StaggerChildren staggerDelay={0.08} className="grid grid-cols-1 gap-x-[clamp(28px,2.22vw,39px)] sm:grid-cols-2 lg:grid-cols-4">
+                    {/* Image cards, styled like the homepage journal cards; the gold number stands in for the tag. */}
+                    <StaggerChildren staggerDelay={0.1} className="grid grid-cols-1 gap-[clamp(20px,1.59vw,28px)] sm:grid-cols-2 lg:grid-cols-4">
                         {content.layers.items.map((item, i) => (
-                            <div key={i} className="h-full border-t border-[#faf6f1]/12 py-[clamp(20px,1.59vw,28px)]">
-                                <span className="mb-[clamp(14px,1.1vw,19px)] block h-[7px] w-[7px] rounded-full bg-[image:var(--gold)]" aria-hidden="true" />
-                                <h3 className={h3Class}>{item.title}</h3>
+                            <div key={i} className="flex flex-col">
+                                <div className="relative mb-[clamp(18px,1.42vw,25px)] aspect-[4/3] overflow-hidden rounded-lg">
+                                    <Image src={images.layers[i]} alt={item.title} fill sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw" className="object-cover" />
+                                </div>
+                                <span className="se-gold-text mb-3 text-[clamp(10px,0.74vw,13px)] font-bold tracking-[0.22em]">{String(i + 1).padStart(2, '0')}</span>
+                                <h3 className="mb-3 text-[clamp(1.18rem,1.34vw,1.47rem)] font-bold leading-[1.28]">{item.title}</h3>
                                 <p className={itemTextClass}>{item.description}</p>
                             </div>
                         ))}
