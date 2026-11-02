@@ -23,8 +23,8 @@ export default async function ServicesV3({ params }: { params: Promise<{ lang: L
     const content = dict.services_page;
     const localizedPath = (path: string) => getLocalizedPath(lang, path);
     const em = lang === 'el'
-        ? { intro: 'υπηρεσία', services: 'ξεκινάτε', delivery: 'συνδυάζονται', cta: 'χώρο' }
-        : { intro: 'service', services: 'start', delivery: 'combine', cta: 'space' };
+        ? { intro: 'υπηρεσία', services: 'ξεκινάτε', delivery: 'συνδυάζονται', beyond: 'ήχο', cta: 'χώρο' }
+        : { intro: 'service', services: 'start', delivery: 'combine', beyond: 'sound', cta: 'space' };
 
     return (
         <V3Root>
@@ -106,6 +106,36 @@ export default async function ServicesV3({ params }: { params: Promise<{ lang: L
             </section>
 
             <HowItWorks lang={lang} emWord={em.delivery} delivery={content.delivery} />
+
+            {/* Beyond sound: Experience Design is the wider service the four sound services sit
+                inside, so it gets its own section rather than a fifth row above. */}
+            <section className="relative overflow-hidden pt-[clamp(108px,8.52vw,150px)]">
+                <DriftOrb
+                    className="h-[46vw] max-h-[640px] w-[46vw] max-w-[640px]"
+                    style={{ top: '12%', right: '-6%', background: 'radial-gradient(circle,rgba(240,189,149,0.10),rgba(240,189,149,0) 62%)' }}
+                    duration={22}
+                />
+                <div className="relative z-10 mx-auto max-w-[min(1760px,100%)] px-[clamp(20px,1.59vw,28px)] sm:px-[clamp(27px,2.1vw,37px)]">
+                    <div className="mx-auto mb-[clamp(72px,5.68vw,100px)] max-w-[900px] text-center">
+                        <ScrollReveal delay={0.06}>
+                            <h2 className="mb-[clamp(15px,1.19vw,21px)] text-[clamp(2.3rem,4.6vw,3.91rem)] font-extrabold leading-[1.05] tracking-[-0.02em]">
+                                {emphasize(content.beyond_sound.title, em.beyond)}
+                            </h2>
+                        </ScrollReveal>
+                        <ScrollReveal delay={0.12}>
+                            <p className="text-[clamp(1.02rem,1.15vw,1.27rem)] text-[#faf6f1]/60">{content.beyond_sound.intro}</p>
+                        </ScrollReveal>
+                    </div>
+
+                    {/* TODO: replace image (ed-services-block: workshop with a venue team). Placeholder until JEF supplies the photo. */}
+                    <ServiceRow
+                        service={content.services.experience_design}
+                        href={localizedPath('/services/experience-design')}
+                        image="/images/industries/hotels-resorts-luxury-hotel-lobby.jpg"
+                        imageSide="left"
+                    />
+                </div>
+            </section>
 
             <PageCTA
                 heading={content.cta.title}
