@@ -64,7 +64,7 @@ export default async function BlogV3({ params }: { params: Promise<{ lang: Local
                 </div>
             </section>
 
-            <NewsletterCTA emWord={em.newsletter} cta={content.newsletter_cta} />
+            <NewsletterCTA emWord={em.newsletter} cta={content.newsletter_cta} recaptchaNotice={dict.home.footer.recaptcha_notice} />
         </V3Root>
     );
 }

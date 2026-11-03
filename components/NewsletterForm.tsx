@@ -5,12 +5,28 @@ import { ArrowRight } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { executeRecaptcha } from "@/lib/recaptcha-client";
 
+/** The reCAPTCHA line under the form: "{before} {privacy} {and} {terms}", the two terms linked to Google. */
+export interface RecaptchaNotice {
+    before: string;
+    privacy: string;
+    and: string;
+    terms: string;
+}
+
+const DEFAULT_RECAPTCHA_NOTICE: RecaptchaNotice = {
+    before: "Protected by reCAPTCHA.",
+    privacy: "Privacy",
+    and: "&",
+    terms: "Terms",
+};
+
 interface NewsletterFormProps {
     placeholder: string;
     buttonText: string;
     source?: string;
     variant?: "footer" | "cta" | "footerV3" | "ctaV3";
     successText?: string;
+    recaptchaNotice?: RecaptchaNotice;
 }
 
 export function NewsletterForm({
@@ -18,7 +34,8 @@ export function NewsletterForm({
     buttonText,
     source = "Website",
     variant = "footer",
-    successText = "✓ Thank you for subscribing!"
+    successText = "✓ Thank you for subscribing!",
+    recaptchaNotice = DEFAULT_RECAPTCHA_NOTICE,
 }: NewsletterFormProps) {
     const [email, setEmail] = useState("");
     const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
@@ -124,9 +141,9 @@ export function NewsletterForm({
                     <p className="text-red-500 text-sm w-full text-center">{errorMessage}</p>
                 )}
                 <p className="text-xs text-black/40 text-center w-full mt-1">
-                    Protected by reCAPTCHA.{" "}
-                    <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="underline">Privacy</a> &amp;{" "}
-                    <a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer" className="underline">Terms</a>
+                    {recaptchaNotice.before}{" "}
+                    <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="underline">{recaptchaNotice.privacy}</a> {recaptchaNotice.and}{" "}
+                    <a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer" className="underline">{recaptchaNotice.terms}</a>
                 </p>
             </form>
         );
@@ -174,9 +191,9 @@ export function NewsletterForm({
                 </div>
                 {status === "error" && <p className="mt-3 text-center text-sm text-red-400">{errorMessage}</p>}
                 <p className="mt-3 text-center text-xs text-[#faf6f1]/30">
-                    Protected by reCAPTCHA.{" "}
-                    <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="underline">Privacy</a> &amp;{" "}
-                    <a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer" className="underline">Terms</a>
+                    {recaptchaNotice.before}{" "}
+                    <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="underline">{recaptchaNotice.privacy}</a> {recaptchaNotice.and}{" "}
+                    <a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer" className="underline">{recaptchaNotice.terms}</a>
                 </p>
             </form>
         );
@@ -228,9 +245,9 @@ export function NewsletterForm({
                     <p className="text-red-400 text-xs">{errorMessage}</p>
                 )}
                 <p className="text-xs text-[#faf6f1]/30 mt-1">
-                    Protected by reCAPTCHA.{" "}
-                    <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="underline">Privacy</a> &amp;{" "}
-                    <a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer" className="underline">Terms</a>
+                    {recaptchaNotice.before}{" "}
+                    <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="underline">{recaptchaNotice.privacy}</a> {recaptchaNotice.and}{" "}
+                    <a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer" className="underline">{recaptchaNotice.terms}</a>
                 </p>
             </form>
         );
@@ -285,9 +302,9 @@ export function NewsletterForm({
                 <p className="text-red-400 text-xs">{errorMessage}</p>
             )}
             <p className="text-xs text-white/30 mt-1">
-                Protected by reCAPTCHA.{" "}
-                <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="underline">Privacy</a> &amp;{" "}
-                <a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer" className="underline">Terms</a>
+                {recaptchaNotice.before}{" "}
+                <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="underline">{recaptchaNotice.privacy}</a> {recaptchaNotice.and}{" "}
+                <a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer" className="underline">{recaptchaNotice.terms}</a>
             </p>
         </form>
     );

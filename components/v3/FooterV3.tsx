@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Locale } from '@/lib/i18n';
 import { getLocalizedPath } from '@/lib/localized-path';
-import { NewsletterForm } from '@/components/NewsletterForm';
+import { NewsletterForm, type RecaptchaNotice } from '@/components/NewsletterForm';
 
 interface FooterLink {
     title: string;
@@ -23,6 +23,7 @@ interface FooterV3Props {
         newsletter_blurb: string;
         newsletter_placeholder: string;
         newsletter_thanks: string;
+        recaptcha_notice: RecaptchaNotice;
         copyright: string;
         privacy: string;
         terms: string;
@@ -166,6 +167,7 @@ export function FooterV3({ lang, footer, navigation, services, industries, email
                         source="Footer v3"
                         variant="footerV3"
                         successText={footer.newsletter_thanks}
+                        recaptchaNotice={footer.recaptcha_notice}
                     />
                 </div>
             </div>

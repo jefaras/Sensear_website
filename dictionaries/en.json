@@ -210,6 +210,12 @@
             "newsletter_blurb": "Notes on music, atmosphere & sonic branding.",
             "newsletter_placeholder": "Your email",
             "newsletter_thanks": "Thank you! ✦",
+            "recaptcha_notice": {
+                "before": "Protected by reCAPTCHA.",
+                "privacy": "Privacy",
+                "and": "&",
+                "terms": "Terms"
+            },
             "copyright": "© 2026 SensEar Music. All rights reserved.",
             "privacy": "Privacy Policy",
             "terms": "Terms of Service",

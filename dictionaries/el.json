@@ -210,6 +210,12 @@
             "newsletter_blurb": "Σκέψεις για μουσική, ατμόσφαιρα & sonic branding.",
             "newsletter_placeholder": "Το email σας",
             "newsletter_thanks": "Ευχαριστούμε! ✦",
+            "recaptcha_notice": {
+                "before": "Προστατεύεται από reCAPTCHA.",
+                "privacy": "Απόρρητο",
+                "and": "και",
+                "terms": "Όροι"
+            },
             "copyright": "© 2026 SensEar Music. Με την επιφύλαξη παντός δικαιώματος.",
             "privacy": "Πολιτική Απορρήτου",
             "terms": "Όροι Χρήσης",

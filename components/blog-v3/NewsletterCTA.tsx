@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { NewsletterForm } from '@/components/NewsletterForm';
+import { NewsletterForm, type RecaptchaNotice } from '@/components/NewsletterForm';
 import { emphasize } from '@/components/v3';
 import { ScrollReveal } from '@/components/motion';
 
@@ -14,9 +14,10 @@ interface NewsletterCTAProps {
         location: string;
         background_image: string;
     };
+    recaptchaNotice: RecaptchaNotice;
 }
 
-export function NewsletterCTA({ emWord, cta }: NewsletterCTAProps) {
+export function NewsletterCTA({ emWord, cta, recaptchaNotice }: NewsletterCTAProps) {
     return (
         <section id="cta" className="relative overflow-hidden py-[clamp(122px,9.66vw,170px)]">
             <Image src={cta.background_image} alt="" fill aria-hidden="true" sizes="100vw" className="object-cover" />
@@ -39,6 +40,7 @@ export function NewsletterCTA({ emWord, cta }: NewsletterCTAProps) {
                         buttonText={cta.submit}
                         successText={cta.success}
                         source="Journal v3"
+                        recaptchaNotice={recaptchaNotice}
                     />
                 </ScrollReveal>
             </div>
