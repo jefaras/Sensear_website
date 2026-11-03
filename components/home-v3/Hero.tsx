@@ -94,14 +94,10 @@ export function Hero({ lang, hero }: HeroProps) {
                     */}
                 </div>
 
-                {/* Scroll cue, lined up with the left edge of the text: same padding and width cap as the text block */}
-                <div className="pointer-events-none absolute inset-x-0 bottom-[30px] hidden justify-center px-[clamp(2rem,5.2vw,6.5rem)] lg:flex">
-                    <div className="w-full max-w-[780px]">
-                        <div className="flex w-fit flex-col items-center gap-2">
-                            <span className="text-[clamp(10px,0.68vw,12px)] font-semibold tracking-[0.3em] text-[#faf6f1]/40">{hero.scroll_label}</span>
-                            <div className="h-[35px] w-px animate-[se-cue_1.8s_ease-in-out_infinite] bg-[linear-gradient(rgba(250,246,241,0.5),rgba(250,246,241,0))]" />
-                        </div>
-                    </div>
+                {/* Scroll cue, at the bottom right of the text column, next to the divider line of the photo */}
+                <div className="pointer-events-none absolute bottom-[30px] right-[clamp(20px,1.6vw,28px)] hidden flex-col items-center gap-2 lg:flex">
+                    <span className="text-[clamp(10px,0.68vw,12px)] font-semibold tracking-[0.3em] text-[#faf6f1]/40">{hero.scroll_label}</span>
+                    <div className="h-[35px] w-px animate-[se-cue_1.8s_ease-in-out_infinite] bg-[linear-gradient(rgba(250,246,241,0.5),rgba(250,246,241,0))]" />
                 </div>
             </div>
 
