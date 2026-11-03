@@ -20,9 +20,9 @@ requested for `/el/dorean-axiologisi/`.
 **Deployed and verified live by Cowork (third upload):** Facebook page in the schema `sameAs`; JPG share
 image for the blog post `building-brand-people-can-hear` (its page image is WebP); T6 Signature Playlists.
 
-**Committed, not yet deployed:** sitemap `lastmod` override for Signature Playlists; the "four days" proposal promise corrected to "usually within 7 to 10 days" on five pages, both languages; T6 Audio Upgrades, Event Soundtracks, Sonic Identity and the services hub; the mirrored zig-zag on the pages with a case section (see T6). Home "who we are" statement: smaller text, two paragraphs, and the first sentence now "…with clients across Greece" in both languages (`905c83a`, `e258d2f`, `5fd9148`).
+**Committed, not yet deployed:** sitemap `lastmod` override for Signature Playlists; the "four days" proposal promise corrected to "usually within 7 to 10 days" on five pages, both languages; T6 Audio Upgrades, Event Soundtracks, Sonic Identity and the services hub; T11 share images; the newsletter reCAPTCHA line without an em dash and in Greek on Greek pages (`5dc891c`, `e8ea350`); the mirrored zig-zag on the pages with a case section (see T6). Home "who we are" statement: smaller text, two paragraphs, and the first sentence now "…with clients across Greece" in both languages (`905c83a`, `e258d2f`, `5fd9148`).
 
-**Open:** T11 (low; JEF said not yet).
+**Open:** none. T11 done 3 Nov.
 **Closed:** T10 (option A, see T10). T7 is dropped: Claude (Cowork) sends the IndexNow ping after each deploy.
 
 | Item | State on 30 Oct (after deploy) |
@@ -260,7 +260,13 @@ Follow the verification gates in `CLAUDE.md` for every code step: `npm run typec
 ### T9 — Update `CLAUDE.md` (low, ask JEF) · DONE 30 Oct
 - Current branch name. Remove or relax the `app/sitemap.ts` rule (waived 30 Jul). Add: "never publish a street address in schema".
 
-### T11 — Wide share images for the 8 blog posts (low, after T6) · NOT STARTED (JEF, 31 Oct: do not do yet)
+### T11 — Wide share images for the 8 blog posts (low, after T6) · DONE 3 Nov (committed, not yet deployed)
+- **Done 3 Nov (`5127d55`, JEF chose option B):** each `public/images/blog/<post image>-share.jpg` is 1200×630, the
+  whole square photo centred on a blurred, darkened copy of itself (a crop cut off faces). `ogImage` is set
+  for all 8 posts in both languages, and the post metadata states width 1200 and height 630. Checked in
+  `out/`: 16/16 post pages point at a 1200×630 JPG.
+  - **Rollback:** `git revert 5127d55`; then rebuild `out/` and upload.
+- Original task, kept for reference:
 - The blog share images are roughly square (775×768 to 1024×1024), so LinkedIn and Facebook crop them or
   show a small thumbnail. Make a 1200×630 JPG for each of the 8 posts, both languages, from the existing
   post images.
