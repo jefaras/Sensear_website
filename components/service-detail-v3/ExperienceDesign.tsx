@@ -102,7 +102,7 @@ export function ExperienceDesign({ lang, content, images, em }: ExperienceDesign
             </section>
 
             {/* 2. What Experience Design is: anchor target for the hero's "explore" CTA */}
-            <section id="overview" className={`relative scroll-mt-[clamp(90px,7vw,120px)] overflow-hidden py-[clamp(101px,7.95vw,140px)] ${panel}`}>
+            <section id="overview" className={`relative scroll-mt-[clamp(90px,7vw,120px)] overflow-hidden border-b border-b-[#faf6f1]/8 py-[clamp(101px,7.95vw,140px)] ${panel}`}>
                 <DriftOrb
                     className="h-[46vw] max-h-[640px] w-[46vw] max-w-[640px]"
                     style={{ top: '-8%', left: '30%', background: 'radial-gradient(circle,rgba(240,189,149,0.10),rgba(240,189,149,0) 62%)' }}
