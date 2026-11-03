@@ -47,7 +47,7 @@ export function MorphCTA({ href, children, external = false, className, size = '
         >
             <Image
                 src="/images/brand/sensear-logo-color.png"
-                alt=""
+                alt="SensEar"
                 width={20}
                 height={20}
                 aria-hidden="true"

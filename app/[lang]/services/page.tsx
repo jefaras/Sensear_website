@@ -145,6 +145,7 @@ export default async function ServicesV3({ params }: { params: Promise<{ lang: L
                 ghostLabel={content.cta.industries_btn}
                 ghostHref={localizedPath('/industries')}
                 bgImage="/images/services/services-hero-strategic-music.jpg"
+                bgAlt={content.hero.image_alt}
             />
         </V3Root>
     );

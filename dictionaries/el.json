@@ -31,12 +31,14 @@
                 "★ SENSEAR ★",
                 "EST · ATH"
             ],
-            "scroll_label": "SCROLL"
+            "scroll_label": "SCROLL",
+            "image_alt": "Πορτοκαλί βελούδινος καναπές με δύο ντισκομπάλες στο πάτωμα"
         },
         "intro": {
             "title": "Ποιοι είμαστε",
             "p1": "Η SensEar είναι ένα <em>στούντιο μουσικής επιμέλειας</em> με έδρα την Αθήνα και πελάτες σε όλη την Ελλάδα.<br />Επιμελούμαστε <em>τη μουσική που ακούγεται σε χώρους</em> μέσα στη μέρα, σχεδιάζουμε <em>τον ήχο εκδηλώσεων</em> ώρα προς ώρα, ορίζουμε <em>πώς ακούγεται ένα brand</em> σε κάθε του σημείο και βελτιώνουμε <em>το πώς αποδίδει ακουστικά η αίθουσα</em>.",
-            "p2": "Μουσική αδειοδοτημένη για <strong>επαγγελματική χρήση</strong>, <strong>προγραμματισμός-ανανεώσεις</strong> playlists και <strong>υποστήριξη</strong> είναι μέρος της υπηρεσίας, ώστε ο ήχος να μένει φροντισμένος κάθε μέρα, όχι μόνο την πρώτη."
+            "p2": "Μουσική αδειοδοτημένη για <strong>επαγγελματική χρήση</strong>, <strong>προγραμματισμός-ανανεώσεις</strong> playlists και <strong>υποστήριξη</strong> είναι μέρος της υπηρεσίας, ώστε ο ήχος να μένει φροντισμένος κάθε μέρα, όχι μόνο την πρώτη.",
+            "image_alt": "Μπαρ με κόκκινα σκαμπό και τοιχογραφία με φοίνικες"
         },
         "marquee": [
             "Signature Playlists",
@@ -104,32 +106,38 @@
                 {
                     "title": "Ξενοδοχεία & Θέρετρα",
                     "desc": "Μουσικά τοπία μελετημένα για κάθε ώρα της ημέρας και κάθε χώρο.",
-                    "link": "industries/music-for-hotels-and-resorts"
+                    "link": "industries/music-for-hotels-and-resorts",
+                    "image_alt": "Άνδρας με λευκά σε βεράντα ξενοδοχείου πάνω από κόλπο με ένα γιοτ"
                 },
                 {
                     "title": "Εστιατόρια & Bar",
                     "desc": "Ήχος που ακολουθεί το flow του service και \"κρατάει\" τους επισκέπτες περισσότερο.",
-                    "link": "industries/music-for-restaurants-and-bars"
+                    "link": "industries/music-for-restaurants-and-bars",
+                    "image_alt": "Εστιατόριο με κίτρινο μπαρ και ψηλά παράθυρα"
                 },
                 {
                     "title": "Εκδηλώσεις & Εμπειρίες",
                     "desc": "Φυσικές, αβίαστες μουσικές μεταβάσεις, στη σωστή στιγμή.",
-                    "link": "industries/music-for-events-and-experiences"
+                    "link": "industries/music-for-events-and-experiences",
+                    "image_alt": "Καλεσμένοι με βραδινά ρούχα δίπλα σε μια πισίνα"
                 },
                 {
                     "title": "Καταστήματα Λιανικής",
                     "desc": "Μουσική που ενθαρρύνει την εξερεύνηση και αναδεικνύει το brand.",
-                    "link": "industries/music-for-retail-stores"
+                    "link": "industries/music-for-retail-stores",
+                    "image_alt": "Πολύχρωμο κατάστημα με παπούτσια και ρούχα σε γεωμετρικά ράφια"
                 },
                 {
                     "title": "Χώροι ευεξίας & Γυμναστήρια",
                     "desc": "Ήχος σχεδιασμένος για χαλάρωση, συγκέντρωση ή κορύφωση ενέργειας.",
-                    "link": "industries/music-for-wellness-and-gyms"
+                    "link": "industries/music-for-wellness-and-gyms",
+                    "image_alt": "Ασπρόμαυρη φωτογραφία ανθρώπου που κολυμπά σε πισίνα"
                 },
                 {
                     "title": "Τέχνη, Μουσεία & Μόδα",
                     "desc": "Διακριτικές, ακριβείς επιλογές που σέβονται τον χώρο και το έργο.",
-                    "link": "industries/music-for-art-museums-and-fashion"
+                    "link": "industries/music-for-art-museums-and-fashion",
+                    "image_alt": "Γκαλερί με ασπρόμαυρο δάπεδο και ένα πολύχρωμο έργο τέχνης"
                 }
             ],
             "cta": "Δείτε τον κλάδο που σας αφορά"
@@ -151,7 +159,8 @@
                     "desc": "Εξασφαλίζουμε ένα ενιαίο, αδιάλειπτο ηχητικό ταξίδι σε όλα σας τα locations και κανάλια."
                 }
             ],
-            "cta": "Δείτε τα Case Studies"
+            "cta": "Δείτε τα Case Studies",
+            "image_alt": "Ράφι με δίσκους βινυλίου"
         },
         "clients": {
             "title": "Venues που μας εμπιστεύονται τον ήχο τους",
@@ -169,19 +178,22 @@
                     "title": "Τρεις λόγοι που η μουσική έχει σημασία στη φιλοξενία",
                     "desc": "Τρεις λόγοι για τους οποίους η μουσική μπαίνει στον προϋπολογισμό, και τι δείχνουν οι έρευνες.",
                     "tag": "Insights",
-                    "link": "three-reasons-make-music-hospitality"
+                    "link": "three-reasons-make-music-hospitality",
+                    "image_alt": "Άνθρωπος με κίτρινο παντελόνι κάθεται σε ένα ηχείο δίπλα σε εξοπλισμό ήχου"
                 },
                 {
                     "title": "Πώς η μουσική που ταιριάζει στο brand μετατρέπει επισκέπτες σε πελάτες",
                     "desc": "Τι έδειξαν οι έρευνες στη λιανική για τη μουσική που ταιριάζει με το brand.",
                     "tag": "Research",
-                    "link": "brand-music-converts-browsers-buyers"
+                    "link": "brand-music-converts-browsers-buyers",
+                    "image_alt": "Άνδρας με κοστούμι πίνει δύο κοκτέιλ με χάρτινα ομπρελάκια"
                 },
                 {
                     "title": "Τι ακριβώς κάνει ένας music curator;",
                     "desc": "Τι κάνει ένας επιμελητής μουσικής: ακρόαση, διάγνωση, χτίσιμο προγράμματος, ανανέωση.",
                     "tag": "Education",
-                    "link": "what-exactly-does-music-curator-do"
+                    "link": "what-exactly-does-music-curator-do",
+                    "image_alt": "Ηλιόλουστη βεράντα με καμάρες, φοίνικες και θέα στη θάλασσα"
                 }
             ]
         },
@@ -196,7 +208,8 @@
             "explore_industries": "τους κλάδους που εξυπηρετούμε",
             "secondary_email_label": "hello@sensear.music",
             "phone_line": "+30 697 699 4212",
-            "background_image": "/images/homepage/sensear-signature-playlist-service.jpg"
+            "background_image": "/images/homepage/sensear-signature-playlist-service.jpg",
+            "background_image_alt": "Ντισκομπάλα πάνω από ποτήρια κρασιού σε μπαρ"
         },
         "footer": {
             "tagline": "Μουσική επιμέλεια για χώρους, εκδηλώσεις & brands.",
@@ -237,7 +250,7 @@
             "subtitle": "Πείτε μας λίγα λόγια για τον χώρο σας και την αίσθηση που θέλετε να δημιουργεί.",
             "background_image": "/images/backgrounds/warm-silver-foil-texture.jpg",
             "image": "/images/contact/contact-hero-venue-consultation.jpg",
-            "image_alt": "Επικοινωνία SensEar",
+            "image_alt": "Χαμογελαστή γυναίκα μιλά στο τηλέφωνο σε ένα ζεστό, ρετρό δωμάτιο",
             "side_label": "CONTACT — LET'S TALK SOUND",
             "primary_cta": "Συμπληρώστε τη φόρμα",
             "secondary_cta": "Στοιχεία επικοινωνίας",
@@ -250,7 +263,8 @@
         },
         "intro": {
             "title": "Αναζητάτε τον ιδανικό ήχο για τον χώρο σας;",
-            "subtitle": "Συμπληρώστε τη φόρμα και θα επικοινωνήσουμε άμεσα μαζί σας, για να συναντηθούμε και να σχεδιάσουμε το ιδανικό μουσικό πλάνο για την επιχείρησή σας."
+            "subtitle": "Συμπληρώστε τη φόρμα και θα επικοινωνήσουμε άμεσα μαζί σας, για να συναντηθούμε και να σχεδιάσουμε το ιδανικό μουσικό πλάνο για την επιχείρησή σας.",
+            "image_alt": "Κοντινό πλάνο ενός μαύρου δίσκου βινυλίου"
         },
         "form": {
             "name": "Όνομα *",
@@ -331,7 +345,7 @@
             "title": "Οι άνθρωποι πίσω από το δικό σας soundtrack",
             "subtitle": "Χρόνια σε εμβληματικά residencies όπου η μουσική έπρεπε να δουλεύει από το μεσημέρι ως τα ξημερώματα. Σπουδές στη μουσική, το hospitality management και το service & experience design.",
             "image": "/images/backgrounds/warm-silver-foil-texture.jpg",
-            "image_alt": "Οι άνθρωποι πίσω από το soundtrack σας",
+            "image_alt": "Σιλουέτες τριών ανθρώπων σε μπλε φόντο",
             "side_label": "ABOUT — THE PEOPLE & THE PHILOSOPHY",
             "primary_cta": "Γνωρίστε την ομάδα",
             "secondary_cta": "Επικοινωνήστε μαζί μας",
@@ -379,7 +393,7 @@
             ],
             "image": "/images/about/about-journey-team-collaboration.jpg",
             "lede": "Δεκαπέντε χρόνια ως DJ collective. Η δουλειά είναι η ίδια· απλά το κάνουμε για περισσότερα είδη χώρων.",
-            "image_alt": "Η πορεία μας"
+            "image_alt": "Άνθρωπος με παγιέτες κρατά έναν μπλε δίσκο βινυλίου"
         },
         "team": {
             "heading": "Γνωρίστε την ομάδα",
@@ -409,7 +423,7 @@
             ],
             "title": "Τέσσερις <em>αρχές</em> που μας καθοδηγούν",
             "subtitle": "Ό,τι κάνουμε πηγάζει από τον τρόπο που σκεφτόμαστε τον ήχο.",
-            "image_alt": "Η μοναδική προσέγγιση της SensEar"
+            "image_alt": "Κάρτα της SensEar κρεμασμένη σε σκοινί δίπλα στη θάλασσα"
         },
         "final_cta": {
             "heading": "Ανακαλύψτε τη διαδρομή του ήχου σας",
@@ -1310,7 +1324,8 @@
             "submit": "Εγγραφή",
             "success": "Ευχαριστούμε για την εγγραφή! ✦",
             "location": "Αθήνα, Ελλάδα",
-            "background_image": "/images/homepage/sensear-signature-playlist-service.jpg"
+            "background_image": "/images/homepage/sensear-signature-playlist-service.jpg",
+            "background_image_alt": "Ντισκομπάλα πάνω από ποτήρια κρασιού σε μπαρ"
         },
         "article": {
             "read_time": "8 MIN READ",
@@ -1330,7 +1345,7 @@
             "secondary_cta": "Κλείστε ραντεβού",
             "image_kicker": "FROM VISION TO SOUND",
             "image_caption": "Real spaces, scored.",
-            "image_alt": "Έργα μουσικής επιμέλειας σε ελληνικούς χώρους",
+            "image_alt": "Υφασμάτινη τσάντα SensEar μπροστά σε πράσινο φράχτη",
             "badge": [
                 "★ SENSEAR ★",
                 "EST · ATH"
@@ -1410,7 +1425,7 @@
             "secondary_cta": "Κλείστε ραντεβού",
             "image_kicker": "SIX WORLDS",
             "image_caption": "A sound for every space.",
-            "image_alt": "Οι κλάδοι που εξυπηρετούμε με μουσική επιμέλεια",
+            "image_alt": "Γυναίκα με πράσινα μαλλιά κρατά έναν δίσκο βινυλίου",
             "badge": [
                 "★ SENSEAR ★",
                 "EST · ATH"
@@ -1432,7 +1447,8 @@
                     "desc2": "Αποτέλεσμα: Η ατμόσφαιρα ενισχύει την αίσθηση φιλοξενίας που ήδη προσφέρετε.",
                     "cta": "Δείτε πώς δουλεύουμε στα ξενοδοχεία",
                     "link": "industries/music-for-hotels-and-resorts",
-                    "image": "/images/industries/industry-hotels-resorts.jpg"
+                    "image": "/images/industries/industry-hotels-resorts.jpg",
+                    "image_alt": "Άνδρας με λευκά σε βεράντα ξενοδοχείου πάνω από κόλπο με ένα γιοτ"
                 },
                 {
                     "title": "Εστιατόρια & Bar",
@@ -1441,7 +1457,8 @@
                     "desc2": "Αποτέλεσμα: Η ροή του service γίνεται πιο ομαλή και οι επισκέπτες ζουν μια ολοκληρωμένη εμπειρία.",
                     "cta": "Δείτε πώς δουλεύουμε σε εστιατόρια και bar",
                     "link": "industries/music-for-restaurants-and-bars",
-                    "image": "/images/industries/industry-restaurants-bars.jpg"
+                    "image": "/images/industries/industry-restaurants-bars.jpg",
+                    "image_alt": "Εστιατόριο με κίτρινο μπαρ και ψηλά παράθυρα"
                 },
                 {
                     "title": "Εκδηλώσεις & Εμπειρίες",
@@ -1450,7 +1467,8 @@
                     "desc2": "Αποτέλεσμα: Ομαλές μεταβάσεις που οι επισκέπτες βιώνουν και οι διοργανωτές εκτιμούν.",
                     "cta": "Δείτε πώς δουλεύουμε στις εκδηλώσεις",
                     "link": "industries/music-for-events-and-experiences",
-                    "image": "/images/industries/industry-events-experiences.jpg"
+                    "image": "/images/industries/industry-events-experiences.jpg",
+                    "image_alt": "Καλεσμένοι με βραδινά ρούχα δίπλα σε μια πισίνα"
                 },
                 {
                     "title": "Καταστήματα Λιανικής",
@@ -1459,7 +1477,8 @@
                     "desc2": "Αποτέλεσμα: Οι επισκέπτες κινούνται πιο αργά, εξερευνούν περισσότερο και νιώθουν άνετα να επιλέξουν.",
                     "cta": "Δείτε πώς δουλεύουμε στη λιανική",
                     "link": "industries/music-for-retail-stores",
-                    "image": "/images/industries/industry-retail-stores.jpg"
+                    "image": "/images/industries/industry-retail-stores.jpg",
+                    "image_alt": "Πολύχρωμο κατάστημα με παπούτσια και ρούχα σε γεωμετρικά ράφια"
                 },
                 {
                     "title": "Χώροι ευεξίας & Γυμναστήρια",
@@ -1468,7 +1487,8 @@
                     "desc2": "Αποτέλεσμα: Η ατμόσφαιρα γίνεται μέρος της συνολικής εμπειρίας άσκησης ή χαλάρωσης.",
                     "cta": "Δείτε πώς δουλεύουμε σε χώρους ευεξίας",
                     "link": "industries/music-for-wellness-and-gyms",
-                    "image": "/images/industries/industry-wellness-gyms.jpg"
+                    "image": "/images/industries/industry-wellness-gyms.jpg",
+                    "image_alt": "Ασπρόμαυρη φωτογραφία ανθρώπου που κολυμπά σε πισίνα"
                 },
                 {
                     "title": "Τέχνη, Μουσεία & Μόδα",
@@ -1477,7 +1497,8 @@
                     "desc2": "Αποτέλεσμα: Οι επισκέπτες παραμένουν περισσότερο, απορροφούν βαθύτερα και μοιράζονται την εμπειρία τους.",
                     "cta": "Δείτε πώς δουλεύουμε σε γκαλερί και μουσεία",
                     "link": "industries/music-for-art-museums-and-fashion",
-                    "image": "/images/industries/industry-art-museums-fashion.jpg"
+                    "image": "/images/industries/industry-art-museums-fashion.jpg",
+                    "image_alt": "Γκαλερί με ασπρόμαυρο δάπεδο και ένα πολύχρωμο έργο τέχνης"
                 }
             ]
         },
@@ -1491,7 +1512,8 @@
                 "Η εμπειρία πρέπει να μένει αξέχαστη και να δημιουργεί πιστούς επισκέπτες",
                 "Η ανάγκη να γνωρίζετε ότι η μουσική λειτουργεί πραγματικά για τον χώρο σας"
             ],
-            "conclusion": "Άλλοι χώροι, άλλες ώρες, ένας τρόπος δουλειάς: μουσική σχεδιασμένη γύρω από το πώς λειτουργεί πραγματικά ο καθένας."
+            "conclusion": "Άλλοι χώροι, άλλες ώρες, ένας τρόπος δουλειάς: μουσική σχεδιασμένη γύρω από το πώς λειτουργεί πραγματικά ο καθένας.",
+            "image_alt": "Το λογότυπο της SensEar σε ροζ κάρτα"
         },
         "cta": {
             "title": "Πείτε μας για τον χώρο σας.",
@@ -1514,7 +1536,7 @@
             "secondary_cta": "Κλείστε ραντεβού",
             "image_kicker": "FOUR APPROACHES",
             "image_caption": "Sound, by design.",
-            "image_alt": "Υπηρεσίες μουσικής και ήχου για χώρους φιλοξενίας και λιανικής",
+            "image_alt": "Ντισκομπάλα και ποτήρια κρασιού σε σκοτεινό χώρο",
             "badge": [
                 "★ SENSEAR ★",
                 "EST · ATH"
@@ -1725,7 +1747,8 @@
             "badge": [
                 "★ SENSEAR ★",
                 "EST · ATH"
-            ]
+            ],
+            "image_alt": "Χέρι κρατά έναν τυπωμένο χάρτη του ιστότοπου SensEar"
         },
         "sections": {
             "main": "Κύριες Σελίδες",
@@ -1764,7 +1787,8 @@
             "badge": [
                 "★ SENSEAR ★",
                 "EST · ATH"
-            ]
+            ],
+            "image_alt": "Ακουστικά σε λευκά κεφάλια κούκλας"
         },
         "section_kicker": "FAQ",
         "title": "Οι ερωτήσεις σας, απαντημένες",
@@ -1825,7 +1849,8 @@
             "side_label": "SERVICES — SIGNATURE PLAYLISTS",
             "explore_cta": "Εξερευνήστε την υπηρεσία",
             "image_kicker": "DAILY SOUNDTRACK",
-            "image_caption": "Curated, never generic."
+            "image_caption": "Curated, never generic.",
+            "image_alt": "Δίσκοι βινυλίου σε διάφανη ακρυλική θήκη με έντονο φως από πίσω"
         },
         "intro": {
             "title": "Τι είναι τα Signature Playlists",
@@ -1975,7 +2000,8 @@
             "side_label": "SERVICES — EVENT SOUNDTRACKS",
             "explore_cta": "Εξερευνήστε την υπηρεσία",
             "image_kicker": "EVENT TIMING",
-            "image_caption": "Right moment, right sound."
+            "image_caption": "Right moment, right sound.",
+            "image_alt": "Χέρι με δαχτυλίδια κρατά μια μικρή ντισκομπάλα"
         },
         "intro": {
             "title": "Τι καλύπτει η Μουσική Εκδηλώσεων",
@@ -2130,7 +2156,8 @@
             "side_label": "SERVICES — SONIC IDENTITY",
             "explore_cta": "Εξερευνήστε την υπηρεσία",
             "image_kicker": "SONIC DNA",
-            "image_caption": "A signature you can hear."
+            "image_caption": "A signature you can hear.",
+            "image_alt": "Γυναίκα με πορτοκαλί μαλλιά και σκούρα μπλε μάσκα ματιών"
         },
         "intro": {
             "title": "Τι καλύπτει η Ηχητική Ταυτότητα",
@@ -2265,7 +2292,8 @@
             "side_label": "SERVICES — AUDIO UPGRADES",
             "explore_cta": "Εξερευνήστε την υπηρεσία",
             "image_kicker": "AUDIO CLARITY",
-            "image_caption": "Sound, perfected."
+            "image_caption": "Sound, perfected.",
+            "image_alt": "Μεγάλο ηχείο σε μοντέρνο χώρο"
         },
         "intro": {
             "title": "Τι καλύπτει η Ακουστική Αναβάθμιση",
@@ -2478,7 +2506,8 @@
                 }
             ],
             "closing": "Σε μια ιδιωτική γιορτή η ιστορία είναι προσωπική, σε μια εταιρική εκδήλωση μεταφέρει τις αξίες της εταιρείας στους ανθρώπους της, ενώ σε ένα λανσάρισμα κάνει τους καλεσμένους να νιώσουν το brand και όχι απλώς να το δουν.",
-            "intensity": "Δουλεύουμε μαζί σας για να ορίσουμε την ένταση που ταιριάζει στην περίσταση, από μια πινελιά που μένει στη μνήμη και μια εμπειρία που απορροφά πλήρως τους καλεσμένους μέχρι μια στιγμή που τους συνοδεύει πολύ καιρό μετά."
+            "intensity": "Δουλεύουμε μαζί σας για να ορίσουμε την ένταση που ταιριάζει στην περίσταση, από μια πινελιά που μένει στη μνήμη και μια εμπειρία που απορροφά πλήρως τους καλεσμένους μέχρι μια στιγμή που τους συνοδεύει πολύ καιρό μετά.",
+            "image_alt": "Καμπύλος πορτοκαλί τοίχος μπροστά σε ουρανό στο ηλιοβασίλεμα"
         },
         "layers": {
             "title": "Τέσσερα επίπεδα που σχεδιάζουμε",
@@ -2486,19 +2515,23 @@
             "items": [
                 {
                     "title": "Η ιστορία",
-                    "description": "Ορίζουμε πρώτα τι θέλετε να νιώσει ο επισκέπτης και τι να λέει για εσάς μετά την επίσκεψη, γιατί από αυτό προκύπτουν όλες οι υπόλοιπες αποφάσεις."
+                    "description": "Ορίζουμε πρώτα τι θέλετε να νιώσει ο επισκέπτης και τι να λέει για εσάς μετά την επίσκεψη, γιατί από αυτό προκύπτουν όλες οι υπόλοιπες αποφάσεις.",
+                    "image_alt": "Πίνακας ταυτότητας brand με κάρτες ιδεών σε τοίχο"
                 },
                 {
                     "title": "Η ομάδα",
-                    "description": "Ο επισκέπτης βιώνει την εμπειρία κυρίως μέσα από το προσωπικό σας, οπότε διαμορφώνουμε μαζί σας τις συνήθειες, τις φράσεις και τα μικρά τελετουργικά που επιτρέπουν στην ομάδα να την προσφέρει κάθε μέρα."
+                    "description": "Ο επισκέπτης βιώνει την εμπειρία κυρίως μέσα από το προσωπικό σας, οπότε διαμορφώνουμε μαζί σας τις συνήθειες, τις φράσεις και τα μικρά τελετουργικά που επιτρέπουν στην ομάδα να την προσφέρει κάθε μέρα.",
+                    "image_alt": "Χαμογελαστός άνδρας με αστραφτερά δαχτυλίδια"
                 },
                 {
                     "title": "Η διαδρομή",
-                    "description": "Χαρτογραφούμε κάθε βήμα της επίσκεψης, πριν, κατά τη διάρκεια και μετά, και σχεδιάζουμε τις στιγμές που μετράνε περισσότερο, όπως την άφιξη, το αποκορύφωμα και τον αποχαιρετισμό."
+                    "description": "Χαρτογραφούμε κάθε βήμα της επίσκεψης, πριν, κατά τη διάρκεια και μετά, και σχεδιάζουμε τις στιγμές που μετράνε περισσότερο, όπως την άφιξη, το αποκορύφωμα και τον αποχαιρετισμό.",
+                    "image_alt": "Γυναίκα χαλαρώνει σε ταχύπλοο τη νύχτα"
                 },
                 {
                     "title": "Οι λεπτομέρειες",
-                    "description": "Ο ήχος, το φως, το άρωμα, τα υλικά, η σήμανση, τα μενού και οι οθόνες είναι όσα ο επισκέπτης πραγματικά ακούει, βλέπει και αγγίζει, και τα σχεδιάζουμε ώστε να ταιριάζουν με την ιστορία."
+                    "description": "Ο ήχος, το φως, το άρωμα, τα υλικά, η σήμανση, τα μενού και οι οθόνες είναι όσα ο επισκέπτης πραγματικά ακούει, βλέπει και αγγίζει, και τα σχεδιάζουμε ώστε να ταιριάζουν με την ιστορία.",
+                    "image_alt": "Πιάτο, πιρούνι και πολύχρωμα καλαμάκια από ψηλά"
                 }
             ]
         },
@@ -2533,7 +2566,8 @@
                     "title": "Μέτρηση αποτελεσμάτων",
                     "description": "Συμφωνούμε μαζί σας απλούς δείκτες, όπως οι κριτικές, ο χρόνος παραμονής, οι επαναλαμβανόμενες επισκέψεις και η μέση κατανάλωση, και τους ελέγχουμε μετά την εφαρμογή."
                 }
-            ]
+            ],
+            "image_alt": "Στρογγυλό τραπέζι ανάμεσα σε φυτά σε λευκή αυλή, από ψηλά"
         },
         "perfect_for": {
             "title": "Ιδανικό για",
@@ -2568,7 +2602,8 @@
                     "description": "Επισκέψεις που ο κόσμος θυμάται και συζητά.",
                     "link": "industries/music-for-art-museums-and-fashion"
                 }
-            ]
+            ],
+            "image_alt": "Επισκέπτες σε χώρο γεμάτο με μπλε προβολές φωτός"
         },
         "process": {
             "title": "Από την πρώτη επικοινωνία μέχρι την εφαρμογή",
@@ -2597,7 +2632,8 @@
                     "title": "Εφαρμογή",
                     "description": "Σας βοηθάμε να τα εφαρμόσετε, εκπαιδεύουμε την ομάδα και μετράμε τα αποτελέσματα."
                 }
-            ]
+            ],
+            "image_alt": "Μπλε σκάλα και πόρτα ανάμεσα σε βράχους"
         },
         "ways_to_start": {
             "title": "Πώς μπορούμε να ξεκινήσουμε",
@@ -2710,7 +2746,8 @@
         "cta": {
             "title": "Πείτε μας πώς περνά σήμερα ο επισκέπτης στον χώρο σας.",
             "description": "Απαντάμε μέσα σε 24 ώρες με μια πρώτη εκτίμηση και τον καλύτερο τρόπο για να ξεκινήσουμε.",
-            "button": "Ξεκινήστε με μια Αξιολόγηση Εμπειρίας"
+            "button": "Ξεκινήστε με μια Αξιολόγηση Εμπειρίας",
+            "image_alt": "Άνθρωποι περπατούν μέσα σε πορτοκαλί και κόκκινο φως"
         }
     },
     "hotels_resorts": {
@@ -2723,7 +2760,7 @@
             "subtitle": "Μουσική για κάθε ώρα και κάθε χώρο",
             "description": "Στοχευμένος ήχος που συμπληρώνει το service, τον σχεδιασμό και τη διάθεση του χώρου.",
             "image": "/images/industries/hotels-resorts-curated-music-ambiance.jpg",
-            "image_alt": "Πολυτελές resort και ξενοδοχείο με επιμελημένη μουσική ατμόσφαιρα",
+            "image_alt": "Ροζ βεράντα θερέτρου με καμάρες και θέα στη θάλασσα",
             "side_label": "INDUSTRIES — HOTELS & RESORTS",
             "explore_cta": "Εξερευνήστε τον κλάδο σας",
             "image_kicker": "HOTELS & RESORTS",
@@ -2755,7 +2792,8 @@
                     "description": "Αφαιρούμε το άγχος της μουσικής επιλογής από το προσωπικό σας. Το σύστημα αναπαραγωγής ακολουθεί το ιδανικό flow, επιτρέποντας στην ομάδα σας να εστιάσει αποκλειστικά στη φιλοξενία."
                 }
             ],
-            "image": "/images/industries/hotels-resorts-boutique-hotel-music.webp"
+            "image": "/images/industries/hotels-resorts-boutique-hotel-music.webp",
+            "image_alt": "Βεράντα boutique ξενοδοχείου με ψάθινο καναπέ και φυτά"
         },
         "ideal_for": {
             "title": "Ιδανικό για",
@@ -2781,7 +2819,8 @@
                     "description": "Για γάμους, parties, εταιρικά events/retreats και συνέδρια."
                 }
             ],
-            "image": "/images/industries/hotels-resorts-luxury-hotel-lobby.jpg"
+            "image": "/images/industries/hotels-resorts-luxury-hotel-lobby.jpg",
+            "image_alt": "Σαλόνι στο λόμπι ξενοδοχείου με καναπέδες και φωτιστικά δαπέδου"
         },
         "how_we_help": {
             "title": "Πώς βοηθάμε",
@@ -2807,7 +2846,8 @@
             "cta_title": "Ακούστε τον ήχο του κλάδου σας στην πράξη",
             "cta_description": "Διαβάστε τα case studies μας και ακούστε δείγματα από premium χώρους φιλοξενίας.",
             "cta_button": "Δείτε το Portfolio",
-            "cta_link": "case-studies"
+            "cta_link": "case-studies",
+            "image_alt": "Κοντινό πλάνο αυτιού με ένα ασημένιο σκουλαρίκι"
         },
         "cta": {
             "title": "Ας σχεδιάσουμε τον ήχο του ξενοδοχείου σας, ζώνη προς ζώνη.",
@@ -2831,7 +2871,7 @@
             "subtitle": "Εναρμονισμένη με τις γεύσεις και το service",
             "description": "Μουσική που συμπληρώνει το φαγητό και το service, αναδεικνύοντας τη ροή του γεύματος, τις συζητήσεις και τη συνολική ατμόσφαιρα.",
             "image": "/images/industries/restaurants-bars-curated-music-atmosphere.jpg",
-            "image_alt": "Κομψός εσωτερικός χώρος εστιατορίου με επιμελημένη μουσική ατμόσφαιρα",
+            "image_alt": "Τραπέζι εστιατορίου με ένα κόκκινο τριαντάφυλλο μπροστά σε ζεστό τοίχο",
             "side_label": "INDUSTRIES — RESTAURANTS & BARS",
             "explore_cta": "Εξερευνήστε τον κλάδο σας",
             "image_kicker": "RESTAURANTS & BARS",
@@ -2863,7 +2903,8 @@
                     "description": "Τακτικές αλλαγές που κρατούν τη μουσική φρέσκια για τους τακτικούς πελάτες και το προσωπικό, διατηρώντας τον χαρακτήρα σας."
                 }
             ],
-            "image": "/images/industries/restaurants-bars-dining-music-experience.jpg"
+            "image": "/images/industries/restaurants-bars-dining-music-experience.jpg",
+            "image_alt": "Κοκτέιλ με πάγο και μια μαύρη μπάλα μπιλιάρδου στο ποτήρι"
         },
         "ideal_for": {
             "title": "Ιδανικό για",
@@ -2885,7 +2926,8 @@
                     "description": "Που θέλουν συνεπή ηχητική ταυτότητα σε όλα τους τα σημεία."
                 }
             ],
-            "image": "/images/industries/restaurants-bars-cocktail-bar-atmosphere.jpg"
+            "image": "/images/industries/restaurants-bars-cocktail-bar-atmosphere.jpg",
+            "image_alt": "Γυναίκα με αστραφτερή μπλε μπλούζα σε μπαρ"
         },
         "how_we_help": {
             "title": "Πώς βοηθάμε",
@@ -2911,7 +2953,8 @@
             "cta_title": "Ακούστε τον ήχο του κλάδου στην πράξη",
             "cta_description": "Διαβάστε ιστορίες πελατών και ακούστε δείγματα από premium χώρους εστίασης και cafe-bars.",
             "cta_button": "Δείτε το Portfolio",
-            "cta_link": "case-studies"
+            "cta_link": "case-studies",
+            "image_alt": "Καλεσμένοι χορεύουν σε βραδινό πάρτι"
         },
         "cta": {
             "title": "Ας ακούσουμε τον χώρο σας σε ώρες αιχμής.",
@@ -2935,7 +2978,7 @@
             "subtitle": "Σχεδιασμένη να ενισχύει την περιήγηση και την ταυτότητα του brand",
             "description": "Ρυθμός επιμελημένος ώστε να υποστηρίζει την εμπορική δραστηριότητα και την εικόνα του καταστήματος.",
             "image": "/images/industries/retail-stores-curated-music-shopping.jpg",
-            "image_alt": "Σύγχρονος χώρος καταστήματος (retail) με επιμελημένη μουσική ατμόσφαιρα",
+            "image_alt": "Κατάστημα μόδας με κρεμάστρα ρούχων, καναπέ και κούκλα βιτρίνας",
             "side_label": "INDUSTRIES — RETAIL STORES",
             "explore_cta": "Εξερευνήστε τον κλάδο σας",
             "image_kicker": "RETAIL STORES",
@@ -2967,7 +3010,8 @@
                     "description": "Playlists που εξελίσσονται παράλληλα με τις νέες συλλογές και τις περιόδους προσφορών, διατηρώντας ζωντανό τον χαρακτήρα σας."
                 }
             ],
-            "image": "/images/industries/retail-stores-music-strategy-browsing.jpg"
+            "image": "/images/industries/retail-stores-music-strategy-browsing.jpg",
+            "image_alt": "Άνδρας με πράσινο σακάκι και γυαλιά ηλίου ξαπλωμένος σε πολύχρωμους καναπέδες"
         },
         "ideal_for": {
             "title": "Ιδανικό για",
@@ -2993,7 +3037,8 @@
                     "description": "Που πρέπει να αφήσουν ισχυρή εντύπωση και να μεταφέρουν το brand vibe από την πρώτη μέρα."
                 }
             ],
-            "image": "/images/industries/retail-stores-boutique-music-atmosphere.jpg"
+            "image": "/images/industries/retail-stores-boutique-music-atmosphere.jpg",
+            "image_alt": "Γυναίκα με μπλούζα με παγιέτες βγαίνει από ένα αυτοκίνητο"
         },
         "how_we_help": {
             "title": "Πώς βοηθάμε",
@@ -3015,7 +3060,8 @@
                     "description": "Με κεντρική διαχείριση και νόμιμα αδειοδοτημένη μουσική, το προσωπικό σας εστιάζει αποκλειστικά στις πωλήσεις και την εξυπηρέτηση, χωρίς να αναζητά playlists."
                 }
             ],
-            "image": "/images/industries/retail-stores-customer-journey-sound.jpg"
+            "image": "/images/industries/retail-stores-customer-journey-sound.jpg",
+            "image_alt": "Διάδρομος φωτισμένος με πολύχρωμα φώτα νέον"
         },
         "cta": {
             "title": "Ας ακούσουμε το κατάστημά σας, σε μια ήσυχη και σε μια γεμάτη ώρα.",
@@ -3039,7 +3085,7 @@
             "subtitle": "Σχεδιασμένη γύρω από τη δραστηριότητα και την ένταση",
             "description": "Στοχευμένη μουσική που ενισχύει τη συγκέντρωση σε όλους τους χώρους και τις πρακτικές.",
             "image": "/images/industries/wellness-gyms-luxury-spa-ambient-music.jpg",
-            "image_alt": "Εσωτερικός χώρος πολυτελούς spa και κέντρου ευεξίας με επιμελημένη ambient μουσική",
+            "image_alt": "Εσωτερική πισίνα spa με φοίνικες και απαλό γαλαζοπράσινο φως",
             "side_label": "INDUSTRIES — WELLNESS & GYMS",
             "explore_cta": "Εξερευνήστε τον κλάδο σας",
             "image_kicker": "WELLNESS & GYMS",
@@ -3071,7 +3117,8 @@
                     "description": "Η υποδοχή, οι χώροι θεραπειών και οι αίθουσες άσκησης αποκτούν τον δικό τους ήχο, διατηρώντας όμως μία κοινή, αναγνωρίσιμη ηχητική ταυτότητα."
                 }
             ],
-            "image": "/images/industries/wellness-gyms-spa-treatment-music.jpg"
+            "image": "/images/industries/wellness-gyms-spa-treatment-music.jpg",
+            "image_alt": "Λιτό γυμναστήριο με σάκο του μποξ και ξύλινο πάγκο"
         },
         "ideal_for": {
             "title": "Ιδανικό για",
@@ -3097,7 +3144,8 @@
                     "description": "Που συνδυάζουν ομαλά τις χαλαρωτικές θεραπείες με την ενεργή άσκηση."
                 }
             ],
-            "image": "/images/industries/wellness-gyms-fitness-music-curation.jpg"
+            "image": "/images/industries/wellness-gyms-fitness-music-curation.jpg",
+            "image_alt": "Γυναίκα με λευκό μαγιό επιπλέει σε πισίνα"
         },
         "how_we_help": {
             "title": "Πώς βοηθάμε",
@@ -3119,7 +3167,8 @@
                     "description": "Το προσωπικό εστιάζει αποκλειστικά στα μέλη, ενώ εμείς αναλαμβάνουμε τις λίστες, τις ανανεώσεις και τη νόμιμη αδειοδότηση."
                 }
             ],
-            "image": "/images/industries/wellness-gyms-yoga-studio-soundscape.jpg"
+            "image": "/images/industries/wellness-gyms-yoga-studio-soundscape.jpg",
+            "image_alt": "Άνθρωπος ξαπλωμένος σε φωτισμένη πλατφόρμα με κόκκινο και μπλε φως"
         },
         "cta": {
             "title": "Ας ορίσουμε τον ρυθμό, χώρο προς χώρο.",
@@ -3143,7 +3192,7 @@
             "subtitle": "Ήχος που ταιριάζει στη στιγμή",
             "description": "Επιμελημένη μουσική, συγχρονισμένη με τη ροή και το χρονοδιάγραμμα του event σας.",
             "image": "/images/industries/events-experiences-music-curation-event.jpg",
-            "image_alt": "Μουσική επιμέλεια εκδηλώσεων και παραγωγή premium events",
+            "image_alt": "Καλεσμένοι με κόκκινο φόρεμα και λευκό κοστούμι σε εκδήλωση",
             "side_label": "INDUSTRIES — EVENTS & EXPERIENCES",
             "explore_cta": "Εξερευνήστε τον κλάδο σας",
             "image_kicker": "EVENTS & EXPERIENCES",
@@ -3175,7 +3224,8 @@
                     "description": "Συνεργαζόμαστε απευθείας με τον χώρο διεξαγωγής για όλα τα μουσικά και τεχνικά θέματα, απαλλάσσοντάς σας από το βάρος του συντονισμού."
                 }
             ],
-            "image": "/images/industries/events-experiences-branded-event-music.jpg"
+            "image": "/images/industries/events-experiences-branded-event-music.jpg",
+            "image_alt": "Ασπρόμαυρη φωτογραφία με δύο γυναίκες που γελούν σε πάρτι"
         },
         "ideal_for": {
             "title": "Ιδανικό για",
@@ -3201,7 +3251,8 @@
                     "description": "Που κατανοούν ότι ο σωστός ήχος και μουσική καθορίζουν την τελική εντύπωση της εκδήλωσης."
                 }
             ],
-            "image": "/images/industries/events-experiences-event-music-planning.jpg"
+            "image": "/images/industries/events-experiences-event-music-planning.jpg",
+            "image_alt": "Πόδια χορευτή με τιρκουάζ καλσόν κάτω από μωβ ύφασμα"
         },
         "how_we_help": {
             "title": "Πώς βοηθάμε",
@@ -3219,7 +3270,8 @@
                     "description": "Η ομάδα μας εγγυάται την άψογη τεχνική και μουσική ροή, επιτρέποντάς σας να εστιάσετε αποκλειστικά στον ρόλο του οικοδεσπότη."
                 }
             ],
-            "image": "/images/industries/events-experiences-private-event-soundscape.jpg"
+            "image": "/images/industries/events-experiences-private-event-soundscape.jpg",
+            "image_alt": "Άνδρας κρατά σπρέι μπροστά σε κόκκινο γκράφιτι"
         },
         "cta": {
             "title": "Πείτε μας τη ροή της εκδήλωσης.",
@@ -3243,7 +3295,7 @@
             "subtitle": "Διακριτικός ήχος, χωρίς να ανταγωνίζεται αυτό που παρουσιάζετε",
             "description": "Στοχευμένες μουσικές επιλογές που συμπληρώνουν το επιμελητικό σας όραμα.",
             "image": "/images/industries/art-museums-fashion-gallery-curation.jpg",
-            "image_alt": "Γκαλερί τέχνης με επιμελημένη μουσική ατμόσφαιρα και εγκατάσταση μόδας",
+            "image_alt": "Μοντέλα περπατούν στην πασαρέλα με μακριές σκιές",
             "side_label": "INDUSTRIES — ART, MUSEUMS & FASHION",
             "explore_cta": "Εξερευνήστε τον κλάδο σας",
             "image_kicker": "ART, MUSEUMS & FASHION",
@@ -3275,7 +3327,8 @@
                     "description": "Τακτικές ανανεώσεις, ώστε η μουσική να μη γίνεται ταπετσαρία για τους επισκέπτες ή το προσωπικό, με μουσική αδειοδοτημένη για επαγγελματική χρήση."
                 }
             ],
-            "image": "/images/industries/art-museums-fashion-cultural-space-music.jpg"
+            "image": "/images/industries/art-museums-fashion-cultural-space-music.jpg",
+            "image_alt": "Γυναίκα με μαύρο πλισέ φόρεμα κρατά ένα βιβλίο σε γκαλερί"
         },
         "ideal_for": {
             "title": "Ιδανικό για",
@@ -3301,7 +3354,8 @@
                     "description": "Που χρειάζονται άμεση και ισχυρή ηχητική ταυτότητα."
                 }
             ],
-            "image": "/images/industries/art-museums-fashion-museum-soundscape.jpg"
+            "image": "/images/industries/art-museums-fashion-museum-soundscape.jpg",
+            "image_alt": "Γκαλερί με πολύχρωμους πίνακες και ένα λευκό γλυπτό"
         },
         "how_we_help": {
             "title": "Πώς βοηθάμε",
@@ -3323,7 +3377,8 @@
             "cta_title": "Δείτε την ακουστική εμπειρία στην πράξη",
             "cta_description": "Διαβάστε παραδείγματα και ακούστε δείγματα από χώρους τέχνης, μόδας και μουσεία.",
             "cta_button": "Δείτε τα Παραδείγματα",
-            "cta_link": "case-studies"
+            "cta_link": "case-studies",
+            "image_alt": "Άνδρας με λεοπάρ πουκάμισο και τα χέρια στη μέση"
         },
         "cta": {
             "title": "Πείτε μας τι παρουσιάζετε.",

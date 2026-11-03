@@ -131,7 +131,7 @@ export default async function SitemapPageV3({ params }: { params: Promise<{ lang
                         <ScrollReveal direction="right" delay={0.4}>
                             <div className="relative">
                                 <div className="relative aspect-square overflow-hidden rounded-lg shadow-[0_40px_90px_-30px_rgba(0,0,0,0.8)]">
-                                    <Image src="/images/sitemap-visual.jpg" alt={content.hero.title} fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" priority />
+                                    <Image src="/images/sitemap-visual.jpg" alt={content.hero.image_alt} fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" priority />
                                     <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(11,10,10,0)_48%,rgba(11,10,10,0.55))]" />
                                 </div>
                                 {/* Hero image caption & rotating badge — hidden for now
@@ -201,6 +201,7 @@ export default async function SitemapPageV3({ params }: { params: Promise<{ lang
                 ghostLabel={content.cta.faq_btn}
                 ghostHref={localizedPath('/faq')}
                 bgImage="/images/contact/contact-hero-venue-consultation.jpg"
+                bgAlt={dict.contact.hero.image_alt}
             />
         </V3Root>
     );

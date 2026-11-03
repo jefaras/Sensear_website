@@ -9,6 +9,7 @@ interface IndustryRowProps {
         desc1: string;
         desc2: string;
         image: string;
+        image_alt: string;
         link: string;
         cta: string;
     };
@@ -24,7 +25,7 @@ export function IndustryRow({ item, href, imageSide, isLast = false }: IndustryR
         >
             <ScrollReveal direction={imageSide} className={imageSide === 'left' ? '' : 'lg:order-2'}>
                 <div className="relative aspect-[3/4] overflow-hidden rounded-lg">
-                    <Image src={item.image} alt={item.title} fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" />
+                    <Image src={item.image} alt={item.image_alt} fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" />
                     <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(11,10,10,0)_60%,rgba(11,10,10,0.4))]" />
                 </div>
             </ScrollReveal>

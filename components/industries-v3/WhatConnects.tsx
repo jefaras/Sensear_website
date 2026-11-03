@@ -10,6 +10,7 @@ interface WhatConnectsProps {
         subtitle: string;
         points: string[];
         conclusion: string;
+        image_alt: string;
     };
 }
 
@@ -28,7 +29,7 @@ export function WhatConnects({ emWord, connect }: WhatConnectsProps) {
                         <div className="relative aspect-[4/4.2] overflow-hidden rounded-lg">
                             <Image
                                 src="/images/industries/industries-connected-worlds.png"
-                                alt={connect.title}
+                                alt={connect.image_alt}
                                 fill
                                 sizes="(max-width: 1024px) 100vw, 46vw"
                                 className="object-cover"

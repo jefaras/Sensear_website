@@ -9,6 +9,7 @@ interface IndustryItem {
     title: string;
     desc: string;
     link: string;
+    image_alt: string;
 }
 
 interface IndustriesGridProps {
@@ -56,7 +57,7 @@ export function IndustriesGrid({ lang, title, subtitle, items, cta }: Industries
                                 {img && (
                                     <Image
                                         src={img}
-                                        alt={item.title}
+                                        alt={item.image_alt}
                                         fill
                                         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                                         className="object-cover transition-transform duration-700 group-hover:scale-105"

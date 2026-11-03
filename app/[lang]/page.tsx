@@ -46,7 +46,7 @@ export default async function HomeV3({
                 <Hero lang={lang} hero={home.hero} />
             )}
             <Marquee items={home.marquee} />
-            <About p1={home.intro.p1} p2={home.intro.p2} />
+            <About p1={home.intro.p1} p2={home.intro.p2} imageAlt={home.intro.image_alt} />
             <Services
                 lang={lang}
                 title={home.services.title}
@@ -70,6 +70,7 @@ export default async function HomeV3({
                 subtitle={home.enhance.subtitle}
                 items={home.enhance.items}
                 cta={home.enhance.cta}
+                imageAlt={home.enhance.image_alt}
             />
             <Venues lang={lang} title={home.clients.title} />
             <Journal

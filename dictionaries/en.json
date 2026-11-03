@@ -31,12 +31,14 @@
                 "★ SENSEAR ★",
                 "EST · ATH"
             ],
-            "scroll_label": "SCROLL"
+            "scroll_label": "SCROLL",
+            "image_alt": "Orange velvet sofa with two mirror balls on the floor"
         },
         "intro": {
             "title": "Who we are",
             "p1": "SensEar is an Athens-based <em>music curation studio</em> with clients across Greece.<br />We curate <em>the music a venue plays</em> through its day, score <em>its events</em> hour by hour, define <em>how a brand sounds</em> across locations, and improve <em>how the room carries it all</em>.",
-            "p2": "<strong>Business-use</strong> licensed music, <strong>playlist scheduling-updates</strong> and <strong>support</strong> are part of the service, so the sound stays deliberate long after launch."
+            "p2": "<strong>Business-use</strong> licensed music, <strong>playlist scheduling-updates</strong> and <strong>support</strong> are part of the service, so the sound stays deliberate long after launch.",
+            "image_alt": "Bar with red stools and a palm tree mural"
         },
         "marquee": [
             "Signature Playlists",
@@ -104,32 +106,38 @@
                 {
                     "title": "Hotels & Resorts",
                     "desc": "Music for every time of day and area.",
-                    "link": "industries/music-for-hotels-and-resorts"
+                    "link": "industries/music-for-hotels-and-resorts",
+                    "image_alt": "Man in white on a hotel terrace above a bay with a yacht"
                 },
                 {
                     "title": "Restaurants & Bars",
                     "desc": "Match your service flow, keep guests longer.",
-                    "link": "industries/music-for-restaurants-and-bars"
+                    "link": "industries/music-for-restaurants-and-bars",
+                    "image_alt": "Restaurant with a yellow bar counter and tall windows"
                 },
                 {
                     "title": "Events & Experiences",
                     "desc": "Impactful, time-based, natural track changes.",
-                    "link": "industries/music-for-events-and-experiences"
+                    "link": "industries/music-for-events-and-experiences",
+                    "image_alt": "Guests in party outfits beside a pool"
                 },
                 {
                     "title": "Retail Stores",
                     "desc": "Promote browsing and brand identity.",
-                    "link": "industries/music-for-retail-stores"
+                    "link": "industries/music-for-retail-stores",
+                    "image_alt": "Colorful shoe and clothing store with geometric shelves"
                 },
                 {
                     "title": "Wellness & Gyms",
                     "desc": "Calibrated for relaxation, focus or motivation.",
-                    "link": "industries/music-for-wellness-and-gyms"
+                    "link": "industries/music-for-wellness-and-gyms",
+                    "image_alt": "Black-and-white photo of a person swimming in a pool"
                 },
                 {
                     "title": "Art, Museums & Fashion",
                     "desc": "Smooth, precise, unobtrusive melodies.",
-                    "link": "industries/music-for-art-museums-and-fashion"
+                    "link": "industries/music-for-art-museums-and-fashion",
+                    "image_alt": "Gallery with a black-and-white floor and a colorful artwork"
                 }
             ],
             "cta": "Find your industry"
@@ -151,7 +159,8 @@
                     "desc": "Ensure a smooth music journey across locations & marketing channels."
                 }
             ],
-            "cta": "View Case Studies"
+            "cta": "View Case Studies",
+            "image_alt": "Shelf of vinyl records"
         },
         "clients": {
             "title": "Venues that trust us with their sound",
@@ -169,19 +178,22 @@
                     "title": "Three reasons music matters in hospitality",
                     "desc": "Three reasons music earns a budget line in hospitality, and what research says about each.",
                     "tag": "Insights",
-                    "link": "three-reasons-make-music-hospitality"
+                    "link": "three-reasons-make-music-hospitality",
+                    "image_alt": "Person in yellow trousers sitting on a speaker beside audio equipment"
                 },
                 {
                     "title": "How brand-fit music converts browsers into buyers",
                     "desc": "What the retail studies found about brand-fit music, and what it means for bars and hotels.",
                     "tag": "Research",
-                    "link": "brand-music-converts-browsers-buyers"
+                    "link": "brand-music-converts-browsers-buyers",
+                    "image_alt": "Man in a suit drinking two cocktails with paper umbrellas"
                 },
                 {
                     "title": "What exactly does a music curator do?",
                     "desc": "What a music curator does: listening, diagnostics, building the programme, keeping it current.",
                     "tag": "Education",
-                    "link": "what-exactly-does-music-curator-do"
+                    "link": "what-exactly-does-music-curator-do",
+                    "image_alt": "Sunny terrace with arches, palm plants and a sea view"
                 }
             ]
         },
@@ -196,7 +208,8 @@
             "explore_industries": "sectors we serve",
             "secondary_email_label": "hello@sensear.music",
             "phone_line": "+30 697 699 4212",
-            "background_image": "/images/homepage/sensear-signature-playlist-service.jpg"
+            "background_image": "/images/homepage/sensear-signature-playlist-service.jpg",
+            "background_image_alt": "Mirror ball above glasses of wine at a bar"
         },
         "footer": {
             "tagline": "Music curation for venues, events & brands.",
@@ -237,7 +250,7 @@
             "subtitle": "Tell us a bit about your venue and the feeling you want to create.",
             "background_image": "/images/backgrounds/warm-silver-foil-texture.jpg",
             "image": "/images/contact/contact-hero-venue-consultation.jpg",
-            "image_alt": "Contact SensEar",
+            "image_alt": "Smiling woman talking on the phone in a warm vintage room",
             "side_label": "CONTACT — LET'S TALK SOUND",
             "primary_cta": "Fill out the form",
             "secondary_cta": "Contact details",
@@ -250,7 +263,8 @@
         },
         "intro": {
             "title": "Looking for the perfect sound for your space?",
-            "subtitle": "Fill out the form and we will contact you shortly to meet and design the ideal music plan for your venue."
+            "subtitle": "Fill out the form and we will contact you shortly to meet and design the ideal music plan for your venue.",
+            "image_alt": "Close-up of a black vinyl record"
         },
         "form": {
             "name": "Name *",
@@ -331,7 +345,7 @@
             "title": "The people behind your soundtrack",
             "subtitle": "Years in landmark residencies where the music had to work from midday until sunrise. Studies in music, hospitality management and service & experience design.",
             "image": "/images/backgrounds/warm-silver-foil-texture.jpg",
-            "image_alt": "The people behind your soundtrack",
+            "image_alt": "Silhouettes of three people against a blue background",
             "side_label": "ABOUT — THE PEOPLE & THE PHILOSOPHY",
             "primary_cta": "Meet the team",
             "secondary_cta": "Get in touch",
@@ -381,7 +395,7 @@
             ],
             "image": "/images/about/about-journey-team-collaboration.jpg",
             "lede": "Fifteen years as a DJ collective. The work is the same; we do it for more kinds of spaces now.",
-            "image_alt": "Our journey"
+            "image_alt": "Person in a sequinned top holding a blue vinyl record"
         },
         "team": {
             "heading": "Meet the team",
@@ -411,7 +425,7 @@
             ],
             "title": "Four <em>principles</em> that guide us",
             "subtitle": "Everything we do stems from how we think about sound.",
-            "image_alt": "SensEar unique approach"
+            "image_alt": "SensEar card clipped to a line by the sea"
         },
         "final_cta": {
             "heading": "Discover your sound path",
@@ -1328,7 +1342,8 @@
             "submit": "Subscribe",
             "success": "Thanks for subscribing! ✦",
             "location": "Athens, Greece",
-            "background_image": "/images/homepage/sensear-signature-playlist-service.jpg"
+            "background_image": "/images/homepage/sensear-signature-playlist-service.jpg",
+            "background_image_alt": "Mirror ball above glasses of wine at a bar"
         },
         "article": {
             "read_time": "8 MIN READ",
@@ -1348,7 +1363,7 @@
             "secondary_cta": "Book a call",
             "image_kicker": "FROM VISION TO SOUND",
             "image_caption": "Real spaces, scored.",
-            "image_alt": "Case Studies showcasing music curation projects",
+            "image_alt": "SensEar tote bag against a green hedge",
             "badge": [
                 "★ SENSEAR ★",
                 "EST · ATH"
@@ -1428,7 +1443,7 @@
             "secondary_cta": "Book a call",
             "image_kicker": "SIX WORLDS",
             "image_caption": "A sound for every space.",
-            "image_alt": "Industries we serve with music curation",
+            "image_alt": "Woman with green hair holding a vinyl record",
             "badge": [
                 "★ SENSEAR ★",
                 "EST · ATH"
@@ -1450,7 +1465,8 @@
                     "desc2": "Result: The atmosphere reinforces what guests already love about your property.",
                     "cta": "See how we work in hotels",
                     "link": "industries/music-for-hotels-and-resorts",
-                    "image": "/images/industries/industry-hotels-resorts.jpg"
+                    "image": "/images/industries/industry-hotels-resorts.jpg",
+                    "image_alt": "Man in white on a hotel terrace above a bay with a yacht"
                 },
                 {
                     "title": "Restaurants & Bars",
@@ -1459,7 +1475,8 @@
                     "desc2": "Result: Service flows more smoothly and guests settle in for the complete experience.",
                     "cta": "See how we work in restaurants and bars",
                     "link": "industries/music-for-restaurants-and-bars",
-                    "image": "/images/industries/industry-restaurants-bars.jpg"
+                    "image": "/images/industries/industry-restaurants-bars.jpg",
+                    "image_alt": "Restaurant with a yellow bar counter and tall windows"
                 },
                 {
                     "title": "Events & Experiences",
@@ -1468,7 +1485,8 @@
                     "desc2": "Result: Smooth transitions that guests don't notice but organizers appreciate.",
                     "cta": "See how we work at events",
                     "link": "industries/music-for-events-and-experiences",
-                    "image": "/images/industries/industry-events-experiences.jpg"
+                    "image": "/images/industries/industry-events-experiences.jpg",
+                    "image_alt": "Guests in party outfits beside a pool"
                 },
                 {
                     "title": "Retail Stores",
@@ -1477,7 +1495,8 @@
                     "desc2": "Result: Shoppers slow down, explore more corners & feel guided, not rushed.",
                     "cta": "See how we work in retail",
                     "link": "industries/music-for-retail-stores",
-                    "image": "/images/industries/industry-retail-stores.jpg"
+                    "image": "/images/industries/industry-retail-stores.jpg",
+                    "image_alt": "Colorful shoe and clothing store with geometric shelves"
                 },
                 {
                     "title": "Wellness & Gyms",
@@ -1486,7 +1505,8 @@
                     "desc2": "Result: Members consider the atmosphere as part of what makes their practice feel complete.",
                     "cta": "See how we work in wellness and gyms",
                     "link": "industries/music-for-wellness-and-gyms",
-                    "image": "/images/industries/industry-wellness-gyms.jpg"
+                    "image": "/images/industries/industry-wellness-gyms.jpg",
+                    "image_alt": "Black-and-white photo of a person swimming in a pool"
                 },
                 {
                     "title": "Art, Museums & Fashion",
@@ -1495,7 +1515,8 @@
                     "desc2": "Result: Visitors slow down, absorb more and share their experience afterwards.",
                     "cta": "See how we work in galleries and museums",
                     "link": "industries/music-for-art-museums-and-fashion",
-                    "image": "/images/industries/industry-art-museums-fashion.jpg"
+                    "image": "/images/industries/industry-art-museums-fashion.jpg",
+                    "image_alt": "Gallery with a black-and-white floor and a colorful artwork"
                 }
             ]
         },
@@ -1509,7 +1530,8 @@
                 "Creating memorable experiences that bring people back",
                 "Knowing if your music actually works for your business"
             ],
-            "conclusion": "Different rooms, different hours, one way of working: music planned around how each place actually runs."
+            "conclusion": "Different rooms, different hours, one way of working: music planned around how each place actually runs.",
+            "image_alt": "SensEar logo on a pink card"
         },
         "cta": {
             "title": "Tell us about your space.",
@@ -1532,7 +1554,7 @@
             "secondary_cta": "Book a call",
             "image_kicker": "FOUR APPROACHES",
             "image_caption": "Sound, by design.",
-            "image_alt": "Music and sound services for hospitality and retail venues",
+            "image_alt": "Mirror ball and glasses of wine in a dark venue",
             "badge": [
                 "★ SENSEAR ★",
                 "EST · ATH"
@@ -1743,7 +1765,8 @@
             "badge": [
                 "★ SENSEAR ★",
                 "EST · ATH"
-            ]
+            ],
+            "image_alt": "Hand holding a printed SensEar site map"
         },
         "sections": {
             "main": "Main Pages",
@@ -1782,7 +1805,8 @@
             "badge": [
                 "★ SENSEAR ★",
                 "EST · ATH"
-            ]
+            ],
+            "image_alt": "Headphones on white mannequin heads"
         },
         "section_kicker": "FAQ",
         "title": "Your Questions, Answered",
@@ -1843,7 +1867,8 @@
             "side_label": "SERVICES — SIGNATURE PLAYLISTS",
             "explore_cta": "Explore the service",
             "image_kicker": "DAILY SOUNDTRACK",
-            "image_caption": "Curated, never generic."
+            "image_caption": "Curated, never generic.",
+            "image_alt": "Vinyl records in a clear acrylic crate with a bright light behind"
         },
         "intro": {
             "title": "What Signature Playlists are",
@@ -1993,7 +2018,8 @@
             "side_label": "SERVICES — EVENT SOUNDTRACKS",
             "explore_cta": "Explore the service",
             "image_kicker": "EVENT TIMING",
-            "image_caption": "Right moment, right sound."
+            "image_caption": "Right moment, right sound.",
+            "image_alt": "Hand with rings holding a small mirror ball"
         },
         "intro": {
             "title": "What Event Soundtracks cover",
@@ -2148,7 +2174,8 @@
             "side_label": "SERVICES — SONIC IDENTITY",
             "explore_cta": "Explore the service",
             "image_kicker": "SONIC DNA",
-            "image_caption": "A signature you can hear."
+            "image_caption": "A signature you can hear.",
+            "image_alt": "Woman with orange hair and a dark blue eye mask"
         },
         "intro": {
             "title": "What Sonic Identity covers",
@@ -2283,7 +2310,8 @@
             "side_label": "SERVICES — AUDIO UPGRADES",
             "explore_cta": "Explore the service",
             "image_kicker": "AUDIO CLARITY",
-            "image_caption": "Sound, perfected."
+            "image_caption": "Sound, perfected.",
+            "image_alt": "Large loudspeaker in a modern room"
         },
         "intro": {
             "title": "What Audio Upgrades cover",
@@ -2496,7 +2524,8 @@
                 }
             ],
             "closing": "For a private celebration, the story is personal. For a corporate event, it brings the company's values to its people. For a brand launch, it lets guests feel the brand, not just see it.",
-            "intensity": "We work with you to set the intensity that fits the occasion, from a memorable touch to a fully immersive experience or a moment that stays with guests long after they leave."
+            "intensity": "We work with you to set the intensity that fits the occasion, from a memorable touch to a fully immersive experience or a moment that stays with guests long after they leave.",
+            "image_alt": "Curved orange wall against a sunset sky"
         },
         "layers": {
             "title": "Four layers we design",
@@ -2504,19 +2533,23 @@
             "items": [
                 {
                     "title": "The story",
-                    "description": "What should guests feel and say about you after the visit? We define this first, because every other decision follows from it."
+                    "description": "What should guests feel and say about you after the visit? We define this first, because every other decision follows from it.",
+                    "image_alt": "Brand board with concept cards on a wall"
                 },
                 {
                     "title": "The team",
-                    "description": "Guests feel the experience through your staff. We shape the habits, words and small rituals that let your team deliver it every day."
+                    "description": "Guests feel the experience through your staff. We shape the habits, words and small rituals that let your team deliver it every day.",
+                    "image_alt": "Smiling man wearing sparkling rings"
                 },
                 {
                     "title": "The journey",
-                    "description": "We map every step of the visit, before, during and after. Then we plan the moments that matter most: the arrival, the high point and the goodbye."
+                    "description": "We map every step of the visit, before, during and after. Then we plan the moments that matter most: the arrival, the high point and the goodbye.",
+                    "image_alt": "Woman relaxing on a speedboat at night"
                 },
                 {
                     "title": "The details",
-                    "description": "Sound, light, scent, materials, signage, menus and screens. These are the things guests actually hear, see and touch, and we design them to fit the story."
+                    "description": "Sound, light, scent, materials, signage, menus and screens. These are the things guests actually hear, see and touch, and we design them to fit the story.",
+                    "image_alt": "Plate, fork and colorful straws seen from above"
                 }
             ]
         },
@@ -2551,7 +2584,8 @@
                     "title": "Measurement",
                     "description": "We agree simple measures with you, such as guest reviews, time spent, repeat visits and average spend, and we check them after launch."
                 }
-            ]
+            ],
+            "image_alt": "Round dining table among plants in a white courtyard, seen from above"
         },
         "perfect_for": {
             "title": "Perfect for",
@@ -2586,7 +2620,8 @@
                     "description": "Visits that people remember and talk about.",
                     "link": "industries/music-for-art-museums-and-fashion"
                 }
-            ]
+            ],
+            "image_alt": "Visitors in a room filled with blue light projections"
         },
         "process": {
             "title": "From first call to launch",
@@ -2615,7 +2650,8 @@
                     "title": "Launch",
                     "description": "We help you put it in place, train the team and measure the results."
                 }
-            ]
+            ],
+            "image_alt": "Blue staircase and doorway among rocks"
         },
         "ways_to_start": {
             "title": "Ways to start",
@@ -2728,7 +2764,8 @@
         "cta": {
             "title": "Tell us how guests experience your venue today.",
             "description": "We reply within 24 hours with our first thoughts and the best way to start.",
-            "button": "Start with an Experience Audit"
+            "button": "Start with an Experience Audit",
+            "image_alt": "People walking through flowing orange and red light"
         }
     },
     "hotels_resorts": {
@@ -2741,7 +2778,7 @@
             "subtitle": "Music for every hour and every area",
             "description": "Targeted sound that complements service, design, and the mood of the space.",
             "image": "/images/industries/hotels-resorts-curated-music-ambiance.jpg",
-            "image_alt": "Luxury hotel resort with curated music ambiance",
+            "image_alt": "Pink resort terrace with arches and a sea view",
             "side_label": "INDUSTRIES — HOTELS & RESORTS",
             "explore_cta": "Explore your sector",
             "image_kicker": "HOTELS & RESORTS",
@@ -2773,7 +2810,8 @@
                     "description": "Your team focuses on hospitality, while we handle music, updates, and proper licensing."
                 }
             ],
-            "image": "/images/industries/hotels-resorts-boutique-hotel-music.webp"
+            "image": "/images/industries/hotels-resorts-boutique-hotel-music.webp",
+            "image_alt": "Boutique hotel terrace with a wicker sofa and plants"
         },
         "ideal_for": {
             "title": "Ideal for",
@@ -2799,7 +2837,8 @@
                     "description": "For weddings, retreats, and conferences."
                 }
             ],
-            "image": "/images/industries/hotels-resorts-luxury-hotel-lobby.jpg"
+            "image": "/images/industries/hotels-resorts-luxury-hotel-lobby.jpg",
+            "image_alt": "Hotel lobby lounge with sofas and floor lamps"
         },
         "how_we_help": {
             "title": "How we help",
@@ -2825,7 +2864,8 @@
             "cta_title": "Hear the industry in action",
             "cta_description": "Read examples and hear samples from hospitality venues.",
             "cta_button": "View Examples",
-            "cta_link": "case-studies"
+            "cta_link": "case-studies",
+            "image_alt": "Close-up of an ear with a sculpted silver earring"
         },
         "cta": {
             "title": "Let's plan your hotel, zone by zone.",
@@ -2849,7 +2889,7 @@
             "subtitle": "Designed to blend with food, drinks and service",
             "description": "Music selections that complement flavor, timing, and environment.",
             "image": "/images/industries/restaurants-bars-curated-music-atmosphere.jpg",
-            "image_alt": "Elegant restaurant interior with curated music atmosphere",
+            "image_alt": "Restaurant table with a red rose against a warm terracotta wall",
             "side_label": "INDUSTRIES — RESTAURANTS & BARS",
             "explore_cta": "Explore your sector",
             "image_kicker": "RESTAURANTS & BARS",
@@ -2881,7 +2921,8 @@
                     "description": "Regular changes that keep music fresh for regular customers and staff, maintaining your character."
                 }
             ],
-            "image": "/images/industries/restaurants-bars-dining-music-experience.jpg"
+            "image": "/images/industries/restaurants-bars-dining-music-experience.jpg",
+            "image_alt": "Cocktail with ice and a black 8-ball in the glass"
         },
         "ideal_for": {
             "title": "Ideal for",
@@ -2903,7 +2944,8 @@
                     "description": "That want consistent sonic identity across all locations."
                 }
             ],
-            "image": "/images/industries/restaurants-bars-cocktail-bar-atmosphere.jpg"
+            "image": "/images/industries/restaurants-bars-cocktail-bar-atmosphere.jpg",
+            "image_alt": "Woman in a sparkling blue top at a bar"
         },
         "how_we_help": {
             "title": "How we help",
@@ -2929,7 +2971,8 @@
             "cta_title": "Hear the industry in action",
             "cta_description": "Read client stories and hear samples from their playlists.",
             "cta_button": "View Examples",
-            "cta_link": "case-studies"
+            "cta_link": "case-studies",
+            "image_alt": "Guests dancing at a night party"
         },
         "cta": {
             "title": "Let's hear your room at peak hours.",
@@ -2953,7 +2996,7 @@
             "subtitle": "Designed to welcome and inspire discovery",
             "description": "Curated rhythm to support store browsing and brand image.",
             "image": "/images/industries/retail-stores-curated-music-shopping.jpg",
-            "image_alt": "Modern retail store interior with curated music atmosphere",
+            "image_alt": "Fashion boutique with a clothes rail, a sofa and a mannequin",
             "side_label": "INDUSTRIES — RETAIL STORES",
             "explore_cta": "Explore your sector",
             "image_kicker": "RETAIL STORES",
@@ -2985,7 +3028,8 @@
                     "description": "Playlists that evolve with collections, seasons, and promotional periods, maintaining your character."
                 }
             ],
-            "image": "/images/industries/retail-stores-music-strategy-browsing.jpg"
+            "image": "/images/industries/retail-stores-music-strategy-browsing.jpg",
+            "image_alt": "Man in a green jacket and sunglasses lounging on colorful sofas"
         },
         "ideal_for": {
             "title": "Ideal for",
@@ -3011,7 +3055,8 @@
                     "description": "That need to make a strong impression from day one."
                 }
             ],
-            "image": "/images/industries/retail-stores-boutique-music-atmosphere.jpg"
+            "image": "/images/industries/retail-stores-boutique-music-atmosphere.jpg",
+            "image_alt": "Woman in a sequinned top stepping out of a car"
         },
         "how_we_help": {
             "title": "How we help",
@@ -3033,7 +3078,8 @@
                     "description": "Licensed and centrally managed playlists allow the team to focus on customers, not songs."
                 }
             ],
-            "image": "/images/industries/retail-stores-customer-journey-sound.jpg"
+            "image": "/images/industries/retail-stores-customer-journey-sound.jpg",
+            "image_alt": "Corridor lit with rainbow neon lines"
         },
         "cta": {
             "title": "Let's listen to your store, on a quiet hour and a busy one.",
@@ -3057,7 +3103,7 @@
             "subtitle": "Designed around activity and intensity",
             "description": "Targeted music that enhances focus across all spaces and practices.",
             "image": "/images/industries/wellness-gyms-luxury-spa-ambient-music.jpg",
-            "image_alt": "Luxury wellness spa interior with curated ambient music",
+            "image_alt": "Indoor spa pool with palm plants and soft teal light",
             "side_label": "INDUSTRIES — WELLNESS & GYMS",
             "explore_cta": "Explore your sector",
             "image_kicker": "WELLNESS & GYMS",
@@ -3089,7 +3135,8 @@
                     "description": "Reception, treatment rooms, and exercise spaces each get their own sound, maintaining a common, recognizable identity."
                 }
             ],
-            "image": "/images/industries/wellness-gyms-spa-treatment-music.jpg"
+            "image": "/images/industries/wellness-gyms-spa-treatment-music.jpg",
+            "image_alt": "Minimal gym with a punching bag and a wooden bench"
         },
         "ideal_for": {
             "title": "Ideal for",
@@ -3115,7 +3162,8 @@
                     "description": "That combine treatments and active exercise."
                 }
             ],
-            "image": "/images/industries/wellness-gyms-fitness-music-curation.jpg"
+            "image": "/images/industries/wellness-gyms-fitness-music-curation.jpg",
+            "image_alt": "Woman floating in a pool in a white swimsuit"
         },
         "how_we_help": {
             "title": "How we help",
@@ -3137,7 +3185,8 @@
                     "description": "Staff focuses on clients and members, while we handle music selections, updates, and professional licensing."
                 }
             ],
-            "image": "/images/industries/wellness-gyms-yoga-studio-soundscape.jpg"
+            "image": "/images/industries/wellness-gyms-yoga-studio-soundscape.jpg",
+            "image_alt": "Person lying on a lit platform in red and blue light"
         },
         "cta": {
             "title": "Let's set the pace, room by room.",
@@ -3161,7 +3210,7 @@
             "subtitle": "Sound that fits the moment",
             "description": "Curated music aligned with event timing and flow.",
             "image": "/images/industries/events-experiences-music-curation-event.jpg",
-            "image_alt": "Event music curation and entertainment production",
+            "image_alt": "Guests in a red dress and a white suit at an event",
             "side_label": "INDUSTRIES — EVENTS & EXPERIENCES",
             "explore_cta": "Explore your sector",
             "image_kicker": "EVENTS & EXPERIENCES",
@@ -3193,7 +3242,8 @@
                     "description": "We coordinate with the venue for music and technical matters, reducing coordination pressure."
                 }
             ],
-            "image": "/images/industries/events-experiences-branded-event-music.jpg"
+            "image": "/images/industries/events-experiences-branded-event-music.jpg",
+            "image_alt": "Black-and-white photo of two women laughing at a party"
         },
         "ideal_for": {
             "title": "Ideal for",
@@ -3219,7 +3269,8 @@
                     "description": "Who know that sound defines the experience."
                 }
             ],
-            "image": "/images/industries/events-experiences-event-music-planning.jpg"
+            "image": "/images/industries/events-experiences-event-music-planning.jpg",
+            "image_alt": "Legs of a dancer in turquoise tights under purple fabric"
         },
         "how_we_help": {
             "title": "How we help",
@@ -3237,7 +3288,8 @@
                     "description": "Our team handles music and technical execution with ready decisions, so you focus on hospitality."
                 }
             ],
-            "image": "/images/industries/events-experiences-private-event-soundscape.jpg"
+            "image": "/images/industries/events-experiences-private-event-soundscape.jpg",
+            "image_alt": "Man holding a spray can in front of red graffiti"
         },
         "cta": {
             "title": "Tell us your run of show.",
@@ -3261,7 +3313,7 @@
             "subtitle": "Present, without competing with what you are showing",
             "description": "Subtle sound that complements your curatorial vision.",
             "image": "/images/industries/art-museums-fashion-gallery-curation.jpg",
-            "image_alt": "Art gallery with curated music atmosphere and fashion installation",
+            "image_alt": "Models walking on a runway with long shadows",
             "side_label": "INDUSTRIES — ART, MUSEUMS & FASHION",
             "explore_cta": "Explore your sector",
             "image_kicker": "ART, MUSEUMS & FASHION",
@@ -3293,7 +3345,8 @@
                     "description": "Regular updates so the music does not become wallpaper for visitors or staff, using music licensed for commercial use."
                 }
             ],
-            "image": "/images/industries/art-museums-fashion-cultural-space-music.jpg"
+            "image": "/images/industries/art-museums-fashion-cultural-space-music.jpg",
+            "image_alt": "Woman in a black pleated dress holding a book in a gallery"
         },
         "ideal_for": {
             "title": "Ideal for",
@@ -3319,7 +3372,8 @@
                     "description": "That need immediate sonic identity."
                 }
             ],
-            "image": "/images/industries/art-museums-fashion-museum-soundscape.jpg"
+            "image": "/images/industries/art-museums-fashion-museum-soundscape.jpg",
+            "image_alt": "Gallery with colorful paintings and a white sculpture"
         },
         "how_we_help": {
             "title": "How we help",
@@ -3341,7 +3395,8 @@
             "cta_title": "Hear the industry sound in action",
             "cta_description": "Read examples and listen to samples from art, museums, and fashion spaces.",
             "cta_button": "View Examples",
-            "cta_link": "case-studies"
+            "cta_link": "case-studies",
+            "image_alt": "Man in a leopard-print shirt with his hands on his hips"
         },
         "cta": {
             "title": "Tell us what you are showing.",

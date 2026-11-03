@@ -16,6 +16,8 @@ interface PageCTAProps {
     ghostLabel?: string;
     ghostHref?: string;
     bgImage: string;
+    /** Describes the background photo: the same alt the photo has wherever else it appears. */
+    bgAlt: string;
 }
 
 /**
@@ -23,11 +25,11 @@ interface PageCTAProps {
  * phone/location line) — the prop-driven ContactCTA primitive from the v3 plan,
  * reused by the About/Services/... demo pages with per-page copy and links.
  */
-export function PageCTA({ heading, emWord, lede, primaryLabel, primaryHref, ghostLabel, ghostHref, bgImage }: PageCTAProps) {
+export function PageCTA({ heading, emWord, lede, primaryLabel, primaryHref, ghostLabel, ghostHref, bgImage, bgAlt }: PageCTAProps) {
     const hasGhost = Boolean(ghostLabel && ghostHref);
     return (
         <section id="cta" className="relative overflow-hidden py-[clamp(122px,9.66vw,170px)]">
-            <Image src={bgImage} alt="" fill aria-hidden="true" sizes="100vw" className="object-cover" />
+            <Image src={bgImage} alt={bgAlt} fill aria-hidden="true" sizes="100vw" className="object-cover" />
             <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(11,10,10,0.82),rgba(11,10,10,0.93))]" />
             <div className="relative z-10 mx-auto max-w-[min(1760px,100%)] px-[clamp(20px,1.59vw,28px)] text-center sm:px-[clamp(27px,2.1vw,37px)]">
                 <ScrollReveal delay={0.08}>

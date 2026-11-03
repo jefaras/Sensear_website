@@ -15,7 +15,7 @@ export interface ExperienceDesignContent {
     intro: { title: string; paragraphs: string[] };
     hotel_moments: { title: string; intro: string; items: Item[]; closing: string; image_alt: string };
     event_moments: { title: string; intro: string; items: Item[]; closing: string; intensity: string; image_alt?: string };
-    layers: { title: string; intro: string; items: Item[] };
+    layers: { title: string; intro: string; items: (Item & { image_alt: string })[] };
     what_we_do: { title: string; items: Item[]; image_alt?: string };
     perfect_for: { title: string; items: LinkedItem[]; image_alt?: string };
     process: { title: string; steps: Item[]; image_alt?: string };
@@ -24,7 +24,7 @@ export interface ExperienceDesignContent {
     method: { title: string; intro: string; items: Item[]; closing: string; image_alt: string };
     sound_fit: { title: string; intro: string; items: LinkedItem[] };
     faq: { title: string; items: { question: string; answer: string }[] };
-    cta: { title: string; description: string; button: string };
+    cta: { title: string; description: string; button: string; image_alt: string };
 }
 
 interface ExperienceDesignProps {
@@ -213,7 +213,7 @@ export function ExperienceDesign({ lang, content, images, em }: ExperienceDesign
                                 <div className="relative mb-[clamp(18px,1.42vw,25px)] aspect-[4/3] overflow-hidden rounded-lg">
                                     <Image
                                         src={images.layers[i].src}
-                                        alt={item.title}
+                                        alt={item.image_alt}
                                         fill
                                         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                                         className="object-cover"
@@ -413,6 +413,7 @@ export function ExperienceDesign({ lang, content, images, em }: ExperienceDesign
                 primaryLabel={content.cta.button}
                 primaryHref={localizedPath('/contact')}
                 bgImage={images.cta}
+                bgAlt={content.cta.image_alt}
             />
         </>
     );

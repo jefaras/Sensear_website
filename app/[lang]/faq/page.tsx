@@ -65,6 +65,7 @@ export default async function FaqV3({ params }: { params: Promise<{ lang: Locale
                     explore_services: home.contact_cta.explore_services,
                     explore_industries: home.contact_cta.explore_industries,
                     background_image: '/images/contact/contact-hero-venue-consultation.jpg',
+                    background_image_alt: dict.contact.hero.image_alt,
                 }}
             />
         </V3Root>

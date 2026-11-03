@@ -224,6 +224,7 @@ export default async function BlogPostV3({ params }: { params: Promise<{ lang: L
                 primaryLabel={cta.button || ''}
                 primaryHref={localizedPath('/contact')}
                 bgImage="/images/homepage/sensear-signature-playlist-service.jpg"
+                bgAlt={dict.blog.newsletter_cta.background_image_alt}
             />
         </V3Root>
     );

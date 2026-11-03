@@ -11,11 +11,12 @@ interface HeroProps {
         side_label: string;
         image_kicker: string;
         image_caption: string;
+        image_alt: string;
         badge: string[];
     };
 }
 
-export function Hero({ lang, hero }: HeroProps) {
+export function Hero({ hero }: HeroProps) {
     return (
         <section className="relative flex min-h-[92vh] items-center overflow-hidden py-[clamp(108px,8.52vw,150px)] pb-[clamp(58px,4.6vw,81px)]">
             <DriftOrb
@@ -59,7 +60,7 @@ export function Hero({ lang, hero }: HeroProps) {
                             <div className="relative aspect-square overflow-hidden rounded-lg shadow-[0_40px_90px_-30px_rgba(0,0,0,0.8)]">
                                 <Image
                                     src="/images/blog/blog-faq-default.jpg"
-                                    alt={lang === 'el' ? 'Πώς λειτουργεί: ήχος, αδειοδότηση και υπηρεσίες' : 'How it works: sound, licensing and service'}
+                                    alt={hero.image_alt}
                                     fill
                                     sizes="(max-width: 1024px) 100vw, 50vw"
                                     className="object-cover"

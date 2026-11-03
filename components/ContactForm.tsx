@@ -358,7 +358,8 @@ export function ContactForm({ labels, variant = "default" }: ContactFormProps) {
                                 height={32}
                                 sizes="32px"
                                 loading={isEagerLogoPage ? "eager" : "lazy"}
-                                alt="SensEar logo"
+                                alt="SensEar"
+                                aria-hidden="true"
                             />
                         </span>
                         <span className="transition-transform duration-300 group-hover:-translate-x-10 inline-block">

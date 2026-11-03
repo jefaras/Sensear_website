@@ -15,9 +15,10 @@ interface ApproachProps {
     subtitle: string;
     items: ApproachItem[];
     cta: string;
+    imageAlt: string;
 }
 
-export function Approach({ lang, title, subtitle, items, cta }: ApproachProps) {
+export function Approach({ lang, title, subtitle, items, cta, imageAlt }: ApproachProps) {
     const localizedPath = (path: string) => getLocalizedPath(lang, path);
     const emWord = lang === 'el' ? 'επαναπροσδιορίζουμε' : 'redefine';
 
@@ -39,7 +40,7 @@ export function Approach({ lang, title, subtitle, items, cta }: ApproachProps) {
                         <div className="relative aspect-[4/4.4] overflow-hidden rounded-lg">
                             <Image
                                 src="/images/homepage/vinyl-records-music-curation.jpg"
-                                alt={lang === 'el' ? 'Μουσικός σχεδιασμός SensEar' : 'SensEar music curation'}
+                                alt={imageAlt}
                                 fill
                                 sizes="(max-width: 1024px) 100vw, 45vw"
                                 className="object-cover"

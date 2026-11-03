@@ -13,6 +13,7 @@ interface NewsletterCTAProps {
         success: string;
         location: string;
         background_image: string;
+        background_image_alt: string;
     };
     recaptchaNotice: RecaptchaNotice;
 }
@@ -20,7 +21,7 @@ interface NewsletterCTAProps {
 export function NewsletterCTA({ emWord, cta, recaptchaNotice }: NewsletterCTAProps) {
     return (
         <section id="cta" className="relative overflow-hidden py-[clamp(122px,9.66vw,170px)]">
-            <Image src={cta.background_image} alt="" fill aria-hidden="true" sizes="100vw" className="object-cover" />
+            <Image src={cta.background_image} alt={cta.background_image_alt} fill aria-hidden="true" sizes="100vw" className="object-cover" />
             <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(11,10,10,0.82),rgba(11,10,10,0.93))]" />
             <div className="relative z-10 mx-auto max-w-[min(1760px,100%)] px-[clamp(20px,1.59vw,28px)] text-center sm:px-[clamp(27px,2.1vw,37px)]">
                 <ScrollReveal delay={0.08}>

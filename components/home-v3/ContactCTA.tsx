@@ -16,6 +16,7 @@ interface ContactCTAProps {
         explore_services: string;
         explore_industries: string;
         background_image: string;
+        background_image_alt: string;
     };
 }
 
@@ -30,7 +31,7 @@ export function ContactCTA({ lang, cta }: ContactCTAProps) {
         <section id="cta" className="relative overflow-hidden py-[clamp(122px,9.66vw,170px)]">
             <Image
                 src={cta.background_image}
-                alt=""
+                alt={cta.background_image_alt}
                 fill
                 aria-hidden="true"
                 sizes="100vw"

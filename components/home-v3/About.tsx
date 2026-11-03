@@ -5,9 +5,10 @@ import { DriftOrb } from '@/components/v3';
 interface AboutProps {
     p1: string;
     p2: string;
+    imageAlt: string;
 }
 
-export function About({ p1, p2 }: AboutProps) {
+export function About({ p1, p2, imageAlt }: AboutProps) {
     return (
         <section className="relative py-[clamp(108px,8.52vw,150px)]">
             <DriftOrb
@@ -47,7 +48,7 @@ export function About({ p1, p2 }: AboutProps) {
                         <div className="relative aspect-[3/3.7] overflow-hidden rounded-lg">
                             <Image
                                 src="/images/carousel/carousel-venue-atmosphere-1.jpg"
-                                alt={p1 ? 'Curated venue atmosphere' : ''}
+                                alt={imageAlt}
                                 fill
                                 sizes="(max-width: 1024px) 100vw, 35vw"
                                 className="object-cover"

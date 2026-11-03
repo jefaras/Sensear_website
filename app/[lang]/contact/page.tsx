@@ -54,7 +54,7 @@ export default async function ContactV3({ params }: { params: Promise<{ lang: Lo
                         <div className="relative">
                             <Image
                                 src="/images/contact/vinyl-record-contact-form-bg.webp"
-                                alt=""
+                                alt={c.intro.image_alt}
                                 aria-hidden="true"
                                 width={760}
                                 height={760}

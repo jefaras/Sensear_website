@@ -159,6 +159,7 @@ export default async function AboutV3({ params }: { params: Promise<{ lang: Loca
                 ghostLabel={content.final_cta.secondary_cta}
                 ghostHref={getLocalizedPath(lang, '/contact')}
                 bgImage="/images/about/about-hero.jpg"
+                bgAlt={content.hero.image_alt}
             />
         </V3Root>
     );

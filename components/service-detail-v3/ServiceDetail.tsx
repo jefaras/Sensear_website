@@ -20,6 +20,7 @@ interface ServiceContent {
         explore_cta: string;
         image_kicker: string;
         image_caption: string;
+        image_alt: string;
     };
     intro: { title: string; p1: string; p2: string };
     what_we_do: { title: string; items: { title: string; description: string }[]; image_alt?: string };
@@ -63,7 +64,6 @@ export function ServiceDetail({ lang, content, section5, images, em }: ServiceDe
     // A title ending in a colon ("Sonic Identity:") is completed by the subtitle,
     // so both go inside the H1; it looks the same, but the H1 reads as a full phrase.
     const subtitleInH1 = content.hero.title.trim().endsWith(':');
-    const heroHeading = subtitleInH1 ? `${content.hero.title} ${content.hero.subtitle}` : content.hero.title;
     const section5Tall = Array.isArray(section5.items) && section5.items.length > 2;
 
     // Case band pieces (2b), arranged below with or without a photo.
@@ -156,7 +156,7 @@ export function ServiceDetail({ lang, content, section5, images, em }: ServiceDe
                         <ScrollReveal direction="right" delay={0.4}>
                             <div className="relative">
                                 <div className="relative aspect-square overflow-hidden rounded-lg shadow-[0_40px_90px_-30px_rgba(0,0,0,0.8)]">
-                                    <Image src={images.hero} alt={heroHeading} fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" priority />
+                                    <Image src={images.hero} alt={content.hero.image_alt} fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" priority />
                                     <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(11,10,10,0)_48%,rgba(11,10,10,0.55))]" />
                                 </div>
                                 {/* Hero image caption & rotating badge — hidden for now
@@ -379,6 +379,7 @@ export function ServiceDetail({ lang, content, section5, images, em }: ServiceDe
                 primaryLabel={content.cta.button}
                 primaryHref={localizedPath('/contact')}
                 bgImage={images.hero}
+                bgAlt={content.hero.image_alt}
             />
         </>
     );

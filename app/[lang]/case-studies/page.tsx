@@ -144,6 +144,7 @@ export default async function CaseStudiesV3({ params }: { params: Promise<{ lang
                 ghostLabel={content.cta.services}
                 ghostHref={localizedPath('/services')}
                 bgImage="/images/case-studies/case-studies-hero.jpg"
+                bgAlt={content.hero.image_alt}
             />
         </V3Root>
     );

@@ -98,6 +98,7 @@ export default async function IndustriesV3({ params }: { params: Promise<{ lang:
                 ghostLabel={content.cta.services}
                 ghostHref={localizedPath('/services')}
                 bgImage="/images/industries/industries-hero.jpg"
+                bgAlt={content.hero.image_alt}
             />
         </V3Root>
     );

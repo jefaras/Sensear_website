@@ -10,7 +10,7 @@ export function AssessmentBrand() {
         >
             <Image
                 src="/images/brand/sensear-logo-white.png"
-                alt=""
+                alt="SensEar"
                 width={44}
                 height={44}
                 className="h-10 w-10 shrink-0 object-contain sm:h-11 sm:w-11"

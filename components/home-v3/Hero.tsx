@@ -22,6 +22,7 @@ interface HeroProps {
         featured_caption: string;
         badge: string[];
         scroll_label: string;
+        image_alt: string;
     };
 }
 
@@ -105,7 +106,7 @@ export function Hero({ lang, hero }: HeroProps) {
                 {/* Backup photo, kept for a later swap: /images/homepage/home-hero-disco-sofa-speaker.jpg */}
                 <Image
                     src="/images/homepage/home-hero-disco-sofa.jpg"
-                    alt={lang === 'el' ? 'Επιμελημένη ατμόσφαιρα σε χώρο εκδήλωσης' : 'Curated atmosphere in an event venue'}
+                    alt={hero.image_alt}
                     fill
                     priority
                     sizes="(min-width: 1024px) 48vw, 100vw"

@@ -10,10 +10,10 @@ interface Item { title: string; description: string }
 interface IndustryContent {
     hero: { title: string; subtitle: string; description: string; image: string; image_alt: string; side_label: string; explore_cta: string; image_kicker: string; image_caption: string };
     intro: { title: string; p1: string; p2: string };
-    what_we_do: { title: string; subtitle: string; image: string; items: Item[] };
-    ideal_for: { title: string; image: string; items: Item[] };
+    what_we_do: { title: string; subtitle: string; image: string; image_alt: string; items: Item[] };
+    ideal_for: { title: string; image: string; image_alt: string; items: Item[] };
     how_we_help: {
-        title: string; image: string; items: Item[];
+        title: string; image: string; image_alt: string; items: Item[];
         cta_title?: string; cta_description?: string; cta_button?: string; cta_link?: string;
     };
     cta: { title: string; description: string; button: string; location: string };
@@ -108,7 +108,7 @@ export function IndustryDetail({ lang, content, em }: IndustryDetailProps) {
                     <div className="grid grid-cols-1 items-center gap-[clamp(53px,4.2vw,74px)] lg:grid-cols-[0.95fr_1.05fr]">
                         <ScrollReveal direction="left">
                             <div className="relative aspect-[4/4.4] overflow-hidden rounded-lg">
-                                <Image src={content.what_we_do.image} alt={content.what_we_do.title} fill sizes="(max-width: 1024px) 100vw, 46vw" className="object-cover" />
+                                <Image src={content.what_we_do.image} alt={content.what_we_do.image_alt} fill sizes="(max-width: 1024px) 100vw, 46vw" className="object-cover" />
                                 <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(11,10,10,0)_55%,rgba(11,10,10,0.5))]" />
                             </div>
                         </ScrollReveal>
@@ -161,7 +161,7 @@ export function IndustryDetail({ lang, content, em }: IndustryDetailProps) {
                         </div>
                         <ScrollReveal direction="right">
                             <div className="relative aspect-[4/4.6] overflow-hidden rounded-lg">
-                                <Image src={content.ideal_for.image} alt={content.ideal_for.title} fill sizes="(max-width: 1024px) 100vw, 46vw" className="object-cover" />
+                                <Image src={content.ideal_for.image} alt={content.ideal_for.image_alt} fill sizes="(max-width: 1024px) 100vw, 46vw" className="object-cover" />
                                 <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(11,10,10,0)_55%,rgba(11,10,10,0.5))]" />
                             </div>
                         </ScrollReveal>
@@ -184,7 +184,7 @@ export function IndustryDetail({ lang, content, em }: IndustryDetailProps) {
                     <div className="grid grid-cols-1 items-center gap-[clamp(53px,4.2vw,74px)] lg:grid-cols-2">
                         <ScrollReveal direction="left">
                             <div className="relative aspect-[4/4.6] overflow-hidden rounded-lg">
-                                <Image src={content.how_we_help.image} alt={content.how_we_help.title} fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" />
+                                <Image src={content.how_we_help.image} alt={content.how_we_help.image_alt} fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" />
                                 <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(11,10,10,0)_55%,rgba(11,10,10,0.5))]" />
                             </div>
                         </ScrollReveal>
@@ -231,6 +231,7 @@ export function IndustryDetail({ lang, content, em }: IndustryDetailProps) {
                 primaryLabel={content.cta.button}
                 primaryHref={localizedPath('/contact')}
                 bgImage={content.hero.image}
+                bgAlt={content.hero.image_alt}
             />
         </>
     );
