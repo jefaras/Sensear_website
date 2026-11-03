@@ -6,7 +6,7 @@ import type { CampaignMessage } from "@/components/assessment/assessment-campaig
 export function AssessmentHeroView({ message }: { message: CampaignMessage }) {
     return (
         <section className="grid min-h-[100dvh] grid-cols-1 bg-[#0b0a0a] lg:grid-cols-[1.04fr_0.96fr]">
-            <div className="flex items-end justify-center px-5 pb-14 pt-36 sm:px-8 sm:pb-16 lg:px-[clamp(2rem,5.2vw,6.5rem)] lg:pb-[clamp(4rem,8vh,6.5rem)] lg:pt-24">
+            <div className="flex items-end justify-center lg:items-center px-5 pb-14 pt-36 sm:px-8 sm:pb-16 lg:px-[clamp(2rem,5.2vw,6.5rem)] lg:pb-[clamp(4rem,8vh,6.5rem)] lg:pt-24">
                 <div className="w-full max-w-[720px] lg:text-center">
                     <h1 className="max-w-[700px] lg:mx-auto font-didot text-[clamp(2.65rem,4.1vw,4.8rem)] font-normal leading-[1.1] tracking-[-0.035em] text-[#faf6f1]">
                         <span className="block">{message.lead}</span>
@@ -42,7 +42,7 @@ export function AssessmentHeroView({ message }: { message: CampaignMessage }) {
                     className="object-cover object-center"
                 />
                 <div className="absolute inset-0 bg-[#0b0a0a]/10" />
-                <p className="absolute bottom-5 right-5 max-w-[270px] bg-[#0b0a0a]/58 px-3 py-2 text-right text-[11px] leading-[1.5] tracking-[0.04em] text-[#faf6f1]/72">
+                <p className="absolute bottom-5 right-5 max-w-[270px] bg-[#0b0a0a]/58 px-3 py-2 text-right text-[11px] lg:left-5 lg:right-auto lg:text-left leading-[1.5] tracking-[0.04em] text-[#faf6f1]/72">
                     Η μουσική δεν γεμίζει απλώς τον χώρο, αλλά καθορίζει και το πώς θα τον θυμάται ο επισκέπτης.
                 </p>
             </div>
