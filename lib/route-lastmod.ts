@@ -41,6 +41,8 @@ const LAST_MODIFIED_OVERRIDES: Record<string, string> = {
     '/services/event-soundtracks': '2026-10-31T00:00:00.000Z',
     '/services/sonic-identity': '2026-11-02T00:00:00.000Z',
     '/services': '2026-11-02T00:00:00.000Z',
+    // Own photos and alt texts (images + dictionaries only, so git would not move the date).
+    '/services/experience-design': '2026-11-03T00:00:00.000Z',
 }
 
 const BLOG_POST_PREFIX = '/blog/'
