@@ -2482,7 +2482,8 @@
                     "description": "A thoughtful follow-up, such as a photo, a playlist or a small gift, keeps the moment alive."
                 }
             ],
-            "closing": "For a private celebration, the story is personal. For a corporate event, it brings the company's values to its people. For a brand launch, it lets guests feel the brand, not just see it."
+            "closing": "For a private celebration, the story is personal. For a corporate event, it brings the company's values to its people. For a brand launch, it lets guests feel the brand, not just see it.",
+            "intensity": "We work with you to set the intensity that fits the occasion, from a memorable touch to a fully immersive experience or a moment that stays with guests long after they leave."
         },
         "layers": {
             "title": "Four layers we design",

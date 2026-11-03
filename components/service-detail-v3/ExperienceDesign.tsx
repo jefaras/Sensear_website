@@ -14,7 +14,7 @@ export interface ExperienceDesignContent {
     hero: { title: string; subtitle: string; description: string; explore_cta: string; audit_cta: string; image_alt: string };
     intro: { title: string; paragraphs: string[] };
     hotel_moments: { title: string; intro: string; items: Item[]; closing: string; image_alt: string };
-    event_moments: { title: string; intro: string; items: Item[]; closing: string; image_alt?: string };
+    event_moments: { title: string; intro: string; items: Item[]; closing: string; intensity: string; image_alt?: string };
     layers: { title: string; intro: string; items: Item[] };
     what_we_do: { title: string; items: Item[]; image_alt?: string };
     perfect_for: { title: string; items: LinkedItem[]; image_alt?: string };
@@ -196,6 +196,9 @@ export function ExperienceDesign({ lang, content, images, em }: ExperienceDesign
                             <GoldDotRows items={content.event_moments.items} />
                             <ScrollReveal delay={0.1}>
                                 <p className={`mt-[clamp(24px,1.9vw,33px)] ${leadClass}`}>{content.event_moments.closing}</p>
+                            </ScrollReveal>
+                            <ScrollReveal delay={0.12}>
+                                <p className={`mt-[clamp(14px,1.1vw,19px)] ${leadClass}`}>{content.event_moments.intensity}</p>
                             </ScrollReveal>
                         </div>
                     </div>
