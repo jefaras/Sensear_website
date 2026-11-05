@@ -154,7 +154,10 @@ export function IndustryDetail({ lang, content, em }: IndustryDetailProps) {
                                 {content.ideal_for.items.map((item, i) => (
                                     <div key={i} className={`border-t border-[#faf6f1]/12 py-[clamp(20px,1.59vw,28px)] ${i === content.ideal_for.items.length - 1 ? 'border-b' : ''}`}>
                                         <span className="font-didot mb-1 block text-[clamp(1.35rem,1.6vw,1.55rem)] text-[#faf6f1]">{item.title}</span>
-                                        <span className="block text-[clamp(0.94rem,1.06vw,1.17rem)] leading-[1.55] text-[#faf6f1]/58">{item.description}</span>
+                                        <span
+                                            className="se-html block text-[clamp(0.94rem,1.06vw,1.17rem)] leading-[1.55] text-[#faf6f1]/58"
+                                            dangerouslySetInnerHTML={{ __html: item.description }}
+                                        />
                                     </div>
                                 ))}
                             </StaggerChildren>
@@ -197,7 +200,10 @@ export function IndustryDetail({ lang, content, em }: IndustryDetailProps) {
                                         </span>
                                         <div>
                                             <h3 className="mb-1.5 text-[clamp(1.12rem,1.28vw,1.4rem)] font-bold">{item.title}</h3>
-                                            <p className="text-[clamp(0.94rem,1.06vw,1.17rem)] leading-[1.6] text-[#faf6f1]/62">{item.description}</p>
+                                            <p
+                                                className="se-html text-[clamp(0.94rem,1.06vw,1.17rem)] leading-[1.6] text-[#faf6f1]/62"
+                                                dangerouslySetInnerHTML={{ __html: item.description }}
+                                            />
                                         </div>
                                     </div>
                                 ))}

@@ -12,23 +12,22 @@ interface SlugConfig {
     em: { el: EmSet; en: EmSet };
 }
 
-// Emphasis words are exact substrings of each locale's actual dict heading. EN
-// what_we_do/ideal_for/how_we_help headings are generic ("What we do"/"Ideal for"/
-// "How we help"), so they carry no em word (''), matching the existing copy; EL
-// headings are descriptive and take the design's gold-italic word.
+// Emphasis words are exact substrings of each locale's actual dict heading. An
+// empty string means the heading carries no gold word (pages not yet rewritten
+// under T12 keep the generic EN headings "What we do"/"Ideal for"/"How we help").
 export const INDUSTRY_CONFIG: Record<string, SlugConfig> = {
     'music-for-hotels-and-resorts': {
         ns: 'hotels_resorts',
         em: {
-            el: { intro: 'φιλοξενίας', method: 'εμπειρία', forwhom: 'premium', results: 'ξενοδοχείο', cta: 'ήχο', portfolio: 'πράξη' },
-            en: { intro: 'journey', method: '', forwhom: '', results: '', cta: 'atmosphere', portfolio: 'action' },
+            el: { intro: 'ζώνη', method: 'ξενοδοχείο', forwhom: 'ξενοδοχεία', results: 'πράξη', cta: 'ζώνη', portfolio: 'ξενοδοχείο' },
+            en: { intro: 'zone', method: 'hotel', forwhom: 'hotels', results: 'practice', cta: 'zone', portfolio: 'hotel' },
         },
     },
     'music-for-restaurants-and-bars': {
         ns: 'restaurants_bars',
         em: {
-            el: { intro: 'καλεσμένος', method: 'εστίασης', forwhom: 'εστιατόρια', results: 'μεταμορφώνει', cta: 'ατμόσφαιρα', portfolio: 'πράξη' },
-            en: { intro: 'atmosphere', method: '', forwhom: '', results: '', cta: 'atmosphere', portfolio: 'action' },
+            el: { intro: 'καμπύλη', method: 'εστιατόριο', forwhom: 'χώρους', results: 'πράξη', cta: 'αιχμής', portfolio: 'δουλειάς' },
+            en: { intro: 'curve', method: 'restaurant', forwhom: 'rooms', results: 'practice', cta: 'peak', portfolio: 'working' },
         },
     },
     'music-for-events-and-experiences': {
