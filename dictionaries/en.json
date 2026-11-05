@@ -2771,111 +2771,106 @@
     "hotels_resorts": {
         "meta": {
             "title": "Music for hotels and resorts",
-            "description": "Music for hotels and resorts with 24-hour sound design, zone-based scheduling and one clear sonic identity. Request a tailored hotel sound proposal."
+            "description": "Music for hotels and resorts: one playlist per zone, scheduled by hour, from breakfast to the bar. Signature Playlists, Sonic Identity, Event Soundtracks."
         },
         "hero": {
             "title": "Music for hotels and resorts",
-            "subtitle": "Music for every hour and every area",
-            "description": "Targeted sound that complements service, design, and the mood of the space.",
+            "subtitle": "A playlist for every zone, a schedule for every hour",
+            "description": "Breakfast, pool, spa, bar and dinner, programmed as one hotel.",
             "image": "/images/industries/hotels-resorts-curated-music-ambiance.jpg",
             "image_alt": "Pink resort terrace with arches and a sea view",
-            "side_label": "INDUSTRIES — HOTELS & RESORTS",
-            "explore_cta": "Explore your sector",
+            "side_label": "INDUSTRIES · HOTELS & RESORTS",
+            "explore_cta": "How it works in a hotel",
             "image_kicker": "HOTELS & RESORTS",
             "image_caption": "A sound for every hour."
         },
         "intro": {
-            "title": "A hotel is not one room",
-            "p1": "Breakfast, the pool, the spa and the bar are the same brand at four different volumes, and a guest crosses all of them in a day.",
-            "p2": "Our music <strong><em>follows the day</em></strong> across every area, and becomes part of the <a href=\"/services/sonic-identity/\" class=\"se-link\">sonic identity</a> guests recognise when they return."
+            "title": "The same hotel, by hour and by zone",
+            "p1": "At eight the breakfast lounge is light and unhurried. By nine at night the restaurant runs at a different pace entirely, and reception carries the hours in between. <strong>The same guest crosses all of it in one day</strong>, and every zone has to stay the same hotel.",
+            "p2": "We build <strong>one playlist per zone and a schedule per hour</strong> with <a href=\"/services/signature-playlists/\" class=\"se-link\">Signature Playlists</a>, and for a group of properties we set the common ground first with <a href=\"/services/sonic-identity/\" class=\"se-link\">Sonic Identity</a>."
         },
         "what_we_do": {
-            "title": "What we do",
-            "subtitle": "Different music for each area and each part of the day, all recognisably the same hotel.",
+            "title": "What we do in a hotel",
+            "subtitle": "Zone by zone, from the first coffee to the last drink at the bar.",
             "items": [
                 {
-                    "title": "24-hour sound design",
-                    "description": "Music that changes rhythm and energy throughout the day."
+                    "title": "Reception and lobby",
+                    "description": "Discreet enough to accompany the day without asking for attention, and the first thing a guest hears at check-in."
                 },
                 {
-                    "title": "Multi-zone coherence",
-                    "description": "Distinct musical themes for lobby, restaurants, bar, spa, and pool, tied together with <a href=\"/blog/how-top-hospitality-brands-design-sound/\">one unified sonic identity</a>."
+                    "title": "Breakfast, pool and spa",
+                    "description": "Light and unhurried at breakfast, warmer by the pool in the afternoon, and at the spa a slow tempo that leaves the treatment in the foreground."
                 },
                 {
-                    "title": "Sound aligned with brand",
-                    "description": "Music selections exclusively for your hotel, with character and consistency."
+                    "title": "Bar and dinner restaurant",
+                    "description": "The evening gets its own character: more refined at dinner, more pulse at the bar after eleven, both still recognisably your hotel."
                 },
                 {
-                    "title": "Central management",
-                    "description": "Your team focuses on hospitality, while we handle music, updates, and proper licensing."
+                    "title": "Weddings and hotel events",
+                    "description": "For a wedding party, a holiday party or an opening, <a href=\"/services/event-soundtracks/\" class=\"se-link\">Event Soundtracks</a> plans the night in advance, with playlists, our DJs or both. If the sound itself is the problem, <a href=\"/services/audio-upgrades/\" class=\"se-link\">Audio Upgrades</a> brings in our partners for the equipment and the acoustics."
                 }
             ],
             "image": "/images/industries/hotels-resorts-boutique-hotel-music.webp",
             "image_alt": "Boutique hotel terrace with a wicker sofa and plants"
         },
         "ideal_for": {
-            "title": "Ideal for",
+            "title": "Built for these hotels",
             "items": [
                 {
                     "title": "Boutique hotels",
-                    "description": "Where atmosphere drives reputation and recommendations."
+                    "description": "Where the lobby, the bar and the breakfast room are three reasons to stay."
                 },
                 {
-                    "title": "Luxury resorts",
-                    "description": "With multiple spaces needing a unified experience."
+                    "title": "Resorts",
+                    "description": "Pool, spa, beach bar and restaurants spread across the grounds, all on one schedule."
                 },
                 {
-                    "title": "Business hotels",
-                    "description": "With transitions from focus to social."
+                    "title": "City and business hotels",
+                    "description": "A morning of check-outs and laptops, an evening of drinks and dinner."
                 },
                 {
                     "title": "Hotel groups",
-                    "description": "Needing consistent sound across all properties."
+                    "description": "Several properties that should sound like one brand, with a Sonic Identity guide to hold them together."
                 },
                 {
-                    "title": "Event venues",
-                    "description": "For weddings, retreats, and conferences."
+                    "title": "Hotels that host events",
+                    "description": "Weddings, retreats and conferences, with their own soundtrack on the day."
                 }
             ],
             "image": "/images/industries/hotels-resorts-luxury-hotel-lobby.jpg",
             "image_alt": "Hotel lobby lounge with sofas and floor lamps"
         },
         "how_we_help": {
-            "title": "How we help",
+            "title": "How we help, in practice",
             "items": [
                 {
-                    "title": "Different energy for every hour & space",
-                    "description": "We design music that follows the hotel's rhythm throughout the day."
+                    "title": "Playback that follows the schedule",
+                    "description": "The music runs on a platform licensed for business use, offline if the connection drops, with a schedule per zone, and your staff can still adjust the volume on the spot."
                 },
                 {
-                    "title": "Zones with character, one unified identity",
-                    "description": "We create distinct musical themes connected by a recognizable sonic identity, rather than random playlists."
+                    "title": "New music every month",
+                    "description": "We suggest new music every month and a change of direction each season, so regular guests and your staff hear the hotel move with the year."
                 },
                 {
-                    "title": "Music that fits the brand",
-                    "description": "We bring your brand to life with music selections that \"fit\" the space and service, sounding uniquely yours."
+                    "title": "Licensing explained before you sign",
+                    "description": "The platform we use is licensed for business use, and the public performance fees stay with the hotel, as they do today."
                 },
                 {
-                    "title": "Central control instead of ad-hoc DJing",
-                    "description": "We handle music playback and professional licensing, so your team focuses on guests, not volume or tracks."
+                    "title": "One contact for everything",
+                    "description": "A new menu, a new season, a renovation of the bar: one message to us, and the schedule changes."
                 }
             ],
             "image": "/images/industries/hotels-resorts-sonic-identity-detail.jpg",
-            "cta_title": "Hear the industry in action",
-            "cta_description": "Read examples and hear samples from hospitality venues.",
-            "cta_button": "View Examples",
+            "cta_title": "Hera Hotel, Athens: three zones, one hotel",
+            "cta_description": "A breakfast lounge, a dinner restaurant looking out at the Acropolis, and a reception that carries the hours in between. Three playlists that share not a single song and still hold together as one hotel.",
+            "cta_button": "Read the case studies",
             "cta_link": "case-studies",
             "image_alt": "Close-up of an ear with a sculpted silver earring"
         },
         "cta": {
             "title": "Let's plan your hotel, zone by zone.",
-            "description": "We reply within 24 hours with the service that fits and what happens next.",
+            "description": "The first call or visit is free, and the proposal usually arrives within 7 to 10 days.",
             "button": "Request a proposal for your hotel",
-            "see_also": "See also how",
-            "signature_playlists": "Signature Playlists",
-            "and": "and",
-            "sonic_strategy": "Sonic Identity Design",
-            "work_for": "work for hotels & resorts.",
             "location": "Athens, Greece"
         }
     },
