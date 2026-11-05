@@ -61,7 +61,10 @@ export function WhatConnects({ emWord, connect }: WhatConnectsProps) {
                                     >
                                         <Check className="h-[13px] w-[13px] text-[#f0bd95]" strokeWidth={2.4} />
                                     </span>
-                                    <p className="text-[clamp(1.02rem,1.15vw,1.27rem)] leading-[1.5] text-[#faf6f1]/72">{point}</p>
+                                    <p
+                                        className="se-html text-[clamp(1.02rem,1.15vw,1.27rem)] leading-[1.5] text-[#faf6f1]/72"
+                                        dangerouslySetInnerHTML={{ __html: point }}
+                                    />
                                 </div>
                             ))}
                         </StaggerChildren>

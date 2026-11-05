@@ -23,8 +23,8 @@ export default async function IndustriesV3({ params }: { params: Promise<{ lang:
     const content = dict.industries_page;
     const localizedPath = (path: string) => getLocalizedPath(lang, path);
     const em = lang === 'el'
-        ? { intro: 'ατμόσφαιρα', expertise: 'προσέγγιση', connect: 'κόσμους', cta: 'δυναμική' }
-        : { intro: 'atmosphere', expertise: 'expertise', connect: 'worlds', cta: 'potential' };
+        ? { intro: 'ρυθμό', expertise: 'κλάδο', connect: 'κόσμους', cta: 'χώρο' }
+        : { intro: 'clock', expertise: 'sector', connect: 'worlds', cta: 'space' };
 
     return (
         <V3Root>
@@ -44,14 +44,16 @@ export default async function IndustriesV3({ params }: { params: Promise<{ lang:
                         </h2>
                     </ScrollReveal>
                     <ScrollReveal delay={0.12}>
-                        <p className="mx-auto mb-[clamp(17px,1.31vw,23px)] max-w-[1010px] text-[clamp(1.38rem,2.3vw,1.84rem)] leading-[1.5] text-[#faf6f1]">
-                            {content.intro.p1}
-                        </p>
+                        <p
+                            className="se-html mx-auto mb-[clamp(17px,1.31vw,23px)] max-w-[1010px] text-[clamp(1.38rem,2.3vw,1.84rem)] leading-[1.5] text-[#faf6f1]"
+                            dangerouslySetInnerHTML={{ __html: content.intro.p1 }}
+                        />
                     </ScrollReveal>
                     <ScrollReveal delay={0.18}>
-                        <p className="mx-auto max-w-[870px] text-[clamp(1.17rem,1.73vw,1.4rem)] leading-[1.65] text-[#faf6f1]/58">
-                            {content.intro.p2}
-                        </p>
+                        <p
+                            className="se-html mx-auto max-w-[870px] text-[clamp(1.17rem,1.73vw,1.4rem)] leading-[1.65] text-[#faf6f1]/58"
+                            dangerouslySetInnerHTML={{ __html: content.intro.p2 }}
+                        />
                     </ScrollReveal>
                 </div>
             </section>

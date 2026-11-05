@@ -42,9 +42,10 @@ export function IndustryRow({ item, href, imageSide, isLast = false }: IndustryR
                     </p>
                 </ScrollReveal>
                 <ScrollReveal delay={0.14}>
-                    <p className="mb-[clamp(18px,1.42vw,25px)] max-w-[600px] text-[clamp(1.03rem,1.17vw,1.29rem)] leading-[1.65] text-[#faf6f1]/66">
-                        {item.desc1}
-                    </p>
+                    <p
+                        className="se-html mb-[clamp(18px,1.42vw,25px)] max-w-[600px] text-[clamp(1.03rem,1.17vw,1.29rem)] leading-[1.65] text-[#faf6f1]/66"
+                        dangerouslySetInnerHTML={{ __html: item.desc1 }}
+                    />
                 </ScrollReveal>
                 <ScrollReveal delay={0.18}>
                     <p className="mb-[clamp(28px,2.22vw,39px)] max-w-[600px] text-[clamp(0.92rem,1.05vw,1.15rem)] leading-[1.6] text-[#faf6f1]/55">
