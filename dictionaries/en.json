@@ -1432,13 +1432,13 @@
     },
     "industries_page": {
         "meta": {
-            "title": "Music for hotels, retail, wellness and culture",
-            "description": "Explore music solutions for hospitality, retail, wellness, culture & events. Find the approach that fits your sector, atmosphere and guest journey."
+            "title": "Music for hotels, restaurants, retail, wellness and culture",
+            "description": "Music curation by sector: hotels and resorts, restaurants and bars, retail, wellness, events, art and fashion. Planned around your zones, hours and days."
         },
         "hero": {
             "title": "Your industry sets the brief",
             "subtitle": "A hotel changes by hour and zone; a restaurant follows service; a store follows its collections.",
-            "side_label": "INDUSTRIES — SONIC FIT",
+            "side_label": "INDUSTRIES · SONIC FIT",
             "primary_cta": "Find your industry",
             "secondary_cta": "Book a call",
             "image_kicker": "SIX WORLDS",
@@ -1450,9 +1450,9 @@
             ]
         },
         "intro": {
-            "title": "The right atmosphere for every space",
-            "p1": "Hotels, restaurants, retail, gyms & culture all ask for their own atmosphere.",
-            "p2": "The right music turns spaces into unique experiences."
+            "title": "Each space runs on its own clock",
+            "p1": "A hotel lobby at eight in the morning and a bar at one at night need different music, and so do all the hours in between. <strong>We plan the music around how each place runs</strong>: its zones, its hours, its busiest days.",
+            "p2": "The four services are the same everywhere. <strong>What changes is the brief</strong>, and the brief comes from your sector."
         },
         "expertise": {
             "title": "Choose your sector",
@@ -1460,9 +1460,9 @@
             "items": [
                 {
                     "title": "Hotels & Resorts",
-                    "subtitle": "Soundtracks for every hour & space",
-                    "desc1": "Music that shapes the complete guest journey: from morning coffee to midnight cocktails.",
-                    "desc2": "Result: The atmosphere reinforces what guests already love about your property.",
+                    "subtitle": "Music by zone and by hour",
+                    "desc1": "<strong>Breakfast, pool, reception, bar and dinner each need their own sound</strong>, and the day moves through them in order.",
+                    "desc2": "In practice: one playlist per zone, scheduled by hour, so a guest moves from the breakfast lounge to the dinner restaurant without the music breaking character.",
                     "cta": "See how we work in hotels",
                     "link": "industries/music-for-hotels-and-resorts",
                     "image": "/images/industries/industry-hotels-resorts.jpg",
@@ -1470,9 +1470,9 @@
                 },
                 {
                     "title": "Restaurants & Bars",
-                    "subtitle": "The invisible maître d'",
-                    "desc1": "Sound that flows with your rhythms, encouraging conversation and longer visits.",
-                    "desc2": "Result: Service flows more smoothly and guests settle in for the complete experience.",
+                    "subtitle": "The energy follows the service",
+                    "desc1": "<strong>Brunch, lunch, dinner and the late hours each ask for a different tempo</strong>, and the switch has to happen without anyone touching the system.",
+                    "desc2": "In practice: a schedule that moves with your day, so guests can talk at lunch and still feel the room lift after eleven.",
                     "cta": "See how we work in restaurants and bars",
                     "link": "industries/music-for-restaurants-and-bars",
                     "image": "/images/industries/industry-restaurants-bars.jpg",
@@ -1480,9 +1480,9 @@
                 },
                 {
                     "title": "Events & Experiences",
-                    "subtitle": "Choreographed precision for unforgettable moments",
-                    "desc1": "Precisely timed music that frames every phase, so your event sounds as good as it looks.",
-                    "desc2": "Result: Smooth transitions that guests don't notice but organizers appreciate.",
+                    "subtitle": "An evening in three parts",
+                    "desc1": "<strong>Arrival, dinner and dancing need three different soundtracks</strong>, and the handovers between them decide how the night feels.",
+                    "desc2": "In practice: the music is planned with you in advance and mixed live on the night, so each change of pace lands at the right moment.",
                     "cta": "See how we work at events",
                     "link": "industries/music-for-events-and-experiences",
                     "image": "/images/industries/industry-events-experiences.jpg",
@@ -1490,9 +1490,9 @@
                 },
                 {
                     "title": "Retail Stores",
-                    "subtitle": "Soundscapes that inspire discovery",
-                    "desc1": "Music that guides customer journeys and helps your space tell its story through sound.",
-                    "desc2": "Result: Shoppers slow down, explore more corners & feel guided, not rushed.",
+                    "subtitle": "Music that fits the collection",
+                    "desc1": "<strong>A store sounds different on a weekday morning and on a Saturday afternoon</strong>, and different again during the sales.",
+                    "desc2": "In practice: playlists built around your brand and renewed with your collections, scheduled by day and hour, so the shop floor stays on brand at every hour.",
                     "cta": "See how we work in retail",
                     "link": "industries/music-for-retail-stores",
                     "image": "/images/industries/industry-retail-stores.jpg",
@@ -1500,9 +1500,9 @@
                 },
                 {
                     "title": "Wellness & Gyms",
-                    "subtitle": "The perfect soundtrack for every practice",
-                    "desc1": "We calibrate music to support each activity, so each space has its optimal atmosphere.",
-                    "desc2": "Result: Members consider the atmosphere as part of what makes their practice feel complete.",
+                    "subtitle": "One tempo per room",
+                    "desc1": "<strong>Reception, treatment rooms, pool, studio and training floor each run at their own pace</strong>, often at the same time.",
+                    "desc2": "In practice: a separate playlist per zone from one account, so the spa stays quiet while the class next door keeps its pulse.",
                     "cta": "See how we work in wellness and gyms",
                     "link": "industries/music-for-wellness-and-gyms",
                     "image": "/images/industries/industry-wellness-gyms.jpg",
@@ -1510,10 +1510,10 @@
                 },
                 {
                     "title": "Art, Museums & Fashion",
-                    "subtitle": "Subtle atmospheres that deepen appreciation",
-                    "desc1": "We create soundscapes that support without overwhelming and enrich the cultural experience.",
-                    "desc2": "Result: Visitors slow down, absorb more and share their experience afterwards.",
-                    "cta": "See how we work in galleries and museums",
+                    "subtitle": "Music that stays behind the work",
+                    "desc1": "<strong>An exhibition opening, a permanent collection and a fashion show each need music that supports the work without competing with it.</strong>",
+                    "desc2": "In practice: a low, considered soundtrack for the rooms, and a live set for the opening night.",
+                    "cta": "See how we work in galleries, museums and fashion",
                     "link": "industries/music-for-art-museums-and-fashion",
                     "image": "/images/industries/industry-art-museums-fashion.jpg",
                     "image_alt": "Gallery with a black-and-white floor and a colorful artwork"
@@ -1522,22 +1522,22 @@
         },
         "connect": {
             "title": "What connects these worlds",
-            "subtitle": "Six industries, shared opportunities to transform through music.",
+            "subtitle": "Six sectors, five things they share.",
             "points": [
-                "Every venue's energy needs change throughout the day",
-                "Multiple spaces or locations that should feel connected",
-                "Teams need to focus on service, not soundtrack debates",
-                "Creating memorable experiences that bring people back",
-                "Knowing if your music actually works for your business"
+                "<strong>The energy of the room changes through the day</strong>, and the music has to change with it.",
+                "<strong>Several zones or locations</strong> that should sound like one place.",
+                "<strong>A team that should be serving guests</strong>, not picking the next track.",
+                "<strong>Playback on a platform licensed for business use</strong>, with offline play and schedules per zone.",
+                "<strong>New music every month and a change with each season</strong>, so the place never sounds stuck in one."
             ],
             "conclusion": "Different rooms, different hours, one way of working: music planned around how each place actually runs.",
             "image_alt": "SensEar logo on a pink card"
         },
         "cta": {
             "title": "Tell us about your space.",
-            "subtitle": "We reply within 24 hours with the service that fits and what happens next.",
-            "contact": "Let's design your venue sound",
-            "services": "Explore our services",
+            "subtitle": "The first call is free. We reply within 24 hours with the service that fits and what happens next.",
+            "contact": "Start with a free call",
+            "services": "See the four services",
             "location": "Athens, Greece"
         }
     },
