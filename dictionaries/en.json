@@ -2877,107 +2877,102 @@
     "restaurants_bars": {
         "meta": {
             "title": "Music for restaurants, cafés and bars",
-            "description": "Music for Restaurants and Bars that blends naturally with food and service, supporting dining flow, conversation and the overall setting."
+            "description": "Music for restaurants, cafés and bars that follows the service, from brunch to the late hours. Signature Playlists, Audio Upgrades, Event Soundtracks."
         },
         "hero": {
             "title": "Music for restaurants, cafés and bars",
-            "subtitle": "Designed to blend with food, drinks and service",
-            "description": "Music selections that complement flavor, timing, and environment.",
+            "subtitle": "The soundtrack follows your service",
+            "description": "Brunch, lunch, dinner and the late hours, each at its own tempo, without anyone touching the system.",
             "image": "/images/industries/restaurants-bars-curated-music-atmosphere.jpg",
             "image_alt": "Restaurant table with a red rose against a warm terracotta wall",
-            "side_label": "INDUSTRIES — RESTAURANTS & BARS",
-            "explore_cta": "Explore your sector",
+            "side_label": "INDUSTRIES · RESTAURANTS & BARS",
+            "explore_cta": "How it works in a restaurant",
             "image_kicker": "RESTAURANTS & BARS",
             "image_caption": "The invisible guest at the table."
         },
         "intro": {
             "title": "Service has a curve",
-            "p1": "Prep, the first tables, the rush, then the slow hour before closing. Music that ignores that curve works against the room.",
-            "p2": "Our sound <strong><em>follows the menu and service rhythm</em></strong> and becomes <strong><em>part of the enjoyment</em></strong>, without distracting from food or conversation."
+            "p1": "The right music works quietly: <strong>guests talk without raising their voices</strong>, the energy follows your service, and the last hour still sounds like your place.",
+            "p2": "We build the soundtrack around your day, <strong>from prep to last call</strong>, with <a href=\"/services/signature-playlists/\" class=\"se-link\">Signature Playlists</a>. Where the room itself fights the music, <a href=\"/services/audio-upgrades/\" class=\"se-link\">Audio Upgrades</a> fixes the sound before we touch a playlist."
         },
         "what_we_do": {
-            "title": "What we do",
-            "subtitle": "Music that follows prep, service and last call.",
+            "title": "What we do in a restaurant",
+            "subtitle": "Four parts of the day, one place.",
             "items": [
                 {
-                    "title": "Playlists based on service flow",
-                    "description": "Music designed from opening to closing, with energy that follows the kitchen and dining room rhythm."
+                    "title": "Brunch and lunch",
+                    "description": "Daylight music with room for conversation: the tables are close, the voices are low, and the playlist stays under them."
                 },
                 {
-                    "title": "Tempo & volume adjustment",
-                    "description": "Sound levels that allow comfortable conversation, smooth staff movement, and steady, welcoming energy."
+                    "title": "Dinner",
+                    "description": "A warmer, slower line through the first seating, with the volume set so that a table of six can talk across the table."
                 },
                 {
-                    "title": "Music selections aligned with brand",
-                    "description": "Playlists specifically for your concept, supporting the experience you want to be remembered for."
+                    "title": "The late hours",
+                    "description": "After eleven the room lifts: more pulse at the bar, the same character, and nothing that empties the dining room early."
                 },
                 {
-                    "title": "Frequent updates",
-                    "description": "Regular changes that keep music fresh for regular customers and staff, maintaining your character."
+                    "title": "The sound itself",
+                    "description": "When the music reaches the neighbours or the bass muddies the room, <a href=\"/services/audio-upgrades/\" class=\"se-link\">Audio Upgrades</a> brings our partners in for the speakers, their placement and the acoustic treatment: one quote, one invoice. For private dinners and parties, <a href=\"/services/event-soundtracks/\" class=\"se-link\">Event Soundtracks</a> plans the night."
                 }
             ],
             "image": "/images/industries/restaurants-bars-dining-music-experience.jpg",
             "image_alt": "Cocktail with ice and a black 8-ball in the glass"
         },
         "ideal_for": {
-            "title": "Ideal for",
+            "title": "Built for these rooms",
             "items": [
                 {
-                    "title": "Casual & fine dining restaurants",
-                    "description": "That rely on atmosphere and repeat visitors."
+                    "title": "All-day restaurants",
+                    "description": "Brunch, lunch and dinner in one room, with the tempo moving through the day instead of switching at a set hour."
                 },
                 {
-                    "title": "All-day cafes, cocktail & wine bars",
-                    "description": "That need the right mood from morning coffee to last order."
+                    "title": "Cocktail and wine bars",
+                    "description": "A low opening, a build after ten, and a close that still sounds like the bar."
                 },
                 {
-                    "title": "Hotel restaurants",
-                    "description": "That serve their guests, locals, and private events."
+                    "title": "Restaurants and bars inside hotels",
+                    "description": "Guests, locals and private dinners in the same room, on the hotel's schedule."
                 },
                 {
-                    "title": "Groups with multiple venues",
-                    "description": "That want consistent sonic identity across all locations."
+                    "title": "Groups with several venues",
+                    "description": "Same brand, different rooms: Sonic Identity sets the common ground before the first playlist."
                 }
             ],
             "image": "/images/industries/restaurants-bars-cocktail-bar-atmosphere.jpg",
             "image_alt": "Woman in a sparkling blue top at a bar"
         },
         "how_we_help": {
-            "title": "How we help",
+            "title": "How we help, in practice",
             "items": [
                 {
                     "title": "A quiet Tuesday still sounds like your place",
-                    "description": "We programme the slow nights differently rather than leaving the same playlist to fill an empty room."
+                    "description": "The slow nights get their own programme, instead of the Saturday playlist playing to an empty room."
                 },
                 {
-                    "title": "Guide rhythm and orders naturally",
-                    "description": "We adjust sound so the next drink or dessert comes at the right moment."
+                    "title": "Staff control without staff work",
+                    "description": "The schedule changes the music by itself; your team can turn it down for a speech or up for a birthday from the same account."
                 },
                 {
-                    "title": "Match your concept perfectly",
-                    "description": "Music, space, and service tell the same story, so the restaurant sounds as authentic as its cuisine."
+                    "title": "New music every month",
+                    "description": "New music every month and a change each season, so regulars and staff are not hearing the same evening all year."
                 },
                 {
-                    "title": "Less playlist admin for your team",
-                    "description": "We build the music, you set the rules, and your staff deal with guests instead of track selection."
+                    "title": "Licensing explained before you sign",
+                    "description": "The platform is licensed for business use, and the public performance fees stay with the venue, as they do today."
                 }
             ],
             "image": "/images/industries/restaurants-bars-restaurant-dining-room.jpg",
-            "cta_title": "Hear the industry in action",
-            "cta_description": "Read client stories and hear samples from their playlists.",
-            "cta_button": "View Examples",
+            "cta_title": "Three islands, two years, one way of working",
+            "cta_description": "Pelicanos in Sifnos, an all-day restaurant whose music had to hold the standard of the kitchen; Yam in Antiparos, one continuous line from a slow lunch to late cocktails; and Beach House, with CoocooVaya and a bar over the water, in three parts of the day. All three have run for the past two years. In central Athens, a bar whose music reached the neighbours now has a warmer, clearer sound after an Audio Upgrade.",
+            "cta_button": "Read the case studies",
             "cta_link": "case-studies",
             "image_alt": "Guests dancing at a night party"
         },
         "cta": {
             "title": "Let's hear your room at peak hours.",
-            "description": "We reply within 24 hours with the service that fits and what happens next.",
-            "button": "Request a concept-led music plan",
-            "see_also": "See how",
-            "signature_playlists": "Signature Playlists",
-            "and": "and",
-            "audio_upgrades": "Audio Upgrades",
-            "work_for": "work for restaurants, cafes & bars.",
+            "description": "The first visit is free, and the proposal usually arrives within 7 to 10 days.",
+            "button": "Request a music plan for your restaurant",
             "location": "Athens, Greece"
         }
     },

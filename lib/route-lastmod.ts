@@ -46,6 +46,7 @@ const LAST_MODIFIED_OVERRIDES: Record<string, string> = {
     // T12 industries rewrites (copy in the dictionaries). Add each page here in its own T12 commit.
     '/industries': '2026-11-05T00:00:00.000Z',
     '/industries/music-for-hotels-and-resorts': '2026-11-05T00:00:00.000Z',
+    '/industries/music-for-restaurants-and-bars': '2026-11-05T00:00:00.000Z',
 }
 
 const BLOG_POST_PREFIX = '/blog/'
