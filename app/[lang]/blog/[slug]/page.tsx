@@ -213,9 +213,7 @@ export default async function BlogPostV3({ params }: { params: Promise<{ lang: L
                 badge={['★ SENSEAR ★', 'JOURNAL']}
             />
 
-            <Prose backHref={backHref} backLabel={backButtonText}>
-                {sections}
-            </Prose>
+            <Prose>{sections}</Prose>
 
             <PageCTA
                 heading={cta.title || ''}
