@@ -3179,103 +3179,102 @@
     "events_experiences": {
         "meta": {
             "title": "Music for events and experiences",
-            "description": "Music for events and experiences with run-of-show sound design, narrative pacing and technical coordination. Explore a soundtrack that fits every moment."
+            "description": "Music for parties, wedding parties, private dinners, holiday parties and openings, planned against your run of show: playlists, DJ sets or both."
         },
         "hero": {
             "title": "Music for events and experiences",
-            "subtitle": "Sound that fits the moment",
-            "description": "Curated music aligned with event timing and flow.",
+            "subtitle": "Three parts, one run of show",
+            "description": "Parties, wedding parties, private dinners, holiday parties and openings, planned in advance and run on the night.",
             "image": "/images/industries/events-experiences-music-curation-event.jpg",
             "image_alt": "Guests in a red dress and a white suit at an event",
-            "side_label": "INDUSTRIES — EVENTS & EXPERIENCES",
-            "explore_cta": "Explore your sector",
+            "side_label": "INDUSTRIES · EVENTS & EXPERIENCES",
+            "explore_cta": "How it works at an event",
             "image_kicker": "EVENTS & EXPERIENCES",
             "image_caption": "Scored, moment by moment."
         },
         "intro": {
             "title": "An event runs to a schedule",
-            "p1": "Someone worked hard on that schedule. Music either supports it or interrupts it, and there is no third option on the night.",
-            "p2": "If you already have a date, see what Event Soundtracks includes."
+            "p1": "Someone worked hard on that schedule. <strong>Music either supports it or interrupts it</strong>, and there is no third option on the night.",
+            "p2": "<a href=\"/services/event-soundtracks/\" class=\"se-link\">Event Soundtracks</a> plans the music against your run of show, from arrival to the last hour, with <strong>playlists, DJ sets or both</strong>. For the everyday music of a venue that hosts events, <a href=\"/services/signature-playlists/\" class=\"se-link\">Signature Playlists</a> carry on the next day."
         },
         "what_we_do": {
-            "title": "What we do",
-            "subtitle": "Music planned against the run of show, with sound checks on the day.",
+            "title": "What we do at an event",
+            "subtitle": "Arrival, dinner, dancing: three parts, one run of show.",
             "items": [
                 {
-                    "title": "Run-of-show sound design",
-                    "description": "Multi-layered soundtracks that match the purpose and energy of each phase, from doors opening to final track."
+                    "title": "Arrival",
+                    "description": "Music under the conversation while the room fills, set so the first guests arrive neither to silence nor to a club."
                 },
                 {
-                    "title": "Narrative-based curation",
-                    "description": "Music that builds anticipation, focus, and emotional peaks, evolving with the event's story."
+                    "title": "Dinner, or the main part",
+                    "description": "Lower and warmer through the courses or the speeches, with the cues agreed with you in advance."
                 },
                 {
-                    "title": "Technical coordination",
-                    "description": "We handle direction, sound checks, and playback, ensuring proper levels and smooth transitions."
+                    "title": "Dancing, or the late hour",
+                    "description": "The lift comes when you want it, with a DJ set by George or Katerina, a partner DJ, or a playlist built for the floor."
                 },
                 {
-                    "title": "Single point of contact",
-                    "description": "We coordinate with the venue for music and technical matters, reducing coordination pressure."
+                    "title": "On the day",
+                    "description": "Sound check before the guests arrive, playback and levels through the night, our own equipment or the venue's, and one of us on site when the event needs it."
                 }
             ],
             "image": "/images/industries/events-experiences-branded-event-music.jpg",
             "image_alt": "Black-and-white photo of two women laughing at a party"
         },
         "ideal_for": {
-            "title": "Ideal for",
+            "title": "Who hires us",
             "items": [
                 {
-                    "title": "Hotels, Resorts & Restaurants",
-                    "description": "That host presentations, weddings, or signature experiences."
+                    "title": "Hotels and restaurants",
+                    "description": "Wedding parties, holiday parties and private dinners in their own rooms, with music that keeps the character of the house."
                 },
                 {
-                    "title": "Event Organizers & Agencies",
-                    "description": "That design immersive branded activations."
+                    "title": "Private hosts",
+                    "description": "A birthday, a wedding party or a dinner at home or in a rented villa, planned once and in good hands on the night."
                 },
                 {
-                    "title": "Private Chefs & Experience Creators",
-                    "description": "That offer ritualistic or more intimate gatherings."
+                    "title": "Brands",
+                    "description": "Launches, openings and business dinners where the music has to sound like the brand, not like the venue's default."
                 },
                 {
-                    "title": "Cultural Venues & Fashion Shows",
-                    "description": "For talks, previews, or runway presentations."
-                },
-                {
-                    "title": "Brands & Individuals",
-                    "description": "Who know that sound defines the experience."
+                    "title": "Galleries and cultural venues",
+                    "description": "Openings and previews where the music stays under the conversation."
                 }
             ],
             "image": "/images/industries/events-experiences-event-music-planning.jpg",
             "image_alt": "Legs of a dancer in turquoise tights under purple fabric"
         },
         "how_we_help": {
-            "title": "How we help",
+            "title": "How we help, in practice",
             "items": [
                 {
-                    "title": "Guide guests on the journey",
-                    "description": "Music carefully frames each moment, so events are experienced as experiences, not programs."
+                    "title": "You approve the music before the day",
+                    "description": "The playlists or the style of each part are agreed in advance, so the night sounds the way you expect."
                 },
                 {
-                    "title": "Maintain energy between parts",
-                    "description": "Transitions between talks, courses, or performances keep the audience engaged, not on their phones."
+                    "title": "A free venue visit, then one written offer",
+                    "description": "We see the room before we quote; the offer usually arrives within 7 to 10 days, and a deposit secures your date."
                 },
                 {
-                    "title": "Reduce stress",
-                    "description": "Our team handles music and technical execution with ready decisions, so you focus on hospitality."
+                    "title": "Playlists, DJ sets or both",
+                    "description": "Our own DJs, George and Katerina, a partner DJ when it suits the event better, or a curated playlist for a quieter night."
+                },
+                {
+                    "title": "The fees are clear",
+                    "description": "The venue or the organiser pays the public performance fees to the collecting societies; they are not part of our fee."
                 }
             ],
             "image": "/images/industries/events-experiences-private-event-soundscape.jpg",
-            "image_alt": "Man holding a spray can in front of red graffiti"
+            "image_alt": "Man holding a spray can in front of red graffiti",
+            "cta_title": "Levantis, Paros: one night, around 100 guests",
+            "cta_description": "The opening of Neva Bergman's exhibition \"Quiet Testimony\" in the gallery space at Levantis. A discreet ambient playlist, set to sit under the conversation, so people could look closely at the work and talk without raising their voices.",
+            "cta_button": "Read the case studies",
+            "cta_link": "case-studies"
         },
         "cta": {
-            "title": "Tell us your run of show.",
-            "description": "We reply within 24 hours with the service that fits and what happens next.",
-            "button": "Shape the experience atmosphere",
-            "see_also": "See how",
-            "event_soundtracks": "Event Soundtracks",
-            "and": "and",
-            "signature_playlists": "Signature Playlists",
-            "support": "support events and experiences.",
+            "title": "Tell us your date and your run of show.",
+            "description": "The venue visit is free, and the offer usually arrives within 7 to 10 days.",
+            "button": "Tell us about your event",
             "location": "Athens, Greece"
         }
     },
