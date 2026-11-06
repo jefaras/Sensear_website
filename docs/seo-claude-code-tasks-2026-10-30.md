@@ -22,7 +22,7 @@ image for the blog post `building-brand-people-can-hear` (its page image is WebP
 
 **Committed, not yet deployed:** sitemap `lastmod` override for Signature Playlists; the "four days" proposal promise corrected to "usually within 7 to 10 days" on five pages, both languages; T6 Audio Upgrades, Event Soundtracks, Sonic Identity and the services hub; T11 share images; the newsletter reCAPTCHA line without an em dash and in Greek on Greek pages (`5dc891c`, `e8ea350`); the mirrored zig-zag on the pages with a case section (see T6). Home "who we are" statement: smaller text, two paragraphs, and the first sentence now "…with clients across Greece" in both languages (`905c83a`, `e258d2f`, `5fd9148`). T12: the industries hub, the six industry pages and the Greek wording fixes outside T12 (see T12).
 
-**Open:** nothing in code. T12 done 6 Nov (committed, built into `out/`, not yet deployed); one spelling question for JEF («πρωινό», see T12). T11 done 3 Nov.
+**Open:** nothing. T12 done 6 Nov (committed, built into `out/`, not yet deployed). T11 done 3 Nov.
 **Closed:** T10 (option A, see T10). T7 is dropped: Claude (Cowork) sends the IndexNow ping after each deploy.
 
 | Item | State on 30 Oct (after deploy) |
@@ -348,8 +348,7 @@ Follow the verification gates in `CLAUDE.md` for every code step: `npm run typec
     (which touches all four and the hub); restaurants also `7d50183`.
 - Restaurants audit item 10 («να κρατά το επίπεδο της κουζίνας», «μια συνεχής γραμμή» in the projects
   block) stays as it is: JEF did not mark it. Item 11 became «Ελάτε να ακούσουμε μαζί τον χώρο σας σε ώρα
-  αιχμής.» (`7d50183`). Open for JEF: «πρωινό» on the hub (he wrote «Πρωϊνό»; the standard spelling is
-  «πρωινό», kept until he answers).
+  αιχμής.» (`7d50183`). «πρωινό» on the hub stays without diaeresis (JEF confirmed 6 Nov).
 - **Beyond T12, approved by JEF on the preview and committed (`688d977`):** the Levantis paragraphs on
   `/el/case-studies/` and `/el/services/event-soundtracks/` («Για τα εγκαίνια της έκθεσης … σχεδιάσαμε
   μουσική για μία μόνο βραδιά.» replaces «Μία βραδιά, όχι κάθε μέρα:», which JEF called «ΑΙ-κράχτης»; «ρυθμίσαμε
