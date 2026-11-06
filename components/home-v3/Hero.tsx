@@ -34,7 +34,10 @@ export function Hero({ lang, hero }: HeroProps) {
     return (
         // Split as on the free-assessment and Experience Design pages: text left, a full-bleed photo
         // filling the right half from top to bottom (below the text on phones).
-        <section className="relative grid min-h-[100dvh] grid-cols-1 overflow-hidden lg:grid-cols-[1.04fr_0.96fr]">
+        // Capped at 1920 x 1080 CSS px: past that (ultra-wide or 4K screens, or the browser zoomed
+        // out) the section stops growing with the viewport and sits centred, so the photo no longer
+        // swells to half the screen while the text shrinks. At 1920 wide or less nothing changes.
+        <section className="relative mx-auto grid min-h-[100dvh] w-full max-w-[1920px] grid-cols-1 overflow-hidden lg:min-h-[min(100dvh,1080px)] lg:grid-cols-[1.04fr_0.96fr]">
             <DriftOrb
                 className="h-[50vw] w-[50vw] max-h-[710px] max-w-[710px]"
                 style={{
@@ -102,7 +105,7 @@ export function Hero({ lang, hero }: HeroProps) {
                 </div>
             </div>
 
-            <div className="relative min-h-[52vh] overflow-hidden border-t border-[#faf6f1]/10 lg:min-h-full lg:border-l lg:border-t-0">
+            <div className="relative min-h-[52vh] overflow-hidden border-t border-[#faf6f1]/10 lg:min-h-full lg:border-l lg:border-t-0 min-[1921px]:border-r">
                 {/* Backup photo, kept for a later swap: /images/homepage/home-hero-disco-sofa-speaker.jpg */}
                 <Image
                     src="/images/homepage/home-hero-disco-sofa.jpg"
