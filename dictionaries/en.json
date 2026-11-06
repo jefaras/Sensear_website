@@ -1085,7 +1085,7 @@
                 "standfirst": "What a music curator actually does all day, in four parts: listening, diagnostics, building the programme, and keeping it current."
             },
             {
-                "title": "Master the music curation cycle",
+                "title": "The music curation cycle",
                 "desc": "Why music curation is a continuing loop rather than a one-off delivery, and what changes after launch.",
                 "tag": "Method",
                 "category": "Method",
@@ -1104,11 +1104,11 @@
                     },
                     {
                         "type": "paragraph",
-                        "value": "The right track at the right moment can reshape how a room feels. In the lobby, use calm, mid-tempo selections to ease arrivals and reduce noise fatigue ([source](https://www.sciencedirect.com/science/article/pii/S0969698923002345)). In the dining room, steady rhythmic music supports conversational comfort and smooth service pacing ([source](https://academic.oup.com/jcr/article-abstract/13/2/286/1846377)). For late sets, increase energy and tempo to keep guests engaged for longer and encourage an extra round ([source](https://www.tandfonline.com/doi/pdf/10.1080/1750984X.2011.631026))."
+                        "value": "The right track at the right moment reshapes how a room feels. In a lobby, calm mid-tempo selections [ease arrivals and reduce noise fatigue](https://www.sciencedirect.com/science/article/pii/S0969698923002345). In a dining room, steady rhythmic music [supports conversation and the pacing of service](https://academic.oup.com/jcr/article-abstract/13/2/286/1846377). Late in the evening, [more energy and tempo](https://www.tandfonline.com/doi/pdf/10.1080/1750984X.2011.631026) keep guests engaged for longer."
                     },
                     {
                         "type": "paragraph",
-                        "value": "At SensEar, we design those shifts on purpose. For venues that care about guest experience and brand voice, curated music strengthens sonic identity, increases dwell time, and supports repeat visits."
+                        "value": "At SensEar, those shifts are designed on purpose, one zone and one hour at a time."
                     },
                     {
                         "type": "heading",
@@ -1117,7 +1117,7 @@
                     },
                     {
                         "type": "paragraph",
-                        "value": "Great programming is never \"set it and forget it.\" It starts with a launch and continues through measurement and refinement. We review performance regularly, remove tracks that feel tired or trigger skips, and add new material that matches your audience. Slow-paced selections can increase time on site and spending in certain contexts ([source](https://music2biz.com/wp-content/uploads/2017/04/Using-Background-Music-to-Affect-the-Behavior-of-Supermarket-Shoppers.pdf)). In restaurants, slower music has been linked with guests staying longer and ordering more, while faster tempos can speed table turnover when needed ([source](https://academic.oup.com/jcr/article-abstract/13/2/286/1846377))."
+                        "value": "Good programming is never \"set it and forget it\". It starts with a launch and continues through listening and refinement: tracks that feel tired or get skipped come out, new material that fits the audience goes in. The research gives the direction: [slower music](https://music2biz.com/wp-content/uploads/2017/04/Using-Background-Music-to-Affect-the-Behavior-of-Supermarket-Shoppers.pdf) can increase time on site and spending in certain contexts, and in restaurants [slower tempos](https://academic.oup.com/jcr/article-abstract/13/2/286/1846377) have been linked with guests staying longer and ordering more, while faster tempos help turn tables when needed."
                     },
                     {
                         "type": "heading",
@@ -1126,16 +1126,16 @@
                     },
                     {
                         "type": "paragraph",
-                        "value": "Our curators are musicians, DJs, and ethnomusicologists with backgrounds in labels, radio, classical stages, and tech. They spend time in your space to understand the flow of service and daily rhythms. We test in context: pacing a fitness studio to verify tempo curves for classes ([source](https://www.sciencedirect.com/science/article/pii/S1469029224000554)), running a full dinner service to validate energy arcs for peak hours ([source](https://academic.oup.com/jcr/article-abstract/13/2/286/1846377)), or evaluating quiet sets for spa settings to avoid listener fatigue ([source](https://www.tandfonline.com/doi/pdf/10.1080/1750984X.2011.631026))."
+                        "value": "Our curators are musicians, DJs and musicologists with backgrounds in hospitality venues, music production, radio and technology. They spend time in your space to understand the flow of service and the rhythm of the day. The programme is then tested where it will play, because the research is specific to each setting: tempo curves for [classes in a fitness studio](https://www.sciencedirect.com/science/article/pii/S1469029224000554), energy arcs for a [full dinner service](https://academic.oup.com/jcr/article-abstract/13/2/286/1846377), quiet sets that [avoid listener fatigue](https://www.tandfonline.com/doi/pdf/10.1080/1750984X.2011.631026) in a spa."
                     },
                     {
                         "type": "heading",
                         "level": 2,
-                        "value": "Stay current. Stay relevant."
+                        "value": "Staying current"
                     },
                     {
                         "type": "paragraph",
-                        "value": "What works today can feel dated in a few months. Culture moves and tastes shift. Matching music to context can also steer choices. For example, when background music aligns with cultural cues, guests are more likely to choose congruent products, such as French music increasing French wine selection in a retail test ([source](https://archive.org/download/wikipedia-scholarly-sources-corpus/10.1037%252F0002-9432.71.2.245.zip/10.1037%252F0021-9010.84.2.271.pdf)). Programming benefits from tracking trends and audience response in real time rather than relying only on static algorithms."
+                        "value": "What works today can feel dated in a few months; culture moves and tastes shift. Context steers choices too: when background music matches a cultural cue, guests are more likely to choose the congruent product, as in the retail test where [French music increased French wine sales](https://archive.org/download/wikipedia-scholarly-sources-corpus/10.1037%252F0002-9432.71.2.245.zip/10.1037%252F0021-9010.84.2.271.pdf). Programming benefits from following trends and audience response rather than relying on a static algorithm."
                     },
                     {
                         "type": "heading",
@@ -1144,23 +1144,23 @@
                     },
                     {
                         "type": "paragraph",
-                        "value": "Every set is shaped by feel and by data. We look at tempo, intensity, cadence, and bpm to match the arc of your environment. Music also changes how time is perceived. Retail experiments show background music can alter both perceived and actual shopping duration, which affects evaluations and spend ([source](https://rybn.org/ANTI/ADMXI/documentation/ALGORITHM_DOCUMENTATION/HARMONY_OF_THE_SPEARS/BACKGROUND_MUSIC_STUDIES/EFFECT_ON_CONSUMPTION/2000_The_Effects_of_Music_in_a_Retail_Setting_on_Real_and_Perceived_Shopping_Times.pdf))."
+                        "value": "Every set is shaped by feel and by data: tempo, intensity, cadence and BPM, matched to the arc of the room. Music also changes how time is perceived; retail experiments show it can alter [both perceived and actual shopping duration](https://rybn.org/ANTI/ADMXI/documentation/ALGORITHM_DOCUMENTATION/HARMONY_OF_THE_SPEARS/BACKGROUND_MUSIC_STUDIES/EFFECT_ON_CONSUMPTION/2000_The_Effects_of_Music_in_a_Retail_Setting_on_Real_and_Perceived_Shopping_Times.pdf), which affects evaluations and spend."
                     },
                     {
                         "type": "paragraph",
-                        "value": "Fitness studios: Plan build-ups, peaks, and recovery moments. Faster tempos tend to align better as intensity rises and can improve affect and perceived exertion ([source](https://www.sciencedirect.com/science/article/pii/S1469029224000554)) ([source](https://www.tandfonline.com/doi/pdf/10.1080/1750984X.2011.631026))."
+                        "value": "Fitness studios: plan build-ups, peaks and recovery. [Faster tempos](https://www.sciencedirect.com/science/article/pii/S1469029224000554) align better as intensity rises and can [improve affect and perceived exertion](https://www.tandfonline.com/doi/pdf/10.1080/1750984X.2011.631026)."
                     },
                     {
                         "type": "paragraph",
-                        "value": "Restaurants and bars: Use slower tempos to lengthen stays when desired, and increase pace to support faster turns during rush periods ([source](https://academic.oup.com/jcr/article-abstract/13/2/286/1846377))."
+                        "value": "Restaurants and bars: [slower tempos](https://academic.oup.com/jcr/article-abstract/13/2/286/1846377) to lengthen stays when wanted, a faster pace to support quicker turns at rush hour."
                     },
                     {
                         "type": "paragraph",
-                        "value": "Spas and lounges: Favor gentle entries, stable mid-sections, and unhurried fades to maintain calm without dulling the space ([source](https://www.tandfonline.com/doi/pdf/10.1080/1750984X.2011.631026))."
+                        "value": "Spas and lounges: gentle entries, stable middles and [unhurried fades](https://www.tandfonline.com/doi/pdf/10.1080/1750984X.2011.631026) keep the calm without dulling the room."
                     },
                     {
                         "type": "paragraph",
-                        "value": "Retail and gallery spaces: Align cues across the environment. When scent and music arousal levels match, shopper evaluations improve, which shows the value of tuning the whole atmosphere, not just the playlist ([source](https://www.sciencedirect.com/science/article/pii/S0022435901000422)). A public preprint is also available [here for easy access](https://www.researchgate.net/profile/Jochen-Wirtz/publication/222542870_Congruency_of_Scent_and_Music_as_a_Driver_of_In-Store_Evaluations_and_Behavior/links/59f47c0a458515547c21c2be/Congruency-of-Scent-and-Music-as-a-Driver-of-In-Store-Evaluations-and-Behavior.pdf)."
+                        "value": "Retail and galleries: align the cues. When [scent and music arousal levels match](https://www.sciencedirect.com/science/article/pii/S0022435901000422), shopper evaluations improve, which argues for tuning the whole atmosphere, not just the playlist. A [public preprint](https://www.researchgate.net/profile/Jochen-Wirtz/publication/222542870_Congruency_of_Scent_and_Music_as_a_Driver_of_In-Store_Evaluations_and_Behavior/links/59f47c0a458515547c21c2be/Congruency-of-Scent-and-Music-as-a-Driver-of-In-Store-Evaluations-and-Behavior.pdf) of the study is also available."
                     },
                     {
                         "type": "heading",
@@ -1171,9 +1171,9 @@
                         "type": "list",
                         "items": [
                             "Programming that evolves with your clientele and dayparts",
-                            "Specialists who test music inside your real-world service flow",
-                            "Frequent updates that keep sets fresh and culturally tuned",
-                            "A balance of analytics and expert taste that outperforms one-size-fits-all music"
+                            "Curators who listen inside your real service flow",
+                            "Regular updates that keep sets fresh",
+                            "Taste and data together, instead of one-size-fits-all music"
                         ]
                     },
                     {

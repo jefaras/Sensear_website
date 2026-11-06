@@ -61,6 +61,7 @@ const LAST_MODIFIED_OVERRIDES: Record<string, string> = {
     '/blog/three-reasons-make-music-hospitality': '2026-11-06T00:00:00.000Z',
     '/blog/brand-music-converts-browsers-buyers': '2026-11-06T00:00:00.000Z',
     '/blog/what-exactly-does-music-curator-do': '2026-11-06T00:00:00.000Z',
+    '/blog/music-curation-cycle-venues': '2026-11-06T00:00:00.000Z',
 }
 
 const BLOG_POST_PREFIX = '/blog/'
