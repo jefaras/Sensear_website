@@ -22,7 +22,7 @@ image for the blog post `building-brand-people-can-hear` (its page image is WebP
 
 **Committed, not yet deployed:** sitemap `lastmod` override for Signature Playlists; the "four days" proposal promise corrected to "usually within 7 to 10 days" on five pages, both languages; T6 Audio Upgrades, Event Soundtracks, Sonic Identity and the services hub; T11 share images; the newsletter reCAPTCHA line without an em dash and in Greek on Greek pages (`5dc891c`, `e8ea350`); the mirrored zig-zag on the pages with a case section (see T6). Home "who we are" statement: smaller text, two paragraphs, and the first sentence now "…with clients across Greece" in both languages (`905c83a`, `e258d2f`, `5fd9148`).
 
-**Open:** none. T11 done 3 Nov.
+**Open:** T12 (industries hub + six industry pages: all seven committed and built into `out/` on 6 Nov, not deployed; Greek fixes outside T12 pending JEF on the preview, see T12). T11 done 3 Nov.
 **Closed:** T10 (option A, see T10). T7 is dropped: Claude (Cowork) sends the IndexNow ping after each deploy.
 
 | Item | State on 30 Oct (after deploy) |
@@ -273,6 +273,89 @@ Follow the verification gates in `CLAUDE.md` for every code step: `npm run typec
 - Point each post's `ogImage` key at its new image (the key already exists for `building-brand-people-can-hear`;
   add it for the other seven) in `dictionaries/en.json` and `el.json`. The on-page images stay as they are.
 - Check: every blog post in `out/` has a 1200×630 JPG `og:image`.
+
+---
+
+### T12 — Industries hub + 6 industry pages (medium, needs JEF) · IN PROGRESS 5 Nov · all seven pages committed 6 Nov, not yet deployed
+- Scope: `/industries/` and the six `/industries/music-for-*` pages, both languages, Phase 3 of
+  `plans/copy-strategy-audit-synthesis.md` (§10 F, §11 items 6 and 11). Same process as T6: audit, one
+  batch of questions, drafts in `docs/drafts/industries-copy-draft.md` (not committed), JEF approves every
+  line, then copy + sitemap override in one commit per page. Layout changes go in a separate commit first.
+- **Approval on a local preview (JEF, 6 Nov, applies from now on):** each draft is applied to the working
+  tree **uncommitted** (dictionaries, `INDUSTRY_CONFIG`, sitemap override) and shown on the `next-dev`
+  server (`.claude/launch.json`, `http://localhost:3000/...`), next to the live page on
+  `https://sensear.music/...` and the last build on the `review-out` server (`http://localhost:4173/...`,
+  serves `out/`). JEF reads both, asks for fixes, and the fixes are re-shown on the same URL. Commit only
+  after his approval; `git checkout -- <paths>` reverts a rejected round. The markdown draft stays the
+  text source but is no longer the approval step.
+- Audit (5 Nov), agreed with JEF: the six pages were one template in six wordings; behavioural promises are
+  kept as **expected outcomes, written as the purpose of the design, never as guaranteed results** and never
+  as commercial outcomes (no "stay longer", "spend more", "come back", "share afterwards"); retired words
+  replaced with concrete nouns, not synonyms; service names stay exact in links and first mentions, keyword
+  variants go in the surrounding text; dead `see_also` keys removed; projects added where allowed; one Greek
+  sector name, with "resorts" as a body variant; the "What connects these worlds" section stays.
+- JEF's facts (5 Nov), the only facts to use on these pages:
+  - **Hotels & Resorts:** Hera Hotel (Athens) may be named with its three zones. Beach House goes under
+    restaurants and bars, not hotels. Zones and dayparts: reception/lobby, breakfast, pool, spa, bar,
+    dinner, all covered. Services sold to hotels: all four (Signature Playlists, Sonic Identity for groups,
+    Event Soundtracks for weddings and hotel events, Audio Upgrades).
+  - **Restaurants & Bars:** Pelicanos (Sifnos), Yam and Beach House with CoocooVaya (Antiparos) and Levantis
+    (Paros) may be named. The central-Athens bar from Audio Upgrades may be described, unnamed. Dayparts that
+    matter most: brunch, lunch, dinner, late. Services sold: all four.
+  - **Retail:** no retail client yet; the page carries no project. Zones and dayparts: entrance, floors,
+    fitting rooms; weekday mornings against Saturdays; sales periods. Services sold: Signature Playlists and
+    Sonic Identity.
+  - **Wellness & Gyms:** no client yet; no project on the page. Zones: reception, treatment rooms, pool,
+    class studio, training floor. Services sold: Signature Playlists, Audio Upgrades (class rooms).
+  - **Events & Experiences:** the page stays. Who hires SensEar most: hotels, private hosts and brands.
+    Event types asked for most: parties, wedding parties, private dinners, holiday parties, openings.
+  - **Art, Museums & Fashion:** no gallery, museum or fashion client; the Levantis opening (Paros) is the
+    project here as well as on events. "Fashion" stays in the title.
+  - **Shared lines:** every page may say the first call or visit is free and the proposal usually arrives
+    within 7 to 10 days.
+  - **Greek sector name:** «ξενοδοχεία και θέρετρα» everywhere; "resorts" may appear once in the body as a
+    variant where it fits.
+  - **Layout (JEF):** bold, italics and gold words on all industry pages and the hub, including the "Ideal
+    for" and "How we help" blocks and the hub cards. Nothing else off-limits for now.
+- Rendering facts for whoever edits next: on the hub, `intro.p1/p2`, card `desc1` and the "What
+  connects" points render HTML (`.se-html`: `<strong>`, `<em>`, `<a class="se-link">`); `desc2` gets a
+  gold lead-in up to its first colon (`goldPrefix`). On the industry pages `intro.p1/p2` and the
+  descriptions in "What we do", "Ideal for" and "How we help" render HTML; hero fields, subtitles, item
+  titles and `cta_description` are plain text. The project mini-CTA under "How we help" renders only when
+  `cta_title`, `cta_button` and `cta_link` are all set. Gold words per page live in
+  `components/industry-detail-v3/industry-page.tsx` (`INDUSTRY_CONFIG`) and must be exact substrings of
+  their headings (a missing word renders the heading plain); the hub's in `app/[lang]/industries/page.tsx`.
+  Inline links are styled by `.se-link` in `app/globals.css` (gold at rest, underline on hover and focus).
+  The `cta.see_also`, `hero.side_label`, `image_kicker`, `image_caption` and `badge` keys are not rendered.
+- **Greek rounds 4 and 5 (6 Nov), approved by JEF on the preview:** JEF rejected the first Greek of the
+  events and art pages as translated English («μεταφρασμένα Αγγλικά») and asked for human, polished Greek in
+  the style of «Ένα διακριτικό μουσικό υπόβαθρο επιτρέπει στους επισκέπτες να εστιάσουν στο έργο, χωρίς
+  ακουστικούς περισπασμούς.», then for a re-audit of the four earlier pages for the same calques (36 points,
+  all accepted except restaurants 10 and 11 below). Calques to avoid from now on: «κάτω από τη συζήτηση»,
+  «πίσω από το έργο», «από κοντά», «γραμμή» for music, «ακούγεται σαν το μαγαζί σας», «τρέχει» for a space
+  or schedule, «συνομιλητής» for a contact person, «στο μέτρο» (→ «στα μέτρα»), neuter «ένα playlist»
+  (**playlist is feminine everywhere**). Inline service links had no CSS at all (`.se-link` was only a
+  class name); fixed in `e446bcf`.
+- Commits, all on `feat/case-study-new-client`: layout `be80b59`, `8071bcd`, `def6d48`, `e446bcf`;
+  copy `84ffd3d` and `99bb81a` (hub), `b1efd0c` (hotels), `524824c` (restaurants), `9008689` (retail),
+  `e90d8bd` (wellness), `22186a8` (events), `e5011ef` (art), `7e26158` (Greek corrections on the hub,
+  hotels, restaurants, retail and wellness). Sitemap overrides for all seven routes = 2026-11-06. Gates
+  passed on `7e26158`: typecheck 0 errors, lint 0 errors (8 known warnings), static build. Headless Playwright pass on the build (seven pages, EN and EL, 1440 and 375 px): no console errors beyond the GTM widgets, no horizontal scroll, gold words, bold and styled links on every page.
+  - **Rollback:** `git revert 7e26158 e5011ef 22186a8 e90d8bd 9008689 524824c b1efd0c 99bb81a 84ffd3d`
+    restores the old copy of all seven pages (the layout commits can stay: a gold word that is not in the
+    heading renders it plain, and `.se-link` only styles links that exist); then rebuild `out/` and upload.
+    One page alone: revert its copy commit, and for hotels, restaurants, retail or wellness also `7e26158`
+    (which touches all four and the hub).
+- Still open on these pages: restaurants audit items 10 and 11 («να κρατά το επίπεδο της κουζίνας», «μια
+  συνεχής γραμμή» in the projects block; CTA «Ας ακούσουμε τον χώρο σας σε ώρες αιχμής.») were not marked by
+  JEF and stay as they are; «πρωινό» on the hub (JEF wrote «Πρωϊνό», the standard spelling is «πρωινό»,
+  waiting for his word).
+- **Beyond T12, in the working tree for JEF's yes on the preview (uncommitted):** the Levantis paragraph on
+  `/el/case-studies/` and `/el/services/event-soundtracks/` (same calque, now «ρυθμίσαμε την ένταση έτσι
+  ώστε ο κόσμος να βλέπει τα έργα με την ησυχία του»), the Hera card on `/el/case-studies/` (feminine
+  playlist, closing line as on the hotels page), feminine playlist on `/el/contact/` (FAQ question) and
+  `/el/about/`; overrides for `/case-studies`, `/contact`, `/about` and `/services/event-soundtracks`
+  = 2026-11-06. Commit as one `seo: Greek wording fixes outside T12` commit after his yes, then rebuild.
 
 ---
 
