@@ -71,8 +71,8 @@ export default async function BlogPostV3({ params }: { params: Promise<{ lang: L
     const publishedDate = BLOG_PUBLISHED_DATES[article.link];
     const localizedPath = (path: string) => getLocalizedPath(lang, path);
     const backHref = localizedPath('/blog');
-    // Both locales use the loanword "hospitality" in blog_cta.title.
-    const ctaEmWord = 'hospitality';
+    // Both locales use the loanword "journal" in blog_cta.title.
+    const ctaEmWord = 'journal';
 
     let sourceCounter = 0;
 
@@ -222,7 +222,7 @@ export default async function BlogPostV3({ params }: { params: Promise<{ lang: L
                 emWord={ctaEmWord}
                 lede={cta.description || ''}
                 primaryLabel={cta.button || ''}
-                primaryHref={localizedPath('/contact')}
+                primaryHref={backHref}
                 bgImage="/images/homepage/sensear-signature-playlist-service.jpg"
                 bgAlt={dict.blog.newsletter_cta.background_image_alt}
             />

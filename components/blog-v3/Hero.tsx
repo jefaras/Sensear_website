@@ -30,7 +30,8 @@ interface HeroProps {
 }
 
 export function Hero({ lang, hero, featured, featuredBadge, readFull }: HeroProps) {
-    const emWord = lang === 'el' ? 'επιμέλειας' : 'Curation';
+    // The journal keeps its English name in both locales (JEF, 6 Nov).
+    const emWord = 'Curation';
 
     return (
         <section className="relative flex min-h-[92vh] items-center overflow-hidden py-[clamp(108px,8.52vw,150px)] pb-[clamp(58px,4.6vw,81px)]">

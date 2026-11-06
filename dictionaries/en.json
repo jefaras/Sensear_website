@@ -502,20 +502,9 @@
             "read_more": "Read Full Article"
         },
         "recent": {
-            "title": "Recent Articles",
-            "read_more": "Read More",
             "headline": "Notes on the sound that shapes experience"
         },
         "back_button": "Back to Insights",
-        "newsletter": {
-            "heading": "Stay Updated",
-            "description": "Subscribe to receive our latest insights and industry news. Learn more ",
-            "about_link": "about our team",
-            "contact_link": "get in touch",
-            "description_suffix": " to discuss your project.",
-            "email_placeholder": "Enter your email",
-            "subscribe_button": "Subscribe"
-        },
         "blog_cta": {
             "title": "More from the journal",
             "description": "Notes on music in commercial spaces: what the research says, what other venues do, and how the work gets done.",
@@ -1346,8 +1335,7 @@
             "background_image_alt": "Mirror ball above glasses of wine at a bar"
         },
         "article": {
-            "read_time": "8 MIN READ",
-            "cta_kicker": "NEXT STEP"
+            "read_time": "8 MIN READ"
         }
     },
     "case_studies": {
