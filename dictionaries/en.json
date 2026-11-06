@@ -963,7 +963,7 @@
                 "standfirst": "What \"brand-fit\" music means in practice, and what the retail studies found when the music matched the shop and when it did not."
             },
             {
-                "title": "How Music Curators Build Brand Sound",
+                "title": "What exactly does a music curator do?",
                 "desc": "What a music curator does: listening, brand and space diagnostics, building the programme, and keeping it current.",
                 "tag": "Education",
                 "category": "Education",
@@ -978,108 +978,108 @@
                     {
                         "type": "heading",
                         "level": 2,
-                        "value": "Music curators architect the soundtrack of a brand"
+                        "value": "A music curator decides what a place sounds like"
                     },
                     {
                         "type": "paragraph",
-                        "value": "They design purpose-built playlists and ambient soundscapes that shape emotion, guide behavior, and make spaces memorable. Unlike DJs who perform live and read a crowd in the moment, [curators work upstream](https://thearf-org-unified-admin.s3.amazonaws.com/ARF%20Councils/ARF_Creative_SonicBranding_2024_10.pdf): they translate strategy, context, and data into on-brand audio systems for retail, hospitality, offices, events, and installations."
+                        "value": "They build playlists and ambient programmes for a space, chosen so that the music fits the room, the hour and the brand. Unlike DJs, who perform live and read a crowd in the moment, [curators work upstream](https://thearf-org-unified-admin.s3.amazonaws.com/ARF%20Councils/ARF_Creative_SonicBranding_2024_10.pdf): they turn the brief, the context and what is known about listening into a programme a venue can run every day, in retail, hospitality, offices, events and installations."
                     },
                     {
                         "type": "heading",
                         "level": 2,
-                        "value": "How SensEar curates: Four pillars of planned sound"
+                        "value": "Four parts of the job"
                     },
                     {
                         "type": "heading",
                         "level": 3,
-                        "value": "1) Constant listening with intent"
+                        "value": "1. Listening, all the time"
                     },
                     {
                         "type": "paragraph",
-                        "value": "Curators live at the edge of culture, mapping new releases and catalog gems across genres, regions, and moods. The goal isn't just \"good music\" but musical fit. Tracks whose tempo, timbre, energy, and familiarity align with the [experience you want to produce](https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2023.1236006/full)."
+                        "value": "Curators follow new releases and catalogue gems across genres, regions and moods. The goal is not \"good music\" but fit: tracks whose tempo, timbre, energy and familiarity match the [experience the space is meant to produce](https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2023.1236006/full)."
                     },
                     {
                         "type": "paragraph",
-                        "value": "Beneath the art sits neuroscience: [peak emotional responses](https://www.brainmusic.org/MBB91%20Webpage/Blood_Zatorre_2001.pdf) to music recruit the brain's reward circuitry (ventral striatum, amygdala, OFC), which is why the right song at the right moment can feel transformative."
+                        "value": "Under the craft sits neuroscience: [peak emotional responses](https://www.brainmusic.org/MBB91%20Webpage/Blood_Zatorre_2001.pdf) to music recruit the brain's reward circuitry (ventral striatum, amygdala, orbitofrontal cortex), which is why the right track at the right moment can change how a room feels."
                     },
                     {
                         "type": "heading",
                         "level": 3,
-                        "value": "2) Brand & space diagnostics"
+                        "value": "2. Brand and space diagnostics"
                     },
                     {
                         "type": "paragraph",
-                        "value": "Before a single track is placed, we interrogate context: vision, clientele, day-parts, acoustic constraints, and the behaviors you need (linger longer, browse deeper, buy, relax, socialize). The brief might include [speech-privacy](https://cambridgesound.com/sound-masking-references/) or confidentiality needs. Cases where curators partner with [acoustic design](https://www.sciencedirect.com/science/article/pii/S2405844024130733) and [sound masking](https://cambridgesound.com/sound-masking-references/) to ensure conversations remain private while keeping the room comfortable."
+                        "value": "Before a single track is placed, the curator reads the context: vision, clientele, dayparts, acoustic constraints and the behaviour the space needs (linger, browse, buy, relax, talk). The brief may include [speech privacy](https://cambridgesound.com/sound-masking-references/) or confidentiality needs; in those cases curators work alongside [acoustic design](https://www.sciencedirect.com/science/article/pii/S2405844024130733) and [sound masking](https://cambridgesound.com/sound-masking-references/) so that conversations stay private while the room stays comfortable."
                     },
                     {
                         "type": "heading",
                         "level": 3,
-                        "value": "3) Bespoke playlist systems, not templates"
+                        "value": "3. Playlist systems, not templates"
                     },
                     {
                         "type": "paragraph",
-                        "value": "From a blank canvas, curators design adaptive playlists that express your audio identity across moments: opening calm, midday energy, golden-hour warmth, late-night minimalism. The mix calibrates:"
+                        "value": "From a blank canvas, curators design playlists that express the venue's identity across the day: opening calm, midday energy, golden-hour warmth, late-night minimalism. The mix balances:"
                     },
                     {
                         "type": "list",
                         "items": [
-                            "[Familiar vs. discovery](https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2023.1236006/full) to balance comfort with novelty.",
-                            "[Tempo](https://music2biz.com/wp-content/uploads/2017/04/Using-Background-Music-to-Affect-the-Behavior-of-Supermarket-Shoppers.pdf) to nudge pace & dwell time; a [lever](https://www.sciencedirect.com/science/article/pii/S0969698912000732) repeatedly shown to shift [shopping](https://academic.oup.com/jcr/article-abstract/13/2/286/1846377) and [dining behavior](https://www.sciencedirect.com/science/article/pii/S0950329324000971).",
-                            "Vocal vs. instrumental to manage cognitive load and conversation.",
-                            "Representation & fairness in [artist selection](https://dl.acm.org/doi/fullHtml/10.1145/3640457.3688163), addressing known biases in music ecosystems and recommender systems."
+                            "[Familiar versus new](https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2023.1236006/full), to balance comfort with discovery.",
+                            "[Tempo](https://music2biz.com/wp-content/uploads/2017/04/Using-Background-Music-to-Affect-the-Behavior-of-Supermarket-Shoppers.pdf), to influence pace and dwell time; a [lever](https://www.sciencedirect.com/science/article/pii/S0969698912000732) repeatedly shown to shift [shopping](https://academic.oup.com/jcr/article-abstract/13/2/286/1846377) and [dining behaviour](https://www.sciencedirect.com/science/article/pii/S0950329324000971).",
+                            "Vocal versus instrumental, to manage cognitive load and conversation.",
+                            "Representation and fairness in [artist selection](https://dl.acm.org/doi/fullHtml/10.1145/3640457.3688163), away from the known biases of recommender systems."
                         ]
                     },
                     {
                         "type": "paragraph",
-                        "value": "We also consider brand personality cues. For example, sonic logos and short audio signatures can amplify perceived sincerity or ruggedness when [musical features](https://www.sciencedirect.com/science/article/pii/S0148296323005283) are congruent with brand traits."
+                        "value": "Brand personality counts too. Sonic logos and short audio signatures, for example, can strengthen perceived sincerity or ruggedness when their [musical features](https://www.sciencedirect.com/science/article/pii/S0148296323005283) match the brand's traits."
                     },
                     {
                         "type": "heading",
                         "level": 3,
-                        "value": "4) Governance: keep it fresh, measured, and on-brand"
+                        "value": "4. Keeping it current"
                     },
                     {
                         "type": "paragraph",
-                        "value": "Curation isn't \"set and forget.\" SensEar runs data-driven playlisting with scheduled rotation, seasonality, event spikes, and test-and-learn loops. We tag features (tempo/energy/mode), monitor skips and staff feedback, and align with brand KPIs (dwell time, NPS, conversion). Modern sonic branding programs [measure memory](https://thearf-org-unified-admin.s3.amazonaws.com/ARF%20Councils/ARF_Creative_SonicBranding_2024_10.pdf), recognition, and emotional lift, then iterate to improve asset recall and engagement."
+                        "value": "Curation is not \"set and forget\". A programme stays alive with scheduled rotation, seasonal changes, adjustments for busy periods and feedback from the floor; tired tracks come out, new material goes in. Sonic branding programmes likewise [measure memory](https://thearf-org-unified-admin.s3.amazonaws.com/ARF%20Councils/ARF_Creative_SonicBranding_2024_10.pdf), recognition and emotional response, and revise their assets over time."
                     },
                     {
                         "type": "heading",
                         "level": 2,
-                        "value": "Why it works: the evidence behind strategic sound"
+                        "value": "Why it works: the evidence"
                     },
                     {
                         "type": "paragraph",
-                        "value": "Tempo steers pace & spend. [Slow-tempo music](https://music2biz.com/wp-content/uploads/2017/04/Using-Background-Music-to-Affect-the-Behavior-of-Supermarket-Shoppers.pdf) can lengthen in-store time and increase sales; similar effects appear in [restaurants](https://academic.oup.com/jcr/article-abstract/13/2/286/1846377) where slower music extends [dining duration](https://www.sciencedirect.com/science/article/pii/S0950329324000971)."
+                        "value": "Tempo steers pace and spend. [Slow-tempo music](https://music2biz.com/wp-content/uploads/2017/04/Using-Background-Music-to-Affect-the-Behavior-of-Supermarket-Shoppers.pdf) can lengthen time in store and increase sales; similar effects appear in [restaurants](https://academic.oup.com/jcr/article-abstract/13/2/286/1846377), where slower music extends [dining duration](https://www.sciencedirect.com/science/article/pii/S0950329324000971)."
                     },
                     {
                         "type": "paragraph",
-                        "value": "Emotion is the engine. Peak musical pleasure lights up the [brain's reward network](https://www.brainmusic.org/MBB91%20Webpage/Blood_Zatorre_2001.pdf), explaining why calibrated soundscapes can reliably shift mood and memory."
+                        "value": "Emotion is the engine. Peak musical pleasure lights up the [brain's reward network](https://www.brainmusic.org/MBB91%20Webpage/Blood_Zatorre_2001.pdf), which is why a well-chosen programme can shift mood and memory."
                     },
                     {
                         "type": "paragraph",
-                        "value": "From jingles to systems. Sonic branding is now measured like visual identity; [assets are tested](https://thearf-org-unified-admin.s3.amazonaws.com/ARF%20Councils/ARF_Creative_SonicBranding_2024_10.pdf), optimized, and governed for [recall and fit](https://www.sciencedirect.com/science/article/pii/S0148296323005283)."
+                        "value": "From jingles to systems. Sonic branding is now measured like visual identity: [assets are tested](https://thearf-org-unified-admin.s3.amazonaws.com/ARF%20Councils/ARF_Creative_SonicBranding_2024_10.pdf), revised and governed for [recall and fit](https://www.sciencedirect.com/science/article/pii/S0148296323005283)."
                     },
                     {
                         "type": "paragraph",
-                        "value": "Privacy matters in real spaces. [Sound masking](https://cambridgesound.com/sound-masking-references/) and [spatial design](https://www.sciencedirect.com/science/article/pii/S2405844024130733) improve speech privacy without killing ambience, which is crucial for healthcare, offices, and [premium retail](https://cambridgesound.com/sound-masking-references/)."
+                        "value": "Privacy matters in real rooms. [Sound masking](https://cambridgesound.com/sound-masking-references/) and [spatial design](https://www.sciencedirect.com/science/article/pii/S2405844024130733) improve speech privacy without killing the ambience, which matters in healthcare, offices and [premium retail](https://cambridgesound.com/sound-masking-references/)."
                     },
                     {
                         "type": "heading",
                         "level": 2,
-                        "value": "Curators vs. DJs"
+                        "value": "Curators and DJs"
                     },
                     {
                         "type": "paragraph",
-                        "value": "DJs perform; curators pre-engineer the experience. Curators build scalable, context-aware retail soundscapes and experiential audio systems that teams can run daily; grounded in brand strategy, psychoacoustics, and [measurement](https://thearf-org-unified-admin.s3.amazonaws.com/ARF%20Councils/ARF_Creative_SonicBranding_2024_10.pdf)."
+                        "value": "DJs perform; curators prepare. A curator builds a programme a team can run every day, across zones and locations, grounded in the brand, in how people hear a room, and in [measurement](https://thearf-org-unified-admin.s3.amazonaws.com/ARF%20Councils/ARF_Creative_SonicBranding_2024_10.pdf)."
                     },
                     {
                         "type": "heading",
                         "level": 2,
-                        "value": "Ready to hear your brand?"
+                        "value": "What this looks like as a service"
                     },
                     {
                         "type": "paragraph",
-                        "value": "That is the work: [daily playlists](/services/signature-playlists/), [sonic identity](/services/sonic-identity/), and the [acoustics](/services/audio-upgrades/) they play through. [Hear the work in place](/case-studies/)."
+                        "value": "That is the work: [daily playlists](/services/signature-playlists/), [sonic identity](/services/sonic-identity/) and the [acoustics](/services/audio-upgrades/) they play through. [Hear the work in place](/case-studies/)."
                     }
                 ],
                 "standfirst": "What a music curator actually does all day, in four parts: listening, diagnostics, building the programme, and keeping it current."
