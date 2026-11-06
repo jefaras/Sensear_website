@@ -38,7 +38,7 @@ const LAST_MODIFIED_OVERRIDES: Record<string, string> = {
     // T6 service-page rewrites (copy in the dictionaries). Add each page here in its own T6 commit.
     '/services/signature-playlists': '2026-10-30T00:00:00.000Z',
     '/services/audio-upgrades': '2026-10-31T00:00:00.000Z',
-    '/services/event-soundtracks': '2026-10-31T00:00:00.000Z',
+    '/services/event-soundtracks': '2026-11-06T00:00:00.000Z',
     '/services/sonic-identity': '2026-11-02T00:00:00.000Z',
     '/services': '2026-11-02T00:00:00.000Z',
     // Own photos and alt texts (images + dictionaries only, so git would not move the date).
@@ -51,6 +51,10 @@ const LAST_MODIFIED_OVERRIDES: Record<string, string> = {
     '/industries/music-for-wellness-and-gyms': '2026-11-06T00:00:00.000Z',
     '/industries/music-for-events-and-experiences': '2026-11-06T00:00:00.000Z',
     '/industries/music-for-art-museums-and-fashion': '2026-11-06T00:00:00.000Z',
+    // Greek wording fixes outside T12 (copy in el.json only), approved by JEF on 6 Nov.
+    '/case-studies': '2026-11-06T00:00:00.000Z',
+    '/contact': '2026-11-06T00:00:00.000Z',
+    '/about': '2026-11-06T00:00:00.000Z',
 }
 
 const BLOG_POST_PREFIX = '/blog/'
