@@ -62,7 +62,7 @@ export function Hero({ title, desc, tag, author, displayDate, publishedDate, rea
                         </ScrollReveal>
 
                         <ScrollReveal delay={0.06}>
-                            <Kicker variant="gold" className="mb-[clamp(20px,1.6vw,28px)]">{tag.toUpperCase()}</Kicker>
+                            <Kicker variant="gold" className="mb-[clamp(20px,1.6vw,28px)]">{tag.toLocaleUpperCase('el')}</Kicker>
                         </ScrollReveal>
 
                         <ScrollReveal delay={0.12}>
