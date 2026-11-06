@@ -3077,93 +3077,93 @@
     "wellness_gyms": {
         "meta": {
             "title": "Music for wellness spaces and gyms",
-            "description": "Wellness and gym music with soundscapes for treatment spaces, classes and training, plus schedule-based programming. Design your wellness soundtrack."
+            "description": "Music for spas, wellness centres and gyms: a playlist per room, from treatment rooms to the studio and training floor. Signature Playlists, Audio Upgrades."
         },
         "hero": {
             "title": "Music for wellness and gyms",
-            "subtitle": "Designed around activity and intensity",
-            "description": "Targeted music that enhances focus across all spaces and practices.",
+            "subtitle": "One tempo per room, often at the same time",
+            "description": "Reception, treatment rooms, pool, studio and training floor, each on its own playlist.",
             "image": "/images/industries/wellness-gyms-luxury-spa-ambient-music.jpg",
             "image_alt": "Indoor spa pool with palm plants and soft teal light",
-            "side_label": "INDUSTRIES — WELLNESS & GYMS",
-            "explore_cta": "Explore your sector",
+            "side_label": "INDUSTRIES · WELLNESS & GYMS",
+            "explore_cta": "How it works in a wellness space",
             "image_kicker": "WELLNESS & GYMS",
             "image_caption": "Sound tuned to the body."
         },
         "intro": {
             "title": "Opposite rooms, often the same building",
-            "p1": "A treatment room and a training floor want opposite things from music, and they are usually in the same building, sometimes on the other side of the wall.",
-            "p2": "Our mixes <strong><em>adapt to each zone and intensity level</em></strong>, helping visitors <strong><em>stay present and active</em></strong>."
+            "p1": "A treatment room and a training floor want opposite things from music, and they are usually in the same building, sometimes on the other side of the wall. <strong>The spa has to stay quiet while the class next door keeps its pulse.</strong>",
+            "p2": "We give every zone its own playlist and level with <a href=\"/services/signature-playlists/\" class=\"se-link\">Signature Playlists</a>, from one account, and where the class room's speakers cannot keep up, <a href=\"/services/audio-upgrades/\" class=\"se-link\">Audio Upgrades</a> brings in our partners for the equipment and the acoustics."
         },
         "what_we_do": {
-            "title": "What we do",
-            "subtitle": "Different music for treatment rooms and training floors.",
+            "title": "What we do in a wellness space",
+            "subtitle": "Five rooms, five tempos, one schedule.",
             "items": [
                 {
-                    "title": "Soundscapes for treatment spaces",
-                    "description": "Ambient and therapeutic sound design that helps visitors relax and stay focused."
+                    "title": "Reception",
+                    "description": "Calm and unhurried, at the level of a conversation, so the first minute sets the pace of the visit."
                 },
                 {
-                    "title": "Playlists for classes & training",
-                    "description": "Music adapted to energy for yoga, Pilates, strength, and cardio, supporting the natural flow of sessions."
+                    "title": "Treatment rooms and pool",
+                    "description": "A slow, even line with no sudden change in tempo or volume for the length of a treatment."
                 },
                 {
-                    "title": "Schedule-based programming",
-                    "description": "Music that follows the daily rhythm: from calm mornings to more energetic afternoons, across all spaces."
+                    "title": "Class studio",
+                    "description": "Yoga and Pilates at one tempo, a cardio class at another, each with its own playlist that follows the length and shape of the session."
                 },
                 {
-                    "title": "Zone-based adjustment",
-                    "description": "Reception, treatment rooms, and exercise spaces each get their own sound, maintaining a common, recognizable identity."
+                    "title": "Training floor",
+                    "description": "More energy and a steadier pulse through the busy evening hours, lower and lighter in the quiet of the morning."
                 }
             ],
             "image": "/images/industries/wellness-gyms-spa-treatment-music.jpg",
             "image_alt": "Minimal gym with a punching bag and a wooden bench"
         },
         "ideal_for": {
-            "title": "Ideal for",
+            "title": "Built for these spaces",
             "items": [
                 {
-                    "title": "Spa & Wellness Centers",
-                    "description": "Where sound supports treatment and recovery."
+                    "title": "Spas and wellness centres",
+                    "description": "Where the music is heard through a closed door and has to stay even."
                 },
                 {
-                    "title": "Yoga, Pilates & Meditation Studios",
-                    "description": "That need atmosphere that deepens practice."
+                    "title": "Yoga, Pilates and meditation studios",
+                    "description": "One room, several classes a day, each with a playlist that matches its length."
                 },
                 {
-                    "title": "Boutique Gyms & Training Studios",
-                    "description": "With focus on experience and member retention."
-                },
-                {
-                    "title": "Wellness Brands with multiple locations",
-                    "description": "That want consistent sound across all properties."
+                    "title": "Boutique gyms and training studios",
+                    "description": "A floor that runs from the morning regulars to the evening rush."
                 },
                 {
                     "title": "Hybrid spaces",
-                    "description": "That combine treatments and active exercise."
+                    "description": "Treatments on one side of the wall, classes on the other, both from the same account."
+                },
+                {
+                    "title": "Wellness brands with several locations",
+                    "description": "One brand across every site, with a schedule per room run from one place."
                 }
             ],
             "image": "/images/industries/wellness-gyms-fitness-music-curation.jpg",
             "image_alt": "Woman floating in a pool in a white swimsuit"
         },
         "how_we_help": {
-            "title": "How we help",
+            "title": "How we help, in practice",
             "items": [
                 {
                     "title": "One level for treatment, another for training",
                     "description": "Separate programmes and separate volumes, so a massage room and a class floor never share a playlist."
                 },
                 {
-                    "title": "Match energy with activity",
-                    "description": "Music rises and falls with intensity, supporting each exercise."
+                    "title": "Playback that follows the timetable",
+                    "description": "The schedule changes the music by itself, class by class; an instructor can still pick the tempo for a session from the same account."
                 },
                 {
-                    "title": "Create cohesive brand atmosphere",
-                    "description": "All spaces and locations sound intentional, from reception to final stretch."
+                    "title": "New music every month",
+                    "description": "New music every month and a change of direction each season, so members and staff do not hear the same hour all year."
                 },
                 {
-                    "title": "Remove playlist management",
-                    "description": "Staff focuses on clients and members, while we handle music selections, updates, and professional licensing."
+                    "title": "Licensing explained before you sign",
+                    "description": "The platform is licensed for business use, and the public performance fees stay with the venue, as they do today."
                 }
             ],
             "image": "/images/industries/wellness-gyms-yoga-studio-soundscape.jpg",
@@ -3171,13 +3171,8 @@
         },
         "cta": {
             "title": "Let's set the pace, room by room.",
-            "description": "We reply within 24 hours with the service that fits and what happens next.",
-            "button": "Design your wellness soundtrack",
-            "see_also": "See how",
-            "signature_playlists": "Signature Playlists",
-            "and": "and",
-            "sonic_strategy": "Sonic Identity Design",
-            "work_for": "work for wellness & gyms.",
+            "description": "The first call or visit is free, and the proposal usually arrives within 7 to 10 days.",
+            "button": "Request a proposal for your space",
             "location": "Athens, Greece"
         }
     },
