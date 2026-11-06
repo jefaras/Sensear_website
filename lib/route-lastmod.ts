@@ -44,11 +44,11 @@ const LAST_MODIFIED_OVERRIDES: Record<string, string> = {
     // Own photos and alt texts (images + dictionaries only, so git would not move the date).
     '/services/experience-design': '2026-11-03T00:00:00.000Z',
     // T12 industries rewrites (copy in the dictionaries). Add each page here in its own T12 commit.
-    '/industries': '2026-11-05T00:00:00.000Z',
-    '/industries/music-for-hotels-and-resorts': '2026-11-05T00:00:00.000Z',
-    '/industries/music-for-restaurants-and-bars': '2026-11-05T00:00:00.000Z',
-    '/industries/music-for-retail-stores': '2026-11-05T00:00:00.000Z',
-    '/industries/music-for-wellness-and-gyms': '2026-11-05T00:00:00.000Z',
+    '/industries': '2026-11-06T00:00:00.000Z',
+    '/industries/music-for-hotels-and-resorts': '2026-11-06T00:00:00.000Z',
+    '/industries/music-for-restaurants-and-bars': '2026-11-06T00:00:00.000Z',
+    '/industries/music-for-retail-stores': '2026-11-06T00:00:00.000Z',
+    '/industries/music-for-wellness-and-gyms': '2026-11-06T00:00:00.000Z',
     '/industries/music-for-events-and-experiences': '2026-11-06T00:00:00.000Z',
     '/industries/music-for-art-museums-and-fashion': '2026-11-06T00:00:00.000Z',
 }
