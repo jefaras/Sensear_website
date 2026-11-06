@@ -484,11 +484,11 @@
     "blog": {
         "meta": {
             "title": "The Curation Journal: notes on music in venues",
-            "description": "The Curation Journal shares luxury music curation insights, sonic branding ideas and customer-experience research. Explore our latest articles today."
+            "description": "Notes on music in venues: what the research measured, what hotel groups do with their sound, and how curation works once the playlist is live."
         },
         "hero": {
             "title": "The Curation Journal",
-            "subtitle": "Notes on music in commercial spaces: what the research says, what other venues do, and how the work actually gets done.",
+            "subtitle": "Research on music in rooms, examples from hotel groups, and the day-to-day of keeping a programme current.",
             "side_label": "JOURNAL — CURATION NOTES",
             "primary_cta": "See the articles",
             "secondary_cta": "Subscribe to the newsletter",
@@ -498,16 +498,16 @@
             ]
         },
         "featured": {
-            "badge": "INSIGHTS · FEATURED",
-            "read_more": "Read Full Article"
+            "badge": "JOURNAL · FEATURED",
+            "read_more": "Read the article"
         },
         "recent": {
-            "headline": "Notes on the sound that shapes experience"
+            "headline": "Notes on the sound that shapes a room"
         },
-        "back_button": "Back to Insights",
+        "back_button": "Back to the journal",
         "blog_cta": {
             "title": "More from the journal",
-            "description": "Notes on music in commercial spaces: what the research says, what other venues do, and how the work gets done.",
+            "description": "Research, examples from hotel groups and the day-to-day of curation.",
             "button": "See all articles"
         },
         "articles": [
@@ -1326,10 +1326,10 @@
         ],
         "newsletter_cta": {
             "title": "Notes on sound, straight to you",
-            "subtitle": "Subscribe to our journal for fresh insights on music, atmosphere & sonic branding.",
+            "subtitle": "New articles on music in venues, in your inbox when they are published.",
             "placeholder": "Your email",
             "submit": "Subscribe",
-            "success": "Thanks for subscribing! ✦",
+            "success": "Thank you, you are subscribed.",
             "location": "Athens, Greece",
             "background_image": "/images/homepage/sensear-signature-playlist-service.jpg",
             "background_image_alt": "Mirror ball above glasses of wine at a bar"
