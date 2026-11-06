@@ -33,8 +33,8 @@ export const INDUSTRY_CONFIG: Record<string, SlugConfig> = {
     'music-for-events-and-experiences': {
         ns: 'events_experiences',
         em: {
-            el: { intro: 'χρονισμό', method: 'σχεδιασμός', forwhom: 'events', results: 'ρυθμός', cta: 'ατμόσφαιρα', portfolio: '' },
-            en: { intro: 'timing', method: '', forwhom: '', results: '', cta: 'atmosphere', portfolio: '' },
+            el: { intro: 'πρόγραμμα', method: 'εκδήλωση', forwhom: 'καλούν', results: 'πράξη', cta: 'ροή', portfolio: 'καλεσμένοι' },
+            en: { intro: 'schedule', method: 'event', forwhom: 'hires', results: 'practice', cta: 'show', portfolio: 'guests' },
         },
     },
     'music-for-retail-stores': {
@@ -54,8 +54,8 @@ export const INDUSTRY_CONFIG: Record<string, SlugConfig> = {
     'music-for-art-museums-and-fashion': {
         ns: 'art_museums_fashion',
         em: {
-            el: { intro: 'ακρίβεια', method: 'μόδα', forwhom: 'μόδα', results: 'event', cta: 'ατμόσφαιρα', portfolio: 'πράξη' },
-            en: { intro: 'precision', method: '', forwhom: '', results: '', cta: 'atmosphere', portfolio: 'action' },
+            el: { intro: 'έργο', method: 'γκαλερί', forwhom: 'χώρους', results: 'πράξη', cta: 'έκθεση', portfolio: 'πλάνο' },
+            en: { intro: 'first', method: 'gallery', forwhom: 'spaces', results: 'practice', cta: 'showing', portfolio: 'conversation' },
         },
     },
 };

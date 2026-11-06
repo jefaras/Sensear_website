@@ -233,6 +233,22 @@ body {
   font-weight: 700;
 }
 
+/* Inline service links inside .se-html copy (T12 industries pages): a warm
+   gold tone at rest so they read as links, underline on hover and focus. */
+.se-link {
+  color: #edc4ac;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+  transition: text-decoration-color 0.2s ease, color 0.2s ease;
+}
+.se-link:hover,
+.se-link:focus-visible {
+  color: #fcefe7;
+  text-decoration-color: currentColor;
+}
+
 /* Variant: gold-gradient <strong> runs (Services statement). Add alongside
    .se-html so em keeps the Didot treatment; defined after .se-html so the
    gold strong wins. */
