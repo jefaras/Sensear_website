@@ -3281,107 +3281,102 @@
     "art_museums_fashion": {
         "meta": {
             "title": "Music for art, museums and fashion",
-            "description": "Music for art galleries, museums & fashion spaces that respects the work, supports focus & complements exhibitions, shows & cultural settings."
+            "description": "Music for galleries, museums and fashion: a low line for the rooms, a playlist under the conversation at openings, and music timed to a show."
         },
         "hero": {
             "title": "Music for art, museums and fashion",
             "subtitle": "Present, without competing with what you are showing",
-            "description": "Subtle sound that complements your curatorial vision.",
+            "description": "Exhibition rooms, openings and runway shows, each with music that stays behind the work.",
             "image": "/images/industries/art-museums-fashion-gallery-curation.jpg",
             "image_alt": "Models walking on a runway with long shadows",
-            "side_label": "INDUSTRIES — ART, MUSEUMS & FASHION",
-            "explore_cta": "Explore your sector",
+            "side_label": "INDUSTRIES · ART, MUSEUMS & FASHION",
+            "explore_cta": "How it works in a gallery",
             "image_kicker": "ART, MUSEUMS & FASHION",
             "image_caption": "Present, never competing."
         },
         "intro": {
             "title": "The work comes first",
-            "p1": "In a gallery, or on a runway, what you are showing comes first. Sound is there to hold attention on it, not to compete for it, and the difference between the two is a few decibels or the wrong genre.",
-            "p2": "We create soundscapes that <strong><em>respect each work</em></strong> and <strong><em>gently guide</em></strong> how visitors <strong><em>move and perceive</em></strong> the content."
+            "p1": "In a gallery, or on a runway, what you are showing comes first. <strong>Sound is there to hold attention on it, not to compete for it</strong>, and the difference between the two is a few decibels or the wrong genre.",
+            "p2": "For the rooms, <a href=\"/services/signature-playlists/\" class=\"se-link\">Signature Playlists</a> keep a low, considered line through opening hours. For an opening, a preview or a show, <a href=\"/services/event-soundtracks/\" class=\"se-link\">Event Soundtracks</a> plans the night, and where the room's own speakers flatten everything, <a href=\"/services/audio-upgrades/\" class=\"se-link\">Audio Upgrades</a> brings in our partners for placement and acoustics."
         },
         "what_we_do": {
-            "title": "What we do",
-            "subtitle": "Sound that supports what you are showing, without competing with it.",
+            "title": "What we do in a gallery",
+            "subtitle": "Rooms, openings and shows, each at its own level.",
             "items": [
                 {
-                    "title": "Acoustically tuned sound",
-                    "description": "Volume levels and speaker placement adapted to space layout, so music sounds natural without echoes."
+                    "title": "Exhibition rooms",
+                    "description": "A low, even line for the opening hours, chosen for the work on the walls and changed with each exhibition, never loud enough to lead."
                 },
                 {
-                    "title": "Exhibition-based curation",
-                    "description": "Each exhibition or collection gets its own sonic identity, integrated into the overall brand framework."
+                    "title": "Openings and previews",
+                    "description": "A playlist set under the conversation, so people look closely and talk without raising their voices, or a DJ when the night asks for one."
                 },
                 {
-                    "title": "Timed runways",
-                    "description": "Pre-programmed music for fashion shows and presentations, adjusted on-site for steps, transitions, and finale."
+                    "title": "Runway shows and presentations",
+                    "description": "Music planned against the running order and adjusted on site for the walk, the transitions and the finale, with a sound check before the doors open."
                 },
                 {
-                    "title": "Living catalogs",
-                    "description": "Regular updates so the music does not become wallpaper for visitors or staff, using music licensed for commercial use."
+                    "title": "The sound itself",
+                    "description": "Hard floors and bare walls echo. When the room fights the music, <a href=\"/services/audio-upgrades/\" class=\"se-link\">Audio Upgrades</a> brings our partners in for speaker placement and acoustic treatment: one quote, one invoice."
                 }
             ],
             "image": "/images/industries/art-museums-fashion-cultural-space-music.jpg",
             "image_alt": "Woman in a black pleated dress holding a book in a gallery"
         },
         "ideal_for": {
-            "title": "Ideal for",
+            "title": "Built for these spaces",
             "items": [
                 {
-                    "title": "Galleries & Museums",
-                    "description": "With rotating exhibitions and permanent collections."
+                    "title": "Galleries and museums",
+                    "description": "Rotating exhibitions and permanent collections, each with its own line."
                 },
                 {
-                    "title": "Fashion Houses & Showrooms",
-                    "description": "For runways, previews, and presentations."
+                    "title": "Fashion houses and showrooms",
+                    "description": "Previews, presentations and a show once a season, with the daily showroom sound in between."
                 },
                 {
-                    "title": "Cultural Institutions",
-                    "description": "With installations and public programs."
+                    "title": "Cultural institutions",
+                    "description": "Talks, installations and public programmes, where the music stays under the voice."
                 },
                 {
-                    "title": "Concept & Editorial Retail",
-                    "description": "With alternating artistic and design interventions."
-                },
-                {
-                    "title": "Pop-ups & Launch Events",
-                    "description": "That need immediate sonic identity."
+                    "title": "Concept stores and launch events",
+                    "description": "A space that changes with each installation, and an opening night that needs its own soundtrack."
                 }
             ],
             "image": "/images/industries/art-museums-fashion-museum-soundscape.jpg",
             "image_alt": "Gallery with colorful paintings and a white sculpture"
         },
         "how_we_help": {
-            "title": "How we help",
+            "title": "How we help, in practice",
             "items": [
                 {
-                    "title": "Support focus and observation",
-                    "description": "Subtle sound allows visitors to focus on the work without disrupting atmosphere."
+                    "title": "Chosen for the work, not for the room's habit",
+                    "description": "Each exhibition gets a selection made for it, within the character of the institution, and the level is set for looking, not for listening."
                 },
                 {
-                    "title": "Enhance curatorial narrative",
-                    "description": "Music supports the story from exhibition entrance to final point."
+                    "title": "You approve before the opening",
+                    "description": "The playlist or the style of the night is agreed in advance, so the opening sounds the way the curator expects."
                 },
                 {
-                    "title": "Simplify event implementation",
-                    "description": "Proper design and reliable playback allow teams to focus on visitors and creators, not volume or transitions."
+                    "title": "One contact for the night",
+                    "description": "Sound check before the guests, playback and levels through the evening, our equipment or the venue's."
+                },
+                {
+                    "title": "Licensing explained before you sign",
+                    "description": "Daily playback runs on a platform licensed for business use; for an opening, the venue or the organiser pays the public performance fees, which are not part of our fee."
                 }
             ],
             "image": "/images/industries/art-museums-fashion-exhibition-ambient-music.jpg",
-            "cta_title": "Hear the industry sound in action",
-            "cta_description": "Read examples and listen to samples from art, museums, and fashion spaces.",
-            "cta_button": "View Examples",
-            "cta_link": "case-studies",
-            "image_alt": "Man in a leopard-print shirt with his hands on his hips"
+            "image_alt": "Man in a leopard-print shirt with his hands on his hips",
+            "cta_title": "Levantis, Paros: an opening under the conversation",
+            "cta_description": "Neva Bergman's exhibition \"Quiet Testimony\" opened in the gallery space at Levantis with around 100 guests. We curated a discreet ambient playlist and set the level under the conversation, so people could look closely at the work.",
+            "cta_button": "Read the case studies",
+            "cta_link": "case-studies"
         },
         "cta": {
             "title": "Tell us what you are showing.",
-            "description": "We reply within 24 hours with the service that fits and what happens next.",
-            "button": "Design a discreet soundscape",
-            "see_also": "See how",
-            "sonic_strategy": "Sonic Identity",
-            "and": "and",
-            "event_soundtracks": "Event Music Curation",
-            "work_for": "work for art, museums, and fashion.",
+            "description": "The first call or visit is free, and the proposal usually arrives within 7 to 10 days.",
+            "button": "Request a proposal for your space",
             "location": "Athens, Greece"
         }
     }
