@@ -47,6 +47,7 @@ const LAST_MODIFIED_OVERRIDES: Record<string, string> = {
     '/industries': '2026-11-05T00:00:00.000Z',
     '/industries/music-for-hotels-and-resorts': '2026-11-05T00:00:00.000Z',
     '/industries/music-for-restaurants-and-bars': '2026-11-05T00:00:00.000Z',
+    '/industries/music-for-retail-stores': '2026-11-05T00:00:00.000Z',
 }
 
 const BLOG_POST_PREFIX = '/blog/'

@@ -2979,93 +2979,89 @@
     "retail_stores": {
         "meta": {
             "title": "Music for retail stores",
-            "description": "Retail store music with customer-journey playlists, brand-fit sound and seasonal updates. Explore an approach that supports browsing and sales."
+            "description": "Music for retail stores by day and hour: shop floor and fitting rooms, weekday mornings, Saturdays and the sales. Signature Playlists, Sonic Identity."
         },
         "hero": {
             "title": "Music for retail stores",
-            "subtitle": "Designed to welcome and inspire discovery",
-            "description": "Curated rhythm to support store browsing and brand image.",
+            "subtitle": "Music that fits the collection, and the hour",
+            "description": "Weekday mornings, Saturday afternoons and the sales, on one schedule.",
             "image": "/images/industries/retail-stores-curated-music-shopping.jpg",
             "image_alt": "Fashion boutique with a clothes rail, a sofa and a mannequin",
-            "side_label": "INDUSTRIES — RETAIL STORES",
-            "explore_cta": "Explore your sector",
+            "side_label": "INDUSTRIES · RETAIL STORES",
+            "explore_cta": "How it works in a store",
             "image_kicker": "RETAIL STORES",
             "image_caption": "The rhythm of discovery."
         },
         "intro": {
             "title": "One playlist cannot serve both halves of the day",
-            "p1": "In a store, music sets the pace of the room. The same tracks that carry a full Saturday make a Tuesday morning sound abandoned, so we choose the tempo and the level for the hours you are busy and the hours you are not.",
-            "p2": "Our music selections <strong><em>move elegantly</em></strong> with the store's rhythm and shape how customers <strong><em>perceive your brand</em></strong>."
+            "p1": "On a Tuesday morning the shop is quiet enough to hear the hangers; on a Saturday afternoon the fitting rooms have a queue. <strong>The same tracks cannot serve both</strong>, so the tempo and the level are chosen for the hours you are busy and the hours you are not.",
+            "p2": "We build the store's sound with <a href=\"/services/signature-playlists/\" class=\"se-link\">Signature Playlists</a>, scheduled by day and hour, and for a brand with several stores we write the rules first with <a href=\"/services/sonic-identity/\" class=\"se-link\">Sonic Identity</a>, so every store sounds like the same brand."
         },
         "what_we_do": {
-            "title": "What we do",
-            "subtitle": "Music that follows opening hours, collections and footfall.",
+            "title": "What we do in a store",
+            "subtitle": "Entrance, floors and fitting rooms, by day and by hour.",
             "items": [
                 {
-                    "title": "Playlists based on customer journey",
-                    "description": "Music designed for each store area, supporting natural browsing and decision-making."
+                    "title": "Entrance and shop floor",
+                    "description": "The first metres set the tempo: music at the level of the brand, not of a radio, and a pace that lets people look at the rails instead of walking past them."
                 },
                 {
-                    "title": "Tempo and energy adjustment",
-                    "description": "Sound that relaxes and activates, allowing customers to explore without rush."
+                    "title": "Fitting rooms",
+                    "description": "A quieter, closer sound where people make up their minds, kept well under the conversation."
                 },
                 {
-                    "title": "Music selections aligned with brand",
-                    "description": "Sound that complements your market position, visuals, and audience profile."
+                    "title": "Weekday mornings and Saturdays",
+                    "description": "Two schedules: slower and lower when the shop is quiet, more energy when the floor is full, with the switch set by day and hour instead of by whoever is on the till."
                 },
                 {
-                    "title": "Seasonal updates",
-                    "description": "Playlists that evolve with collections, seasons, and promotional periods, maintaining your character."
+                    "title": "Collections and sales",
+                    "description": "New music every month and a change of direction with each collection or season, so the store's sound moves with the window display instead of lagging a season behind."
                 }
             ],
             "image": "/images/industries/retail-stores-music-strategy-browsing.jpg",
             "image_alt": "Man in a green jacket and sunglasses lounging on colorful sofas"
         },
         "ideal_for": {
-            "title": "Ideal for",
+            "title": "Built for these stores",
             "items": [
                 {
-                    "title": "Fashion & lifestyle boutiques",
-                    "description": "That rely on discovery and curation."
+                    "title": "Fashion and lifestyle boutiques",
+                    "description": "One room, one owner's taste, and music that sounds chosen rather than streamed."
                 },
                 {
                     "title": "Flagship stores",
-                    "description": "Needing distinctive atmosphere across multiple levels."
+                    "description": "Several floors with one character, each floor with its own level."
                 },
                 {
-                    "title": "Brands with multiple stores",
-                    "description": "That want consistent sound with local character."
+                    "title": "Brands with several stores",
+                    "description": "A Sonic Identity guide, so every store, in every city, sounds like one brand."
                 },
                 {
-                    "title": "Concept & editorial spaces",
-                    "description": "That change themes, art, and installations frequently."
-                },
-                {
-                    "title": "Pop-up stores",
-                    "description": "That need to make a strong impression from day one."
+                    "title": "Concept stores and pop-ups",
+                    "description": "A sound planned before opening day, for a space that changes often."
                 }
             ],
             "image": "/images/industries/retail-stores-boutique-music-atmosphere.jpg",
             "image_alt": "Woman in a sequinned top stepping out of a car"
         },
         "how_we_help": {
-            "title": "How we help",
+            "title": "How we help, in practice",
             "items": [
                 {
                     "title": "Quiet hours that do not sound empty",
-                    "description": "We programme the slow part of the day separately, so a near-empty shop still sounds intentional."
+                    "description": "The slow part of the day is programmed separately, so a near-empty shop still sounds looked after."
                 },
                 {
-                    "title": "Enhance brand recognition",
-                    "description": "Sound, image, and service tell the same, consistent story across all touchpoints."
+                    "title": "The staff keep the till, not the playlist",
+                    "description": "The schedule changes the music by itself, and a manager can lower the volume for a private appointment from the same account."
                 },
                 {
-                    "title": "Guide natural flow",
-                    "description": "Music adapts to time of day, helping movement without pressure."
+                    "title": "New music every month",
+                    "description": "New music every month and a change of direction each season, at a rhythm agreed with you."
                 },
                 {
-                    "title": "Remove playlist management",
-                    "description": "Licensed and centrally managed playlists allow the team to focus on customers, not songs."
+                    "title": "Licensing explained before you sign",
+                    "description": "The platform is licensed for business use, and the public performance fees stay with the store, as they do today."
                 }
             ],
             "image": "/images/industries/retail-stores-customer-journey-sound.jpg",
@@ -3073,13 +3069,8 @@
         },
         "cta": {
             "title": "Let's listen to your store, on a quiet hour and a busy one.",
-            "description": "We reply within 24 hours with the service that fits and what happens next.",
-            "button": "Design your store soundtrack",
-            "see_also": "See how",
-            "signature_playlists": "Signature Playlists",
-            "and": "and",
-            "sonic_strategy": "Sonic Identity Design",
-            "work_for": "work for retail stores.",
+            "description": "The first call or visit is free, and the proposal usually arrives within 7 to 10 days.",
+            "button": "Request a proposal for your store",
             "location": "Athens, Greece"
         }
     },
