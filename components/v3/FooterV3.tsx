@@ -29,6 +29,8 @@ interface FooterV3Props {
         terms: string;
         wordmark: string;
         legal: string;
+        /** Small gold tag after a service link, keyed by the service's link path. */
+        service_badges?: Record<string, string>;
     };
     navigation: {
         case_studies: string;
@@ -125,11 +127,24 @@ export function FooterV3({ lang, footer, navigation, services, industries, email
                 <div>
                     <div className={colLabel}>{footer.col_services}</div>
                     <div className="flex flex-col gap-[13px]">
-                        {services.map((item) => (
-                            <Link key={item.link} href={localizedPath(`/${item.link}`)} className={colLink}>
-                                {item.title}
-                            </Link>
-                        ))}
+                        {services.map((item) => {
+                            const badge = footer.service_badges?.[item.link];
+                            return (
+                                // The tag sits outside the link so the hover underline stays under the title only.
+                                <div key={item.link} className="flex items-start gap-[6px]">
+                                    <Link href={localizedPath(`/${item.link}`)} className={colLink}>
+                                        {item.title}
+                                    </Link>
+                                    {badge && (
+                                        // Solid gold (the footer's icon-hover gold): the champagne gradient
+                                        // reads almost white at this size.
+                                        <span className="-mt-[0.35em] text-[clamp(9px,0.62vw,11px)] font-bold leading-none tracking-[0.12em] text-[#e3992f]">
+                                            {badge}
+                                        </span>
+                                    )}
+                                </div>
+                            );
+                        })}
                     </div>
                 </div>
 

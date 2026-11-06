@@ -237,6 +237,11 @@
             "experience_design": {
                 "title": "Σχεδιασμός Εμπειρίας",
                 "link": "services/experience-design"
+            },
+            "service_badges": {
+                "services/signature-playlists": "ΔΗΜΟΦΙΛΕΣ",
+                "services/event-soundtracks": "HOT",
+                "services/experience-design": "ΝΕΟ"
             }
         }
     },

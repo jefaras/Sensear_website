@@ -237,6 +237,11 @@
             "experience_design": {
                 "title": "Experience Design",
                 "link": "services/experience-design"
+            },
+            "service_badges": {
+                "services/signature-playlists": "POPULAR",
+                "services/event-soundtracks": "HOT",
+                "services/experience-design": "NEW"
             }
         }
     },

@@ -44,9 +44,9 @@ export function Services({ lang, title, subtitle, items, previewPlaceholder, pre
     const emWord = lang === 'el' ? 'αναβαθμίζουμε' : 'reimagine';
     const [hovered, setHovered] = useState<number | null>(null);
 
-    const activePreview = hovered !== null ? previews[hovered] : null;
-    const previewImg = activePreview?.img ?? DEFAULT_PREVIEW_IMG;
-    const previewCap = activePreview?.cap ?? previewPlaceholder;
+    // Layer 0 is the resting photo; layers 1..n follow the service rows.
+    const layers = [{ img: DEFAULT_PREVIEW_IMG, cap: previewPlaceholder }, ...previews];
+    const activeLayer = hovered !== null && previews[hovered] ? hovered + 1 : 0;
 
     return (
         <section id="services" className="relative scroll-mt-[clamp(90px,7vw,120px)] bg-[#0e0d0c] py-[clamp(101px,7.95vw,140px)]">
@@ -75,13 +75,14 @@ export function Services({ lang, title, subtitle, items, previewPlaceholder, pre
 
                 <div className="grid grid-cols-1 items-start gap-[clamp(40px,3.12vw,55px)] lg:grid-cols-[1.35fr_0.65fr] lg:gap-[clamp(41px,3.24vw,57px)]">
                     <div>
-                        <div className="border-t border-[#faf6f1]/12">
+                        {/* The preview resets only when the pointer leaves the whole list, not between
+                            rows, so moving from one service to the next crossfades straight across. */}
+                        <div className="border-t border-[#faf6f1]/12" onMouseLeave={() => setHovered(null)}>
                             {items.map((item, i) => (
                                 <Link
                                     key={i}
                                     href={localizedPath(`/${item.link}`)}
                                     onMouseEnter={() => setHovered(i)}
-                                    onMouseLeave={() => setHovered(null)}
                                     className="se-svc flex items-baseline gap-[clamp(20px,1.59vw,28px)] border-b border-[#faf6f1]/12 py-[clamp(28px,2.22vw,39px)] text-[#faf6f1] no-underline"
                                 >
                                     <span className="w-[39px] shrink-0 text-[clamp(12px,0.85vw,15px)] font-bold tabular-nums text-[#faf6f1]/40">
@@ -97,45 +98,40 @@ export function Services({ lang, title, subtitle, items, previewPlaceholder, pre
                                 </Link>
                             ))}
                         </div>
-
-                        {/* Banner under the four services: related to the list, but set apart by a tint and a
-                            thin border. Text left, button right on desktop; stacked on phones. */}
-                        {banner && (
-                            <ScrollReveal delay={0.08}>
-                                <div className="mt-[clamp(28px,2.22vw,39px)] flex flex-col items-start gap-[clamp(20px,1.59vw,28px)] rounded-lg border border-[#faf6f1]/12 bg-[rgba(250,246,241,0.04)] p-[clamp(22px,1.82vw,32px)] md:flex-row md:items-center md:justify-between">
-                                    <div className="max-w-[640px]">
-                                        <p className="se-gold-text mb-2 text-[clamp(13px,0.92vw,16px)] font-bold tracking-[0.08em]">{banner.eyebrow}</p>
-                                        <p className="text-[clamp(1.01rem,1.15vw,1.26rem)] leading-[1.55] text-[#faf6f1]/80">{banner.text}</p>
-                                    </div>
-                                    <div className="shrink-0">
-                                        <MorphCTA href={localizedPath(`/${banner.link}`)} size="md">
-                                            {banner.button}
-                                        </MorphCTA>
-                                    </div>
-                                </div>
-                            </ScrollReveal>
-                        )}
                     </div>
 
                     <div className="lg:sticky lg:top-[140px]">
                         <div className="relative aspect-[3/3.8] overflow-hidden rounded-lg bg-[#161412]">
-                            <div
-                                className="absolute inset-0 bg-cover bg-center transition-opacity duration-500"
-                                style={{ backgroundImage: `url('${previewImg}')` }}
-                            />
-                            <div className="absolute inset-0 flex flex-col items-center justify-center gap-[clamp(12px,0.91vw,16px)]">
-                                <div className="flex h-[74px] w-[74px] items-center justify-center rounded-full border border-[#faf6f1]/25 bg-[#0b0a0a]/40 backdrop-blur-[4px]">
-                                    <span className="se-gold-text text-[clamp(13px,0.91vw,16px)]">♪</span>
-                                </div>
-                            </div>
+                            {/* Every preview is stacked and only the active one is opaque, so a change of
+                                service crossfades the photos (with a slight settle in scale) instead of
+                                swapping them. */}
+                            {layers.map((layer, i) => (
+                                <div
+                                    key={layer.img}
+                                    aria-hidden="true"
+                                    className={`absolute inset-0 bg-cover bg-center transition-[opacity,transform] duration-[900ms] ease-[cubic-bezier(.22,.61,.36,1)] ${
+                                        i === activeLayer ? 'scale-100 opacity-100' : 'scale-[1.04] opacity-0'
+                                    }`}
+                                    style={{ backgroundImage: `url('${layer.img}')` }}
+                                />
+                            ))}
                             <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(11,10,10,0)_55%,rgba(11,10,10,0.7))]" />
-                            <div className="pointer-events-none absolute bottom-[21px] left-[21px] right-[21px] font-didot text-[clamp(1.06rem,1.2vw,1.32rem)] text-[#faf6f1]">
-                                {previewCap}
-                            </div>
+                            {layers.map((layer, i) => (
+                                <div
+                                    key={layer.img}
+                                    aria-hidden={i !== activeLayer}
+                                    className={`pointer-events-none absolute bottom-[21px] left-[21px] right-[21px] font-didot text-[clamp(1.06rem,1.2vw,1.32rem)] text-[#faf6f1] transition-opacity duration-[600ms] ease-out ${
+                                        i === activeLayer ? 'opacity-100' : 'opacity-0'
+                                    }`}
+                                >
+                                    {layer.cap}
+                                </div>
+                            ))}
                         </div>
                     </div>
                 </div>
 
+                {/* "Explore all services" sits right under the list, where it was before the banner. */}
                 <ScrollReveal delay={0.18}>
                     <div className="mt-[clamp(35px,2.73vw,48px)]">
                         <MorphCTA href={localizedPath('/services')}>
@@ -143,6 +139,24 @@ export function Services({ lang, title, subtitle, items, previewPlaceholder, pre
                         </MorphCTA>
                     </div>
                 </ScrollReveal>
+
+                {/* Experience Design banner, set apart from the four services and their button: its own
+                    full-width block below them. Text left, button right on desktop; stacked on phones. */}
+                {banner && (
+                    <ScrollReveal delay={0.08}>
+                        <div className="mt-[clamp(70px,5.5vw,97px)] flex flex-col items-start gap-[clamp(20px,1.59vw,28px)] rounded-lg border border-[#faf6f1]/12 bg-[rgba(250,246,241,0.04)] p-[clamp(22px,1.82vw,32px)] md:flex-row md:items-center md:justify-between">
+                            <div className="max-w-[760px]">
+                                <p className="se-gold-text mb-2 text-[clamp(13px,0.92vw,16px)] font-bold tracking-[0.08em]">{banner.eyebrow}</p>
+                                <p className="text-[clamp(1.01rem,1.15vw,1.26rem)] leading-[1.55] text-[#faf6f1]/80">{banner.text}</p>
+                            </div>
+                            <div className="shrink-0">
+                                <MorphCTA href={localizedPath(`/${banner.link}`)} size="md">
+                                    {banner.button}
+                                </MorphCTA>
+                            </div>
+                        </div>
+                    </ScrollReveal>
+                )}
             </div>
         </section>
     );
