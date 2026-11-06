@@ -498,7 +498,7 @@
             ]
         },
         "featured": {
-            "badge": "JOURNAL · FEATURED",
+            "badge": "SUGGESTED ARTICLE",
             "read_more": "Read the article"
         },
         "recent": {
@@ -511,6 +511,154 @@
             "button": "See all articles"
         },
         "articles": [
+            {
+                "title": "Sonic seasoning: how sound changes taste",
+                "desc": "What 94 studies found about pitch, music, noise and taste, and how restaurants and bars can use it without gimmicks.",
+                "tag": "Research",
+                "category": "Research",
+                "link": "sonic-seasoning-how-sound-changes-taste",
+                "image": "/images/blog/blog-sonic-seasoning-sound-taste.jpg",
+                "ogImage": "/images/blog/blog-sonic-seasoning-sound-taste-share.jpg",
+                "date": "2026-11-06",
+                "author": "Research Team",
+                "alt": "Diner in a dark suit with a napkin tucked into his collar, cutting a vinyl record with a knife and fork next to a glass of red wine",
+                "displayDate": "November 6, 2026",
+                "structuredContent": [
+                    {
+                        "type": "heading",
+                        "level": 2,
+                        "value": "Quick take"
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "Taste is not made on the tongue alone. The brain builds it from everything that arrives at the same time, and sound is part of that mix. A systematic review of 94 studies found two consistent patterns: people match tastes to sounds in a predictable way (sweet and sour with high notes, bitter with low ones), and the sound in the room can shift how sweet, bitter or strong a dish or drink seems ([Guedes et al., 2023](https://doi.org/10.1016/j.foodqual.2023.104856))."
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "The effects are real but modest. They do not turn a bad dish into a good one. They do decide whether a good dish is tasted at all."
+                    },
+                    {
+                        "type": "heading",
+                        "level": 2,
+                        "value": "Why sound reaches the tongue"
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "Two things happen at once."
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "The first is a mapping. When people are asked to pick a note for a taste, they choose high notes for sweet and sour and low notes for bitter. Piano tends to read as sweet, brass as bitter. The pattern holds across countries and across real products such as beer, chocolate and juice ([Crisinel & Spence, 2010](https://doi.org/10.3758/APP.72.7.1994); [Guedes et al., 2023](https://doi.org/10.1016/j.foodqual.2023.104856))."
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "The second is emotion. Music a guest likes makes sweetness stand out for longer. Music a guest dislikes brings bitterness forward. In studies with gelato and beer, this emotional route showed up clearly and consistently ([Kantono et al., 2016](https://doi.org/10.1016/j.appet.2016.02.143); [Reinoso Carvalho et al., 2017](https://doi.org/10.1007/978-3-319-67738-5_19))."
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "So a venue works with two levers: what the music suggests, and how the music makes people feel."
+                    },
+                    {
+                        "type": "heading",
+                        "level": 2,
+                        "value": "What the research found"
+                    },
+                    {
+                        "type": "list",
+                        "items": [
+                            "Custom tracks moved the taste of a beer. Belgian beers were rated sweeter with a track composed to sound \"sweet\" and more alcoholic with a track composed to sound \"bitter\". Same beer, same glass ([Reinoso Carvalho et al., 2017](https://doi.org/10.1007/978-3-319-67738-5_19)).",
+                            "Liked music means sweeter, disliked music means more bitter. With chocolate gelato, sweetness dominated longer when guests heard music they had chosen themselves, and bitterness dominated when they heard music they disliked ([Kantono et al., 2016](https://doi.org/10.1016/j.appet.2016.02.143)).",
+                            "Loud noise flattens sweet and salty. Under loud white noise, food was rated less sweet and less salty. In a simulated aircraft cabin, sweetness dropped while umami rose, which is one reason tomato juice tastes better in the air than on the ground ([Woods et al., 2011](https://doi.org/10.1016/j.foodqual.2010.07.003); [Yan & Dando, 2015](https://doi.org/10.1037/xhp0000044)).",
+                            "The soundscape sets the direction. The same ice cream read sweeter in a café soundscape with forest sounds and more bitter in a café soundscape with machine noise. Bar, fast-food and food-court soundscapes pushed bitterness forward; park and café soundscapes pushed sweetness forward ([Guedes et al., 2023](https://doi.org/10.1016/j.foodqual.2023.104856), Table 7).",
+                            "Wine is sensitive too. A white wine was rated sweeter with classical music than in silence, and music changed which sensations dominated in a red wine, especially bitterness ([Guedes et al., 2023](https://doi.org/10.1016/j.foodqual.2023.104856), Table 5)."
+                        ]
+                    },
+                    {
+                        "type": "heading",
+                        "level": 2,
+                        "value": "Where it stops working"
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "Honest limits matter more than headlines here."
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "In a real chocolate shop, a custom soundtrack did not change how customers rated a praline compared with the shop's own soundscape. Lab effects do not always survive a busy floor ([Guedes et al., 2023](https://doi.org/10.1016/j.foodqual.2023.104856))."
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "Noise results are mixed. Some studies found a clear drop in sweetness, others found nothing. The type of noise and the taste in question both matter."
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "And one guest's \"pleasant\" is another guest's \"annoying\". Several authors suggest that shared mappings (high pitch for sweet) work for a room full of people, while emotional effects depend on who is sitting at the table. A venue cannot play each guest their favourite song. It can avoid music that a large part of its guests dislike."
+                    },
+                    {
+                        "type": "heading",
+                        "level": 2,
+                        "value": "What this means for restaurants, bars and hotels"
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "Chefs have played with this for years. Heston Blumenthal served a seafood dish with headphones playing waves and seagulls. Breweries have released beers with a song attached. Most venues do not need a stunt. They need three things to be in order."
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "First, the noise floor. If guests have to raise their voice, the sweet and salty notes in the food are already being lost. Acoustic treatment and sensible volume are the cheapest flavour upgrade a kitchen will ever get."
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "Second, the emotional tone. Music the room enjoys makes the food taste sweeter and rounder. Music the room tolerates makes it taste sharper. This is one more reason why \"the owner's playlist\" is a risk, not a shortcut."
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "Third, the match. A dessert course, a wine list built around acidity, a bitter-forward cocktail menu: each one has a sound profile that supports it. Lighter, higher, consonant music for sweet and sour; lower, slower, richer music for bitter and umami. Nobody will notice the logic. They will notice that the food tasted the way the menu promised."
+                    },
+                    {
+                        "type": "heading",
+                        "level": 2,
+                        "value": "The SensEar checklist: sonic seasoning without the gimmicks"
+                    },
+                    {
+                        "type": "list",
+                        "items": [
+                            "Measure your noise floor at peak. If conversation needs a raised voice, fix acoustics and volume before you touch the playlist.",
+                            "Programme by course, not only by hour. Lighter, higher-pitched, consonant music when dessert and wine are on the table; lower and warmer music for the savoury main.",
+                            "Keep the room on your guests' side. The strongest effect in the research is liking. Review the music with your audience in mind, not the team's taste.",
+                            "Treat tastings as events. Wine, coffee, chocolate and spirits tastings are where matched sound shows up most. Build a short, matched set for each.",
+                            "Do not promise magic. Sonic seasoning sharpens what the kitchen already does well. It does not replace it.",
+                            "Test it. Run two matched weeks, change only the music, and ask guests one question about the dessert or the wine. Keep what moves."
+                        ]
+                    },
+                    {
+                        "type": "heading",
+                        "level": 2,
+                        "value": "Sources"
+                    },
+                    {
+                        "type": "list",
+                        "items": [
+                            "Guedes, D., Vaz Garrido, M., Lamy, E., Pereira Cavalheiro, B., & Prada, M. (2023). Crossmodal interactions between audition and taste: A systematic review and narrative synthesis. Food Quality and Preference, 107, 104856. [https://doi.org/10.1016/j.foodqual.2023.104856](https://doi.org/10.1016/j.foodqual.2023.104856)",
+                            "Reinoso Carvalho, F., Touhafi, A., Steenhaut, K., van Ee, R., & Velasco, C. (2017). Using sound to enhance taste experiences: An overview. Lecture Notes in Computer Science. [https://doi.org/10.1007/978-3-319-67738-5_19](https://doi.org/10.1007/978-3-319-67738-5_19)",
+                            "Crisinel, A.-S., & Spence, C. (2010). As bitter as a trombone: Synesthetic correspondences in nonsynesthetes between tastes/flavors and musical notes. Attention, Perception & Psychophysics, 72(7), 1994-2002. [https://doi.org/10.3758/APP.72.7.1994](https://doi.org/10.3758/APP.72.7.1994)",
+                            "Kantono, K., et al. (2016). Listening to music can influence hedonic and sensory perceptions of gelati. Appetite, 100, 244-255. [https://doi.org/10.1016/j.appet.2016.02.143](https://doi.org/10.1016/j.appet.2016.02.143)",
+                            "Woods, A. T., et al. (2011). Effect of background noise on food perception. Food Quality and Preference, 22(1), 42-47. [https://doi.org/10.1016/j.foodqual.2010.07.003](https://doi.org/10.1016/j.foodqual.2010.07.003)",
+                            "Yan, K. S., & Dando, R. (2015). A crossmodal role for audition in taste perception. Journal of Experimental Psychology: Human Perception and Performance, 41(3), 590-596. [https://doi.org/10.1037/xhp0000044](https://doi.org/10.1037/xhp0000044)"
+                        ]
+                    },
+                    {
+                        "type": "heading",
+                        "level": 2,
+                        "value": "Want the music to work for the menu, not against it?"
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "If your dessert list, wine list or tasting events deserve a sound that matches them, [tell us about your menu](/contact/)."
+                    }
+                ],
+                "standfirst": "Sweet sounds high, bitter sounds low, and a noisy room flattens flavour. What the research actually shows, and what a venue can do with it."
+            },
             {
                 "title": "Designing sound for hospitality",
                 "desc": "How eight hotel groups run music as part of their brand, from in-house curators to purpose-built recording spaces.",

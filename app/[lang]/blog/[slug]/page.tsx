@@ -21,6 +21,7 @@ const BLOG_PUBLISHED_DATES: Record<string, string> = {
     'building-brand-people-can-hear': '2025-02-12',
     'background-music-shapes-customer-behavior': '2025-03-08',
     'service-environment-shapes-wait-time': '2025-03-15',
+    'sonic-seasoning-how-sound-changes-taste': '2026-11-06',
 };
 
 export const dynamicParams = false;
@@ -110,7 +111,7 @@ export default async function BlogPostV3({ params }: { params: Promise<{ lang: L
                     <Link
                         key={i}
                         href={href}
-                        className="font-semibold text-[#f0bd95] underline decoration-[#f0bd95]/40 decoration-[1.5px] underline-offset-4 transition-colors hover:decoration-[#f0bd95]"
+                        className="font-semibold text-[#f0bd95] [overflow-wrap:anywhere] underline decoration-[#f0bd95]/40 decoration-[1.5px] underline-offset-4 transition-colors hover:decoration-[#f0bd95]"
                         target={isExternal ? '_blank' : undefined}
                         rel={isExternal ? 'noopener noreferrer' : undefined}
                         aria-label={externalAriaLabel}
