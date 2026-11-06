@@ -20,9 +20,9 @@ requested for `/el/dorean-axiologisi/`.
 **Deployed and verified live by Cowork (third upload):** Facebook page in the schema `sameAs`; JPG share
 image for the blog post `building-brand-people-can-hear` (its page image is WebP); T6 Signature Playlists.
 
-**Committed, not yet deployed:** sitemap `lastmod` override for Signature Playlists; the "four days" proposal promise corrected to "usually within 7 to 10 days" on five pages, both languages; T6 Audio Upgrades, Event Soundtracks, Sonic Identity and the services hub; T11 share images; the newsletter reCAPTCHA line without an em dash and in Greek on Greek pages (`5dc891c`, `e8ea350`); the mirrored zig-zag on the pages with a case section (see T6). Home "who we are" statement: smaller text, two paragraphs, and the first sentence now "…with clients across Greece" in both languages (`905c83a`, `e258d2f`, `5fd9148`).
+**Committed, not yet deployed:** sitemap `lastmod` override for Signature Playlists; the "four days" proposal promise corrected to "usually within 7 to 10 days" on five pages, both languages; T6 Audio Upgrades, Event Soundtracks, Sonic Identity and the services hub; T11 share images; the newsletter reCAPTCHA line without an em dash and in Greek on Greek pages (`5dc891c`, `e8ea350`); the mirrored zig-zag on the pages with a case section (see T6). Home "who we are" statement: smaller text, two paragraphs, and the first sentence now "…with clients across Greece" in both languages (`905c83a`, `e258d2f`, `5fd9148`). T12: the industries hub, the six industry pages and the Greek wording fixes outside T12 (see T12).
 
-**Open:** T12 (industries hub + six industry pages: all seven committed and built into `out/` on 6 Nov, not deployed; Greek fixes outside T12 pending JEF on the preview, see T12). T11 done 3 Nov.
+**Open:** nothing in code. T12 done 6 Nov (committed, built into `out/`, not yet deployed); one spelling question for JEF («πρωινό», see T12). T11 done 3 Nov.
 **Closed:** T10 (option A, see T10). T7 is dropped: Claude (Cowork) sends the IndexNow ping after each deploy.
 
 | Item | State on 30 Oct (after deploy) |
@@ -276,7 +276,7 @@ Follow the verification gates in `CLAUDE.md` for every code step: `npm run typec
 
 ---
 
-### T12 — Industries hub + 6 industry pages (medium, needs JEF) · IN PROGRESS 5 Nov · all seven pages committed 6 Nov, not yet deployed
+### T12 — Industries hub + 6 industry pages (medium, needs JEF) · DONE 6 Nov · committed and built, not yet deployed
 - Scope: `/industries/` and the six `/industries/music-for-*` pages, both languages, Phase 3 of
   `plans/copy-strategy-audit-synthesis.md` (§10 F, §11 items 6 and 11). Same process as T6: audit, one
   batch of questions, drafts in `docs/drafts/industries-copy-draft.md` (not committed), JEF approves every
@@ -339,23 +339,31 @@ Follow the verification gates in `CLAUDE.md` for every code step: `npm run typec
 - Commits, all on `feat/case-study-new-client`: layout `be80b59`, `8071bcd`, `def6d48`, `e446bcf`;
   copy `84ffd3d` and `99bb81a` (hub), `b1efd0c` (hotels), `524824c` (restaurants), `9008689` (retail),
   `e90d8bd` (wellness), `22186a8` (events), `e5011ef` (art), `7e26158` (Greek corrections on the hub,
-  hotels, restaurants, retail and wellness). Sitemap overrides for all seven routes = 2026-11-06. Gates
+  hotels, restaurants, retail and wellness), `7d50183` (restaurants closing line as JEF wrote it). Sitemap overrides for all seven routes = 2026-11-06. Gates
   passed on `7e26158`: typecheck 0 errors, lint 0 errors (8 known warnings), static build. Headless Playwright pass on the build (seven pages, EN and EL, 1440 and 375 px): no console errors beyond the GTM widgets, no horizontal scroll, gold words, bold and styled links on every page.
-  - **Rollback:** `git revert 7e26158 e5011ef 22186a8 e90d8bd 9008689 524824c b1efd0c 99bb81a 84ffd3d`
+  - **Rollback:** `git revert 7d50183 7e26158 e5011ef 22186a8 e90d8bd 9008689 524824c b1efd0c 99bb81a 84ffd3d`
     restores the old copy of all seven pages (the layout commits can stay: a gold word that is not in the
     heading renders it plain, and `.se-link` only styles links that exist); then rebuild `out/` and upload.
     One page alone: revert its copy commit, and for hotels, restaurants, retail or wellness also `7e26158`
-    (which touches all four and the hub).
-- Still open on these pages: restaurants audit items 10 and 11 («να κρατά το επίπεδο της κουζίνας», «μια
-  συνεχής γραμμή» in the projects block; CTA «Ας ακούσουμε τον χώρο σας σε ώρες αιχμής.») were not marked by
-  JEF and stay as they are; «πρωινό» on the hub (JEF wrote «Πρωϊνό», the standard spelling is «πρωινό»,
-  waiting for his word).
-- **Beyond T12, in the working tree for JEF's yes on the preview (uncommitted):** the Levantis paragraph on
-  `/el/case-studies/` and `/el/services/event-soundtracks/` (same calque, now «ρυθμίσαμε την ένταση έτσι
-  ώστε ο κόσμος να βλέπει τα έργα με την ησυχία του»), the Hera card on `/el/case-studies/` (feminine
-  playlist, closing line as on the hotels page), feminine playlist on `/el/contact/` (FAQ question) and
-  `/el/about/`; overrides for `/case-studies`, `/contact`, `/about` and `/services/event-soundtracks`
-  = 2026-11-06. Commit as one `seo: Greek wording fixes outside T12` commit after his yes, then rebuild.
+    (which touches all four and the hub); restaurants also `7d50183`.
+- Restaurants audit item 10 («να κρατά το επίπεδο της κουζίνας», «μια συνεχής γραμμή» in the projects
+  block) stays as it is: JEF did not mark it. Item 11 became «Ελάτε να ακούσουμε μαζί τον χώρο σας σε ώρα
+  αιχμής.» (`7d50183`). Open for JEF: «πρωινό» on the hub (he wrote «Πρωϊνό»; the standard spelling is
+  «πρωινό», kept until he answers).
+- **Beyond T12, approved by JEF on the preview and committed (`688d977`):** the Levantis paragraphs on
+  `/el/case-studies/` and `/el/services/event-soundtracks/` («Για τα εγκαίνια της έκθεσης … σχεδιάσαμε
+  μουσική για μία μόνο βραδιά.» replaces «Μία βραδιά, όχι κάθε μέρα:», which JEF called «ΑΙ-κράχτης»; «ρυθμίσαμε
+  την ένταση έτσι ώστε ο κόσμος να βλέπει τα έργα με την ησυχία του» replaces the «κάθεται κάτω από τη
+  συζήτηση … από κοντά» calque), the Hera card on `/el/case-studies/` (feminine playlist, «κι όμως ακούγονται
+  σαν το ίδιο ξενοδοχείο»), feminine playlist on `/el/contact/` (FAQ question) and `/el/about/`; overrides
+  for `/case-studies`, `/contact`, `/about` and `/services/event-soundtracks` = 2026-11-06. English
+  untouched. Gates passed on `688d977` (typecheck, lint, build) and the four Greek pages checked on the build
+  at 1440 and 375 px.
+  - **Rollback:** `git revert 688d977`; then rebuild `out/` and upload.
+- **Process notes for the next copy task (JEF, 6 Nov):** report each round as one list, one changed line per
+  item, with the preview URL, the place on the page, the full text as it reads there, and its state («στο
+  preview» or «commit»); alternatives only when he asks, and then say which one is on the page. He answers
+  per item with ΟΚ or his wording; commit only when every item has his ΟΚ.
 
 ---
 
