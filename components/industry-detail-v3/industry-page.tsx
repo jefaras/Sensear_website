@@ -40,15 +40,15 @@ export const INDUSTRY_CONFIG: Record<string, SlugConfig> = {
     'music-for-retail-stores': {
         ns: 'retail_stores',
         em: {
-            el: { intro: 'ταξίδι', method: 'λιανικής', forwhom: 'retail', results: 'κατάστημά', cta: 'εμπειρία', portfolio: '' },
-            en: { intro: 'journey', method: '', forwhom: '', results: '', cta: 'atmosphere', portfolio: '' },
+            el: { intro: 'μέρας', method: 'κατάστημα', forwhom: 'καταστήματα', results: 'πράξη', cta: 'γεμάτη', portfolio: '' },
+            en: { intro: 'day', method: 'store', forwhom: 'stores', results: 'practice', cta: 'busy', portfolio: '' },
         },
     },
     'music-for-wellness-and-gyms': {
         ns: 'wellness_gyms',
         em: {
-            el: { intro: 'σώμα', method: 'ευεξίας', forwhom: 'premium', results: 'χώρο', cta: 'ατμόσφαιρα', portfolio: '' },
-            en: { intro: 'mind', method: '', forwhom: '', results: '', cta: 'atmosphere', portfolio: '' },
+            el: { intro: 'κτίριο', method: 'ευεξίας', forwhom: 'χώρους', results: 'πράξη', cta: 'χώρο', portfolio: '' },
+            en: { intro: 'building', method: 'wellness', forwhom: 'spaces', results: 'practice', cta: 'room', portfolio: '' },
         },
     },
     'music-for-art-museums-and-fashion': {
