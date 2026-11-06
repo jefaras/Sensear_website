@@ -24,7 +24,7 @@ image for the blog post `building-brand-people-can-hear` (its page image is WebP
 
 **Committed, not yet deployed:** nothing.
 
-**Open:** nothing. T12 done 6 Nov, deployed and verified live 6 Nov. T11 done 3 Nov.
+**Open:** T13 (journal hub + 8 articles, Phase 4), in progress since 6 Nov, see T13 below. T12 done 6 Nov, deployed and verified live 6 Nov. T11 done 3 Nov.
 **Closed:** T10 (option A, see T10). T7 is dropped: Claude (Cowork) sends the IndexNow ping after each deploy.
 
 | Item | State on 30 Oct (after deploy) |
@@ -365,6 +365,54 @@ Follow the verification gates in `CLAUDE.md` for every code step: `npm run typec
   item, with the preview URL, the place on the page, the full text as it reads there, and its state («στο
   preview» or «commit»); alternatives only when he asks, and then say which one is on the page. He answers
   per item with ΟΚ or his wording; commit only when every item has his ΟΚ.
+
+---
+
+### T13 — Journal hub + 8 articles (medium, needs JEF) · IN PROGRESS since 6 Nov
+- Scope: `/blog/` and the eight `/blog/<slug>` articles, both languages, Phase 4 of
+  `plans/copy-strategy-audit-synthesis.md` (§10 G). Same process as T12: audit, one batch of questions, every
+  round applied to the working tree uncommitted and shown on the `next-dev` preview next to the live page, one
+  list per round (preview URL, place on the page, full text, state), commit per article only after JEF's ΟΚ on
+  every item. Copy-only edits do not move the sitemap date, so each changed route gets an entry in
+  `LAST_MODIFIED_OVERRIDES` (`lib/route-lastmod.ts`) in the same commit as its copy. Images untouched (T11).
+- Audit (6 Nov), kept in the session notes: the July pass (`b7b48ef`, `5bfc354`) had already added standfirsts
+  (no meta-as-hero on the article page), deleted the duplicate opening paragraphs and rewritten the "Ready to…"
+  closings. Still open: the article-page CTA band button "See all articles" linked to `/contact` (live bug);
+  `<strong>` tags rendered as literal text on two Greek articles (`music-curation-cycle-venues`,
+  `background-music-shapes-customer-behavior`) because the article renderer parses only `[text](url)`; typed "•"
+  doubled with the gold list dot on `background-music-shapes-customer-behavior` (EN + EL); `([source](url))` /
+  `([πηγή](url))` numbered citations on `music-curation-cycle-venues`; raw URLs as link text in the Sources list
+  of `background-music-shapes-customer-behavior`; an absolute `https://sensear.music/...` link on
+  `service-environment-shapes-wait-time`; EN/EL metadata mismatches (dates, tags, author); Title Case titles;
+  all eight Greek articles reading as translated English; the Greek `building-brand-people-can-hear` being a
+  different, shorter article than the English.
+- **JEF's answers (6 Nov), the agreed scope:**
+  1. All titles sentence case (URLs unchanged); the three home-page journal cards take the article titles.
+  2. The journal's name stays "The Curation Journal" in Greek too, with a Greek explanation under it.
+  3. The article-page CTA band button leads to the journal (`/blog`, `/el/blog`); each article keeps its own
+     closing line to contact or case studies.
+  4. `what-exactly-does-music-curator-do`: the SensEar-specific operations claims (data-driven playlisting, skip
+     monitoring, staff feedback, KPI alignment, the desktop/mobile/tablet app in the Greek) come out; the section
+     describes what music curation does in general, less specifically.
+  5. `music-curation-cycle-venues`: the Greek team description holds («μουσικοί, DJs και μουσικολόγοι με υπόβαθρο σε
+     χώρους φιλοξενίας, μουσική παραγωγή, ραδιόφωνο και τεχνολογία»); the fitness-studio, full-dinner-service and spa
+     tests have not been done and are written as method, not as things done.
+  6. `brand-music-converts-browsers-buyers`: the empty "SensEar playbook" section (one parenthetical) goes; author
+     "SensEar Team" / «Ομάδα SensEar» in both languages; date = the schema date (2025-01-20) in both.
+  7. Greek `building-brand-people-can-hear` is rewritten natively with the English structure and sources (six steps).
+  8. The gender-based checklist advice on `background-music-shapes-customer-behavior` stays (it is the study's finding).
+  9. Greek display dates and tags aligned with the schema (`BLOG_PUBLISHED_DATES`) and the English.
+  10. "Back to the journal" / «Πίσω στο journal» everywhere (back button, featured badge).
+  11. Dead `blog` keys removed where nothing renders them and SEO is unaffected: `blog.recent.title`,
+      `blog.recent.read_more`, `blog.newsletter.*`, `blog.article.cta_kicker`. `hero.side_label` and `hero.badge`
+      stay: every v3 hero carries them and some render the badge.
+  12. Order: hub first, then the articles in hub order, one list per round on the preview.
+- Defaults agreed in the same batch: citations as inline links on the claim they support (no "Source 1…n"), no
+  source dropped, no number changed; SensEar's own behavioural promises become research findings; no em dashes,
+  «» quotes, feminine playlist; nothing committed before JEF's ΟΚ on the preview.
+- Preview: the `next-dev` server on `http://localhost:3000` (started by another session in the same folder; it
+  serves this working tree, so every uncommitted round shows there).
+- Commits: (filled in as each round is approved).
 
 ---
 
