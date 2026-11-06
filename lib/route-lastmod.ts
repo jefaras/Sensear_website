@@ -59,6 +59,7 @@ const LAST_MODIFIED_OVERRIDES: Record<string, string> = {
     '/blog': '2026-11-06T00:00:00.000Z',
     '/blog/how-top-hospitality-brands-design-sound': '2026-11-06T00:00:00.000Z',
     '/blog/three-reasons-make-music-hospitality': '2026-11-06T00:00:00.000Z',
+    '/blog/brand-music-converts-browsers-buyers': '2026-11-06T00:00:00.000Z',
 }
 
 const BLOG_POST_PREFIX = '/blog/'
