@@ -23,11 +23,13 @@ image for the blog post `building-brand-people-can-hear` (its page image is WebP
 **Deployed and verified live by Cowork (6 Nov):** the upload of 6 Nov (about 18:30 UTC), which carried every item that was listed here as committed, not yet deployed. Verified on the live site: `/sitemap.xml` has 61 URLs, 22 of them with `lastmod` 2026-11-06 (the seven T12 routes plus `/case-studies`, `/contact`, `/about` and `/services/event-soundtracks`, EN + EL), and `/sitemap-el.xml` has 31; all 61 sitemap pages return 200. T12: the hub and the six industry pages carry the new copy (the Greek check phrases are present, the old «Μία βραδιά, όχι κάθε μέρα», «κάθεται κάτω από τη συζήτηση» and «πίσω από το έργο» are gone, no "Result:" claims on the hub); on `/el/industries/music-for-art-museums-and-fashion/` (desktop) the inline service links are gold at rest and show an underline on hover. Greek fixes beyond T12 (`688d977`) live on `/el/case-studies/`, `/el/services/event-soundtracks/`, `/el/contact/` and `/el/about/`. Signature Playlists `lastmod` = 2026-10-30. "Usually within 7 to 10 days" on 20 pages, no "four days" left anywhere. T6 Audio Upgrades, Event Soundtracks (Levantis), Sonic Identity and the services hub carry the new copy. T11: all 16 blog pages share a 1200×630 JPG. The reCAPTCHA line reads «Προστατεύεται από reCAPTCHA. Απόρρητο και Όροι» on Greek pages, with no em dash. The zig-zag on Signature Playlists runs from the left (case photo left, then right, left, right). The home statement's first sentence reads "…with clients across Greece" and «…με έδρα την Αθήνα και πελάτες σε όλη την Ελλάδα». Post-deploy: both sitemaps resubmitted in Google Search Console (read 6 Nov, Success, 61 / 31) and in Bing Webmaster Tools (submitted 6 Nov, Processing); IndexNow POST to api.indexnow.org with all 61 URLs, HTTP 200. No per-URL indexing requests.
 
 **Committed, not yet deployed:** T13 (journal hub + all nine articles, three layout fixes, see T13), the new post
-`sonic-seasoning-how-sound-changes-taste` (`7c8c231`), and the home/footer changes from other sessions (`873a8c3`,
-`f70603c`). Built into `out/` on 9 Nov (63 URLs in `/sitemap.xml`, 32 in `/sitemap-el.xml`) and pushed.
+`sonic-seasoning-how-sound-changes-taste` (`7c8c231`), the home/footer changes from other sessions (`873a8c3`,
+`f70603c`), and T14 (metadata sweep, share previews per page, dead dictionary entries removed, `/home-v2/` route
+removed, see T14). Built into `out/` on 10 Nov from `3a5c65c` (63 URLs in `/sitemap.xml`, 32 in
+`/sitemap-el.xml`) and pushed. After the upload, delete the `/home-v2/` folder on the server by hand.
 
-**Open:** nothing in code. Waiting for JEF's upload of `out/` and Cowork's post-deploy checks. T13 done 9 Nov,
-T12 done 6 Nov (deployed and verified live 6 Nov), T11 done 3 Nov.
+**Open:** nothing in code. Waiting for JEF's upload of `out/` and Cowork's post-deploy checks. T14 done 10 Nov,
+T13 done 9 Nov, T12 done 6 Nov (deployed and verified live 6 Nov), T11 done 3 Nov.
 **Closed:** T10 (option A, see T10). T7 is dropped: Claude (Cowork) sends the IndexNow ping after each deploy.
 
 | Item | State on 30 Oct (after deploy) |
@@ -445,6 +447,44 @@ Follow the verification gates in `CLAUDE.md` for every code step: `npm run typec
   background-music, wait-time), «Οδηγός» (curator), «Μέθοδος» (cycle), «Branding» (building-brand). The article hero
   uppercases the tag with the `el` locale (no tonos on capitals). The home-page journal cards
   (`home.blog.articles`) carry the article titles.
+
+### T14 — Metadata sweep and dead-key cleanup, site-wide (low, needs JEF) · DONE 10 Nov · committed, built and pushed, not yet deployed
+- Scope (JEF, 10 Nov): the last two items of Phase 4 in `plans/copy-strategy-audit-synthesis.md` §10 G, the
+  metadata sweep and the removal of dictionary keys nothing uses. The sitemap page copy and the legal pages are
+  not in scope (legal pages are inventory-only in the strategy).
+- **Dead keys, done (`e99230d`):** found with a traced build (a temporary, uncommitted proxy around `getDictionary`
+  logged every entry each page read, metadata and props included). 200 entries per language that no page read in
+  either language were removed, among them the old light footer (`footer.*`), every hero `side_label`,
+  `image_kicker`, `image_caption` and rotating `badge`, the CTA `location` lines and the article `date` /
+  `category` fields; the hero prop types lost the same fields. Proof: every one of the 67 built pages has identical
+  head tags, JSON-LD and visible text (links and alt texts included) before and after. The captions and badges that
+  are commented out as "hidden for now" lose their text; bringing them back means reverting `e99230d`.
+- **Metadata audit (10 Nov), from the built pages:** all 67 titles unique; four run over ~60 characters and show
+  truncated in Google (`/industries/`, `/el/industries/`, `/el/blog/`, `/el/blog/brand-music-converts-browsers-buyers/`),
+  left as they are. Rule breaks found: retired words or formula suffixes in the home (EN + EL), contact (EN), FAQ
+  (EN + EL) and sitemap-page (EN + EL) descriptions; the Greek audio-upgrades description at 157 characters; «dj»
+  in lower case on `/el/about/`; «εμπειρίες» in the Greek home title (EN says events). Site-wide: the share
+  previews (Facebook, LinkedIn, WhatsApp, X) of every page except the blog posts and the industry pages read
+  "SensEar Music" with "Bespoke music curation and sonic branding." and `og:url` pointed to the home page on every
+  page, because the root layout set `openGraph` / `twitter` title, description and url; the schema descriptions
+  (Organization, LocalBusiness, WebSite) and the fallback description also used the retired "Bespoke".
+- **Approved by JEF on 10 Nov (all 14 items) and committed:** `2c43cb5` (the root layout no longer sets openGraph /
+  twitter title, description or url, so Next.js fills them from each page's own title and description; new
+  share-image alt «SensEar, music curation studio in Athens», new fallback description and three schema
+  descriptions without "Bespoke"); `09e8757` (descriptions for home EN + EL, contact EN, FAQ EN + EL, sitemap page
+  EN + EL, Greek Audio Upgrades, Greek about; Greek home title «Μουσική επιμέλεια για χώρους και εκδηλώσεις»;
+  sitemap overrides = 2026-11-10 for `''`, `/contact`, `/about`, `/faq`, `/sitemap-page`, `/services/audio-upgrades`);
+  `3a5c65c` (the `/home-v2/` demo route removed; `HeroFlow` and the home page's `heroVariant` prop stay).
+  - **Rollback:** `git revert 3a5c65c 09e8757 2c43cb5 e99230d` restores the metadata, the share tags, the demo
+    route and the removed dictionary entries; then rebuild `out/` and upload. Each commit can also be reverted alone.
+- Gates on `3a5c65c` (10 Nov): typecheck 0 errors, lint 0 errors (8 known warnings), build passed (63 URLs in
+  `/sitemap.xml`, 32 in `/sitemap-el.xml`, no `out/home-v2/`). Headless pass on `review-out`: all 63 sitemap URLs
+  return 200 with their own og:title and og:description (only `/el/dorean-axiologisi/` keeps its own campaign
+  og:title, by design), no og:url pointing to the home page, every JSON-LD block parses, no "Bespoke" in any head;
+  the nine pages whose metadata changed render at 1440 and 375 px with no first-party console errors and no
+  horizontal scroll; `/home-v2/` returns 404.
+- After the upload: the server keeps `/home-v2/` unless that folder is deleted there by hand (an upload adds and
+  overwrites files, it does not delete them).
 
 ---
 
