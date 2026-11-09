@@ -22,11 +22,12 @@ image for the blog post `building-brand-people-can-hear` (its page image is WebP
 
 **Deployed and verified live by Cowork (6 Nov):** the upload of 6 Nov (about 18:30 UTC), which carried every item that was listed here as committed, not yet deployed. Verified on the live site: `/sitemap.xml` has 61 URLs, 22 of them with `lastmod` 2026-11-06 (the seven T12 routes plus `/case-studies`, `/contact`, `/about` and `/services/event-soundtracks`, EN + EL), and `/sitemap-el.xml` has 31; all 61 sitemap pages return 200. T12: the hub and the six industry pages carry the new copy (the Greek check phrases are present, the old «Μία βραδιά, όχι κάθε μέρα», «κάθεται κάτω από τη συζήτηση» and «πίσω από το έργο» are gone, no "Result:" claims on the hub); on `/el/industries/music-for-art-museums-and-fashion/` (desktop) the inline service links are gold at rest and show an underline on hover. Greek fixes beyond T12 (`688d977`) live on `/el/case-studies/`, `/el/services/event-soundtracks/`, `/el/contact/` and `/el/about/`. Signature Playlists `lastmod` = 2026-10-30. "Usually within 7 to 10 days" on 20 pages, no "four days" left anywhere. T6 Audio Upgrades, Event Soundtracks (Levantis), Sonic Identity and the services hub carry the new copy. T11: all 16 blog pages share a 1200×630 JPG. The reCAPTCHA line reads «Προστατεύεται από reCAPTCHA. Απόρρητο και Όροι» on Greek pages, with no em dash. The zig-zag on Signature Playlists runs from the left (case photo left, then right, left, right). The home statement's first sentence reads "…with clients across Greece" and «…με έδρα την Αθήνα και πελάτες σε όλη την Ελλάδα». Post-deploy: both sitemaps resubmitted in Google Search Console (read 6 Nov, Success, 61 / 31) and in Bing Webmaster Tools (submitted 6 Nov, Processing); IndexNow POST to api.indexnow.org with all 61 URLs, HTTP 200. No per-URL indexing requests.
 
-**Committed, not yet deployed:** T13 so far (journal hub + 6 of 8 articles, three layout fixes), plus the new post
-`sonic-seasoning-how-sound-changes-taste` from another session (`7c8c231`). Not yet built, not yet pushed.
+**Committed, not yet deployed:** T13 (journal hub + all nine articles, three layout fixes, see T13), the new post
+`sonic-seasoning-how-sound-changes-taste` (`7c8c231`), and the home/footer changes from other sessions (`873a8c3`,
+`f70603c`). Built into `out/` on 9 Nov (63 URLs in `/sitemap.xml`, 32 in `/sitemap-el.xml`) and pushed.
 
-**Open:** T13 (journal hub + 8 articles, Phase 4), in progress since 6 Nov, two articles, gates, push and Cowork
-prompt remaining, see T13 below. T12 done 6 Nov, deployed and verified live 6 Nov. T11 done 3 Nov.
+**Open:** nothing in code. Waiting for JEF's upload of `out/` and Cowork's post-deploy checks. T13 done 9 Nov,
+T12 done 6 Nov (deployed and verified live 6 Nov), T11 done 3 Nov.
 **Closed:** T10 (option A, see T10). T7 is dropped: Claude (Cowork) sends the IndexNow ping after each deploy.
 
 | Item | State on 30 Oct (after deploy) |
@@ -370,7 +371,7 @@ Follow the verification gates in `CLAUDE.md` for every code step: `npm run typec
 
 ---
 
-### T13 — Journal hub + 8 articles (medium, needs JEF) · IN PROGRESS since 6 Nov · hub + 6 articles committed, 2 to go, not yet built or pushed
+### T13 — Journal hub + 8 articles (medium, needs JEF) · DONE 9 Nov · hub + 9 articles committed, built and pushed, not yet deployed
 - Scope: `/blog/` and the eight `/blog/<slug>` articles, both languages, Phase 4 of
   `plans/copy-strategy-audit-synthesis.md` (§10 G). Same process as T12: audit, one batch of questions, every
   round applied to the working tree uncommitted and shown on the `next-dev` preview next to the live page, one
@@ -414,28 +415,36 @@ Follow the verification gates in `CLAUDE.md` for every code step: `npm run typec
   «» quotes, feminine playlist; nothing committed before JEF's ΟΚ on the preview.
 - Preview: the `next-dev` server on `http://localhost:3000` (started by another session in the same folder; it
   serves this working tree, so every uncommitted round shows there).
-- **State at the end of 6 Nov (JEF stopped the session after article 5):** hub and six articles approved on the
-  preview and committed; two articles, the gates, the Playwright pass, the push and the Cowork prompt remain.
-  Nothing pushed yet. Typecheck and lint passed on the last code change (`084f1df`); `npm run build` not yet run.
+- **9 Nov (JEF):** the new post `sonic-seasoning-how-sound-changes-taste` (`7c8c231`, from another session) went
+  through the same pass; JEF chose the Greek subtitle «Η μουσική μπορεί να κάνει ένα επιδόρπιο να φαίνεται πιο γλυκό
+  και ο θόρυβος ένα πιάτο πιο άνοστο…» and kept the new link to Audio Upgrades. There is no separate research team:
+  the "Research Team" byline became "SensEar Team" / «Ομάδα SensEar» on the three articles that had it. Its APA
+  source list keeps the DOI URLs as link text (standard reference format, unchanged by JEF's choice); every other
+  source list now shows descriptions instead of raw URLs.
 - Commits, all on `feat/case-study-new-client`: layout `b9f8a84` (CTA band → journal, dead keys), `b985600`
   (Greek-aware uppercase kicker), `084f1df` (duplicate back button removed); copy `c38561c` (hub),
   `2d99c16` (how-top-hospitality-brands-design-sound), `798a800` (three-reasons-make-music-hospitality),
   `962185f` (brand-music-converts-browsers-buyers), `8948ba6` (what-exactly-does-music-curator-do),
-  `f2d7727` (music-curation-cycle-venues), `bb30533` (building-brand-people-can-hear). Overrides for `/blog`
-  and those six routes = 2026-11-06.
-  - **Rollback:** `git revert bb30533 f2d7727 8948ba6 962185f 798a800 2d99c16 c38561c` restores the old copy of
-    the hub and the six articles (the three layout commits can stay); then rebuild `out/` and upload.
-- **Remaining:** `background-music-shapes-customer-behavior` (literal `<strong>` and "•" on the Greek page, raw URLs
-  in the Sources list, gender advice stays, tag Research → «Έρευνα») and `service-environment-shapes-wait-time`
-  (absolute `https://sensear.music/...` link → localized relative link, Greek de-calque), each with its override;
-  then typecheck, lint, build, the Playwright pass on `review-out` (nine pages now, EN + EL, 1440 and 375 px),
-  push, the Cowork prompt.
-- **Working notes:** the article rounds are applied by slug, never by index: another session committed a new post
-  `sonic-seasoning-how-sound-changes-taste` (`7c8c231`) at the top of `blog.articles` during T13, which is now the
-  featured article on the hub and was not reviewed in T13. Greek tags used so far: «Παραδείγματα» (how-top),
-  «Απόψεις» (three-reasons), «Έρευνα» (brand-music), «Οδηγός» (curator), «Μέθοδος» (cycle), «Branding»
-  (building-brand). The article hero uppercases the tag with the `el` locale (no tonos on capitals). The home-page
-  journal cards (`home.blog.articles`) carry the article titles.
+  `f2d7727` (music-curation-cycle-venues), `bb30533` (building-brand-people-can-hear), `87470b7`
+  (sonic-seasoning-how-sound-changes-taste), `102185a` (background-music-shapes-customer-behavior), `ae8acb9`
+  (service-environment-shapes-wait-time), `84637f1` (hub lastmod). Sitemap overrides: the six articles of 6 Nov =
+  2026-11-06; `/blog`, Sonic seasoning, background-music and wait-time = 2026-11-09.
+  - **Rollback:** `git revert 84637f1 ae8acb9 102185a 87470b7 bb30533 f2d7727 8948ba6 962185f 798a800 2d99c16 c38561c`
+    restores the old copy of the hub and all nine articles (the three layout commits can stay); then rebuild
+    `out/` and upload. One article alone: revert its copy commit (and `84637f1` only if the hub date matters).
+- Gates on `84637f1` (9 Nov): `npx tsc --noEmit` 0 errors, `npm run lint` 0 errors (8 known warnings),
+  `npm run build` passed (63 URLs in `/sitemap.xml`, 32 in `/sitemap-el.xml`). Headless Playwright pass on
+  `review-out` (`out/`), the hub and nine articles, EN and EL, 1440 and 375 px (40 loads): all 200, no
+  first-party console errors or failed requests (aborted Next.js prefetches and the GTM widgets / LinkedIn pixel
+  ignored), no horizontal scroll, no literal `<strong>`, no "•", no "Source n", no em dash, no absolute
+  `sensear.music` links, no English links on Greek pages, no "Research Team"; on every article the CTA band button
+  leads to `/blog/` or `/el/blog/` and there is exactly one back link. The only raw-URL link texts are the six APA DOI
+  references on Sonic seasoning (intended).
+- Working notes: article rounds were applied by slug, never by index (another session inserted a post at index 0).
+  Greek tags: «Παραδείγματα» (how-top), «Απόψεις» (three-reasons), «Έρευνα» (brand-music, Sonic seasoning,
+  background-music, wait-time), «Οδηγός» (curator), «Μέθοδος» (cycle), «Branding» (building-brand). The article hero
+  uppercases the tag with the `el` locale (no tonos on capitals). The home-page journal cards
+  (`home.blog.articles`) carry the article titles.
 
 ---
 
