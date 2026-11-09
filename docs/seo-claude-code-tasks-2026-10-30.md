@@ -22,13 +22,29 @@ image for the blog post `building-brand-people-can-hear` (its page image is WebP
 
 **Deployed and verified live by Cowork (6 Nov):** the upload of 6 Nov (about 18:30 UTC), which carried every item that was listed here as committed, not yet deployed. Verified on the live site: `/sitemap.xml` has 61 URLs, 22 of them with `lastmod` 2026-11-06 (the seven T12 routes plus `/case-studies`, `/contact`, `/about` and `/services/event-soundtracks`, EN + EL), and `/sitemap-el.xml` has 31; all 61 sitemap pages return 200. T12: the hub and the six industry pages carry the new copy (the Greek check phrases are present, the old «Μία βραδιά, όχι κάθε μέρα», «κάθεται κάτω από τη συζήτηση» and «πίσω από το έργο» are gone, no "Result:" claims on the hub); on `/el/industries/music-for-art-museums-and-fashion/` (desktop) the inline service links are gold at rest and show an underline on hover. Greek fixes beyond T12 (`688d977`) live on `/el/case-studies/`, `/el/services/event-soundtracks/`, `/el/contact/` and `/el/about/`. Signature Playlists `lastmod` = 2026-10-30. "Usually within 7 to 10 days" on 20 pages, no "four days" left anywhere. T6 Audio Upgrades, Event Soundtracks (Levantis), Sonic Identity and the services hub carry the new copy. T11: all 16 blog pages share a 1200×630 JPG. The reCAPTCHA line reads «Προστατεύεται από reCAPTCHA. Απόρρητο και Όροι» on Greek pages, with no em dash. The zig-zag on Signature Playlists runs from the left (case photo left, then right, left, right). The home statement's first sentence reads "…with clients across Greece" and «…με έδρα την Αθήνα και πελάτες σε όλη την Ελλάδα». Post-deploy: both sitemaps resubmitted in Google Search Console (read 6 Nov, Success, 61 / 31) and in Bing Webmaster Tools (submitted 6 Nov, Processing); IndexNow POST to api.indexnow.org with all 61 URLs, HTTP 200. No per-URL indexing requests.
 
-**Committed, not yet deployed:** T13 (journal hub + all nine articles, three layout fixes, see T13), the new post
-`sonic-seasoning-how-sound-changes-taste` (`7c8c231`), the home/footer changes from other sessions (`873a8c3`,
-`f70603c`), and T14 (metadata sweep, share previews per page, dead dictionary entries removed, `/home-v2/` route
-removed, see T14). Built into `out/` on 10 Nov from `3a5c65c` (63 URLs in `/sitemap.xml`, 32 in
-`/sitemap-el.xml`) and pushed. After the upload, delete the `/home-v2/` folder on the server by hand.
+**Deployed and verified live by Cowork (10 Nov):** the upload of 10 Nov (built from `3a5c65c`), carrying T13, the new post `sonic-seasoning-how-sound-changes-taste`, T14 and the home/footer changes (`873a8c3`, `f70603c`). Verified on the live site: `/sitemap.xml` has 63 URLs and `/sitemap-el.xml` 32 (both files dated 9 Nov 23:01 UTC); all 63 return 200. `lastmod` matches on all 32 checked routes: 2026-11-10 on `/`, `/contact/`, `/about/`, `/faq/`, `/sitemap-page/`, `/services/audio-upgrades/`; 2026-11-09 on `/blog/`, `sonic-seasoning-how-sound-changes-taste`, `background-music-shapes-customer-behavior`, `service-environment-shapes-wait-time`; 2026-11-06 on the other six articles (all EN + EL). `/home-v2/` returns 404. Metadata: og:description equals the meta description on all 63 pages; og:title equals the <title> on 30 pages, including `/about/` and `/el/services/`, but on 32 pages og:title lacks the " | SensEar" suffix of the <title> (for example `/services/experience-design/`, the six industry pages and the blog articles, EN + EL), and `/el/dorean-axiologisi/` has its own og:title («Η μουσική του χώρου σας είναι η σωστή;»); no og:url points to the home page except on `/`; "Bespoke music curation and sonic branding" appears nowhere. The home description, the `/el/` title and description, the `/contact/`, `/el/faq/` and `/el/sitemap-page/` descriptions and the Organization description match T14; LocalBusiness keeps only `addressLocality` and `addressCountry`, no `streetAddress` anywhere. Journal: `/el/blog/` H1 renders "The Curation Journal" (with a line break before "Journal"); `/el/blog/sonic-seasoning-how-sound-changes-taste/` subtitle starts «Η μουσική μπορεί να κάνει ένα επιδόρπιο να φαίνεται πιο γλυκό» and the byline is «Ομάδα SensEar»; `/el/blog/music-curation-cycle-venues/` and `/el/blog/background-music-shapes-customer-behavior/` show no "<strong>", no «Πηγή 1» and no "•"; `/el/blog/service-environment-shapes-wait-time/` contains «Το πώς βιώνει κανείς την αναμονή μετρά όσο και το πόσο κρατά» and the «playlists που ταιριάζουν…» link goes to `/el/services/signature-playlists/`; `/blog/what-exactly-does-music-curator-do/` H1 is "What exactly does a music curator do?" with no "data-driven" and no "KPIs"; on all 18 article pages the "See all articles" / «Δείτε όλα τα άρθρα» button goes to `/blog/` or `/el/blog/`; no "Research Team" anywhere in the journal. Post-deploy: both sitemaps resubmitted in Google Search Console (submitted and read 10 Nov, Success, 63 / 32) and in Bing Webmaster Tools (resubmitted, status Processing); IndexNow POST to api.indexnow.org with all 63 URLs, HTTP 200. No per-URL indexing requests.
 
-**Open:** nothing in code. Waiting for JEF's upload of `out/` and Cowork's post-deploy checks. T14 done 10 Nov,
+**Committed, not yet deployed:** `848be49` (10 Nov, approved by JEF): sitemap page copy (EN + EL) and the four
+service captions on the home page (EN + EL), see T14. Built into `out/` from `848be49`, pushed.
+
+**Still to do (overview by Cowork, 10 Nov).** The copy strategy ran in two rounds: a full rewrite of the
+whole site, 28 Jul to 4 Aug ("decks" 1 to 4), and a deeper SEO round with JEF's facts, 30 Oct to 10 Nov
+(T6, T12, T13, T14). Done in both rounds and live: services hub, the four service pages, Experience Design,
+industries hub and six industry pages, journal hub and articles, metadata and dead-key cleanup. Left:
+1. Case studies (EN + EL): second round (brief, scope, what was done, client words, listen link first).
+   Only the Greek Levantis and Hera lines changed in Nov.
+2. About (EN + EL): second round. Google treats `/el/about/` as a duplicate of `/about`.
+3. Contact and FAQ (EN + EL): small second round. Only one Greek FAQ question and the metadata changed in Nov.
+4. Home: no second round needed for now (layout, first sentence and metadata done in Nov).
+5. Section 2 headings of T6, T11, T12, T13 and T14 still say "not yet deployed"; all of them are live.
+6. og:title on 32 pages lacks the " | SensEar" suffix that the `<title>` has. No action recommended:
+   Google uses `<title>`, and share previews already show the domain. JEF to confirm.
+7. Outside the code: SSL for the 5 alias domains (waiting for Alex); licence check for the Sonic Identity
+   hero photo (JEF); Bing Places listing not visible on Bing yet (10 Nov), booking link saved in the Google
+   Business Profile but no booking button shown yet.
+8. Separate work: the 4 new blog articles in draft (project "SensEar Website/SEO").
+
+**Open:** nothing in code. Waiting for JEF's upload of `out/` (`848be49`) and Cowork's post-deploy checks. T14 done 10 Nov,
 T13 done 9 Nov, T12 done 6 Nov (deployed and verified live 6 Nov), T11 done 3 Nov.
 **Closed:** T10 (option A, see T10). T7 is dropped: Claude (Cowork) sends the IndexNow ping after each deploy.
 
@@ -483,6 +499,13 @@ Follow the verification gates in `CLAUDE.md` for every code step: `npm run typec
   og:title, by design), no og:url pointing to the home page, every JSON-LD block parses, no "Bespoke" in any head;
   the nine pages whose metadata changed render at 1440 and 375 px with no first-party console errors and no
   horizontal scroll; `/home-v2/` returns 404.
+- **Follow-up, approved by JEF on 10 Nov (`848be49`):** sitemap page, EN + EL (subtitle «Όλες οι σελίδες της SensEar σε
+  ένα σημείο…» without «Εξερευνήστε… τους πόρους του SensEar», sentence-case headings, «Άρθρα του journal» / "Journal
+  articles", the closing box «Γράψτε μας ή δείτε αν η απάντηση υπάρχει ήδη στις συχνές ερωτήσεις.» without the
+  reassurance filler, FAQ button label, the EN Greek-directory line); the four service captions on the home page,
+  EN + EL («Playlists και DJ sets για μία εκδήλωση» instead of "Bespoke DJ sets & acoustic experiences", and so on).
+  Gates passed; the home and sitemap pages render at 1440 and 375 px with no console errors or horizontal scroll.
+  Rollback: `git revert 848be49`.
 - After the upload: the server keeps `/home-v2/` unless that folder is deleted there by hand (an upload adds and
   overwrites files, it does not delete them).
 
