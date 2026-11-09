@@ -17,7 +17,7 @@ export function OrganizationJsonLd() {
         '@context': 'https://schema.org',
         '@type': 'Organization',
         name: 'SensEar Music',
-        description: 'Bespoke music curation and sonic branding for hospitality and retail businesses.',
+        description: 'SensEar is a music curation studio in Athens for hotels, restaurants, retail and events.',
         url: baseUrl,
         logo: `${baseUrl}/images/brand/sensear-logo-color.png`,
         contactPoint: {
@@ -47,7 +47,7 @@ export function LocalBusinessJsonLd() {
         '@context': 'https://schema.org',
         '@type': 'LocalBusiness',
         name: 'SensEar Music',
-        description: 'Bespoke music curation and sonic branding services for hospitality, retail, and events.',
+        description: 'Music curation studio in Athens: Signature Playlists, Event Soundtracks, Sonic Identity and Audio Upgrades for hotels, restaurants, retail and events across Greece.',
         url: baseUrl,
         telephone: '+30-697-699-4212',
         email: 'hello@sensear.music',
@@ -76,7 +76,7 @@ export function WebSiteJsonLd() {
         '@context': 'https://schema.org',
         '@type': 'WebSite',
         name: 'SensEar Music',
-        description: 'Bespoke music curation and sonic branding for hospitality and retail businesses.',
+        description: 'SensEar is a music curation studio in Athens for hotels, restaurants, retail and events.',
         url: baseUrl,
         potentialAction: {
             '@type': 'SearchAction',

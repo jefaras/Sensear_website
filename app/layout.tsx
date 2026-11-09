@@ -13,7 +13,7 @@ import { getDictionary } from '@/lib/dictionary'
 import { getSiteUrl } from '@/lib/site-url'
 
 const baseUrl = getSiteUrl()
-const defaultDescription = 'Bespoke music curation and sonic branding.'
+const defaultDescription = 'SensEar is a music curation studio in Athens for hotels, restaurants, retail and events.'
 
 export const metadata: Metadata = {
     title: {
@@ -42,25 +42,24 @@ export const metadata: Metadata = {
         telephone: false,
     },
     metadataBase: new URL(baseUrl),
+    // No title, description or url here on purpose: Next.js then fills og:title,
+    // og:description and the twitter fields from each page's own title and
+    // description. Setting them here made every shared link preview read
+    // "SensEar Music" with the site-wide description and the home page URL.
     openGraph: {
         type: 'website',
-        url: baseUrl,
         siteName: 'SensEar Music',
-        title: 'SensEar Music',
-        description: defaultDescription,
         images: [
             {
                 url: `${baseUrl}/images/brand/sensear-og-image.jpg`,
                 width: 1200,
                 height: 630,
-                alt: 'SensEar Music - Bespoke Music Curation',
+                alt: 'SensEar, music curation studio in Athens',
             },
         ],
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'SensEar Music',
-        description: defaultDescription,
         images: [`${baseUrl}/images/brand/sensear-og-image.jpg`],
         creator: '@sensear_music',
     },
