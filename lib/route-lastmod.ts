@@ -56,7 +56,8 @@ const LAST_MODIFIED_OVERRIDES: Record<string, string> = {
     '/contact': '2026-11-06T00:00:00.000Z',
     '/about': '2026-11-06T00:00:00.000Z',
     // T13 journal rewrites (copy in the dictionaries). Add each page here in its own T13 commit.
-    '/blog': '2026-11-06T00:00:00.000Z',
+    // The hub's cards carry each article's title and description, so it moves with the last article round.
+    '/blog': '2026-11-09T00:00:00.000Z',
     '/blog/how-top-hospitality-brands-design-sound': '2026-11-06T00:00:00.000Z',
     '/blog/three-reasons-make-music-hospitality': '2026-11-06T00:00:00.000Z',
     '/blog/brand-music-converts-browsers-buyers': '2026-11-06T00:00:00.000Z',
