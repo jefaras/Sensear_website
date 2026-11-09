@@ -37,7 +37,7 @@ const FALLBACK_LAST_MODIFIED = '2026-07-30T00:00:00.000Z'
 const LAST_MODIFIED_OVERRIDES: Record<string, string> = {
     // T6 service-page rewrites (copy in the dictionaries). Add each page here in its own T6 commit.
     '/services/signature-playlists': '2026-11-06T00:00:00.000Z',
-    '/services/audio-upgrades': '2026-10-31T00:00:00.000Z',
+    '/services/audio-upgrades': '2026-11-10T00:00:00.000Z',
     '/services/event-soundtracks': '2026-11-06T00:00:00.000Z',
     '/services/sonic-identity': '2026-11-02T00:00:00.000Z',
     '/services': '2026-11-02T00:00:00.000Z',
@@ -53,8 +53,12 @@ const LAST_MODIFIED_OVERRIDES: Record<string, string> = {
     '/industries/music-for-art-museums-and-fashion': '2026-11-06T00:00:00.000Z',
     // Greek wording fixes outside T12 (copy in el.json only), approved by JEF on 6 Nov.
     '/case-studies': '2026-11-06T00:00:00.000Z',
-    '/contact': '2026-11-06T00:00:00.000Z',
-    '/about': '2026-11-06T00:00:00.000Z',
+    // T14 metadata sweep (titles and descriptions in the dictionaries), approved by JEF on 10 Nov.
+    '': '2026-11-10T00:00:00.000Z',
+    '/contact': '2026-11-10T00:00:00.000Z',
+    '/about': '2026-11-10T00:00:00.000Z',
+    '/faq': '2026-11-10T00:00:00.000Z',
+    '/sitemap-page': '2026-11-10T00:00:00.000Z',
     // T13 journal rewrites (copy in the dictionaries). Add each page here in its own T13 commit.
     // The hub's cards carry each article's title and description, so it moves with the last article round.
     '/blog': '2026-11-09T00:00:00.000Z',
