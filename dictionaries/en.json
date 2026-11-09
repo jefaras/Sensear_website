@@ -75,19 +75,19 @@
             "previews": [
                 {
                     "img": "/images/services/service-signature-playlists.jpg",
-                    "cap": "Your daily venue soundtrack"
+                    "cap": "Daily music for every zone, renewed each month"
                 },
                 {
                     "img": "/images/services/service-event-soundtracks.jpg",
-                    "cap": "Bespoke DJ sets & acoustic experiences"
+                    "cap": "Playlists and DJ sets for one event"
                 },
                 {
                     "img": "/images/services/service-sonic-strategy.jpg",
-                    "cap": "Your brand's sonic DNA"
+                    "cap": "One musical direction for the whole brand"
                 },
                 {
                     "img": "/images/services/service-audio-upgrades.jpg",
-                    "cap": "Crystal-clear, balanced sound"
+                    "cap": "Sound system and acoustics, tuned on site"
                 }
             ],
             "experience_banner": {
@@ -1715,26 +1715,26 @@
         },
         "hero": {
             "title": "Sitemap",
-            "subtitle": "Explore all pages and resources on the SensEar website. Find everything from our music curation services to industry insights.",
+            "subtitle": "Every page on the site in one place: services, the industries we work in, case studies, journal articles, FAQ and contact.",
             "image_alt": "Hand holding a printed SensEar site map"
         },
         "sections": {
-            "main": "Main Pages",
+            "main": "Main pages",
             "services": "Services",
             "industries": "Industries",
-            "blog": "Blog Posts"
+            "blog": "Journal articles"
         },
         "free_assessment": "Free music assessment",
         "cta": {
             "title": "Can't find what you're looking for?",
-            "text": "Don't worry, we have the answer. You can either:",
+            "text": "Write to us, or see whether the FAQ already answers it.",
             "contact_btn": "Contact us",
-            "faq_btn": "FAQ page"
+            "faq_btn": "FAQ"
         },
         "directory_title": "Browse the entire site",
         "alternate": {
             "heading": "The site in Greek",
-            "lede": "Every page above also exists in Greek, fully translated rather than machine output. Browse the Greek directory below."
+            "lede": "Every page above also exists in Greek. Browse the Greek directory below."
         }
     },
     "faq_page": {
