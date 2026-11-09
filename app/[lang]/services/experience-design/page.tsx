@@ -44,19 +44,16 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: Loc
         title: t.meta.title,
         description: t.meta.description,
         // A page-level openGraph replaces the root one, so it repeats the site-wide fields.
+        // Title and description are left out: Next.js fills them from the page's own, with the suffix.
         openGraph: {
             type: 'website',
             siteName: 'SensEar Music',
             locale: lang === 'el' ? 'el_GR' : 'en_US',
             url: pageUrl(lang),
-            title: t.meta.title,
-            description: t.meta.description,
             images: [image],
         },
         twitter: {
             card: 'summary_large_image',
-            title: t.meta.title,
-            description: t.meta.description,
             images: [`${getSiteUrl()}${IMAGES.hero}`],
         },
     };

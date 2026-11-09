@@ -42,9 +42,9 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: Loc
         alternates: localeAlternates(lang, `/blog/${slug}`),
         title: article.title,
         description: article.desc,
+        // No title/description here: Next.js fills og:title (with the " | SensEar" suffix) and
+        // og:description from the page's own title and description, as on every other page.
         openGraph: {
-            title: article.title,
-            description: article.desc,
             type: 'article',
             // ogImage is the post's 1200x630 JPG share image (T11): the on-page photos are
             // square, and LinkedIn does not show WebP previews.

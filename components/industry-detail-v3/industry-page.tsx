@@ -67,9 +67,8 @@ export async function buildIndustryMetadata(lang: Locale, slug: string): Promise
         alternates: localeAlternates(lang, `/industries/${slug}`),
         title: t.meta?.title ?? t.hero.title,
         description: t.meta?.description ?? t.hero.description,
+        // og:title / og:description come from title and description above (Next.js fills them).
         openGraph: {
-            title: t.meta?.title ?? t.hero.title,
-            description: t.meta?.description ?? t.hero.description,
             type: 'website',
             ...(t.hero.image && { images: [{ url: t.hero.image, width: 1200, height: 630, alt: t.hero.image_alt }] }),
         },
