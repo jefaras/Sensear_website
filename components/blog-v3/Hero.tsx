@@ -19,10 +19,8 @@ interface HeroProps {
     hero: {
         title: string;
         subtitle: string;
-        side_label: string;
         primary_cta: string;
         secondary_cta: string;
-        badge: string[];
     };
     featured: Article;
     featuredBadge: string;

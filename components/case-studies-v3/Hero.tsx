@@ -8,13 +8,9 @@ interface HeroProps {
     hero: {
         title: string;
         subtitle: string;
-        side_label: string;
         primary_cta: string;
         secondary_cta: string;
-        image_kicker: string;
-        image_caption: string;
         image_alt: string;
-        badge: string[];
     };
 }
 

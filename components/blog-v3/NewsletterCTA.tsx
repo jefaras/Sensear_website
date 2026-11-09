@@ -11,7 +11,6 @@ interface NewsletterCTAProps {
         placeholder: string;
         submit: string;
         success: string;
-        location: string;
         background_image: string;
         background_image_alt: string;
     };

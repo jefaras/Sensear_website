@@ -7,12 +7,7 @@ interface HeroProps {
         title: string;
         subtitle: string;
         image_alt: string;
-        side_label: string;
         primary_cta: string;
-        secondary_cta: string;
-        image_kicker: string;
-        image_caption: string;
-        badge: string[];
     };
 }
 
