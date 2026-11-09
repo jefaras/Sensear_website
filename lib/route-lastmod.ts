@@ -64,6 +64,7 @@ const LAST_MODIFIED_OVERRIDES: Record<string, string> = {
     '/blog/music-curation-cycle-venues': '2026-11-06T00:00:00.000Z',
     '/blog/building-brand-people-can-hear': '2026-11-06T00:00:00.000Z',
     '/blog/sonic-seasoning-how-sound-changes-taste': '2026-11-09T00:00:00.000Z',
+    '/blog/background-music-shapes-customer-behavior': '2026-11-09T00:00:00.000Z',
 }
 
 const BLOG_POST_PREFIX = '/blog/'

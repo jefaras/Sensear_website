@@ -1278,7 +1278,7 @@
                 "standfirst": "A six-step framework for deciding how a brand should sound, and which touchpoints are worth the effort first."
             },
             {
-                "title": "How music shapes buyer behavior",
+                "title": "How music shapes buyer behaviour",
                 "desc": "What field studies in real shops and restaurants measured about music, pace and spending, and where the effects held.",
                 "tag": "Research",
                 "category": "Research",
@@ -1288,7 +1288,7 @@
                 "alt": "Retail environment showing background music influence on shopping behavior",
                 "date": "2025-03-08",
                 "displayDate": "March 8, 2025",
-                "author": "Research Team",
+                "author": "SensEar Team",
                 "structuredContent": [
                     {
                         "type": "heading",
@@ -1297,34 +1297,34 @@
                     },
                     {
                         "type": "paragraph",
-                        "value": "The right soundtrack can make people stay longer and spend more, but results depend on who is in the room and what kind of place you run. The field evidence in [the study](https://www.sciencedirect.com/science/article/abs/pii/S0969698912000732) with real shoppers shows clear lifts in time and spending on music days, with different patterns by gender and store type."
+                        "value": "Music can make people stay longer and spend more, but the result depends on who is in the room and what kind of place you run. A [field study with real shoppers](https://www.sciencedirect.com/science/article/abs/pii/S0969698912000732) found clear lifts in time and spending on music days, with different patterns by gender and by type of store."
                     },
                     {
                         "type": "paragraph",
-                        "value": "Other research in restaurants and supermarkets finds similar effects tied to tempo and song choice ([restaurant tempo classic](https://www.jstor.org/stable/2489234); [supermarket pacing summary](https://music2biz.com/wp-content/uploads/2017/04/Using-Background-Music-to-Affect-the-Behavior-of-Supermarket-Shoppers.pdf))."
+                        "value": "Research in restaurants and supermarkets finds similar effects tied to tempo and song choice: the [classic restaurant tempo study](https://www.jstor.org/stable/2489234) and the [supermarket pacing study](https://music2biz.com/wp-content/uploads/2017/04/Using-Background-Music-to-Affect-the-Behavior-of-Supermarket-Shoppers.pdf)."
                     },
                     {
                         "type": "heading",
                         "level": 2,
-                        "value": "Why sound changes behavior"
+                        "value": "Why sound changes behaviour"
                     },
                     {
                         "type": "paragraph",
-                        "value": "Store and venue cues shape feelings like pleasure and alertness, which then drive approach or avoidance behaviors such as exploring, talking to staff, or buying. This path is laid out in the well-known PAD model from environmental psychology ([overview](https://www.sciencedirect.com/science/article/pii/S0022435997900166))."
+                        "value": "The cues in a store or venue shape feelings like pleasure and alertness, and those feelings lead people to approach or avoid: to explore, talk to staff, buy, or leave. Environmental psychology describes this path in the [PAD model](https://www.sciencedirect.com/science/article/pii/S0022435997900166)."
                     },
                     {
                         "type": "heading",
                         "level": 2,
-                        "value": "What the field data actually found"
+                        "value": "What the field data found"
                     },
                     {
                         "type": "list",
                         "items": [
-                            "•More time and more spend with music. In real stores, shoppers stayed longer and spent more when music played than when it was quiet ([the study](https://www.sciencedirect.com/science/article/abs/pii/S0969698912000732)).",
-                            "•Tempo steers pace. Slower tracks tend to slow movement and can lift basket size or drink orders, while faster tracks speed things up when you need quicker turns ([restaurants](https://www.jstor.org/stable/2489234); [grocery pace](https://music2biz.com/wp-content/uploads/2017/04/Using-Background-Music-to-Affect-the-Behavior-of-Supermarket-Shoppers.pdf)).",
-                            "•Fit beats one-size-fits-all. Effects vary by audience and setting. A meta-view of retail music studies shows outcomes depend on execution quality and context, not just \"music on\" vs \"off\" ([meta-analysis](https://www.sciencedirect.com/science/article/abs/pii/S0148296306000282)).",
-                            "•Waiting feels shorter with the right tracks. Music that matches the setting can ease the pain of waiting and support friendlier behavior in service lines and lobbies ([waiting study PDF](https://chaireomerdesserres.hec.ca/wp-content/uploads/2020/05/The-Impact-of-Music-on-Consumers-Reactions-to-Waiting-for-Services.pdf)).",
-                            "•Different people, different reactions. In the study's two retail tests, women often favored no music or slower music, while men often favored music and quicker tempos. Short-term sales can rise even if some guests enjoy the experience less, which can hurt repeat visits later if you do not tune the mix to your audience ([the study](https://www.sciencedirect.com/science/article/abs/pii/S0969698912000732))."
+                            "More time and more spend with music. In real stores, [shoppers stayed longer and spent more](https://www.sciencedirect.com/science/article/abs/pii/S0969698912000732) when music played than when the store was quiet.",
+                            "Tempo steers pace. Slower tracks tend to slow movement and can lift basket size or drink orders, while faster tracks speed things up when you need quicker turns, [in restaurants](https://www.jstor.org/stable/2489234) as [in supermarkets](https://music2biz.com/wp-content/uploads/2017/04/Using-Background-Music-to-Affect-the-Behavior-of-Supermarket-Shoppers.pdf).",
+                            "Fit beats one-size-fits-all. Effects vary by audience and setting. A [meta-analysis of retail music studies](https://www.sciencedirect.com/science/article/abs/pii/S0148296306000282) shows that outcomes depend on execution and context, not just on whether music is on or off.",
+                            "The right music makes waiting easier. Music that matches the setting can [make a wait feel shorter](https://chaireomerdesserres.hec.ca/wp-content/uploads/2020/05/The-Impact-of-Music-on-Consumers-Reactions-to-Waiting-for-Services.pdf) and support friendlier behaviour in queues and lobbies.",
+                            "Different people, different reactions. In the study's two retail tests, women more often preferred no music or slower music, and men more often preferred music and faster tempos. Short-term sales can rise even when some guests enjoy the visit less, which can cost repeat visits later [unless the mix is tuned to the audience](https://www.sciencedirect.com/science/article/abs/pii/S0969698912000732)."
                         ]
                     },
                     {
@@ -1334,27 +1334,27 @@
                     },
                     {
                         "type": "paragraph",
-                        "value": "Yes. Although the experiments took place in an electronics store and a supermarket, the same emotion-to-behavior path applies in many settings. Prior work shows similar music effects in restaurants and other service venues when the soundtrack fits the moment and the crowd ([restaurant tempo](https://www.jstor.org/stable/2489234); [PAD model overview](https://www.sciencedirect.com/science/article/pii/S0022435997900166))."
+                        "value": "In many settings, yes. The experiments took place in an electronics store and a supermarket, but the same path from emotion to behaviour applies in other service venues. Earlier work found similar effects of music [in restaurants](https://www.jstor.org/stable/2489234) when the soundtrack fits the moment and the crowd, and the [PAD model](https://www.sciencedirect.com/science/article/pii/S0022435997900166) describes the same mechanism for any space."
                     },
                     {
                         "type": "heading",
                         "level": 2,
-                        "value": "The SensEar checklist: fast setup for retail, bars, and restaurants"
+                        "value": "The SensEar checklist for retail, bars and restaurants"
                     },
                     {
                         "type": "paragraph",
-                        "value": "Use this to test safely without hurting guest experience."
+                        "value": "Use it to test safely, without hurting the guest experience."
                     },
                     {
                         "type": "list",
                         "items": [
-                            "Set clear goals\nRetail: grow dwell and basket size, or speed quick trips.\nBars: increase orders per guest or speed table turns.\nRestaurants: control seating pace and upsells without raising stress.",
-                            "Choose tempo by mission\nNeed browsing and discovery: lean slower.\nNeed quick movement and faster turns: lean faster.\nAlways test a middle set as your control.",
-                            "Match the crowd and time of day\nMornings and older or family-heavy periods: lighter, slower sets.\nEvenings and younger or high-energy periods: a notch faster.\nIf your audience skews female, trial quieter or slower sessions. If it skews male, trial more energetic sessions. Validate with data from your own floor traffic.",
-                            "Keep volume comfortable\nPeople should talk without raising their voice. If staff say they are tired by midday, it is too loud.",
-                            "Keep the style on brand\nPick songs that feel like your space. \"Good fit\" beats raw BPM tweaks.",
-                            "Measure short and long results\nShort term: sales per visitor, time on site, orders per table, queue abandonment.\nLong term: customer satisfaction, reviews, repeat rate, staff feedback.",
-                            "Test, then tune\nRun A/B dayparts for two weeks per set.\nSwap one variable at a time: tempo, volume, or playlist.\nKeep the winner and retest monthly."
+                            "Set clear goals. Retail: more dwell time and bigger baskets, or faster quick trips. Bars: more orders per guest or faster table turns. Restaurants: control the pace of seating and upsells without raising stress.",
+                            "Choose tempo by goal. For browsing and discovery, lean slower; for quick movement and faster turns, lean faster. Always test a middle set as your control.",
+                            "Match the crowd and the time of day. Mornings and older or family-heavy periods: lighter, slower sets. Evenings and younger or high-energy periods: a notch faster. If your audience skews female, trial quieter or slower sets; if it skews male, trial more energetic ones. Check against your own footfall data.",
+                            "Keep the volume comfortable. People should talk without raising their voice. If staff say they are tired by midday, it is too loud.",
+                            "Keep the style on brand. Pick tracks that feel like your space; good fit beats raw BPM tweaks.",
+                            "Measure short and long results. Short term: sales per visitor, time on site, orders per table, people leaving the queue. Long term: satisfaction, reviews, repeat rate, staff feedback.",
+                            "Test, then tune. Run A/B dayparts for two weeks per set, change one variable at a time (tempo, volume or playlist), keep the winner and retest monthly."
                         ]
                     },
                     {
@@ -1365,18 +1365,18 @@
                     {
                         "type": "list",
                         "items": [
-                            "• The study with real shoppers and gender moderation in retail settings: [https://www.sciencedirect.com/science/article/abs/pii/S0969698912000732](https://www.sciencedirect.com/science/article/abs/pii/S0969698912000732)",
-                            "• Meta-analysis of retail music effects: [https://www.sciencedirect.com/science/article/abs/pii/S0148296306000282](https://www.sciencedirect.com/science/article/abs/pii/S0148296306000282)",
-                            "• PAD model summary in environmental psychology: [https://www.sciencedirect.com/science/article/pii/S0022435997900166](https://www.sciencedirect.com/science/article/pii/S0022435997900166)",
-                            "• Restaurant tempo classic: [https://www.jstor.org/stable/2489234](https://www.jstor.org/stable/2489234)",
-                            "• Supermarket pacing and sales summary: [https://music2biz.com/wp-content/uploads/2017/04/Using-Background-Music-to-Affect-the-Behavior-of-Supermarket-Shoppers.pdf](https://music2biz.com/wp-content/uploads/2017/04/Using-Background-Music-to-Affect-the-Behavior-of-Supermarket-Shoppers.pdf)",
-                            "• Music and perceived waiting time: [https://chaireomerdesserres.hec.ca/wp-content/uploads/2020/05/The-Impact-of-Music-on-Consumers-Reactions-to-Waiting-for-Services.pdf](https://chaireomerdesserres.hec.ca/wp-content/uploads/2020/05/The-Impact-of-Music-on-Consumers-Reactions-to-Waiting-for-Services.pdf)"
+                            "[Field study with real shoppers in two retail settings, with differences by gender](https://www.sciencedirect.com/science/article/abs/pii/S0969698912000732)",
+                            "[Meta-analysis of the effects of music in retail](https://www.sciencedirect.com/science/article/abs/pii/S0148296306000282)",
+                            "[The PAD model in environmental psychology, summary](https://www.sciencedirect.com/science/article/pii/S0022435997900166)",
+                            "[Classic study of tempo in restaurants](https://www.jstor.org/stable/2489234)",
+                            "[Supermarket study of tempo, pace and sales (PDF)](https://music2biz.com/wp-content/uploads/2017/04/Using-Background-Music-to-Affect-the-Behavior-of-Supermarket-Shoppers.pdf)",
+                            "[Music and perceived waiting time (PDF)](https://chaireomerdesserres.hec.ca/wp-content/uploads/2020/05/The-Impact-of-Music-on-Consumers-Reactions-to-Waiting-for-Services.pdf)"
                         ]
                     },
                     {
                         "type": "heading",
                         "level": 2,
-                        "value": "Ready to make every track work harder?"
+                        "value": "Where to start"
                     },
                     {
                         "type": "paragraph",
