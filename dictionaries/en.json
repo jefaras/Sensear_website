@@ -1396,16 +1396,16 @@
                 "alt": "Service environment design using music to improve customer waiting experience",
                 "date": "2025-03-15",
                 "displayDate": "March 15, 2025",
-                "author": "Research Team",
+                "author": "SensEar Team",
                 "structuredContent": [
                     {
                         "type": "heading",
                         "level": 2,
-                        "value": "Managing how customers feel about waiting can be as important as reducing the clock time itself"
+                        "value": "How a wait feels can matter as much as how long it lasts"
                     },
                     {
                         "type": "paragraph",
-                        "value": "A short wait to a manager can feel long to a guest if the environment works against them."
+                        "value": "A wait that seems short to a manager can feel long to a guest when the room works against them."
                     },
                     {
                         "type": "heading",
@@ -1414,7 +1414,7 @@
                     },
                     {
                         "type": "paragraph",
-                        "value": "[Customers often overestimate how long they have waited](https://www.researchgate.net/profile/Ale-Smidts/publication/247220346_Effects_of_waiting_on_the_satisfaction_with_the_service_Beyond_objective_time_measures/links/5cc83a9e4585156cd7bc091c/Effects-of-waiting-on-the-satisfaction-with-the-service-Beyond-objective-time-measures.pdf), and satisfaction drops as perceived wait length grows. Traditional fixes focus on operations that cut actual queue time, but [research shows the setting and information during the wait also shape satisfaction](https://www.researchgate.net/profile/Naveen-Donthu/publication/242337184_Closing_the_gap_between_perceived_and_actual_waiting_times_in_a_call_center_Results_from_a_field_study/links/64bff61a8de7ed28bac2b9e0/Closing-the-gap-between-perceived-and-actual-waiting-times-in-a-call-center-Results-from-a-field-study-Results-from-a-field-study.pdf), sometimes more than small shifts in seconds or minutes."
+                        "value": "Customers often [overestimate how long they have waited](https://www.researchgate.net/profile/Ale-Smidts/publication/247220346_Effects_of_waiting_on_the_satisfaction_with_the_service_Beyond_objective_time_measures/links/5cc83a9e4585156cd7bc091c/Effects-of-waiting-on-the-satisfaction-with-the-service-Beyond-objective-time-measures.pdf), and satisfaction drops as the perceived wait grows. The usual fixes are operational and cut the actual queue time, but a [field study in a call centre](https://www.researchgate.net/profile/Naveen-Donthu/publication/242337184_Closing_the_gap_between_perceived_and_actual_waiting_times_in_a_call_center_Results_from_a_field_study/links/64bff61a8de7ed28bac2b9e0/Closing-the-gap-between-perceived-and-actual-waiting-times-in-a-call-center-Results-from-a-field-study-Results-from-a-field-study.pdf) shows that the setting and the information given during the wait also shape satisfaction, sometimes more than a few seconds or minutes saved."
                     },
                     {
                         "type": "heading",
@@ -1423,24 +1423,24 @@
                     },
                     {
                         "type": "paragraph",
-                        "value": "The physical and sensory setting affects emotional, cognitive, and physiological responses that drive evaluations and behaviors. [Servicescape research ties these effects to core pleasure and arousal states](https://academic.oup.com/jcr/article-abstract/13/2/286/1846377) that color time perception and satisfaction."
+                        "value": "The physical and sensory setting affects the emotional, cognitive and physiological responses that drive evaluations and behaviour. [Servicescape research](https://academic.oup.com/jcr/article-abstract/13/2/286/1846377) ties these effects to basic states of pleasure and arousal, which colour time perception and satisfaction."
                     },
                     {
                         "type": "heading",
                         "level": 3,
-                        "value": "The environmental factors that matter"
+                        "value": "The factors that matter"
                     },
                     {
                         "type": "paragraph",
-                        "value": "[Lighting, temperature, music, scent, and background noise set the sensory baseline](https://academic.oup.com/jcr/article-abstract/13/2/286/1846377) and can shift satisfaction and perceived time in hospitality and retail settings."
+                        "value": "Lighting, temperature, music, scent and background noise [set the sensory baseline](https://academic.oup.com/jcr/article-abstract/13/2/286/1846377) and can shift satisfaction and perceived time in hospitality and retail."
                     },
                     {
                         "type": "paragraph",
-                        "value": "[Color, furnishings, signage, and spatial layout guide flow and expectations](https://www.sciencedirect.com/science/article/pii/S0278431918310430), influencing attention and affect during waits."
+                        "value": "Colour, furnishings, signage and layout [guide flow and expectations](https://www.sciencedirect.com/science/article/pii/S0278431918310430), and with them attention and mood during a wait."
                     },
                     {
                         "type": "paragraph",
-                        "value": "Who is present matters. [The presence of staff and other guests can soften the experience](https://philpapers.org/rec/PRUCRT), and waiting with others can improve acceptability during longer waits."
+                        "value": "Who is present matters too. [Staff and other guests nearby can soften the experience](https://philpapers.org/rec/PRUCRT), and waiting with others can make a longer wait easier to accept."
                     },
                     {
                         "type": "heading",
@@ -1449,7 +1449,7 @@
                     },
                     {
                         "type": "paragraph",
-                        "value": "[Music that creates positive affect tends to shorten perceived wait](https://chaireomerdesserres.hec.ca/wp-content/uploads/2020/05/The-Impact-of-Music-on-Consumers-Reactions-to-Waiting-for-Services.pdf), while poorly matched music can lengthen it. The mechanism combines [attention capture, mood regulation, and tempo effects that influence internal timekeeping](https://www.sciencedirect.com/science/article/pii/S1071581921001749). Identifying what works for a specific segment and context requires testing and professional curation, since [responses vary by genre, volume, and tempo](https://www.sciencedirect.com/science/article/pii/S0022435997900166)."
+                        "value": "[Music that puts people in a good mood tends to shorten a wait](https://chaireomerdesserres.hec.ca/wp-content/uploads/2020/05/The-Impact-of-Music-on-Consumers-Reactions-to-Waiting-for-Services.pdf), while poorly matched music can lengthen it. The mechanism combines attention, mood and tempo, which [influence our internal sense of time](https://www.sciencedirect.com/science/article/pii/S1071581921001749). What works for a given audience and setting has to be tested and curated, because [responses vary by genre, volume and tempo](https://www.sciencedirect.com/science/article/pii/S0022435997900166)."
                     },
                     {
                         "type": "heading",
@@ -1458,7 +1458,7 @@
                     },
                     {
                         "type": "paragraph",
-                        "value": "Make ambient baselines a management priority. [Calibrate lighting, temperature, music volume, and tempo to the setting and daypart](https://academic.oup.com/jcr/article-abstract/13/2/286/1846377), then validate with guest feedback and metrics. Understand the affective profile of the music you select for your target market, and use [playlists that align with desired mood and pace](https://sensear.music/services/signature-playlists/) for each zone and queue type."
+                        "value": "Make the ambient conditions a management priority: set lighting, temperature, music volume and tempo for each space and each part of the day, then check the result against guest feedback and your own figures. Know the emotional profile of the music you choose for your guests, and use [playlists matched to the mood and pace](/services/signature-playlists/) of each zone and each kind of wait."
                     },
                     {
                         "type": "paragraph",
