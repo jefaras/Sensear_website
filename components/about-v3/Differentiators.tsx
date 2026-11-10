@@ -1,9 +1,9 @@
 import Image from 'next/image';
-import { Building2, Heart, Lightbulb, SlidersHorizontal } from 'lucide-react';
+import { Building2, Disc3, Heart, Lightbulb } from 'lucide-react';
 import { DriftOrb } from '@/components/v3';
 import { ScrollReveal, StaggerChildren } from '@/components/motion';
 
-const ICONS = [Lightbulb, Building2, SlidersHorizontal, Heart];
+const ICONS = [Lightbulb, Building2, Disc3, Heart];
 
 interface DifferentiatorsProps {
     content: {

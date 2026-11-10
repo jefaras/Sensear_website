@@ -32,7 +32,10 @@ export function TeamMember({ member, imageSide, isLast = false }: TeamMemberProp
                 {member.paragraphs.map((paragraph, i) => (
                     <ScrollReveal key={i} delay={0.14 + i * 0.04}>
                         <p
-                            className="se-html mb-[clamp(15px,1.19vw,21px)] max-w-[620px] text-[clamp(0.98rem,1.11vw,1.22rem)] leading-[1.65] text-[#faf6f1]/66 last:mb-0"
+                            // Each paragraph sits alone in its ScrollReveal wrapper, so the old
+                            // `last:mb-0` matched every paragraph and removed all spacing. A full
+                            // empty line between bio paragraphs (JEF, 10 Nov).
+                            className={`se-html max-w-[620px] text-[clamp(0.98rem,1.11vw,1.22rem)] leading-[1.65] text-[#faf6f1]/66 ${i < member.paragraphs.length - 1 ? 'mb-[1.65em]' : ''}`}
                             dangerouslySetInnerHTML={{ __html: paragraph }}
                         />
                     </ScrollReveal>

@@ -2,13 +2,22 @@ import type { Metadata } from 'next';
 import { Fragment, type ReactNode } from 'react';
 import { getDictionary } from '@/lib/dictionary';
 import { type Locale } from '@/lib/i18n';
-import { DriftOrb, Kicker, PageCTA, V3Root, emphasize } from '@/components/v3';
+import { DriftOrb, Em, Kicker, PageCTA, V3Root, emphasize } from '@/components/v3';
 import { ScrollReveal } from '@/components/motion';
 import { getLocalizedPath } from '@/lib/localized-path';
 import { localeAlternates } from '@/lib/seo';
 import { Differentiators, Hero, Journey, TeamMember } from '@/components/about-v3';
 
 const stripTags = (html: string) => html.replace(/<[^>]+>/g, '');
+
+/* Gold Didot for every listed word present in the text (the vision statement
+   stresses «τελευταίο» and «πρώτο», JEF 10 Nov). */
+function emphasizeWords(text: string, words: string[]): ReactNode {
+    const present = words.filter((w) => w && text.includes(w));
+    if (!present.length) return text;
+    const re = new RegExp(`(${present.map((w) => w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|')})`);
+    return text.split(re).map((part, i) => (present.includes(part) ? <Em key={i}>{part}</Em> : <Fragment key={i}>{part}</Fragment>));
+}
 
 /* The philosophy statement's three **bold** runs get distinct treatments in the
    v3 design (per the design ref): gold-gradient bold, Didot italic, then plain. */
@@ -60,8 +69,8 @@ export default async function AboutV3({ params }: { params: Promise<{ lang: Loca
     const dict = await getDictionary(lang);
     const content = dict.about_page;
     const em = lang === 'el'
-        ? { vision: 'brands & εκδηλώσεις', journey: 'στρατηγικό', cta: 'ήχου' }
-        : { vision: 'brands & events', journey: 'strategic', cta: 'sound' };
+        ? { vision: ['τελευταίο', 'πρώτο', 'αλλάξουμε'], journey: 'στούντιο', cta: 'χώρο' }
+        : { vision: ['last', 'first', 'change'], journey: 'studio', cta: 'venue' };
     const imageSides: ('right' | 'left')[] = ['right', 'left', 'right'];
 
     return (
@@ -81,7 +90,12 @@ export default async function AboutV3({ params }: { params: Promise<{ lang: Loca
                     </ScrollReveal>
                     <ScrollReveal delay={0.06}>
                         <h2 className="mx-auto max-w-[1060px] text-[clamp(1.96rem,3.91vw,3.34rem)] font-extrabold leading-[1.18] tracking-[-0.018em]">
-                            {emphasize(stripTags(content.vision.text), em.vision)}
+                            {/* One sentence per line (JEF, 10 Nov): the text separates them with "\n". */}
+                            {stripTags(content.vision.text).split('\n').map((line, i) => (
+                                <span key={i} className={i > 0 ? 'mt-[0.6em] block' : 'block'}>
+                                    {emphasizeWords(line, em.vision)}
+                                </span>
+                            ))}
                         </h2>
                     </ScrollReveal>
                 </div>
