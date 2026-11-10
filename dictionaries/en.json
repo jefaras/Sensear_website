@@ -1420,47 +1420,57 @@
             "description": "Five venues, five briefs: what each place needed, what we built, and playlists you can listen to."
         },
         "hero": {
-            "title": "Hear how sound shapes real experiences",
-            "subtitle": "Examples of how sound is applied across different environments.",
-            "primary_cta": "See the stories",
-            "secondary_cta": "Book a call",
+            "title": "Hear our work",
+            "subtitle": "What each venue asked for, what we built, and samples of the playlists, so you can judge for yourself.",
+            "primary_cta": "See the case studies",
+            "secondary_cta": "Contact",
             "image_alt": "SensEar tote bag against a green hedge"
         },
         "intro": {
-            "title": "Five venues, five briefs",
-            "p1": "What each place needed, what we built, and what you can listen to.",
-            "p2": "Four are daily music programmes. One was a single night, which makes it the proof point for a different service."
+            "title": "From Athens to the Cyclades",
+            "p1": "A hotel in Athens, three venues on Antiparos and Sifnos, and an exhibition opening on Paros.",
+            "p2": "Four are daily music programmes with Signature Playlists. The Levantis opening was a single night with Event Soundtracks."
         },
         "items": [
             {
                 "title": "Beach House, Antiparos",
-                "desc1": "Traditional Cycladic architecture, the restaurant CoocooVaya, and a bar over the water: three areas that had to feel like one place at three different volumes.",
-                "desc2": "We built playlists for each area across three parts of the day, morning, midday into evening, and night, so the energy changes as guests move without the character of the sound changing with it. Running for the past two years.",
-                "location": "Antiparos"
+                "desc1": "Cycladic architecture, the restaurant CoocooVaya, and a bar over the water: three areas that had to feel like one place at three different volumes.",
+                "desc2": "We built playlists for each area across three parts of the day, morning, midday into evening, and night, so the energy changes as guests move without the character of the sound changing with it. Since 2023.",
+                "location": "Antiparos",
+                "service": "Signature Playlists",
+                "service_link": "services/signature-playlists"
             },
             {
                 "title": "Pelicanos, Sifnos",
                 "desc1": "On an island that takes its food seriously, Pelicanos is an all-day restaurant with ambitions to match.",
-                "desc2": "The music had to hold the same standard as the kitchen and the service: new discoveries next to records that have lasted, and nothing that sounds more ordinary than what arrives at the table. Running for the past two years.",
-                "location": "Sifnos"
+                "desc2": "The music had to hold the same standard as the kitchen and the service: new discoveries next to records that have lasted, and nothing that sounds more ordinary than what arrives at the table. Since 2025.",
+                "location": "Sifnos",
+                "service": "Signature Playlists",
+                "service_link": "services/signature-playlists"
             },
             {
                 "title": "Yam, Antiparos",
                 "desc1": "A landmark on the island since the late nineties, with a crowd that knows exactly how the place should feel.",
-                "desc2": "We were asked for one continuous line from a slow lunch to late cocktails, so the music moves with the day rather than switching mood at a set hour. Running for the past two years.",
-                "location": "Antiparos"
+                "desc2": "We were asked for one continuous line from a slow lunch to late cocktails, so the music moves with the day rather than switching mood at a set hour. Since 2025.",
+                "location": "Antiparos",
+                "service": "Signature Playlists",
+                "service_link": "services/signature-playlists"
             },
             {
                 "title": "Hera Hotel, Athens",
                 "desc1": "Three areas of one hotel, each with its own purpose: a breakfast lounge that eases guests into the day, a dinner restaurant looking out at the Acropolis, and a reception and lounge that carry the hours in between.",
-                "desc2": "We curated a separate playlist for each: light and uplifting at breakfast, more refined and atmospheric at dinner, and discreet enough at reception to accompany the day without asking for attention. The three share not a single song, yet they hold together as one hotel.",
-                "location": "Athens"
+                "desc2": "We curated a separate playlist for each: light and uplifting at breakfast, more refined and atmospheric at dinner, and discreet enough at reception to accompany the day without asking for attention. The three share not a single song, yet they hold together as one hotel. Since 2026.",
+                "location": "Athens",
+                "service": "Signature Playlists",
+                "service_link": "services/signature-playlists"
             },
             {
                 "title": "Levantis, Paros",
                 "desc1": "One night rather than every day: the opening of Neva Bergman’s exhibition “Quiet Testimony” in the gallery space at Levantis.",
                 "desc2": "We curated a discreet ambient playlist for the room and set the level to sit under conversation, so people could look closely and talk without raising their voices.",
-                "location": "Paros"
+                "location": "Paros",
+                "service": "Event Soundtracks",
+                "service_link": "services/event-soundtracks"
             }
         ],
         "cta": {
@@ -1473,7 +1483,8 @@
             "title": "Five venues, five <em>briefs</em>",
             "subtitle": "Each with its own hours, areas and pace.",
             "listen_prefix": "Listen to the atmosphere of",
-            "coming_soon": "Sound sample coming soon"
+            "coming_soon": "Sound sample coming soon",
+            "service_label": "Service"
         }
     },
     "industries_page": {
