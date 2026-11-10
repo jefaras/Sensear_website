@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import type { Locale } from '@/lib/i18n';
+import { getLocalizedPath } from '@/lib/localized-path';
 import { DriftOrb, GhostButton, MorphCTA, emphasizeHeadline } from '@/components/v3';
 import { ScrollReveal } from '@/components/motion';
 
@@ -15,7 +16,7 @@ interface HeroProps {
 }
 
 export function Hero({ lang, hero }: HeroProps) {
-    const emWord = lang === 'el' ? '"χτίζει"' : 'shapes';
+    const emWord = lang === 'el' ? 'Ακούστε' : 'Hear';
 
     return (
         <section className="relative flex min-h-[92vh] items-center overflow-hidden py-[clamp(108px,8.52vw,150px)] pb-[clamp(58px,4.6vw,81px)]">
@@ -57,7 +58,7 @@ export function Hero({ lang, hero }: HeroProps) {
                         <ScrollReveal delay={0.45}>
                             <div className="flex flex-wrap items-center gap-[clamp(23px,1.82vw,32px)]">
                                 <MorphCTA href="#cases">{hero.primary_cta}</MorphCTA>
-                                <GhostButton href="#cta">{hero.secondary_cta}</GhostButton>
+                                <GhostButton href={getLocalizedPath(lang, '/contact')}>{hero.secondary_cta}</GhostButton>
                             </div>
                         </ScrollReveal>
                     </div>

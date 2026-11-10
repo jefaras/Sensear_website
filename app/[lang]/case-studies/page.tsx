@@ -66,8 +66,8 @@ export default async function CaseStudiesV3({ params }: { params: Promise<{ lang
     const content = dict.case_studies;
     const localizedPath = (path: string) => getLocalizedPath(lang, path);
     const em = lang === 'el'
-        ? { intro: 'πέρα', cases: 'διαδρομές', cta: 'ξεκινά εδώ' }
-        : { intro: 'beyond', cases: 'journeys', cta: 'starts here' };
+        ? { intro: 'Κυκλάδες', cases: 'διαδρομές', cta: 'ξεκινά εδώ' }
+        : { intro: 'Cyclades', cases: 'journeys', cta: 'starts here' };
 
     return (
         <V3Root>
@@ -126,6 +126,8 @@ export default async function CaseStudiesV3({ params }: { params: Promise<{ lang
                             image={assetMap[i].img}
                             scUrl={assetMap[i].scUrl}
                             scLink={assetMap[i].scLink}
+                            serviceLabel={content.cases.service_label}
+                            serviceHref={item.service_link ? localizedPath(`/${item.service_link}`) : undefined}
                             listenPrefix={content.cases.listen_prefix}
                             comingSoonLabel={content.cases.coming_soon}
                             imageSide={i % 2 === 0 ? 'left' : 'right'}

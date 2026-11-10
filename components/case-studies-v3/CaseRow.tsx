@@ -7,18 +7,21 @@ interface CaseRowProps {
         location: string;
         desc1: string;
         desc2: string;
-        link_text: string;
+        service?: string;
     };
     image: string;
     scUrl?: string;
     scLink?: string;
+    /** The service this project shows, linked to its page (T15). */
+    serviceLabel?: string;
+    serviceHref?: string;
     listenPrefix: string;
     comingSoonLabel: string;
     imageSide: 'left' | 'right';
     isLast?: boolean;
 }
 
-export function CaseRow({ item, image, scUrl, scLink, listenPrefix, comingSoonLabel, imageSide, isLast = false }: CaseRowProps) {
+export function CaseRow({ item, image, scUrl, scLink, serviceLabel, serviceHref, listenPrefix, comingSoonLabel, imageSide, isLast = false }: CaseRowProps) {
     // Venue name only (dict title bundles ", <location>"); strip the trailing
     // comma segment so the H3 shows "Beach House" and the location sits in the
     // Didot subtitle. Falls back to the full title if there is no comma.
@@ -56,6 +59,16 @@ export function CaseRow({ item, image, scUrl, scLink, listenPrefix, comingSoonLa
                         {item.desc2}
                     </p>
                 </ScrollReveal>
+                {item.service && serviceHref && (
+                    <ScrollReveal delay={0.2}>
+                        <p className="-mt-[clamp(10px,0.85vw,15px)] mb-[clamp(25px,1.99vw,35px)] max-w-[600px] text-[clamp(0.97rem,1.1vw,1.21rem)] leading-[1.6] text-[#faf6f1]/55">
+                            {serviceLabel}:{' '}
+                            <a href={serviceHref} className="se-link">
+                                {item.service}
+                            </a>
+                        </p>
+                    </ScrollReveal>
+                )}
                 <ScrollReveal delay={0.22}>
                     {/* The embed title is built from the localised listen prefix. It previously
                         read "<venue> — sound sample": English on Greek pages, and using an em
