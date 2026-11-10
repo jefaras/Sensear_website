@@ -24,8 +24,8 @@ export default async function ContactV3({ params }: { params: Promise<{ lang: Lo
     const c = dict.contact;
     const home = dict.home;
     const em = lang === 'el'
-        ? { intro: 'ήχο', details: 'όπως σας βολεύει', faq: 'Ερωτήσεις' }
-        : { intro: 'sound', details: 'however suits you', faq: 'Questions' };
+        ? { intro: 'γράψετε', details: 'όπως σας βολεύει', faq: 'ερωτήσεις' }
+        : { intro: 'write', details: 'however suits you', faq: 'questions' };
 
     return (
         <V3Root>
@@ -61,7 +61,7 @@ export default async function ContactV3({ params }: { params: Promise<{ lang: Lo
                                 className="pointer-events-none absolute left-1/2 top-1/2 h-[760px] w-[760px] max-w-none -translate-x-1/2 -translate-y-1/2 animate-[se-spin_60s_linear_infinite] rounded-full object-cover opacity-[0.12]"
                             />
                             <div className="relative rounded-[14px] border border-[#faf6f1]/10 bg-[rgba(15,13,12,0.72)] p-[clamp(28px,4vw,52px)] shadow-[0_40px_90px_-40px_rgba(0,0,0,0.7)] backdrop-blur-[6px]">
-                                <ContactForm labels={c.form} variant="dark" />
+                                <ContactForm labels={c.form} variant="dark" recaptchaNotice={dict.home.footer.recaptcha_notice} />
                             </div>
                         </div>
                     </ScrollReveal>

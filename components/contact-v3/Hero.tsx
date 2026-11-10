@@ -16,7 +16,7 @@ interface HeroProps {
 }
 
 export function Hero({ lang, hero }: HeroProps) {
-    const emWord = lang === 'el' ? 'ανάγκες' : 'needs';
+    const emWord = lang === 'el' ? 'συζήτηση' : 'conversation';
 
     return (
         <section className="relative flex min-h-[92vh] items-center overflow-hidden py-[clamp(108px,8.52vw,150px)] pb-[clamp(58px,4.6vw,81px)]">

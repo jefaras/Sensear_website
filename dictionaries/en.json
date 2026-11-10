@@ -161,7 +161,45 @@
             "image_alt": "Shelf of vinyl records"
         },
         "clients": {
-            "title": "Venues that trust us with their sound"
+            "title": "Venues that trust us with their sound",
+            "items": [
+                {
+                    "key": "hera",
+                    "name": "HERA HOTEL",
+                    "location": "Athens",
+                    "alt": "Hera Hotel logo"
+                },
+                {
+                    "key": "klouvi",
+                    "name": "KLOUVI BAR",
+                    "location": "Athens",
+                    "alt": "Klouvi Bar logo"
+                },
+                {
+                    "key": "blue-bamboo",
+                    "name": "BLUE BAMBOO",
+                    "location": "Athens-Serifos",
+                    "alt": "Blue Bamboo logo"
+                },
+                {
+                    "key": "beach-house",
+                    "name": "BEACH HOUSE",
+                    "location": "Antiparos",
+                    "alt": "Beach House logo"
+                },
+                {
+                    "key": "pelicanos",
+                    "name": "PELICANOS",
+                    "location": "Sifnos",
+                    "alt": "Pelicanos logo"
+                },
+                {
+                    "key": "yam",
+                    "name": "YAM",
+                    "location": "Antiparos",
+                    "alt": "Yam logo"
+                }
+            ]
         },
         "blog": {
             "all_articles": "See all articles",

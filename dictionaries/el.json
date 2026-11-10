@@ -161,7 +161,45 @@
             "image_alt": "Ράφι με δίσκους βινυλίου"
         },
         "clients": {
-            "title": "Venues που μας εμπιστεύονται τον ήχο τους"
+            "title": "Venues που μας εμπιστεύονται τον ήχο τους",
+            "items": [
+                {
+                    "key": "hera",
+                    "name": "HERA HOTEL",
+                    "location": "Αθήνα",
+                    "alt": "Λογότυπο του Hera Hotel"
+                },
+                {
+                    "key": "klouvi",
+                    "name": "KLOUVI BAR",
+                    "location": "Αθήνα",
+                    "alt": "Λογότυπο του Klouvi Bar"
+                },
+                {
+                    "key": "blue-bamboo",
+                    "name": "BLUE BAMBOO",
+                    "location": "Αθήνα - Σέριφος",
+                    "alt": "Λογότυπο του Blue Bamboo"
+                },
+                {
+                    "key": "beach-house",
+                    "name": "BEACH HOUSE",
+                    "location": "Αντίπαρος",
+                    "alt": "Λογότυπο του Beach House"
+                },
+                {
+                    "key": "pelicanos",
+                    "name": "PELICANOS",
+                    "location": "Σίφνος",
+                    "alt": "Λογότυπο του Pelicanos"
+                },
+                {
+                    "key": "yam",
+                    "name": "YAM",
+                    "location": "Αντίπαρος",
+                    "alt": "Λογότυπο του Yam"
+                }
+            ]
         },
         "blog": {
             "all_articles": "Δείτε όλα τα άρθρα",

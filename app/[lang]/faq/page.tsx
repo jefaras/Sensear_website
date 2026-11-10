@@ -23,7 +23,7 @@ export default async function FaqV3({ params }: { params: Promise<{ lang: Locale
     const dict = await getDictionary(lang);
     const content = dict.faq_page;
     const home = dict.home;
-    const titleEmWord = lang === 'el' ? 'απαντημένες' : 'Answered';
+    const titleEmWord = lang === 'el' ? 'ερωτήσεις' : 'questions';
     // Must be a word the CTA title actually contains, or the fallback below drops
     // the gold emphasis from the heading entirely.
     const ctaEmWord = lang === 'el' ? 'απορίες' : 'questions';

@@ -72,7 +72,7 @@ export default async function HomeV3({
                 cta={home.enhance.cta}
                 imageAlt={home.enhance.image_alt}
             />
-            <Venues lang={lang} title={home.clients.title} />
+            <Venues lang={lang} title={home.clients.title} items={home.clients.items} />
             <Journal
                 lang={lang}
                 headline={home.blog.headline}

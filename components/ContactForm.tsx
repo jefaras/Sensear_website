@@ -6,6 +6,7 @@ import TransparentSelect from "./TransparentSelect";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { executeRecaptcha } from "@/lib/recaptcha-client";
+import type { RecaptchaNotice } from "./NewsletterForm";
 
 interface ContactFormLabels {
     name: string;
@@ -25,11 +26,18 @@ interface ContactFormLabels {
     email_placeholder: string;
     phone_placeholder: string;
     message_placeholder: string;
+    /** Localized client-side validation messages (T17); English fallbacks below. */
+    error_name?: string;
+    error_surname?: string;
+    error_phone?: string;
+    error_message?: string;
 }
 
 interface ContactFormProps {
     labels: ContactFormLabels;
     variant?: "default" | "vinyl" | "dark";
+    /** The localized reCAPTCHA line, the same one the newsletter forms use (home.footer.recaptcha_notice). */
+    recaptchaNotice?: RecaptchaNotice;
 }
 
 interface FormData {
@@ -42,7 +50,7 @@ interface FormData {
     message: string;
 }
 
-export function ContactForm({ labels, variant = "default" }: ContactFormProps) {
+export function ContactForm({ labels, variant = "default", recaptchaNotice }: ContactFormProps) {
     const [pending, setPending] = useState(false);
     const [success, setSuccess] = useState(false);
     const [errors, setErrors] = useState<Record<string, string[]>>({});
@@ -85,19 +93,19 @@ export function ContactForm({ labels, variant = "default" }: ContactFormProps) {
         const phoneDigits = formData.phone.replace(/\D/g, "");
 
         if (formData.name.trim().length < 2) {
-            nextErrors.name = ["Name must be at least 2 characters"];
+            nextErrors.name = [labels.error_name ?? "Name must be at least 2 characters"];
         }
 
         if (formData.surname.trim().length < 2) {
-            nextErrors.surname = ["Surname must be at least 2 characters"];
+            nextErrors.surname = [labels.error_surname ?? "Surname must be at least 2 characters"];
         }
 
         if (phoneDigits.length !== 10) {
-            nextErrors.phone = ["Phone number must contain exactly 10 digits"];
+            nextErrors.phone = [labels.error_phone ?? "Phone number must contain exactly 10 digits"];
         }
 
         if (formData.message.trim().length < 10) {
-            nextErrors.message = ["Message must be at least 10 characters"];
+            nextErrors.message = [labels.error_message ?? "Message must be at least 10 characters"];
         }
 
         if (Object.keys(nextErrors).length > 0) {
@@ -371,9 +379,20 @@ export function ContactForm({ labels, variant = "default" }: ContactFormProps) {
             </button>
 
             <p className={`text-xs text-center mt-3 ${isVinyl ? 'text-white/30' : isDark ? 'text-[#faf6f1]/30' : 'text-black/40'}`}>
-                This site is protected by reCAPTCHA and the Google{" "}
-                <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" aria-label={isGreek ? "Πολιτική Απορρήτου Google" : "Google Privacy Policy"} className={`underline ${isVinyl ? 'hover:text-white/50' : isDark ? 'hover:text-[#faf6f1]/60' : 'hover:text-black/60'}`}>{isGreek ? "Πολιτική Απορρήτου Google" : "Google Privacy Policy"}</a> and{" "}
-                <a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer" aria-label={isGreek ? "Όροι Χρήσης Google" : "Google Terms of Service"} className={`underline ${isVinyl ? 'hover:text-white/50' : isDark ? 'hover:text-[#faf6f1]/60' : 'hover:text-black/60'}`}>{isGreek ? "Όροι Χρήσης Google" : "Google Terms of Service"}</a> apply.
+                {/* Same localized line as the newsletter forms; it was English on the Greek page. */}
+                {recaptchaNotice ? (
+                    <>
+                        {recaptchaNotice.before}{" "}
+                        <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" aria-label={isGreek ? "Πολιτική Απορρήτου Google" : "Google Privacy Policy"} className={`underline ${isVinyl ? 'hover:text-white/50' : isDark ? 'hover:text-[#faf6f1]/60' : 'hover:text-black/60'}`}>{recaptchaNotice.privacy}</a> {recaptchaNotice.and}{" "}
+                        <a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer" aria-label={isGreek ? "Όροι Χρήσης Google" : "Google Terms of Service"} className={`underline ${isVinyl ? 'hover:text-white/50' : isDark ? 'hover:text-[#faf6f1]/60' : 'hover:text-black/60'}`}>{recaptchaNotice.terms}</a>
+                    </>
+                ) : (
+                    <>
+                        This site is protected by reCAPTCHA and the Google{" "}
+                        <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className={`underline ${isVinyl ? 'hover:text-white/50' : isDark ? 'hover:text-[#faf6f1]/60' : 'hover:text-black/60'}`}>Google Privacy Policy</a> and{" "}
+                        <a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer" className={`underline ${isVinyl ? 'hover:text-white/50' : isDark ? 'hover:text-[#faf6f1]/60' : 'hover:text-black/60'}`}>Google Terms of Service</a> apply.
+                    </>
+                )}
             </p>
         </form>
     )

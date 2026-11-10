@@ -222,9 +222,21 @@ body {
      glyph ∩ padding-box, so overflowing ink reads as clipped. Expand the painting
      box with padding. Vertical padding doesn't affect inline line-box height
      (line-height governs) so cadence is preserved; horizontal padding is cancelled
-     by the matching negative horizontal margin so wrapping is unchanged. */
-  padding: 0.14em 0.1em;
-  margin: 0 -0.1em;
+     by the matching negative horizontal margin so wrapping is unchanged.
+     The right margin is NOT cancelled: the slanted last glyph leans into whatever
+     follows, so a space or a «;» after a gold word looked too tight (JEF, 11 Nov,
+     «απορίες;» on the FAQ). Keeping the right padding plus a hair of margin gives
+     the following character its normal gap. */
+  /* Right padding is wide enough for the slanted tail of the last glyph (the final
+     «ς» was still cut off at 0.1em, JEF 11 Nov); the negative right margin takes most
+     of it back, leaving the same 0.12em gap before the next character. */
+  padding: 0.14em 0.32em 0.14em 0.1em;
+  margin: 0 -0.2em 0 -0.1em;
+  /* A gold phrase that wraps («όπως σας / βολεύει») is split into one box per line;
+     by default only the LAST box gets the right padding, so the first line's final
+     «ς» was still cut off. `clone` gives every line its own padding and gradient. */
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
 }
 
 /* Bold light-weight <strong> inside .se-html containers (About body). */

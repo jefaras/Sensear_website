@@ -3,43 +3,30 @@ import { Locale } from '@/lib/i18n';
 import { ScrollReveal } from '@/components/motion';
 import { emphasize } from '@/components/v3';
 
+interface VenueItem {
+    key: string;
+    name: string;
+    location: string;
+    alt: string;
+}
+
 interface VenuesProps {
     lang: Locale;
     title: string;
+    /** Names, places and alt texts come from the dictionaries (home.clients.items), so the
+        Greek page shows «Αθήνα», «Αντίπαρος». Only the logo files live here, by key. */
+    items: VenueItem[];
 }
 
-const clients = [
-    {
-        logo: '/images/homepage/clients/client-klouvi-bar-athens.jpg',
-        alt: 'Klouvi Bar logo',
-        name: 'KLOUVI BAR',
-        location: 'Athens',
-    },
-    {
-        logo: '/images/homepage/clients/client-blue-bamboo-athens-serifos.jpg',
-        alt: 'Blue Bamboo logo',
-        name: 'BLUE BAMBOO',
-        location: 'Athens-Serifos',
-    },
-    {
-        logo: '/images/homepage/clients/client-beach-house-antiparos.jpg',
-        alt: 'Beach House logo',
-        name: 'BEACH HOUSE',
-        location: 'Antiparos',
-    },
-    {
-        logo: '/images/homepage/clients/client-pelicanos-sifnos.jpg',
-        alt: 'Pelicanos logo',
-        name: 'PELICANOS',
-        location: 'Sifnos',
-    },
-    {
-        logo: '/images/homepage/clients/client-yam-antiparos.png',
-        alt: 'Yam logo',
-        name: 'YAM',
-        location: 'Antiparos',
-    },
-] as const;
+const LOGOS: Record<string, string> = {
+    // Colour logo from herahotel.gr (JEF, 11 Nov); the white variant would vanish on the light tile.
+    hera: '/images/homepage/clients/client-hera-hotel-athens.png',
+    klouvi: '/images/homepage/clients/client-klouvi-bar-athens.jpg',
+    'blue-bamboo': '/images/homepage/clients/client-blue-bamboo-athens-serifos.jpg',
+    'beach-house': '/images/homepage/clients/client-beach-house-antiparos.jpg',
+    pelicanos: '/images/homepage/clients/client-pelicanos-sifnos.jpg',
+    yam: '/images/homepage/clients/client-yam-antiparos.png',
+};
 
 interface Client {
     logo: string;
@@ -69,7 +56,11 @@ function ClientCard({ client }: { client: Client }) {
     );
 }
 
-export function Venues({ lang, title }: VenuesProps) {
+export function Venues({ lang, title, items }: VenuesProps) {
+    const clients: Client[] = items
+        .filter((item) => LOGOS[item.key])
+        .map((item) => ({ logo: LOGOS[item.key], alt: item.alt, name: item.name, location: item.location }));
+
     const emWord = lang === 'el' ? 'εμπιστεύονται' : 'Greece';
 
     const Row = () => (

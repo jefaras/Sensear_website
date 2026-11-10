@@ -5,6 +5,8 @@ import { ChevronDown } from 'lucide-react';
 import { ScrollReveal } from '@/components/motion';
 
 interface FaqItem {
+    /** Optional group label; a small heading renders before the first item of each group (T17). */
+    category?: string;
     question: string;
     answer: string;
 }
@@ -18,6 +20,13 @@ export function Accordion({ items }: AccordionProps) {
         <AccordionPrimitive.Root type="single" collapsible className="w-full space-y-[clamp(13px,1.02vw,18px)]">
             {items.map((item, index) => (
                 <ScrollReveal key={index} delay={index * 0.06}>
+                    {item.category && item.category !== items[index - 1]?.category && (
+                        <h3
+                            className={`se-gold-text mb-[clamp(13px,1.02vw,18px)] text-[clamp(11px,0.8vw,13px)] font-bold uppercase tracking-[0.22em] ${index === 0 ? '' : 'mt-[clamp(36px,2.8vw,50px)]'}`}
+                        >
+                            {item.category}
+                        </h3>
+                    )}
                     <AccordionPrimitive.Item
                         value={`item-${index}`}
                         className="overflow-hidden rounded-[12px] border border-[#faf6f1]/10 bg-[rgba(250,246,241,0.04)]"
