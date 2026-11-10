@@ -98,7 +98,7 @@
             }
         },
         "expertise": {
-            "title": "The venues whose music we curate",
+            "title": "The businesses we curate music for",
             "subtitle": "Hotels, restaurants and bars, retail, wellness, events, and cultural spaces. Each one runs differently, which is why the music is planned differently.",
             "items": [
                 {
@@ -161,7 +161,7 @@
             "image_alt": "Shelf of vinyl records"
         },
         "clients": {
-            "title": "Venues that trust us with their sound",
+            "title": "Hotels, restaurants and bars that trust us with their music",
             "items": [
                 {
                     "key": "hera",
@@ -229,7 +229,7 @@
             ]
         },
         "contact_cta": {
-            "title": "Tell us about your <em>space</em>.",
+            "title": "Let's talk about the <em>music</em> in your business.",
             "subtitle": "We reply within 24 hours with the service that fits and what happens next.",
             "primary_cta": "Send us a message",
             "explore_template": "Explore {services} or {industries}",

@@ -61,7 +61,7 @@ export function Venues({ lang, title, items }: VenuesProps) {
         .filter((item) => LOGOS[item.key])
         .map((item) => ({ logo: LOGOS[item.key], alt: item.alt, name: item.name, location: item.location }));
 
-    const emWord = lang === 'el' ? 'εμπιστεύονται' : 'Greece';
+    const emWord = lang === 'el' ? 'εμπιστεύονται' : 'trust';
 
     const Row = () => (
         <div className="flex gap-[clamp(23px,1.82vw,32px)] pr-[clamp(23px,1.82vw,32px)]">

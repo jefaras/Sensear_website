@@ -31,7 +31,7 @@ const INDUSTRY_IMAGES: Record<string, string> = {
 
 export function IndustriesGrid({ lang, title, subtitle, items, cta }: IndustriesGridProps) {
     const localizedPath = (path: string) => getLocalizedPath(lang, path);
-    const emWord = lang === 'el' ? 'χώρους' : 'venues';
+    const emWord = lang === 'el' ? 'επιχειρήσεις' : 'businesses';
 
     return (
         <section className="py-[clamp(108px,8.52vw,150px)]">
