@@ -162,7 +162,7 @@ export function ContactForm({ labels, variant = "default", recaptchaNotice }: Co
         } finally {
             setPending(false);
         }
-    }, [formData]);
+    }, [formData, labels.error_name, labels.error_surname, labels.error_phone, labels.error_message]);
 
     // Styles based on variant
     const inputClass = isDark
