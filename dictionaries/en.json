@@ -326,22 +326,22 @@
     "about_page": {
         "meta": {
             "title": "The SensEar team and how we work",
-            "description": "The people behind SensEar: residencies, shared decks, and studies in music and hospitality. How a DJ collective became a curation studio."
+            "description": "The people behind SensEar: residencies, shared decks, and studies in sound engineering and hospitality. How a DJ collective became a curation studio."
         },
         "hero": {
-            "title": "The people behind your soundtrack",
-            "subtitle": "Years in landmark residencies where the music had to work from midday until sunrise. Studies in music, hospitality management and service & experience design.",
+            "title": "Who chooses your soundtrack",
+            "subtitle": "Three people who live for music, with years of residencies and academic studies in music, media and communications, sound engineering, hospitality management and experience design.",
             "image_alt": "Silhouettes of three people against a blue background",
             "primary_cta": "Meet the team"
         },
         "vision": {
-            "text": "Music in hospitality is usually the last thing anyone chooses and the first thing a guest notices. We want it chosen as carefully as the lighting and the furniture, and then looked after, which is why our work does not end at a playlist.",
+            "text": "In hospitality, music is usually the last thing anyone decides and the first thing a guest notices.\nWe want to change that, so that music is chosen with the same care as the lighting and the furniture.",
             "link_text": "sonic identity service",
             "link": "services/sonic-identity",
             "kicker": "OUR VISION"
         },
         "philosophy": {
-            "text": "We treat music as part of how a room works, like the lighting or the seating: chosen for that room, maintained, and changed when the room changes. That is why we talk about service flow rather than playlists alone, and why our services include running the sound rather than only choosing it.",
+            "text": "In practice, our work does not end when a playlist is delivered. We handle the scheduling by hour, the monthly renewal and the volume in each zone, and we change the music when the venue changes.",
             "kicker": "OUR PHILOSOPHY"
         },
         "journey": {
@@ -349,61 +349,61 @@
             "timeline": [
                 {
                     "year": "2010",
-                    "text": "**George and Katerina** meet while curating music for an upscale wedding. Their shared passion for **discovering hidden grooves** sparks a creative partnership."
+                    "text": "**George and Katerina** meet while curating the music for a wedding. A shared love of **hidden grooves** starts a working partnership."
                 },
                 {
                     "year": "2011",
-                    "text": "As **Midnight City**, they host and DJ **exclusive parties** focused on cross-genre discoveries from the '70s to today, building a devoted following."
+                    "text": "As **Midnight City**, they host their own parties and play across genres, from the '70s to today, building a **loyal crowd**."
                 },
                 {
                     "year": "2018",
-                    "text": "JEF discovers M.C. at one of their signature events. The vibe and deep-track selections make him an instant **devotee**."
+                    "text": "**JEF** hears Midnight City at one of their parties and becomes a **regular** on the spot."
                 },
                 {
                     "year": "2023",
-                    "text": "JEF and George align on a vision: **transformative music curation** and DJ sets for venues that are mindful about their atmosphere."
+                    "text": "**JEF and George** decide to build something together: **music curation** and DJ sets for venues that care how they sound."
                 },
                 {
                     "year": "2025",
-                    "text": "**SensEar launches**. First clients confirm what we believed: venues deserve soundtracks designed with intention and expertise."
+                    "text": "**SensEar launches**: music curation for hotels, restaurants and bars, with its first clients."
                 }
             ],
             "image": "/images/about/about-journey-team-collaboration.jpg",
-            "lede": "Fifteen years as a DJ collective. The work is the same; we do it for more kinds of spaces now.",
+            "lede": "George and Katerina have played together since 2010. The work is the same; we now do it for more kinds of spaces.",
             "image_alt": "Person in a sequinned top holding a blue vinyl record"
         },
         "team": {
             "subtitle": "Music obsessed, hospitality minded",
             "title": "Meet the <em>team</em>",
-            "closing": "Together, we form SensEar, a team committed to uplifting spaces through compelling, memorable music."
+            "closing": "Together, we are SensEar."
         },
         "differentiators": {
             "items": [
                 {
                     "title": "We run it after launch",
-                    "description": "Licensing, scheduling, renewals, tuning and staff training are part of the work, so the sound holds up long after launch."
+                    "description": "Scheduling, renewals, tuning and staff training do not stop after launch, so someone is always accountable for your venue’s music."
                 },
                 {
                     "title": "Four services, one studio",
                     "description": "Daily music, events, brand identity and room acoustics, all from the same curation studio."
                 },
                 {
-                    "title": "You can hear the work",
-                    "description": "Named venues with playlists you can listen to before you call us."
+                    "title": "Deep knowledge of music",
+                    "description": "After years of listening, collecting records and playing DJ sets, we know which music gives a venue standing, depth and warmth. Guests never see it, but without it no venue works as well as it could."
                 },
                 {
-                    "title": "We know these rooms",
-                    "description": "Athens and the islands, where the season runs longer than people think and the same room works from breakfast to last call."
+                    "title": "We get to know your venue first",
+                    "description": "Before we propose any music, we visit the venue, listen to it at busy hours and learn how its day runs, from breakfast to closing."
                 }
             ],
-            "title": "Four <em>principles</em> that guide us",
-            "subtitle": "Everything we do stems from how we think about sound.",
+            "title": "How we are <em>different</em>",
+            "subtitle": "Most playlists for venues sound alike. Our work differs in four ways.",
             "image_alt": "SensEar card clipped to a line by the sea"
         },
         "final_cta": {
-            "heading": "Discover your sound path",
-            "lede": "See how we work with clients or contact us to discuss your project.",
-            "primary_cta": "Selected works",
+            "heading": "Let's talk about your venue",
+            "lede": "See the venues we work with, or tell us about yours.",
+            "primary_cta": "Case studies",
             "secondary_cta": "Get in touch"
         },
         "team_members": [
@@ -420,13 +420,13 @@
             },
             {
                 "name": "John E. Farazoumis",
-                "role": "Co-founder, Brand strategy, Client service",
+                "role": "Co-founder, Strategy & Communication",
                 "image": "/images/about/team-john-farazoumis.png",
-                "image_alt": "John E. Farazoumis - SensEar Co-Founder and Brand Strategy Director",
+                "image_alt": "John E. Farazoumis, SensEar co-founder, strategy and communication",
                 "paragraphs": [
-                    "From his early DJ sets to his studies in Hospitality Management, JEF has always been guided by music's magnetic pull.",
-                    "He is a co-founder of a successful digital agency, with 25 years of experience in <strong>Web Services</strong>, <strong>Sales/Marketing</strong> & <strong>Customer Care</strong> and a degree in <strong>Hospitality Management</strong> and <strong>Experience Design</strong> from the Haaga-Helia University of Applied Science.",
-                    "At SensEar, he shapes the brand's strategic direction & connects creative vision with client experience."
+                    "From his early DJ sets to his studies in sound engineering and now in hospitality management, music has always been central to JEF's work.",
+                    "He is a co-founder of a successful digital agency, with 25 years of experience in <strong>Web Services</strong>, <strong>Sales/Marketing</strong> and <strong>Customer Care</strong>, and is currently studying <strong>Hospitality Management</strong> and <strong>Experience Design</strong> at Haaga-Helia University of Applied Sciences.",
+                    "At SensEar, he leads strategy and communication and makes sure the creative work answers what each client needs."
                 ]
             },
             {
