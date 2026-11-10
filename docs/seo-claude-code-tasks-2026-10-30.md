@@ -27,7 +27,8 @@ image for the blog post `building-brand-people-can-hear` (its page image is WebP
 **Deployed and verified live by Cowork (10 Nov, second upload):** `848be49` and `fc24f7d` (`out/` built from `fc24f7d`). Verified on the live site: `/sitemap.xml` 63 URLs and `/sitemap-el.xml` 32, all 63 return 200. og:title and twitter:title equal the `<title>` (with " | SensEar") on 62 of 63 pages; the one exception is `/el/dorean-axiologisi/`, which keeps «Η μουσική του χώρου σας είναι η σωστή;» by design. Spot checks: `/blog/music-curation-cycle-venues/` = "The music curation cycle | SensEar"; `/el/industries/music-for-hotels-and-resorts/` = «Μουσική για ξενοδοχεία και θέρετρα | SensEar»; `/services/experience-design/` = "Experience Design for hotels and venues | SensEar". Share images unchanged: all og:image files return 200, and all 18 blog article pages (EN + EL) still use their `-share.jpg`. Copy: `/el/sitemap-page/` contains «Όλες οι σελίδες της SensEar σε ένα σημείο» and «Γράψτε μας ή δείτε αν η απάντηση υπάρχει ήδη στις συχνές ερωτήσεις.», with no «Μην ανησυχείτε» and no «του SensEar»; `/sitemap-page/` contains "Journal articles"; the source of `/` contains "Playlists and DJ sets for one event" and no "Bespoke"; the source of `/el/` contains «Playlists και DJ sets για μία εκδήλωση». IndexNow POST to api.indexnow.org with all 63 URLs: HTTP 200. No sitemap resubmission and no per-URL indexing requests.
 
 **Committed, not yet deployed:** T15, the case studies second round (`b2f65b0` layout, `8e42a2d` copy, EN + EL),
-approved by JEF on 10 Nov. Built into `out/` from `8e42a2d`, pushed.
+and T16, the about page second round (`714a385` layout, `a1fabbc` copy, EN + EL), both approved by JEF on 10 Nov.
+Built into `out/` from `a1fabbc`, pushed.
 
 **Still to do (overview by Cowork, 10 Nov).** The copy strategy ran in two rounds: a full rewrite of the
 whole site, 28 Jul to 4 Aug ("decks" 1 to 4), and a deeper SEO round with JEF's facts, 30 Oct to 10 Nov
@@ -36,7 +37,8 @@ industries hub and six industry pages, journal hub and articles, metadata and de
 1. ~~Case studies (EN + EL): second round.~~ DONE 10 Nov (T15, `b2f65b0` + `8e42a2d`), not yet deployed. Left out
    on JEF's word: client words (none exist), listen link first (he keeps the player under the text). Still
    pending from JEF: the Hera sound sample on SoundCloud.
-2. About (EN + EL): second round. Google treats `/el/about/` as a duplicate of `/about`.
+2. ~~About (EN + EL): second round.~~ DONE 10 Nov (T16, `714a385` + `a1fabbc`), not yet deployed. The Greek is
+   now written on its own rather than translated, which should help with the `/el/about/` duplicate in Google.
 3. Contact and FAQ (EN + EL): small second round. Only one Greek FAQ question and the metadata changed in Nov.
 4. Home: no second round needed for now (layout, first sentence and metadata done in Nov).
 5. ~~og:title on 32 pages lacks the " | SensEar" suffix that the `<title>` has.~~ DONE 10 Nov (`fc24f7d`, JEF
@@ -47,7 +49,7 @@ industries hub and six industry pages, journal hub and articles, metadata and de
    Business Profile but no booking button shown yet.
 7. Separate work: the 5 new blog articles in draft (project "SensEar Website/SEO").
 
-**Open:** nothing in code. Waiting for JEF's upload of `out/` (`8e42a2d`, T15) and Cowork's checks; before that: `848be49` and `fc24f7d` are live (verified by Cowork 10 Nov). T14 done 10 Nov,
+**Open:** nothing in code. Waiting for JEF's upload of `out/` (`a1fabbc`, T15 + T16) and Cowork's checks; before that: `848be49` and `fc24f7d` are live (verified by Cowork 10 Nov). T14 done 10 Nov,
 T13 done 9 Nov, T12 done 6 Nov (deployed and verified live 6 Nov), T11 done 3 Nov.
 **Closed:** T10 (option A, see T10). T7 is dropped: Claude (Cowork) sends the IndexNow ping after each deploy.
 
@@ -543,6 +545,42 @@ Follow the verification gates in `CLAUDE.md` for every code step: `npm run typec
   five service links per language to the localized service pages; the contact buttons open `/contact/` and
   `/el/contact/`; none of the old phrases left.
   - **Rollback:** `git revert 8e42a2d b2f65b0`; then rebuild `out/` and upload.
+
+### T16 — About page, second round (low, needs JEF) · DONE 10 Nov · committed, built and pushed, not yet deployed
+- Scope: `/about/` and `/el/about/` (§10 F: names, credentials, history, principles as behaviours). Same process as
+  T15.
+- **JEF's facts (10 Nov), the only ones to use:** JEF studied sound engineering; his Haaga-Helia degree (Hospitality
+  Management and Experience Design) is **in progress**; "co-founder" is a fact, his role is strategy and
+  communication; Katerina has opened for and played with Colleen Murphy, Barış K and Disco Bambino (text unchanged);
+  the timeline years hold (2010, 2011, 2018, 2023, 2025); names stay in Latin script on both pages. **Licences:
+  SensEar takes on and provides no licence of any kind.** The platform it uses is licensed for business use, and the
+  venue pays the public performance fees to the collecting societies; the site's existing lines saying exactly that
+  (platform licensed for business use; fees paid by the venue, not part of our fee) are correct and stay. Only the
+  about page claimed SensEar handles licensing; that is gone.
+- What changed: layout `714a385` (bio paragraphs get an empty line between them: each paragraph sat alone in its
+  ScrollReveal wrapper, so `last:mb-0` removed all spacing; the vision renders one sentence per line, split on
+  "\n", with «τελευταίο», «πρώτο» and «αλλάξουμε» in gold; gold words follow the new headings; record icon for the
+  music-knowledge point). Copy `a1fabbc`: hero «Ποιοι διαλέγουν το soundtrack του χώρου σας» with the subtitle «Τρεις
+  άνθρωποι που ζουν για τη μουσική, με χρόνια σε residencies και ακαδημαϊκές σπουδές γύρω από τη μουσική, τα media και
+  την επικοινωνία, την ηχοληψία, τη διοίκηση φιλοξενίας και τον σχεδιασμό εμπειριών.»; vision = what should change,
+  philosophy = how we work (scheduling, monthly renewal, volume per zone; no licences); timeline without "upscale",
+  "exclusive", "transformative", lede "since 2010"; JEF's role, studies and Haaga-Helia in progress in both
+  languages; "What makes us different" with the subtitle «Οι περισσότερες playlists για επαγγελματικούς χώρους
+  μοιάζουν μεταξύ τους. Η δική μας δουλειά ξεχωρίζει σε τέσσερα σημεία.», «Γνώση της μουσικής σε βάθος» replacing
+  "You can hear the work", «Πρώτα γνωρίζουμε τον χώρο σας» without the Athens and islands line, the after-launch
+  point without licences; closing box «Ας μιλήσουμε για τον χώρο σας» with an «Έργα» button; meta description without
+  "studies in music".
+- Rejected on the way (do not reintroduce): «Τρεις DJs» and «εραστές της μουσικής» for the team; «από το μεσημέρι ως
+  τα ξημερώματα» («κάνει μπουζούκια»); «σπουδές στη μουσική» (reads as studying an instrument); «Ακούστε πρώτα,
+  αποφασίστε μετά» and «Ξέρουμε αυτούς τους χώρους» (say nothing about what makes SensEar different); «πέρα από τη
+  μουσική» (the music itself is the point); a differentiator about Athens and the islands under a heading about
+  visiting the venue.
+- Gates on `a1fabbc`: typecheck 0 errors, lint 0 errors (8 known warnings), build passed (63 / 32 URLs; the first
+  attempt failed with EBUSY on a file in `out/` while the `review-out` server was running; it passed after stopping
+  that server). Headless pass on `review-out`: both pages at 1440 and 375 px with no first-party console errors and no
+  horizontal scroll; the vision on two lines with the three gold words; an empty line between bio paragraphs; no
+  licence claim and none of the old phrases.
+  - **Rollback:** `git revert a1fabbc 714a385`; then rebuild `out/` and upload.
 
 ---
 
