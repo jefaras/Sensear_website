@@ -37,16 +37,15 @@ industries hub and six industry pages, journal hub and articles, metadata and de
 2. About (EN + EL): second round. Google treats `/el/about/` as a duplicate of `/about`.
 3. Contact and FAQ (EN + EL): small second round. Only one Greek FAQ question and the metadata changed in Nov.
 4. Home: no second round needed for now (layout, first sentence and metadata done in Nov).
-5. Section 2 headings of T6, T11, T12, T13 and T14 still say "not yet deployed"; all of them are live.
-6. ~~og:title on 32 pages lacks the " | SensEar" suffix that the `<title>` has.~~ DONE 10 Nov (`fc24f7d`, JEF
+5. ~~og:title on 32 pages lacks the " | SensEar" suffix that the `<title>` has.~~ DONE 10 Nov (`fc24f7d`, JEF
    chose consistency): og:title and twitter:title now equal the `<title>` on every page; `/el/dorean-axiologisi/`
    keeps its own og:title by design. Checked on the build: 63 of 63 pages, 0 mismatches. Live (verified by Cowork 10 Nov).
-7. Outside the code: SSL for the 5 alias domains (waiting for Alex); licence check for the Sonic Identity
+6. Outside the code: SSL for the 5 alias domains (waiting for Alex); licence check for the Sonic Identity
    hero photo (JEF); Bing Places listing not visible on Bing yet (10 Nov), booking link saved in the Google
    Business Profile but no booking button shown yet.
-8. Separate work: the 4 new blog articles in draft (project "SensEar Website/SEO").
+7. Separate work: the 5 new blog articles in draft (project "SensEar Website/SEO").
 
-**Open:** nothing in code. Waiting for JEF's upload of `out/` (`848be49`) and Cowork's post-deploy checks. T14 done 10 Nov,
+**Open:** nothing in code. Nothing waiting: `848be49` and `fc24f7d` are live (verified by Cowork 10 Nov). T14 done 10 Nov,
 T13 done 9 Nov, T12 done 6 Nov (deployed and verified live 6 Nov), T11 done 3 Nov.
 **Closed:** T10 (option A, see T10). T7 is dropped: Claude (Cowork) sends the IndexNow ping after each deploy.
 
@@ -145,7 +144,7 @@ Follow the verification gates in `CLAUDE.md` for every code step: `npm run typec
 ### T5 — Complete the 3 service H1s (low) · DONE 30 Oct (subtitle moved inside the H1, deployed and verified live)
 - Change the 6 dictionary titles in section 1-C so the H1 reads as a full phrase (for example, merge it with the line that follows it). Keep the visual layout. Both languages.
 
-### T6 — Expand the five English service pages + Greek equivalents (medium, needs JEF) · DONE 2 Nov · Signature Playlists live since 30 Oct · Audio Upgrades, Event Soundtracks, Sonic Identity and the services hub committed, not yet deployed
+### T6 — Expand the five English service pages + Greek equivalents (medium, needs JEF) · DONE 2 Nov · Signature Playlists live since 30 Oct · Audio Upgrades, Event Soundtracks, Sonic Identity and the services hub deployed and verified live 6 Nov
 - **Signature Playlists, 30 Oct:** copy approved by JEF and committed in two parts. `b7c8069` adds optional
   blocks to the shared service layout (case, process, pricing, `image_alt`); pages without those keys are
   unchanged. `c92c1c5` is the copy itself (EN + EL), about 675 / 740 words of main content, up from 247.
@@ -285,7 +284,7 @@ Follow the verification gates in `CLAUDE.md` for every code step: `npm run typec
 ### T9 — Update `CLAUDE.md` (low, ask JEF) · DONE 30 Oct
 - Current branch name. Remove or relax the `app/sitemap.ts` rule (waived 30 Jul). Add: "never publish a street address in schema".
 
-### T11 — Wide share images for the 8 blog posts (low, after T6) · DONE 3 Nov (committed, not yet deployed)
+### T11 — Wide share images for the 8 blog posts (low, after T6) · DONE 3 Nov · deployed and verified live 6 Nov
 - **Done 3 Nov (`5127d55`, JEF chose option B):** each `public/images/blog/<post image>-share.jpg` is 1200×630, the
   whole square photo centred on a blurred, darkened copy of itself (a crop cut off faces). `ogImage` is set
   for all 8 posts in both languages, and the post metadata states width 1200 and height 630. Checked in
@@ -301,7 +300,7 @@ Follow the verification gates in `CLAUDE.md` for every code step: `npm run typec
 
 ---
 
-### T12 — Industries hub + 6 industry pages (medium, needs JEF) · DONE 6 Nov · committed and built, not yet deployed
+### T12 — Industries hub + 6 industry pages (medium, needs JEF) · DONE 6 Nov · deployed and verified live 6 Nov
 - Scope: `/industries/` and the six `/industries/music-for-*` pages, both languages, Phase 3 of
   `plans/copy-strategy-audit-synthesis.md` (§10 F, §11 items 6 and 11). Same process as T6: audit, one
   batch of questions, drafts in `docs/drafts/industries-copy-draft.md` (not committed), JEF approves every
@@ -391,7 +390,7 @@ Follow the verification gates in `CLAUDE.md` for every code step: `npm run typec
 
 ---
 
-### T13 — Journal hub + 8 articles (medium, needs JEF) · DONE 9 Nov · hub + 9 articles committed, built and pushed, not yet deployed
+### T13 — Journal hub + 8 articles (medium, needs JEF) · DONE 9 Nov · hub + 9 articles deployed and verified live 10 Nov
 - Scope: `/blog/` and the eight `/blog/<slug>` articles, both languages, Phase 4 of
   `plans/copy-strategy-audit-synthesis.md` (§10 G). Same process as T12: audit, one batch of questions, every
   round applied to the working tree uncommitted and shown on the `next-dev` preview next to the live page, one
@@ -466,7 +465,7 @@ Follow the verification gates in `CLAUDE.md` for every code step: `npm run typec
   uppercases the tag with the `el` locale (no tonos on capitals). The home-page journal cards
   (`home.blog.articles`) carry the article titles.
 
-### T14 — Metadata sweep and dead-key cleanup, site-wide (low, needs JEF) · DONE 10 Nov · committed, built and pushed, not yet deployed
+### T14 — Metadata sweep and dead-key cleanup, site-wide (low, needs JEF) · DONE 10 Nov · deployed and verified live 10 Nov
 - Scope (JEF, 10 Nov): the last two items of Phase 4 in `plans/copy-strategy-audit-synthesis.md` §10 G, the
   metadata sweep and the removal of dictionary keys nothing uses. The sitemap page copy and the legal pages are
   not in scope (legal pages are inventory-only in the strategy).
