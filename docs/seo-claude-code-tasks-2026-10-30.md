@@ -26,20 +26,20 @@ image for the blog post `building-brand-people-can-hear` (its page image is WebP
 
 **Deployed and verified live by Cowork (10 Nov, second upload):** `848be49` and `fc24f7d` (`out/` built from `fc24f7d`). Verified on the live site: `/sitemap.xml` 63 URLs and `/sitemap-el.xml` 32, all 63 return 200. og:title and twitter:title equal the `<title>` (with " | SensEar") on 62 of 63 pages; the one exception is `/el/dorean-axiologisi/`, which keeps «Η μουσική του χώρου σας είναι η σωστή;» by design. Spot checks: `/blog/music-curation-cycle-venues/` = "The music curation cycle | SensEar"; `/el/industries/music-for-hotels-and-resorts/` = «Μουσική για ξενοδοχεία και θέρετρα | SensEar»; `/services/experience-design/` = "Experience Design for hotels and venues | SensEar". Share images unchanged: all og:image files return 200, and all 18 blog article pages (EN + EL) still use their `-share.jpg`. Copy: `/el/sitemap-page/` contains «Όλες οι σελίδες της SensEar σε ένα σημείο» and «Γράψτε μας ή δείτε αν η απάντηση υπάρχει ήδη στις συχνές ερωτήσεις.», with no «Μην ανησυχείτε» and no «του SensEar»; `/sitemap-page/` contains "Journal articles"; the source of `/` contains "Playlists and DJ sets for one event" and no "Bespoke"; the source of `/el/` contains «Playlists και DJ sets για μία εκδήλωση». IndexNow POST to api.indexnow.org with all 63 URLs: HTTP 200. No sitemap resubmission and no per-URL indexing requests.
 
-**Committed, not yet deployed:** T15, the case studies second round (`b2f65b0` layout, `8e42a2d` copy, EN + EL),
-and T16, the about page second round (`714a385` layout, `a1fabbc` copy, EN + EL), both approved by JEF on 10 Nov.
-Built into `out/` from `a1fabbc`, pushed.
+**Deployed and verified live by Cowork (10 Nov, third upload):** T15 (`b2f65b0`, `8e42a2d`) and T16 (`714a385`, `a1fabbc`), `out/` built from `a1fabbc` (server files dated 10 Nov 21:46 UTC). Verified on the live site: `/sitemap.xml` 63 URLs and `/sitemap-el.xml` 32; `/case-studies/`, `/about/` and their `/el/` versions have `lastmod` 2026-11-10. `/el/case-studies/`: H1 «Ακούστε τη δουλειά μας»; heading «Από την Αθήνα ως τις Κυκλάδες»; five «Υπηρεσία: …» lines, four linking to `/el/services/signature-playlists/` and Levantis to `/el/services/event-soundtracks/`; «Συνεργαζόμαστε από το 2023» on Beach House, «…από το 2025» on Pelicanos and Yam, «…από το 2026» on Hera Hotel; the hero button «Επικοινωνία» goes to `/el/contact/`; no «Ιστορίες Χώρων», «εδώ και δύο χρόνια» or «Κλείστε ραντεβού». `/case-studies/`: H1 "Hear our work"; "From Athens to the Cyclades"; "Since 2023" once, "Since 2025" twice, "Since 2026" once; "Service: Signature Playlists" links to `/services/signature-playlists/`; no "past two years" or "Book a call". `/el/about/`: H1 «Ποιοι διαλέγουν το soundtrack του χώρου σας»; the subtitle has «ακαδημαϊκές σπουδές γύρω από τη μουσική, τα media και την επικοινωνία»; the vision shows two lines with «τελευταίο», «πρώτο» and «αλλάξουμε» in the gold gradient (`.se-em`, checked on screen); «Γνώση της μουσικής σε βάθος» and «Ας μιλήσουμε για τον χώρο σας» present; none of «Αναλαμβάνουμε τις άδειες», «Τρεις DJs», «Ακούστε πρώτα», «Δεκαπέντε χρόνια», «κάτοχος πτυχίου». `/about/`: H1 "Who chooses your soundtrack"; no "We handle the licensing"; JEF's role reads "Co-founder, Strategy & Communication". Post-deploy: both sitemaps resubmitted in Google Search Console (read 10 Nov, Success, 63 / 32) and in Bing Webmaster Tools (submitted 10 Nov; `/sitemap.xml` read 10 Nov, Success, 63; `/sitemap-el.xml` Processing); IndexNow POST to api.indexnow.org with the four URLs, HTTP 200. No per-URL indexing requests.
+
+**Committed, not yet deployed:** T17, contact and FAQ second round plus site-wide fixes (`0148471` layout, `60b628c` copy, `5f04ae8` lint), approved by JEF on 11 Nov. Built into `out/` from `5f04ae8`, pushed.
 
 **Still to do (overview by Cowork, 10 Nov).** The copy strategy ran in two rounds: a full rewrite of the
 whole site, 28 Jul to 4 Aug ("decks" 1 to 4), and a deeper SEO round with JEF's facts, 30 Oct to 10 Nov
 (T6, T12, T13, T14). Done in both rounds and live: services hub, the four service pages, Experience Design,
 industries hub and six industry pages, journal hub and articles, metadata and dead-key cleanup. Left:
-1. ~~Case studies (EN + EL): second round.~~ DONE 10 Nov (T15, `b2f65b0` + `8e42a2d`), not yet deployed. Left out
+1. ~~Case studies (EN + EL): second round.~~ DONE 10 Nov (T15, `b2f65b0` + `8e42a2d`), live. Left out
    on JEF's word: client words (none exist), listen link first (he keeps the player under the text). Still
    pending from JEF: the Hera sound sample on SoundCloud.
-2. ~~About (EN + EL): second round.~~ DONE 10 Nov (T16, `714a385` + `a1fabbc`), not yet deployed. The Greek is
+2. ~~About (EN + EL): second round.~~ DONE 10 Nov (T16, `714a385` + `a1fabbc`), live. The Greek is
    now written on its own rather than translated, which should help with the `/el/about/` duplicate in Google.
-3. Contact and FAQ (EN + EL): small second round. Only one Greek FAQ question and the metadata changed in Nov.
+3. ~~Contact and FAQ (EN + EL): small second round.~~ DONE 11 Nov (T17, `0148471` + `60b628c`), not yet deployed.
 4. Home: no second round needed for now (layout, first sentence and metadata done in Nov).
 5. ~~og:title on 32 pages lacks the " | SensEar" suffix that the `<title>` has.~~ DONE 10 Nov (`fc24f7d`, JEF
    chose consistency): og:title and twitter:title now equal the `<title>` on every page; `/el/dorean-axiologisi/`
@@ -49,7 +49,7 @@ industries hub and six industry pages, journal hub and articles, metadata and de
    Business Profile but no booking button shown yet.
 7. Separate work: the 5 new blog articles in draft (project "SensEar Website/SEO").
 
-**Open:** nothing in code. Waiting for JEF's upload of `out/` (`a1fabbc`, T15 + T16) and Cowork's checks; before that: `848be49` and `fc24f7d` are live (verified by Cowork 10 Nov). T14 done 10 Nov,
+**Open:** nothing in code. Waiting for JEF's upload of `out/` (`5f04ae8`, T17) and Cowork's checks. T15 and T16 are live (verified by Cowork 10 Nov). T14 done 10 Nov,
 T13 done 9 Nov, T12 done 6 Nov (deployed and verified live 6 Nov), T11 done 3 Nov.
 **Closed:** T10 (option A, see T10). T7 is dropped: Claude (Cowork) sends the IndexNow ping after each deploy.
 
@@ -581,6 +581,42 @@ Follow the verification gates in `CLAUDE.md` for every code step: `npm run typec
   horizontal scroll; the vision on two lines with the three gold words; an empty line between bio paragraphs; no
   licence claim and none of the old phrases.
   - **Rollback:** `git revert a1fabbc 714a385`; then rebuild `out/` and upload.
+
+### T17 — Contact and FAQ, second round, plus site-wide fixes (low, needs JEF) · DONE 11 Nov · committed, built and pushed, not yet deployed
+- Scope: `/contact/` and `/faq/` (EN + EL), and what JEF flagged on the way: gold words cut off, «τελευταία ώρα»,
+  «Εξερευνήστε», the home sectors heading and the venues strip.
+- **JEF's facts (10–11 Nov), the only ones to use:** hours Monday to Friday 10:00–21:00, Saturday 10:00–17:00
+  (as in Google Business Profile and the schema); the first playlist plays 1 to 2 weeks after the proposal is
+  agreed; one-off playlists are sold too; clients are advised not to edit the playlists themselves (staff adjust
+  the volume); name, surname, email, phone and message stay required (form logic and `contact.php` unchanged);
+  SensEar issues and handles no licence, the platform is licensed for business use, the venue pays the public
+  performance fees; Hera Hotel joins the home venues strip with the colour logo from herahotel.gr.
+- Layout `0148471`: gold Didot words get 0.32em right padding (most of it taken back by margin) and
+  `box-decoration-break: clone`, so the slanted final «ς» is no longer cut, also when a gold phrase wraps; contact
+  form validation messages and the reCAPTCHA line come from the dictionaries (they were English on the Greek page);
+  FAQ items take an optional `category` that renders a small gold heading; the venues strip reads names, places
+  and alt texts from `home.clients.items` (Greek places on the Greek page), logos stay in code by key; new Hera
+  Hotel card. `5f04ae8`: callback dependencies, lint back to 8 warnings.
+- Copy `60b628c`: contact hero «Ξεκινάμε με μία συζήτηση», «Τι γίνεται αφού μας γράψετε» (24-hour reply, free call
+  or visit, proposal in 7 to 10 days), label «Επιχείρηση»; FAQ hero «Ό,τι χρειάζεται να ξέρετε πριν ξεκινήσουμε» with
+  the subtitle «Οι απαντήσεις μας στις ερωτήσεις που ακούμε πιο συχνά από ξενοδοχεία, εστιατόρια και μπαρ.»; 17
+  questions in four categories («Άδειες και νόμιμη αναπαραγωγή», «Κόστος και συνεργασία», «Στην καθημερινή
+  λειτουργία», «Μουσική για τον χώρο σας»), the two Spotify questions merged, new answers on cost, outside Athens,
+  DJ sets for events, how often the music changes, offline playback, and four practical questions (aimed at the
+  questions people put to ChatGPT and Claude) that link to journal articles; «την τελευταία ώρα» (reads as someone's
+  dying hour) replaced in eleven places by «ως το τελευταίο τραγούδι», «Ο χορός και το κλείσιμο της βραδιάς» and «αργά
+  το βράδυ»; the seven «Εξερευνήστε» buttons and the CTA line become «Δείτε»; home «Για ποιους χώρους επιμελούμαστε τη
+  μουσική» and «Χώροι που μας εμπιστεύονται τη μουσική τους». Sitemap overrides = 2026-11-11 for `''`, `/contact`,
+  `/faq`, `/services`, the four service pages, `/industries`, restaurants and events.
+- Rejected on the way (do not reintroduce): «Κατανοώντας πώς λειτουργεί» (incomplete), «Όσα ρωτούν οι χώροι» (a
+  space does not ask), «Η πρώτη συνάντηση είναι δωρεάν» («cheap»), «Πού δουλεύουμε» (reads as where we gig),
+  «σχεδιάζουμε μουσική» (JEF: «επιμελούμαστε»), «την τελευταία ώρα».
+- Gates on `5f04ae8`: typecheck 0 errors, lint 0 errors (8 known warnings), build passed (63 / 32 URLs, 22 lastmod
+  2026-11-11 in `/sitemap.xml`). Headless pass on `review-out`: the ten changed pages at 1440 and 375 px with no
+  first-party console errors and no horizontal scroll; FAQ with 4 category headings, 17 questions on the page and in
+  the FAQPage JSON-LD, answers in the served HTML; contact hours, «Επιχείρηση» and the Greek reCAPTCHA line; Greek
+  places in the venues strip; none of «Κατανοώντας», «Εξερευνήστε», «Venues που», «Πού δουλεύουμε», «τελευταία ώρα».
+  - **Rollback:** `git revert 5f04ae8 60b628c 0148471`; then rebuild `out/` and upload.
 
 ---
 
