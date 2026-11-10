@@ -98,7 +98,7 @@
             }
         },
         "expertise": {
-            "title": "Where we work",
+            "title": "The venues whose music we curate",
             "subtitle": "Hotels, restaurants and bars, retail, wellness, events, and cultural spaces. Each one runs differently, which is why the music is planned differently.",
             "items": [
                 {
@@ -280,45 +280,49 @@
             "description": "Tell us about your venue, event or brand. We usually reply within 24 hours and send a proposal within 7 to 10 days."
         },
         "hero": {
-            "title": "Let's talk about your needs",
-            "subtitle": "Tell us a bit about your venue and the feeling you want to create.",
+            "title": "We start with a conversation",
+            "subtitle": "Tell us about your venue and how you want it to sound.",
             "image": "/images/contact/contact-hero-venue-consultation.jpg",
             "image_alt": "Smiling woman talking on the phone in a warm vintage room",
             "primary_cta": "Fill out the form",
             "secondary_cta": "Contact details"
         },
         "intro": {
-            "title": "Looking for the perfect sound for your space?",
-            "subtitle": "Fill out the form and we will contact you shortly to meet and design the ideal music plan for your venue.",
+            "title": "What happens after you write",
+            "subtitle": "We usually reply within 24 hours and arrange a call or a visit to your venue, free of charge. After the visit, we send a written proposal, usually within 7 to 10 days.",
             "image_alt": "Close-up of a black vinyl record"
         },
         "form": {
             "name": "Name *",
             "surname": "Surname *",
-            "business_name": "Business Name",
+            "business_name": "Business",
             "email": "Email *",
             "phone": "Phone *",
             "message": "Message *",
-            "submit": "Send Message",
+            "submit": "Send message",
             "submitting": "Sending...",
-            "success": "Thank You!",
-            "success_message": "We've received your inquiry...",
+            "success": "Thank you",
+            "success_message": "We have received your message. We usually reply within 24 hours.",
             "send_another": "Send another",
             "name_placeholder": "Your name",
             "surname_placeholder": "Your surname",
             "business_name_placeholder": "Your business name",
             "email_placeholder": "your@email.com",
             "phone_placeholder": "xxx xxx xxxx",
-            "message_placeholder": "Tell us about your venue, your vision, and how we can help...",
+            "message_placeholder": "Tell us about your venue: what kind of place it is, its hours, and what you would like to change.",
             "temp_title": "",
-            "temp_message": "Send us an email with your contact details, your venue type (hotel, restaurant, bar, or other) and how we can help you, or call us today."
+            "temp_message": "Send us an email with your contact details, your venue type (hotel, restaurant, bar, or other) and how we can help you, or call us today.",
+            "error_name": "Name must be at least 2 characters.",
+            "error_surname": "Surname must be at least 2 characters.",
+            "error_phone": "Phone number must have exactly 10 digits.",
+            "error_message": "Message must be at least 10 characters."
         },
         "contact_info": {
-            "title": "Contact Information",
+            "title": "Contact information",
             "phone": {
                 "label": "Phone",
                 "value": "+30 6976994212",
-                "note": "Available Monday–Saturday, 10:00–18:00 (EET)"
+                "note": "Monday to Friday 10:00–21:00, Saturday 10:00–17:00 (Athens time)"
             },
             "email": {
                 "label": "Email",
@@ -328,18 +332,18 @@
             "location": {
                 "label": "Location",
                 "value": "Athens, Greece",
-                "note": "Working with brands across Greece and its islands."
+                "note": "Working with venues across Greece."
             },
             "social": {
                 "label": "Social",
                 "note": "Follow and contact us on social media."
             },
-            "heading": "Find us however suits you",
+            "heading": "Reach us however suits you",
             "follow_label": "FOLLOW US"
         },
         "faq": {
-            "title": "Frequently Asked Questions",
-            "subtitle": "Find answers to common questions about our music curation services.",
+            "title": "Frequently asked questions",
+            "subtitle": "The four things people ask us most before we start.",
             "read_all_cta": "Read all FAQs",
             "items": [
                 {
@@ -352,11 +356,11 @@
                 },
                 {
                     "question": "Do you offer one-time services or ongoing partnerships?",
-                    "answer": "Both! We can create a one-time playlist package or become your long-term music partner with regular updates and seasonal refreshes."
+                    "answer": "Both. We can make a one-off playlist, or look after your venue’s music on an ongoing basis, with new music every month and a change each season."
                 },
                 {
                     "question": "How long does it take to receive our first playlist?",
-                    "answer": "Typically 1-2 weeks after our initial consultation, depending on the complexity of your needs."
+                    "answer": "Usually 1 to 2 weeks after the proposal is agreed."
                 }
             ]
         }
@@ -1792,47 +1796,96 @@
             "description": "Answers on public performance licences, legal music playback in venues, playlists and the support your venue gets from SensEar."
         },
         "hero": {
-            "title": "Understanding how it works",
-            "subtitle": "Answers to common questions about sound, licensing & our services.",
+            "title": "What you need to know before we start",
+            "subtitle": "Our answers to the questions we hear most often from hotels, restaurants and bars.",
             "image_alt": "Headphones on white mannequin heads"
         },
-        "title": "Your Questions, Answered",
+        "title": "Frequently asked questions",
         "items": [
             {
-                "question": "Is it legal to play music from Spotify, YouTube, or Apple Music in my restaurant/bar/hotel?",
-                "answer": "Typically, consumer streaming platforms (like Spotify Free/Premium, YouTube, Apple Music, etc.) are licensed only for personal use, meaning they do not cover public performance rights in a commercial setting. You'll need a business license or properly licensed service to legally play music for your patrons."
+                "category": "Licensing and legal playback",
+                "question": "Is it legal to play music from Spotify, YouTube or Apple Music in my business?",
+                "answer": "Usually not. Consumer streaming platforms (Spotify Free or Premium, YouTube, Apple Music and so on) are licensed for personal use only, even on a paid subscription, so they do not cover public performance in a commercial space. Using them in a business can break copyright law and lead to fines. To play music legally to your guests, you need a service licensed for business use."
             },
             {
-                "question": "Why can't I just use my personal Spotify or Apple Music subscription?",
-                "answer": "Personal subscriptions don't include public performance or commercial use rights. Using them in a public venue can violate copyright law and may lead to fines or legal complications. Commercial music services, by contrast, include the necessary licenses for public playback."
-            },
-            {
+                "category": "Licensing and legal playback",
                 "question": "What is a public performance license, and why do I need it?",
-                "answer": "A Public Performance License is an agreement that compensates artists, songwriters, and music publishers when their work is played in a public venue. You must utilize it to legally broadcast or perform music in restaurants, bars, hotels, retail stores, etc. SensEar can help you navigate or secure these licenses for peace of mind."
+                "answer": "A public performance licence makes sure artists, songwriters and publishers are paid when their music plays in a public space. Every restaurant, bar, hotel or shop that plays music needs one, and the venue pays for it to the collecting societies. SensEar does not issue or handle licences, but we explain what applies before you sign."
             },
             {
-                "question": "How long does it take to create a custom playlist?",
-                "answer": "It varies. For a single venue with a clear music profile, it may take just a few days. For larger or multi-location clients, it can take a week or more to finalize the whole process."
-            },
-            {
+                "category": "Licensing and legal playback",
                 "question": "Is your music fully licensed?",
-                "answer": "The music we supply is licensed for commercial use, so you are not playing from a personal streaming account. Royalties for public performance are paid separately by the venue to the Greek collecting societies, as they are for any business that plays music. See the answer above on public performance licences."
+                "answer": "The music plays from a platform licensed for business use, so you are not playing from a personal streaming account. The public performance fees are paid separately by the venue to the Greek collecting societies, as they are for any business that plays music."
             },
             {
+                "category": "Cost and working with us",
+                "question": "How much does it cost?",
+                "answer": "It depends on the venue: how many zones it has, how many hours music plays and which service you need. The first call or visit is free of charge, and after the visit we send a written proposal with the cost, usually within 7 to 10 days."
+            },
+            {
+                "category": "Cost and working with us",
+                "question": "How long does it take to create a custom playlist?",
+                "answer": "Usually 1 to 2 weeks after the proposal is agreed."
+            },
+            {
+                "category": "Cost and working with us",
+                "question": "Do you work outside Athens?",
+                "answer": "Yes, across Greece. Our music plays today in venues in Athens, on Antiparos and on Sifnos, and we have curated an event on Paros."
+            },
+            {
+                "category": "Cost and working with us",
+                "question": "Do you also do DJ sets for events?",
+                "answer": "Yes, with <a href=\"/services/event-soundtracks/\" class=\"se-link\">Event Soundtracks</a>: playlists and sets by our own DJs for one event, from the guests’ arrival to the last song, with a sound check. We visit the venue free of charge before we send our offer."
+            },
+            {
+                "category": "Cost and working with us",
+                "question": "How is this different from a background music service?",
+                "answer": "A background music service gives you ready-made playlists that thousands of other venues also use. We build the programme around your venue: your areas, your hours, and the way your day runs, and we keep it updated. The tracks are chosen by people who have heard them, not generated from a genre setting."
+            },
+            {
+                "category": "Day to day",
                 "question": "Can I update the music playlists myself?",
-                "answer": "Yes. Scheduling by time of day and by area is part of the service, and you can ask for changes at any time. If you would rather not touch it, we handle the updates and you tell us when something is not working."
+                "answer": "You don’t need to, and we generally advise against it. We handle the scheduling by hour and by area and the updates, and you can ask for changes at any time. Your staff can still adjust the volume on the spot."
             },
             {
+                "category": "Day to day",
+                "question": "How often does the music change?",
+                "answer": "We suggest new music every month and a change of direction each season, at a rhythm agreed with you, so regular guests and your staff are not hearing the same tracks all year."
+            },
+            {
+                "category": "Day to day",
                 "question": "Do I need special equipment for playing your music playlists?",
                 "answer": "A basic system is usually enough to start. If the room itself is the problem, we assess it, tell you what needs to change, and coordinate the specialist partners who carry out the work, then tune the result. See <a href=\"/services/audio-upgrades/\" class=\"se-link\">Audio Upgrades</a>."
             },
             {
+                "category": "Day to day",
+                "question": "What happens if the internet goes down?",
+                "answer": "The music keeps playing offline, on the same schedule in every zone. We manage the playlists remotely, so once the connection is back, any changes come through as usual."
+            },
+            {
+                "category": "Day to day",
                 "question": "Do you offer support after setup?",
                 "answer": "Yes. We are available for ongoing support, updates, and any adjustments you need along the way. Just send us a message and we will talk about it."
             },
             {
-                "question": "How is this different from a background music service?",
-                "answer": "A background music service gives you ready-made playlists that thousands of other venues also use. We build the programme around your venue: your areas, your hours, and the way your day runs, and we keep it updated. The tracks are chosen by people who have heard them, not generated from a genre setting."
+                "category": "Music for your venue",
+                "question": "What music should I play in my restaurant?",
+                "answer": "It depends on the hour and on what you want to happen in the room. A slower tempo when you want guests to stay and enjoy the meal, a faster one when you need tables to turn, and always music that fits the character of the place. The key is that it changes through the day, from lunch to late evening. More in the article <a href=\"/blog/background-music-shapes-customer-behavior/\" class=\"se-link\">How music shapes buyer behaviour</a>."
+            },
+            {
+                "category": "Music for your venue",
+                "question": "How can I improve the atmosphere of my venue with music?",
+                "answer": "With three things: music that fits the character of the venue rather than the taste of whoever is on shift, a schedule that changes with the hours of the day and the zones, and a volume that lets people talk. Research shows that music that fits a space changes how guests perceive it, even how long a wait feels. See the article <a href=\"/blog/service-environment-shapes-wait-time/\" class=\"se-link\">How spaces shape perceived wait time</a>."
+            },
+            {
+                "category": "Music for your venue",
+                "question": "How loud should music be in a restaurant or bar?",
+                "answer": "Loud enough to fill the room, but not so loud that people raise their voices to talk. If staff are tired by midday, it is too loud. A lot of noise even makes sweet and salty flavours in the food less noticeable. See the article <a href=\"/blog/sonic-seasoning-how-sound-changes-taste/\" class=\"se-link\">Sonic seasoning: how sound changes taste</a>."
+            },
+            {
+                "category": "Music for your venue",
+                "question": "Does music affect how long guests stay and how much they spend?",
+                "answer": "In many cases, yes. Field studies in shops and restaurants found that slower music keeps guests longer and can lift spending, and in one restaurant chain brand-fit playlists brought revenues about 9.1% higher than random chart hits. Results depend on the audience and the venue, which is why the music should be chosen for yours. See the article <a href=\"/blog/brand-music-converts-browsers-buyers/\" class=\"se-link\">How brand-fit music converts browsers into buyers</a>."
             }
         ],
         "cta": {
