@@ -26,14 +26,16 @@ image for the blog post `building-brand-people-can-hear` (its page image is WebP
 
 **Deployed and verified live by Cowork (10 Nov, second upload):** `848be49` and `fc24f7d` (`out/` built from `fc24f7d`). Verified on the live site: `/sitemap.xml` 63 URLs and `/sitemap-el.xml` 32, all 63 return 200. og:title and twitter:title equal the `<title>` (with " | SensEar") on 62 of 63 pages; the one exception is `/el/dorean-axiologisi/`, which keeps «Η μουσική του χώρου σας είναι η σωστή;» by design. Spot checks: `/blog/music-curation-cycle-venues/` = "The music curation cycle | SensEar"; `/el/industries/music-for-hotels-and-resorts/` = «Μουσική για ξενοδοχεία και θέρετρα | SensEar»; `/services/experience-design/` = "Experience Design for hotels and venues | SensEar". Share images unchanged: all og:image files return 200, and all 18 blog article pages (EN + EL) still use their `-share.jpg`. Copy: `/el/sitemap-page/` contains «Όλες οι σελίδες της SensEar σε ένα σημείο» and «Γράψτε μας ή δείτε αν η απάντηση υπάρχει ήδη στις συχνές ερωτήσεις.», with no «Μην ανησυχείτε» and no «του SensEar»; `/sitemap-page/` contains "Journal articles"; the source of `/` contains "Playlists and DJ sets for one event" and no "Bespoke"; the source of `/el/` contains «Playlists και DJ sets για μία εκδήλωση». IndexNow POST to api.indexnow.org with all 63 URLs: HTTP 200. No sitemap resubmission and no per-URL indexing requests.
 
-**Committed, not yet deployed:** nothing.
+**Committed, not yet deployed:** T15, the case studies second round (`b2f65b0` layout, `8e42a2d` copy, EN + EL),
+approved by JEF on 10 Nov. Built into `out/` from `8e42a2d`, pushed.
 
 **Still to do (overview by Cowork, 10 Nov).** The copy strategy ran in two rounds: a full rewrite of the
 whole site, 28 Jul to 4 Aug ("decks" 1 to 4), and a deeper SEO round with JEF's facts, 30 Oct to 10 Nov
 (T6, T12, T13, T14). Done in both rounds and live: services hub, the four service pages, Experience Design,
 industries hub and six industry pages, journal hub and articles, metadata and dead-key cleanup. Left:
-1. Case studies (EN + EL): second round (brief, scope, what was done, client words, listen link first).
-   Only the Greek Levantis and Hera lines changed in Nov.
+1. ~~Case studies (EN + EL): second round.~~ DONE 10 Nov (T15, `b2f65b0` + `8e42a2d`), not yet deployed. Left out
+   on JEF's word: client words (none exist), listen link first (he keeps the player under the text). Still
+   pending from JEF: the Hera sound sample on SoundCloud.
 2. About (EN + EL): second round. Google treats `/el/about/` as a duplicate of `/about`.
 3. Contact and FAQ (EN + EL): small second round. Only one Greek FAQ question and the metadata changed in Nov.
 4. Home: no second round needed for now (layout, first sentence and metadata done in Nov).
@@ -45,7 +47,7 @@ industries hub and six industry pages, journal hub and articles, metadata and de
    Business Profile but no booking button shown yet.
 7. Separate work: the 5 new blog articles in draft (project "SensEar Website/SEO").
 
-**Open:** nothing in code. Nothing waiting: `848be49` and `fc24f7d` are live (verified by Cowork 10 Nov). T14 done 10 Nov,
+**Open:** nothing in code. Waiting for JEF's upload of `out/` (`8e42a2d`, T15) and Cowork's checks; before that: `848be49` and `fc24f7d` are live (verified by Cowork 10 Nov). T14 done 10 Nov,
 T13 done 9 Nov, T12 done 6 Nov (deployed and verified live 6 Nov), T11 done 3 Nov.
 **Closed:** T10 (option A, see T10). T7 is dropped: Claude (Cowork) sends the IndexNow ping after each deploy.
 
@@ -509,6 +511,38 @@ Follow the verification gates in `CLAUDE.md` for every code step: `npm run typec
   Rollback: `git revert 848be49`.
 - After the upload: the server keeps `/home-v2/` unless that folder is deleted there by hand (an upload adds and
   overwrites files, it does not delete them).
+
+### T15 — Case studies, second round (low, needs JEF) · DONE 10 Nov · committed, built and pushed, not yet deployed
+- Scope: `/case-studies/` and `/el/case-studies/`, the proof page of `plans/copy-strategy-audit-synthesis.md`
+  §10 F (place, brief, scope, what was done, client voice, listen link first). Same process as T12 to T14: audit,
+  one batch of questions, rounds on the `next-dev` preview reported as a table, commit only after JEF's ΟΚ.
+- Audit (10 Nov): the Greek hero still carried the retired page name and scare quotes («Ιστορίες Χώρων: Πώς ο ήχος
+  "χτίζει" πραγματικές εμπειρίες»); "Five venues, five briefs" appeared twice, as the intro heading and as the
+  cases heading, and the intro sentence repeated the meta description; the hero's second button ("Book a call")
+  only scrolled to the CTA band; no project named or linked the service it shows; "for the past two years" on three
+  projects was relative and, for two of them, wrong.
+- **JEF's answers (10 Nov), the only facts to use:** start years Beach House 2023, Pelicanos 2025, Yam 2025, Hera
+  2026; services as proposed (Signature Playlists for Beach House, Pelicanos, Yam and Hera; Event Soundtracks for
+  Levantis); no client quotes exist; the Hera SoundCloud sample does not exist yet («Ηχητικό δείγμα σύντομα»
+  stays); the player stays under the text (no listen-first layout); the hero's second button reads «Επικοινωνία» /
+  "Contact" and opens the contact page.
+- What changed: layout `b2f65b0` (optional "Service: <name>" line per project with a `.se-link` to the service
+  page, from the new keys `cases.service_label`, `items[].service`, `items[].service_link`; hero ghost button →
+  `/contact`; gold words «Ακούστε» / "Hear" in the hero and «Κυκλάδες» / "Cyclades" in the intro); copy `8e42a2d`
+  (hero «Ακούστε τη δουλειά μας» / "Hear our work" with the subtitle «Τι μας ζήτησε κάθε χώρος, τι φτιάξαμε, και
+  δείγματα από τις playlists για να κρίνετε μόνοι σας.»; intro «Από την Αθήνα ως τις Κυκλάδες» with the five places
+  and the two services; «Συνεργαζόμαστε από το <έτος>.» / "Since <year>." on four projects; the Greek Beach House
+  line without «ακούγονται σαν»; «Δείτε τα έργα» / "See the case studies"). Sitemap override `/case-studies` =
+  2026-11-10.
+- Greek rejected on the way (do not reintroduce): «Μουσική στους χώρους όπου παίζει» (a poetic heading that says
+  nothing), «Η μουσική μας σε πέντε ελληνικούς χώρους» (SensEar only works in Greece, so "Greek" says nothing),
+  «…για τον καθένα» after neuter nouns, and a subtitle that only listed venue types («so what»). A heading has to
+  tell the reader what they get from the page.
+- Gates on `8e42a2d`: typecheck 0 errors, lint 0 errors (8 known warnings), build passed (63 / 32 URLs). Headless
+  pass on `review-out`: both pages at 1440 and 375 px with no first-party console errors and no horizontal scroll;
+  five service links per language to the localized service pages; the contact buttons open `/contact/` and
+  `/el/contact/`; none of the old phrases left.
+  - **Rollback:** `git revert 8e42a2d b2f65b0`; then rebuild `out/` and upload.
 
 ---
 
