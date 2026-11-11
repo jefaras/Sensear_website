@@ -19,29 +19,34 @@ const goldify = (scUrl: string) =>
 
 /* scUrl/scLink are optional: a case study without a published track yet renders
    a "coming soon" placeholder instead of the SoundCloud embed. */
-type CaseAsset = { img: string; scUrl?: string; scLink?: string };
+type CaseAsset = { id: string; img: string; scUrl?: string; scLink?: string };
 
 const RAW_ASSETS: CaseAsset[] = [
     {
+        id: 'beach-house',
         img: '/images/case-studies/case-study-beach-house.webp',
         scUrl: 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2232613925&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true',
         scLink: 'https://soundcloud.com/sensear_music/beach-house-antiparos-morning-playlist-sample',
     },
     {
+        id: 'pelicanos',
         img: '/images/case-studies/case-study-pelicanos.webp',
         scUrl: 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%3Atracks%3A2231292320%3Fsecret_token%3Ds-nZKQRmscC5Z&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true',
         scLink: 'https://soundcloud.com/sensear_music/pelicanos-sifnos-jazzy-playlist-1/s-nZKQRmscC5Z',
     },
     {
+        id: 'yam',
         img: '/images/case-studies/case-study-yam.jpg',
         scUrl: 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%3Atracks%3A2231292317%3Fsecret_token%3Ds-un8Lzx2ibpI&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true',
         scLink: 'https://soundcloud.com/sensear_music/yam-antiparos-night-playlist-2/s-un8Lzx2ibpI',
     },
     {
+        id: 'hera-hotel',
         img: '/images/case-studies/case-study-hera.webp',
         // SoundCloud clip pending; CaseRow shows the localized "coming soon" note.
     },
     {
+        id: 'levantis',
         img: '/images/case-studies/case-study-levantis.webp',
         scUrl: 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2231959406&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true',
         scLink: 'https://soundcloud.com/sensear_music/levantis-sample',
@@ -122,6 +127,7 @@ export default async function CaseStudiesV3({ params }: { params: Promise<{ lang
                     {content.items.map((item: any, i: number) => (
                         <CaseRow
                             key={item.title}
+                            id={assetMap[i].id}
                             item={item}
                             image={assetMap[i].img}
                             scUrl={assetMap[i].scUrl}

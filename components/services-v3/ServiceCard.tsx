@@ -6,7 +6,7 @@ interface ServiceCardProps {
     service: {
         title: string;
         subtitle: string;
-        desc: string;
+        desc: string[];
         ideal_for: string;
         cta: string;
         image_alt?: string;
@@ -35,10 +35,15 @@ export function ServiceCard({ service, href, image }: ServiceCardProps) {
                 <p className="se-gold-text font-didot mb-[clamp(13px,1.02vw,18px)] text-[clamp(1.06rem,1.2vw,1.32rem)]">
                     {service.subtitle}
                 </p>
-                <p
-                    className="se-html mb-[clamp(13px,1.02vw,18px)] text-[clamp(0.92rem,1.05vw,1.15rem)] leading-[1.6] text-[#faf6f1]/62"
-                    dangerouslySetInnerHTML={{ __html: service.desc }}
-                />
+                <div className="mb-[clamp(13px,1.02vw,18px)] flex flex-col gap-[clamp(11px,0.88vw,15px)]">
+                    {service.desc.map((paragraph, i) => (
+                        <p
+                            key={i}
+                            className="se-html text-[clamp(0.92rem,1.05vw,1.15rem)] leading-[1.6] text-[#faf6f1]/62"
+                            dangerouslySetInnerHTML={{ __html: paragraph }}
+                        />
+                    ))}
+                </div>
                 <p className="mb-[clamp(20px,1.59vw,28px)] text-[clamp(0.88rem,1vw,1.1rem)] leading-[1.55] text-[#faf6f1]/50">
                     {goldPrefix(service.ideal_for)}
                 </p>

@@ -22,7 +22,8 @@ interface ServiceContent {
         image_caption: string;
         image_alt: string;
     };
-    intro: { title: string; p1: string; p2: string };
+    // paragraphs[0] is the one-sentence definition (lead style); the rest are body paragraphs.
+    intro: { title: string; paragraphs: string[] };
     what_we_do: { title: string; items: { title: string; description: string }[]; image_alt?: string };
     perfect_for: { title: string; items: { title: string; description: string; link: string }[]; image_alt?: string };
     // Optional blocks: a page shows them only once its dictionary has them (T6, page by page).
@@ -185,12 +186,18 @@ export function ServiceDetail({ lang, content, section5, images, em }: ServiceDe
                             {emphasize(content.intro.title, em.statement, true)}
                         </h2>
                     </ScrollReveal>
-                    <ScrollReveal delay={0.12}>
-                        <p className="se-html mx-auto mb-[clamp(17px,1.31vw,23px)] max-w-[900px] text-[clamp(1.2rem,2vw,1.6rem)] leading-[1.5] text-[#faf6f1]" dangerouslySetInnerHTML={{ __html: content.intro.p1 }} />
-                    </ScrollReveal>
-                    <ScrollReveal delay={0.18}>
-                        <p className="se-html mx-auto max-w-[820px] text-[clamp(1.09rem,1.44vw,1.38rem)] leading-[1.65] text-[#faf6f1]/58" dangerouslySetInnerHTML={{ __html: content.intro.p2 }} />
-                    </ScrollReveal>
+                    {content.intro.paragraphs.map((paragraph, i) => (
+                        <ScrollReveal key={i} delay={0.12 + i * 0.06}>
+                            <p
+                                className={`se-html mx-auto ${
+                                    i === 0
+                                        ? 'mb-[clamp(17px,1.31vw,23px)] max-w-[900px] text-[clamp(1.2rem,2vw,1.6rem)] leading-[1.5] text-[#faf6f1]'
+                                        : 'max-w-[820px] text-[clamp(1.09rem,1.44vw,1.38rem)] leading-[1.65] text-[#faf6f1]/58'
+                                } ${i > 0 && i < content.intro.paragraphs.length - 1 ? 'mb-[clamp(15px,1.19vw,21px)]' : ''}`}
+                                dangerouslySetInnerHTML={{ __html: paragraph }}
+                            />
+                        </ScrollReveal>
+                    ))}
                 </div>
             </section>
 
@@ -198,7 +205,8 @@ export function ServiceDetail({ lang, content, section5, images, em }: ServiceDe
                 the statement on the same panel colour, with no divider; the divider sits above
                 section 3 instead, where the colour changes back. */}
             {content.case_study && (
-                <section className="relative overflow-hidden bg-[#0e0d0c] py-[clamp(101px,7.95vw,140px)]">
+                // id: anchor target for the example links on the services page (e.g. /services/audio-upgrades/#case-study).
+                <section id="case-study" className="relative overflow-hidden bg-[#0e0d0c] py-[clamp(101px,7.95vw,140px)]">
                     <div className="relative z-10 mx-auto max-w-[min(1760px,100%)] px-[clamp(20px,1.59vw,28px)] sm:px-[clamp(27px,2.1vw,37px)]">
                         {/* With a photo: photo left, text right (text first on phones). Without one
                             (e.g. a client who cannot be named yet): title left, text right. */}

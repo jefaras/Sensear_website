@@ -90,7 +90,7 @@ export default async function ServicesV3({ params }: { params: Promise<{ lang: L
                         imageSide="right"
                     />
 
-                    <StaggerChildren className="grid grid-cols-1 gap-[clamp(25px,1.99vw,35px)] md:grid-cols-2" staggerDelay={0.1}>
+                    <StaggerChildren className="grid grid-cols-1 gap-x-[clamp(25px,1.99vw,35px)] gap-y-[clamp(56px,6vw,80px)] md:grid-cols-2" staggerDelay={0.1}>
                         <ServiceCard
                             service={content.services.strategy}
                             href={localizedPath('/services/sonic-identity')}
@@ -131,7 +131,7 @@ export default async function ServicesV3({ params }: { params: Promise<{ lang: L
                         service={content.services.experience_design}
                         href={localizedPath('/services/experience-design')}
                         image="/images/services/experience-design/experience-design-services-block.jpg"
-                        imageSide="left"
+                        imageSide="right"
                     />
                 </div>
             </section>

@@ -19,9 +19,11 @@ interface CaseRowProps {
     comingSoonLabel: string;
     imageSide: 'left' | 'right';
     isLast?: boolean;
+    /** Anchor target, e.g. /case-studies/#hera-hotel (linked from the services page). */
+    id?: string;
 }
 
-export function CaseRow({ item, image, scUrl, scLink, serviceLabel, serviceHref, listenPrefix, comingSoonLabel, imageSide, isLast = false }: CaseRowProps) {
+export function CaseRow({ item, image, scUrl, scLink, serviceLabel, serviceHref, listenPrefix, comingSoonLabel, imageSide, isLast = false, id }: CaseRowProps) {
     // Venue name only (dict title bundles ", <location>"); strip the trailing
     // comma segment so the H3 shows "Beach House" and the location sits in the
     // Didot subtitle. Falls back to the full title if there is no comma.
@@ -29,7 +31,8 @@ export function CaseRow({ item, image, scUrl, scLink, serviceLabel, serviceHref,
 
     return (
         <div
-            className={`grid grid-cols-1 items-center gap-[clamp(53px,4.2vw,74px)] lg:grid-cols-2 ${isLast ? '' : 'mb-[clamp(79px,6.25vw,110px)]'}`}
+            id={id}
+            className={`grid scroll-mt-[clamp(96px,7.5vw,132px)] grid-cols-1 items-center gap-[clamp(53px,4.2vw,74px)] lg:grid-cols-2 ${isLast ? '' : 'mb-[clamp(79px,6.25vw,110px)]'}`}
         >
             <ScrollReveal direction={imageSide} className={imageSide === 'left' ? '' : 'lg:order-2'}>
                 <div className="relative aspect-[3/4] overflow-hidden rounded-lg">

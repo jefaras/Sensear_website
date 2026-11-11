@@ -6,7 +6,7 @@ interface ServiceRowProps {
     service: {
         title: string;
         subtitle: string;
-        desc: string;
+        desc: string[];
         ideal_for: string;
         cta: string;
         image_alt?: string;
@@ -18,9 +18,11 @@ interface ServiceRowProps {
 
 export function ServiceRow({ service, href, image, imageSide }: ServiceRowProps) {
     return (
-        <div className="mb-[clamp(101px,7.95vw,140px)] grid grid-cols-1 items-center gap-[clamp(53px,4.2vw,74px)] lg:grid-cols-2">
+        // Same photo frame as IndustryRow (3:4 portrait, equal halves) so the two listing pages match.
+        // The bottom margin is what separates one service from the next.
+        <div className="mb-[clamp(120px,11vw,200px)] grid grid-cols-1 items-center gap-[clamp(53px,4.2vw,74px)] lg:grid-cols-2">
             <ScrollReveal direction={imageSide} className={imageSide === 'left' ? '' : 'lg:order-2'}>
-                <div className="relative aspect-[4/3] overflow-hidden rounded-lg">
+                <div className="relative aspect-[3/4] overflow-hidden rounded-lg">
                     <Image src={image} alt={service.image_alt ?? service.title} fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" />
                     <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(11,10,10,0)_60%,rgba(11,10,10,0.35))]" />
                 </div>
@@ -38,10 +40,15 @@ export function ServiceRow({ service, href, image, imageSide }: ServiceRowProps)
                     </p>
                 </ScrollReveal>
                 <ScrollReveal delay={0.14}>
-                    <p
-                        className="se-html mb-[clamp(18px,1.42vw,25px)] max-w-[600px] text-[clamp(1.03rem,1.17vw,1.29rem)] leading-[1.65] text-[#faf6f1]/66"
-                        dangerouslySetInnerHTML={{ __html: service.desc }}
-                    />
+                    <div className="mb-[clamp(18px,1.42vw,25px)] flex max-w-[600px] flex-col gap-[clamp(15px,1.19vw,21px)]">
+                        {service.desc.map((paragraph, i) => (
+                            <p
+                                key={i}
+                                className="se-html text-[clamp(1.03rem,1.17vw,1.29rem)] leading-[1.65] text-[#faf6f1]/66"
+                                dangerouslySetInnerHTML={{ __html: paragraph }}
+                            />
+                        ))}
+                    </div>
                 </ScrollReveal>
                 <ScrollReveal delay={0.18}>
                     <p className="mb-[clamp(28px,2.22vw,39px)] max-w-[600px] text-[clamp(0.97rem,1.1vw,1.21rem)] leading-[1.6] text-[#faf6f1]/55">

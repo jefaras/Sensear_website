@@ -1646,7 +1646,7 @@
         },
         "intro": {
             "title": "What each service does",
-            "p1": "<strong>Signature Playlists</strong> set the music your venue plays every day. <strong>Event Soundtracks</strong> plan the music for one specific event, <strong>Sonic Identity</strong> writes down how your brand sounds across places and channels, and <strong>Audio Upgrades</strong> improve the sound system and the room the music plays in.",
+            "p1": "<strong>Signature Playlists</strong> set the music your venue plays every day. <strong>Event Soundtracks</strong> plan the music for one specific event, <strong>Sonic Identity</strong> writes down how your brand sounds across places and channels, and <strong>Audio Upgrades</strong> improve your sound system and your room's acoustics.",
             "p2": "Each service stands on its own, and they are built to work together. Every one starts with a conversation about your space, and <strong>the first call or visit is free</strong>."
         },
         "starting_point": {
@@ -1657,7 +1657,11 @@
             "playlists": {
                 "title": "Signature Playlists",
                 "subtitle": "The music you play every day",
-                "desc": "A playlist for every zone of your venue, scheduled from opening to closing and <strong>chosen by us, track by track</strong>. We suggest new music every month and a change each season, and everything plays on a platform <strong>licensed for business use</strong>. At Hera Hotel in Athens, each of the three zones has its own playlist. The price is set for your venue alone, and the service renews every year.",
+                "desc": [
+                    "A playlist for every zone of your venue, scheduled from opening to closing and <strong>chosen by us, track by track</strong>. For example, at <a href=\"/case-studies/#hera-hotel\" class=\"se-link\">Hera Hotel</a> in Athens, each of the three zones has its own playlist.",
+                    "We suggest new music every month and a change each season, and everything plays on a platform <strong>licensed for business use</strong>.",
+                    "The price is set for your venue alone, and the service renews every year."
+                ],
                 "ideal_for": "Ideal for: hotels, restaurants, bars, shops, and wellness and cultural spaces that have outgrown generic background music.",
                 "cta": "Explore Signature Playlists",
                 "image_alt": "A woman resting her head against a vinyl record"
@@ -1665,7 +1669,11 @@
             "events": {
                 "title": "Event Soundtracks",
                 "subtitle": "One event, from arrival to the last hour",
-                "desc": "Music planned for one specific event, with <strong>curated playlists, DJ sets by our own DJs, or both</strong>. We visit the venue for free before we send our offer, you approve the music before the day, and we handle the sound checks and playback. At Levantis in Paros, we set the music for an exhibition opening with around 100 guests. Each event is priced on its own, and <strong>a deposit secures your date</strong>.",
+                "desc": [
+                    "Music planned for one specific event, with <strong>curated playlists, DJ sets by our own DJs, or both</strong>. For example, at <a href=\"/case-studies/#levantis\" class=\"se-link\">Levantis</a> in Paros, we set the music for an exhibition opening with around 100 guests.",
+                    "We visit the venue for free before we send our offer, you approve the music before the day, and we handle the sound checks and playback.",
+                    "Each event is priced on its own, and <strong>a deposit secures your date</strong>."
+                ],
                 "ideal_for": "Ideal for: weddings, private parties, business dinners, launches and corporate events.",
                 "cta": "Explore Event Soundtracks",
                 "image_alt": "A DJ booth on an outdoor terrace under palm trees at dusk"
@@ -1673,15 +1681,21 @@
             "strategy": {
                 "title": "Sonic Identity",
                 "subtitle": "How your brand sounds, in writing",
-                "desc": "We set your brand's musical direction in a workshop with your marketing and business teams, then deliver <strong>two or three reference playlists and written guidelines</strong>. You own them and can pass them to your agencies and partners. It is a <strong>one-time project</strong>, usually ready in 2 to 3 weeks.",
+                "desc": [
+                    "We set your brand's musical direction in a workshop with your marketing and business teams, then deliver <strong>two or three reference playlists and written guidelines</strong>. You own them and can pass them to your agencies and partners.",
+                    "It is a <strong>one-time project</strong>, usually ready in 2 to 3 weeks."
+                ],
                 "ideal_for": "Ideal for: hotel groups and brands with several locations, a rebrand or a new opening, and brands that use music in their ads.",
                 "cta": "Explore Sonic Identity",
                 "image_alt": "A woman with orange hair wearing a black eye mask"
             },
             "upgrades": {
                 "title": "Audio Upgrades",
-                "subtitle": "Your sound system and the room itself",
-                "desc": "We visit with our partners in sound measurement, sound isolation and soundproofing, propose what needs to change, then <strong>supervise the installation and run the final tuning</strong>. You deal with <strong>one team and receive one invoice</strong>, and the on-site assessment is normally free. In a bar in central Athens, the music no longer reaches the neighbours upstairs.",
+                "subtitle": "Your sound system and your room's acoustics",
+                "desc": [
+                    "We visit with our partners in sound measurement, sound isolation and soundproofing, propose what needs to change, then <strong>supervise the installation and run the final tuning</strong>. For example, in a <a href=\"/services/audio-upgrades/#case-study\" class=\"se-link\">bar in central Athens</a>, the music no longer reaches the neighbours upstairs.",
+                    "You deal with <strong>one team and receive one invoice</strong>, and the on-site assessment is normally free."
+                ],
                 "ideal_for": "Ideal for: venues where guests struggle to talk over the music, the sound is thin or uneven, or the music reaches the neighbours.",
                 "cta": "Explore Audio Upgrades",
                 "image_alt": "A woman sitting beside a large floor-standing speaker and a rack of hi-fi equipment"
@@ -1689,7 +1703,10 @@
             "experience_design": {
                 "title": "Experience Design",
                 "subtitle": "The whole guest journey, designed.",
-                "desc": "We map how guests move through your venue, from the first click to the goodbye. Then we design every touchpoint to work together: sound, light, space, service and digital. We stay with you until the new experience is part of daily operation.",
+                "desc": [
+                    "We map how guests move through your venue, from the first click to the goodbye.",
+                    "Then we design every touchpoint to work together: sound, light, space, service and digital. We stay with you until the new experience is part of daily operation."
+                ],
                 "ideal_for": "For hotels, restaurants and venues that want a consistent guest experience people remember.",
                 "cta": "Explore Experience Design",
                 "image_alt": "Circular dinner table with candles and plants, set for an event"
@@ -1907,8 +1924,11 @@
         },
         "intro": {
             "title": "What Signature Playlists are",
-            "p1": "<strong>Signature Playlists</strong> are music programmes for your venue, built <strong>zone by zone</strong> and <strong>scheduled</strong> across the whole day, from opening to closing. We choose every track, and the playlists play on a platform <strong>licensed for business use</strong>.",
-            "p2": "Each zone keeps its <strong>own character</strong> while the <strong>music changes</strong> with the hours. We suggest <strong>new music</strong> every month and a change with each season, so regular guests and your staff are not hearing the same tracks all year."
+            "paragraphs": [
+                "<strong>Signature Playlists</strong> are music programmes for your venue, built <strong>zone by zone</strong> and <strong>scheduled</strong> across the whole day, from opening to closing.",
+                "We choose every track, and the playlists play on a platform <strong>licensed for business use</strong>.",
+                "Each zone keeps its <strong>own character</strong> while the <strong>music changes</strong> with the hours. We suggest <strong>new music</strong> every month and a change with each season, so regular guests and your staff are not hearing the same tracks all year."
+            ]
         },
         "case_study": {
             "kicker": "In practice",
@@ -2051,8 +2071,11 @@
         },
         "intro": {
             "title": "What Event Soundtracks cover",
-            "p1": "<strong>Event Soundtracks</strong> are music planned for one specific event, from the first guests to the last hour. Depending on the event, that means <strong>curated playlists</strong>, <strong>DJ sets</strong> by our own DJs, or both.",
-            "p2": "We visit the venue <strong>for free</strong> before we send our offer, and on the day we take care of the <strong>sound checks</strong> and <strong>playback</strong>, with our own equipment or the venue's."
+            "paragraphs": [
+                "<strong>Event Soundtracks</strong> are music planned for one specific event, from the first guests to the last hour.",
+                "Depending on the event, that means <strong>curated playlists</strong>, <strong>DJ sets</strong> by our own DJs, or both.",
+                "We visit the venue <strong>for free</strong> before we send our offer, and on the day we take care of the <strong>sound checks</strong> and <strong>playback</strong>, with our own equipment or the venue's."
+            ]
         },
         "case_study": {
             "kicker": "In practice",
@@ -2199,8 +2222,11 @@
         },
         "intro": {
             "title": "What Sonic Identity covers",
-            "p1": "<strong>Sonic Identity</strong> defines how your brand sounds, in your spaces and in every channel where music matters. We set the direction with your <strong>marketing and business teams</strong> and write it down as <strong>guidelines you own</strong>.",
-            "p2": "Your teams, agencies and partners can then follow it at a new opening or in a new campaign, <strong>without you in the room</strong>. Sonic Identity sets the rules once; Signature Playlists are the daily music that follows them."
+            "paragraphs": [
+                "<strong>Sonic Identity</strong> defines how your brand sounds, in your spaces and in every channel where music matters.",
+                "We set the direction with your <strong>marketing and business teams</strong> and write it down as <strong>guidelines you own</strong>.",
+                "Your teams, agencies and partners can then follow it at a new opening or in a new campaign, <strong>without you in the room</strong>. Sonic Identity sets the rules once; Signature Playlists are the daily music that follows them."
+            ]
         },
         "what_we_do": {
             "title": "What's included",
@@ -2326,8 +2352,11 @@
         },
         "intro": {
             "title": "What Audio Upgrades cover",
-            "p1": "<strong>Audio Upgrades</strong> cover both the <strong>sound system</strong> and <strong>your venue</strong> itself. We start by listening to your specific problems and needs, and we write them down carefully. Then we visit with our partners in sound measurement, sound isolation and soundproofing, test what you already have and propose what needs to change.",
-            "p2": "Our partners supply the equipment and carry out the installation and acoustic work. We arrange every visit, supervise the work and run the final tuning, so you deal with <strong>one team</strong> and receive <strong>one invoice</strong>."
+            "paragraphs": [
+                "<strong>Audio Upgrades</strong> improve the sound in your venue from two sides: the <strong>sound system</strong>, meaning the speakers and where they are placed, and the <strong>acoustics of the room</strong>, such as echo or sound reaching the neighbours.",
+                "We start by listening to your specific problems and needs, and we write them down carefully. Then we visit with our partners in sound measurement, sound isolation and soundproofing, test what you already have and propose what needs to change.",
+                "Our partners supply the equipment and carry out the installation and acoustic work. We arrange every visit, supervise the work and run the final tuning, so you deal with <strong>one team</strong> and receive <strong>one invoice</strong>."
+            ]
         },
         "case_study": {
             "kicker": "In practice",
@@ -2470,7 +2499,8 @@
         "intro": {
             "title": "What Experience Design is",
             "paragraphs": [
-                "Experience Design is the planning and building of <strong>everything a guest meets</strong> in your venue. That includes the website and booking, the arrival, the space, the light, the sound, the service and what happens after the visit.",
+                "Experience Design is the planning and building of <strong>everything a guest meets</strong> in your venue.",
+                "That includes the website and booking, the arrival, the space, the light, the sound, the service and what happens after the visit.",
                 "Most venues design these parts separately, with different people and at different times. Guests notice when the parts do not fit. We look at the whole visit <strong>through the guest's eyes</strong>, find where it breaks, and design each touchpoint to support <strong>the same story</strong>.",
                 "We do not stop at a report. We stay with you <strong>until the new experience is part of your daily operation</strong>."
             ]
