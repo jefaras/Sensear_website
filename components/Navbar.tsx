@@ -91,13 +91,20 @@ export function Navbar({ lang, navigation }: NavbarProps) {
                     ? isV3
                         ? "bg-[#0b0a0a]/85 backdrop-blur-md border-b border-[#faf6f1]/10"
                         : "bg-black lg:bg-black/95 shadow-lg"
-                    : "bg-transparent",
+                    : isV3
+                        // At the top of the page the bar sits over the hero photo: a lighter
+                        // frost of the scrolled state keeps the links readable on bright photos.
+                        ? "bg-[#0b0a0a]/35 backdrop-blur-md"
+                        : "bg-transparent",
                 lightText ? "text-white" : "text-black"
             )}
         >
-            <div className="mx-auto flex max-w-[min(1760px,100%)] items-center justify-between px-[clamp(20px,1.59vw,28px)] sm:px-[clamp(27px,2.1vw,37px)]">
+            {/* From 1880px wide the bar takes the hero's grid (SplitHero / home Hero: max 1920,
+                1.04fr | 0.96fr) so the links and actions sit centred over the photo column.
+                Narrower, the group no longer fits inside that column and stays right-aligned. */}
+            <div className="mx-auto flex max-w-[min(1760px,100%)] items-center justify-between px-[clamp(20px,1.59vw,28px)] sm:px-[clamp(27px,2.1vw,37px)] min-[1880px]:grid min-[1880px]:max-w-[1920px] min-[1880px]:grid-cols-[1.04fr_0.96fr] min-[1880px]:px-0">
                 {/* Logo with SENSEAR text */}
-                <Link href={localizedPath('/')} className="group flex items-center gap-3 shrink-0">
+                <Link href={localizedPath('/')} className="group flex items-center gap-3 shrink-0 justify-self-start min-[1880px]:pl-[clamp(27px,2.1vw,37px)]">
                     <div className="relative w-16 h-16">
                         <Image
                             src={lightText
@@ -122,7 +129,7 @@ export function Navbar({ lang, navigation }: NavbarProps) {
 
                 {/* Desktop Menu — nav links and the Contact/language actions are two
                     groups, separated by the larger outer gap. */}
-                <div className="hidden lg:flex items-center gap-[clamp(28px,2.6vw,52px)]">
+                <div className="hidden lg:flex items-center gap-[clamp(28px,2.6vw,52px)] min-[1880px]:justify-self-center">
                     <div className="flex items-center gap-6">
                         {links.map((link) => (
                             <Link
