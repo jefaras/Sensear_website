@@ -6,7 +6,11 @@ Narrative handoff & project status: `claude-code-handoff/BRIEFING.md`.
 
 ## Current work
 
-- Branch: `feat/case-study-new-client` — the Hera Hotel case study and the SEO tasks.
+- Branch: `main` is the live branch. `out/` is built from it in the main folder
+  (`C:\Users\jef\Documents\Antigravity`). Session worktrees branch from `main`; before editing,
+  check the worktree is level with `main`. Approved work is fast-forwarded into `main`, then
+  `out/` is rebuilt there. (`feat/case-study-new-client` was merged into `main` and retired on
+  11 Nov 2026.)
 - Current SEO task file: `docs/seo-claude-code-tasks-2026-10-30.md` (older SEO docs are kept in
   `docs/archive/` for history only).
 - The **v3 dark-editorial redesign** is built and cut over to the live routes. Its spec
