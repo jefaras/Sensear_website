@@ -26,6 +26,8 @@ const LOGOS: Record<string, string> = {
     'beach-house': '/images/homepage/clients/client-beach-house-antiparos.jpg',
     pelicanos: '/images/homepage/clients/client-pelicanos-sifnos.jpg',
     yam: '/images/homepage/clients/client-yam-antiparos.png',
+    // Gold SVG from olympicyachtshow.gr (JEF, 11 Nov).
+    'olympic-yacht-show': '/images/homepage/clients/client-olympic-yacht-show.svg',
 };
 
 interface Client {

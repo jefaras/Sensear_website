@@ -43,7 +43,8 @@
             "Signature Playlists",
             "Event Soundtracks",
             "Sonic Identity",
-            "Audio Upgrades"
+            "Audio Upgrades",
+            "Experience Design"
         ],
         "services": {
             "title": "Four services, one sound.",
@@ -161,7 +162,7 @@
             "image_alt": "Shelf of vinyl records"
         },
         "clients": {
-            "title": "Hotels, restaurants and bars that trust us with their music",
+            "title": "Hotels, restaurants, bars and events that trust us with their music",
             "items": [
                 {
                     "key": "hera",
@@ -198,6 +199,12 @@
                     "name": "YAM",
                     "location": "Antiparos",
                     "alt": "Yam logo"
+                },
+                {
+                    "key": "olympic-yacht-show",
+                    "name": "OLYMPIC YACHT SHOW",
+                    "location": "Lavrio",
+                    "alt": "Olympic Yacht Show logo"
                 }
             ]
         },
