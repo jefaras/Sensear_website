@@ -493,12 +493,12 @@
     },
     "blog": {
         "meta": {
-            "title": "The Curation Journal: notes on music in venues",
-            "description": "Notes on music in venues: what the research measured, what hotel groups do with their sound, and how curation works once the playlist is live."
+            "title": "The Curation Journal: music in hotels, restaurants and bars",
+            "description": "Research, examples and practical guides on music in venues: how it affects guests and staff, what applies to licensing, and how to measure results."
         },
         "hero": {
             "title": "The Curation Journal",
-            "subtitle": "Research on music in rooms, examples from hotel groups, and the day-to-day of keeping a programme current.",
+            "subtitle": "What research and practice show about music in a venue: how it affects your guests and your team, and what it takes to plan it well.",
             "primary_cta": "See the articles",
             "secondary_cta": "Subscribe to the newsletter"
         },
@@ -507,7 +507,7 @@
             "read_more": "Read the article"
         },
         "recent": {
-            "headline": "Notes on the sound that shapes a room"
+            "headline": "Articles on music in venues"
         },
         "back_button": "Back to the journal",
         "blog_cta": {
