@@ -27,8 +27,8 @@ export default async function BlogV3({ params }: { params: Promise<{ lang: Local
     const gridArticles = featuredArticle ? content.articles.slice(1) : content.articles;
 
     const em = lang === 'el'
-        ? { recent: 'διαμορφώνει', newsletter: 'απευθείας' }
-        : { recent: 'shapes', newsletter: 'straight' };
+        ? { recent: 'χώρους', newsletter: 'απευθείας' }
+        : { recent: 'venues', newsletter: 'straight' };
 
     return (
         <V3Root>

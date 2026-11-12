@@ -256,7 +256,7 @@
             "link_faq": "FAQ",
             "link_sitemap": "Sitemap",
             "col_newsletter": "JOIN THE JOURNAL",
-            "newsletter_blurb": "Notes on music, atmosphere & sonic branding.",
+            "newsletter_blurb": "Articles on music, atmosphere and sonic branding.",
             "newsletter_placeholder": "Your email",
             "newsletter_thanks": "Thank you! ✦",
             "recaptcha_notice": {
@@ -493,7 +493,7 @@
     },
     "blog": {
         "meta": {
-            "title": "The Curation Journal: music in hotels, restaurants and bars",
+            "title": "Music in hotels, restaurants and bars: articles",
             "description": "Research, examples and practical guides on music in venues: how it affects guests and staff, what applies to licensing, and how to measure results."
         },
         "hero": {
@@ -534,7 +534,7 @@
                     },
                     {
                         "type": "paragraph",
-                        "value": "Our earlier post looked at how music changes how long guests stay and how much they spend. This one asks a narrower question: can music change which dish, drink or bottle a guest picks?"
+                        "value": "[Our earlier post](/blog/background-music-shapes-customer-behavior/) looked at how music changes how long guests stay and how much they spend. This one asks a narrower question: can music change which dish, drink or bottle a guest picks?"
                     },
                     {
                         "type": "paragraph",
@@ -833,7 +833,7 @@
                     },
                     {
                         "type": "paragraph",
-                        "value": "An earlier post looked at music that fits a brand. This one looks at music that people recognise. The two are not the same. A track can fit your venue perfectly and be new to every guest, or be known to everyone and fit nothing."
+                        "value": "[An earlier post](/blog/brand-music-converts-browsers-buyers/) looked at music that fits a brand. This one looks at music that people recognise. The two are not the same. A track can fit your venue perfectly and be new to every guest, or be known to everyone and fit nothing."
                     },
                     {
                         "type": "paragraph",
@@ -1027,7 +1027,7 @@
                     },
                     {
                         "type": "paragraph",
-                        "value": "And more is not better. Stacking strong cues does not add up to a strong experience. Abercrombie & Fitch combined dark rooms, loud music and heavy fragrance, and many shoppers described the result as overload (see our article on music as a filter)."
+                        "value": "And more is not better. Stacking strong cues does not add up to a strong experience. Abercrombie & Fitch combined dark rooms, loud music and heavy fragrance, and many shoppers described the result as overload (see [our article on music as a filter](/blog/music-as-a-filter-who-walks-in/))."
                     },
                     {
                         "type": "heading",
@@ -1213,7 +1213,7 @@
                     },
                     {
                         "type": "paragraph",
-                        "value": "Third, the music has to suit your venue. A legal playlist that does not fit your space costs you in the ways our other articles describe. Some suppliers now also offer music generated entirely by AI and say that no fees apply to it. As far as we can find, no Greek court has ruled on this yet."
+                        "value": "Third, the music has to suit your venue. A legal playlist that does not fit your space costs you in the ways [our other articles](/blog/) describe. Some suppliers now also offer music generated entirely by AI and say that no fees apply to it. As far as we can find, no Greek court has ruled on this yet."
                     },
                     {
                         "type": "heading",
@@ -1348,7 +1348,7 @@
                             "Noise is the top complaint. In Zagat's 2018 survey of about 13,000 American diners, noise ranked as the most irritating part of eating out, ahead of service and prices ([White Hutchinson, 2018](https://whitehutchinson.com/news/lenews/2018/january/article103.shtml)).",
                             "Willingness to spend falls early. In a lab study, 28 people read aloud over recorded restaurant noise at levels from 35 to 85 dB(A). They started to feel disturbed above about 52 dB(A), and their willingness to spend time and money in that restaurant started to fall at about the same point. Above about 57 dB(A), the effort they put into their voice rose twice as fast. The researcher's advice was to keep background noise below 50 to 55 dB(A) ([Bottalico, 2018](https://acoustics.org/4ans11-lombard-effect-in-restaurant-setting-how-much-would-you-spend-to-eat-at-this-restaurant-pasquale-bottalico/)).",
                             "Real rooms are louder than that. Recordings from 15 restaurants, cafés and bars in Singapore ranged from about 61 to 76 dB(A). In cafés, louder recordings were rated less pleasant. In bars, louder recordings were rated more pleasant ([Lindborg & Friberg, 2016](https://doi.org/10.3390/app6120405)). The right level depends on what the room is for.",
-                            "The wrong music can be worse than none. In a 20-week study in 16 Swedish restaurants, random chart hits that did not fit the brand performed below the weeks with no music at all, according to the study report ([Soundtrack Your Brand & HUI Research, 2017](https://www.researchgate.net/publication/315800050_The_impact_of_music_in_restaurants)). Our earlier post on brand-fit music covers the same study from the other side.",
+                            "The wrong music can be worse than none. In a 20-week study in 16 Swedish restaurants, random chart hits that did not fit the brand performed below the weeks with no music at all, according to the study report ([Soundtrack Your Brand & HUI Research, 2017](https://www.researchgate.net/publication/315800050_The_impact_of_music_in_restaurants)). [Our earlier post on brand-fit music](/blog/brand-music-converts-browsers-buyers/) covers the same study from the other side.",
                             "Quiet hours are now routine in some shops. Morrisons runs a weekly quieter hour in its UK stores: music off, lights lowered, no announcements, quieter checkouts ([The Scotsman](https://www.scotsman.com/business/supermarket-to-introduce-quieter-hour-in-all-of-its-stores-583881)). Tesco trialled the same idea after a parent of an autistic child described the problem as sensory overload ([The Grocer](https://www.thegrocer.co.uk/news/tesco-trials-quiet-hour-to-help-autistic-shoppers/547463.article)).",
                             "Even loud venues are told to offer quiet. The World Health Organization's 2022 standard for safe listening at venues and events recommends a maximum average level, sound monitoring, and quiet zones where people can rest their ears ([WHO, 2022](https://www.who.int/news/item/02-03-2022-who-releases-new-standard-to-tackle-rising-threat-of-hearing-loss))."
                         ]
@@ -1360,7 +1360,7 @@
                     },
                     {
                         "type": "paragraph",
-                        "value": "Silence is not the goal. Field studies in shops and restaurants usually find that people stay longer and spend more with suitable music than without it (see our post on how music shapes buyer behaviour). A completely silent dining room also has its own problems: every plate, every coffee machine and every conversation at the next table becomes easy to hear. Good background music masks those sounds and gives guests privacy."
+                        "value": "Silence is not the goal. Field studies in shops and restaurants usually find that people stay longer and spend more with suitable music than without it (see [our post on how music shapes buyer behaviour](/blog/background-music-shapes-customer-behavior/)). A completely silent dining room also has its own problems: every plate, every coffee machine and every conversation at the next table becomes easy to hear. Good background music masks those sounds and gives guests privacy."
                     },
                     {
                         "type": "paragraph",
@@ -1547,7 +1547,7 @@
                     },
                     {
                         "type": "paragraph",
-                        "value": "Agree who controls the volume, and how. Staff should know the agreed level for each part of the day and should be able to report a problem without switching to their own playlist. This also stops the slow volume creep described in our article on sound fatigue."
+                        "value": "Agree who controls the volume, and how. Staff should know the agreed level for each part of the day and should be able to report a problem without switching to their own playlist. This also stops the slow volume creep described in [our article on sound fatigue](/blog/sound-fatigue-and-silence/)."
                     },
                     {
                         "type": "paragraph",
@@ -1630,7 +1630,7 @@
                     },
                     {
                         "type": "paragraph",
-                        "value": "Our post on how music shapes buyer behaviour ends with a short \"test, then tune\" list. This article is the full version."
+                        "value": "[Our post on how music shapes buyer behaviour](/blog/background-music-shapes-customer-behavior/) ends with a short \"test, then tune\" list. This article is the full version."
                     },
                     {
                         "type": "heading",
@@ -1877,7 +1877,7 @@
                         "items": [
                             "Local music draws visitors' attention to local food. In a study with 193 Danish and Chinese students, participants looked at menus while hearing either a traditional Chinese piece or a Western jazz piece. In both groups, people chose more of the food that matched the music. But the music changed where people looked only when it came from the other culture. Chinese music drew Danish eyes to Chinese dishes, and Western music drew Chinese eyes to Western dishes. Music from their own culture did not change where they looked ([Peng-Li et al., 2020](https://doi.org/10.3390/foods9081109)).",
                             "Authentic atmosphere shapes how guests feel. In a survey of 348 diners in Chinese restaurants in the United States, a more authentic atmosphere led to stronger positive emotions, and those emotions drove guests' intention to come back and recommend the restaurant. Music was one of the elements that most clearly predicted positive emotions, together with the menu and the furnishings ([Jang, Liu & Namkung, 2011](https://doi.org/10.1108/09596111111143395)).",
-                            "Origin cues steer choices, and familiar music makes people comfortable. Our earlier articles cover both: music from a place nudges guests towards that place's food and wine, and music guests recognise lowers the effort of being somewhere new."
+                            "Origin cues steer choices, and familiar music makes people comfortable. Our earlier articles cover both: [music from a place nudges guests towards that place's food and wine](/blog/can-music-change-what-guests-order/), and [music guests recognise](/blog/why-familiar-music-sells/) lowers the effort of being somewhere new."
                         ]
                     },
                     {
@@ -1907,7 +1907,7 @@
                     },
                     {
                         "type": "paragraph",
-                        "value": "One practical point: most Greek commercial repertoire is represented by the Greek collecting societies, so a programme with more Greek music needs the right licences (see our guide to music licensing in Greece)."
+                        "value": "One practical point: most Greek commercial repertoire is represented by the Greek collecting societies, so a programme with more Greek music needs the right licences (see [our guide to music licensing in Greece](/blog/music-licensing-greece-venues/))."
                     },
                     {
                         "type": "heading",
@@ -2918,7 +2918,7 @@
             }
         ],
         "newsletter_cta": {
-            "title": "Notes on sound, straight to you",
+            "title": "The journal, straight to you",
             "subtitle": "New articles on music in venues, in your inbox when they are published.",
             "placeholder": "Your email",
             "submit": "Subscribe",

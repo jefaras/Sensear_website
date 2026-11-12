@@ -62,6 +62,7 @@ const LAST_MODIFIED_OVERRIDES: Record<string, string> = {
     // T13 journal rewrites (copy in the dictionaries). Add each page here in its own T13 commit.
     // The hub's cards carry each article's title and description, so it moves with the last article round.
     // Hub subtitle, meta title/description and list heading rewritten (EN + EL) on 12 Nov; covers /blog/ and /el/blog/.
+    // Later on 12 Nov: new meta title/description, newsletter title, list-heading emphasis, and internal links in 8 articles.
     '/blog': '2026-11-12T00:00:00.000Z',
     '/blog/how-top-hospitality-brands-design-sound': '2026-11-06T00:00:00.000Z',
     '/blog/three-reasons-make-music-hospitality': '2026-11-06T00:00:00.000Z',
