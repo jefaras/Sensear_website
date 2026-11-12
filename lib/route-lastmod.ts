@@ -72,6 +72,7 @@ const LAST_MODIFIED_OVERRIDES: Record<string, string> = {
     '/blog/background-music-shapes-customer-behavior': '2026-11-09T00:00:00.000Z',
     '/blog/service-environment-shapes-wait-time': '2026-11-09T00:00:00.000Z',
     '/blog/can-music-change-what-guests-order': '2026-11-12T00:00:00.000Z',
+    '/blog/music-as-a-filter-who-walks-in': '2026-11-12T00:00:00.000Z',
 }
 
 const BLOG_POST_PREFIX = '/blog/'
