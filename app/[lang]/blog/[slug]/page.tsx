@@ -30,6 +30,7 @@ const BLOG_PUBLISHED_DATES: Record<string, string> = {
     'sound-fatigue-and-silence': '2026-11-12',
     'music-and-your-staff': '2026-11-12',
     'how-to-measure-music-results': '2026-11-12',
+    'music-for-international-guests': '2026-11-12',
 };
 
 export const dynamicParams = false;

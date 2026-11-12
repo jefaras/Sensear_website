@@ -44,6 +44,7 @@ export const SITEMAP_ROUTES = [
     '/blog/sound-fatigue-and-silence',
     '/blog/music-and-your-staff',
     '/blog/how-to-measure-music-results',
+    '/blog/music-for-international-guests',
     '/contact',
     '/faq',
     '/privacy',
