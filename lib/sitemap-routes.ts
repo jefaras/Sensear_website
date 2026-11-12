@@ -39,6 +39,7 @@ export const SITEMAP_ROUTES = [
     '/blog/can-music-change-what-guests-order',
     '/blog/music-as-a-filter-who-walks-in',
     '/blog/why-familiar-music-sells',
+    '/blog/when-the-senses-agree',
     '/contact',
     '/faq',
     '/privacy',
