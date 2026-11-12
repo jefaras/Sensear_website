@@ -22,6 +22,7 @@ const BLOG_PUBLISHED_DATES: Record<string, string> = {
     'background-music-shapes-customer-behavior': '2025-03-08',
     'service-environment-shapes-wait-time': '2025-03-15',
     'sonic-seasoning-how-sound-changes-taste': '2026-11-06',
+    'can-music-change-what-guests-order': '2026-11-12',
 };
 
 export const dynamicParams = false;

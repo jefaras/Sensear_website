@@ -517,6 +517,145 @@
         },
         "articles": [
             {
+                "title": "Can music change what guests order?",
+                "desc": "Not how much guests spend, but what they choose: what field and lab studies found about music, volume, genre and the order itself.",
+                "tag": "Research",
+                "link": "can-music-change-what-guests-order",
+                "image": "/images/blog/blog-music-what-guests-order.jpg",
+                "ogImage": "/images/blog/blog-music-what-guests-order-share.jpg",
+                "author": "SensEar Team",
+                "alt": "Black-and-white photo of a couple sipping frozen cocktails through straws on a wicker sofa",
+                "displayDate": "November 12, 2026",
+                "structuredContent": [
+                    {
+                        "type": "heading",
+                        "level": 2,
+                        "value": "Quick take"
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "Our earlier post looked at how music changes how long guests stay and how much they spend. This one asks a narrower question: can music change which dish, drink or bottle a guest picks?"
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "The answer from the research is yes, in three specific ways. Music that signals a country steers guests towards that country's food and wine. Lower volume steers them towards lighter, healthier options. And music genre nudges the choice between healthy and indulgent, and between savoury and sweet. The effects are measurable, but they work best when the music fits what the menu already offers."
+                    },
+                    {
+                        "type": "heading",
+                        "level": 2,
+                        "value": "Three routes from the speaker to the order"
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "The first route is origin. Music carries a flag. When a track sounds French, Italian or Greek, the matching dishes feel like the natural choice. Guests rarely notice this happening."
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "The second route is arousal. Louder music raises energy and lowers self-control, which favours indulgent choices. Quieter music relaxes people, which favours lighter choices ([Biswas, Lund & Szocs, 2019](https://doi.org/10.1007/s11747-018-0583-8))."
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "The third route is association. Genres carry meanings. Classical music reads as refined and sweet, jazz as relaxed, rock and hip-hop as energetic. Those meanings carry over to the food in front of the guest ([Motoki, Takahashi, Velasco & Spence, 2021](https://doi.org/10.1016/j.foodqual.2021.104380))."
+                    },
+                    {
+                        "type": "heading",
+                        "level": 2,
+                        "value": "What the research found"
+                    },
+                    {
+                        "type": "list",
+                        "items": [
+                            "The wine aisle study. In a British supermarket, French and German wines sat side by side with flags on the shelf. On days with French music, French wine outsold German by about five to one. On days with German music, German wine outsold French by about two to one. Most shoppers said the music had not influenced them ([North, Hargreaves & McKendrick, 1997](https://doi.org/10.1038/36484)).",
+                            "Paella or chicken parmesan. In a university dining hall, Spanish music doubled the share of diners choosing seafood paella, from 17% to 34%, compared with nights when Italian music played. The music changed the choice but not how much people liked the dish once they ate it ([Zellner et al., 2017](https://doi.org/10.1016/j.foodqual.2016.10.004)).",
+                            "Volume and healthy sales. In a café and a supermarket, lower-volume music and noise increased sales of healthy items, while higher volume raised the share of unhealthy items. The explanation was relaxation: calmer guests made lighter choices ([Biswas, Lund & Szocs, 2019](https://doi.org/10.1007/s11747-018-0583-8)).",
+                            "A \"healthy soundtrack\". Researchers first asked people in China and Denmark which sounds matched healthy and unhealthy eating. They then built two soundtracks: a slow, high-pitched jazz piano piece and a fast, low-pitched, dissonant guitar piece. Participants who heard the jazz piece chose fruit and vegetables more often; those who heard the guitar piece chose pizza and doughnuts more often ([Peng-Li et al., 2021](https://doi.org/10.1016/j.appet.2021.105264)).",
+                            "Genre and the menu. In two experiments with almost 800 participants, jazz and classical music increased preference for healthy savoury dishes such as a vegetable sandwich. Rock, hip-hop and jazz increased preference for indulgent savoury dishes such as a beef sandwich. Classical music increased preference for sweet foods, both the healthier and the indulgent kind ([Motoki et al., 2021](https://doi.org/10.1016/j.foodqual.2021.104380)).",
+                            "Classical and the price of the bottle. In a wine shop, classical music (compared with chart pop) led customers to buy more expensive wines ([Areni & Kim, 1993](https://ro.uow.edu.au/gsbpapers/462), cited in Motoki et al., 2021)."
+                        ]
+                    },
+                    {
+                        "type": "heading",
+                        "level": 2,
+                        "value": "Where it stops working"
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "Some of these studies were run online or in a lab, with pictures of food rather than real plates. The genre study, for example, measured stated preference, not sales, and the authors say so themselves."
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "Results on genre are not uniform. One earlier study found no effect of genre on healthy choices at all. What held up across studies was volume and origin, not every genre claim."
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "And music changes the choice, not the pleasure. In the dining-hall study, guests who picked paella because of the music did not enjoy it more than guests who picked it on a quiet night. Music can open the door to a dish. The kitchen still has to deliver it."
+                    },
+                    {
+                        "type": "heading",
+                        "level": 2,
+                        "value": "What this means for restaurants, bars and hotels"
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "Start with the menu, not the playlist. If you run a taverna or a meze restaurant built around Greek produce and recipes, Greek-rooted music supports every order that depends on it. If the wine list leans French or Italian, a few hours a week with music from those places is a low-cost test."
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "For a wellness hotel, a healthy breakfast buffet or a lunch spot with a light menu, volume matters more than genre. The research points to calmer, quieter sound and towards jazz and classical rather than loud, dense music. This is one of the few places where the science and the brand concept pull in the same direction."
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "For a pastry counter, a dessert course or a cocktail bar with a sweet-forward list, classical and other consonant, higher-pitched music gives the sweet options a push. For a bar with a bold, savoury menu and a late crowd, energetic genres fit the food as well as the hour."
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "For a wine list with premium bottles, the oldest finding in this area still applies: classical music helps guests feel that the better bottle is the right choice."
+                    },
+                    {
+                        "type": "heading",
+                        "level": 2,
+                        "value": "The SensEar checklist: music that supports the menu"
+                    },
+                    {
+                        "type": "list",
+                        "items": [
+                            "Write down what you most want guests to order. The dish with the best margin, the house wine, the dessert. Music should support that list, not fight it.",
+                            "Match origin where it is honest. Music from the same place as the food supports the order. Music from a place the menu has nothing to do with sends a mixed signal.",
+                            "Use volume as a dial for the menu, not only for the mood. Lighter menu, lower volume. Richer menu, a notch more energy.",
+                            "Think in dayparts. Breakfast and lunch can lean calm and acoustic; the late shift can lean energetic. The menu changes across the day and the music should follow it.",
+                            "Do not expect music to fix a weak dish. The studies show music changes the pick, not the rating. Quality still decides whether they come back.",
+                            "Test with one metric. Pick one item, change only the music for two matched weeks, and count how often it is ordered."
+                        ]
+                    },
+                    {
+                        "type": "heading",
+                        "level": 2,
+                        "value": "Sources"
+                    },
+                    {
+                        "type": "list",
+                        "items": [
+                            "North, A. C., Hargreaves, D. J., & McKendrick, J. (1997). In-store music affects product choice. Nature, 390, 132. [https://doi.org/10.1038/36484](https://doi.org/10.1038/36484)",
+                            "Zellner, D., Geller, T., Lyons, S., Pyper, A., & Riaz, K. (2017). Ethnic congruence of music and food affects food selection but not liking. Food Quality and Preference, 56, 126-129. [https://doi.org/10.1016/j.foodqual.2016.10.004](https://doi.org/10.1016/j.foodqual.2016.10.004)",
+                            "Biswas, D., Lund, K., & Szocs, C. (2019). Sounds like a healthy retail atmospheric strategy: Effects of ambient music and background noise on food sales. Journal of the Academy of Marketing Science, 47(1), 37-55. [https://doi.org/10.1007/s11747-018-0583-8](https://doi.org/10.1007/s11747-018-0583-8)",
+                            "Peng-Li, D., Mathiesen, S. L., Chan, R. C. K., Byrne, D. V., & Wang, Q. J. (2021). Sounds Healthy: Modelling sound-evoked consumer food choice through visual attention. Appetite, 164, 105264. [https://doi.org/10.1016/j.appet.2021.105264](https://doi.org/10.1016/j.appet.2021.105264)",
+                            "Motoki, K., Takahashi, N., Velasco, C., & Spence, C. (2021). Is classical music sweeter than jazz? Crossmodal influences of background music and taste/flavour on healthy and indulgent food preferences. Food Quality and Preference, 104380. [https://doi.org/10.1016/j.foodqual.2021.104380](https://doi.org/10.1016/j.foodqual.2021.104380)",
+                            "Areni, C. S., & Kim, D. (1993). The influence of background music on shopping behavior: Classical versus top-forty music in a wine store. Advances in Consumer Research, 20, 336-340. [https://ro.uow.edu.au/gsbpapers/462](https://ro.uow.edu.au/gsbpapers/462)"
+                        ]
+                    },
+                    {
+                        "type": "heading",
+                        "level": 2,
+                        "value": "Want the music to point guests towards the right dishes?"
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "If you know which items you want ordered more often, [tell us about your menu and your hours](/contact/)."
+                    }
+                ],
+                "standfirst": "French music sells French wine, quiet rooms sell salads, and classical music sells dessert. What the studies measured, and where the effect stops."
+            },
+            {
                 "title": "Sonic seasoning: how sound changes taste",
                 "desc": "What 94 studies found about pitch, music, noise and taste, and how restaurants and bars can use it without gimmicks.",
                 "tag": "Research",

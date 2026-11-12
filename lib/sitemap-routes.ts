@@ -36,6 +36,7 @@ export const SITEMAP_ROUTES = [
     '/blog/background-music-shapes-customer-behavior',
     '/blog/service-environment-shapes-wait-time',
     '/blog/sonic-seasoning-how-sound-changes-taste',
+    '/blog/can-music-change-what-guests-order',
     '/contact',
     '/faq',
     '/privacy',
