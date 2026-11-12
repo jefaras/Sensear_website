@@ -1645,9 +1645,9 @@
                         "type": "list",
                         "items": [
                             "Guests stay, relax and order more. Main metric: average spend per guest; items per guest; share of tables ordering dessert, coffee or a second drink. Where to get it: your POS system.",
-                            "Faster turns at peak times. Main metric: time from first order to payment; guests served per hour. Where to get it: pOS timestamps.",
-                            "More revenue from the seats you have. Main metric: revenue per available seat hour (RevPASH): total revenue ÷ (seats × opening hours). Where to get it: pOS revenue, your seat count and hours.",
-                            "A better experience. Main metric: reviews mentioning music, noise or atmosphere; a one-question guest survey; repeat visits. Where to get it: google and TripAdvisor reviews, QR survey, booking system.",
+                            "Faster turns at peak times. Main metric: time from first order to payment; guests served per hour. Where to get it: POS timestamps.",
+                            "More revenue from the seats you have. Main metric: revenue per available seat hour (RevPASH): total revenue ÷ (seats × opening hours). Where to get it: POS revenue, your seat count and hours.",
+                            "A better experience. Main metric: reviews mentioning music, noise or atmosphere; a one-question guest survey; repeat visits. Where to get it: Google and TripAdvisor reviews, QR survey, booking system.",
                             "A team that is not worn out. Main metric: staff feedback, requests to change tracks or volume. Where to get it: a short monthly check-in (see [our article on music and your staff](/blog/music-and-your-staff/))."
                         ]
                     },
