@@ -816,6 +816,145 @@
                 "standfirst": "Abercrombie & Fitch played at 90 decibels on purpose. It worked, until the audience changed. What a venue can learn from the loudest shop in the mall."
             },
             {
+                "title": "Why familiar music sells: recognition and brand memory",
+                "desc": "People choose what they recognise. What research on music recognition, mere exposure and brand recall means for the sound of a venue.",
+                "tag": "Research",
+                "link": "why-familiar-music-sells",
+                "image": "/images/blog/blog-why-familiar-music-sells.jpg",
+                "ogImage": "/images/blog/blog-why-familiar-music-sells-share.jpg",
+                "author": "SensEar Team",
+                "alt": "Illustration of a woman in white scattering stars above a city skyline at night",
+                "displayDate": "November 12, 2026",
+                "structuredContent": [
+                    {
+                        "type": "heading",
+                        "level": 2,
+                        "value": "Quick take"
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "An earlier post looked at music that fits a brand. This one looks at music that people recognise. The two are not the same. A track can fit your venue perfectly and be new to every guest, or be known to everyone and fit nothing."
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "Recognition has its own effect. In two experiments with 486 people, unknown brands were chosen more often when they came with music the participants had heard before. The same study found something a venue should care about even more: whether people liked the music mattered more than whether they recognised it, and music they strongly disliked cancelled the benefit ([Anglada-Tort et al., 2022](https://doi.org/10.1080/02650487.2022.2060568))."
+                    },
+                    {
+                        "type": "heading",
+                        "level": 2,
+                        "value": "Two old ideas behind a new finding"
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "The first idea is mere exposure. People come to prefer things simply because they have met them before, even when they do not remember the meeting. Psychologists have tested this since the 1960s ([Zajonc, 1968](https://doi.org/10.1037/h0025848))."
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "The second idea is the recognition shortcut. When people must choose between two options and know only one of them, they tend to pick the one they know. They treat recognition as a sign of quality, because checking properly would take time they do not have ([Goldstein & Gigerenzer, 2002](https://doi.org/10.1037/0033-295X.109.1.75))."
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "Music is a strong trigger for both. People recognise a familiar song within a second or two, long before they could say where they heard it."
+                    },
+                    {
+                        "type": "heading",
+                        "level": 2,
+                        "value": "What the research found"
+                    },
+                    {
+                        "type": "list",
+                        "items": [
+                            "Recognised music tipped the choice. Participants first learned a set of short music clips. They then chose between pairs of real but unknown brands of headphones, cameras, tennis racquets and phones. Each brand appeared with an eight-second clip, one learned and one new. Brands with the recognised clip were chosen 59% of the time in the first experiment and 56% in the second ([Anglada-Tort et al., 2022](https://doi.org/10.1080/02650487.2022.2060568)).",
+                            "The honest size of the effect is six points. The authors use the lower figure: recognised music moved choice from the 50% you would expect by chance to 56%. That is a small effect, and a real one.",
+                            "Liking mattered more. When the researchers added how much each person liked each clip, liking had a clearly larger effect on choice than recognition did. Recognition added to liking across most of the scale.",
+                            "Disliked music cancelled the benefit. For the clips people disliked most, recognition stopped helping, and those brands were chosen least of all.",
+                            "Familiarity has a ceiling. A review of 57 studies on music preference found that 50 of them fit the same curve: liking rises as music becomes familiar, then falls when it becomes too familiar ([Chmiel & Schubert, 2017](https://doi.org/10.1177/0305735617697507)).",
+                            "People remember brands through different parts of the music. A small survey study of advertising music sorted listeners into four types: those who remember through lyrics, those who need the music to fit the message, those who respond to a familiar tune or voice, and those who respond to soft music ([Iyer & Aggarwal, 2019](https://www.researchgate.net/publication/336982994))."
+                        ]
+                    },
+                    {
+                        "type": "heading",
+                        "level": 2,
+                        "value": "Where it stops working"
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "The main study was an online experiment about advertising, not a field test in a venue. People chose between brands they had never heard of, with nothing else to go on. In real life they have prices, reviews and friends' opinions, so the effect will usually be smaller."
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "Recognition and liking were also tangled together. People tend to like what they know, and the authors say plainly that their design could not fully separate the two."
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "And recognition is not the same as popularity. The clips in the study were not hits. They were unknown songs that participants had learned minutes earlier. What helped was that the listener had met the music before, not that the music was famous."
+                    },
+                    {
+                        "type": "heading",
+                        "level": 2,
+                        "value": "What this means for hotels, restaurants and bars"
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "There are two ways a venue can use recognition, and they pull in different directions."
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "The first is borrowed recognition: playing music guests already know. It gives a room instant warmth and lowers the effort of being somewhere new. It also has a cost. If every track is a hit, your venue sounds like every other venue, and the music is recognised but you are not. The ceiling applies too: the songs guests hear everywhere are the first ones they tire of."
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "The second is owned recognition: becoming the thing that is recognised. A venue with a consistent sound, heard on every visit, builds its own mere exposure effect. Guests may not name a single track, but they know the place by ear. The same applies outside the room. If your videos, your events and your phone line carry the same musical character as your terrace, each contact makes the next one more familiar."
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "For most venues the answer is a mix. Use a small number of familiar anchors to make the room easy to enter, and build the rest from music that fits and that guests will come to recognise as yours. The study's second finding sets the limit: a familiar track that your guests dislike does more harm than an unknown track they enjoy."
+                    },
+                    {
+                        "type": "heading",
+                        "level": 2,
+                        "value": "The SensEar checklist: recognition that works for you"
+                    },
+                    {
+                        "type": "list",
+                        "items": [
+                            "Ask \"familiar to whom?\". Familiar means known to your guests, not known to the charts. A track that every local knows may be new to your summer visitors, and the reverse.",
+                            "Use familiar tracks as anchors, not as the whole programme. Place them where a room needs warmth: the first hour, a slow afternoon, the moment a new group walks in.",
+                            "Put liking first. If you are unsure whether guests enjoy a familiar track, leave it out. The research is clear that disliked music cancels the benefit of recognition.",
+                            "Rotate before the ceiling. Liking falls when music becomes too familiar, and your staff reach that point long before your guests do.",
+                            "Build a sound guests can recognise as yours. Keep the same character across visits, across spaces and across the year, even as the tracks change.",
+                            "Carry that sound outside the room. Use the same musical character in videos, events and on hold. Note that a well-known song in a video or an advert needs its own licence, separate from the licence for the venue.",
+                            "Check it with returning guests. Ask a few of them how they would describe the music of the place. If they can answer, recognition is working."
+                        ]
+                    },
+                    {
+                        "type": "heading",
+                        "level": 2,
+                        "value": "Sources"
+                    },
+                    {
+                        "type": "list",
+                        "items": [
+                            "Anglada-Tort, M., Schofield, K., Trahan, T., & Müllensiefen, D. (2022). I've heard that brand before: the role of music recognition on consumer choice. International Journal of Advertising. [https://doi.org/10.1080/02650487.2022.2060568](https://doi.org/10.1080/02650487.2022.2060568)",
+                            "Zajonc, R. B. (1968). Attitudinal effects of mere exposure. Journal of Personality and Social Psychology, 9(2, Pt. 2), 1-27. [https://doi.org/10.1037/h0025848](https://doi.org/10.1037/h0025848)",
+                            "Goldstein, D. G., & Gigerenzer, G. (2002). Models of ecological rationality: The recognition heuristic. Psychological Review, 109(1), 75-90. [https://doi.org/10.1037/0033-295X.109.1.75](https://doi.org/10.1037/0033-295X.109.1.75)",
+                            "Chmiel, A., & Schubert, E. (2017). Back to the inverted-U for music preference: A review of the literature. Psychology of Music, 45(6), 886-909. [https://doi.org/10.1177/0305735617697507](https://doi.org/10.1177/0305735617697507)",
+                            "Iyer, S. P., & Aggarwal, A. (2019). The role of music in brand recall: A study of select two-wheeler advertisements. International Journal of Management, Technology and Engineering, 9(1). [https://www.researchgate.net/publication/336982994](https://www.researchgate.net/publication/336982994)"
+                        ]
+                    },
+                    {
+                        "type": "heading",
+                        "level": 2,
+                        "value": "Would a guest recognise your venue with their eyes closed?"
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "If you want a sound that guests come to know as yours, [tell us about your space](/contact/)."
+                    }
+                ],
+                "standfirst": "Eight seconds of music people had heard before were enough to tip a buying decision. What the study found, why liking matters even more, and how a venue can use both."
+            },
+            {
                 "title": "Sonic seasoning: how sound changes taste",
                 "desc": "What 94 studies found about pitch, music, noise and taste, and how restaurants and bars can use it without gimmicks.",
                 "tag": "Research",

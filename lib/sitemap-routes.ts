@@ -38,6 +38,7 @@ export const SITEMAP_ROUTES = [
     '/blog/sonic-seasoning-how-sound-changes-taste',
     '/blog/can-music-change-what-guests-order',
     '/blog/music-as-a-filter-who-walks-in',
+    '/blog/why-familiar-music-sells',
     '/contact',
     '/faq',
     '/privacy',

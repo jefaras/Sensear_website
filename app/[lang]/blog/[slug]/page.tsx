@@ -24,6 +24,7 @@ const BLOG_PUBLISHED_DATES: Record<string, string> = {
     'sonic-seasoning-how-sound-changes-taste': '2026-11-06',
     'can-music-change-what-guests-order': '2026-11-12',
     'music-as-a-filter-who-walks-in': '2026-11-12',
+    'why-familiar-music-sells': '2026-11-12',
 };
 
 export const dynamicParams = false;
