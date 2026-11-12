@@ -1105,6 +1105,202 @@
                 "standfirst": "A Christmas scent with the wrong music made a shop look worse, not better. Why the senses add up when they agree, why they can cancel each other out when they do not, and how to check your venue."
             },
             {
+                "title": "Music licensing for venues in Greece: what you need to know",
+                "desc": "Why a Spotify account is not enough, which organisations license music for businesses in Greece, and what to check before you press play.",
+                "tag": "Education",
+                "link": "music-licensing-greece-venues",
+                "image": "/images/blog/blog-music-licensing-greece.jpg",
+                "ogImage": "/images/blog/blog-music-licensing-greece-share.jpg",
+                "author": "SensEar Team",
+                "alt": "Black-and-white photo of a man playing the guitar for a woman at a taverna table",
+                "displayDate": "November 12, 2026",
+                "structuredContent": [
+                    {
+                        "type": "heading",
+                        "level": 2,
+                        "value": "Quick take"
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "When a hotel, restaurant, bar or shop plays music for guests, the law treats it as a public performance. That is true whether the music comes from a streaming app, the radio, a TV or a USB stick. In Greece, a venue that plays commercial music usually needs licences from two kinds of organisations: one for the people who wrote the songs, and one for the people who recorded them ([Law 2121/1993](https://www.lawspot.gr/nomothesia/nomos-2121-1993/); [kstlaw.gr, updated 2026](https://kstlaw.gr/%CE%BF%CF%81%CE%B3%CE%B1%CE%BD%CE%B9%CF%83%CE%BC%CE%BF%CE%AF-%CF%83%CF%85%CE%BB%CE%BB%CE%BF%CE%B3%CE%B9%CE%BA%CE%AE%CF%82-%CE%B4%CE%B9%CE%B1%CF%87%CE%B5%CE%AF%CF%81%CE%B9%CF%83%CE%B7%CF%82/))."
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "This guide explains who collects what, how fees are set, when music outside these organisations is a real option, and the mistakes we see most often. It is general information, not legal advice."
+                    },
+                    {
+                        "type": "heading",
+                        "level": 2,
+                        "value": "Why a Spotify account is not enough"
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "A personal streaming subscription gives you the right to listen in private. It does not give you the right to play music to customers. Spotify says so directly: the service is only for personal, non-commercial use, and it cannot be played publicly in bars, restaurants, shops or similar businesses ([Spotify Support](https://support.spotify.com/me-en/article/spotify-public-commercial-use)). The same logic applies to other personal streaming accounts, to YouTube and to your own music files."
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "Radio and TV are not a way around this. The Hellenic Copyright Organisation (ΟΠΙ) has said that a shop with a radio or TV installation is presumed to use protected music and needs a licence, even if the TV only shows sport ([Lawspot, reporting ΟΠΙ](https://www.lawspot.gr/nomika-nea/nomimi-hrisi-moysikis-se-katastimata-dieykriniseis-apo-ton-organismo-pneymatikis/))."
+                    },
+                    {
+                        "type": "heading",
+                        "level": 2,
+                        "value": "Who collects what"
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "Every recorded song carries two layers of rights."
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "The first layer is the song itself: the music and the lyrics. These are authors' rights, and they belong to composers, lyricists and their publishers. In Greece, two licensed organisations collect for them: ΕΔΕΜ and Αυτοδιαχείριση. Each represents its own members and repertoire, so a venue that plays music from both repertoires needs a licence from both."
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "The second layer is the recording: the singers, the musicians and the record producers. These are called related rights. In Greece they are collected jointly by GEA, which three organisations set up in 2011 so that venues deal with one body instead of three: Grammo for producers, Ερατώ for singers and Απόλλων for musicians ([Ερατώ](https://www.eratospe.org/node/24))."
+                    },
+                    {
+                        "type": "list",
+                        "items": [
+                            "The song (music and lyrics): the rights belong to composers, lyricists and publishers, and venues in Greece get their licence from ΕΔΕΜ and Αυτοδιαχείριση.",
+                            "The recording: the rights belong to singers, musicians and record producers, and venues in Greece get their licence from GEA (for Grammo, Ερατώ and Απόλλων)."
+                        ]
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "Paying one does not settle the other. A venue that plays recorded commercial music normally needs both layers covered."
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "A short history explains why there are two authors' organisations. For decades, almost all songwriters in Greece were represented by ΑΕΠΙ. In May 2018 the Ministry of Culture permanently revoked ΑΕΠΙ's licence ([iefimerida, 2018](https://www.iefimerida.gr/news/416536/ypoyrgeio-politismoy-kleinei-oristika-tin-aepi)). ΕΔΕΜ was then licensed and started operating in 2020, and today represents about 4,500 rightsholders ([ΕΔΕΜ](https://www.edemrights.gr/el/poioi-eimaste/)). Αυτοδιαχείριση challenged ΕΔΕΜ's licence, and the Council of State rejected the challenge in 2021 ([Powergame, 2021](https://www.powergame.gr/ellada/163746/ste-kalos-anelave-i-edem-ti-diacheirisi-pnevmatikon-dikaiomaton/))."
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "Only organisations licensed by the Ministry of Culture can collect in Greece. In September 2025 ΟΠΙ reminded businesses that bodies without that licence, including collecting societies based in other EU countries, cannot issue licences for music in Greek restaurants, cafés and shops ([Αυτοδιαχείριση, 2025](https://www.autodia.gr/article/538/mono-foreis-me-adeia-toy-ypoyrgeioy-politismoy-mporoyn-na-syllegoyn-pneymatika-kai-syggenika-dikaiomata)). The full list of licensed organisations is published by ΟΠΙ."
+                    },
+                    {
+                        "type": "heading",
+                        "level": 2,
+                        "value": "How the fee is set"
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "Each organisation publishes a tariff. It is usually based on the type of business, the size of the space and how central music is to what the venue offers. A beach bar where music is part of the product sits in a different band from a pharmacy with quiet background music."
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "The tariff is a starting point. Lawyers who work in this area point out that Greek law expects organisations to negotiate with users, and courts have placed businesses in lower bands where music was not essential to them ([kstlaw.gr](https://kstlaw.gr/%CE%BF%CF%81%CE%B3%CE%B1%CE%BD%CE%B9%CF%83%CE%BC%CE%BF%CE%AF-%CF%83%CF%85%CE%BB%CE%BB%CE%BF%CE%B3%CE%B9%CE%BA%CE%AE%CF%82-%CE%B4%CE%B9%CE%B1%CF%87%CE%B5%CE%AF%CF%81%CE%B9%CF%83%CE%B7%CF%82/)). Describe your venue accurately: size, hours, season, and whether music is a background or a reason people come."
+                    },
+                    {
+                        "type": "heading",
+                        "level": 2,
+                        "value": "Music outside the organisations' repertoire"
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "A venue does not have to use music that the organisations represent. Some suppliers offer music whose creators have not assigned their rights to any Greek organisation. If a venue plays only that music, it does not owe fees to the organisations for it. A Greek police circular from 2015, as reported in 2025, says the same ([Rib and Sea, 2025](https://www.ribandsea.com/news/5315-elegxoi-apo-tin-elliniki-astynomia-sxetika-me-ta-dikaiomata-mousikis-stis-epixeiriseis.html))."
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "There are three conditions that venues often miss."
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "First, it must be all of the music, all of the time. One radio station, one TV channel or one staff playlist brings protected music back into the room."
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "Second, the burden of proof is on the venue. ΟΠΙ has warned that a certificate from a supplier is not enough on its own, and that owners should check carefully what they are buying. The law presumes that a licensed organisation represents the repertoire it declares. That presumption can be challenged, and in one 2022 case a retail chain did so successfully, but only with detailed evidence about where every track came from ([Chambers, 2022](https://chambers.com/articles/greek-collecting-societies-are-not-entitled-to-collect-equitable-remuneration))."
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "Third, the music has to suit your venue. A legal playlist that does not fit your space costs you in the ways our other articles describe. Some suppliers now also offer music generated entirely by AI and say that no fees apply to it. As far as we can find, no Greek court has ruled on this yet."
+                    },
+                    {
+                        "type": "heading",
+                        "level": 2,
+                        "value": "Mistakes we see often"
+                    },
+                    {
+                        "type": "list",
+                        "items": [
+                            "Thinking the municipal permit covers it. The permission to use music that a business declares to the municipality is a separate matter from copyright. One does not replace the other.",
+                            "Forgetting the TV. A screen showing a match with the sound on counts, and so does a radio in the kitchen that guests can hear.",
+                            "Hotel rooms. Under EU case law, TVs and radios in hotel rooms can count as communication to the public ([CJEU, SGAE v Rafael Hoteles, C-306/05](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62005CJ0306)).",
+                            "Live music and DJs. A band playing other people's songs still uses the songwriters' rights. A DJ playing recordings uses both layers.",
+                            "Seasonal venues. If you open from May to October, say so when you apply. The season affects the fee.",
+                            "Paying the wrong body. Check that the organisation is licensed in Greece before you pay anyone."
+                        ]
+                    },
+                    {
+                        "type": "heading",
+                        "level": 2,
+                        "value": "What happens if a venue has no licence"
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "The organisations can claim the fee through the courts. Under Article 65 of Law 2121/1993, compensation for unlicensed use is normally at least double the fee that would have been paid. Article 66 also provides for criminal penalties, including prison terms and fines from €2,900 upwards, and it was amended again in 2025 ([kstlaw.gr](https://kstlaw.gr/%CE%BF%CF%81%CE%B3%CE%B1%CE%BD%CE%B9%CF%83%CE%BC%CE%BF%CE%AF-%CF%83%CF%85%CE%BB%CE%BB%CE%BF%CE%B3%CE%B9%CE%BA%CE%AE%CF%82-%CE%B4%CE%B9%CE%B1%CF%87%CE%B5%CE%AF%CF%81%CE%B9%CF%83%CE%B7%CF%82/); [Lawspot, Article 66](https://www.lawspot.gr/nomothesia/n-2121-1993/arthro-66-nomos-2121-1993-poinikes-kyroseis/)). In 2025, local reports described police checks in businesses across the country ([Rib and Sea, 2025](https://www.ribandsea.com/news/5315-elegxoi-apo-tin-elliniki-astynomia-sxetika-me-ta-dikaiomata-mousikis-stis-epixeiriseis.html))."
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "The collecting organisations themselves cannot impose fines. They can ask for payment and go to court."
+                    },
+                    {
+                        "type": "heading",
+                        "level": 2,
+                        "value": "The SensEar checklist: before you press play"
+                    },
+                    {
+                        "type": "list",
+                        "items": [
+                            "List every source of sound guests can hear: speakers, TVs, radios, live music, DJs, staff phones.",
+                            "Decide your route: licensed commercial music, music outside the organisations' repertoire, or a mix by space.",
+                            "If you play commercial music, cover both layers: the songs (ΕΔΕΜ and Αυτοδιαχείριση, depending on repertoire) and the recordings (GEA).",
+                            "Describe your venue accurately when you apply: size, opening months, hours and the role music plays.",
+                            "If you choose music outside the repertoire, get written terms from the supplier and keep records of what you play. Remove every other source.",
+                            "Check the organisation is on ΟΠΙ's list before you pay.",
+                            "Keep licences and receipts where staff can find them during a check.",
+                            "Review it every year. Repertoires, tariffs and rules change."
+                        ]
+                    },
+                    {
+                        "type": "heading",
+                        "level": 2,
+                        "value": "Sources"
+                    },
+                    {
+                        "type": "list",
+                        "items": [
+                            "Law 2121/1993 on copyright (text on Lawspot). [https://www.lawspot.gr/nomothesia/nomos-2121-1993/](https://www.lawspot.gr/nomothesia/nomos-2121-1993/)",
+                            "Lawspot (28 September 2017). Νόμιμη χρήση μουσικής σε καταστήματα: διευκρινίσεις από τον Οργανισμό Πνευματικής Ιδιοκτησίας. [https://www.lawspot.gr/nomika-nea/nomimi-hrisi-moysikis-se-katastimata-dieykriniseis-apo-ton-organismo-pneymatikis/](https://www.lawspot.gr/nomika-nea/nomimi-hrisi-moysikis-se-katastimata-dieykriniseis-apo-ton-organismo-pneymatikis/)",
+                            "Stouraitis, G. (2024, updated July 2026). Πνευματικά δικαιώματα μουσικής: πότε πληρώνει η επιχείρηση. kstlaw.gr. [https://kstlaw.gr/%CE%BF%CF%81%CE%B3%CE%B1%CE%BD%CE%B9%CF%83%CE%BC%CE%BF%CE%AF-%CF%83%CF%85%CE%BB%CE%BB%CE%BF%CE%B3%CE%B9%CE%BA%CE%AE%CF%82-%CE%B4%CE%B9%CE%B1%CF%87%CE%B5%CE%AF%CF%81%CE%B9%CF%83%CE%B7%CF%82/](https://kstlaw.gr/%CE%BF%CF%81%CE%B3%CE%B1%CE%BD%CE%B9%CF%83%CE%BC%CE%BF%CE%AF-%CF%83%CF%85%CE%BB%CE%BB%CE%BF%CE%B3%CE%B9%CE%BA%CE%AE%CF%82-%CE%B4%CE%B9%CE%B1%CF%87%CE%B5%CE%AF%CF%81%CE%B9%CF%83%CE%B7%CF%82/)",
+                            "Spotify Support. Spotify for public and commercial use. [https://support.spotify.com/me-en/article/spotify-public-commercial-use](https://support.spotify.com/me-en/article/spotify-public-commercial-use)",
+                            "ΕΔΕΜ. Ποιοι είμαστε. [https://www.edemrights.gr/el/poioi-eimaste/](https://www.edemrights.gr/el/poioi-eimaste/)",
+                            "Αυτοδιαχείριση (20 September 2025). Μόνο φορείς με άδεια του Υπουργείου Πολιτισμού μπορούν να συλλέγουν πνευματικά και συγγενικά δικαιώματα. [https://www.autodia.gr/article/538/mono-foreis-me-adeia-toy-ypoyrgeioy-politismoy-mporoyn-na-syllegoyn-pneymatika-kai-syggenika-dikaiomata](https://www.autodia.gr/article/538/mono-foreis-me-adeia-toy-ypoyrgeioy-politismoy-mporoyn-na-syllegoyn-pneymatika-kai-syggenika-dikaiomata)",
+                            "Ερατώ. GEA: Grammo, Ερατώ, Απόλλων. [https://www.eratospe.org/node/24](https://www.eratospe.org/node/24)",
+                            "iefimerida (15 May 2018). Το υπουργείο Πολιτισμού κλείνει οριστικά την ΑΕΠΙ. [https://www.iefimerida.gr/news/416536/ypoyrgeio-politismoy-kleinei-oristika-tin-aepi](https://www.iefimerida.gr/news/416536/ypoyrgeio-politismoy-kleinei-oristika-tin-aepi)",
+                            "Powergame (26 November 2021). ΣτΕ: Καλώς ανέλαβε η ΕΔΕΜ τη διαχείριση πνευματικών δικαιωμάτων. [https://www.powergame.gr/ellada/163746/ste-kalos-anelave-i-edem-ti-diacheirisi-pnevmatikon-dikaiomaton/](https://www.powergame.gr/ellada/163746/ste-kalos-anelave-i-edem-ti-diacheirisi-pnevmatikon-dikaiomaton/)",
+                            "Metaxopoulos, K., & Daroussou, I. (8 April 2022). Greek collecting societies are not entitled to collect equitable remuneration. Chambers and Partners. [https://chambers.com/articles/greek-collecting-societies-are-not-entitled-to-collect-equitable-remuneration](https://chambers.com/articles/greek-collecting-societies-are-not-entitled-to-collect-equitable-remuneration)",
+                            "Court of Justice of the EU (2006). SGAE v Rafael Hoteles, C-306/05. [https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62005CJ0306](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62005CJ0306)",
+                            "Rib and Sea (10 September 2025). Έλεγχοι από την Ελληνική Αστυνομία σχετικά με τα δικαιώματα μουσικής στις επιχειρήσεις. [https://www.ribandsea.com/news/5315-elegxoi-apo-tin-elliniki-astynomia-sxetika-me-ta-dikaiomata-mousikis-stis-epixeiriseis.html](https://www.ribandsea.com/news/5315-elegxoi-apo-tin-elliniki-astynomia-sxetika-me-ta-dikaiomata-mousikis-stis-epixeiriseis.html)"
+                        ]
+                    },
+                    {
+                        "type": "heading",
+                        "level": 2,
+                        "value": "Not sure what your music needs?"
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "If you want music that fits your venue, [tell us about your space](/contact/)."
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "This article is general information about the framework in Greece as of November 2026. It is not legal advice. Please confirm what applies to your own venue with your legal advisor."
+                    }
+                ],
+                "standfirst": "Playing music to guests is a public performance, and in Greece it usually needs more than one licence. A plain guide to who collects what, how fees are set, and the mistakes venues make most often."
+            },
+            {
                 "title": "Sonic seasoning: how sound changes taste",
                 "desc": "What 94 studies found about pitch, music, noise and taste, and how restaurants and bars can use it without gimmicks.",
                 "tag": "Research",

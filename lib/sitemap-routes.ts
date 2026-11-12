@@ -40,6 +40,7 @@ export const SITEMAP_ROUTES = [
     '/blog/music-as-a-filter-who-walks-in',
     '/blog/why-familiar-music-sells',
     '/blog/when-the-senses-agree',
+    '/blog/music-licensing-greece-venues',
     '/contact',
     '/faq',
     '/privacy',

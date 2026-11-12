@@ -26,6 +26,7 @@ const BLOG_PUBLISHED_DATES: Record<string, string> = {
     'music-as-a-filter-who-walks-in': '2026-11-12',
     'why-familiar-music-sells': '2026-11-12',
     'when-the-senses-agree': '2026-11-12',
+    'music-licensing-greece-venues': '2026-11-12',
 };
 
 export const dynamicParams = false;
