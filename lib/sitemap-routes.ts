@@ -43,6 +43,7 @@ export const SITEMAP_ROUTES = [
     '/blog/music-licensing-greece-venues',
     '/blog/sound-fatigue-and-silence',
     '/blog/music-and-your-staff',
+    '/blog/how-to-measure-music-results',
     '/contact',
     '/faq',
     '/privacy',

@@ -1605,6 +1605,228 @@
                 "standfirst": "Most venue music is chosen for guests. The people who hear it most are the staff. A 2025 study found that music which does not suit employees leaves them more drained and less helpful, and in loud bars the stakes include their hearing."
             },
             {
+                "title": "How to measure whether your music works: metrics and a simple test plan",
+                "desc": "Most venues judge their music by feel. Which numbers to watch, how researchers test music, and an eight-step plan to run a fair test in your own venue.",
+                "tag": "Method",
+                "link": "how-to-measure-music-results",
+                "image": "/images/blog/blog-how-to-measure-music-results.jpg",
+                "ogImage": "/images/blog/blog-how-to-measure-music-results-share.jpg",
+                "author": "SensEar Team",
+                "alt": "Technician measuring hi-fi speakers with a red laser",
+                "displayDate": "November 12, 2026",
+                "structuredContent": [
+                    {
+                        "type": "heading",
+                        "level": 2,
+                        "value": "Quick take"
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "Most venues judge their music by feel: the owner likes it, a regular complained, Saturday was busy. None of that tells you whether the music is doing its job."
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "Research on music in shops and restaurants usually finds effects in single figures. The largest restaurant study found a 9.1% difference in sales between music that fitted the brand and random chart hits ([Soundtrack Your Brand & HUI Research, 2017](https://www.researchgate.net/publication/315800050_The_impact_of_music_in_restaurants)). A rainy week, a cruise ship in port or a football match can move your numbers far more than that. To see what the music is doing, you need a fair test: one goal, the right metric, conditions that alternate over several weeks, and an honest way to read the result."
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "Our post on how music shapes buyer behaviour ends with a short \"test, then tune\" list. This article is the full version."
+                    },
+                    {
+                        "type": "heading",
+                        "level": 2,
+                        "value": "Start with the goal, then pick the metric"
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "Music can push guests in different directions. Decide first what you want it to do, because the right number depends on the goal."
+                    },
+                    {
+                        "type": "list",
+                        "items": [
+                            "Guests stay, relax and order more. Main metric: average spend per guest; items per guest; share of tables ordering dessert, coffee or a second drink. Where to get it: your POS system.",
+                            "Faster turns at peak times. Main metric: time from first order to payment; guests served per hour. Where to get it: pOS timestamps.",
+                            "More revenue from the seats you have. Main metric: revenue per available seat hour (RevPASH): total revenue ÷ (seats × opening hours). Where to get it: pOS revenue, your seat count and hours.",
+                            "A better experience. Main metric: reviews mentioning music, noise or atmosphere; a one-question guest survey; repeat visits. Where to get it: google and TripAdvisor reviews, QR survey, booking system.",
+                            "A team that is not worn out. Main metric: staff feedback, requests to change tracks or volume. Where to get it: a short monthly check-in (see [our article on music and your staff](/blog/music-and-your-staff/))."
+                        ]
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "RevPASH is a standard restaurant revenue measure, introduced by Cornell researchers in the late 1990s ([Hospitality Net](https://www.hospitalitynet.org/opinion/4117170.html)). It is useful because it catches a trap that simpler numbers miss."
+                    },
+                    {
+                        "type": "heading",
+                        "level": 2,
+                        "value": "Why the metric matters: a lesson from Tel Aviv"
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "In a 2024 field experiment in an Italian restaurant in Tel Aviv, researchers assigned whole days at random to slow music, fast music or the restaurant's usual playlist. They followed 282 tables. With slow music, tables stayed about 80 minutes on average. With fast music, they stayed about 57 minutes, so slow-music tables stayed about 40% longer. But the bill did not change in any meaningful way ([Malcman et al., 2024](https://doi.org/10.3390/bs14121188))."
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "In a quiet hotel bar, longer stays at the same spend may be exactly what you want. In a full restaurant with people waiting at the door, the same result means fewer guests served per evening, and RevPASH falls. The music worked. Whether it helped depends on what you measured it against."
+                    },
+                    {
+                        "type": "heading",
+                        "level": 2,
+                        "value": "How researchers test music"
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "The Swedish restaurant study is a good model, even if you only run one venue ([Soundtrack Your Brand & HUI Research, 2017](https://www.researchgate.net/publication/315800050_The_impact_of_music_in_restaurants)):"
+                    },
+                    {
+                        "type": "list",
+                        "items": [
+                            "It used 16 restaurants: 8 rotated through different music conditions and 8 kept the same music as a comparison.",
+                            "It ran for 20 weeks, with a baseline period before and a follow-up period after.",
+                            "Each condition ran in blocks of about three weeks, and the order was rotated so that no condition always fell in the same weeks.",
+                            "It compared each restaurant with itself and with the comparison group, which removes the effect of things like weather, holidays and the general season."
+                        ]
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "The Tel Aviv study used a simpler method that any venue can copy: assign whole days to a condition, keep everything else the same, and read arrival and payment times from the till."
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "The lesson from both is the same. Compare like with like, rotate the conditions, run long enough to cover many weekdays and weekends, and change only one thing at a time."
+                    },
+                    {
+                        "type": "heading",
+                        "level": 2,
+                        "value": "An eight-step test plan for one venue"
+                    },
+                    {
+                        "type": "list",
+                        "items": [
+                            "1. Choose one goal and one main metric. Add one \"guard\" metric that must not get worse, such as review scores or time per table at peak.",
+                            "2. Collect a baseline. Record the main metric for four weeks with your current music.",
+                            "3. Define two conditions: usually your current music (A) and the new programme (B). Keep the volume, menu, prices and staffing the same.",
+                            "4. Alternate. Run A and B in alternating weeks for eight weeks, so each gets four. If you prefer days, make sure each weekday gets both conditions the same number of times.",
+                            "5. Avoid the obvious traps. Skip public holidays, events and special offers, and note anything unusual, such as weather, a large group or a staff shortage.",
+                            "6. Keep a simple log of what played, the volume at a table, the number of guests and anything unusual each day.",
+                            "7. Decide in advance what counts as a win, for example \"at least 3% higher spend per guest, with no drop in reviews\".",
+                            "8. Keep the winner, and test again next season. Guests, menus and the music itself change."
+                        ]
+                    },
+                    {
+                        "type": "heading",
+                        "level": 2,
+                        "value": "Reading the numbers"
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "Your baseline tells you how much your numbers move on their own. Take the four baseline weeks, find the highest and lowest weekly average, and note the gap. That gap is your normal swing. A difference between A and B that is smaller than the normal swing is probably noise."
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "A worked example with illustrative figures for average spend per guest:"
+                    },
+                    {
+                        "type": "list",
+                        "items": [
+                            "Baseline: €31.20, €32.80, €30.90 and €32.10 in weeks 1 to 4, average €31.75.",
+                            "A (current music): €31.60, €32.40, €31.90 and €31.30, average €31.80.",
+                            "B (new programme): €33.80, €34.60, €33.50 and €34.10, average €34.00."
+                        ]
+                    },
+                    {
+                        "type": "list",
+                        "items": [
+                            "The normal swing in the baseline is €32.80 − €30.90 = €1.90.",
+                            "B beats A by €2.20 on average, about 7%, which is more than the normal swing.",
+                            "Every B week beats every A week. The lowest B week (€33.50) is above the highest A week (€32.40)."
+                        ]
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "Two signals together, a gap larger than the normal swing and a result that repeats every week, make a real effect likely. If B wins one week and loses the next, you have not found an effect yet, whatever the average says."
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "Small venues will see more noise, because a few large tables move the average. In that case, run the test longer, or use a metric that counts many small events, such as the share of tables that order dessert."
+                    },
+                    {
+                        "type": "heading",
+                        "level": 2,
+                        "value": "Do not forget the words"
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "Numbers tell you what changed, but not why. Alongside the test:"
+                    },
+                    {
+                        "type": "list",
+                        "items": [
+                            "Read your reviews every month and count mentions of music, noise, loud, atmosphere or vibe. Note whether they are positive or negative.",
+                            "Add one question to a QR code or a receipt: \"How did you find the atmosphere today?\" Keep it to a 1 to 5 scale.",
+                            "Ask your team. They hear guest comments that never reach a review."
+                        ]
+                    },
+                    {
+                        "type": "heading",
+                        "level": 2,
+                        "value": "Where it stops working"
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "A single venue is not a lab. You cannot control the weather, the cruise schedule or the week a review site features you. In Greek seasonal venues, the guest mix can change from one week to the next, which is one more reason to alternate conditions rather than run them one after the other."
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "A test can also mislead in the short term. Music that pushes guests to finish faster can lift a busy evening while making the visit less pleasant, and that may cost repeat visits later. This is why the guard metric matters."
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "And a test tells you what works, not why. Use it to choose between options you already believe in, not as a substitute for knowing your guests."
+                    },
+                    {
+                        "type": "heading",
+                        "level": 2,
+                        "value": "The SensEar checklist: a fair music test"
+                    },
+                    {
+                        "type": "list",
+                        "items": [
+                            "One goal, one main metric, one guard metric.",
+                            "Four weeks of baseline before you change anything.",
+                            "Alternate A and B week by week, for at least eight weeks.",
+                            "Change only the music. Keep volume, menu, prices and staffing the same.",
+                            "Log what played, the volume and anything unusual.",
+                            "Compare per guest and like with like: Tuesday with Tuesday, not Tuesday with Saturday.",
+                            "Trust results that are larger than your normal swing and that repeat.",
+                            "Read reviews and ask the team alongside the numbers."
+                        ]
+                    },
+                    {
+                        "type": "heading",
+                        "level": 2,
+                        "value": "Sources"
+                    },
+                    {
+                        "type": "list",
+                        "items": [
+                            "Soundtrack Your Brand & HUI Research (2017). The impact of music in restaurants. [https://www.researchgate.net/publication/315800050_The_impact_of_music_in_restaurants](https://www.researchgate.net/publication/315800050_The_impact_of_music_in_restaurants)",
+                            "Malcman, M., Azar, O. H., Shavit, T., & Rosenboim, M. (2024). How does background music affect dining duration, tips and bill amounts in restaurants? A field experiment. Behavioral Sciences, 14(12), 1188. [https://doi.org/10.3390/bs14121188](https://doi.org/10.3390/bs14121188)",
+                            "Hospitality Net. Reevaluating the RevPASH formula: Advancing analytical perspectives in restaurant revenue and yield management. [https://www.hospitalitynet.org/opinion/4117170.html](https://www.hospitalitynet.org/opinion/4117170.html)"
+                        ]
+                    },
+                    {
+                        "type": "heading",
+                        "level": 2,
+                        "value": "Want to know what your music is doing?"
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "If you want a music programme you can measure, [tell us about your venue](/contact/)."
+                    }
+                ],
+                "standfirst": "Music effects are real but modest, and a busy Saturday can hide them or fake them. What to measure, how researchers run music tests, and how to run one in your own venue without a lab."
+            },
+            {
                 "title": "Sonic seasoning: how sound changes taste",
                 "desc": "What 94 studies found about pitch, music, noise and taste, and how restaurants and bars can use it without gimmicks.",
                 "tag": "Research",

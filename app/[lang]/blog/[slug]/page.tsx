@@ -29,6 +29,7 @@ const BLOG_PUBLISHED_DATES: Record<string, string> = {
     'music-licensing-greece-venues': '2026-11-12',
     'sound-fatigue-and-silence': '2026-11-12',
     'music-and-your-staff': '2026-11-12',
+    'how-to-measure-music-results': '2026-11-12',
 };
 
 export const dynamicParams = false;
