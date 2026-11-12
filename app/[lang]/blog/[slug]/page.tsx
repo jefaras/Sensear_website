@@ -28,6 +28,7 @@ const BLOG_PUBLISHED_DATES: Record<string, string> = {
     'when-the-senses-agree': '2026-11-12',
     'music-licensing-greece-venues': '2026-11-12',
     'sound-fatigue-and-silence': '2026-11-12',
+    'music-and-your-staff': '2026-11-12',
 };
 
 export const dynamicParams = false;

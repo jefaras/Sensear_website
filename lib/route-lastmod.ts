@@ -77,6 +77,7 @@ const LAST_MODIFIED_OVERRIDES: Record<string, string> = {
     '/blog/when-the-senses-agree': '2026-11-12T00:00:00.000Z',
     '/blog/music-licensing-greece-venues': '2026-11-12T00:00:00.000Z',
     '/blog/sound-fatigue-and-silence': '2026-11-12T00:00:00.000Z',
+    '/blog/music-and-your-staff': '2026-11-12T00:00:00.000Z',
 }
 
 const BLOG_POST_PREFIX = '/blog/'

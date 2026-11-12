@@ -42,6 +42,7 @@ export const SITEMAP_ROUTES = [
     '/blog/when-the-senses-agree',
     '/blog/music-licensing-greece-venues',
     '/blog/sound-fatigue-and-silence',
+    '/blog/music-and-your-staff',
     '/contact',
     '/faq',
     '/privacy',

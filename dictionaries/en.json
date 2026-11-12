@@ -1439,6 +1439,172 @@
                 "standfirst": "Some young people are switching music off altogether. Guests in a venue rarely go that far, but they notice when the sound never stops. Why less sound can do more, and how to plan quiet into the day."
             },
             {
+                "title": "The audience you forget: music and your staff",
+                "desc": "Guests hear your music for an hour. Your team hears it all shift. What research says about music that does not suit the people who work in it, and how to plan for both.",
+                "tag": "Insights",
+                "link": "music-and-your-staff",
+                "image": "/images/blog/blog-music-and-your-staff.jpg",
+                "ogImage": "/images/blog/blog-music-and-your-staff-share.jpg",
+                "author": "SensEar Team",
+                "alt": "Bar with record shelves and large wooden speakers, with staff at work behind the counter",
+                "displayDate": "November 12, 2026",
+                "structuredContent": [
+                    {
+                        "type": "heading",
+                        "level": 2,
+                        "value": "Quick take"
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "A guest hears your music for an hour or two. A waiter, a bartender or a receptionist hears it for a whole shift, five or six days a week, all season. Yet almost every venue chooses its music with only the guest in mind."
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "That matters for more than staff comfort. A 2025 study in the Journal of Applied Psychology found that when background music does not suit what employees need, they feel more drained, help colleagues less and are more likely to work against the business ([Keeler et al., 2025](https://doi.org/10.1037/apl0001278)). In loud bars and clubs, there is also a legal and health side: staff hearing."
+                    },
+                    {
+                        "type": "heading",
+                        "level": 2,
+                        "value": "Why staff hear music differently"
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "Guests choose to come in. They stay for a while and leave. Staff cannot leave, cannot change the music, and have to concentrate on orders, payments and conversations while it plays. What feels like a pleasant background to a guest can become a steady demand on attention for someone who works in it."
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "Repetition adds to this. A playlist that sounds fresh to a guest on their first visit may loop several times in a single shift. By the third week of the season, the team knows every transition."
+                    },
+                    {
+                        "type": "heading",
+                        "level": 2,
+                        "value": "What the research found"
+                    },
+                    {
+                        "type": "list",
+                        "items": [
+                            "Music that does not fit drains employees. In an online experiment with 166 full-time workers, people who heard music that did not match their needs in volume, tempo, complexity or emotional intensity reported fewer pleasant feelings and more mental exhaustion ([Keeler et al., 2025](https://doi.org/10.1037/apl0001278); [Ohio State News, 2025](https://news.osu.edu/ugh-not-that-song-background-music-impacts-employees/)).",
+                            "The effect shows up at work, not only in the lab. In a three-week field study with 68 employees in retail stores, dining halls and healthcare offices, workers answered short surveys three times a day. On days when the music did not suit them, they were more likely to work slowly or speak badly about the workplace, and less likely to help a colleague with a task outside their own role.",
+                            "Some people are hit harder. The effects were strongest in people who find it hard to filter out one sound while they focus on another. Every team has a few of them.",
+                            "Staff mood reaches guests. A classic study of service encounters found that when employees showed positive emotion, customers left in a better mood and rated the service higher ([Pugh, 2001](https://doi.org/10.5465/3069445)). A later study found that customers mirror employees' smiles, and that this shapes how they judge the quality of the service ([Barger & Grandey, 2006](https://doi.org/10.5465/AMJ.2006.23478695)). Music that wears staff down does not stay behind the bar.",
+                            "In loud venues, it is also about hearing. In nine Irish nightclubs, bar staff had an average daily noise exposure of 92 dB(A), and none of the venues fully met the noise regulations ([Kelly et al., 2012](https://doaj.org/article/38d10bbbfdf04ce0a3635ff9807a6c0d)). A Greek Ministry of Labour code of practice for the music and entertainment sector gives a similar estimate for service staff: 90 to 95 dB(A) ([Υπουργείο Απασχόλησης, 2008](https://www.elinyae.gr/sites/default/files/2019-07/moysikoi.1412855979671.pdf))."
+                        ]
+                    },
+                    {
+                        "type": "heading",
+                        "level": 2,
+                        "value": "What the law expects in loud venues"
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "In Greece, noise at work is covered by Presidential Decree 149/2006, which applies the EU Noise Directive 2003/10/EC. The decree sets three levels for average daily exposure over an eight-hour day ([Π.Δ. 149/2006, ΦΕΚ 159/Α/2006](https://elinyae.gr/sites/default/files/2019-07/159a_06.1157369256618.pdf)):"
+                    },
+                    {
+                        "type": "list",
+                        "items": [
+                            "Above 80 dB(A): lower action value. The employer must make hearing protection available and give staff information and training. Staff have the right to a hearing check.",
+                            "85 dB(A) or more: upper action value. Hearing protection must be worn. The areas must be marked and, where possible, closed off with restricted access.",
+                            "87 dB(A): limit value, taking hearing protection into account. Must not be exceeded."
+                        ]
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "The Greek code of practice offers a simple test: if two people standing one metre apart have to raise their voices to talk, the noise needs assessing. It also lists practical fixes: lower volumes, better placed speakers, limiters, quieter areas for breaks and rotating staff between loud and quieter positions."
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "Most restaurants and hotel lounges are well below these levels. Busy bars, beach clubs, DJ nights and live music often are not."
+                    },
+                    {
+                        "type": "heading",
+                        "level": 2,
+                        "value": "Where it stops working"
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "The 2025 study did not test hotels or restaurants in Greece, and its field sample was small. It measured how employees felt and behaved, not sales or guest reviews. The link from staff mood to guest satisfaction comes from separate research."
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "And the answer is not to let staff choose the music. The study's own authors suggest a balance, not a handover. Staff taste is one more audience, not the brand."
+                    },
+                    {
+                        "type": "heading",
+                        "level": 2,
+                        "value": "What this means for hotels, restaurants and bars"
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "Plan for two audiences. When you define the sound of a space, ask two questions: what do guests need, and what do the people who work here all day need? Usually the answers overlap more than you expect. Extremes in tempo, volume and emotional intensity are where they split."
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "Make the programme long enough for a shift. A rule we use: the people on a full shift should not hear the same track twice. If your playlist is shorter than the shift, it is too short, whatever guests think."
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "Separate front and back of house. The kitchen, the stores and the staff room do not need the guest soundtrack. Give staff at least one place to take a break away from it, as the 2025 study recommends."
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "Agree who controls the volume, and how. Staff should know the agreed level for each part of the day and should be able to report a problem without switching to their own playlist. This also stops the slow volume creep described in our article on sound fatigue."
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "Treat seasonal music with care. A psychologist warned in 2017 that shop workers who hear Christmas music all day spend energy simply trying not to hear it. A fact check rated the broader claim as \"half true\", because research on Christmas music itself is limited ([The Ferret, 2017](https://theferret.scot/claim-christmas-music-mental-health-half-true/)). The practical point stands: a few festive hours a day go further than wall-to-wall carols for six weeks."
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "In loud venues, protect hearing first. Assess exposure, fit limiters, place speakers away from the bar where you can, and provide proper hearing protection to the people who need it."
+                    },
+                    {
+                        "type": "heading",
+                        "level": 2,
+                        "value": "The SensEar checklist: music that works for the team too"
+                    },
+                    {
+                        "type": "list",
+                        "items": [
+                            "Ask the team two questions every season: which tracks are you tired of, and which moments feel wrong?",
+                            "Check the programme length against the longest shift. No repeats within a shift.",
+                            "Keep back-of-house sound separate from the guest sound, and keep one break area quiet.",
+                            "Write down the volume for each part of the day and who may change it.",
+                            "Brief new staff on why the music is what it is. People look after what they understand.",
+                            "Limit seasonal music to set hours.",
+                            "In bars, clubs and DJ nights: measure exposure, fit limiters and offer hearing protection. Use the one-metre test as a first check."
+                        ]
+                    },
+                    {
+                        "type": "heading",
+                        "level": 2,
+                        "value": "Sources"
+                    },
+                    {
+                        "type": "list",
+                        "items": [
+                            "Keeler, K., Puranik, H., Wang, Y., & Yin, J. (2025). In sync or out of tune? The effects of workplace music misfit on employees. Journal of Applied Psychology, 110(9), 1157-1173. [https://doi.org/10.1037/apl0001278](https://doi.org/10.1037/apl0001278)",
+                            "Ohio State News (7 April 2025). 'Ugh, not that song!' Background music impacts employees. [https://news.osu.edu/ugh-not-that-song-background-music-impacts-employees/](https://news.osu.edu/ugh-not-that-song-background-music-impacts-employees/)",
+                            "Pugh, S. D. (2001). Service with a smile: Emotional contagion in the service encounter. Academy of Management Journal, 44(5), 1018-1027. [https://doi.org/10.5465/3069445](https://doi.org/10.5465/3069445)",
+                            "Barger, P. B., & Grandey, A. A. (2006). Service with a smile and encounter satisfaction: Emotional contagion and appraisal mechanisms. Academy of Management Journal, 49(6), 1229-1238. [https://doi.org/10.5465/AMJ.2006.23478695](https://doi.org/10.5465/AMJ.2006.23478695)",
+                            "Kelly, A., et al. (2012). Occupational noise exposure of nightclub bar employees in Ireland. Noise & Health. [https://doaj.org/article/38d10bbbfdf04ce0a3635ff9807a6c0d](https://doaj.org/article/38d10bbbfdf04ce0a3635ff9807a6c0d)",
+                            "Υπουργείο Απασχόλησης και Κοινωνικής Προστασίας (2008). Κώδικας πρακτικής για εργοδότες και εργαζομένους στους τομείς μουσικής και ψυχαγωγίας. [https://www.elinyae.gr/sites/default/files/2019-07/moysikoi.1412855979671.pdf](https://www.elinyae.gr/sites/default/files/2019-07/moysikoi.1412855979671.pdf)",
+                            "Π.Δ. 149/2006 (ΦΕΚ 159/Α/28.07.2006), implementing Directive 2003/10/EC on the exposure of workers to noise. [https://elinyae.gr/sites/default/files/2019-07/159a_06.1157369256618.pdf](https://elinyae.gr/sites/default/files/2019-07/159a_06.1157369256618.pdf)",
+                            "The Ferret (2017). Claim Christmas music can negatively affect mental health is Half True. [https://theferret.scot/claim-christmas-music-mental-health-half-true/](https://theferret.scot/claim-christmas-music-mental-health-half-true/)"
+                        ]
+                    },
+                    {
+                        "type": "heading",
+                        "level": 2,
+                        "value": "Does your music work for the people who work in it?"
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "If you want a sound that suits your guests and your team, [tell us about your venue](/contact/)."
+                    }
+                ],
+                "standfirst": "Most venue music is chosen for guests. The people who hear it most are the staff. A 2025 study found that music which does not suit employees leaves them more drained and less helpful, and in loud bars the stakes include their hearing."
+            },
+            {
                 "title": "Sonic seasoning: how sound changes taste",
                 "desc": "What 94 studies found about pitch, music, noise and taste, and how restaurants and bars can use it without gimmicks.",
                 "tag": "Research",
