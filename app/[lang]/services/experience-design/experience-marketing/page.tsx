@@ -9,10 +9,18 @@ import { ExperienceMarketing } from '@/components/service-detail-v3/ExperienceMa
 
 const ROUTE = '/services/experience-design/experience-marketing';
 
-// JEF's final photos (13 Nov 2026); the hero is also the Open Graph image.
+// Photos of brief v2 (14 Nov 2026); the hero is also the Open Graph image. Until a new photo is in
+// place under its name, its slot shows a placeholder (PENDING_IMAGES in
+// components/service-detail-v3/ImagePlaceholder.tsx), and the page must not go live.
 const IMAGES = {
     hero: '/images/services/experience-marketing/experience-marketing-hero.jpg',
-    example: '/images/services/experience-marketing/experience-marketing-example.jpg',
+    phases: [
+        '/images/services/experience-marketing/experience-marketing-phase-before.jpg',
+        '/images/services/experience-marketing/experience-marketing-phase-there.jpg',
+        '/images/services/experience-marketing/experience-marketing-phase-after.jpg',
+    ],
+    // The vinyl bar, the v1 hero (renamed).
+    sound: '/images/services/experience-marketing/experience-marketing-sound.jpg',
     cta: '/images/services/experience-marketing/experience-marketing-cta.jpg',
 };
 

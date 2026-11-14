@@ -10,20 +10,25 @@ import { ExperienceDesign } from '@/components/service-detail-v3/ExperienceDesig
 const ROUTE = '/services/experience-design';
 
 // JEF's chosen photos. A replacement keeps the same file name, so nothing here changes.
+// Brief v2 (14 Nov 2026) moves them between sections. The journey card keeps the live page's
+// speedboat photo and alt text (JEF, 14 Nov), in place of the new photo the brief planned.
 const IMAGES = {
     hero: '/images/services/experience-design/experience-design-hero.jpg',
-    hotelMoments: '/images/services/experience-design/experience-design-hotel-moments.jpg',
-    events: '/images/services/experience-design/experience-design-events.jpg',
+    // Visitors in the room with blue light projections (v1 "Perfect for").
+    forWhom: '/images/services/experience-design/experience-design-for-whom.jpg',
+    // The evening reception in the stone quarry (v1 hotel section).
+    moments: '/images/services/experience-design/experience-design-hotel-moments.jpg',
     layers: [
         { src: '/images/services/experience-design/experience-design-layer-story.jpg' },
         { src: '/images/services/experience-design/experience-design-layer-team.jpg' },
         { src: '/images/services/experience-design/experience-design-layer-journey.jpg', position: '50% 25%' },
         { src: '/images/services/experience-design/experience-design-layer-details.jpg', position: '50% 25%' },
     ],
-    included: '/images/services/experience-design/experience-design-included.jpg',
-    forWhom: '/images/services/experience-design/experience-design-for-whom.jpg',
-    process: '/images/services/experience-design/experience-design-process.jpg',
     method: '/images/services/experience-design/experience-design-method.jpg',
+    // The round dinner table with wall projections (v1 "What's included").
+    included: '/images/services/experience-design/experience-design-included.jpg',
+    // The orchestra in the shell by the sea (v1 event section).
+    sound: '/images/services/experience-design/experience-design-events.jpg',
     cta: '/images/services/experience-design/experience-design-cta.jpg',
 };
 

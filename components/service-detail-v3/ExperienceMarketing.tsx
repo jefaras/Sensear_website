@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
 import type { Locale } from '@/lib/i18n';
@@ -6,24 +5,19 @@ import { getLocalizedPath } from '@/lib/localized-path';
 import { DriftOrb, GhostButton, MorphCTA, PageCTA, emphasize } from '@/components/v3';
 import { ScrollReveal, StaggerChildren } from '@/components/motion';
 import { Accordion } from '@/components/faq-v3';
-import { GoldDotRows } from './ServiceDetail';
-import { LinkedRows, container, h2Class, h3Class, itemTextClass, leadClass, panel } from './ExperienceDesign';
+import { container, h2Class, itemTextClass, leadClass, panel, photoFade, photoFrame } from './ExperienceDesign';
+import { ImagePlaceholder, SlotImage, isPending } from './ImagePlaceholder';
 
 type Item = { title: string; description: string };
-type LinkedItem = Item & { link: string };
 
 export interface ExperienceMarketingContent {
     meta: { title: string; description: string };
     back_link: string;
     hero: { title: string; subtitle: string; description: string; explore_cta: string; contact_cta: string; image_alt: string };
     intro: { title: string; paragraphs: string[] };
-    for_whom: { title: string; intro: string; items: Item[] };
-    example: { title: string; intro: string; items: Item[]; closing: string; image_alt: string };
-    ways: { title: string; items: Item[] };
-    no_space: { title: string; body: string };
-    included: { title: string; items: Item[]; closing: string };
-    pricing: { title: string; method: string; link_label: string; body: string };
-    sound_fit: { title: string; intro: string; items: LinkedItem[] };
+    phases: { title: string; intro: string; items: (Item & { measure: string; image_alt: string })[]; closing: string };
+    ways: { title: string; items: Item[]; paragraphs: string[] };
+    sound: { title: string; body: string; image_alt: string };
     faq: { title: string; items: { question: string; answer: string }[] };
     cta: { title: string; description: string; button: string; image_alt: string };
 }
@@ -31,29 +25,18 @@ export interface ExperienceMarketingContent {
 interface ExperienceMarketingProps {
     lang: Locale;
     content: ExperienceMarketingContent;
-    images: { hero: string; example: string; cta: string };
+    /** `phases` holds one photo per phase card, in the dictionary's order. */
+    images: { hero: string; phases: string[]; sound: string; cta: string };
     /** Per-locale emphasis words (exact substrings of the headings). */
     em: { statement: string; cta: string };
 }
 
-/** Bordered H3 items in columns, the "From first call to launch" grid without the step numbers. */
-const ItemGrid = ({ items, className }: { items: Item[]; className: string }) => (
-    <StaggerChildren staggerDelay={0.08} className={`grid grid-cols-1 gap-x-[clamp(28px,2.22vw,39px)] ${className}`}>
-        {items.map((item, i) => (
-            <div key={i} className="h-full border-t border-[#faf6f1]/12 py-[clamp(20px,1.59vw,28px)]">
-                <h3 className={h3Class}>{item.title}</h3>
-                <p className={itemTextClass}>{item.description}</p>
-            </div>
-        ))}
-    </StaggerChildren>
-);
-
 /**
- * Experience Marketing (/services/experience-design/experience-marketing/). Built from the
- * Experience Design page's sections (JEF's brief, 13 Nov 2026): same hero, statement, photo +
- * gold-dot rows, cards, two-column text rows, linked rows, accordion and closing CTA. The page
- * sits under Experience Design, so the hero carries a back link in place of a breadcrumb, styled
- * like the journal articles' "Back to the journal".
+ * Experience Marketing (/services/experience-design/experience-marketing/), brief v2 (14 Nov 2026):
+ * seven sections, built from the Experience Design page's parts. The page sits under Experience
+ * Design, so the hero carries a back link in place of a breadcrumb, styled like the journal
+ * articles' "Back to the journal". Photo slots that wait for a new picture show a placeholder
+ * (see ImagePlaceholder).
  */
 export function ExperienceMarketing({ lang, content, images, em }: ExperienceMarketingProps) {
     const localizedPath = (path: string) => getLocalizedPath(lang, path);
@@ -102,12 +85,13 @@ export function ExperienceMarketing({ lang, content, images, em }: ExperienceMar
                 </div>
 
                 <div className="relative min-h-[52vh] overflow-hidden border-t border-[#faf6f1]/10 lg:min-h-full lg:border-l lg:border-t-0">
-                    <Image src={images.hero} alt={content.hero.image_alt} fill priority sizes="(min-width: 1024px) 48vw, 100vw" className="object-cover object-center" />
-                    <div className="absolute inset-0 bg-[#0b0a0a]/10" />
+                    <SlotImage src={images.hero} alt={content.hero.image_alt} fill priority sizes="(min-width: 1024px) 48vw, 100vw" className="object-cover object-center" />
+                    {!isPending(images.hero) && <div className="absolute inset-0 bg-[#0b0a0a]/10" />}
                 </div>
             </section>
 
-            {/* 2. What Experience Marketing is: anchor target for the hero's "explore" CTA */}
+            {/* 2. What it is and who it is for: anchor target for the hero's "explore" CTA. The last
+                paragraph carries the link to Experience Design from the dictionaries. */}
             <section id="overview" className={`relative scroll-mt-[clamp(90px,7vw,120px)] overflow-hidden border-b border-b-[#faf6f1]/8 py-[clamp(101px,7.95vw,140px)] ${panel}`}>
                 <DriftOrb
                     className="h-[46vw] max-h-[640px] w-[46vw] max-w-[640px]"
@@ -123,21 +107,22 @@ export function ExperienceMarketing({ lang, content, images, em }: ExperienceMar
                     {content.intro.paragraphs.map((paragraph, i) => (
                         <ScrollReveal key={i} delay={0.12 + i * 0.06}>
                             <p
-                                className={
+                                className={`se-html ${
                                     i === 0
                                         ? 'mx-auto mb-[clamp(17px,1.31vw,23px)] max-w-[900px] text-[clamp(1.2rem,2vw,1.6rem)] leading-[1.5] text-[#faf6f1]'
                                         : 'mx-auto mb-[clamp(15px,1.19vw,21px)] max-w-[820px] text-[clamp(1.09rem,1.44vw,1.38rem)] leading-[1.65] text-[#faf6f1]/58'
-                                }
-                            >
-                                {paragraph}
-                            </p>
+                                }`}
+                                dangerouslySetInnerHTML={{ __html: paragraph }}
+                            />
                         </ScrollReveal>
                     ))}
                 </div>
             </section>
 
-            {/* 3. Who it is for and what you gain: intro + two H3 items */}
-            <section className="relative overflow-hidden py-[clamp(108px,8.52vw,150px)] pb-[clamp(94px,7.39vw,130px)]">
+            {/* 3. The three phases: the layer cards of the Experience Design page, with 4:5 frames so
+                the people in the photos stay whole, and a small measure line at the foot of each card.
+                [JEF: replace this example with a real one when you have a completed project.] */}
+            <section className="relative overflow-hidden py-[clamp(108px,8.52vw,150px)]">
                 <DriftOrb
                     className="h-[46vw] max-h-[640px] w-[46vw] max-w-[640px]"
                     style={{ top: '6%', right: '-6%', background: 'radial-gradient(circle,rgba(240,189,149,0.10),rgba(240,189,149,0) 62%)' }}
@@ -145,49 +130,34 @@ export function ExperienceMarketing({ lang, content, images, em }: ExperienceMar
                 />
                 <div className={container}>
                     <ScrollReveal delay={0.06}>
-                        <h2 className={`mb-[clamp(17px,1.31vw,23px)] ${h2Class}`}>{content.for_whom.title}</h2>
+                        <h2 className={`mb-[clamp(17px,1.31vw,23px)] ${h2Class}`}>{content.phases.title}</h2>
                     </ScrollReveal>
                     <ScrollReveal delay={0.1}>
-                        <p className={`mb-[clamp(36px,3vw,53px)] ${leadClass}`}>{content.for_whom.intro}</p>
+                        <p className={`mb-[clamp(36px,3vw,53px)] ${leadClass}`}>{content.phases.intro}</p>
                     </ScrollReveal>
-                    <ItemGrid items={content.for_whom.items} className="md:grid-cols-2" />
-                </div>
-            </section>
-
-            {/* 4. What it can look like: image left, moments right (the hotel example's layout).
-                [JEF: replace this example with a real one when you have a completed project.] */}
-            <section className={`relative overflow-hidden py-[clamp(101px,7.95vw,140px)] ${panel}`}>
-                <DriftOrb
-                    className="h-[46vw] max-h-[640px] w-[46vw] max-w-[640px]"
-                    style={{ bottom: '6%', left: '-6%', background: 'radial-gradient(circle,rgba(250,235,227,0.07),rgba(250,235,227,0) 62%)' }}
-                    duration={21}
-                />
-                <div className={container}>
-                    <div className="grid grid-cols-1 items-center gap-[clamp(53px,4.2vw,74px)] lg:grid-cols-[0.95fr_1.05fr]">
-                        <ScrollReveal direction="left">
-                            <div className="relative aspect-[4/5] overflow-hidden rounded-lg">
-                                <Image src={images.example} alt={content.example.image_alt} fill sizes="(max-width: 1024px) 100vw, 46vw" className="object-cover" />
-                                <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(11,10,10,0)_55%,rgba(11,10,10,0.5))]" />
+                    <StaggerChildren staggerDelay={0.1} className="grid grid-cols-1 gap-[clamp(28px,2.22vw,39px)] sm:grid-cols-2 lg:grid-cols-3">
+                        {content.phases.items.map((item, i) => (
+                            <div key={i} className="flex h-full flex-col">
+                                <div className="relative mb-[clamp(18px,1.42vw,25px)] aspect-[4/5] overflow-hidden rounded-lg">
+                                    <SlotImage src={images.phases[i]} alt={item.image_alt} fill sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" className="object-cover" />
+                                </div>
+                                <h3 className="mb-3 text-[clamp(1.18rem,1.34vw,1.47rem)] font-bold leading-[1.28]">{item.title}</h3>
+                                <p className={`mb-[clamp(16px,1.3vw,22px)] ${itemTextClass}`}>{item.description}</p>
+                                <p className="mt-auto border-t border-[#faf6f1]/12 pt-[clamp(12px,0.95vw,17px)] text-[clamp(0.84rem,0.92vw,1rem)] leading-[1.5] text-[#faf6f1]/50">
+                                    {item.measure}
+                                </p>
                             </div>
-                        </ScrollReveal>
-                        <div>
-                            <ScrollReveal delay={0.06}>
-                                <h2 className={`mb-[clamp(17px,1.31vw,23px)] ${h2Class}`}>{content.example.title}</h2>
-                            </ScrollReveal>
-                            <ScrollReveal delay={0.1}>
-                                <p className={`mb-[clamp(28px,2.22vw,39px)] ${leadClass}`}>{content.example.intro}</p>
-                            </ScrollReveal>
-                            <GoldDotRows items={content.example.items} />
-                            <ScrollReveal delay={0.1}>
-                                <p className={`mt-[clamp(24px,1.9vw,33px)] ${leadClass}`}>{content.example.closing}</p>
-                            </ScrollReveal>
-                        </div>
-                    </div>
+                        ))}
+                    </StaggerChildren>
+                    <ScrollReveal delay={0.1}>
+                        <p className={`mt-[clamp(36px,3vw,53px)] ${leadClass}`}>{content.phases.closing}</p>
+                    </ScrollReveal>
                 </div>
             </section>
 
-            {/* 5. Two ways to work with us (cards) and 6. No space of your own? (as "How pricing works") */}
-            <section className="relative overflow-hidden py-[clamp(108px,8.52vw,150px)]">
+            {/* 4. How we work together and what you get: two cards, then three paragraphs (the second
+                carries the link to Experience Design). */}
+            <section className={`relative overflow-hidden py-[clamp(101px,7.95vw,140px)] ${panel}`}>
                 <div className={container}>
                     <ScrollReveal delay={0.06}>
                         <h2 className={`mb-[clamp(36px,3vw,53px)] ${h2Class}`}>{content.ways.title}</h2>
@@ -200,77 +170,45 @@ export function ExperienceMarketing({ lang, content, images, em }: ExperienceMar
                             </div>
                         ))}
                     </StaggerChildren>
-
-                    <div className="mt-[clamp(70px,5.5vw,97px)] grid grid-cols-1 gap-[clamp(20px,1.59vw,28px)] lg:grid-cols-[0.95fr_1.05fr] lg:gap-[clamp(53px,4.2vw,74px)]">
-                        <ScrollReveal delay={0.06}>
-                            <h2 className={h2Class}>{content.no_space.title}</h2>
-                        </ScrollReveal>
-                        <ScrollReveal delay={0.12}>
-                            <p className={leadClass}>{content.no_space.body}</p>
-                        </ScrollReveal>
+                    <div className="mt-[clamp(36px,3vw,53px)]">
+                        {content.ways.paragraphs.map((paragraph, i) => (
+                            <ScrollReveal key={i} delay={0.1 + i * 0.04}>
+                                <p className={`se-html ${i > 0 ? 'mt-[clamp(14px,1.1vw,19px)]' : ''} ${leadClass}`} dangerouslySetInnerHTML={{ __html: paragraph }} />
+                            </ScrollReveal>
+                        ))}
                     </div>
                 </div>
             </section>
 
-            {/* 7. What's included and how we measure it: six H3 items + closing paragraph */}
-            <section className={`relative overflow-hidden py-[clamp(101px,7.95vw,140px)] ${panel}`}>
+            {/* 5. The sound of your brand: the vinyl bar photo left, the paragraph with its two links right */}
+            <section className="relative overflow-hidden py-[clamp(108px,8.52vw,150px)]">
                 <DriftOrb
                     className="h-[46vw] max-h-[640px] w-[46vw] max-w-[640px]"
-                    style={{ top: '6%', right: '-6%', background: 'radial-gradient(circle,rgba(240,189,149,0.10),rgba(240,189,149,0) 62%)' }}
-                    duration={20}
+                    style={{ bottom: '6%', left: '-6%', background: 'radial-gradient(circle,rgba(250,235,227,0.07),rgba(250,235,227,0) 62%)' }}
+                    duration={21}
                 />
                 <div className={container}>
-                    <ScrollReveal delay={0.06}>
-                        <h2 className={`mb-[clamp(36px,3vw,53px)] ${h2Class}`}>{content.included.title}</h2>
-                    </ScrollReveal>
-                    <ItemGrid items={content.included.items} className="sm:grid-cols-2 lg:grid-cols-3" />
-                    <ScrollReveal delay={0.1}>
-                        <p className={`mt-[clamp(24px,1.9vw,33px)] ${leadClass}`}>{content.included.closing}</p>
-                    </ScrollReveal>
-                </div>
-            </section>
-
-            {/* 8. How we work and how pricing works: heading left, text right with the link to the steps */}
-            <section className="relative overflow-hidden py-[clamp(108px,8.52vw,150px)]">
-                <div className={container}>
-                    <div className="grid grid-cols-1 gap-[clamp(20px,1.59vw,28px)] lg:grid-cols-[0.95fr_1.05fr] lg:gap-[clamp(53px,4.2vw,74px)]">
-                        <ScrollReveal delay={0.06}>
-                            <h2 className={h2Class}>{content.pricing.title}</h2>
+                    <div className="grid grid-cols-1 items-center gap-[clamp(53px,4.2vw,74px)] lg:grid-cols-[0.95fr_1.05fr]">
+                        <ScrollReveal direction="left">
+                            <div className={`${photoFrame} aspect-[4/5]`}>
+                                <SlotImage src={images.sound} alt={content.sound.image_alt} fill sizes="(max-width: 1024px) 100vw, 46vw" className="object-cover" />
+                                <div className={photoFade} />
+                            </div>
                         </ScrollReveal>
                         <div>
+                            <ScrollReveal delay={0.06}>
+                                <h2 className={`mb-[clamp(17px,1.31vw,23px)] ${h2Class}`}>{content.sound.title}</h2>
+                            </ScrollReveal>
                             <ScrollReveal delay={0.12}>
-                                <p className={leadClass}>{content.pricing.method}</p>
-                            </ScrollReveal>
-                            <ScrollReveal delay={0.14}>
-                                <div className="mb-[clamp(24px,1.9vw,33px)] mt-[clamp(16px,1.3vw,22px)]">
-                                    <GhostButton href={localizedPath('/services/experience-design')} size="md" arrow>
-                                        {content.pricing.link_label}
-                                    </GhostButton>
-                                </div>
-                            </ScrollReveal>
-                            <ScrollReveal delay={0.16}>
-                                <p className={leadClass}>{content.pricing.body}</p>
+                                <p className={`se-html ${leadClass}`} dangerouslySetInnerHTML={{ __html: content.sound.body }} />
                             </ScrollReveal>
                         </div>
                     </div>
                 </div>
             </section>
 
-            {/* 9. Where sound fits: links to three sound services */}
+            {/* 6. Questions we often hear */}
             <section className={`relative overflow-hidden py-[clamp(101px,7.95vw,140px)] ${panel}`}>
-                <div className={container}>
-                    <ScrollReveal delay={0.06}>
-                        <h2 className={`mb-[clamp(17px,1.31vw,23px)] ${h2Class}`}>{content.sound_fit.title}</h2>
-                    </ScrollReveal>
-                    <ScrollReveal delay={0.1}>
-                        <p className={`mb-[clamp(36px,3vw,53px)] ${leadClass}`}>{content.sound_fit.intro}</p>
-                    </ScrollReveal>
-                    <LinkedRows items={content.sound_fit.items} localizedPath={localizedPath} className="md:grid-cols-3" />
-                </div>
-            </section>
-
-            {/* 10. Questions we often hear */}
-            <section className="relative overflow-hidden py-[clamp(108px,8.52vw,150px)]">
                 <div className={container}>
                     <div className="grid grid-cols-1 gap-[clamp(28px,2.22vw,39px)] lg:grid-cols-[0.75fr_1.25fr] lg:gap-[clamp(53px,4.2vw,74px)]">
                         <ScrollReveal delay={0.06}>
@@ -281,7 +219,8 @@ export function ExperienceMarketing({ lang, content, images, em }: ExperienceMar
                 </div>
             </section>
 
-            {/* 11. Closing CTA (id="cta", set by PageCTA) */}
+            {/* 7. Closing CTA (id="cta", set by PageCTA). While its photo is pending, the band stays
+                dark and a square placeholder sits above the heading. */}
             <PageCTA
                 heading={content.cta.title}
                 emWord={em.cta}
@@ -290,6 +229,11 @@ export function ExperienceMarketing({ lang, content, images, em }: ExperienceMar
                 primaryHref={localizedPath('/contact')}
                 bgImage={images.cta}
                 bgAlt={content.cta.image_alt}
+                bgPlaceholder={
+                    isPending(images.cta) ? (
+                        <ImagePlaceholder src={images.cta} alt={content.cta.image_alt} className="aspect-square w-[clamp(180px,15vw,240px)]" />
+                    ) : undefined
+                }
             />
         </>
     );

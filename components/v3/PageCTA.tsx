@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import type { ReactNode } from 'react';
 import { ScrollReveal } from '@/components/motion';
 import { GhostButton } from './GhostButton';
 import { MorphCTA } from './MorphCTA';
@@ -18,6 +19,9 @@ interface PageCTAProps {
     bgImage: string;
     /** Describes the background photo: the same alt the photo has wherever else it appears. */
     bgAlt: string;
+    /** While the background photo is not ready: no photo, and this placeholder above the heading.
+        Pages that do not pass it render exactly as before. */
+    bgPlaceholder?: ReactNode;
 }
 
 /**
@@ -25,13 +29,14 @@ interface PageCTAProps {
  * phone/location line) — the prop-driven ContactCTA primitive from the v3 plan,
  * reused by the About/Services/... demo pages with per-page copy and links.
  */
-export function PageCTA({ heading, emWord, lede, primaryLabel, primaryHref, ghostLabel, ghostHref, bgImage, bgAlt }: PageCTAProps) {
+export function PageCTA({ heading, emWord, lede, primaryLabel, primaryHref, ghostLabel, ghostHref, bgImage, bgAlt, bgPlaceholder }: PageCTAProps) {
     const hasGhost = Boolean(ghostLabel && ghostHref);
     return (
         <section id="cta" className="relative overflow-hidden py-[clamp(122px,9.66vw,170px)]">
-            <Image src={bgImage} alt={bgAlt} fill aria-hidden="true" sizes="100vw" className="object-cover" />
+            {!bgPlaceholder && <Image src={bgImage} alt={bgAlt} fill aria-hidden="true" sizes="100vw" className="object-cover" />}
             <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(11,10,10,0.82),rgba(11,10,10,0.93))]" />
             <div className="relative z-10 mx-auto max-w-[min(1760px,100%)] px-[clamp(20px,1.59vw,28px)] text-center sm:px-[clamp(27px,2.1vw,37px)]">
+                {bgPlaceholder && <div className="mb-[clamp(37px,2.9vw,51px)] flex justify-center">{bgPlaceholder}</div>}
                 <ScrollReveal delay={0.08}>
                     <h2 className="mx-auto mb-[clamp(23px,1.82vw,32px)] max-w-[1060px] text-[clamp(2.76rem,6.33vw,5.06rem)] font-extrabold leading-[1.04] tracking-[-0.025em]">
                         {emphasize(heading, emWord)}
