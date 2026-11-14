@@ -30,6 +30,8 @@ interface ServiceContent {
     case_study?: { kicker: string; title: string; paragraphs: string[]; link_label?: string; link?: string; image_alt?: string };
     process?: { title: string; steps: { title: string; description: string }[] };
     pricing?: { title: string; body: string };
+    /** One sentence with a link to a related service (HTML), shown under the pricing paragraph. */
+    cross_link?: string;
     cta: { title: string; description: string; button: string; location: string };
 }
 
@@ -43,7 +45,7 @@ interface ServiceDetailProps {
     em: { statement: string; feature: string; forwhom: string; section5: string; cta: string };
 }
 
-export const GoldDotRows = ({ items }: { items: { title: string; description: string }[] }) => (
+export const GoldDotRows = ({ items, headingAs: Heading = 'h3' }: { items: { title: string; description: string }[]; headingAs?: 'h3' | 'h4' }) => (
     <StaggerChildren staggerDelay={0.08}>
         {items.map((item, i) => (
             <div
@@ -52,7 +54,7 @@ export const GoldDotRows = ({ items }: { items: { title: string; description: st
             >
                 <span className="mt-[0.6em] h-[7px] w-[7px] flex-none rounded-full bg-[image:var(--gold)]" aria-hidden="true" />
                 <div>
-                    <h3 className="mb-1.5 text-[clamp(1.18rem,1.34vw,1.47rem)] font-bold">{item.title}</h3>
+                    <Heading className="mb-1.5 text-[clamp(1.18rem,1.34vw,1.47rem)] font-bold">{item.title}</Heading>
                     <p className="text-[clamp(0.94rem,1.06vw,1.17rem)] leading-[1.6] text-[#faf6f1]/58">{item.description}</p>
                 </div>
             </div>
@@ -334,12 +336,22 @@ export function ServiceDetail({ lang, content, section5, images, em }: ServiceDe
                                 <ScrollReveal delay={0.06}>
                                     <h2 className="text-[clamp(2rem,3.6vw,3rem)] font-extrabold leading-[1.1] tracking-[-0.02em]">{content.pricing.title}</h2>
                                 </ScrollReveal>
-                                <ScrollReveal delay={0.12}>
-                                    <p
-                                        className="se-html max-w-[680px] text-[clamp(1.03rem,1.17vw,1.29rem)] leading-[1.65] text-[#faf6f1]/66"
-                                        dangerouslySetInnerHTML={{ __html: content.pricing.body }}
-                                    />
-                                </ScrollReveal>
+                                <div>
+                                    <ScrollReveal delay={0.12}>
+                                        <p
+                                            className="se-html max-w-[680px] text-[clamp(1.03rem,1.17vw,1.29rem)] leading-[1.65] text-[#faf6f1]/66"
+                                            dangerouslySetInnerHTML={{ __html: content.pricing.body }}
+                                        />
+                                    </ScrollReveal>
+                                    {content.cross_link && (
+                                        <ScrollReveal delay={0.16}>
+                                            <p
+                                                className="se-html mt-[clamp(15px,1.19vw,21px)] max-w-[680px] text-[clamp(1.03rem,1.17vw,1.29rem)] leading-[1.65] text-[#faf6f1]/66"
+                                                dangerouslySetInnerHTML={{ __html: content.cross_link }}
+                                            />
+                                        </ScrollReveal>
+                                    )}
+                                </div>
                             </div>
                         )}
                     </div>

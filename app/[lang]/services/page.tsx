@@ -133,6 +133,13 @@ export default async function ServicesV3({ params }: { params: Promise<{ lang: L
                         image="/images/services/experience-design/experience-design-services-block.jpg"
                         imageSide="right"
                     />
+                    {/* Brief, 13 Nov 2026: one line under the Experience Design block, linking to Experience Marketing. */}
+                    <ScrollReveal delay={0.08}>
+                        <p
+                            className="se-html mx-auto mt-[clamp(36px,3vw,53px)] max-w-[900px] text-center text-[clamp(1.02rem,1.15vw,1.27rem)] text-[#faf6f1]/60"
+                            dangerouslySetInnerHTML={{ __html: content.beyond_sound.marketing_line }}
+                        />
+                    </ScrollReveal>
                 </div>
             </section>
 

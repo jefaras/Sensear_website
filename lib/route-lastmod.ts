@@ -38,18 +38,21 @@ const LAST_MODIFIED_OVERRIDES: Record<string, string> = {
     // T6 service-page rewrites (copy in the dictionaries). Add each page here in its own T6 commit.
     '/services/signature-playlists': '2026-11-11T00:00:00.000Z',
     '/services/audio-upgrades': '2026-11-11T00:00:00.000Z',
-    '/services/event-soundtracks': '2026-11-11T00:00:00.000Z',
-    '/services/sonic-identity': '2026-11-11T00:00:00.000Z',
-    '/services': '2026-11-11T00:00:00.000Z',
+    // Experience Marketing brief (13 Nov): one link sentence on Event Soundtracks and Sonic Identity, one line on /services.
+    '/services/event-soundtracks': '2026-11-13T00:00:00.000Z',
+    '/services/sonic-identity': '2026-11-13T00:00:00.000Z',
+    '/services': '2026-11-13T00:00:00.000Z',
     // Own photos and alt texts (3 Nov); intro split into paragraphs (11 Nov). Dictionaries only, so git would not move the date.
-    '/services/experience-design': '2026-11-11T00:00:00.000Z',
+    // Experience Marketing brief (13 Nov): copy changes, method block moved, two new photos.
+    '/services/experience-design': '2026-11-13T00:00:00.000Z',
+    '/services/experience-design/experience-marketing': '2026-11-13T00:00:00.000Z',
     // T12 industries rewrites (copy in the dictionaries). Add each page here in its own T12 commit.
     '/industries': '2026-11-11T00:00:00.000Z',
     '/industries/music-for-hotels-and-resorts': '2026-11-06T00:00:00.000Z',
     '/industries/music-for-restaurants-and-bars': '2026-11-11T00:00:00.000Z',
-    '/industries/music-for-retail-stores': '2026-11-06T00:00:00.000Z',
+    '/industries/music-for-retail-stores': '2026-11-13T00:00:00.000Z', // Experience Marketing link sentence (13 Nov)
     '/industries/music-for-wellness-and-gyms': '2026-11-06T00:00:00.000Z',
-    '/industries/music-for-events-and-experiences': '2026-11-11T00:00:00.000Z',
+    '/industries/music-for-events-and-experiences': '2026-11-13T00:00:00.000Z', // Experience Marketing link sentence (13 Nov)
     '/industries/music-for-art-museums-and-fashion': '2026-11-06T00:00:00.000Z',
     // Greek wording fixes outside T12 (copy in el.json only), approved by JEF on 6 Nov.
     '/case-studies': '2026-11-10T00:00:00.000Z',
@@ -63,7 +66,8 @@ const LAST_MODIFIED_OVERRIDES: Record<string, string> = {
     // The hub's cards carry each article's title and description, so it moves with the last article round.
     // Hub subtitle, meta title/description and list heading rewritten (EN + EL) on 12 Nov; covers /blog/ and /el/blog/.
     // Later on 12 Nov: new meta title/description, newsletter title, list-heading emphasis, and internal links in 8 articles.
-    '/blog': '2026-11-12T00:00:00.000Z',
+    // 19 Nov: "From service to experience" added as the first card.
+    '/blog': '2026-11-19T00:00:00.000Z',
     '/blog/how-top-hospitality-brands-design-sound': '2026-11-06T00:00:00.000Z',
     '/blog/three-reasons-make-music-hospitality': '2026-11-06T00:00:00.000Z',
     '/blog/brand-music-converts-browsers-buyers': '2026-11-06T00:00:00.000Z',
@@ -82,6 +86,7 @@ const LAST_MODIFIED_OVERRIDES: Record<string, string> = {
     '/blog/music-and-your-staff': '2026-11-12T00:00:00.000Z',
     '/blog/how-to-measure-music-results': '2026-11-12T00:00:00.000Z',
     '/blog/music-for-international-guests': '2026-11-12T00:00:00.000Z',
+    '/blog/from-service-to-experience': '2026-11-19T00:00:00.000Z',
 }
 
 const BLOG_POST_PREFIX = '/blog/'

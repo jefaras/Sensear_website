@@ -517,6 +517,210 @@
         },
         "articles": [
             {
+                "title": "From service to experience: what guests really pay for",
+                "desc": "A service saves time. An experience is time well spent. The five steps of the experience economy, where Service Design fits, and what it means for venues.",
+                "tag": "Method",
+                "link": "from-service-to-experience",
+                "image": "/images/blog/blog-from-service-to-experience.jpg",
+                "ogImage": "/images/blog/blog-from-service-to-experience-share.jpg",
+                "author": "SensEar Team",
+                "alt": "Set tables under red fringed lamps in a restaurant with painted murals on the walls and ceiling",
+                "displayDate": "November 19, 2026",
+                "structuredContent": [
+                    {
+                        "type": "heading",
+                        "level": 2,
+                        "value": "Quick take"
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "A hotel room, a dinner and a haircut are services. What guests remember, review and return for is something else: how the visit felt. In 1998, B. Joseph Pine II and James Gilmore gave this difference a name. They described experiences as a separate kind of offering, as different from services as services are from goods ([Pine & Gilmore, 1998](https://hbr.org/1998/07/welcome-to-the-experience-economy))."
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "Most businesses think they already deliver it. In a Bain & Company survey of 362 firms, 80% believed they delivered a superior experience to their customers. The customers said this was true for only 8% ([Allen et al., 2005](https://media.bain.com/bainweb/PDFs/cms/hotTopics/closingdeliverygap.pdf))."
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "This article explains the difference between a service and an experience, where Service Design fits, when an experience becomes marketing, and what all this means for a venue in Greece."
+                    },
+                    {
+                        "type": "heading",
+                        "level": 2,
+                        "value": "Five steps of value, told with a birthday cake"
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "Pine and Gilmore describe a ladder of value with a birthday cake. First, parents baked the cake from flour, sugar, butter and eggs, which cost very little. Then they bought a packaged cake mix for a dollar or two. Later they ordered a finished cake from a bakery for 10 to 15 dollars. By the 1990s, many paid 100 dollars or more to a venue that staged the whole party, and often gave the cake for free."
+                    },
+                    {
+                        "type": "list",
+                        "items": [
+                            "Commodities: the raw ingredients. They are the same whoever you buy them from.",
+                            "Goods: the packaged mix. It is tangible and standardised.",
+                            "Services: the bakery cake. It is made for you when you ask for it.",
+                            "Experiences: the party. It is personal and memorable.",
+                            "Transformations: a fifth step, added later. The customer comes to change something about themselves, and the business guides them ([Bettencourt et al., 2022](https://hbr.org/2022/01/the-new-you-business))."
+                        ]
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "With each step up, the offer is harder to copy and customers pay more for it. The words change too. A service has clients. An experience has guests."
+                    },
+                    {
+                        "type": "heading",
+                        "level": 2,
+                        "value": "A service saves time, an experience is time well spent"
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "Researchers at Haaga-Helia University of Applied Sciences in Finland describe the difference in plain words for our sector. Everyday transactions of food, drink and shelter are services, because they are about saving time. Hospitality is about memorable experiences and time well spent ([Ascenção & Tuomi, 2021](https://esignals.fi/en/category-en/experience-economy/hospitality-is-experience-business-not-service-business))."
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "The same venue needs both. A fast check-in, a clean room and a correct bill are services, and guests expect them to work without thinking about them. The welcome, the mood on the terrace at sunset and the last moment before leaving are the experience. A venue that only saves time competes on price and convenience. A venue where time is well spent gives guests a reason to choose it again."
+                    },
+                    {
+                        "type": "heading",
+                        "level": 2,
+                        "value": "Service Design is the method, not the product"
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "Service Design is a way of working. It looks at a service from the customer's side and designs each step so that it is useful, usable and desirable for the customer, and effective, efficient and distinctive for the business (Mager, 2008). In practice it moves through stages, from understanding customers and defining the problem to ideas, selection, testing with prototypes and putting the result into operation (Moritz, 2005). Its tools are simple, such as observation, interviews, a customer journey map and a service blueprint."
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "A study project shows how it works. As part of our studies in the Haaga-Helia programme, a member of our team and two fellow students applied the method at a museum in Athens. They observed visitors, read online reviews and held short interviews. Visitors spoke well of the atmosphere, the building, the collection and the staff. The team also saw that first-time visitors could lose the order of the historical story at stairs and floor changes. Their proposal was a light orientation system, with a clear route, short bridges between sections and a recap at the end of each one. This was an academic exercise. The museum did not commission it."
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "The lesson for a venue is that the method does not start from ideas. It starts from watching what guests actually do, and the fix is often small."
+                    },
+                    {
+                        "type": "heading",
+                        "level": 2,
+                        "value": "When the experience is the product, and when it is the marketing"
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "The same craft has two uses."
+                    },
+                    {
+                        "type": "list",
+                        "items": [
+                            "The experience is the product. A stay, a dinner, a spa visit or a private celebration is what the guest pays for. Designing it better brings better reviews, more repeat visits and higher spend. This is Experience Design.",
+                            "The experience is the marketing. Here the experience sells something else, such as a brand, a product or a membership. Gilmore and Pine argue that people have become relatively immune to messages aimed at them, and that the best way to market any offering is an experience so engaging that people cannot help paying attention (Gilmore & Pine, 2002). This is Experience Marketing."
+                        ]
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "Their examples are stores that stopped behaving like stores. At the American Girl Place in Chicago, families spent hours at a theatre show, a café and a hair salon for dolls. The question visitors asked most often, while already inside, was \"Where's the store?\"."
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "You will also meet the term experiential marketing. Researchers who compared the two terms describe experience marketing as the strategic, long-term approach, and experiential marketing as the tactical tool, such as a single campaign. They also note that there is no agreement on the terms and that many authors use them for the same thing ([Same & Larimo, 2012](https://doi.org/10.3846/bm.2012.063))."
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "Another study project gives a picture from Greece. For a course on experience marketing, a member of our team prepared a plan for how a Greek sleep brand could present one of its Athens stores as a sleep studio, where visitors get to know the natural materials by touch, receive personal guidance and take part in a short ritual inside the store. This too was an academic exercise. The company did not commission it. It shows the idea simply: the store is no longer only a place where products are displayed, but a place where the visitor lives something."
+                    },
+                    {
+                        "type": "heading",
+                        "level": 2,
+                        "value": "Transformation is the top step, not a promise for every visit"
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "It is tempting to say that every guest leaves changed. The research is stricter. In a transformation business, customers come because they want to improve a fundamental part of their lives, such as their fitness or their health. The business becomes their partner on that journey, because real change is hard to achieve alone ([Bettencourt et al., 2022](https://hbr.org/2022/01/the-new-you-business))."
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "So a good dinner is an experience, not a transformation. Transformation fits wellness retreats, learning programmes and some once-in-a-lifetime events, where there is preparation before and follow-up after. For most venues, the realistic and valuable goal is an experience that guests remember."
+                    },
+                    {
+                        "type": "heading",
+                        "level": 2,
+                        "value": "Where sound fits"
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "Sound is where we started, and research gives it a place at every stage of a stay. A review of sensory marketing in hotels describes the role of each sense along the guest journey. It warns that hoteliers who design only for the eye neglect the other senses at their peril, because poor design for those senses lowers the guest's overall experience and ratings ([Spence, 2022](https://doi.org/10.3389/fpsyg.2022.1014818))."
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "Sound is also practical. It reaches every corner of a room, it changes through the day without any building work, and it can follow a brand from the lobby to an event or a video. This is why we treat it as the first part of an experience and design the rest around it."
+                    },
+                    {
+                        "type": "heading",
+                        "level": 2,
+                        "value": "What this means for hotels, restaurants and stores"
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "Fix the service first. An experience cannot cover a slow check-in or a wrong bill. Guests expect the parts that save them time to simply work."
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "Then choose a few moments to design with care. The arrival, one high point and the goodbye usually matter more than many small details."
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "Decide which of the two uses you need. If the goal is better reviews and repeat visits from the guests you already have, design the visit. If the goal is to bring new people to your brand, design an experience worth coming for."
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "Measure it like anything else. Agree two or three measures before you start, such as reviews, repeat visits, time spent or new contacts (see [our article on how to measure music results](/blog/how-to-measure-music-results/))."
+                    },
+                    {
+                        "type": "heading",
+                        "level": 2,
+                        "value": "The SensEar checklist: which step are you on?"
+                    },
+                    {
+                        "type": "list",
+                        "items": [
+                            "List what you sell today. Mark each item as a product, a service or an experience.",
+                            "Go through a visit as a guest, from the first search online to the message after leaving. Note where time is saved and where time is well spent.",
+                            "Ask what a guest would describe to a friend. If the answer is only \"it was fine\", you are selling a service.",
+                            "Pick one moment to design this season: the arrival, a high point or the goodbye.",
+                            "Check that sound, light and service agree in that moment (see [our article on when the senses agree](/blog/when-the-senses-agree/)).",
+                            "Decide what you will measure before you change anything.",
+                            "Promise a transformation only if you have also planned what happens before and after the visit."
+                        ]
+                    },
+                    {
+                        "type": "heading",
+                        "level": 2,
+                        "value": "Sources"
+                    },
+                    {
+                        "type": "list",
+                        "items": [
+                            "Pine, B. J., & Gilmore, J. H. (1998). Welcome to the Experience Economy. Harvard Business Review, July–August 1998, 97-105. https://hbr.org/1998/07/welcome-to-the-experience-economy",
+                            "Gilmore, J. H., & Pine, B. J. (2002). The Experience IS the Marketing. Strategic Horizons LLP, BrownHerron Publishing.",
+                            "Bettencourt, L. A., Pine, B. J., Gilmore, J. H., & Norton, D. W. (2022). The \"New You\" Business. Harvard Business Review, January–February 2022. https://hbr.org/2022/01/the-new-you-business",
+                            "Ascenção, M. P., & Tuomi, A. (2021). Hospitality is experience business not service business. eSignals, Haaga-Helia University of Applied Sciences. https://esignals.fi/en/category-en/experience-economy/hospitality-is-experience-business-not-service-business",
+                            "Allen, J., Reichheld, F. F., Hamilton, B., & Markey, R. (2005). Closing the delivery gap. Bain & Company. https://media.bain.com/bainweb/PDFs/cms/hotTopics/closingdeliverygap.pdf",
+                            "Same, S., & Larimo, J. (2012). Marketing theory: Experience marketing and experiential marketing. 7th International Scientific Conference \"Business and Management 2012\", Vilnius, 480-487. https://doi.org/10.3846/bm.2012.063",
+                            "Mager, B. (2008). Service design. In M. Erlhoff & T. Marshall (Eds.), Design Dictionary. Birkhäuser.",
+                            "Moritz, S. (2005). Service Design: Practical Access to an Evolving Field. Köln International School of Design.",
+                            "Spence, C. (2022). Sensehacking the guest's multisensory hotel experience. Frontiers in Psychology, 13, 1014818. https://doi.org/10.3389/fpsyg.2022.1014818"
+                        ]
+                    },
+                    {
+                        "type": "heading",
+                        "level": 2,
+                        "value": "Do your guests get a service or an experience?"
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "If you want to design the visit your guests already pay for, [see how Experience Design works](/services/experience-design/). If you want an experience that brings customers to your brand, [see Experience Marketing](/services/experience-design/experience-marketing/)."
+                    }
+                ],
+                "standfirst": "Eight in ten companies believe they deliver a superior experience. Their customers agree for fewer than one in ten. What separates a service from an experience, when an experience becomes marketing, and where sound fits."
+            },
+            {
                 "title": "Can music change what guests order?",
                 "desc": "Not how much guests spend, but what they choose: what field and lab studies found about music, volume, genre and the order itself.",
                 "tag": "Research",
@@ -3221,7 +3425,8 @@
         },
         "beyond_sound": {
             "title": "Beyond sound",
-            "intro": "Sound is one layer of what your guests feel. Experience Design covers the rest."
+            "intro": "Sound is one layer of what your guests feel. Experience Design covers the rest.",
+            "marketing_line": "When an experience is meant to win or keep customers, see <a href=\"/services/experience-design/experience-marketing/\" class=\"se-link\">Experience Marketing</a>."
         }
     },
     "footer": {
@@ -3676,6 +3881,7 @@
             "title": "How pricing works",
             "body": "Every event is priced <strong>on its own</strong>, based on the hours, the DJ, the equipment and any special arrangements. You receive <strong>one written offer</strong> after the free venue visit, and a <strong>deposit</strong> secures your date."
         },
+        "cross_link": "If your event is meant to win or keep customers, such as a launch or a corporate evening, see <a href=\"/services/experience-design/experience-marketing/\" class=\"se-link\">Experience Marketing</a> too.",
         "cta": {
             "title": "Tell us your date and your run of show.",
             "description": "We visit the venue for free before we send our offer.",
@@ -3806,6 +4012,7 @@
             "title": "How pricing works",
             "body": "Sonic Identity is a <strong>one-time project fee</strong>, set by the number of locations, the workshops and the deliverables. The first call or visit is <strong>free</strong>, and a <strong>deposit</strong> confirms the project. Original music and sonic logos are quoted separately on request, and reviews after handover depend on your contract."
         },
+        "cross_link": "When your sonic identity becomes part of an experience that brings customers to your brand, we design it through <a href=\"/services/experience-design/experience-marketing/\" class=\"se-link\">Experience Marketing</a>.",
         "cta": {
             "title": "Tell us where your brand needs to sound the same.",
             "description": "The first call or visit is free.",
@@ -3959,13 +4166,13 @@
     },
     "experience_design": {
         "meta": {
-            "title": "Experience Design for hotels and venues",
-            "description": "We design the whole guest experience for hotels, restaurants and venues in Greece: journey, service, space and sound, from first idea to launch."
+            "title": "Experience Design for venues and events",
+            "description": "We design the whole experience for guests of hotels, restaurants, venues and private events in Greece: journey, service, space and sound."
         },
         "hero": {
             "title": "Experience Design",
             "subtitle": "The whole guest journey, designed.",
-            "description": "We design how guests feel in your venue, from the first click to the memory they take home. Sound is where we started. Now we design the rest with you.",
+            "description": "We design how guests feel in your venue or at your event, from the first click to the memory they take home. Sound is where we started. Now we design the rest with you.",
             "explore_cta": "Explore the service",
             "audit_cta": "Start with an Experience Audit",
             "image_alt": "Waiters holding plates around a candlelit round table under a ring of light at an evening dinner"
@@ -3973,7 +4180,7 @@
         "intro": {
             "title": "What Experience Design is",
             "paragraphs": [
-                "Experience Design is the planning and building of <strong>everything a guest meets</strong> in your venue.",
+                "Experience Design is the planning and building of <strong>everything a guest meets</strong> in your venue or at your event.",
                 "That includes the website and booking, the arrival, the space, the light, the sound, the service and what happens after the visit.",
                 "Most venues design these parts separately, with different people and at different times. Guests notice when the parts do not fit. We look at the whole visit <strong>through the guest's eyes</strong>, find where it breaks, and design each touchpoint to support <strong>the same story</strong>.",
                 "We do not stop at a report. We stay with you <strong>until the new experience is part of your daily operation</strong>."
@@ -4008,8 +4215,8 @@
             "image_alt": "Guests at an evening reception inside a stone quarry, with lounge seating and long dinner tables"
         },
         "event_moments": {
-            "title": "What it can look like at an event",
-            "intro": "An event is a whole guest journey in a few hours, so every moment counts. We design private celebrations, corporate events and brand launches as one story, so guests remember them and leave a little different from how they came.",
+            "title": "What it can look like at a private event",
+            "intro": "An event is a whole guest journey in a few hours, so every moment counts. We design private celebrations as one story that guests will remember.",
             "items": [
                 {
                     "title": "The invitation",
@@ -4017,7 +4224,7 @@
                 },
                 {
                     "title": "The arrival",
-                    "description": "We plan the first minutes: how guests are welcomed, what they hear and see, and where they go first."
+                    "description": "Guests know from the door what kind of evening they have come to, because we have planned who welcomes them, what music is playing and where they go first."
                 },
                 {
                     "title": "The high point",
@@ -4025,20 +4232,20 @@
                 },
                 {
                     "title": "The close",
-                    "description": "The last moment is designed as carefully as the first, so the event ends on a high point."
+                    "description": "The evening ends on a moment we have planned, not when the room simply empties, so guests leave on its best moment."
                 },
                 {
                     "title": "After the event",
                     "description": "A thoughtful follow-up, such as a photo, a playlist or a small gift, keeps the moment alive."
                 }
             ],
-            "closing": "For a private celebration, the story is personal. For a corporate event, it brings the company's values to its people. For a brand launch, it lets guests feel the brand, not just see it.",
-            "intensity": "We work with you to set the intensity that fits the occasion, from a memorable touch to a fully immersive experience or a moment that stays with guests long after they leave.",
+            "closing": "For a private celebration, the story is personal and starts from the people being celebrated. For corporate events and brand launches, where the experience is meant to win or keep customers, see <a href=\"/services/experience-design/experience-marketing/\" class=\"se-link\">Experience Marketing</a>.",
+            "intensity": "We agree with you how intense the experience should be, on three levels: a light touch within the evening, an experience that fully absorbs guests, or a moment that changes something in them and stays long after.",
             "image_alt": "Orchestra playing inside a giant shell-shaped sculpture by the sea at sunset"
         },
         "layers": {
             "title": "Four layers we design",
-            "intro": "A lasting experience needs more than nice details. The aim is that guests leave a little different from how they came. To get there we work on four layers, from the idea down to the objects guests touch.",
+            "intro": "A lasting experience needs more than nice details. We work on four layers, from the idea down to the objects guests touch.",
             "items": [
                 {
                     "title": "The story",
@@ -4048,12 +4255,12 @@
                 {
                     "title": "The team",
                     "description": "Guests feel the experience through your staff. We shape the habits, words and small rituals that let your team deliver it every day.",
-                    "image_alt": "Smiling man wearing sparkling rings"
+                    "image_alt": "A waiter in a white jacket holds a large silver tray with a single cherry in an empty ballroom"
                 },
                 {
                     "title": "The journey",
                     "description": "We map every step of the visit, before, during and after. Then we plan the moments that matter most: the arrival, the high point and the goodbye.",
-                    "image_alt": "Woman relaxing on a speedboat at night"
+                    "image_alt": "An archway leads from a gold-lit passage to a bar under a deep red ceiling"
                 },
                 {
                     "title": "The details",
@@ -4062,12 +4269,40 @@
                 }
             ]
         },
+        "method": {
+            "title": "The method behind it",
+            "intro": "Our approach draws on studies in hospitality management and experience design at Haaga-Helia University of Applied Sciences in Finland, and on our daily work with venues across Greece. We use methods that experience designers use worldwide:",
+            "items": [
+                {
+                    "title": "Service Design",
+                    "description": "A step-by-step method for understanding guests and designing every part of a service."
+                },
+                {
+                    "title": "The Experience Economy",
+                    "description": "The idea that guests pay for how a visit makes them feel, not only for the room or the meal."
+                },
+                {
+                    "title": "Sensory marketing",
+                    "description": "Research on how the senses shape what guests notice and remember."
+                },
+                {
+                    "title": "Positive psychology (the PERMA model)",
+                    "description": "A model of wellbeing that helps us design experiences guests feel good about."
+                },
+                {
+                    "title": "Transformative Experience Design",
+                    "description": "Design on four levels: story, team culture, journey and details, for experiences that leave something with guests after the visit."
+                }
+            ],
+            "closing": "You do not need to know any of these. They are simply how we make sure nothing important is left to chance.",
+            "image_alt": "Two men crouching over a guest journey map on the floor, in front of a whiteboard of sticky notes"
+        },
         "what_we_do": {
             "title": "What's included",
             "items": [
                 {
                     "title": "Venue visit and guest research",
-                    "description": "We observe the space at different hours and talk with guests, staff and management."
+                    "description": "We observe the space at different hours and talk with guests, staff and management. For an event, we start from the hosts, the venue and the plan of the day."
                 },
                 {
                     "title": "Guest journey map",
@@ -4086,12 +4321,12 @@
                     "description": "Who does what, when and how, written so your team can use it from the first day."
                 },
                 {
-                    "title": "Launch and training",
-                    "description": "We help you put the changes in place, train the team and adjust after the first weeks."
+                    "title": "Test, launch and training",
+                    "description": "We test the main changes on a small scale first. Then we help you put them in place, train the team and adjust after the first weeks."
                 },
                 {
                     "title": "Measurement",
-                    "description": "We agree simple measures with you, such as guest reviews, time spent, repeat visits and average spend, and we check them after launch."
+                    "description": "We agree simple measures with you, such as guest reviews, time spent, repeat visits and average spend, and we check them after launch. For an event, we ask guests and hosts for their impressions."
                 }
             ],
             "image_alt": "Circular dinner table with candles and plants, surrounded by wall projections"
@@ -4115,17 +4350,17 @@
                     "link": "industries/music-for-events-and-experiences"
                 },
                 {
-                    "title": "Retail stores",
+                    "title": "Retail Stores",
                     "description": "A store visit that matches the brand.",
                     "link": "industries/music-for-retail-stores"
                 },
                 {
-                    "title": "Wellness spaces",
+                    "title": "Wellness & Gyms",
                     "description": "Calm, coherent spaces that support how guests feel.",
                     "link": "industries/music-for-wellness-and-gyms"
                 },
                 {
-                    "title": "Art & Culture spaces",
+                    "title": "Art, Museums & Fashion",
                     "description": "Visits that people remember and talk about.",
                     "link": "industries/music-for-art-museums-and-fashion"
                 }
@@ -4148,12 +4383,12 @@
                     "description": "We agree on the goals, the guest profiles and the story of the experience."
                 },
                 {
-                    "title": "Create and choose",
-                    "description": "We develop ideas for each touchpoint. Then we choose with you what to do now and what to keep for later."
+                    "title": "Create, choose and test",
+                    "description": "We develop ideas for each touchpoint and choose with you what to do now and what to keep for later. Then we test the most important ones on a small scale."
                 },
                 {
                     "title": "Deliver the plan",
-                    "description": "We hand over the journey map, the service blueprint and the staff playbook."
+                    "description": "We hand over the experience concept, the journey map, the sensory brief, the service blueprint and the staff playbook."
                 },
                 {
                     "title": "Launch",
@@ -4167,7 +4402,7 @@
             "items": [
                 {
                     "title": "Experience Audit",
-                    "description": "A short review of your current guest experience. You get a venue visit, a journey map and a list of priority fixes. It is the easiest first step."
+                    "description": "A short review of your current guest experience. You get a venue visit, a journey map, a score for each sense and stage of the visit, and a list of priority fixes. It is the easiest first step."
                 },
                 {
                     "title": "Journey Workshop",
@@ -4181,39 +4416,11 @@
         },
         "pricing": {
             "title": "How pricing works",
-            "body": "Pricing depends on the size of the venue, the number of spaces and how much of the process you need. After the first call and the visit, we send a written proposal with the scope, timeline and cost."
-        },
-        "method": {
-            "title": "The method behind it",
-            "intro": "Our approach draws on academic training in hospitality management and experience design, and on our daily work with venues across Greece. We use methods that experience designers use worldwide:",
-            "items": [
-                {
-                    "title": "Every step is designed",
-                    "description": "We look at a visit as a service with steps, and we design each step, not only the space it happens in."
-                },
-                {
-                    "title": "Guests pay for how they feel",
-                    "description": "The room and the meal are the ticket. The feeling of the visit is what guests remember, review and come back for."
-                },
-                {
-                    "title": "All five senses",
-                    "description": "Sound, light, scent, touch and taste shape what guests notice and remember. We work on all of them, so none works against the others."
-                },
-                {
-                    "title": "Wellbeing, not only comfort",
-                    "description": "A visit feels good when guests feel welcome, absorbed in the moment, connected to people and glad they came. We design for all of that."
-                },
-                {
-                    "title": "The guest leaves changed",
-                    "description": "The aim is not only a pleasant visit but a guest who leaves changed: calmer or more excited, more connected, with a story to tell or a new realisation."
-                }
-            ],
-            "closing": "Every venue or event needs a different mix, so we choose the methods that suit you best and combine them so that nothing important is left out.",
-            "image_alt": "Two men crouching over a guest journey map on the floor, in front of a whiteboard of sticky notes"
+            "body": "Pricing depends on the size of the venue, the number of spaces and how much of the process you need. After the first call and the visit, we send a written proposal with the scope, timeline and cost. For an event, pricing depends on the number of guests and how many of its moments we design."
         },
         "sound_fit": {
             "title": "Where sound fits",
-            "intro": "Sound is one of the strongest layers of any experience, and it is where we started. When a project needs it, our sound services become part of the design:",
+            "intro": "Sound is one of the strongest parts of any experience, and it is where we started. When a project needs it, our sound services become part of the design:",
             "items": [
                 {
                     "title": "Signature Playlists",
@@ -4237,6 +4444,11 @@
                 }
             ]
         },
+        "marketing": {
+            "title": "When the experience becomes marketing",
+            "body": "When an experience is meant to bring new customers to your brand, or to keep the ones you have close, that work belongs to Experience Marketing. We use the same method with a different goal.",
+            "button": "Explore Experience Marketing"
+        },
         "faq": {
             "title": "Questions we often hear",
             "items": [
@@ -4257,6 +4469,14 @@
                     "answer": "An Experience Audit usually takes 2 to 3 weeks. A full project takes about 2 to 4 months, depending on the size of the venue."
                 },
                 {
+                    "question": "How early should we start for an event?",
+                    "answer": "As early as you can. The time depends on the size of the event, and we agree it with you on the first call, so there is time for the design and for the work with everyone involved."
+                },
+                {
+                    "question": "Do you work with the event planner?",
+                    "answer": "Yes. The planner organises the event, and we design what guests live at each moment of it. We work together from the start."
+                },
+                {
                     "question": "Do you only work with hotels?",
                     "answer": "No. We also work with restaurants, bars, retail stores, wellness spaces, cultural spaces and events."
                 },
@@ -4272,9 +4492,183 @@
         },
         "cta": {
             "title": "Tell us how guests experience your venue today.",
-            "description": "We reply within 24 hours with our first thoughts and the best way to start.",
+            "description": "We reply within 24 hours with our first thoughts and the best way to start, whether it is your venue or an event you are planning.",
             "button": "Start with an Experience Audit",
             "image_alt": "People walking through flowing orange and red light"
+        }
+    },
+    "experience_marketing": {
+        "meta": {
+            "title": "Experience Marketing for brands with a venue",
+            "description": "Experience marketing (experiential marketing) for stores, showrooms, wineries, hotels and restaurants in Greece: experiences that win and keep customers."
+        },
+        "back_link": "Back to Experience Design",
+        "hero": {
+            "title": "Experience Marketing",
+            "subtitle": "Let customers live your brand, not just see it.",
+            "description": "We design experiences in your own space that bring in new customers and give the ones you have a reason to return. Sound is where we start.",
+            "explore_cta": "Explore the service",
+            "contact_cta": "Tell us about your brand",
+            "image_alt": "A bartender picks a record from shelves of vinyl in a wood-panelled bar with brass stools"
+        },
+        "intro": {
+            "title": "What Experience Marketing is",
+            "paragraphs": [
+                "Experience marketing, also called experiential marketing, presents your brand through something customers live for themselves, instead of one more message they only see.",
+                "People skip most advertising, but they remember what they took part in and they tell others about it. So we make a visit to your space the reason people come, stay longer and come back.",
+                "We start from sound, because it is our craft and one of the fastest ways to change how a space feels. Then we design the other parts around it: the welcome, the activity, the takeaway and the follow-up."
+            ]
+        },
+        "for_whom": {
+            "title": "Who it is for and what you gain",
+            "intro": "It is for brands with a place where customers can meet them in person: a store, a showroom, a winery, a hotel or a restaurant.",
+            "items": [
+                {
+                    "title": "New customers",
+                    "description": "People get to know your brand by living it. You see the result in visits, new contacts or bookings, and sales after the experience."
+                },
+                {
+                    "title": "The customers you have",
+                    "description": "The customers you already have get a reason to return and to recommend you. You see the result in repeat visits, referrals and participation."
+                }
+            ]
+        },
+        "example": {
+            "title": "What it can look like",
+            "intro": "Here is one example: a store that wants to become a destination, a place people visit on purpose. We design five moments, and each one leads to the next.",
+            "items": [
+                {
+                    "title": "The invitation",
+                    "description": "A short invitation with a clear promise tells people what they will live and gives them a reason to save the date."
+                },
+                {
+                    "title": "The arrival",
+                    "description": "The first minute sets the mood: the welcome at the door, the music, the light and the first thing people are offered."
+                },
+                {
+                    "title": "The experience",
+                    "description": "Visitors do something themselves, such as try, taste, make or choose, with a host from the brand to guide them. This is the moment they will talk about."
+                },
+                {
+                    "title": "The close",
+                    "description": "Nobody leaves empty-handed. A small takeaway, such as a sample, a photo or a playlist, keeps the brand in mind at home."
+                },
+                {
+                    "title": "After",
+                    "description": "A thoughtful follow-up thanks the people who came, shares the content of the day and invites them back."
+                }
+            ],
+            "closing": "The same five moments work for a showroom, a winery, a hotel or a restaurant.",
+            "image_alt": "Three waiters in white jackets and bow ties hold trays of drinks in a room with bare plaster walls"
+        },
+        "ways": {
+            "title": "Two ways to work with us",
+            "items": [
+                {
+                    "title": "One experience for one moment",
+                    "description": "A single experience for a specific occasion, such as a launch, an opening, a seasonal event or an evening for your best customers."
+                },
+                {
+                    "title": "A programme of experiences for the year",
+                    "description": "A plan of connected experiences across the year, so each one builds on the last and people always have a reason to visit your space."
+                }
+            ]
+        },
+        "no_space": {
+            "title": "No space of your own?",
+            "body": "If your brand has no space of its own, we design the experience for a rented venue or a pop-up. We work with an experienced event production partner, who handles the production on site, while we design the experience and the sound."
+        },
+        "included": {
+            "title": "What's included and how we measure it",
+            "items": [
+                {
+                    "title": "Goals and measures",
+                    "description": "We agree with you what the experience should achieve and which measures will show it."
+                },
+                {
+                    "title": "Audience",
+                    "description": "We describe who we want to bring in, beyond age and income: what they do, what they care about and how they relate to your brand."
+                },
+                {
+                    "title": "Concept and activities",
+                    "description": "The idea of the experience and what visitors will do, moment by moment."
+                },
+                {
+                    "title": "Sound and the senses",
+                    "description": "Music, light, scent and materials are designed to support the same idea."
+                },
+                {
+                    "title": "Delivery plan",
+                    "description": "Timeline, team, staff training and budget, written so everyone knows what to do and when."
+                },
+                {
+                    "title": "Promotion",
+                    "description": "How people will hear about the experience before it happens and how they will share it while it lasts."
+                }
+            ],
+            "closing": "We agree the measures with you before we start, such as attendance, new contacts, sales, mentions on social media and repeat visits. At the end you know what the experience delivered."
+        },
+        "pricing": {
+            "title": "How we work and how pricing works",
+            "method": "We work in the same six steps as in Experience Design, from the first call to launch. Our method draws on Service Design and the Experience Economy.",
+            "link_label": "See the steps in Experience Design",
+            "body": "Pricing depends on the size of the experience, the number of guests, whether it happens in your own space or a rented one, and whether it is a single experience or a programme for the year. After the first call, we send a written proposal with the scope, timeline and cost."
+        },
+        "sound_fit": {
+            "title": "Where sound fits",
+            "intro": "Sound is where we started, and it is the part of every experience we know best. These services often become part of the plan:",
+            "items": [
+                {
+                    "title": "Sonic Identity",
+                    "description": "One recognisable sound for your brand, in your space and on every channel.",
+                    "link": "services/sonic-identity"
+                },
+                {
+                    "title": "Event Soundtracks",
+                    "description": "Music designed for the event, moment by moment.",
+                    "link": "services/event-soundtracks"
+                },
+                {
+                    "title": "Signature Playlists",
+                    "description": "The daily music that keeps the mood between experiences.",
+                    "link": "services/signature-playlists"
+                }
+            ]
+        },
+        "faq": {
+            "title": "Questions we often hear",
+            "items": [
+                {
+                    "question": "What is the difference between experience marketing and experiential marketing?",
+                    "answer": "Most people use the two terms for the same thing. When a difference is made, experiential marketing means a single activation or campaign, while experience marketing means the longer plan behind all of them. We do both."
+                },
+                {
+                    "question": "How is it different from event planning?",
+                    "answer": "An event planner organises the event. We design what guests live in it and what your brand gains from it, and we measure the result. For production, we work with the partners each event needs."
+                },
+                {
+                    "question": "How is it different from Experience Design?",
+                    "answer": "<a href=\"/services/experience-design/\" class=\"se-link\">Experience Design</a> improves the visit your guests already pay for, such as a stay or a dinner. Experience Marketing uses an experience to bring customers to your brand and keep them close. The method is the same."
+                },
+                {
+                    "question": "Do we need our own space?",
+                    "answer": "No. An experience delivers more in your own space, because the result stays with you. We also design experiences for rented venues and pop-ups, together with a production partner."
+                },
+                {
+                    "question": "How early should we start?",
+                    "answer": "The time depends on the size of the experience, and we agree it with you on the first call. A programme for the year starts with one first experience and grows step by step."
+                },
+                {
+                    "question": "How do we know it worked?",
+                    "answer": "We agree the measures with you before we start, and we present the results after the experience."
+                }
+            ]
+        },
+        "cta": {
+            "title": "Tell us what you want customers to live in your space.",
+            "description": "We reply within 24 hours with our first thoughts and the best way to start.",
+            "button": "Start the conversation",
+            "image_alt": "A curved, glowing green bar counter with two martini glasses and zebra-print stools"
         }
     },
     "hotels_resorts": {
@@ -4565,6 +4959,7 @@
             "image": "/images/industries/retail-stores-customer-journey-sound.jpg",
             "image_alt": "Corridor lit with rainbow neon lines"
         },
+        "cross_link": "If you want your store to become a destination, see <a href=\"/services/experience-design/experience-marketing/\" class=\"se-link\">Experience Marketing</a>.",
         "cta": {
             "title": "Let's listen to your store, on a quiet hour and a busy one.",
             "description": "The first call or visit is free, and the proposal usually arrives within 7 to 10 days.",
@@ -4761,6 +5156,7 @@
             "cta_button": "Read the case studies",
             "cta_link": "case-studies"
         },
+        "cross_link": "For brand events, such as launches and corporate evenings, see <a href=\"/services/experience-design/experience-marketing/\" class=\"se-link\">Experience Marketing</a>. For private events, see <a href=\"/services/experience-design/\" class=\"se-link\">Experience Design</a>.",
         "cta": {
             "title": "Tell us your date and your run of show.",
             "description": "The venue visit is free, and the offer usually arrives within 7 to 10 days.",

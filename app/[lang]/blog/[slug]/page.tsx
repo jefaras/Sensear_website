@@ -31,6 +31,7 @@ const BLOG_PUBLISHED_DATES: Record<string, string> = {
     'music-and-your-staff': '2026-11-12',
     'how-to-measure-music-results': '2026-11-12',
     'music-for-international-guests': '2026-11-12',
+    'from-service-to-experience': '2026-11-19',
 };
 
 export const dynamicParams = false;

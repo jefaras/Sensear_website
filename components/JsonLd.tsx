@@ -47,7 +47,7 @@ export function LocalBusinessJsonLd() {
         '@context': 'https://schema.org',
         '@type': 'LocalBusiness',
         name: 'SensEar Music',
-        description: 'Music curation studio in Athens: Signature Playlists, Event Soundtracks, Sonic Identity and Audio Upgrades for hotels, restaurants, retail and events across Greece.',
+        description: 'Music curation studio in Athens: Signature Playlists, Event Soundtracks, Sonic Identity, Audio Upgrades and Experience Design for hotels, restaurants, retail and events across Greece.',
         url: baseUrl,
         telephone: '+30-697-699-4212',
         email: 'hello@sensear.music',
