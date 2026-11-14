@@ -16,8 +16,6 @@ interface IndustryContent {
         title: string; image: string; image_alt: string; items: Item[];
         cta_title?: string; cta_description?: string; cta_button?: string; cta_link?: string;
     };
-    /** One sentence with links to related services (HTML), closing the last content section. */
-    cross_link?: string;
     cta: { title: string; description: string; button: string; location: string };
 }
 
@@ -203,15 +201,6 @@ export function IndustryDetail({ lang, content, em }: IndustryDetailProps) {
                                 <GhostButton href={localizedPath(`/${hw.cta_link}`)}>{hw.cta_button}</GhostButton>
                             </ScrollReveal>
                         </div>
-                    )}
-
-                    {content.cross_link && (
-                        <ScrollReveal delay={0.08}>
-                            <p
-                                className="se-html mx-auto mt-[clamp(56px,4.4vw,78px)] max-w-[680px] text-center text-[clamp(1rem,1.15vw,1.2rem)] leading-[1.6] text-[#faf6f1]/65"
-                                dangerouslySetInnerHTML={{ __html: content.cross_link }}
-                            />
-                        </ScrollReveal>
                     )}
                 </div>
             </section>

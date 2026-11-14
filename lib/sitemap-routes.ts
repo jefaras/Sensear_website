@@ -18,7 +18,6 @@ export const SITEMAP_ROUTES = [
     '/services/sonic-identity',
     '/services/audio-upgrades',
     '/services/experience-design',
-    '/services/experience-design/experience-marketing',
     '/industries',
     '/industries/music-for-hotels-and-resorts',
     '/industries/music-for-restaurants-and-bars',

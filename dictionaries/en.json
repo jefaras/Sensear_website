@@ -715,7 +715,7 @@
                     },
                     {
                         "type": "paragraph",
-                        "value": "If you want to design the visit your guests already pay for, [see how Experience Design works](/services/experience-design/). If you want an experience that brings customers to your brand, [see Experience Marketing](/services/experience-design/experience-marketing/)."
+                        "value": "If you want to design the visit your guests already pay for, [see how Experience Design works](/services/experience-design/). If you want an experience that brings customers to your brand, [tell us about it](/contact/)."
                     }
                 ],
                 "standfirst": "Eight in ten companies believe they deliver a superior experience. Their customers agree for fewer than one in ten. What separates a service from an experience, when an experience becomes marketing, and where sound fits."
@@ -3425,8 +3425,7 @@
         },
         "beyond_sound": {
             "title": "Beyond sound",
-            "intro": "Sound is one layer of what your guests feel. Experience Design covers the rest.",
-            "marketing_line": "When an experience is meant to win or keep customers, see <a href=\"/services/experience-design/experience-marketing/\" class=\"se-link\">Experience Marketing</a>."
+            "intro": "Sound is one layer of what your guests feel. Experience Design covers the rest."
         }
     },
     "footer": {
@@ -3881,7 +3880,6 @@
             "title": "How pricing works",
             "body": "Every event is priced <strong>on its own</strong>, based on the hours, the DJ, the equipment and any special arrangements. You receive <strong>one written offer</strong> after the free venue visit, and a <strong>deposit</strong> secures your date."
         },
-        "cross_link": "If your event is meant to win or keep customers, such as a launch or a corporate evening, see <a href=\"/services/experience-design/experience-marketing/\" class=\"se-link\">Experience Marketing</a> too.",
         "cta": {
             "title": "Tell us your date and your run of show.",
             "description": "We visit the venue for free before we send our offer.",
@@ -4012,7 +4010,6 @@
             "title": "How pricing works",
             "body": "Sonic Identity is a <strong>one-time project fee</strong>, set by the number of locations, the workshops and the deliverables. The first call or visit is <strong>free</strong>, and a <strong>deposit</strong> confirms the project. Original music and sonic logos are quoted separately on request, and reviews after handover depend on your contract."
         },
-        "cross_link": "When your sonic identity becomes part of an experience that brings customers to your brand, we design it through <a href=\"/services/experience-design/experience-marketing/\" class=\"se-link\">Experience Marketing</a>.",
         "cta": {
             "title": "Tell us where your brand needs to sound the same.",
             "description": "The first call or visit is free.",
@@ -4213,7 +4210,6 @@
                     "link": "industries/music-for-art-museums-and-fashion"
                 }
             ],
-            "closing": "If you want to bring a new audience to your brand, see <a href=\"/services/experience-design/experience-marketing/\" class=\"se-link\">Experience Marketing</a>.",
             "image_alt": "Visitors in an immersive room with blue light projections on the walls and floor"
         },
         "moments": {
@@ -4354,7 +4350,7 @@
                 },
                 {
                     "question": "How do you work on a private event?",
-                    "answer": "We start from the hosts, the venue and the plan of the day, and we design the evening as one story. The planner organises the event, and we design what guests live at each moment of it. We work together from the start. We agree with you how intense the experience should be, on three levels: a light touch within the evening, an experience that fully absorbs guests, or a moment that changes something in them and stays long after. Preparation time depends on the size of the event and we agree it on the first call, so start as early as you can. For corporate events and brand launches, see <a href=\"/services/experience-design/experience-marketing/\" class=\"se-link\">Experience Marketing</a>."
+                    "answer": "We start from the hosts, the venue and the plan of the day, and we design the evening as one story. The planner organises the event, and we design what guests live at each moment of it. We work together from the start. We agree with you how intense the experience should be, on three levels: a light touch within the evening, an experience that fully absorbs guests, or a moment that changes something in them and stays long after. Preparation time depends on the size of the event and we agree it on the first call, so start as early as you can."
                 },
                 {
                     "question": "Do you work outside Athens?",
@@ -4367,113 +4363,6 @@
             "description": "We reply within 24 hours with our first thoughts and the best way to start, whether it is your venue or an event you are planning.",
             "button": "Start with an Experience Audit",
             "image_alt": "People walking through flowing orange and red light"
-        }
-    },
-    "experience_marketing": {
-        "meta": {
-            "title": "Experience Marketing for brands with a venue",
-            "description": "Experience marketing (experiential marketing) for stores, showrooms, hotels and restaurants in Greece: experiences that win and keep customers."
-        },
-        "back_link": "Back to Experience Design",
-        "hero": {
-            "title": "Experience Marketing",
-            "subtitle": "Let customers live your brand, not just see it.",
-            "description": "We design experiences in your own space that bring in new customers and give the ones you have a reason to return.",
-            "explore_cta": "Explore the service",
-            "contact_cta": "Tell us about your brand",
-            "image_alt": "Guests stand around a counter and try something a host is showing them, in a warmly lit store"
-        },
-        "intro": {
-            "title": "What Experience Marketing is",
-            "paragraphs": [
-                "Experience marketing, also called experiential marketing, presents your brand through something customers live for themselves. People skip most advertising, but they remember what they took part in.",
-                "The aim is new customers, and a reason to return for the ones you have.",
-                "It is for brands with a space of their own, such as a store, a showroom, a hotel or a restaurant. If you have no space of your own, we design the experience for a rented venue or a pop-up, with an experienced production partner.",
-                "If you want to improve the visit you already offer, see <a href=\"/services/experience-design/\" class=\"se-link\">Experience Design</a>."
-            ]
-        },
-        "phases": {
-            "title": "The three phases of an experience",
-            "intro": "Here is one example: a store that wants to become a destination, a place people visit on purpose.",
-            "items": [
-                {
-                    "title": "Before: the reason to come",
-                    "description": "A short invitation with a clear promise tells people what they will live and gives them a reason to save the date.",
-                    "measure": "We measure bookings and attendance.",
-                    "image_alt": "A guest holds a printed invitation at the entrance of a store in the evening"
-                },
-                {
-                    "title": "There: something they do themselves",
-                    "description": "After the welcome and the music, visitors try, make or choose something themselves, with a host from the brand beside them.",
-                    "measure": "We measure participation, time spent and sales on the day.",
-                    "image_alt": "Two visitors make something with their own hands at a shared table"
-                },
-                {
-                    "title": "After: the reason to return",
-                    "description": "Visitors leave with something small in hand, such as a sample or a playlist, and later receive an invitation to come back.",
-                    "measure": "We measure repeat visits, referrals and mentions on social media.",
-                    "image_alt": "A woman leaves a store in the evening, smiling, with a small paper bag in her hand"
-                }
-            ],
-            "closing": "The same three phases work for a showroom, a hotel or a restaurant."
-        },
-        "ways": {
-            "title": "How we work together and what you get",
-            "items": [
-                {
-                    "title": "One experience",
-                    "description": "For a specific occasion, such as a launch, an opening or an evening for your best customers."
-                },
-                {
-                    "title": "A programme for the year",
-                    "description": "Connected experiences, so people always have a reason to visit your space."
-                }
-            ],
-            "paragraphs": [
-                "In both cases you get the experience concept, the delivery and promotion plan, and at the end the results against the measures we agreed.",
-                "We work with the same method we use in <a href=\"/services/experience-design/\" class=\"se-link\">Experience Design</a>.",
-                "Pricing depends on the size of the experience and the number of guests. You get it in a written proposal after the first call."
-            ]
-        },
-        "sound": {
-            "title": "The sound of your brand",
-            "body": "Sound is the part of every experience we know best, so <a href=\"/services/sonic-identity/\" class=\"se-link\">Sonic Identity</a> and <a href=\"/services/event-soundtracks/\" class=\"se-link\">Event Soundtracks</a> often become part of the plan.",
-            "image_alt": "A bartender picks a record from shelves of vinyl in a wood-panelled bar with brass stools"
-        },
-        "faq": {
-            "title": "Questions we often hear",
-            "items": [
-                {
-                    "question": "What is the difference between experience marketing and experiential marketing?",
-                    "answer": "Most people use the two terms for the same thing. When a difference is made, experiential marketing means a single activation or campaign, while experience marketing means the longer plan behind all of them. We do both."
-                },
-                {
-                    "question": "How is it different from event planning?",
-                    "answer": "An event planner organises the event. We design what guests live in it and what your brand gains from it, and we measure the result. For production, we work with the partners each event needs."
-                },
-                {
-                    "question": "What exactly is included?",
-                    "answer": "We agree the goals and the measures with you, and we describe the audience we want to bring in: what they do, what they care about and how they relate to your brand. We design the idea of the experience and what visitors will do, moment by moment, together with the music, light, scent and materials that support it. We prepare the delivery plan, with timeline, team, staff training and budget. Finally, we plan the promotion: how people will hear about the experience before it happens and how they will share it while it lasts."
-                },
-                {
-                    "question": "How does pricing work?",
-                    "answer": "Pricing depends on the size of the experience, the number of guests and whether it happens in your own space or a rented one. It also differs between a single experience and a programme for the year. After the first call, we send a written proposal with the scope, timeline and cost."
-                },
-                {
-                    "question": "How do you work when we have no space of our own?",
-                    "answer": "We design the experience for a rented venue or a pop-up. We work with an experienced event production partner, who handles the production on site, while we design the experience and the sound. An experience still delivers more in your own space, because the result stays with you."
-                },
-                {
-                    "question": "How early should we start?",
-                    "answer": "The time depends on the size of the experience, and we agree it with you on the first call. A programme for the year starts with one first experience and grows step by step."
-                }
-            ]
-        },
-        "cta": {
-            "title": "Tell us what you want customers to live in your space.",
-            "description": "We reply within 24 hours with our first thoughts and the best way to start.",
-            "button": "Start the conversation",
-            "image_alt": "Guests raise their glasses together at the end of an evening"
         }
     },
     "hotels_resorts": {
@@ -4764,7 +4653,6 @@
             "image": "/images/industries/retail-stores-customer-journey-sound.jpg",
             "image_alt": "Corridor lit with rainbow neon lines"
         },
-        "cross_link": "If you want your store to become a destination, see <a href=\"/services/experience-design/experience-marketing/\" class=\"se-link\">Experience Marketing</a>.",
         "cta": {
             "title": "Let's listen to your store, on a quiet hour and a busy one.",
             "description": "The first call or visit is free, and the proposal usually arrives within 7 to 10 days.",
@@ -4961,7 +4849,6 @@
             "cta_button": "Read the case studies",
             "cta_link": "case-studies"
         },
-        "cross_link": "For brand events, such as launches and corporate evenings, see <a href=\"/services/experience-design/experience-marketing/\" class=\"se-link\">Experience Marketing</a>. For private events, see <a href=\"/services/experience-design/\" class=\"se-link\">Experience Design</a>.",
         "cta": {
             "title": "Tell us your date and your run of show.",
             "description": "The venue visit is free, and the offer usually arrives within 7 to 10 days.",

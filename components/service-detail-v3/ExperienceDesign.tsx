@@ -7,7 +7,6 @@ import { DriftOrb, GhostButton, MorphCTA, PageCTA, emphasize } from '@/component
 import { ScrollReveal, StaggerChildren } from '@/components/motion';
 import { Accordion } from '@/components/faq-v3';
 import { MomentsTable, type MomentsTableContent } from './MomentsTable';
-import { SlotImage } from './ImagePlaceholder';
 
 type Item = { title: string; description: string };
 type NameLink = { title: string; link: string };
@@ -15,7 +14,7 @@ type NameLink = { title: string; link: string };
 export interface ExperienceDesignContent {
     hero: { title: string; subtitle: string; description: string; explore_cta: string; audit_cta: string; image_alt: string };
     intro: { title: string; paragraphs: string[] };
-    for_whom: { title: string; intro: string; industries: NameLink[]; closing: string; image_alt: string };
+    for_whom: { title: string; intro: string; industries: NameLink[]; image_alt: string };
     moments: MomentsTableContent & { title: string; intro: string; image_alt: string };
     layers: { title: string; items: (Item & { image_alt: string })[] };
     method: { title: string; body: string; link: string; image_alt: string };
@@ -159,7 +158,7 @@ export function ExperienceDesign({ lang, content, images, em }: ExperienceDesign
 
             {/* 3. Who it is for (JEF, 14 Nov: every section carries a title). It continues the statement's
                 panel without a rule between them. The immersive-room photo left (zig-zag: left); the
-                audience line, the six industries (footer names) and the link to Experience Marketing right. */}
+                audience line and the six industries (footer names) right. */}
             <section className="relative overflow-hidden border-b border-b-[#faf6f1]/8 bg-[#0e0d0c] pb-[clamp(101px,7.95vw,140px)] pt-[clamp(70px,5.5vw,97px)]">
                 <div className={container}>
                     <div className="grid grid-cols-1 items-center gap-[clamp(53px,4.2vw,74px)] lg:grid-cols-[0.95fr_1.05fr]">
@@ -177,9 +176,6 @@ export function ExperienceDesign({ lang, content, images, em }: ExperienceDesign
                                 <p className={`mb-[clamp(20px,1.59vw,28px)] ${leadClass}`}>{content.for_whom.intro}</p>
                             </ScrollReveal>
                             <NameLinks items={content.for_whom.industries} localizedPath={localizedPath} className="border-t border-[#faf6f1]/12 sm:grid-cols-2" />
-                            <ScrollReveal delay={0.1}>
-                                <p className={`se-html mt-[clamp(24px,1.9vw,33px)] ${leadClass}`} dangerouslySetInnerHTML={{ __html: content.for_whom.closing }} />
-                            </ScrollReveal>
                         </div>
                     </div>
                 </div>
@@ -227,7 +223,7 @@ export function ExperienceDesign({ lang, content, images, em }: ExperienceDesign
                         {content.layers.items.map((item, i) => (
                             <div key={i} className="flex flex-col">
                                 <div className="relative mb-[clamp(18px,1.42vw,25px)] aspect-[4/3] overflow-hidden rounded-lg">
-                                    <SlotImage
+                                    <Image
                                         src={images.layers[i].src}
                                         alt={item.image_alt}
                                         fill

@@ -38,22 +38,19 @@ const LAST_MODIFIED_OVERRIDES: Record<string, string> = {
     // T6 service-page rewrites (copy in the dictionaries). Add each page here in its own T6 commit.
     '/services/signature-playlists': '2026-11-11T00:00:00.000Z',
     '/services/audio-upgrades': '2026-11-11T00:00:00.000Z',
-    // Experience Marketing brief (13 Nov): one link sentence on Event Soundtracks and Sonic Identity, one line on /services.
-    '/services/event-soundtracks': '2026-11-13T00:00:00.000Z',
-    '/services/sonic-identity': '2026-11-13T00:00:00.000Z',
-    '/services': '2026-11-13T00:00:00.000Z',
+    '/services/event-soundtracks': '2026-11-11T00:00:00.000Z',
+    '/services/sonic-identity': '2026-11-11T00:00:00.000Z',
+    '/services': '2026-11-11T00:00:00.000Z',
     // Own photos and alt texts (3 Nov); intro split into paragraphs (11 Nov). Dictionaries only, so git would not move the date.
-    // Experience Marketing brief (13 Nov): copy changes, method block moved, two new photos.
-    // Brief v2 (14 Nov): both pages rebuilt with shorter copy and new sections.
+    // Brief v2, step 1 (14 Nov): page rebuilt with shorter copy and new sections.
     '/services/experience-design': '2026-11-14T00:00:00.000Z',
-    '/services/experience-design/experience-marketing': '2026-11-14T00:00:00.000Z',
     // T12 industries rewrites (copy in the dictionaries). Add each page here in its own T12 commit.
     '/industries': '2026-11-11T00:00:00.000Z',
     '/industries/music-for-hotels-and-resorts': '2026-11-06T00:00:00.000Z',
     '/industries/music-for-restaurants-and-bars': '2026-11-11T00:00:00.000Z',
-    '/industries/music-for-retail-stores': '2026-11-13T00:00:00.000Z', // Experience Marketing link sentence (13 Nov)
+    '/industries/music-for-retail-stores': '2026-11-06T00:00:00.000Z',
     '/industries/music-for-wellness-and-gyms': '2026-11-06T00:00:00.000Z',
-    '/industries/music-for-events-and-experiences': '2026-11-13T00:00:00.000Z', // Experience Marketing link sentence (13 Nov)
+    '/industries/music-for-events-and-experiences': '2026-11-11T00:00:00.000Z',
     '/industries/music-for-art-museums-and-fashion': '2026-11-06T00:00:00.000Z',
     // Greek wording fixes outside T12 (copy in el.json only), approved by JEF on 6 Nov.
     '/case-studies': '2026-11-10T00:00:00.000Z',
