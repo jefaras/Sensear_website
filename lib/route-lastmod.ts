@@ -64,8 +64,8 @@ const LAST_MODIFIED_OVERRIDES: Record<string, string> = {
     // The hub's cards carry each article's title and description, so it moves with the last article round.
     // Hub subtitle, meta title/description and list heading rewritten (EN + EL) on 12 Nov; covers /blog/ and /el/blog/.
     // Later on 12 Nov: new meta title/description, newsletter title, list-heading emphasis, and internal links in 8 articles.
-    // 19 Nov: "From service to experience" added as the first card.
-    '/blog': '2026-11-19T00:00:00.000Z',
+    // 14 Nov: "From service to experience" added as the first card.
+    '/blog': '2026-11-14T00:00:00.000Z',
     '/blog/how-top-hospitality-brands-design-sound': '2026-11-06T00:00:00.000Z',
     '/blog/three-reasons-make-music-hospitality': '2026-11-06T00:00:00.000Z',
     '/blog/brand-music-converts-browsers-buyers': '2026-11-06T00:00:00.000Z',
@@ -84,7 +84,7 @@ const LAST_MODIFIED_OVERRIDES: Record<string, string> = {
     '/blog/music-and-your-staff': '2026-11-12T00:00:00.000Z',
     '/blog/how-to-measure-music-results': '2026-11-12T00:00:00.000Z',
     '/blog/music-for-international-guests': '2026-11-12T00:00:00.000Z',
-    '/blog/from-service-to-experience': '2026-11-19T00:00:00.000Z',
+    '/blog/from-service-to-experience': '2026-11-14T00:00:00.000Z',
 }
 
 const BLOG_POST_PREFIX = '/blog/'
