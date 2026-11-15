@@ -18,7 +18,7 @@ export interface JourneyScrollProps extends MomentsTableContent {
     images: { src: string; alt: string; position?: string }[];
 }
 
-/** The v3 polish-lens easing. Written as an arbitrary property: Tailwind finds `ease-[cubic-bezier(...)]` ambiguous and does not generate it. */
+/** The v3 polish-lens easing. Written as an arbitrary property: Tailwind finds the ease- arbitrary-value form ambiguous and does not generate it. */
 const ease = '[transition-timing-function:cubic-bezier(0.22,1,0.36,1)]';
 const focusRing = 'focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#f0bd95]';
 const pad = (n: number) => String(n).padStart(2, '0');
