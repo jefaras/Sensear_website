@@ -9,18 +9,20 @@ import { ExperienceDesignPreview } from '@/components/service-detail-v3/Experien
 
 const DIR = '/images/services/experience-design';
 
-// The same photos as brief v2. Journey order: before, arrival, main moment, close, after. "Who it
-// is for" keeps the immersive-room photo (JEF, 15 Nov), so the main moment takes the round table
-// with projections, the same table as "before" once the evening is under way.
+// JEF's photos (15 Nov). "Who it is for": the red "Ring for drinks" wall. Journey, in order:
+// before = the party flyer, arrival = the entrance on the white horse, main moment = the feather
+// dancers, close = walking out through the screen corridor, after = the woman on the speedboat.
+// Every photo is portrait, so each carries the focal point the 4:4.6 frames should keep.
 const IMAGES = {
     hero: `${DIR}/experience-design-hero.jpg`,
-    forWhom: `${DIR}/experience-design-for-whom.jpg`,
+    // Framed high, so the "Ring for drinks" sign stays in the 4:4.6 crop.
+    forWhom: { src: `${DIR}/experience-design-for-whom-drinks.jpg`, position: '50% 10%' },
     journey: [
-        { src: `${DIR}/experience-design-services-block.jpg` },
-        { src: `${DIR}/experience-design-process.jpg` },
-        { src: `${DIR}/experience-design-included.jpg` },
-        { src: `${DIR}/experience-design-hotel-moments.jpg` },
-        { src: `${DIR}/experience-design-layer-journey.jpg`, position: '50% 25%' },
+        { src: `${DIR}/experience-design-journey-before-flyer.webp`, position: '50% 20%' },
+        { src: `${DIR}/experience-design-journey-arrival-horse.jpg`, position: '50% 35%' },
+        { src: `${DIR}/experience-design-journey-main-dancers.jpg`, position: '50% 45%' },
+        { src: `${DIR}/experience-design-journey-close-corridor.jpg`, position: '50% 55%' },
+        { src: `${DIR}/experience-design-layer-journey.jpg`, position: '50% 40%' },
     ],
     layers: [
         { src: `${DIR}/experience-design-layer-story.jpg` },

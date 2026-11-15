@@ -152,7 +152,8 @@ function PinnedJourney({ heading, label, columns, rows, images }: JourneyScrollP
                             ))}
                         </div>
 
-                        <div className="relative h-full max-h-[560px] min-h-[240px] overflow-hidden rounded-lg">
+                        {/* The service pages' 4:4.6 frame, as tall as the pinned view allows (JEF, 15 Nov). */}
+                        <div className="relative aspect-[4/4.6] h-full max-h-[600px] min-h-[240px] justify-self-end overflow-hidden rounded-lg">
                             {images.map((img, i) => (
                                 <Image
                                     key={img.src}
@@ -202,7 +203,7 @@ function ListJourney({ heading, columns, rows, images, animate }: JourneyScrollP
                                 <h3 className="font-didot se-gold-text mb-[clamp(12px,1.4vw,18px)] text-[clamp(1.9rem,5vw,2.6rem)] font-normal leading-[1.1]">{row.name}</h3>
                                 <BothSettings row={row} columns={columns} textClass="text-[clamp(1.03rem,1.6vw,1.2rem)] leading-[1.6] text-[#faf6f1]/76" />
                             </div>
-                            <div className="relative aspect-[16/10] overflow-hidden rounded-lg">
+                            <div className="relative aspect-[4/4.6] w-full max-w-[460px] overflow-hidden rounded-lg">
                                 <Image
                                     src={images[i].src}
                                     alt={images[i].alt}

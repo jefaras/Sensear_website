@@ -14,10 +14,10 @@ type Img = { src: string; position?: string; alt?: string };
 
 export interface ExperienceDesignPreviewProps {
     lang: Locale;
-    content: ExperienceDesignContent & { moments: { journey_title: string; journey_image_alts: string[] }; layers: { journey_layer_image_alt: string } };
+    content: ExperienceDesignContent & { moments: { journey_title: string; journey_image_alts: string[] }; layers: { journey_layer_image_alt: string }; for_whom: { preview_image_alt: string } };
     images: {
         hero: string;
-        forWhom: string;
+        forWhom: Img;
         /** One photo per moment, in the rows' order. */
         journey: Img[];
         /** One photo per layer, in the items' order. */
@@ -111,10 +111,10 @@ export function ExperienceDesignPreview({ lang, content, images, em }: Experienc
 
                 <div className={`${container} mt-[clamp(72px,6.4vw,112px)]`}>
                     <div className="grid grid-cols-1 items-center gap-[clamp(53px,4.2vw,74px)] border-t border-[#faf6f1]/8 pt-[clamp(72px,6.4vw,112px)] lg:grid-cols-[0.95fr_1.05fr]">
-                        {/* The immersive-room photo left, in the service pages' 4:4.6 frame (JEF, 15 Nov). */}
+                        {/* The red 'Ring for drinks' photo left, in the service pages' 4:4.6 frame (JEF, 15 Nov). */}
                         <ScrollReveal direction="left">
                             <div className={`${photoFrame} aspect-[4/4.6]`}>
-                                <Image src={images.forWhom} alt={content.for_whom.image_alt} fill sizes="(max-width: 1024px) 100vw, 46vw" className="object-cover" />
+                                <Image src={images.forWhom.src} alt={content.for_whom.preview_image_alt} fill sizes="(max-width: 1024px) 100vw, 46vw" className="object-cover" style={images.forWhom.position ? { objectPosition: images.forWhom.position } : undefined} />
                                 <div className={photoFade} />
                             </div>
                         </ScrollReveal>
