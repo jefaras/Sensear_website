@@ -9,13 +9,15 @@ import { JourneyScroll } from './JourneyScroll';
 import { LayersList } from './LayersList';
 import { container, panel, h2Class, leadClass, itemTextClass, photoFrame, photoFade } from './styles';
 
-type Img = { src: string; position?: string };
+/** `alt` overrides the dictionary alt when a photo is shown in a slot other than its own. */
+type Img = { src: string; position?: string; alt?: string };
 
 export interface ExperienceDesignPreviewProps {
     lang: Locale;
     content: ExperienceDesignContent & { moments: { journey_title: string; journey_image_alts: string[] } };
     images: {
         hero: string;
+        forWhom: string;
         /** One photo per moment, in the rows' order. */
         journey: Img[];
         /** One photo per layer, in the items' order. */
@@ -43,6 +45,8 @@ const JOURNEY_LAYER = 2;
 export function ExperienceDesignPreview({ lang, content, images, em }: ExperienceDesignPreviewProps) {
     const localizedPath = (path: string) => getLocalizedPath(lang, path);
     const journeyImages = images.journey.map((img, i) => ({ ...img, alt: content.moments.journey_image_alts[i] }));
+    // A layer slot that shows the hero photo (a stand-in, see the route) takes the hero's alt text.
+    const layerImages = images.layers.map((img) => (img.src === images.hero ? { ...img, alt: content.hero.image_alt } : img));
 
     return (
         <>
@@ -83,8 +87,8 @@ export function ExperienceDesignPreview({ lang, content, images, em }: Experienc
                 </div>
             </section>
 
-            {/* 2. What it is + who it is for, in one panel band without a photo: the centred statement,
-                then the audience line beside the six industries. */}
+            {/* 2. What it is + who it is for, in one panel band: the centred statement,
+                then the immersive-room photo left of the audience line and the six industries. */}
             <section id="overview" className={`relative scroll-mt-[clamp(90px,7vw,120px)] overflow-hidden py-[clamp(101px,7.95vw,140px)] ${panel}`}>
                 <DriftOrb
                     className="h-[46vw] max-h-[640px] w-[46vw] max-w-[640px]"
@@ -106,16 +110,23 @@ export function ExperienceDesignPreview({ lang, content, images, em }: Experienc
                 </div>
 
                 <div className={`${container} mt-[clamp(72px,6.4vw,112px)]`}>
-                    <div className="grid grid-cols-1 gap-[clamp(28px,3vw,52px)] border-t border-[#faf6f1]/8 pt-[clamp(48px,4.4vw,76px)] lg:grid-cols-[0.95fr_1.05fr] lg:gap-[clamp(53px,4.2vw,74px)]">
+                    <div className="grid grid-cols-1 items-center gap-[clamp(53px,4.2vw,74px)] border-t border-[#faf6f1]/8 pt-[clamp(72px,6.4vw,112px)] lg:grid-cols-[0.95fr_1.05fr]">
+                        {/* The immersive-room photo left, in the service pages' 4:4.6 frame (JEF, 15 Nov). */}
+                        <ScrollReveal direction="left">
+                            <div className={`${photoFrame} aspect-[4/4.6]`}>
+                                <Image src={images.forWhom} alt={content.for_whom.image_alt} fill sizes="(max-width: 1024px) 100vw, 46vw" className="object-cover" />
+                                <div className={photoFade} />
+                            </div>
+                        </ScrollReveal>
                         <div>
                             <ScrollReveal delay={0.06}>
                                 <h2 className={`mb-[clamp(17px,1.31vw,23px)] ${h2Class}`}>{content.for_whom.title}</h2>
                             </ScrollReveal>
                             <ScrollReveal delay={0.1}>
-                                <p className={`text-pretty ${leadClass}`}>{content.for_whom.intro}</p>
+                                <p className={`mb-[clamp(20px,1.59vw,28px)] text-pretty ${leadClass}`}>{content.for_whom.intro}</p>
                             </ScrollReveal>
+                            <NameLinks items={content.for_whom.industries} localizedPath={localizedPath} className="border-t border-[#faf6f1]/12 sm:grid-cols-2" />
                         </div>
-                        <NameLinks items={content.for_whom.industries} localizedPath={localizedPath} className="border-t border-[#faf6f1]/12 sm:grid-cols-2" />
                     </div>
                 </div>
             </section>
@@ -129,30 +140,26 @@ export function ExperienceDesignPreview({ lang, content, images, em }: Experienc
                 images={journeyImages}
             />
 
-            {/* 4. The four layers: a numbered list beside one crossfading photo. */}
+            {/* 4. The four layers: one crossfading photo left (4:4.6), the list right. */}
             <section className={`relative overflow-hidden py-[clamp(101px,7.95vw,140px)] ${panel}`}>
                 <div className={container}>
                     <ScrollReveal delay={0.06}>
                         <h2 className={`mb-[clamp(36px,3vw,53px)] ${h2Class}`}>{content.layers.title}</h2>
                     </ScrollReveal>
-                    <LayersList items={content.layers.items} images={images.layers} linkIndex={JOURNEY_LAYER} linkHref="#journey" />
+                    <LayersList items={content.layers.items} images={layerImages} linkIndex={JOURNEY_LAYER} linkHref="#journey" />
                 </div>
             </section>
 
-            {/* 5. The method: a wide photo band, then the title beside the paragraph and the Journal link. */}
+            {/* 5. The method: text left, the photo right in the service pages' 4:4.6 frame. The frame
+                is taller than wide, so the guest journey map on the floor stays in view and the two
+                people are visibly reading it (JEF, 15 Nov: the wide band cut the map off). */}
             <section className="relative overflow-hidden py-[clamp(108px,8.52vw,150px)]">
                 <div className={container}>
-                    <ScrollReveal>
-                        <div className={`${photoFrame} mb-[clamp(40px,3.6vw,64px)] aspect-[4/3] sm:aspect-[16/9] lg:aspect-[21/8]`}>
-                            <Image src={images.method} alt={content.method.image_alt} fill sizes="(max-width: 1760px) 96vw, 1700px" className="object-cover object-[50%_45%]" />
-                            <div className={photoFade} />
-                        </div>
-                    </ScrollReveal>
-                    <div className="grid grid-cols-1 gap-[clamp(20px,2vw,32px)] lg:grid-cols-[0.95fr_1.05fr] lg:gap-[clamp(53px,4.2vw,74px)]">
-                        <ScrollReveal delay={0.06}>
-                            <h2 className={h2Class}>{content.method.title}</h2>
-                        </ScrollReveal>
+                    <div className="grid grid-cols-1 items-center gap-[clamp(53px,4.2vw,74px)] lg:grid-cols-[1.05fr_0.95fr]">
                         <div>
+                            <ScrollReveal delay={0.06}>
+                                <h2 className={`mb-[clamp(17px,1.31vw,23px)] ${h2Class}`}>{content.method.title}</h2>
+                            </ScrollReveal>
                             <ScrollReveal delay={0.1}>
                                 <p className={`mb-[clamp(24px,1.9vw,33px)] text-pretty ${leadClass}`}>{content.method.body}</p>
                             </ScrollReveal>
@@ -160,12 +167,18 @@ export function ExperienceDesignPreview({ lang, content, images, em }: Experienc
                                 <TextLink href={localizedPath('/blog/from-service-to-experience')}>{content.method.link}</TextLink>
                             </ScrollReveal>
                         </div>
+                        <ScrollReveal direction="right">
+                            <div className={`${photoFrame} aspect-[4/4.6]`}>
+                                <Image src={images.method} alt={content.method.image_alt} fill sizes="(max-width: 1024px) 100vw, 46vw" className="object-cover object-[50%_75%]" />
+                                <div className={photoFade} />
+                            </div>
+                        </ScrollReveal>
                     </div>
                 </div>
             </section>
 
             {/* 6. How we start: three numbered steps in order, the first one marked by a gold rule
-                (motion meaning of the stagger: read them in this order); the two notes below. */}
+                (motion meaning of the stagger: read them in this order); the pricing note below. */}
             <section className={`relative overflow-hidden py-[clamp(101px,7.95vw,140px)] ${panel}`}>
                 <DriftOrb
                     className="h-[46vw] max-h-[640px] w-[46vw] max-w-[640px]"
@@ -190,7 +203,7 @@ export function ExperienceDesignPreview({ lang, content, images, em }: Experienc
                             </div>
                         ))}
                     </StaggerChildren>
-                    <div className="mt-[clamp(48px,4.4vw,76px)] grid grid-cols-1 gap-[clamp(14px,1.4vw,24px)] border-t border-[#faf6f1]/8 pt-[clamp(28px,2.6vw,44px)] md:grid-cols-2 md:gap-[clamp(24px,2.4vw,44px)]">
+                    <div className="mt-[clamp(48px,4.4vw,76px)] grid grid-cols-1 gap-[clamp(14px,1.4vw,24px)] border-t border-[#faf6f1]/8 pt-[clamp(28px,2.6vw,44px)]">
                         {content.ways_to_start.paragraphs.map((paragraph, i) => (
                             <ScrollReveal key={i} delay={0.08 + i * 0.04}>
                                 <p className={`text-pretty ${leadClass}`}>{paragraph}</p>
@@ -200,7 +213,7 @@ export function ExperienceDesignPreview({ lang, content, images, em }: Experienc
                 </div>
             </section>
 
-            {/* 7. Sound in your venue: the one remaining photo-and-text split (photo left). */}
+            {/* 7. Sound in your venue: photo left in the service pages' 4:4.6 frame (JEF, 15 Nov). */}
             <section className="relative overflow-hidden py-[clamp(108px,8.52vw,150px)]">
                 <DriftOrb
                     className="h-[46vw] max-h-[640px] w-[46vw] max-w-[640px]"
@@ -210,7 +223,7 @@ export function ExperienceDesignPreview({ lang, content, images, em }: Experienc
                 <div className={container}>
                     <div className="grid grid-cols-1 items-center gap-[clamp(53px,4.2vw,74px)] lg:grid-cols-[0.95fr_1.05fr]">
                         <ScrollReveal direction="left">
-                            <div className={`${photoFrame} aspect-[4/4.4]`}>
+                            <div className={`${photoFrame} aspect-[4/4.6]`}>
                                 <Image src={images.sound} alt={content.sound_fit.image_alt} fill sizes="(max-width: 1024px) 100vw, 46vw" className="object-cover" />
                                 <div className={photoFade} />
                             </div>

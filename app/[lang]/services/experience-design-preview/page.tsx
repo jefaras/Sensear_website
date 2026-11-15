@@ -9,22 +9,25 @@ import { ExperienceDesignPreview } from '@/components/service-detail-v3/Experien
 
 const DIR = '/images/services/experience-design';
 
-// The same photos as brief v2. Journey order: before, arrival, main moment, close, after (JEF to
-// approve the mapping). The journey layer card takes the round-table photo, since its speedboat
-// photo moves to "After".
+// The same photos as brief v2. Journey order: before, arrival, main moment, close, after. "Who it
+// is for" keeps the immersive-room photo (JEF, 15 Nov), so the main moment takes the round table
+// with projections, the same table as "before" once the evening is under way.
 const IMAGES = {
     hero: `${DIR}/experience-design-hero.jpg`,
+    forWhom: `${DIR}/experience-design-for-whom.jpg`,
     journey: [
         { src: `${DIR}/experience-design-services-block.jpg` },
         { src: `${DIR}/experience-design-process.jpg` },
-        { src: `${DIR}/experience-design-for-whom.jpg` },
+        { src: `${DIR}/experience-design-included.jpg` },
         { src: `${DIR}/experience-design-hotel-moments.jpg` },
         { src: `${DIR}/experience-design-layer-journey.jpg`, position: '50% 25%' },
     ],
     layers: [
         { src: `${DIR}/experience-design-layer-story.jpg` },
         { src: `${DIR}/experience-design-layer-team.jpg` },
-        { src: `${DIR}/experience-design-included.jpg` },
+        // TEMPORARY: the hero photo, until JEF picks a photo for this layer (all 13 page photos
+        // are in use). ExperienceDesignPreview gives it the hero's alt text.
+        { src: `${DIR}/experience-design-hero.jpg` },
         { src: `${DIR}/experience-design-layer-details.jpg`, position: '50% 25%' },
     ],
     method: `${DIR}/experience-design-method.jpg`,

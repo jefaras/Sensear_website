@@ -4251,7 +4251,7 @@
             "journey_image_alts": [
                 "A round dinner table set with candles and plants in the centre, with no guests yet",
                 "Blue stairs and doorways built between large rocks",
-                "Visitors in an immersive room with blue light projections on the walls and floor",
+                "Circular dinner table with candles and plants, surrounded by wall projections",
                 "Guests at an evening reception inside a stone quarry, with lounge seating and long dinner tables",
                 "Woman relaxing on a speedboat at night"
             ],
@@ -4293,7 +4293,7 @@
             "items": [
                 {
                     "title": "Experience Audit",
-                    "description": "We visit your venue and you get a journey map, a score for each sense and stage of the visit, and a list of priority fixes. It is the easiest first step."
+                    "description": "It is the easiest first step. We visit your venue and you get a map of the guest journey and a list of priority fixes. On the map we score sound, light, scent, touch and taste at each moment of the visit. For an event, we start from the hosts, the venue and the plan for the day."
                 },
                 {
                     "title": "Journey Workshop",
@@ -4305,7 +4305,6 @@
                 }
             ],
             "paragraphs": [
-                "For an event, we start from the hosts, the venue and the plan of the day.",
                 "Pricing depends on the size of the venue or event and on how much of the process you need. You get it in a written proposal after the first call."
             ],
             "image_alt": "Circular dinner table with candles and plants, surrounded by wall projections"
