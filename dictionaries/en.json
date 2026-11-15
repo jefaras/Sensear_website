@@ -296,7 +296,7 @@
         },
         "intro": {
             "title": "What happens after you write",
-            "subtitle": "We usually reply within 24 hours and arrange a call or a visit to your venue, free of charge. After the visit, we send a written proposal, usually within 7 to 10 days.",
+            "subtitle": "We usually reply within 24 hours and arrange a call or a visit to your venue. After the visit, we send a written proposal, usually within 7 to 10 days.",
             "image_alt": "Close-up of a black vinyl record"
         },
         "form": {
@@ -3305,8 +3305,8 @@
         },
         "cta": {
             "title": "Tell us about your space.",
-            "subtitle": "The first call is free. We reply within 24 hours with the service that fits and what happens next.",
-            "contact": "Start with a free call",
+            "subtitle": "We reply within 24 hours with the service that fits and what happens next.",
+            "contact": "Start with a call",
             "services": "See the four services"
         }
     },
@@ -3325,7 +3325,7 @@
         "intro": {
             "title": "What each service does",
             "p1": "<strong>Signature Playlists</strong> set the music your venue plays every day. <strong>Event Soundtracks</strong> plan the music for one specific event, <strong>Sonic Identity</strong> writes down how your brand sounds across places and channels, and <strong>Audio Upgrades</strong> improve your sound system and your room's acoustics.",
-            "p2": "Each service stands on its own, and they are built to work together. Every one starts with a conversation about your space, and <strong>the first call or visit is free</strong>."
+            "p2": "Each service stands on its own, and they are built to work together. Every one starts with a conversation about your space."
         },
         "starting_point": {
             "title": "Where to start",
@@ -3338,7 +3338,7 @@
                 "desc": [
                     "A playlist for every zone of your venue, scheduled from opening to closing and <strong>chosen by us, track by track</strong>. For example, at <a href=\"/case-studies/#hera-hotel\" class=\"se-link\">Hera Hotel</a> in Athens, each of the three zones has its own playlist.",
                     "We suggest new music every month and a change each season, and everything plays on a platform <strong>licensed for business use</strong>.",
-                    "The price is set for your venue alone, and the service renews every year."
+                    "The service renews every year."
                 ],
                 "ideal_for": "Ideal for: hotels, restaurants, bars, shops, and wellness and cultural spaces that have outgrown generic background music.",
                 "cta": "Explore Signature Playlists",
@@ -3349,8 +3349,7 @@
                 "subtitle": "One event, from arrival to the last hour",
                 "desc": [
                     "Music planned for one specific event, with <strong>curated playlists, DJ sets by our own DJs, or both</strong>. For example, at <a href=\"/case-studies/#levantis\" class=\"se-link\">Levantis</a> in Paros, we set the music for an exhibition opening with around 100 guests.",
-                    "We visit the venue for free before we send our offer, you approve the music before the day, and we handle the sound checks and playback.",
-                    "Each event is priced on its own, and <strong>a deposit secures your date</strong>."
+                    "We visit the venue before we send our offer, you approve the music before the day, and we handle the sound checks and playback."
                 ],
                 "ideal_for": "Ideal for: weddings, private parties, business dinners, launches and corporate events.",
                 "cta": "Explore Event Soundtracks",
@@ -3372,7 +3371,7 @@
                 "subtitle": "Your sound system and your room's acoustics",
                 "desc": [
                     "We visit with our partners in sound measurement, sound isolation and soundproofing, propose what needs to change, then <strong>supervise the installation and run the final tuning</strong>. For example, in a <a href=\"/services/audio-upgrades/#case-study\" class=\"se-link\">bar in central Athens</a>, the music no longer reaches the neighbours upstairs.",
-                    "You deal with <strong>one team and receive one invoice</strong>, and the on-site assessment is normally free."
+                    "You deal with <strong>one team and receive one invoice</strong>."
                 ],
                 "ideal_for": "Ideal for: venues where guests struggle to talk over the music, the sound is thin or uneven, or the music reaches the neighbours.",
                 "cta": "Explore Audio Upgrades",
@@ -3515,7 +3514,27 @@
             {
                 "category": "Cost and working with us",
                 "question": "How much does it cost?",
-                "answer": "It depends on the venue: how many zones it has, how many hours music plays and which service you need. The first call or visit is free of charge, and after the visit we send a written proposal with the cost, usually within 7 to 10 days."
+                "answer": "It depends on the venue: how many zones it has, how many hours music plays and which service you need. After the first call or visit, we send a written proposal with the cost, usually within 7 to 10 days."
+            },
+            {
+                "category": "Cost and working with us",
+                "question": "How is pricing set for Signature Playlists?",
+                "answer": "The service is designed around your venue alone. The price depends on the number of zones, the hours the music covers and how often it is refreshed, and the written proposal sets out the scope and the cost. We start with an initial agreement, and the service then renews every year for an annual fee."
+            },
+            {
+                "category": "Cost and working with us",
+                "question": "How is pricing set for Event Soundtracks?",
+                "answer": "Every event is priced on its own, based on the hours, the DJ, the equipment and any special arrangements. After the venue visit you receive one written offer, usually within 7 to 10 days, and a deposit secures your date."
+            },
+            {
+                "category": "Cost and working with us",
+                "question": "How is pricing set for Sonic Identity?",
+                "answer": "Sonic Identity is a one-time project fee, set by the number of locations, the workshops and the deliverables, and a deposit confirms the project. Original music and sonic logos are quoted separately on request, and reviews after handover depend on your contract."
+            },
+            {
+                "category": "Cost and working with us",
+                "question": "How is pricing set for Audio Upgrades?",
+                "answer": "Every project is quoted for your venue alone, based on the scope of the work and your budget. You receive one quote and one invoice for everything: equipment, installation, acoustic work and tuning. It is a one-time fee, and the equipment is yours: we do not lease. A recurring fee applies only if you add a maintenance or technical support subscription that the equipment price does not already include. The on-site assessment is charged only for very large projects."
             },
             {
                 "category": "Cost and working with us",
@@ -3530,7 +3549,7 @@
             {
                 "category": "Cost and working with us",
                 "question": "Do you also do DJ sets for events?",
-                "answer": "Yes, with <a href=\"/services/event-soundtracks/\" class=\"se-link\">Event Soundtracks</a>: playlists and sets by our own DJs for one event, from the guests’ arrival to the last song, with a sound check. We visit the venue free of charge before we send our offer."
+                "answer": "Yes, with <a href=\"/services/event-soundtracks/\" class=\"se-link\">Event Soundtracks</a>: playlists and sets by our own DJs for one event, from the guests’ arrival to the last song, with a sound check. We visit the venue before we send our offer."
             },
             {
                 "category": "Cost and working with us",
@@ -3699,7 +3718,7 @@
                 },
                 {
                     "title": "Public-performance fees",
-                    "description": "The venue owner pays the fees for playing music in public to the collecting societies, as any business that plays music does. They are not part of our fee."
+                    "description": "The venue owner pays the fees for playing music in public to the collecting societies, as any business that plays music does."
                 }
             ]
         },
@@ -3724,10 +3743,6 @@
                 }
             ]
         },
-        "pricing": {
-            "title": "How pricing works",
-            "body": "The service is <strong>designed around your venue alone</strong>: its number of zones, the hours the music covers and how often it is refreshed. The price follows from those choices, and the written proposal <strong>sets out the scope and the cost</strong>. We start with an initial agreement, and the service then renews every year for an annual fee."
-        },
         "cta": {
             "title": "Tell us what your venue's day looks like.",
             "description": "We reply within 24 hours, and sample playlists follow within two weeks of the first call.",
@@ -3738,7 +3753,7 @@
     "event_soundtracks": {
         "meta": {
             "title": "Event Soundtracks: music for a specific date",
-            "description": "Music for one event, from arrival to the last hour: playlists and sets by our own DJs, sound checks and playback, with a free venue visit before our offer."
+            "description": "Music for one event, from arrival to the last hour: playlists and sets by our own DJs, sound checks and playback."
         },
         "hero": {
             "title": "Event Soundtracks:",
@@ -3752,7 +3767,7 @@
             "paragraphs": [
                 "<strong>Event Soundtracks</strong> are music planned for one specific event, from the first guests to the last hour.",
                 "Depending on the event, that means <strong>curated playlists</strong>, <strong>DJ sets</strong> by our own DJs, or both.",
-                "We visit the venue <strong>for free</strong> before we send our offer, and on the day we take care of the <strong>sound checks</strong> and <strong>playback</strong>, with our own equipment or the venue's."
+                "We visit the venue before we send our offer, and on the day we take care of the <strong>sound checks</strong> and <strong>playback</strong>, with our own equipment or the venue's."
             ]
         },
         "case_study": {
@@ -3783,8 +3798,8 @@
                     "description": "You approve the playlists or the style of music before the event, so the night sounds the way you expect."
                 },
                 {
-                    "title": "Free venue visit",
-                    "description": "We visit the venue for free before we send our offer, so we can plan the sound and the timing on the spot."
+                    "title": "Venue visit",
+                    "description": "We visit the venue before we send our offer, so we can plan the sound and the timing on the spot."
                 },
                 {
                     "title": "Sound system and DJ equipment",
@@ -3851,7 +3866,7 @@
                 },
                 {
                     "title": "Public-performance fees",
-                    "description": "The venue or the organiser pays the public-performance fees to the collecting societies. They are not part of our fee."
+                    "description": "The venue or the organiser pays the public-performance fees to the collecting societies."
                 }
             ]
         },
@@ -3863,8 +3878,8 @@
                     "description": "Get in touch as soon as you decide to hold the event. Last-minute requests are possible when we are free and can do them properly."
                 },
                 {
-                    "title": "Free visit and offer",
-                    "description": "We visit the venue for free, then send you a written offer, usually within 7 to 10 days."
+                    "title": "Visit and offer",
+                    "description": "We visit the venue, then send you a written offer, usually within 7 to 10 days."
                 },
                 {
                     "title": "Music and approval",
@@ -3876,13 +3891,9 @@
                 }
             ]
         },
-        "pricing": {
-            "title": "How pricing works",
-            "body": "Every event is priced <strong>on its own</strong>, based on the hours, the DJ, the equipment and any special arrangements. You receive <strong>one written offer</strong> after the free venue visit, and a <strong>deposit</strong> secures your date."
-        },
         "cta": {
             "title": "Tell us your date and your run of show.",
-            "description": "We visit the venue for free before we send our offer.",
+            "description": "We visit the venue before we send our offer.",
             "button": "Book an event music briefing"
         }
     },
@@ -3989,7 +4000,7 @@
             "title": "From first meeting to guidelines",
             "steps": [
                 {
-                    "title": "Free first call",
+                    "title": "First call",
                     "description": "We talk about your brand, your locations and where music matters to you."
                 },
                 {
@@ -4006,13 +4017,9 @@
                 }
             ]
         },
-        "pricing": {
-            "title": "How pricing works",
-            "body": "Sonic Identity is a <strong>one-time project fee</strong>, set by the number of locations, the workshops and the deliverables. The first call or visit is <strong>free</strong>, and a <strong>deposit</strong> confirms the project. Original music and sonic logos are quoted separately on request, and reviews after handover depend on your contract."
-        },
         "cta": {
             "title": "Tell us where your brand needs to sound the same.",
-            "description": "The first call or visit is free.",
+            "description": "We start with a call or a visit to your venue.",
             "button": "Define your brand's sonic DNA"
         }
     },
@@ -4041,7 +4048,7 @@
             "title": "Music for the bar, quiet for the neighbours",
             "paragraphs": [
                 "In a bar in the centre of Athens, the music <strong>carried up to the neighbours</strong> on the floor above and out onto the street. The client also wanted a <strong>warmer, clearer sound with more bass</strong>, one that suits dance music as well as lounge and mid-tempo tracks, and lets guests <strong>talk easily even at high volume</strong>.",
-                "We visited with our partners in sound measurement, sound isolation and soundproofing, who ran their tests on site. The visit and the assessment were <strong>free</strong>.",
+                "We visited with our partners in sound measurement, sound isolation and soundproofing, who ran their tests on site.",
                 "The work is finished. The sound is now <strong>warmer and crystal clear</strong>, and it <strong>no longer disturbs the neighbours</strong> upstairs or the area around the bar."
             ],
             "image_alt": "Close-up of an ear wearing a sculpted silver earring"
@@ -4151,13 +4158,9 @@
                 }
             ]
         },
-        "pricing": {
-            "title": "How pricing works",
-            "body": "Every project is quoted <strong>for your venue alone</strong>, based on the scope of the work and your budget. You receive <strong>one quote and one invoice</strong> for everything: equipment, installation, acoustic work and tuning. It is a <strong>one-time fee</strong>, and the <strong>equipment is yours</strong>: we do not lease. A recurring fee applies only if you add a maintenance or technical support subscription that the equipment price does not already include. The on-site assessment is normally free; only for very large projects is it charged as well."
-        },
         "cta": {
             "title": "Tell us which room is not working.",
-            "description": "The first visit and the assessment are normally free.",
+            "description": "We start with a visit to your venue with our partners.",
             "button": "Book an acoustic assessment"
         }
     },
@@ -4470,7 +4473,7 @@
         },
         "cta": {
             "title": "Let's plan your hotel, zone by zone.",
-            "description": "The first call or visit is free, and the proposal usually arrives within 7 to 10 days.",
+            "description": "After the first call or visit, the proposal usually arrives within 7 to 10 days.",
             "button": "Request a proposal for your hotel"
         }
     },
@@ -4568,7 +4571,7 @@
         },
         "cta": {
             "title": "Let's hear your room at peak hours.",
-            "description": "The first visit is free, and the proposal usually arrives within 7 to 10 days.",
+            "description": "After the first visit, the proposal usually arrives within 7 to 10 days.",
             "button": "Request a music plan for your restaurant"
         }
     },
@@ -4662,7 +4665,7 @@
         },
         "cta": {
             "title": "Let's listen to your store, on a quiet hour and a busy one.",
-            "description": "The first call or visit is free, and the proposal usually arrives within 7 to 10 days.",
+            "description": "After the first call or visit, the proposal usually arrives within 7 to 10 days.",
             "button": "Request a proposal for your store"
         }
     },
@@ -4760,7 +4763,7 @@
         },
         "cta": {
             "title": "Let's set the pace, room by room.",
-            "description": "The first call or visit is free, and the proposal usually arrives within 7 to 10 days.",
+            "description": "After the first call or visit, the proposal usually arrives within 7 to 10 days.",
             "button": "Request a proposal for your space"
         }
     },
@@ -4837,16 +4840,16 @@
                     "description": "The playlists or the style of each part are agreed in advance, so the night sounds the way you expect."
                 },
                 {
-                    "title": "A free venue visit, then one written offer",
-                    "description": "We see the room before we quote; the offer usually arrives within 7 to 10 days, and a deposit secures your date."
+                    "title": "A venue visit, then one written offer",
+                    "description": "We see the room first, and the written offer usually arrives within 7 to 10 days."
                 },
                 {
                     "title": "Playlists, DJ sets or both",
                     "description": "Our own DJs, George and Katerina, a partner DJ when it suits the event better, or a curated playlist for a quieter night."
                 },
                 {
-                    "title": "The fees are clear",
-                    "description": "The venue or the organiser pays the public performance fees to the collecting societies; they are not part of our fee."
+                    "title": "The rights are clear",
+                    "description": "The venue or the organiser pays the public performance fees to the collecting societies."
                 }
             ],
             "image": "/images/industries/events-experiences-private-event-soundscape.jpg",
@@ -4858,7 +4861,7 @@
         },
         "cta": {
             "title": "Tell us your date and your run of show.",
-            "description": "The venue visit is free, and the offer usually arrives within 7 to 10 days.",
+            "description": "After the venue visit, the offer usually arrives within 7 to 10 days.",
             "button": "Tell us about your event"
         }
     },
@@ -4944,7 +4947,7 @@
                 },
                 {
                     "title": "Licensing explained before you sign",
-                    "description": "Daily playback runs on a platform licensed for business use; for an opening, the venue or the organiser pays the public performance fees, which are not part of our fee."
+                    "description": "Daily playback runs on a platform licensed for business use; for an opening, the venue or the organiser pays the public performance fees."
                 }
             ],
             "image": "/images/industries/art-museums-fashion-exhibition-ambient-music.jpg",
@@ -4956,7 +4959,7 @@
         },
         "cta": {
             "title": "Tell us what you are showing.",
-            "description": "The first call or visit is free, and the proposal usually arrives within 7 to 10 days.",
+            "description": "After the first call or visit, the proposal usually arrives within 7 to 10 days.",
             "button": "Request a proposal for your space"
         }
     }
