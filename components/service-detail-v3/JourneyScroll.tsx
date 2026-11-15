@@ -4,15 +4,12 @@ import Image from 'next/image';
 import { m, useMotionValueEvent, useScroll, useTransform } from 'motion/react';
 import { useEffect, useId, useRef, useState, type KeyboardEvent, type ReactNode } from 'react';
 import type { MomentsTableContent } from './MomentsTable';
-import { container, h2Class, leadClass } from './styles';
-
-type Mode = 'venue' | 'event';
+import { container, h2Class } from './styles';
 
 export interface JourneyScrollProps extends MomentsTableContent {
     /** The section heading, already emphasised by the caller. */
     heading: ReactNode;
-    intro: string;
-    /** Group label for the venue / event switch and the moment tabs (the plain heading text). */
+    /** Label for the moment tabs (the plain heading text). */
     label: string;
     /** One photo per moment, in the rows' order. */
     images: { src: string; alt: string; position?: string }[];
@@ -38,62 +35,30 @@ function usePrefersReducedMotion() {
 }
 
 /**
- * "In a venue / At an event" switch. The gold pill slides under the chosen option.
- * Motion meaning: the same five moments, seen in two settings.
+ * What a moment looks like in a venue and at an event, one under the other, labelled with the
+ * moments table's column titles (JEF, 15 Nov: no switch; every moment shows both settings).
  */
-function ModeSwitch({ label, columns, mode, onChange }: { label: string; columns: MomentsTableContent['columns']; mode: Mode; onChange: (m: Mode) => void }) {
+function BothSettings({ row, columns, textClass }: { row: MomentsTableContent['rows'][number]; columns: MomentsTableContent['columns']; textClass: string }) {
     return (
-        <div role="group" aria-label={label} className="relative inline-grid shrink-0 grid-cols-2 rounded-full border border-[#faf6f1]/16 p-1">
-            <span
-                aria-hidden="true"
-                className={`absolute inset-y-1 left-1 w-[calc(50%-4px)] rounded-full transition-transform duration-500 ${ease} ${mode === 'event' ? 'translate-x-full' : 'translate-x-0'}`}
-                style={{ backgroundImage: 'var(--gold)' }}
-            />
+        <dl className="grid gap-[clamp(14px,2vh,22px)]">
             {(['venue', 'event'] as const).map((key) => (
-                <button
-                    key={key}
-                    type="button"
-                    aria-pressed={mode === key}
-                    onClick={() => onChange(key)}
-                    className={`relative z-10 min-h-[44px] whitespace-nowrap rounded-full px-[clamp(16px,1.3vw,22px)] text-[clamp(0.94rem,1vw,1.06rem)] font-semibold transition-colors duration-300 ${focusRing} ${
-                        mode === key ? 'text-[#0b0a0a]' : 'text-[#faf6f1]/72 hover:text-[#faf6f1]'
-                    }`}
-                >
-                    {columns[key]}
-                </button>
+                <div key={key} className="border-t border-[#faf6f1]/12 pt-[clamp(12px,1.6vh,18px)]">
+                    <dt className="mb-1 text-[clamp(0.9rem,0.95vw,1rem)] font-semibold text-[#f0bd95]">{columns[key]}</dt>
+                    <dd className={textClass}>{row[key]}</dd>
+                </div>
             ))}
-        </div>
-    );
-}
-
-/** Both texts of one moment stacked in one grid cell; the chosen one fades in. Both stay in the
-    HTML, so the static export carries the venue and the event copy. */
-function ModeText({ row, mode, className }: { row: MomentsTableContent['rows'][number]; mode: Mode; className: string }) {
-    return (
-        <div className="grid">
-            {(['venue', 'event'] as const).map((key) => (
-                <p
-                    key={key}
-                    aria-hidden={mode !== key}
-                    className={`col-start-1 row-start-1 transition-[opacity,transform] duration-500 ${ease} ${className} ${
-                        mode === key ? 'translate-y-0 opacity-100' : 'pointer-events-none translate-y-2 opacity-0'
-                    }`}
-                >
-                    {row[key]}
-                </p>
-            ))}
-        </div>
+        </dl>
     );
 }
 
 /**
- * Desktop (lg and up, motion allowed): the section pins to the screen while the visitor scrolls
- * through the five moments. A gold line fills across the moment tabs, the active moment's name and
- * text swap, and its photo crossfades. Motion meaning: each moment leads into the next.
- * The tabs follow the WAI-ARIA tabs pattern; scrolling selects a tab, and a tab click or the arrow
- * keys scroll to that moment.
+ * Desktop (lg and up, at least 680px tall, motion allowed): the section pins to the screen while
+ * the visitor scrolls through the five moments. A gold line fills across the moment tabs, the
+ * active moment's name and texts swap, and its photo crossfades. Motion meaning: each moment leads
+ * into the next. The tabs follow the WAI-ARIA tabs pattern; scrolling selects a tab, and a tab
+ * click or the arrow keys scroll to that moment.
  */
-function PinnedJourney({ heading, intro, label, columns, rows, images, mode, setMode }: JourneyScrollProps & { mode: Mode; setMode: (m: Mode) => void }) {
+function PinnedJourney({ heading, label, columns, rows, images }: JourneyScrollProps) {
     const ref = useRef<HTMLDivElement>(null);
     const tabRefs = useRef<(HTMLButtonElement | null)[]>([]);
     const uid = useId();
@@ -128,13 +93,7 @@ function PinnedJourney({ heading, intro, label, columns, rows, images, mode, set
         <div ref={ref} className="relative h-[calc(100dvh+5*65dvh)]">
             <div className="sticky top-0 flex h-[100dvh] flex-col justify-center pb-[clamp(24px,4vh,48px)] pt-[clamp(100px,13.5vh,136px)]">
                 <div className={`${container} flex h-full w-full min-h-0 flex-col`}>
-                    <div className="mb-[clamp(20px,3.4vh,40px)] grid grid-cols-[1.05fr_0.95fr] items-end gap-[clamp(40px,4.2vw,74px)]">
-                        <h2 className={h2Class}>{heading}</h2>
-                        <div className="flex flex-col items-start gap-[clamp(14px,2vh,22px)]">
-                            <p className={`text-pretty ${leadClass}`}>{intro}</p>
-                            <ModeSwitch label={label} columns={columns} mode={mode} onChange={setMode} />
-                        </div>
-                    </div>
+                    <h2 className={`mb-[clamp(20px,3.4vh,40px)] max-w-[1180px] text-balance ${h2Class}`}>{heading}</h2>
 
                     {/* The five moments as tabs, over one gold line that fills with the scroll. */}
                     <div className="relative mb-[clamp(20px,3.6vh,44px)]">
@@ -185,8 +144,10 @@ function PinnedJourney({ heading, intro, label, columns, rows, images, mode, set
                                         active === i ? 'translate-y-0 opacity-100' : 'pointer-events-none translate-y-4 opacity-0'
                                     }`}
                                 >
-                                    <h3 className="font-didot se-gold-text mb-[clamp(16px,2.4vh,28px)] text-[clamp(2.4rem,4.4vw,4.4rem)] font-normal leading-[1.08]">{row.name}</h3>
-                                    <ModeText row={row} mode={mode} className="max-w-[560px] text-[clamp(1.12rem,1.4vw,1.45rem)] leading-[1.55] text-[#faf6f1]/80" />
+                                    <h3 className="font-didot se-gold-text mb-[clamp(14px,2.2vh,26px)] text-[clamp(2.2rem,3.8vw,3.8rem)] font-normal leading-[1.08]">{row.name}</h3>
+                                    <div className="max-w-[580px]">
+                                        <BothSettings row={row} columns={columns} textClass="text-[clamp(1.05rem,1.25vw,1.3rem)] leading-[1.5] text-[#faf6f1]/82" />
+                                    </div>
                                 </div>
                             ))}
                         </div>
@@ -214,21 +175,17 @@ function PinnedJourney({ heading, intro, label, columns, rows, images, mode, set
 }
 
 /**
- * Phones, tablets, and every width when reduced motion is on: the five moments as one ordered
- * list with a vertical line on the left. With motion allowed, the line fills in gold as the list
- * scrolls past; with reduced motion it stays as a plain rule.
+ * Phones, tablets, short screens, and every width when reduced motion is on: the five moments as
+ * one ordered list with a vertical line on the left. With motion allowed, the line fills in gold
+ * as the list scrolls past; with reduced motion it stays as a plain rule.
  */
-function ListJourney({ heading, intro, label, columns, rows, images, mode, setMode, animate }: JourneyScrollProps & { mode: Mode; setMode: (m: Mode) => void; animate: boolean }) {
+function ListJourney({ heading, columns, rows, images, animate }: JourneyScrollProps & { animate: boolean }) {
     const listRef = useRef<HTMLOListElement>(null);
     const { scrollYProgress } = useScroll({ target: listRef, offset: ['start 75%', 'end 60%'] });
 
     return (
         <div className={`${container} py-[clamp(96px,8.5vw,150px)]`}>
-            <h2 className={`mb-[clamp(17px,1.31vw,23px)] ${h2Class}`}>{heading}</h2>
-            <p className={`mb-[clamp(24px,2vw,32px)] text-pretty ${leadClass}`}>{intro}</p>
-            <div className="mb-[clamp(40px,4vw,64px)]">
-                <ModeSwitch label={label} columns={columns} mode={mode} onChange={setMode} />
-            </div>
+            <h2 className={`mb-[clamp(40px,4vw,64px)] max-w-[1180px] text-balance ${h2Class}`}>{heading}</h2>
 
             <ol ref={listRef} className="relative">
                 <div aria-hidden="true" className="absolute bottom-3 left-[5px] top-3 w-px bg-[#faf6f1]/14">
@@ -242,8 +199,8 @@ function ListJourney({ heading, intro, label, columns, rows, images, mode, setMo
                                 <p className="mb-2 text-[13px] font-bold tabular-nums text-[#faf6f1]/55">
                                     {pad(i + 1)} / {pad(rows.length)}
                                 </p>
-                                <h3 className="font-didot se-gold-text mb-[clamp(10px,1.2vw,16px)] text-[clamp(1.9rem,5vw,2.6rem)] font-normal leading-[1.1]">{row.name}</h3>
-                                <ModeText row={row} mode={mode} className="text-[clamp(1.03rem,1.6vw,1.2rem)] leading-[1.6] text-[#faf6f1]/72" />
+                                <h3 className="font-didot se-gold-text mb-[clamp(12px,1.4vw,18px)] text-[clamp(1.9rem,5vw,2.6rem)] font-normal leading-[1.1]">{row.name}</h3>
+                                <BothSettings row={row} columns={columns} textClass="text-[clamp(1.03rem,1.6vw,1.2rem)] leading-[1.6] text-[#faf6f1]/76" />
                             </div>
                             <div className="relative aspect-[16/10] overflow-hidden rounded-lg">
                                 <Image
@@ -265,20 +222,20 @@ function ListJourney({ heading, intro, label, columns, rows, images, mode, setMo
 
 /**
  * "The five moments" as the page's journey (Experience Design preview, 15 Nov 2026). Both layouts
- * are in the HTML: the pinned one shows from lg up, the list below lg. With reduced motion the list
- * shows at every width and nothing pins or fills. One venue / event choice drives both.
+ * are in the HTML: the pinned one shows from lg up on screens at least 680px tall, the list
+ * otherwise. With reduced motion the list shows at every size and nothing pins or fills. Every
+ * moment shows its venue and its event text.
  */
 export function JourneyScroll(props: JourneyScrollProps) {
-    const [mode, setMode] = useState<Mode>('venue');
     const reduce = usePrefersReducedMotion();
 
     return (
         <section id="journey" className="relative scroll-mt-[clamp(90px,7vw,120px)] border-t border-[#faf6f1]/8">
             <div className={reduce ? 'hidden' : 'hidden lg:[@media(min-height:680px)]:block'}>
-                <PinnedJourney {...props} mode={mode} setMode={setMode} />
+                <PinnedJourney {...props} />
             </div>
             <div className={reduce ? '' : 'lg:[@media(min-height:680px)]:hidden'}>
-                <ListJourney {...props} mode={mode} setMode={setMode} animate={!reduce} />
+                <ListJourney {...props} animate={!reduce} />
             </div>
         </section>
     );

@@ -13,7 +13,7 @@ type Img = { src: string; position?: string };
 
 export interface ExperienceDesignPreviewProps {
     lang: Locale;
-    content: ExperienceDesignContent & { moments: { journey_image_alts: string[] } };
+    content: ExperienceDesignContent & { moments: { journey_title: string; journey_image_alts: string[] } };
     images: {
         hero: string;
         /** One photo per moment, in the rows' order. */
@@ -120,11 +120,10 @@ export function ExperienceDesignPreview({ lang, content, images, em }: Experienc
                 </div>
             </section>
 
-            {/* 3. The five moments, as the pinned scroll journey (id="journey"). */}
+            {/* 3. The five moments, as the pinned scroll journey (id="journey"). Its own title (JEF, 15 Nov), no intro line, no switch. */}
             <JourneyScroll
-                heading={emphasize(content.moments.title, em.journey)}
-                label={content.moments.title}
-                intro={content.moments.intro}
+                heading={emphasize(content.moments.journey_title, em.journey)}
+                label={content.moments.journey_title}
                 columns={content.moments.columns}
                 rows={content.moments.rows}
                 images={journeyImages}
