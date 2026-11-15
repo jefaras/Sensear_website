@@ -13,13 +13,17 @@ const v3Vars = {
 interface V3RootProps {
     children: ReactNode;
     className?: string;
+    /** Clip horizontal overflow with `overflow-x: clip` instead of `hidden`. `hidden` makes this
+        wrapper a scroll container, which stops `position: sticky` inside it from sticking to the
+        page. Pages with a pinned (sticky) section pass this; all other pages keep `hidden`. */
+    clipOverflow?: boolean;
 }
 
-export function V3Root({ children, className }: V3RootProps) {
+export function V3Root({ children, className, clipOverflow = false }: V3RootProps) {
     return (
         <div
             style={v3Vars}
-            className={`relative overflow-x-hidden bg-[#0b0a0a] text-[#faf6f1] ${className ?? ''}`}
+            className={`relative ${clipOverflow ? 'overflow-x-clip' : 'overflow-x-hidden'} bg-[#0b0a0a] text-[#faf6f1] ${className ?? ''}`}
         >
             {children}
         </div>

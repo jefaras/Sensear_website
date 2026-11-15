@@ -7,6 +7,7 @@ import { DriftOrb, GhostButton, MorphCTA, PageCTA, emphasize } from '@/component
 import { ScrollReveal, StaggerChildren } from '@/components/motion';
 import { Accordion } from '@/components/faq-v3';
 import { MomentsTable, type MomentsTableContent } from './MomentsTable';
+import { container, panel, h2Class, leadClass, h3Class, itemTextClass, photoFrame, photoFade } from './styles';
 
 type Item = { title: string; description: string };
 type NameLink = { title: string; link: string };
@@ -43,16 +44,8 @@ interface ExperienceDesignProps {
     em: { statement: string; cta: string };
 }
 
-// Shared section shells, matching ServiceDetail.
-export const container = 'relative z-10 mx-auto max-w-[min(1760px,100%)] px-[clamp(20px,1.59vw,28px)] sm:px-[clamp(27px,2.1vw,37px)]';
-export const panel = 'border-t border-[#faf6f1]/8 bg-[#0e0d0c]';
-export const h2Class = 'text-[clamp(2rem,3.6vw,3rem)] font-extrabold leading-[1.1] tracking-[-0.02em]';
-export const leadClass = 'max-w-[680px] text-[clamp(1.03rem,1.17vw,1.29rem)] leading-[1.65] text-[#faf6f1]/66';
-export const h3Class = 'mb-1.5 text-[clamp(1.18rem,1.34vw,1.47rem)] font-bold';
-export const itemTextClass = 'text-[clamp(0.94rem,1.06vw,1.17rem)] leading-[1.6] text-[#faf6f1]/58';
-/** The section photos' frame: rounded, with the dark fade at the bottom. */
-export const photoFrame = 'relative overflow-hidden rounded-lg';
-export const photoFade = 'absolute inset-0 bg-[linear-gradient(180deg,rgba(11,10,10,0)_55%,rgba(11,10,10,0.5))]';
+// Shared section shells, matching ServiceDetail. Defined in ./styles so client components can use them.
+export { container, panel, h2Class, leadClass, h3Class, itemTextClass, photoFrame, photoFade };
 
 /** The "Perfect for" link rows (Didot names between thin rules), without the short descriptions. */
 export const NameLinks = ({ items, localizedPath, className = '' }: { items: NameLink[]; localizedPath: (path: string) => string; className?: string }) => (

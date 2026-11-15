@@ -4247,7 +4247,14 @@
                     "event": "A photo, a playlist or a small gift"
                 }
             ],
-            "image_alt": "Guests at an evening reception inside a stone quarry, with lounge seating and long dinner tables"
+            "image_alt": "Guests at an evening reception inside a stone quarry, with lounge seating and long dinner tables",
+            "journey_image_alts": [
+                "A round dinner table set with candles and plants in the centre, with no guests yet",
+                "Blue stairs and doorways built between large rocks",
+                "Visitors in an immersive room with blue light projections on the walls and floor",
+                "Guests at an evening reception inside a stone quarry, with lounge seating and long dinner tables",
+                "Woman relaxing on a speedboat at night"
+            ]
         },
         "layers": {
             "title": "Four layers we design",
