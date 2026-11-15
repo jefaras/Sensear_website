@@ -4223,28 +4223,28 @@
             "rows": [
                 {
                     "name": "Before",
-                    "venue": "The website and booking emails",
-                    "event": "The invitation and reminders"
+                    "venue": "The website and booking emails.",
+                    "event": "The invitation and reminders."
                 },
                 {
                     "name": "The arrival",
-                    "venue": "The first minute at reception",
-                    "event": "The welcome at the door"
+                    "venue": "The first minute at reception.",
+                    "event": "The welcome at the door."
                 },
                 {
                     "name": "The main moment",
-                    "venue": "The visit, even a walk through a store, with sound, light and scent that change through the day",
-                    "event": "The high point everyone will talk about"
+                    "venue": "The visit, even a walk through a store, with sound, light and scent that change through the day.",
+                    "event": "The high point everyone will talk about."
                 },
                 {
                     "name": "The close",
-                    "venue": "A departure that does not end with just a bill",
-                    "event": "An ending we have planned, not left to chance"
+                    "venue": "A departure that does not end with just a bill.",
+                    "event": "An ending we have planned, not left to chance."
                 },
                 {
                     "name": "After",
-                    "venue": "A thoughtful follow-up that gives a reason to return",
-                    "event": "A photo, a playlist or a small gift"
+                    "venue": "A thoughtful follow-up that gives a reason to return.",
+                    "event": "A photo, a playlist or a small gift."
                 }
             ],
             "image_alt": "Guests at an evening reception inside a stone quarry, with lounge seating and long dinner tables",
