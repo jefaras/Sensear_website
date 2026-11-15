@@ -112,7 +112,7 @@ export function ExperienceDesignPreview({ lang, content, images, em }: Experienc
                                 <h2 className={`mb-[clamp(17px,1.31vw,23px)] ${h2Class}`}>{content.for_whom.title}</h2>
                             </ScrollReveal>
                             <ScrollReveal delay={0.1}>
-                                <p className={leadClass}>{content.for_whom.intro}</p>
+                                <p className={`text-pretty ${leadClass}`}>{content.for_whom.intro}</p>
                             </ScrollReveal>
                         </div>
                         <NameLinks items={content.for_whom.industries} localizedPath={localizedPath} className="border-t border-[#faf6f1]/12 sm:grid-cols-2" />
@@ -155,7 +155,7 @@ export function ExperienceDesignPreview({ lang, content, images, em }: Experienc
                         </ScrollReveal>
                         <div>
                             <ScrollReveal delay={0.1}>
-                                <p className={`mb-[clamp(24px,1.9vw,33px)] ${leadClass}`}>{content.method.body}</p>
+                                <p className={`mb-[clamp(24px,1.9vw,33px)] text-pretty ${leadClass}`}>{content.method.body}</p>
                             </ScrollReveal>
                             <ScrollReveal delay={0.14}>
                                 <TextLink href={localizedPath('/blog/from-service-to-experience')}>{content.method.link}</TextLink>
@@ -185,7 +185,7 @@ export function ExperienceDesignPreview({ lang, content, images, em }: Experienc
                                     className={`absolute inset-x-0 top-0 ${i === 0 ? 'h-[2px]' : 'h-px bg-[#faf6f1]/14'}`}
                                     style={i === 0 ? { backgroundImage: 'var(--gold-text)' } : undefined}
                                 />
-                                <p className={`mb-[clamp(14px,1.2vw,20px)] text-[13px] font-bold tabular-nums ${i === 0 ? 'text-[#f0bd95]' : 'text-[#faf6f1]/40'}`}>{String(i + 1).padStart(2, '0')}</p>
+                                <p className={`mb-[clamp(14px,1.2vw,20px)] text-[13px] font-bold tabular-nums ${i === 0 ? 'text-[#f0bd95]' : 'text-[#faf6f1]/55'}`}>{String(i + 1).padStart(2, '0')}</p>
                                 <h3 className="se-gold-text mb-[clamp(10px,0.8vw,14px)] text-[clamp(1.3rem,1.6vw,1.7rem)] font-bold leading-[1.25]">{item.title}</h3>
                                 <p className={itemTextClass}>{item.description}</p>
                             </div>
@@ -194,7 +194,7 @@ export function ExperienceDesignPreview({ lang, content, images, em }: Experienc
                     <div className="mt-[clamp(48px,4.4vw,76px)] grid grid-cols-1 gap-[clamp(14px,1.4vw,24px)] border-t border-[#faf6f1]/8 pt-[clamp(28px,2.6vw,44px)] md:grid-cols-2 md:gap-[clamp(24px,2.4vw,44px)]">
                         {content.ways_to_start.paragraphs.map((paragraph, i) => (
                             <ScrollReveal key={i} delay={0.08 + i * 0.04}>
-                                <p className={leadClass}>{paragraph}</p>
+                                <p className={`text-pretty ${leadClass}`}>{paragraph}</p>
                             </ScrollReveal>
                         ))}
                     </div>

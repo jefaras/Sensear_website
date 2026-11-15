@@ -18,8 +18,8 @@ export interface JourneyScrollProps extends MomentsTableContent {
     images: { src: string; alt: string; position?: string }[];
 }
 
-/** The v3 polish-lens easing, as a Tailwind arbitrary value. */
-const ease = 'ease-[cubic-bezier(0.22,1,0.36,1)]';
+/** The v3 polish-lens easing. Written as an arbitrary property: Tailwind finds `ease-[cubic-bezier(...)]` ambiguous and does not generate it. */
+const ease = '[transition-timing-function:cubic-bezier(0.22,1,0.36,1)]';
 const focusRing = 'focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#f0bd95]';
 const pad = (n: number) => String(n).padStart(2, '0');
 
@@ -126,12 +126,12 @@ function PinnedJourney({ heading, intro, label, columns, rows, images, mode, set
     return (
         // One screen of pinned view plus 65% of a screen of scroll per moment.
         <div ref={ref} className="relative h-[calc(100dvh+5*65dvh)]">
-            <div className="sticky top-0 flex h-[100dvh] flex-col justify-center pb-[clamp(24px,4vh,48px)] pt-[clamp(88px,11vh,124px)]">
+            <div className="sticky top-0 flex h-[100dvh] flex-col justify-center pb-[clamp(24px,4vh,48px)] pt-[clamp(100px,13.5vh,136px)]">
                 <div className={`${container} flex h-full w-full min-h-0 flex-col`}>
                     <div className="mb-[clamp(20px,3.4vh,40px)] grid grid-cols-[1.05fr_0.95fr] items-end gap-[clamp(40px,4.2vw,74px)]">
                         <h2 className={h2Class}>{heading}</h2>
                         <div className="flex flex-col items-start gap-[clamp(14px,2vh,22px)]">
-                            <p className={leadClass}>{intro}</p>
+                            <p className={`text-pretty ${leadClass}`}>{intro}</p>
                             <ModeSwitch label={label} columns={columns} mode={mode} onChange={setMode} />
                         </div>
                     </div>
@@ -155,7 +155,7 @@ function PinnedJourney({ heading, intro, label, columns, rows, images, mode, set
                                     onKeyDown={(e) => onTabKey(e, i)}
                                     className={`group min-h-[44px] pb-[clamp(12px,1.6vh,18px)] text-left ${focusRing}`}
                                 >
-                                    <span className={`block text-[13px] font-bold tabular-nums transition-colors duration-500 ${active === i ? 'text-[#f0bd95]' : 'text-[#faf6f1]/40'}`}>{pad(i + 1)}</span>
+                                    <span className={`block text-[13px] font-bold tabular-nums transition-colors duration-500 ${active === i ? 'text-[#f0bd95]' : 'text-[#faf6f1]/55'}`}>{pad(i + 1)}</span>
                                     <span
                                         className={`font-didot block text-[clamp(1.15rem,1.45vw,1.5rem)] leading-[1.2] transition-colors duration-500 ${
                                             active === i ? 'text-[#faf6f1]' : 'text-[#faf6f1]/50 group-hover:text-[#faf6f1]/80'
@@ -185,9 +185,6 @@ function PinnedJourney({ heading, intro, label, columns, rows, images, mode, set
                                         active === i ? 'translate-y-0 opacity-100' : 'pointer-events-none translate-y-4 opacity-0'
                                     }`}
                                 >
-                                    <p className="mb-[clamp(8px,1.2vh,14px)] text-[13px] font-bold tabular-nums text-[#faf6f1]/40">
-                                        {pad(i + 1)} / {pad(n)}
-                                    </p>
                                     <h3 className="font-didot se-gold-text mb-[clamp(16px,2.4vh,28px)] text-[clamp(2.4rem,4.4vw,4.4rem)] font-normal leading-[1.08]">{row.name}</h3>
                                     <ModeText row={row} mode={mode} className="max-w-[560px] text-[clamp(1.12rem,1.4vw,1.45rem)] leading-[1.55] text-[#faf6f1]/80" />
                                 </div>
@@ -203,7 +200,7 @@ function PinnedJourney({ heading, intro, label, columns, rows, images, mode, set
                                     aria-hidden={active !== i}
                                     fill
                                     sizes="(min-width: 1024px) 46vw, 100vw"
-                                    className={`object-cover transition-[opacity,transform] duration-[900ms] ${ease} ${active === i ? 'scale-100 opacity-100' : 'scale-[1.04] opacity-0'}`}
+                                    className={`object-cover transition-[opacity,transform] [transition-duration:900ms] ${ease} ${active === i ? 'scale-100 opacity-100' : 'scale-[1.04] opacity-0'}`}
                                     style={img.position ? { objectPosition: img.position } : undefined}
                                 />
                             ))}
@@ -228,7 +225,7 @@ function ListJourney({ heading, intro, label, columns, rows, images, mode, setMo
     return (
         <div className={`${container} py-[clamp(96px,8.5vw,150px)]`}>
             <h2 className={`mb-[clamp(17px,1.31vw,23px)] ${h2Class}`}>{heading}</h2>
-            <p className={`mb-[clamp(24px,2vw,32px)] ${leadClass}`}>{intro}</p>
+            <p className={`mb-[clamp(24px,2vw,32px)] text-pretty ${leadClass}`}>{intro}</p>
             <div className="mb-[clamp(40px,4vw,64px)]">
                 <ModeSwitch label={label} columns={columns} mode={mode} onChange={setMode} />
             </div>
@@ -242,7 +239,7 @@ function ListJourney({ heading, intro, label, columns, rows, images, mode, setMo
                         <span aria-hidden="true" className="mt-[0.55em] h-[11px] w-[11px] rounded-full border border-[#f0bd95] bg-[#0b0a0a]" />
                         <div className="grid gap-[clamp(18px,2.4vw,28px)] md:grid-cols-[1fr_0.85fr] md:items-start">
                             <div>
-                                <p className="mb-2 text-[13px] font-bold tabular-nums text-[#faf6f1]/40">
+                                <p className="mb-2 text-[13px] font-bold tabular-nums text-[#faf6f1]/55">
                                     {pad(i + 1)} / {pad(rows.length)}
                                 </p>
                                 <h3 className="font-didot se-gold-text mb-[clamp(10px,1.2vw,16px)] text-[clamp(1.9rem,5vw,2.6rem)] font-normal leading-[1.1]">{row.name}</h3>
@@ -277,10 +274,10 @@ export function JourneyScroll(props: JourneyScrollProps) {
 
     return (
         <section id="journey" className="relative scroll-mt-[clamp(90px,7vw,120px)] border-t border-[#faf6f1]/8">
-            <div className={reduce ? 'hidden' : 'hidden lg:block'}>
+            <div className={reduce ? 'hidden' : 'hidden lg:[@media(min-height:680px)]:block'}>
                 <PinnedJourney {...props} mode={mode} setMode={setMode} />
             </div>
-            <div className={reduce ? '' : 'lg:hidden'}>
+            <div className={reduce ? '' : 'lg:[@media(min-height:680px)]:hidden'}>
                 <ListJourney {...props} mode={mode} setMode={setMode} animate={!reduce} />
             </div>
         </section>

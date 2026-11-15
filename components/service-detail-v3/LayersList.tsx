@@ -17,11 +17,10 @@ interface LayersListProps {
     linkHref: string;
 }
 
-const ease = 'ease-[cubic-bezier(0.22,1,0.36,1)]';
-const pad = (n: number) => String(n).padStart(2, '0');
-
+const ease = '[transition-timing-function:cubic-bezier(0.22,1,0.36,1)]';
 /**
- * "Four layers we design" as a numbered editorial list (Experience Design preview, 15 Nov 2026).
+ * "Four layers we design" as an editorial list (Experience Design preview, 15 Nov 2026). No 01-04
+ * numbers: the layers are not a sequence (impeccable audit, 15 Nov).
  * From lg up, one large photo sits beside the list and crossfades to the layer under the pointer
  * or keyboard focus; motion meaning: "this layer looks like this". Below lg, every layer shows its
  * own photo above its text. The journey layer's title links to the journey section, so the five
@@ -38,9 +37,8 @@ export function LayersList({ items, images, linkIndex, linkHref }: LayersListPro
                         key={i}
                         onMouseEnter={() => setActive(i)}
                         onFocusCapture={() => setActive(i)}
-                        className="grid grid-cols-[clamp(36px,3.2vw,52px)_1fr] border-b border-[#faf6f1]/12 py-[clamp(22px,2.2vw,36px)]"
+                        className="border-b border-[#faf6f1]/12 py-[clamp(22px,2.2vw,36px)]"
                     >
-                        <span className={`pt-[0.6em] text-[13px] font-bold tabular-nums transition-colors duration-500 ${active === i ? 'lg:text-[#f0bd95]' : ''} text-[#faf6f1]/40`}>{pad(i + 1)}</span>
                         <div>
                             <div className="relative mb-[clamp(16px,2vw,22px)] aspect-[16/10] overflow-hidden rounded-lg lg:hidden">
                                 <Image
@@ -72,7 +70,7 @@ export function LayersList({ items, images, linkIndex, linkHref }: LayersListPro
             </StaggerChildren>
 
             {/* One photo frame for the whole list (lg and up); it stays in view while the list scrolls. */}
-            <div className="relative hidden aspect-[4/4.4] overflow-hidden rounded-lg lg:sticky lg:top-[clamp(110px,12vh,140px)] lg:block">
+            <div className="relative hidden aspect-[5/4] overflow-hidden rounded-lg lg:sticky lg:top-[clamp(110px,12vh,140px)] lg:block">
                 {images.map((img, i) => (
                     <Image
                         key={img.src}
