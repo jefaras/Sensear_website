@@ -4306,9 +4306,7 @@
                     "description": "The complete process, from research to launch: experience concept, sensory brief, service blueprint, team training and measurement."
                 }
             ],
-            "paragraphs": [
-                "Pricing depends on the size of the venue or event and on how much of the process you need. You get it in a written proposal after the first call."
-            ],
+            "paragraphs": [],
             "image_alt": "Circular dinner table with candles and plants, surrounded by wall projections"
         },
         "sound_fit": {
@@ -4355,7 +4353,7 @@
                 },
                 {
                     "question": "How does a project run and how long does it take?",
-                    "answer": "A project runs in six steps: first call, understanding, definition, ideas with selection and testing, delivery of the plan, and launch. An Experience Audit usually takes 2 to 3 weeks. A full project takes about 2 to 4 months, depending on the size of the venue."
+                    "answer": "A project runs in six steps: first call, understanding, definition, ideas with selection and testing, delivery of the plan, and launch. After the Experience Audit visit, we prepare the map and the fixes for the Workshop within 2 to 3 weeks. A full project takes about 2 to 4 months, depending on the size of the venue."
                 },
                 {
                     "question": "How do you work on a private event?",

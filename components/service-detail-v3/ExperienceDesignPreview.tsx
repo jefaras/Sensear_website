@@ -178,7 +178,7 @@ export function ExperienceDesignPreview({ lang, content, images, em }: Experienc
             </section>
 
             {/* 6. How we start: three numbered steps in order, the first one marked by a gold rule
-                (motion meaning of the stagger: read them in this order); the pricing note below. */}
+                (motion meaning of the stagger: read them in this order). */}
             <section className={`relative overflow-hidden py-[clamp(101px,7.95vw,140px)] ${panel}`}>
                 <DriftOrb
                     className="h-[46vw] max-h-[640px] w-[46vw] max-w-[640px]"
@@ -203,13 +203,16 @@ export function ExperienceDesignPreview({ lang, content, images, em }: Experienc
                             </div>
                         ))}
                     </StaggerChildren>
-                    <div className="mt-[clamp(48px,4.4vw,76px)] grid grid-cols-1 gap-[clamp(14px,1.4vw,24px)] border-t border-[#faf6f1]/8 pt-[clamp(28px,2.6vw,44px)]">
-                        {content.ways_to_start.paragraphs.map((paragraph, i) => (
-                            <ScrollReveal key={i} delay={0.08 + i * 0.04}>
-                                <p className={`text-pretty ${leadClass}`}>{paragraph}</p>
-                            </ScrollReveal>
-                        ))}
-                    </div>
+                    {/* Notes under the steps, if any (the pricing note moved to the FAQ, JEF, 15 Nov). */}
+                    {content.ways_to_start.paragraphs.length > 0 && (
+                        <div className="mt-[clamp(48px,4.4vw,76px)] grid grid-cols-1 gap-[clamp(14px,1.4vw,24px)] border-t border-[#faf6f1]/8 pt-[clamp(28px,2.6vw,44px)]">
+                            {content.ways_to_start.paragraphs.map((paragraph, i) => (
+                                <ScrollReveal key={i} delay={0.08 + i * 0.04}>
+                                    <p className={`text-pretty ${leadClass}`}>{paragraph}</p>
+                                </ScrollReveal>
+                            ))}
+                        </div>
+                    )}
                 </div>
             </section>
 
