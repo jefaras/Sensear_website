@@ -25,9 +25,8 @@ const IMAGES = {
     layers: [
         { src: `${DIR}/experience-design-layer-story.jpg` },
         { src: `${DIR}/experience-design-layer-team.jpg` },
-        // TEMPORARY: the hero photo, until JEF picks a photo for this layer (all 13 page photos
-        // are in use). ExperienceDesignPreview gives it the hero's alt text.
-        { src: `${DIR}/experience-design-hero.jpg` },
+        // The disco-ball pool table (JEF, 15 Nov); ExperienceDesignPreview gives it its alt text.
+        { src: `${DIR}/experience-design-layer-journey-disco.jpg` },
         { src: `${DIR}/experience-design-layer-details.jpg`, position: '50% 25%' },
     ],
     method: `${DIR}/experience-design-method.jpg`,

@@ -14,7 +14,7 @@ type Img = { src: string; position?: string; alt?: string };
 
 export interface ExperienceDesignPreviewProps {
     lang: Locale;
-    content: ExperienceDesignContent & { moments: { journey_title: string; journey_image_alts: string[] } };
+    content: ExperienceDesignContent & { moments: { journey_title: string; journey_image_alts: string[] }; layers: { journey_layer_image_alt: string } };
     images: {
         hero: string;
         forWhom: string;
@@ -45,8 +45,8 @@ const JOURNEY_LAYER = 2;
 export function ExperienceDesignPreview({ lang, content, images, em }: ExperienceDesignPreviewProps) {
     const localizedPath = (path: string) => getLocalizedPath(lang, path);
     const journeyImages = images.journey.map((img, i) => ({ ...img, alt: content.moments.journey_image_alts[i] }));
-    // A layer slot that shows the hero photo (a stand-in, see the route) takes the hero's alt text.
-    const layerImages = images.layers.map((img) => (img.src === images.hero ? { ...img, alt: content.hero.image_alt } : img));
+    // The journey layer shows its own photo (not the one the dictionary layer alt describes), with its own alt text.
+    const layerImages = images.layers.map((img, i) => (i === JOURNEY_LAYER ? { ...img, alt: content.layers.journey_layer_image_alt } : img));
 
     return (
         <>
