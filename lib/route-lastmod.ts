@@ -43,7 +43,7 @@ const LAST_MODIFIED_OVERRIDES: Record<string, string> = {
     '/services': '2026-11-11T00:00:00.000Z',
     // Own photos and alt texts (3 Nov); intro split into paragraphs (11 Nov). Dictionaries only, so git would not move the date.
     // Brief v2, step 1 (14 Nov): page rebuilt with shorter copy and new sections.
-    '/services/experience-design': '2026-11-14T00:00:00.000Z',
+    '/services/experience-design': '2026-11-16T00:00:00.000Z',
     // T12 industries rewrites (copy in the dictionaries). Add each page here in its own T12 commit.
     '/industries': '2026-11-11T00:00:00.000Z',
     '/industries/music-for-hotels-and-resorts': '2026-11-06T00:00:00.000Z',

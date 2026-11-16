@@ -222,7 +222,7 @@ function ListJourney({ heading, columns, rows, images, animate }: JourneyScrollP
 }
 
 /**
- * "The five moments" as the page's journey (Experience Design preview, 15 Nov 2026). Both layouts
+ * "The five moments" as the page's journey (Experience Design, 15 Nov 2026). Both layouts
  * are in the HTML: the pinned one shows from lg up on screens at least 680px tall, the list
  * otherwise. With reduced motion the list shows at every size and nothing pins or fills. Every
  * moment shows its venue and its event text.

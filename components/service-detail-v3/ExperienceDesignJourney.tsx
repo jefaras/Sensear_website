@@ -12,7 +12,7 @@ import { container, panel, h2Class, leadClass, itemTextClass, photoFrame, photoF
 /** `alt` overrides the dictionary alt when a photo is shown in a slot other than its own. */
 type Img = { src: string; position?: string; alt?: string };
 
-export interface ExperienceDesignPreviewProps {
+export interface ExperienceDesignJourneyProps {
     lang: Locale;
     content: ExperienceDesignContent & { moments: { journey_title: string; journey_image_alts: string[] }; layers: { journey_layer_image_alt: string }; for_whom: { preview_image_alt: string } };
     images: {
@@ -34,7 +34,8 @@ export interface ExperienceDesignPreviewProps {
 const JOURNEY_LAYER = 2;
 
 /**
- * Experience Design, redesign preview (15 Nov 2026, /awwwards brief approved by JEF). The same copy
+ * Experience Design (/services/experience-design/), the /awwwards redesign approved by JEF (15 Nov 2026,
+ * live from 16 Nov). The same copy
  * and photos as brief v2, in nine sections with a varied rhythm instead of six photo-and-text
  * zig-zags:
  * 1 hero (unchanged) · 2 statement + who it is for (one band, no photo) · 3 the five moments as a
@@ -42,7 +43,7 @@ const JOURNEY_LAYER = 2;
  * 5 the method as a wide photo band · 6 three numbered ways to start · 7 sound (the one remaining
  * photo-and-text split) · 8 FAQ · 9 closing CTA.
  */
-export function ExperienceDesignPreview({ lang, content, images, em }: ExperienceDesignPreviewProps) {
+export function ExperienceDesignJourney({ lang, content, images, em }: ExperienceDesignJourneyProps) {
     const localizedPath = (path: string) => getLocalizedPath(lang, path);
     const journeyImages = images.journey.map((img, i) => ({ ...img, alt: content.moments.journey_image_alts[i] }));
     // The journey layer shows its own photo (not the one the dictionary layer alt describes), with its own alt text.

@@ -1,4 +1,4 @@
-// Shared section classes for the Experience Design page and its preview. They live here, not in
+// Shared section classes for the Experience Design page (the brief v2 and the redesign components). They live here, not in
 // ExperienceDesign.tsx, so client components can import them without pulling that server
 // component (and everything it imports) into the browser bundle.
 

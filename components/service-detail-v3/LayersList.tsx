@@ -21,7 +21,7 @@ interface LayersListProps {
 const ease = '[transition-timing-function:cubic-bezier(0.22,1,0.36,1)]';
 
 /**
- * "Four layers we design" as an editorial list (Experience Design preview, 15 Nov 2026). No 01-04
+ * "Four layers we design" as an editorial list (Experience Design, 15 Nov 2026). No 01-04
  * numbers: the layers are not a sequence (impeccable audit, 15 Nov).
  * From lg up, one photo sits left of the list in the service pages' 4:4.6 frame (JEF, 15 Nov) and
  * crossfades to the layer under the pointer or keyboard focus; motion meaning: "this layer looks
