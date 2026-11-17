@@ -5,7 +5,7 @@ import type { MouseEvent } from 'react';
 import { m, useMotionValue, useSpring, useTransform, useReducedMotion } from 'motion/react';
 import { Locale } from '@/lib/i18n';
 import { getLocalizedPath } from '@/lib/localized-path';
-import { ScrollReveal } from '@/components/motion';
+import { HeroReveal } from '@/components/motion';
 import { DriftOrb, GhostButton, MorphCTA, emphasizeHeadline } from '@/components/v3';
 
 interface HeroProps {
@@ -84,13 +84,13 @@ export function HeroFlow({ lang, hero }: HeroProps) {
             <div className="mx-auto w-full max-w-[min(1760px,100%)] pl-[clamp(20px,1.59vw,28px)] pr-[clamp(20px,1.59vw,28px)] sm:px-[clamp(27px,2.1vw,37px)] lg:pl-[clamp(70px,5.51vw,97px)]">
                 <div className="grid grid-cols-1 items-center gap-[clamp(40px,3.12vw,55px)] lg:grid-cols-[1.05fr_0.95fr] lg:gap-[clamp(46px,3.64vw,64px)]">
                     <div>
-                        <ScrollReveal delay={0.15}>
+                        <HeroReveal delay={0.15}>
                             <h1 className="mb-[clamp(25px,1.99vw,35px)] text-[clamp(3.8rem,7.7vw,7.1rem)] font-extrabold leading-[0.96] tracking-[-0.024em]">
                                 {emphasizeHeadline(hero.title, emWord)}
                             </h1>
-                        </ScrollReveal>
+                        </HeroReveal>
 
-                        <ScrollReveal delay={0.3}>
+                        <HeroReveal delay={0.3}>
                             <div className="mb-[clamp(35px,2.73vw,48px)] max-w-[640px]">
                                 <p className="text-[clamp(1.55rem,2.3vw,2.05rem)] font-semibold leading-[1.35]">
                                     {ledeBold}
@@ -101,15 +101,15 @@ export function HeroFlow({ lang, hero }: HeroProps) {
                                     </p>
                                 )}
                             </div>
-                        </ScrollReveal>
+                        </HeroReveal>
 
-                        <ScrollReveal delay={0.45}>
+                        <HeroReveal delay={0.45}>
                             <div className="flex flex-wrap items-center gap-[clamp(23px,1.82vw,32px)]">
                                 {/* Primary CTA scrolls down to the on-page Services overview (#services). */}
                                 <MorphCTA href="#services">{hero.cta}</MorphCTA>
                                 <GhostButton href="#cta">{hero.secondary_cta}</GhostButton>
                             </div>
-                        </ScrollReveal>
+                        </HeroReveal>
                     </div>
 
                     {/* Animated featured image (v2). perspective on the wrapper enables the 3D tilt. */}

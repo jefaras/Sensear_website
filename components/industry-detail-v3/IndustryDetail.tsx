@@ -3,7 +3,7 @@ import { Check } from 'lucide-react';
 import type { Locale } from '@/lib/i18n';
 import { getLocalizedPath } from '@/lib/localized-path';
 import { DriftOrb, GhostButton, MorphCTA, PageCTA, SplitHero, emphasize } from '@/components/v3';
-import { ScrollReveal, StaggerChildren } from '@/components/motion';
+import { HeroReveal, ScrollReveal, StaggerChildren } from '@/components/motion';
 
 interface Item { title: string; description: string }
 
@@ -36,27 +36,27 @@ export function IndustryDetail({ lang, content, em }: IndustryDetailProps) {
         <>
             {/* 1. Hero */}
             <SplitHero image={{ src: content.hero.image, alt: content.hero.image_alt }}>
-                <ScrollReveal delay={0.12}>
+                <HeroReveal delay={0.12}>
                     <h1 className="mb-[clamp(18px,1.4vw,24px)] text-[clamp(2.65rem,5.29vw,4.72rem)] font-extrabold leading-[1.07] tracking-[-0.022em]">
                         {content.hero.title}
                     </h1>
-                </ScrollReveal>
-                <ScrollReveal delay={0.18}>
+                </HeroReveal>
+                <HeroReveal delay={0.18}>
                     <p className="se-gold-text font-didot mb-[clamp(23px,1.82vw,32px)] text-[clamp(1.5rem,2.8vw,2.3rem)] leading-[1.2]">
                         {content.hero.subtitle}
                     </p>
-                </ScrollReveal>
-                <ScrollReveal delay={0.24}>
+                </HeroReveal>
+                <HeroReveal delay={0.24}>
                     <p className="mb-[clamp(35px,2.73vw,48px)] max-w-[540px] text-[clamp(1.05rem,1.5vw,1.28rem)] leading-[1.6] text-[#faf6f1]/72">
                         {content.hero.description}
                     </p>
-                </ScrollReveal>
-                <ScrollReveal delay={0.3}>
+                </HeroReveal>
+                <HeroReveal delay={0.3}>
                     <div className="flex flex-wrap items-center gap-[clamp(23px,1.82vw,32px)]">
                         <MorphCTA href="#overview">{content.hero.explore_cta}</MorphCTA>
                         <GhostButton href="#cta">{content.cta.button}</GhostButton>
                     </div>
-                </ScrollReveal>
+                </HeroReveal>
             </SplitHero>
 
             {/* 2. Statement — anchor target for the hero's "explore" CTA */}

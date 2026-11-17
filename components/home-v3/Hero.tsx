@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import { Locale } from '@/lib/i18n';
 import { getLocalizedPath } from '@/lib/localized-path';
-import { ScrollReveal } from '@/components/motion';
+import { HeroReveal } from '@/components/motion';
 import { DriftOrb, GhostButton, MorphCTA } from '@/components/v3';
 // import { SideRail, SpinningBadge } from '@/components/v3'; // side-rail removed; spinning badge disabled
 // import { EQWidget } from './EQWidget'; // now-playing pill disabled
@@ -51,7 +51,7 @@ export function Hero({ lang, hero }: HeroProps) {
 
             <div className="relative z-10 flex items-end justify-center px-5 pb-14 pt-36 sm:px-8 sm:pb-16 lg:items-center lg:px-[clamp(2rem,5.2vw,6.5rem)] lg:pb-[clamp(4rem,8vh,6.5rem)] lg:pt-24">
                 <div className="w-full max-w-[780px]">
-                    <ScrollReveal delay={0.15}>
+                    <HeroReveal delay={0.15}>
                         {/* Matches the other hero H1s at the top of the scale (5.5rem here,
                             5.64rem there) and shares their leading and tracking. The vw
                             coefficient has to be lower than the shared 6.21vw: this headline is
@@ -67,9 +67,9 @@ export function Hero({ lang, hero }: HeroProps) {
                             className="se-html mb-[clamp(25px,1.99vw,35px)] text-[clamp(2.3rem,4.6vw,5.5rem)] font-extrabold leading-[1.02] tracking-[-0.022em]"
                             dangerouslySetInnerHTML={{ __html: hero.title }}
                         />
-                    </ScrollReveal>
+                    </HeroReveal>
 
-                    <ScrollReveal delay={0.3}>
+                    <HeroReveal delay={0.3}>
                         <div className="mb-[clamp(35px,2.73vw,48px)] max-w-[640px]">
                             <p className="text-[clamp(1.02rem,1.19vw,1.3rem)] leading-[1.6] text-[#faf6f1]/75">
                                 {ledeBold}
@@ -80,21 +80,21 @@ export function Hero({ lang, hero }: HeroProps) {
                                 </p>
                             )}
                         </div>
-                    </ScrollReveal>
+                    </HeroReveal>
 
-                    <ScrollReveal delay={0.45}>
+                    <HeroReveal delay={0.45}>
                         <div className="flex flex-wrap items-center gap-[clamp(23px,1.82vw,32px)]">
                             {/* Primary CTA scrolls down to the on-page Services overview (#services); the
                                 full /services page is reached from the CTA inside that section. */}
                             <MorphCTA href="#services">{hero.cta}</MorphCTA>
                             <GhostButton href="#cta">{hero.secondary_cta}</GhostButton>
                         </div>
-                    </ScrollReveal>
+                    </HeroReveal>
 
                     {/* Now-playing pill disabled
-                    <ScrollReveal delay={0.6}>
+                    <HeroReveal delay={0.6}>
                         <EQWidget label={hero.now_playing_label} track={hero.now_playing_track} />
-                    </ScrollReveal>
+                    </HeroReveal>
                     */}
                 </div>
 

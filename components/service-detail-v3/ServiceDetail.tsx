@@ -3,7 +3,7 @@ import Link from 'next/link';
 import type { Locale } from '@/lib/i18n';
 import { getLocalizedPath } from '@/lib/localized-path';
 import { DriftOrb, GhostButton, MorphCTA, PageCTA, SplitHero, emphasize } from '@/components/v3';
-import { ScrollReveal, StaggerChildren } from '@/components/motion';
+import { HeroReveal, ScrollReveal, StaggerChildren } from '@/components/motion';
 
 interface Section5 {
     title: string;
@@ -107,37 +107,37 @@ export function ServiceDetail({ lang, content, section5, images, em }: ServiceDe
             {/* 1. Hero */}
             <SplitHero image={{ src: images.hero, alt: content.hero.image_alt }}>
                 {subtitleInH1 ? (
-                    <ScrollReveal delay={0.12}>
+                    <HeroReveal delay={0.12}>
                         <h1>
                             <span className="mb-[clamp(18px,1.4vw,24px)] block text-[clamp(2.65rem,5.29vw,4.72rem)] font-extrabold leading-[1.07] tracking-[-0.022em]">
                                 {content.hero.title}
                             </span>{' '}
                             <span className={`block font-normal ${subtitleClass}`}>{content.hero.subtitle}</span>
                         </h1>
-                    </ScrollReveal>
+                    </HeroReveal>
                 ) : (
                     <>
-                        <ScrollReveal delay={0.12}>
+                        <HeroReveal delay={0.12}>
                             <h1 className="mb-[clamp(18px,1.4vw,24px)] text-[clamp(2.65rem,5.29vw,4.72rem)] font-extrabold leading-[1.07] tracking-[-0.022em]">
                                 {content.hero.title}
                             </h1>
-                        </ScrollReveal>
-                        <ScrollReveal delay={0.18}>
+                        </HeroReveal>
+                        <HeroReveal delay={0.18}>
                             <p className={subtitleClass}>{content.hero.subtitle}</p>
-                        </ScrollReveal>
+                        </HeroReveal>
                     </>
                 )}
-                <ScrollReveal delay={0.24}>
+                <HeroReveal delay={0.24}>
                     <p className="mb-[clamp(35px,2.73vw,48px)] max-w-[600px] text-[clamp(1.08rem,1.5vw,1.3rem)] leading-[1.6] text-[#faf6f1]/72">
                         {content.hero.description}
                     </p>
-                </ScrollReveal>
-                <ScrollReveal delay={0.3}>
+                </HeroReveal>
+                <HeroReveal delay={0.3}>
                     <div className="flex flex-wrap items-center gap-[clamp(23px,1.82vw,32px)]">
                         <MorphCTA href="#overview">{content.hero.explore_cta}</MorphCTA>
                         <GhostButton href="#cta">{content.cta.button}</GhostButton>
                     </div>
-                </ScrollReveal>
+                </HeroReveal>
             </SplitHero>
 
             {/* 2. Statement — anchor target for the hero's "explore" CTA */}

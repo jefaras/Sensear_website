@@ -5,7 +5,7 @@ import { type Locale } from '@/lib/i18n';
 import { getLocalizedPath } from '@/lib/localized-path';
 import { localeAlternates } from '@/lib/seo';
 import { DriftOrb, PageCTA, SplitHero, V3Root, emphasize } from '@/components/v3';
-import { ScrollReveal, StaggerChildren } from '@/components/motion';
+import { HeroReveal, ScrollReveal, StaggerChildren } from '@/components/motion';
 import { DirectoryCard } from '@/components/sitemap-v3';
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: Locale }> }): Promise<Metadata> {
@@ -110,16 +110,16 @@ export default async function SitemapPageV3({ params }: { params: Promise<{ lang
         <V3Root>
             {/* Hero */}
             <SplitHero image={{ src: '/images/sitemap-visual.jpg', alt: content.hero.image_alt }}>
-                <ScrollReveal delay={0.15}>
+                <HeroReveal delay={0.15}>
                     <h1 className="mb-[clamp(25px,1.99vw,35px)] text-[clamp(2.3rem,4.6vw,5.5rem)] font-extrabold leading-[1.02] tracking-[-0.022em]">
                         {content.hero.title}
                     </h1>
-                </ScrollReveal>
-                <ScrollReveal delay={0.3}>
+                </HeroReveal>
+                <HeroReveal delay={0.3}>
                     <p className="max-w-[600px] text-[clamp(1.2rem,2vw,1.5rem)] leading-[1.5] text-[#faf6f1]/72">
                         {content.hero.subtitle}
                     </p>
-                </ScrollReveal>
+                </HeroReveal>
             </SplitHero>
 
             {/* Directory */}

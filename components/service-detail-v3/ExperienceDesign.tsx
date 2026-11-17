@@ -4,7 +4,7 @@ import { ArrowRight } from 'lucide-react';
 import type { Locale } from '@/lib/i18n';
 import { getLocalizedPath } from '@/lib/localized-path';
 import { DriftOrb, GhostButton, MorphCTA, PageCTA, emphasize } from '@/components/v3';
-import { ScrollReveal, StaggerChildren } from '@/components/motion';
+import { HeroReveal, ScrollReveal, StaggerChildren } from '@/components/motion';
 import { Accordion } from '@/components/faq-v3';
 import { MomentsTable, type MomentsTableContent } from './MomentsTable';
 import { container, panel, h2Class, leadClass, h3Class, itemTextClass, photoFrame, photoFade } from './styles';
@@ -99,25 +99,25 @@ export function ExperienceDesign({ lang, content, images, em }: ExperienceDesign
                 />
                 <div className="relative z-10 flex items-end justify-center px-5 pb-14 pt-36 sm:px-8 sm:pb-16 lg:items-center lg:px-[clamp(2rem,5.2vw,6.5rem)] lg:pb-[clamp(4rem,8vh,6.5rem)] lg:pt-24">
                     <div className="w-full max-w-[720px]">
-                        <ScrollReveal delay={0.12}>
+                        <HeroReveal delay={0.12}>
                             <h1 className="mb-[clamp(18px,1.4vw,24px)] text-[clamp(2.65rem,5.29vw,4.72rem)] font-extrabold leading-[1.07] tracking-[-0.022em]">
                                 {content.hero.title}
                             </h1>
-                        </ScrollReveal>
-                        <ScrollReveal delay={0.18}>
+                        </HeroReveal>
+                        <HeroReveal delay={0.18}>
                             <p className="se-gold-text font-didot mb-[clamp(23px,1.82vw,32px)] text-[clamp(1.5rem,2.4vw,2.1rem)] leading-[1.2]">{content.hero.subtitle}</p>
-                        </ScrollReveal>
-                        <ScrollReveal delay={0.24}>
+                        </HeroReveal>
+                        <HeroReveal delay={0.24}>
                             <p className="mb-[clamp(35px,2.73vw,48px)] max-w-[600px] text-[clamp(1.08rem,1.5vw,1.3rem)] leading-[1.6] text-[#faf6f1]/72">
                                 {content.hero.description}
                             </p>
-                        </ScrollReveal>
-                        <ScrollReveal delay={0.3}>
+                        </HeroReveal>
+                        <HeroReveal delay={0.3}>
                             <div className="flex flex-wrap items-center gap-[clamp(23px,1.82vw,32px)]">
                                 <MorphCTA href="#overview">{content.hero.explore_cta}</MorphCTA>
                                 <GhostButton href="#cta">{content.hero.audit_cta}</GhostButton>
                             </div>
-                        </ScrollReveal>
+                        </HeroReveal>
                     </div>
                 </div>
 
