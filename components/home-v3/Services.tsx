@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { Locale } from '@/lib/i18n';
 import { getLocalizedPath } from '@/lib/localized-path';
+import imageLoader from '@/lib/image-loader';
 import { ScrollReveal } from '@/components/motion';
 import { DriftOrb, MorphCTA, emphasize } from '@/components/v3';
 
@@ -112,7 +113,8 @@ export function Services({ lang, title, subtitle, items, previewPlaceholder, pre
                                     className={`absolute inset-0 bg-cover bg-center transition-[opacity,transform] duration-[900ms] ease-[cubic-bezier(.22,.61,.36,1)] ${
                                         i === activeLayer ? 'scale-100 opacity-100' : 'scale-[1.04] opacity-0'
                                     }`}
-                                    style={{ backgroundImage: `url('${layer.img}')` }}
+                                    // CSS backgrounds bypass next/image, so ask the loader for the 960 px WebP variant.
+                                    style={{ backgroundImage: `url('${imageLoader({ src: layer.img, width: 960 })}')` }}
                                 />
                             ))}
                             <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(11,10,10,0)_55%,rgba(11,10,10,0.7))]" />
