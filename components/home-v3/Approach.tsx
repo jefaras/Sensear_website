@@ -63,7 +63,7 @@ export function Approach({ lang, title, subtitle, items, cta, imageAlt }: Approa
                             {items.map((item, i) => (
                                 <ScrollReveal key={i} delay={i * 0.06}>
                                     <div className="flex gap-[clamp(18px,1.42vw,25px)] border-t border-[#faf6f1]/12 py-[clamp(20px,1.59vw,28px)] last:border-b">
-                                        <span className="w-[39px] shrink-0 text-[clamp(12px,0.85vw,15px)] font-bold text-[#faf6f1]/40">
+                                        <span className="w-[39px] shrink-0 text-[clamp(12px,0.85vw,15px)] font-bold text-[#faf6f1]/55">
                                             {String(i + 1).padStart(2, '0')}
                                         </span>
                                         <div>

@@ -229,7 +229,7 @@ export function AssessmentForm() {
                 {!pending && <Send className="h-4 w-4" aria-hidden="true" />}
             </button>
 
-            <p className="text-center text-[11px] leading-relaxed text-[#faf6f1]/32">
+            <p className="text-center text-[11px] leading-relaxed text-[#faf6f1]/55">
                 Προστατεύεται από reCAPTCHA. Ισχύουν η{" "}
                 <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="underline decoration-[#faf6f1]/20 underline-offset-2 hover:text-[#faf6f1]/60">
                     Πολιτική Απορρήτου

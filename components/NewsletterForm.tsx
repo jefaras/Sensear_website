@@ -190,7 +190,7 @@ export function NewsletterForm({
                     </button>
                 </div>
                 {status === "error" && <p className="mt-3 text-center text-sm text-red-400">{errorMessage}</p>}
-                <p className="mt-3 text-center text-xs text-[#faf6f1]/30">
+                <p className="mt-3 text-center text-xs text-[#faf6f1]/55">
                     {recaptchaNotice.before}{" "}
                     <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="underline">{recaptchaNotice.privacy}</a> {recaptchaNotice.and}{" "}
                     <a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer" className="underline">{recaptchaNotice.terms}</a>
@@ -244,7 +244,7 @@ export function NewsletterForm({
                 {status === "error" && (
                     <p className="text-red-400 text-xs">{errorMessage}</p>
                 )}
-                <p className="text-xs text-[#faf6f1]/30 mt-1">
+                <p className="text-xs text-[#faf6f1]/55 mt-1">
                     {recaptchaNotice.before}{" "}
                     <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="underline">{recaptchaNotice.privacy}</a> {recaptchaNotice.and}{" "}
                     <a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer" className="underline">{recaptchaNotice.terms}</a>
@@ -301,7 +301,7 @@ export function NewsletterForm({
             {status === "error" && (
                 <p className="text-red-400 text-xs">{errorMessage}</p>
             )}
-            <p className="text-xs text-white/30 mt-1">
+            <p className="text-xs text-white/55 mt-1">
                 {recaptchaNotice.before}{" "}
                 <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="underline">{recaptchaNotice.privacy}</a> {recaptchaNotice.and}{" "}
                 <a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer" className="underline">{recaptchaNotice.terms}</a>

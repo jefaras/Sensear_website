@@ -255,7 +255,7 @@ export default function FreeAssessmentPage() {
             <footer className="border-t border-[#faf6f1]/10 px-5 py-8 sm:px-8 lg:px-[clamp(2rem,5.2vw,6.5rem)]">
                 <div className="mx-auto flex max-w-[1320px] flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
                     <AssessmentBrand />
-                    <div className="flex flex-wrap gap-x-5 gap-y-2 text-[12px] text-[#faf6f1]/44">
+                    <div className="flex flex-wrap gap-x-5 gap-y-2 text-[12px] text-[#faf6f1]/55">
                         <span>© 2026 SensEar Music</span>
                         <Link href="/el/privacy/" className="no-underline hover:text-[#faf6f1]">Πολιτική Απορρήτου</Link>
                         <Link href="/el/" className="no-underline hover:text-[#faf6f1]">sensear.music</Link>

@@ -101,7 +101,7 @@ export function Services({ lang, title, subtitle, items, previewPlaceholder, pre
                                     }}
                                     className="se-svc flex items-baseline gap-[clamp(20px,1.59vw,28px)] border-b border-[#faf6f1]/12 py-[clamp(28px,2.22vw,39px)] text-[#faf6f1] no-underline"
                                 >
-                                    <span className="w-[39px] shrink-0 text-[clamp(12px,0.85vw,15px)] font-bold tabular-nums text-[#faf6f1]/40">
+                                    <span className="w-[39px] shrink-0 text-[clamp(12px,0.85vw,15px)] font-bold tabular-nums text-[#faf6f1]/55">
                                         {String(i + 1).padStart(2, '0')}
                                     </span>
                                     <div className="flex-1">

@@ -46,7 +46,7 @@ export function EQWidget({ label, track }: EQWidgetProps) {
                 ))}
             </div>
             <div className="flex flex-col gap-0.5">
-                <span className="text-[clamp(10px,0.68vw,12px)] font-bold tracking-[0.3em] text-[#faf6f1]/40">{label}</span>
+                <span className="text-[clamp(10px,0.68vw,12px)] font-bold tracking-[0.3em] text-[#faf6f1]/55">{label}</span>
                 <span className="text-[clamp(12px,0.85vw,15px)] font-semibold text-[#faf6f1]/85">{track}</span>
             </div>
         </div>

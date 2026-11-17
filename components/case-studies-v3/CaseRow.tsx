@@ -90,7 +90,7 @@ export function CaseRow({ item, image, scUrl, scLink, serviceLabel, serviceHref,
                             />
                         </div>
                     ) : (
-                        <div className="flex h-[166px] max-w-[600px] items-center justify-center rounded-[12px] border border-dashed border-[#faf6f1]/15 text-[clamp(12px,0.85vw,15px)] font-semibold text-[#faf6f1]/45">
+                        <div className="flex h-[166px] max-w-[600px] items-center justify-center rounded-[12px] border border-dashed border-[#faf6f1]/15 text-[clamp(12px,0.85vw,15px)] font-semibold text-[#faf6f1]/55">
                             {comingSoonLabel}
                         </div>
                     )}

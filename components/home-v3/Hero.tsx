@@ -100,7 +100,7 @@ export function Hero({ lang, hero }: HeroProps) {
 
                 {/* Scroll cue, at the bottom right of the text column, next to the divider line of the photo */}
                 <div className="pointer-events-none absolute bottom-[30px] right-[clamp(20px,1.6vw,28px)] hidden flex-col items-center gap-2 lg:flex">
-                    <span className="text-[clamp(10px,0.68vw,12px)] font-semibold tracking-[0.3em] text-[#faf6f1]/40">{hero.scroll_label}</span>
+                    <span className="text-[clamp(10px,0.68vw,12px)] font-semibold tracking-[0.3em] text-[#faf6f1]/55">{hero.scroll_label}</span>
                     <div className="h-[35px] w-px animate-[se-cue_1.8s_ease-in-out_infinite] bg-[linear-gradient(rgba(250,246,241,0.5),rgba(250,246,241,0))]" />
                 </div>
             </div>

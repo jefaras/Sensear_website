@@ -39,7 +39,7 @@ export function ArticleCard({ article, href }: ArticleCardProps) {
                     {article.title}
                 </h3>
                 <p className="text-[clamp(0.88rem,1vw,1.1rem)] leading-[1.6] text-[#faf6f1]/55">{article.desc}</p>
-                <div className="mt-auto flex items-center justify-between gap-4 border-t border-[#faf6f1]/10 pt-[clamp(15px,1.19vw,21px)] text-[clamp(0.74rem,0.84vw,0.92rem)] text-[#faf6f1]/45">
+                <div className="mt-auto flex items-center justify-between gap-4 border-t border-[#faf6f1]/10 pt-[clamp(15px,1.19vw,21px)] text-[clamp(0.74rem,0.84vw,0.92rem)] text-[#faf6f1]/55">
                     <span>{article.displayDate}</span>
                     <span>{article.author}</span>
                 </div>

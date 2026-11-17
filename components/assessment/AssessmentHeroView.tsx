@@ -25,7 +25,7 @@ export function AssessmentHeroView({ message }: { message: CampaignMessage }) {
                             ΖΗΤΗΣΤΕ ΔΩΡΕΑΝ ΑΞΙΟΛΟΓΗΣΗ
                             <ArrowDown className="h-4 w-4 shrink-0" aria-hidden="true" />
                         </a>
-                        <span className="text-[13px] leading-relaxed text-[#faf6f1]/48">
+                        <span className="text-[13px] leading-relaxed text-[#faf6f1]/55">
                             Απάντηση εντός 24 ωρών
                         </span>
                     </div>

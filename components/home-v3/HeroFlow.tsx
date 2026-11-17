@@ -167,7 +167,7 @@ export function HeroFlow({ lang, hero }: HeroProps) {
             </div>
 
             <div className="absolute bottom-[30px] left-1/2 hidden -translate-x-1/2 flex-col items-center gap-2 sm:flex">
-                <span className="text-[clamp(10px,0.68vw,12px)] font-semibold tracking-[0.3em] text-[#faf6f1]/40">{hero.scroll_label}</span>
+                <span className="text-[clamp(10px,0.68vw,12px)] font-semibold tracking-[0.3em] text-[#faf6f1]/55">{hero.scroll_label}</span>
                 <div className="h-[35px] w-px animate-[se-cue_1.8s_ease-in-out_infinite] bg-[linear-gradient(rgba(250,246,241,0.5),rgba(250,246,241,0))]" />
             </div>
         </section>

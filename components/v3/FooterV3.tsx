@@ -189,12 +189,12 @@ export function FooterV3({ lang, footer, navigation, services, industries, email
 
             {/* Bottom bar */}
             <div className="mx-auto mt-[clamp(40px,3.12vw,55px)] flex max-w-[min(1760px,100%)] flex-wrap items-center justify-between gap-[clamp(13px,1.02vw,18px)] border-t border-[#faf6f1]/10 px-[clamp(20px,1.59vw,28px)] py-[clamp(20px,1.59vw,28px)] sm:px-[clamp(27px,2.1vw,37px)]">
-                <span className="text-[clamp(11px,0.8vw,14px)] text-[#faf6f1]/40">{footer.copyright}</span>
+                <span className="text-[clamp(11px,0.8vw,14px)] text-[#faf6f1]/55">{footer.copyright}</span>
                 <div className="flex gap-[clamp(17px,1.31vw,23px)]">
-                    <Link href={localizedPath('/privacy')} className="text-[clamp(11px,0.8vw,14px)] text-[#faf6f1]/40 no-underline transition-colors hover:text-[#faf6f1]">
+                    <Link href={localizedPath('/privacy')} className="text-[clamp(11px,0.8vw,14px)] text-[#faf6f1]/55 no-underline transition-colors hover:text-[#faf6f1]">
                         {footer.privacy}
                     </Link>
-                    <Link href={localizedPath('/terms')} className="text-[clamp(11px,0.8vw,14px)] text-[#faf6f1]/40 no-underline transition-colors hover:text-[#faf6f1]">
+                    <Link href={localizedPath('/terms')} className="text-[clamp(11px,0.8vw,14px)] text-[#faf6f1]/55 no-underline transition-colors hover:text-[#faf6f1]">
                         {footer.terms}
                     </Link>
                 </div>
@@ -202,7 +202,7 @@ export function FooterV3({ lang, footer, navigation, services, industries, email
 
             {/* Company registration / legal notice */}
             <div className="mx-auto max-w-[min(1760px,100%)] px-[clamp(20px,1.59vw,28px)] pb-[clamp(20px,1.59vw,28px)] sm:px-[clamp(27px,2.1vw,37px)]">
-                <p className="text-[clamp(10px,0.72vw,12px)] leading-[1.6] text-[#faf6f1]/35">{footer.legal}</p>
+                <p className="text-[clamp(10px,0.72vw,12px)] leading-[1.6] text-[#faf6f1]/55">{footer.legal}</p>
             </div>
 
             {/* Oversized stroked wordmark */}

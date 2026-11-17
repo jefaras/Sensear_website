@@ -378,7 +378,7 @@ export function ContactForm({ labels, variant = "default", recaptchaNotice }: Co
                 )}
             </button>
 
-            <p className={`text-xs text-center mt-3 ${isVinyl ? 'text-white/30' : isDark ? 'text-[#faf6f1]/30' : 'text-black/40'}`}>
+            <p className={`text-xs text-center mt-3 ${isVinyl ? 'text-white/55' : isDark ? 'text-[#faf6f1]/55' : 'text-black/40'}`}>
                 {/* Same localized line as the newsletter forms; it was English on the Greek page. */}
                 {recaptchaNotice ? (
                     <>

@@ -179,7 +179,7 @@ export default async function BlogPostV3({ params }: { params: Promise<{ lang: L
                                   <Image src={section.src} alt={section.alt || ''} fill sizes="(max-width: 1024px) 100vw, 760px" className="object-cover" />
                               </div>
                               {section.caption && (
-                                  <figcaption className="mt-4 text-center text-[0.8rem] font-bold uppercase italic tracking-[0.18em] text-[#faf6f1]/40">
+                                  <figcaption className="mt-4 text-center text-[0.8rem] font-bold uppercase italic tracking-[0.18em] text-[#faf6f1]/55">
                                       {section.caption}
                                   </figcaption>
                               )}

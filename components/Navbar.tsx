@@ -111,7 +111,10 @@ export function Navbar({ lang, navigation }: NavbarProps) {
                                 ? "/images/brand/sensear-logo-white.png"
                                 : "/images/brand/sensear-logo-color.png"
                             }
-                            alt="SensEar"
+                            // Empty alt: the link already reads "SENSEAR" from the text next to the
+                            // logo, so alt="SensEar" made screen readers say it twice (Lighthouse:
+                            // image-redundant-alt).
+                            alt=""
                             fill
                             sizes="64px"
                             className="object-contain transition-all duration-300 group-hover:scale-110"
