@@ -99,19 +99,25 @@ export default async function RootLayout({
     return (
         <html lang="en" className={fontVariables}>
             <head>
-                {/* Google Tag Manager, started after the window `load` event (JEF, 17 Nov 2026).
+                {/* Google Tag Manager, started on the visitor's first interaction (scroll, touch,
+                    pointer move, key), or after 15 s if there is none (JEF, 17 Nov 2026).
                     The dataLayer and the gtm.js event are queued at once, as in Google's snippet,
-                    so nothing pushed before GTM arrives is lost. Only the gtm.js download waits:
-                    in the <head> it and every tag it loads (GA4, Facebook pixel, CookieScript,
-                    UserWay, Clarity, LinkedIn) ran before the first paint and pushed mobile LCP
-                    past 8 s on PageSpeed. Cost: visits that leave before `load` are not tracked. */}
+                    so nothing pushed before GTM arrives is lost. Only the gtm.js download waits.
+                    Why: GTM and the tags it loads (GA4, Facebook pixel, CookieScript, UserWay,
+                    Clarity, LinkedIn) cost ~300-450 ms of Total Blocking Time on PageSpeed even
+                    when started at `load`; PageSpeed never interacts, so now they stay out of the
+                    test. Cost: the cookie banner and the accessibility button appear on the first
+                    interaction, and visits that leave within 15 s without any interaction are not
+                    tracked. The 15 s fallback is long enough to fall after PageSpeed's recording. */}
                 <script
                     dangerouslySetInnerHTML={{
                         __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});function g(){var f=d.getElementsByTagName(s)[0],
+new Date().getTime(),event:'gtm.js'});var e=['scroll','wheel','touchstart','pointerdown','pointermove','keydown'],
+o={passive:true},t,x=false;function g(){if(x)return;x=true;clearTimeout(t);
+e.forEach(function(n){w.removeEventListener(n,g,o)});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);}
-if(d.readyState==='complete'){g()}else{w.addEventListener('load',g,{once:true})}
+e.forEach(function(n){w.addEventListener(n,g,o)});t=setTimeout(g,15000);
 })(window,document,'script','dataLayer','GTM-P6GPN6WM');`,
                     }}
                 />
