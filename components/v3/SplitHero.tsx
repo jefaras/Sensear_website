@@ -49,6 +49,7 @@ export function SplitHero({ children, image, imagePosition = 'object-center', im
                                 alt={image.alt}
                                 fill
                                 priority
+                                fetchPriority="high"
                                 sizes="(min-width: 1024px) 48vw, 100vw"
                                 className={`object-cover ${imagePosition}`}
                             />

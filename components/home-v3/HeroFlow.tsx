@@ -143,6 +143,7 @@ export function HeroFlow({ lang, hero }: HeroProps) {
                                             sizes="(max-width: 1024px) 100vw, 50vw"
                                             className="object-cover"
                                             priority
+                                            fetchPriority="high"
                                         />
                                         <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(11,10,10,0)_45%,rgba(11,10,10,0.55))]" />
                                         {/* rhythm sheen — warm light pulsing to an implied beat */}

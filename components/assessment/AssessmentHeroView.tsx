@@ -38,6 +38,7 @@ export function AssessmentHeroView({ message }: { message: CampaignMessage }) {
                     alt="Ατμοσφαιρικός χώρος φιλοξενίας δίπλα στη θάλασσα"
                     fill
                     priority
+                    fetchPriority="high"
                     sizes="(min-width: 1024px) 48vw, 100vw"
                     className="object-cover object-center"
                 />

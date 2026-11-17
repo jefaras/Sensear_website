@@ -206,6 +206,10 @@ const nextConfig = {
     experimental: {
         // Enable Lightning CSS for CSS optimization (reduces CSS size by 20-30%)
         optimizeCss: true,
+        // Put the CSS in a <style> tag in each page instead of <link> files. The stylesheet
+        // request blocked the first paint (PageSpeed: ~540 ms on mobile); the cost is ~15 KB
+        // of compressed CSS per HTML page that a later page cannot take from the cache.
+        inlineCss: true,
         // Limit worker threads to prevent process spawn issues on shared hosting
         workerThreads: false,
         cpus: 1,
