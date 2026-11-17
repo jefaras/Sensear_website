@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { Locale } from '@/lib/i18n';
 import { getLocalizedPath } from '@/lib/localized-path';
@@ -44,6 +44,18 @@ export function Services({ lang, title, subtitle, items, previewPlaceholder, pre
     const localizedPath = (path: string) => getLocalizedPath(lang, path);
     const emWord = lang === 'el' ? 'αναβαθμίζουμε' : 'reimagine';
     const [hovered, setHovered] = useState<number | null>(null);
+    // Layers 1..n only show on hover. Their photos load after the window `load` event and
+    // only on devices that can hover (or on the first hover), so phones never download them
+    // and they do not compete with the hero photo while the page is loading.
+    const [hoverLayersReady, setHoverLayersReady] = useState(false);
+
+    useEffect(() => {
+        if (!window.matchMedia('(hover: hover)').matches) return;
+        const ready = () => setHoverLayersReady(true);
+        if (document.readyState === 'complete') ready();
+        else window.addEventListener('load', ready, { once: true });
+        return () => window.removeEventListener('load', ready);
+    }, []);
 
     // Layer 0 is the resting photo; layers 1..n follow the service rows.
     const layers = [{ img: DEFAULT_PREVIEW_IMG, cap: previewPlaceholder }, ...previews];
@@ -83,7 +95,10 @@ export function Services({ lang, title, subtitle, items, previewPlaceholder, pre
                                 <Link
                                     key={i}
                                     href={localizedPath(`/${item.link}`)}
-                                    onMouseEnter={() => setHovered(i)}
+                                    onMouseEnter={() => {
+                                        setHovered(i);
+                                        setHoverLayersReady(true);
+                                    }}
                                     className="se-svc flex items-baseline gap-[clamp(20px,1.59vw,28px)] border-b border-[#faf6f1]/12 py-[clamp(28px,2.22vw,39px)] text-[#faf6f1] no-underline"
                                 >
                                     <span className="w-[39px] shrink-0 text-[clamp(12px,0.85vw,15px)] font-bold tabular-nums text-[#faf6f1]/40">
@@ -114,7 +129,11 @@ export function Services({ lang, title, subtitle, items, previewPlaceholder, pre
                                         i === activeLayer ? 'scale-100 opacity-100' : 'scale-[1.04] opacity-0'
                                     }`}
                                     // CSS backgrounds bypass next/image, so ask the loader for the 960 px WebP variant.
-                                    style={{ backgroundImage: `url('${imageLoader({ src: layer.img, width: 960 })}')` }}
+                                    style={
+                                        i === 0 || hoverLayersReady
+                                            ? { backgroundImage: `url('${imageLoader({ src: layer.img, width: 960 })}')` }
+                                            : undefined
+                                    }
                                 />
                             ))}
                             <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(11,10,10,0)_55%,rgba(11,10,10,0.7))]" />
