@@ -99,13 +99,19 @@ export default async function RootLayout({
     return (
         <html lang="en" className={fontVariables}>
             <head>
-                {/* Google Tag Manager */}
+                {/* Google Tag Manager, started after the window `load` event (JEF, 17 Nov 2026).
+                    The dataLayer and the gtm.js event are queued at once, as in Google's snippet,
+                    so nothing pushed before GTM arrives is lost. Only the gtm.js download waits:
+                    in the <head> it and every tag it loads (GA4, Facebook pixel, CookieScript,
+                    UserWay, Clarity, LinkedIn) ran before the first paint and pushed mobile LCP
+                    past 8 s on PageSpeed. Cost: visits that leave before `load` are not tracked. */}
                 <script
                     dangerouslySetInnerHTML={{
                         __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+new Date().getTime(),event:'gtm.js'});function g(){var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);}
+if(d.readyState==='complete'){g()}else{w.addEventListener('load',g,{once:true})}
 })(window,document,'script','dataLayer','GTM-P6GPN6WM');`,
                     }}
                 />
