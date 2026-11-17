@@ -56,3 +56,22 @@ RewriteCond %{REQUEST_URI} !/$
 RewriteCond %{REQUEST_URI} !\.[A-Za-z0-9]{2,5}$
 RewriteRule ^(.+)$ /$1/ [R=301,L,NE]
 </IfModule>
+
+# Browser caching. The server default is 7 days for everything.
+# - .js .css and fonts exist only under /_next/static/, with a content hash in the name,
+#   so a new deploy always gets new URLs: cache them for a year.
+# - Images keep their names when replaced (including the generated /images/_opt/ WebP
+#   variants), so they get 30 days.
+# - HTML and the .txt route payloads must show a deploy at once: revalidate every time
+#   (a 304 when nothing changed).
+<IfModule mod_headers.c>
+<FilesMatch "\.(js|css|woff2?|ttf|otf)$">
+Header set Cache-Control "public, max-age=31536000, immutable"
+</FilesMatch>
+<FilesMatch "\.(jpe?g|png|webp|avif|gif|svg|ico)$">
+Header set Cache-Control "public, max-age=2592000"
+</FilesMatch>
+<FilesMatch "\.(html|txt|xml)$">
+Header set Cache-Control "no-cache"
+</FilesMatch>
+</IfModule>
