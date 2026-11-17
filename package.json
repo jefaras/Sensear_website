@@ -3,7 +3,9 @@
     "version": "0.1.0",
     "private": true,
     "scripts": {
+        "predev": "node scripts/build-image-variants.mjs",
         "dev": "next dev --turbopack",
+        "prebuild": "node scripts/build-image-variants.mjs",
         "build": "next build --webpack",
         "postbuild": "node scripts/set-el-lang.mjs && node scripts/flatten-segment-payloads.mjs",
         "start": "next start",
@@ -48,6 +50,7 @@
         "eslint": "^9",
         "eslint-config-next": "15.1.6",
         "postcss": "^8",
+        "sharp": "^0.34.5",
         "squirrelscan": "^0.0.38",
         "tailwindcss": "^3.4.1",
         "tsx": "^4.21.0",

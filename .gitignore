@@ -70,3 +70,6 @@ claude-code-handoff/
 
 # local-only source originals (never deployed, never committed)
 /_originals/
+
+# generated image variants (scripts/build-image-variants.mjs)
+/public/images/_opt/

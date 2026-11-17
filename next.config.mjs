@@ -1,4 +1,5 @@
 import analyzer from '@next/bundle-analyzer';
+import { DEVICE_SIZES, IMAGE_SIZES } from './lib/image-widths.mjs';
 
 const withBundleAnalyzer = analyzer({
     enabled: process.env.ANALYZE === 'true',
@@ -8,10 +9,15 @@ const withBundleAnalyzer = analyzer({
 const nextConfig = {
     output: 'export',
     trailingSlash: true,
+    // The static export cannot resize images at request time, so scripts/build-image-variants.mjs
+    // writes WebP variants before dev/build and lib/image-loader.ts points srcset at them.
     images: {
+        loader: 'custom',
+        loaderFile: './lib/image-loader.ts',
+        deviceSizes: DEVICE_SIZES,
+        imageSizes: IMAGE_SIZES,
         qualities: [70, 75],
         remotePatterns: [],
-        unoptimized: true,
     },
 
     // Disable ES Lint and Typescript checks during build to prevent out-of-memory errors
