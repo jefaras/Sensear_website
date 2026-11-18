@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import type { Locale } from '@/lib/i18n';
 import { getLocalizedPath } from '@/lib/localized-path';
-import { DriftOrb, GhostButton, MorphCTA, PageCTA, emphasize } from '@/components/v3';
+import { DriftOrb, GhostButton, MorphCTA, PageCTA, SplitHero, emphasize } from '@/components/v3';
 import { HeroReveal, ScrollReveal, StaggerChildren } from '@/components/motion';
 import { Accordion } from '@/components/faq-v3';
 import { NameLinks, TextLink, type ExperienceDesignContent } from './ExperienceDesign';
@@ -38,7 +38,7 @@ const JOURNEY_LAYER = 2;
  * live from 16 Nov). The same copy
  * and photos as brief v2, in nine sections with a varied rhythm instead of six photo-and-text
  * zig-zags:
- * 1 hero (unchanged) · 2 statement + who it is for (one band, no photo) · 3 the five moments as a
+ * 1 hero (the shared SplitHero) · 2 statement + who it is for (one band, no photo) · 3 the five moments as a
  * pinned scroll journey · 4 the four layers as a numbered list with one crossfading photo ·
  * 5 the method as a wide photo band · 6 three numbered ways to start · 7 sound (the one remaining
  * photo-and-text split) · 8 FAQ · 9 closing CTA.
@@ -51,42 +51,30 @@ export function ExperienceDesignJourney({ lang, content, images, em }: Experienc
 
     return (
         <>
-            {/* 1. Hero: unchanged from the live page (the free-assessment split). */}
-            <section className="relative grid min-h-[100dvh] grid-cols-1 overflow-hidden lg:grid-cols-[1.04fr_0.96fr]">
-                <DriftOrb
-                    className="h-[50vw] w-[50vw] max-h-[710px] max-w-[710px]"
-                    style={{ bottom: '-15%', left: '-10%', background: 'radial-gradient(circle,rgba(250,235,227,0.06),rgba(250,235,227,0) 60%)' }}
-                    duration={22}
-                    reverse
-                />
-                <div className="relative z-10 flex items-end justify-center px-5 pb-14 pt-36 sm:px-8 sm:pb-16 lg:items-center lg:px-[clamp(2rem,5.2vw,6.5rem)] lg:pb-[clamp(4rem,8vh,6.5rem)] lg:pt-24">
-                    <div className="w-full max-w-[720px]">
-                        <HeroReveal delay={0.12}>
-                            <h1 className="mb-[clamp(18px,1.4vw,24px)] text-[clamp(2.65rem,5.29vw,4.72rem)] font-extrabold leading-[1.07] tracking-[-0.022em]">
-                                {content.hero.title}
-                            </h1>
-                        </HeroReveal>
-                        <HeroReveal delay={0.18}>
-                            <p className="se-gold-text font-didot mb-[clamp(23px,1.82vw,32px)] text-[clamp(1.5rem,2.4vw,2.1rem)] leading-[1.2]">{content.hero.subtitle}</p>
-                        </HeroReveal>
-                        <HeroReveal delay={0.24}>
-                            <p className="mb-[clamp(35px,2.73vw,48px)] max-w-[600px] text-[clamp(1.08rem,1.5vw,1.3rem)] leading-[1.6] text-[#faf6f1]/72">
-                                {content.hero.description}
-                            </p>
-                        </HeroReveal>
-                        <HeroReveal delay={0.3}>
-                            <div className="flex flex-wrap items-center gap-[clamp(23px,1.82vw,32px)]">
-                                <MorphCTA href="#overview">{content.hero.explore_cta}</MorphCTA>
-                                <GhostButton href="#cta">{content.hero.audit_cta}</GhostButton>
-                            </div>
-                        </HeroReveal>
-                    </div>
+            {/* 1. Hero: the shared SplitHero, as on every other page (JEF, 18 Nov: the copied shell had no 1080 px cap, so a tall or zoomed-out window stretched it). */}
+            <SplitHero image={{ src: images.hero, alt: content.hero.image_alt }}>
+                <div className="max-w-[720px]">
+                    <HeroReveal delay={0.12}>
+                        <h1 className="mb-[clamp(18px,1.4vw,24px)] text-[clamp(2.65rem,5.29vw,4.72rem)] font-extrabold leading-[1.07] tracking-[-0.022em]">
+                            {content.hero.title}
+                        </h1>
+                    </HeroReveal>
+                    <HeroReveal delay={0.18}>
+                        <p className="se-gold-text font-didot mb-[clamp(23px,1.82vw,32px)] text-[clamp(1.5rem,2.4vw,2.1rem)] leading-[1.2]">{content.hero.subtitle}</p>
+                    </HeroReveal>
+                    <HeroReveal delay={0.24}>
+                        <p className="mb-[clamp(35px,2.73vw,48px)] max-w-[600px] text-[clamp(1.08rem,1.5vw,1.3rem)] leading-[1.6] text-[#faf6f1]/72">
+                            {content.hero.description}
+                        </p>
+                    </HeroReveal>
+                    <HeroReveal delay={0.3}>
+                        <div className="flex flex-wrap items-center gap-[clamp(23px,1.82vw,32px)]">
+                            <MorphCTA href="#overview">{content.hero.explore_cta}</MorphCTA>
+                            <GhostButton href="#cta">{content.hero.audit_cta}</GhostButton>
+                        </div>
+                    </HeroReveal>
                 </div>
-                <div className="relative min-h-[52vh] overflow-hidden border-t border-[#faf6f1]/10 lg:min-h-full lg:border-l lg:border-t-0">
-                    <Image src={images.hero} alt={content.hero.image_alt} fill priority sizes="(min-width: 1024px) 48vw, 100vw" className="object-cover object-center" />
-                    <div className="absolute inset-0 bg-[#0b0a0a]/10" />
-                </div>
-            </section>
+            </SplitHero>
 
             {/* 2. What it is + who it is for, in one panel band: the centred statement,
                 then the immersive-room photo left of the audience line and the six industries. */}
