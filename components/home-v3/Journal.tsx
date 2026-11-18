@@ -59,7 +59,7 @@ export function Journal({ lang, headline, allArticles, articles }: JournalProps)
                             href={localizedPath(`/blog/${article.link}`)}
                             className="group flex flex-col no-underline"
                         >
-                            <div className="relative mb-[clamp(18px,1.42vw,25px)] aspect-[4/3] overflow-hidden rounded-lg">
+                            <div className="relative mb-[clamp(18px,1.42vw,25px)] aspect-[1/1.04] overflow-hidden rounded-lg">
                                 <Image
                                     src={ARTICLE_IMAGES[i] ?? ARTICLE_IMAGES[0]}
                                     alt={article.image_alt}
