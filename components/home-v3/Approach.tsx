@@ -20,7 +20,7 @@ interface ApproachProps {
 
 export function Approach({ lang, title, subtitle, items, cta, imageAlt }: ApproachProps) {
     const localizedPath = (path: string) => getLocalizedPath(lang, path);
-    const emWord = lang === 'el' ? 'επαναπροσδιορίζουμε' : 'redefine';
+    const emWord = lang === 'el' ? 'ήχο' : 'sound';
 
     return (
         <section className="relative bg-[#0e0d0c] py-[clamp(108px,8.52vw,150px)]">
@@ -51,7 +51,7 @@ export function Approach({ lang, title, subtitle, items, cta, imageAlt }: Approa
 
                     <div>
                         <ScrollReveal delay={0.06}>
-                            <h2 className="mb-[clamp(15px,1.19vw,21px)] text-[clamp(2.3rem,4.6vw,3.91rem)] font-extrabold leading-[1.04] tracking-[-0.02em]">
+                            <h2 className="mb-[clamp(15px,1.19vw,21px)] text-balance text-[clamp(2.3rem,4.6vw,3.91rem)] font-extrabold leading-[1.04] tracking-[-0.02em]">
                                 {emphasize(title, emWord)}
                             </h2>
                         </ScrollReveal>
