@@ -24,7 +24,22 @@ export function Journey({ emWord, journey }: JourneyProps) {
                 duration={19}
             />
             <div className="relative z-10 mx-auto max-w-[min(1760px,100%)] px-[clamp(20px,1.59vw,28px)] sm:px-[clamp(27px,2.1vw,37px)]">
-                <div className="grid grid-cols-1 items-start gap-[clamp(60px,4.72vw,83px)] lg:grid-cols-[1.1fr_0.9fr]">
+                <div className="grid grid-cols-1 items-start gap-[clamp(53px,4.2vw,74px)] lg:grid-cols-2">
+                    {/* Photo left: the hero photo is right, so the zig-zag continues left (JEF, 18 Nov). On phones it sits above the timeline. */}
+                    <ScrollReveal direction="left" delay={0.15}>
+                        <div className="relative overflow-hidden rounded-lg lg:sticky lg:top-[140px]">
+                            <div className="relative aspect-[3/4]">
+                                <Image
+                                    src={journey.image}
+                                    alt={journey.image_alt}
+                                    fill
+                                    sizes="(max-width: 1024px) 100vw, 50vw"
+                                    className="object-cover"
+                                />
+                                <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(11,10,10,0)_55%,rgba(11,10,10,0.5))]" />
+                            </div>
+                        </div>
+                    </ScrollReveal>
                     <div>
                         <ScrollReveal delay={0.06}>
                             <h2 className="mb-[clamp(13px,1.02vw,18px)] text-[clamp(2.3rem,4.6vw,3.91rem)] font-extrabold leading-[1.05] tracking-[-0.02em]">
@@ -53,21 +68,6 @@ export function Journey({ emWord, journey }: JourneyProps) {
                             ))}
                         </StaggerChildren>
                     </div>
-
-                    <ScrollReveal direction="right" delay={0.15}>
-                        <div className="relative overflow-hidden rounded-lg lg:sticky lg:top-[140px]">
-                            <div className="relative aspect-[4/4.6]">
-                                <Image
-                                    src={journey.image}
-                                    alt={journey.image_alt}
-                                    fill
-                                    sizes="(max-width: 1024px) 100vw, 45vw"
-                                    className="object-cover"
-                                />
-                                <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(11,10,10,0)_55%,rgba(11,10,10,0.5))]" />
-                            </div>
-                        </div>
-                    </ScrollReveal>
                 </div>
             </div>
         </section>
