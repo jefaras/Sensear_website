@@ -3213,8 +3213,8 @@
             "description": "Music curation by sector: hotels and resorts, restaurants and bars, retail, wellness, events, art and fashion. Planned around your zones, hours and days."
         },
         "hero": {
-            "title": "Your industry sets the brief",
-            "subtitle": "A hotel changes by hour and zone; a restaurant follows service; a store follows its collections.",
+            "title": "Music that fits your industry",
+            "subtitle": "A hotel needs different music from a restaurant or a store, so we always start with how your business works.",
             "primary_cta": "Find your industry",
             "secondary_cta": "Book a call",
             "image_alt": "Woman with green hair holding a vinyl record"
@@ -3222,7 +3222,7 @@
         "intro": {
             "title": "Each space runs on its own clock",
             "p1": "A hotel lobby at eight in the morning and a bar at one at night need different music, and so do all the hours in between. <strong>We plan the music around how each place runs</strong>: its zones, its hours, its busiest days.",
-            "p2": "The four services are the same everywhere. <strong>What changes is the brief</strong>, and the brief comes from your sector."
+            "p2": "Our four services are the same for everyone, but <strong>we adapt them to the needs of your industry</strong>."
         },
         "expertise": {
             "title": "Choose your sector",
@@ -3231,7 +3231,7 @@
                 {
                     "title": "Hotels & Resorts",
                     "subtitle": "Music by zone and by hour",
-                    "desc1": "<strong>Breakfast, pool, reception, bar and dinner each need their own sound</strong>, and the day moves through them in order.",
+                    "desc1": "<strong>Breakfast, pool, reception, bar and dinner each need their own sound</strong>.",
                     "desc2": "In practice: one playlist per zone, scheduled by hour, so a guest moves from the breakfast lounge to the dinner restaurant without the music breaking character.",
                     "cta": "See how we work in hotels",
                     "link": "industries/music-for-hotels-and-resorts",
@@ -3240,7 +3240,7 @@
                 },
                 {
                     "title": "Restaurants & Bars",
-                    "subtitle": "The energy follows the service",
+                    "subtitle": "Calm music at lunch, livelier at night",
                     "desc1": "<strong>Brunch, lunch, dinner and the late hours each ask for a different tempo</strong>, and the switch has to happen without anyone touching the system.",
                     "desc2": "In practice: a schedule that moves with your day, so guests can talk at lunch and still feel the room lift after eleven.",
                     "cta": "See how we work in restaurants and bars",
@@ -3261,7 +3261,7 @@
                 {
                     "title": "Retail Stores",
                     "subtitle": "Music that fits the collection",
-                    "desc1": "<strong>A store sounds different on a weekday morning and on a Saturday afternoon</strong>, and different again during the sales.",
+                    "desc1": "<strong>A store needs different music on a weekday morning, on a Saturday afternoon</strong> and during the sales.",
                     "desc2": "In practice: playlists built around your brand and renewed with your collections, scheduled by day and hour, so the shop floor stays on brand at every hour.",
                     "cta": "See how we work in retail",
                     "link": "industries/music-for-retail-stores",

@@ -23,7 +23,7 @@ export default async function IndustriesV3({ params }: { params: Promise<{ lang:
     const content = dict.industries_page;
     const localizedPath = (path: string) => getLocalizedPath(lang, path);
     const em = lang === 'el'
-        ? { intro: 'ρυθμό', expertise: 'κλάδο', connect: 'κόσμους', cta: 'χώρο' }
+        ? { intro: 'ρυθμό', expertise: 'κλάδο', connect: 'κοινό', cta: 'χώρο' }
         : { intro: 'clock', expertise: 'sector', connect: 'worlds', cta: 'space' };
 
     return (

@@ -14,8 +14,8 @@ interface HeroProps {
 }
 
 export function Hero({ lang, hero }: HeroProps) {
-    // Final word: yields "Your industry sets / the brief" and «Ο κλάδος σας ορίζει / το ζητούμενο».
-    const emWord = lang === 'el' ? 'ζητούμενο' : 'brief';
+    // Middle word: yields "Music / that fits / your industry" and «Μουσική / που ταιριάζει / στον κλάδο σας».
+    const emWord = lang === 'el' ? 'ταιριάζει' : 'fits';
 
     return (
         <SplitHero image={{ src: '/images/industries/industries-hero.jpg', alt: hero.image_alt }}>
