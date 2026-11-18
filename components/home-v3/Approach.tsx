@@ -35,14 +35,14 @@ export function Approach({ lang, title, subtitle, items, cta, imageAlt }: Approa
                 duration={21}
             />
             <div className="relative z-10 mx-auto max-w-[min(1760px,100%)] px-[clamp(20px,1.59vw,28px)] sm:px-[clamp(27px,2.1vw,37px)]">
-                <div className="grid grid-cols-1 items-center gap-[clamp(40px,3.12vw,55px)] lg:grid-cols-[0.9fr_1.1fr] lg:gap-[clamp(53px,4.2vw,74px)]">
+                <div className="grid grid-cols-1 items-center gap-[clamp(40px,3.12vw,55px)] lg:grid-cols-2 lg:gap-[clamp(53px,4.2vw,74px)]">
                     <ScrollReveal direction="left">
-                        <div className="relative aspect-[4/4.4] overflow-hidden rounded-lg">
+                        <div className="relative aspect-[3/4] overflow-hidden rounded-lg">
                             <Image
                                 src="/images/homepage/vinyl-records-music-curation.jpg"
                                 alt={imageAlt}
                                 fill
-                                sizes="(max-width: 1024px) 100vw, 45vw"
+                                sizes="(max-width: 1024px) 100vw, 50vw"
                                 className="object-cover"
                             />
                             <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(11,10,10,0)_55%,rgba(11,10,10,0.5))]" />

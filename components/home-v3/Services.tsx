@@ -86,7 +86,7 @@ export function Services({ lang, title, subtitle, items, previewPlaceholder, pre
                     )}
                 </ScrollReveal>
 
-                <div className="grid grid-cols-1 items-start gap-[clamp(40px,3.12vw,55px)] lg:grid-cols-[1.35fr_0.65fr] lg:gap-[clamp(41px,3.24vw,57px)]">
+                <div className="grid grid-cols-1 items-start gap-[clamp(40px,3.12vw,55px)] lg:grid-cols-2 lg:gap-[clamp(53px,4.2vw,74px)]">
                     <div>
                         {/* The preview resets only when the pointer leaves the whole list, not between
                             rows, so moving from one service to the next crossfades straight across. */}
@@ -117,7 +117,7 @@ export function Services({ lang, title, subtitle, items, previewPlaceholder, pre
                     </div>
 
                     <div className="lg:sticky lg:top-[140px]">
-                        <div className="relative aspect-[3/3.8] overflow-hidden rounded-lg bg-[#161412]">
+                        <div className="relative aspect-[3/4] overflow-hidden rounded-lg bg-[#161412]">
                             {/* Every preview is stacked and only the active one is opaque, so a change of
                                 service crossfades the photos (with a slight settle in scale) instead of
                                 swapping them. */}

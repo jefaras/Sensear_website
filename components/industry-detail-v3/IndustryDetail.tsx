@@ -81,10 +81,10 @@ export function IndustryDetail({ lang, content, em }: IndustryDetailProps) {
             <section className="relative overflow-hidden py-[clamp(108px,8.52vw,150px)] pb-[clamp(94px,7.39vw,130px)]">
                 <DriftOrb className="h-[46vw] max-h-[640px] w-[46vw] max-w-[640px]" style={{ top: '6%', right: '-6%', background: 'radial-gradient(circle,rgba(240,189,149,0.10),rgba(240,189,149,0) 62%)' }} duration={23} />
                 <div className="relative z-10 mx-auto max-w-[min(1760px,100%)] px-[clamp(20px,1.59vw,28px)] sm:px-[clamp(27px,2.1vw,37px)]">
-                    <div className="grid grid-cols-1 items-center gap-[clamp(53px,4.2vw,74px)] lg:grid-cols-[0.95fr_1.05fr]">
+                    <div className="grid grid-cols-1 items-center gap-[clamp(53px,4.2vw,74px)] lg:grid-cols-2">
                         <ScrollReveal direction="left">
-                            <div className="relative aspect-[4/4.4] overflow-hidden rounded-lg">
-                                <Image src={content.what_we_do.image} alt={content.what_we_do.image_alt} fill sizes="(max-width: 1024px) 100vw, 46vw" className="object-cover" />
+                            <div className="relative aspect-[3/4] overflow-hidden rounded-lg">
+                                <Image src={content.what_we_do.image} alt={content.what_we_do.image_alt} fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" />
                                 <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(11,10,10,0)_55%,rgba(11,10,10,0.5))]" />
                             </div>
                         </ScrollReveal>
@@ -119,7 +119,7 @@ export function IndustryDetail({ lang, content, em }: IndustryDetailProps) {
             <section className="relative overflow-hidden border-t border-[#faf6f1]/8 bg-[#0e0d0c] py-[clamp(101px,7.95vw,140px)]">
                 <DriftOrb className="h-[46vw] max-h-[640px] w-[46vw] max-w-[640px]" style={{ bottom: '4%', left: '-6%', background: 'radial-gradient(circle,rgba(250,235,227,0.07),rgba(250,235,227,0) 62%)' }} duration={20} />
                 <div className="relative z-10 mx-auto max-w-[min(1760px,100%)] px-[clamp(20px,1.59vw,28px)] sm:px-[clamp(27px,2.1vw,37px)]">
-                    <div className="grid grid-cols-1 items-center gap-[clamp(53px,4.2vw,74px)] lg:grid-cols-[1.05fr_0.95fr]">
+                    <div className="grid grid-cols-1 items-center gap-[clamp(53px,4.2vw,74px)] lg:grid-cols-2">
                         <div>
                             <ScrollReveal delay={0.06}>
                                 <h2 className="mb-[clamp(28px,2.22vw,39px)] text-[clamp(2rem,3.6vw,3rem)] font-extrabold leading-[1.1] tracking-[-0.02em]">
@@ -139,8 +139,8 @@ export function IndustryDetail({ lang, content, em }: IndustryDetailProps) {
                             </StaggerChildren>
                         </div>
                         <ScrollReveal direction="right">
-                            <div className="relative aspect-[4/4.6] overflow-hidden rounded-lg">
-                                <Image src={content.ideal_for.image} alt={content.ideal_for.image_alt} fill sizes="(max-width: 1024px) 100vw, 46vw" className="object-cover" />
+                            <div className="relative aspect-[3/4] overflow-hidden rounded-lg">
+                                <Image src={content.ideal_for.image} alt={content.ideal_for.image_alt} fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" />
                                 <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(11,10,10,0)_55%,rgba(11,10,10,0.5))]" />
                             </div>
                         </ScrollReveal>
@@ -162,7 +162,7 @@ export function IndustryDetail({ lang, content, em }: IndustryDetailProps) {
 
                     <div className="grid grid-cols-1 items-center gap-[clamp(53px,4.2vw,74px)] lg:grid-cols-2">
                         <ScrollReveal direction="left">
-                            <div className="relative aspect-[4/4.6] overflow-hidden rounded-lg">
+                            <div className="relative aspect-[3/4] overflow-hidden rounded-lg">
                                 <Image src={content.how_we_help.image} alt={content.how_we_help.image_alt} fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" />
                                 <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(11,10,10,0)_55%,rgba(11,10,10,0.5))]" />
                             </div>

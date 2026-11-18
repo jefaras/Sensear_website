@@ -24,7 +24,7 @@ export function About({ p1, p2, imageAlt }: AboutProps) {
             <div className="relative z-10 mx-auto max-w-[min(1760px,100%)] px-[clamp(20px,1.59vw,28px)] sm:px-[clamp(27px,2.1vw,37px)]">
                 {/* Photo left, statement right on desktop, so the section alternates with
                     Services below (text left, photo right). On phones the text stays first. */}
-                <div className="grid grid-cols-1 items-center gap-[clamp(40px,3.12vw,55px)] lg:grid-cols-[0.85fr_1.5fr] lg:gap-[clamp(53px,4.2vw,74px)]">
+                <div className="grid grid-cols-1 items-center gap-[clamp(40px,3.12vw,55px)] lg:grid-cols-2 lg:gap-[clamp(53px,4.2vw,74px)]">
                     <div className="se-html lg:order-2">
                         <ScrollReveal>
                             {/* The dictionary separates the statement's sentences with <br />; each
@@ -47,12 +47,12 @@ export function About({ p1, p2, imageAlt }: AboutProps) {
                         </ScrollReveal>
                     </div>
                     <ScrollReveal direction="left" delay={0.15} className="lg:order-1">
-                        <div className="relative aspect-[3/3.7] overflow-hidden rounded-lg">
+                        <div className="relative aspect-[3/4] overflow-hidden rounded-lg">
                             <Image
                                 src="/images/carousel/carousel-venue-atmosphere-1.jpg"
                                 alt={imageAlt}
                                 fill
-                                sizes="(max-width: 1024px) 100vw, 35vw"
+                                sizes="(max-width: 1024px) 100vw, 50vw"
                                 className="object-cover"
                             />
                         </div>

@@ -23,7 +23,7 @@ const ease = '[transition-timing-function:cubic-bezier(0.22,1,0.36,1)]';
 /**
  * "Four layers we design" as an editorial list (Experience Design, 15 Nov 2026). No 01-04
  * numbers: the layers are not a sequence (impeccable audit, 15 Nov).
- * From lg up, one photo sits left of the list in the service pages' 4:4.6 frame (JEF, 15 Nov) and
+ * From lg up, one photo sits left of the list in the site's 3:4 photo frame (JEF, 15 Nov) and
  * crossfades to the layer under the pointer or keyboard focus; motion meaning: "this layer looks
  * like this". Below lg, every layer shows its own photo above its text. The journey layer's title
  * links to the journey section, so the five moments are explained once.
@@ -33,9 +33,9 @@ export function LayersList({ items, images, linkIndex, linkHref }: LayersListPro
     const altOf = (i: number) => images[i].alt ?? items[i].image_alt;
 
     return (
-        <div className="grid grid-cols-1 items-center gap-[clamp(53px,4.2vw,74px)] lg:grid-cols-[0.95fr_1.05fr]">
+        <div className="grid grid-cols-1 items-center gap-[clamp(53px,4.2vw,74px)] lg:grid-cols-2">
             {/* One photo frame for the whole list (lg and up), left of it. */}
-            <div className={`${photoFrame} hidden aspect-[4/4.6] lg:block`}>
+            <div className={`${photoFrame} hidden aspect-[3/4] lg:block`}>
                 {images.map((img, i) => (
                     <Image
                         key={img.src}
@@ -43,7 +43,7 @@ export function LayersList({ items, images, linkIndex, linkHref }: LayersListPro
                         alt={altOf(i)}
                         aria-hidden={active !== i}
                         fill
-                        sizes="(min-width: 1024px) 46vw, 1px"
+                        sizes="(min-width: 1024px) 50vw, 1px"
                         className={`object-cover transition-[opacity,transform] duration-700 ${ease} ${active === i ? 'scale-100 opacity-100' : 'scale-[1.03] opacity-0'}`}
                         style={img.position ? { objectPosition: img.position } : undefined}
                     />

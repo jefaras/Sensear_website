@@ -14,10 +14,10 @@ const DIR = '/images/services/experience-design';
 // JEF's photos. "Who it is for": the red "Ring for drinks" wall. Journey, in order:
 // before = the party flyer, arrival = the entrance on the white horse, main moment = the feather
 // dancers, close = walking out through the screen corridor, after = the woman on the speedboat.
-// Every photo is portrait, so each carries the focal point the 4:4.6 frames should keep.
+// Every photo is portrait, so each carries the focal point the 3:4 frames should keep.
 const IMAGES = {
     hero: `${DIR}/experience-design-hero.jpg`,
-    // Framed high, so the "Ring for drinks" sign stays in the 4:4.6 crop.
+    // Framed high, so the "Ring for drinks" sign stays in the 3:4 crop.
     forWhom: { src: `${DIR}/experience-design-for-whom-drinks.jpg`, position: '50% 10%' },
     journey: [
         { src: `${DIR}/experience-design-journey-before-flyer.webp`, position: '50% 20%' },

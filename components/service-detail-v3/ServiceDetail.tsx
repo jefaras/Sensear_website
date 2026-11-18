@@ -177,7 +177,7 @@ export function ServiceDetail({ lang, content, section5, images, em }: ServiceDe
                     <div className="relative z-10 mx-auto max-w-[min(1760px,100%)] px-[clamp(20px,1.59vw,28px)] sm:px-[clamp(27px,2.1vw,37px)]">
                         {/* With a photo: photo left, text right (text first on phones). Without one
                             (e.g. a client who cannot be named yet): title left, text right. */}
-                        <div className="grid grid-cols-1 items-center gap-[clamp(53px,4.2vw,74px)] lg:grid-cols-[0.95fr_1.05fr]">
+                        <div className="grid grid-cols-1 items-center gap-[clamp(53px,4.2vw,74px)] lg:grid-cols-2">
                             {images.case ? (
                                 <>
                                     <div className="lg:order-2">
@@ -185,8 +185,8 @@ export function ServiceDetail({ lang, content, section5, images, em }: ServiceDe
                                         {caseBody}
                                     </div>
                                     <ScrollReveal direction="left" className="lg:order-1">
-                                        <div className="relative aspect-[4/4.6] overflow-hidden rounded-lg">
-                                            <Image src={images.case} alt={content.case_study.image_alt ?? content.case_study.title} fill sizes="(max-width: 1024px) 100vw, 46vw" className="object-cover" />
+                                        <div className="relative aspect-[3/4] overflow-hidden rounded-lg">
+                                            <Image src={images.case} alt={content.case_study.image_alt ?? content.case_study.title} fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" />
                                             <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(11,10,10,0)_55%,rgba(11,10,10,0.5))]" />
                                         </div>
                                     </ScrollReveal>
@@ -211,10 +211,10 @@ export function ServiceDetail({ lang, content, section5, images, em }: ServiceDe
                     duration={23}
                 />
                 <div className="relative z-10 mx-auto max-w-[min(1760px,100%)] px-[clamp(20px,1.59vw,28px)] sm:px-[clamp(27px,2.1vw,37px)]">
-                    <div className={`grid grid-cols-1 items-center gap-[clamp(53px,4.2vw,74px)] ${flip ? 'lg:grid-cols-[1.05fr_0.95fr]' : 'lg:grid-cols-[0.95fr_1.05fr]'}`}>
+                    <div className="grid grid-cols-1 items-center gap-[clamp(53px,4.2vw,74px)] lg:grid-cols-2">
                         <ScrollReveal direction={flip ? 'right' : 'left'} className={flip ? 'lg:order-2' : undefined}>
-                            <div className="relative aspect-[4/4.4] overflow-hidden rounded-lg">
-                                <Image src={images.feature} alt={content.what_we_do.image_alt ?? content.what_we_do.title} fill sizes="(max-width: 1024px) 100vw, 46vw" className="object-cover" />
+                            <div className="relative aspect-[3/4] overflow-hidden rounded-lg">
+                                <Image src={images.feature} alt={content.what_we_do.image_alt ?? content.what_we_do.title} fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" />
                                 <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(11,10,10,0)_55%,rgba(11,10,10,0.5))]" />
                             </div>
                         </ScrollReveal>
@@ -239,7 +239,7 @@ export function ServiceDetail({ lang, content, section5, images, em }: ServiceDe
                     duration={20}
                 />
                 <div className="relative z-10 mx-auto max-w-[min(1760px,100%)] px-[clamp(20px,1.59vw,28px)] sm:px-[clamp(27px,2.1vw,37px)]">
-                    <div className={`grid grid-cols-1 items-center gap-[clamp(53px,4.2vw,74px)] ${flip ? 'lg:grid-cols-[0.95fr_1.05fr]' : 'lg:grid-cols-[1.05fr_0.95fr]'}`}>
+                    <div className="grid grid-cols-1 items-center gap-[clamp(53px,4.2vw,74px)] lg:grid-cols-2">
                         <div className={flip ? 'lg:order-2' : undefined}>
                             <ScrollReveal delay={0.06}>
                                 <h2 className="mb-[clamp(28px,2.22vw,39px)] text-[clamp(2rem,3.6vw,3rem)] font-extrabold leading-[1.1] tracking-[-0.02em]">
@@ -271,8 +271,8 @@ export function ServiceDetail({ lang, content, section5, images, em }: ServiceDe
                             </StaggerChildren>
                         </div>
                         <ScrollReveal direction={flip ? 'left' : 'right'} className={flip ? 'lg:order-1' : undefined}>
-                            <div className="relative aspect-[4/4.6] overflow-hidden rounded-lg">
-                                <Image src={images.forwhom} alt={content.perfect_for.image_alt ?? content.perfect_for.title} fill sizes="(max-width: 1024px) 100vw, 46vw" className="object-cover" />
+                            <div className="relative aspect-[3/4] overflow-hidden rounded-lg">
+                                <Image src={images.forwhom} alt={content.perfect_for.image_alt ?? content.perfect_for.title} fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" />
                                 <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(11,10,10,0)_55%,rgba(11,10,10,0.5))]" />
                             </div>
                         </ScrollReveal>
@@ -290,10 +290,10 @@ export function ServiceDetail({ lang, content, section5, images, em }: ServiceDe
                 <div className="relative z-10 mx-auto max-w-[min(1760px,100%)] px-[clamp(20px,1.59vw,28px)] sm:px-[clamp(27px,2.1vw,37px)]">
                     {/* With a full list beside it, the portrait photo gets the same tall frame as
                         sections 3 and 4; a single-item section keeps the shorter 4:3 frame. */}
-                    <div className={`grid grid-cols-1 items-center gap-[clamp(53px,4.2vw,74px)] ${!section5Tall ? 'lg:grid-cols-2' : flip ? 'lg:grid-cols-[1.05fr_0.95fr]' : 'lg:grid-cols-[0.95fr_1.05fr]'}`}>
+                    <div className="grid grid-cols-1 items-center gap-[clamp(53px,4.2vw,74px)] lg:grid-cols-2">
                         <ScrollReveal direction={flip ? 'right' : 'left'} className={flip ? 'lg:order-2' : undefined}>
-                            <div className={`relative overflow-hidden rounded-lg ${section5Tall ? 'aspect-[4/4.4]' : 'aspect-[4/3]'}`}>
-                                <Image src={images.section5} alt={section5.image_alt ?? section5.title} fill sizes={section5Tall ? '(max-width: 1024px) 100vw, 46vw' : '(max-width: 1024px) 100vw, 50vw'} className="object-cover" />
+                            <div className={`relative overflow-hidden rounded-lg ${section5Tall ? 'aspect-[3/4]' : 'aspect-[4/3]'}`}>
+                                <Image src={images.section5} alt={section5.image_alt ?? section5.title} fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" />
                                 <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(11,10,10,0)_55%,rgba(11,10,10,0.45))]" />
                             </div>
                         </ScrollReveal>

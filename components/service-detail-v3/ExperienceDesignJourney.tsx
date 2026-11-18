@@ -99,11 +99,11 @@ export function ExperienceDesignJourney({ lang, content, images, em }: Experienc
                 </div>
 
                 <div className={`${container} mt-[clamp(72px,6.4vw,112px)]`}>
-                    <div className="grid grid-cols-1 items-center gap-[clamp(53px,4.2vw,74px)] border-t border-[#faf6f1]/8 pt-[clamp(72px,6.4vw,112px)] lg:grid-cols-[0.95fr_1.05fr]">
-                        {/* The red 'Ring for drinks' photo left, in the service pages' 4:4.6 frame (JEF, 15 Nov). */}
+                    <div className="grid grid-cols-1 items-center gap-[clamp(53px,4.2vw,74px)] border-t border-[#faf6f1]/8 pt-[clamp(72px,6.4vw,112px)] lg:grid-cols-2">
+                        {/* The red 'Ring for drinks' photo left, in the site's 3:4 photo frame (JEF, 15 Nov). */}
                         <ScrollReveal direction="left">
-                            <div className={`${photoFrame} aspect-[4/4.6]`}>
-                                <Image src={images.forWhom.src} alt={content.for_whom.preview_image_alt} fill sizes="(max-width: 1024px) 100vw, 46vw" className="object-cover" style={images.forWhom.position ? { objectPosition: images.forWhom.position } : undefined} />
+                            <div className={`${photoFrame} aspect-[3/4]`}>
+                                <Image src={images.forWhom.src} alt={content.for_whom.preview_image_alt} fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" style={images.forWhom.position ? { objectPosition: images.forWhom.position } : undefined} />
                                 <div className={photoFade} />
                             </div>
                         </ScrollReveal>
@@ -129,7 +129,7 @@ export function ExperienceDesignJourney({ lang, content, images, em }: Experienc
                 images={journeyImages}
             />
 
-            {/* 4. The four layers: one crossfading photo left (4:4.6), the list right. */}
+            {/* 4. The four layers: one crossfading photo left (3:4), the list right. */}
             <section className={`relative overflow-hidden py-[clamp(101px,7.95vw,140px)] ${panel}`}>
                 <div className={container}>
                     <ScrollReveal delay={0.06}>
@@ -139,12 +139,12 @@ export function ExperienceDesignJourney({ lang, content, images, em }: Experienc
                 </div>
             </section>
 
-            {/* 5. The method: text left, the photo right in the service pages' 4:4.6 frame. The frame
+            {/* 5. The method: text left, the photo right in the site's 3:4 photo frame. The frame
                 is taller than wide, so the guest journey map on the floor stays in view and the two
                 people are visibly reading it (JEF, 15 Nov: the wide band cut the map off). */}
             <section className="relative overflow-hidden py-[clamp(108px,8.52vw,150px)]">
                 <div className={container}>
-                    <div className="grid grid-cols-1 items-center gap-[clamp(53px,4.2vw,74px)] lg:grid-cols-[1.05fr_0.95fr]">
+                    <div className="grid grid-cols-1 items-center gap-[clamp(53px,4.2vw,74px)] lg:grid-cols-2">
                         <div>
                             <ScrollReveal delay={0.06}>
                                 <h2 className={`mb-[clamp(17px,1.31vw,23px)] ${h2Class}`}>{content.method.title}</h2>
@@ -157,8 +157,8 @@ export function ExperienceDesignJourney({ lang, content, images, em }: Experienc
                             </ScrollReveal>
                         </div>
                         <ScrollReveal direction="right">
-                            <div className={`${photoFrame} aspect-[4/4.6]`}>
-                                <Image src={images.method} alt={content.method.image_alt} fill sizes="(max-width: 1024px) 100vw, 46vw" className="object-cover object-[50%_75%]" />
+                            <div className={`${photoFrame} aspect-[3/4]`}>
+                                <Image src={images.method} alt={content.method.image_alt} fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover object-[50%_75%]" />
                                 <div className={photoFade} />
                             </div>
                         </ScrollReveal>
@@ -205,7 +205,7 @@ export function ExperienceDesignJourney({ lang, content, images, em }: Experienc
                 </div>
             </section>
 
-            {/* 7. Sound in your venue: photo left in the service pages' 4:4.6 frame (JEF, 15 Nov). */}
+            {/* 7. Sound in your venue: photo left in the site's 3:4 photo frame (JEF, 15 Nov). */}
             <section className="relative overflow-hidden py-[clamp(108px,8.52vw,150px)]">
                 <DriftOrb
                     className="h-[46vw] max-h-[640px] w-[46vw] max-w-[640px]"
@@ -213,10 +213,10 @@ export function ExperienceDesignJourney({ lang, content, images, em }: Experienc
                     duration={21}
                 />
                 <div className={container}>
-                    <div className="grid grid-cols-1 items-center gap-[clamp(53px,4.2vw,74px)] lg:grid-cols-[0.95fr_1.05fr]">
+                    <div className="grid grid-cols-1 items-center gap-[clamp(53px,4.2vw,74px)] lg:grid-cols-2">
                         <ScrollReveal direction="left">
-                            <div className={`${photoFrame} aspect-[4/4.6]`}>
-                                <Image src={images.sound} alt={content.sound_fit.image_alt} fill sizes="(max-width: 1024px) 100vw, 46vw" className="object-cover" />
+                            <div className={`${photoFrame} aspect-[3/4]`}>
+                                <Image src={images.sound} alt={content.sound_fit.image_alt} fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" />
                                 <div className={photoFade} />
                             </div>
                         </ScrollReveal>
