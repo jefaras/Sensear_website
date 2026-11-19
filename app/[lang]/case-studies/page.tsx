@@ -43,7 +43,9 @@ const RAW_ASSETS: CaseAsset[] = [
     {
         id: 'hera-hotel',
         img: '/images/case-studies/case-study-hera.webp',
-        // SoundCloud clip pending; CaseRow shows the localized "coming soon" note.
+        // Breakfast-lounge playlist sample (JEF, 19 Nov).
+        scUrl: 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2441019672&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true',
+        scLink: 'https://soundcloud.com/sensear_music/hera_hotel_athens_breakfast',
     },
     {
         id: 'levantis',
