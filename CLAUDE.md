@@ -35,6 +35,22 @@ Narrative handoff & project status: `claude-code-handoff/BRIEFING.md`.
   `/el/dorean-axiologisi/`) may keep their copy in the page file.
 - **Static export constraints:** every dynamic route needs `generateStaticParams`;
   `dynamicParams=false`; no runtime server assumptions.
+- **Images:** every photo belongs to one of the size groups in `docs/image-rules.md` (hero, photo
+  beside text, card grid…) and takes that group's size on every page. Photos beside text follow
+  the zig-zag order in that file. Read it before you add or move a photo.
+
+## Bilingual copy (EN + EL)
+
+- When you change the text of one language, check whether the change alters the meaning, and
+  by how much.
+- If the meaning changes, make the matching change in the other language too, in the same
+  commit. If only the wording changes and the meaning stays the same (for example, a fix for a
+  bad translation), the other language can stay as it is.
+- Greek copy has its own style rules. If a brief gives the new text in one language only and
+  the meaning changes, propose the text for the other language to JEF and wait for his OK
+  before you write it.
+- In your final report, list the matching changes in the other language, or say in one line
+  why none were needed.
 
 ## Verification gates (every step, in order — no exceptions)
 
