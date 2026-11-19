@@ -3137,7 +3137,7 @@
     "case_studies": {
         "meta": {
             "title": "Case studies: music in Greek venues",
-            "description": "Five venues, five briefs: what each place needed, what we built, and playlists you can listen to."
+            "description": "Six clients, six briefs: what each one needed, what we built, and playlists you can listen to."
         },
         "hero": {
             "title": "Hear our work",
@@ -3148,8 +3148,8 @@
         },
         "intro": {
             "title": "From Athens to the Cyclades",
-            "p1": "A hotel in Athens, three venues on Antiparos and Sifnos, and an exhibition opening on Paros.",
-            "p2": "Four are daily music programmes with Signature Playlists. The Levantis opening was a single night with Event Soundtracks."
+            "p1": "A hotel in Athens, three venues on Antiparos and Sifnos, an exhibition opening on Paros and a yacht show in Lavrio.",
+            "p2": "Four are daily music programmes with Signature Playlists. The Levantis opening and the Olympic Yacht Show were events, with Event Soundtracks."
         },
         "items": [
             {
@@ -3191,6 +3191,14 @@
                 "location": "Paros",
                 "service": "Event Soundtracks",
                 "service_link": "services/event-soundtracks"
+            },
+            {
+                "title": "Olympic Yacht Show, Lavrio",
+                "desc1": "Four days in October at Olympic Marine in Lavrio, with new boats in the show's floating section, the people behind leading yachting houses, and parties on the quay in the evening. We were the show's Music Partner in 2025 and again in 2026.",
+                "desc2": "We chose each DJ set to fit the hour, the occasion and the crowd: calmer while visitors were still looking at the boats, and more for dancing after dark, when the exhibitors' parties filled the quay.",
+                "location": "Lavrio",
+                "service": "Event Soundtracks",
+                "service_link": "services/event-soundtracks"
             }
         ],
         "cta": {
@@ -3200,7 +3208,7 @@
             "services": "See the services"
         },
         "cases": {
-            "title": "Five venues, five <em>briefs</em>",
+            "title": "Six clients, six <em>briefs</em>",
             "subtitle": "Each with its own hours, areas and pace.",
             "listen_prefix": "Listen to the atmosphere of",
             "coming_soon": "Sound sample coming soon",

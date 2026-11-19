@@ -53,9 +53,11 @@ const LAST_MODIFIED_OVERRIDES: Record<string, string> = {
     '/industries/music-for-events-and-experiences': '2026-11-11T00:00:00.000Z',
     '/industries/music-for-art-museums-and-fashion': '2026-11-06T00:00:00.000Z',
     // Greek wording fixes outside T12 (copy in el.json only), approved by JEF on 6 Nov.
-    '/case-studies': '2026-11-10T00:00:00.000Z',
+    // 19 Nov: Olympic Yacht Show added as the sixth case study (EN + EL).
+    '/case-studies': '2026-11-19T00:00:00.000Z',
     // T14 metadata sweep (titles and descriptions in the dictionaries), approved by JEF on 10 Nov.
-    '': '2026-11-11T00:00:00.000Z',
+    // 19 Nov: Olympic Yacht Show logo back in the venues strip.
+    '': '2026-11-19T00:00:00.000Z',
     '/contact': '2026-11-11T00:00:00.000Z',
     '/about': '2026-11-10T00:00:00.000Z',
     '/faq': '2026-11-11T00:00:00.000Z',
