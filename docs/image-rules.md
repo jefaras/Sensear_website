@@ -12,7 +12,7 @@ Sizes are CSS px at a 1440 px wide window.
 |---|---|---|---|---|
 | 1 | Hero | Top of every page | Use `SplitHero` (`components/v3/SplitHero.tsx`). Never copy its markup into a page. | 690 × 900, at most 1080 high |
 | 2 | Photo beside text | Any section with one photo next to its text | Two equal columns and a 3:4 frame (classes below) | 660 × 879 |
-| 3 | Card grid (3 columns) | Home "Για ποιες επιχειρήσεις…", home Journal | Card photo `aspect-[1/1.04]` | 447 × 465 |
+| 3 | Card grid (3 columns) | Home "Για ποιες επιχειρήσεις…", home Journal, Journal page (`/blog/`) | Card photo `aspect-[1/1.04]` | 447 × 465 (Journal page: 439 × 456) |
 | 4 | Team portraits | About, "Γνωρίστε την ομάδα" | `aspect-square`, in the group 2 columns | 660 × 660 |
 | 5 | Two 16:9 cards side by side | Services hub, "Από πού ξεκινάτε" | `aspect-[16/9]` | 673 × 379 |
 | 6 | CTA band background | Closing CTA of each page (`PageCTA`) | Full width; the height follows the text | varies |
@@ -22,9 +22,6 @@ Not in the groups, on purpose:
 - `/el/dorean-axiologisi/` (Greek-only campaign page) keeps its own layout and photo sizes.
 - `HeroFlow` (`components/home-v3/HeroFlow.tsx`, 4:4.6 floating card) is an optional home hero variant. It is not live; the home page uses `SplitHero` (group 1).
 - `ServiceDetail.tsx` still has an `aspect-[4/3]` branch for a service page whose last section has two items or fewer. No page uses it today. If a page ever needs it, ask JEF which group it joins.
-
-Group 3 note: the Journal page cards (`components/blog-v3/ArticleCard.tsx`) are still 4:3
-(439 × 329). Whether they move to `aspect-[1/1.04]` is an open decision for JEF.
 
 ## Group 2 in code
 

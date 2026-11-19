@@ -21,7 +21,7 @@ export function ArticleCard({ article, href }: ArticleCardProps) {
             href={href}
             className="group flex flex-col overflow-hidden rounded-[10px] border border-[#faf6f1]/10 bg-[#100e0d] no-underline"
         >
-            <div className="relative aspect-[4/3] overflow-hidden">
+            <div className="relative aspect-[1/1.04] overflow-hidden">
                 <Image
                     src={article.image}
                     alt={article.alt || article.title}
